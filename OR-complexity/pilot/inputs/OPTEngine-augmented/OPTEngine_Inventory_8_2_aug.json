@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage schedule for a crucial reservoir over an eight-day operational cycle.  \nThe initial water volume stored at the start of the cycle is 96 million gallons.  \nIn each day \\( t = 1, \\dots, 8 \\), the utility may activate a pumping station to transfer water from a distant source; the pumped volume on any day must be between 5 and 38 million gallons.  \nHowever, pumped water requires 2 full days to travel through the pipeline before it becomes available in the reservoir.  \nThe projected water demand (in million gallons) for each day is as follows:  \n* Day 1: 34  \n* Day 2: 19  \n* Day 3: 18  \n* Day 4: 24  \n* Day 5: 30  \n* Day 6: 42  \n* Day 7: 25  \n* Day 8: 25  \n\nSupply shortfalls are tolerated, but unmet demand is simply lost and not carried forward.  \nThroughout the eight-day horizon, water volumes are treated as continuous quantities, and the total volume stored in the reservoir at any moment must not exceed its capacity of 96 million gallons.\n\nOn the first day, the maximum allowable pumping volume is 30 million gallons.  \nBy the end of the second day, the on-hand stored volume must be at least 89 million gallons.\n\nThe total operational cost comprises three elements: the pumping cost, which is 4 per million gallons pumped; the storage cost, which is 3 per million gallons held overnight; and a penalty for unmet demand, assessed at 6 per million gallons of shortage.  \nDetermine the optimal pumping volume for each day and monitor the resulting reservoir storage and shortage levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

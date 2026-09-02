@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting packages to load onto a cargo plane. Available packages are:\n* Package 1: weight 18kg, revenue 93 credits\n* Package 2: weight 10kg, revenue 117 credits\n* Package 3: weight 20kg, revenue 76 credits\n* Package 4: weight 11kg, revenue 187 credits\n* Package 5: weight 14kg, revenue 91 credits\n* Package 6: weight 4kg, revenue 63 credits\n* Package 7: weight 9kg, revenue 139 credits\n* Package 8: weight 37kg, revenue 156 credits\n* Package 9: weight 19kg, revenue 105 credits\n* Package 10: weight 4kg, revenue 152 credits\n* Package 11: weight 37kg, revenue 200 credits\n* Package 12: weight 7kg, revenue 221 credits\n* Package 13: weight 17kg, revenue 181 credits\n* Package 14: weight 46kg, revenue 297 credits\n* Package 15: weight 34kg, revenue 143 credits\n* Package 16: weight 7kg, revenue 294 credits\n* Package 17: weight 36kg, revenue 38 credits\n* Package 18: weight 2kg, revenue 184 credits\n* Package 19: weight 47kg, revenue 227 credits\n* Package 20: weight 39kg, revenue 257 credits\n* Package 21: weight 21kg, revenue 127 credits\n* Package 22: weight 8kg, revenue 227 credits\n* Package 23: weight 27kg, revenue 52 credits\n* Package 24: weight 38kg, revenue 138 credits\n\nThe aircraft has a maximum payload capacity of 358 kg. Determine which package combination yields the highest total revenue without exceeding this weight limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

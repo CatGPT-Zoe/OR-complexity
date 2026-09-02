@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage schedule for a critical blood type over a 14-day forecast window.  \nThe initial stock at the start of the planning window is 65 units.  \nOn each day \\( t = 1, \\dots, 14 \\), the central supplier permits the blood bank to place a procurement request whose volume must be between 3 and 37 units.  \nHowever, every request placed will undergo a 4‑day processing and delivery lag before it becomes available for meeting demand or replenishing reserves.  \nThe projected need for this blood type on each day is as follows:  \n* Day 1: need 47 units  \n* Day 2: need 48 units  \n* Day 3: need 50 units  \n* Day 4: need 55 units  \n* Day 5: need 43 units  \n* Day 6: need 16 units  \n* Day 7: need 54 units  \n* Day 8: need 59 units  \n* Day 9: need 51 units  \n* Day 10: need 54 units  \n* Day 11: need 23 units  \n* Day 12: need 48 units  \n* Day 13: need 51 units  \n* Day 14: need 48 units  \n\nShortfalls are tolerated, but any unfulfilled need is permanently lost and will not be carried forward.  \nThroughout the 14‑day interval, blood volumes may be treated as continuous quantities, and the total quantity of blood physically stored at any moment must not exceed the refrigeration capacity of 66 units.  \nThe cumulative cost over the planning window comprises three elements: the procurement cost, amounting to 2 per unit requested; the storage cost, amounting to 2 per unit kept in inventory from one day to the next; and the shortage penalty, amounting to 7 per unit of unmet need. Determine the optimal procurement volume for each day and monitor the consequent stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment for a remote research station. They must select a combination of components to maximize total utility while adhering to the cargo aircraft's weight restriction.\n\nThe available components are:\n* Component A: weight 24kg, utility score 51\n* Component B: weight 14kg, utility score 278\n* Component C: weight 23kg, utility score 106\n* Component D: weight 13kg, utility score 138\n* Component E: weight 44kg, utility score 164\n* Component F: weight 20kg, utility score 274\n* Component G: weight 25kg, utility score 140\n* Component H: weight 31kg, utility score 186\n* Component I: weight 46kg, utility score 132\n* Component J: weight 3kg, utility score 166\n* Component K: weight 36kg, utility score 47\n\nA critical operational requirement dictates that exactly one of Component A and Component B must be included in the final shipment.\n\nFurthermore, if Component C is selected, it necessitates special handling gear that effectively reduces the aircraft's usable payload capacity by 10 kg.\nThe aircraft has a maximum payload limit of 195 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

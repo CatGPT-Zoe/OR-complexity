@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo parcels onto identical transport pallets. The parcels are as follows:\n* Parcel Alpha: mass 40kg\n* Parcel Beta: mass 37kg\n* Parcel Gamma: mass 56kg\n* Parcel Delta: mass 51kg\n* Parcel Epsilon: mass 62kg\n* Parcel Zeta: mass 44kg\n* Parcel Eta: mass 59kg\n* Parcel Theta: mass 33kg\n* Parcel Iota: mass 37kg\n* Parcel Kappa: mass 37kg\n* Parcel Lambda: mass 42kg\n* Parcel Mu: mass 63kg\n* Parcel Nu: mass 36kg\n* Parcel Xi: mass 36kg\n* Parcel Omicron: mass 65kg\n* Parcel Pi: mass 35kg\n* Parcel Rho: mass 69kg\n* Parcel Sigma: mass 35kg\n* Parcel Tau: mass 30kg\n* Parcel Upsilon: mass 41kg\n* Parcel Phi: mass 46kg\n* Parcel Chi: mass 59kg\n* Parcel Psi: mass 67kg\n* Parcel Omega: mass 63kg\n* Parcel A1: mass 39kg\n* Parcel B1: mass 49kg\n* Parcel C1: mass 48kg\n* Parcel D1: mass 66kg\n* Parcel E1: mass 66kg\n* Parcel F1: mass 69kg\n* Parcel G1: mass 44kg\n* Parcel H1: mass 50kg\n* Parcel I1: mass 47kg\n* Parcel J1: mass 38kg\n* Parcel K1: mass 70kg\n* Parcel L1: mass 61kg\n* Parcel M1: mass 40kg\n* Parcel N1: mass 51kg\n\nEach pallet possesses a maximum safe load capacity of 100 kg. The objective is to assign every parcel to precisely one pallet such that the collective mass on any given pallet does not surpass the prescribed limit, while simultaneously minimizing the total number of pallets employed.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

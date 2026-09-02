@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to route 3 shipments through 3 different transfer hubs.\n\nEach shipment must pass through the hubs in a specific order, represented as (Hub, Handling time) pairs, where each pair indicates the hub where the shipment must be processed and the time required for handling. The sequence of pairs defines the mandatory order in which the hubs must be visited.\n\nShipment details:\n* S1 follows the route: (H1, 7) → (H3, 1) → (H2, 10)\n* S2 follows the route: (H2, 6) → (H3, 2) → (H1, 4)\n* S3 follows the route: (H3, 3) → (H1, 9) → (H2, 8)\n\nOnce a shipment begins processing at a hub, the handling must continue without interruption until complete. Additionally, each hub can only process one shipment at any given time. The goal is to determine the processing sequence for all shipments at the hubs such that the total time to complete all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

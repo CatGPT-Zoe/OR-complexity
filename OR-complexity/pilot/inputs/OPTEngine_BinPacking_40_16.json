@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of freight parcels onto identical cargo aircraft. The parcels are as follows:\n* Parcel Alpha: mass 55 tonnes\n* Parcel Bravo: mass 46 tonnes\n* Parcel Charlie: mass 38 tonnes\n* Parcel Delta: mass 66 tonnes\n* Parcel Echo: mass 35 tonnes\n* Parcel Foxtrot: mass 49 tonnes\n* Parcel Golf: mass 57 tonnes\n* Parcel Hotel: mass 49 tonnes\n* Parcel India: mass 57 tonnes\n* Parcel Juliet: mass 69 tonnes\n* Parcel Kilo: mass 30 tonnes\n* Parcel Lima: mass 61 tonnes\n* Parcel Mike: mass 43 tonnes\n* Parcel November: mass 63 tonnes\n* Parcel Oscar: mass 48 tonnes\n* Parcel Papa: mass 42 tonnes\n* Parcel Quebec: mass 30 tonnes\n* Parcel Romeo: mass 68 tonnes\n* Parcel Sierra: mass 62 tonnes\n* Parcel Tango: mass 49 tonnes\n* Parcel Uniform: mass 36 tonnes\n* Parcel Victor: mass 56 tonnes\n* Parcel Whiskey: mass 53 tonnes\n* Parcel X-ray: mass 54 tonnes\n* Parcel Yankee: mass 53 tonnes\n* Parcel Zulu: mass 68 tonnes\n* Parcel [Bravo]: mass 54 tonnes\n* Parcel [Charlie]: mass 43 tonnes\n* Parcel [Delta]: mass 50 tonnes\n* Parcel [Echo]: mass 30 tonnes\n* Parcel [Foxtrot]: mass 33 tonnes\n* Parcel [Golf]: mass 36 tonnes\n* Parcel [Hotel]: mass 69 tonnes\n* Parcel [India]: mass 62 tonnes\n* Parcel [Juliet]: mass 70 tonnes\n* Parcel [Kilo]: mass 56 tonnes\n* Parcel [Lima]: mass 37 tonnes\n* Parcel [Mike]: mass 56 tonnes\n* Parcel [November]: mass 51 tonnes\n* Parcel [Oscar]: mass 70 tonnes\n\nEach aircraft has a maximum payload capacity of 100 tonnes. The coordinator must assign every parcel to exactly one aircraft, ensuring the combined mass on any aircraft does not surpass its limit. The objective is to utilize the smallest possible number of aircraft to complete the allocation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

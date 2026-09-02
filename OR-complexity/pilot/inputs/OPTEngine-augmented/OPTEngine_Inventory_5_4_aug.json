@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping terminal must devise a fuel procurement and storage strategy for a critical vessel over a voyage schedule spanning 5 legs.\nThe initial fuel reserve at the start of the voyage schedule is 28 kiloliters.\nFor each leg t = 1, ..., 5, the fuel supplier permits the terminal to schedule a delivery whose volume must be between 11 and 70 kiloliters.\nHowever, each scheduled delivery will require 1 day(s) of transit before it becomes available for consumption or to augment the reserve.\nThe projected fuel consumption for the vessel on each leg is as follows:\n* Leg 1: consumption 11 kiloliters\n* Leg 2: consumption 56 kiloliters\n* Leg 3: consumption 27 kiloliters\n* Leg 4: consumption 17 kiloliters\n* Leg 5: consumption 55 kiloliters\n\nSupply shortfalls are tolerated, but any unfulfilled consumption will not be carried forward as an obligation.\nThroughout the voyage schedule, fuel quantities may be fractional, and the total volume of on-site reserve held at any moment must not exceed the tank farm capacity of 29 kiloliters.\n\nSpecifically on leg 2, the maximum permissible delivery volume is 65 kiloliters.\nAlso on leg 2, the on-site reserve must be maintained at a minimum of 1 kiloliters.\n\nThe aggregate expenditure over the voyage schedule comprises three elements: the procurement cost, calculated at 3 per kiloliter ordered; the storage cost, calculated at 2 per kiloliter of reserve transferred from one leg to the next; and the penalty for shortfall, calculated at 6 per kiloliter of unmet consumption. Determine the optimal delivery volume for each leg and monitor the consequent reserve and shortfall levels to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must assemble a shipment for a cargo drone, selecting from a list of packages to maximize total revenue while staying within the drone's payload limit.\n\nThe available packages are:\n* Package A: mass 49kg, revenue 280 credits\n* Package B: mass 34kg, revenue 184 credits\n* Package C: mass 25kg, revenue 138 credits\n* Package D: mass 14kg, revenue 69 credits\n* Package E: mass 37kg, revenue 178 credits\n* Package F: mass 16kg, revenue 282 credits\n* Package G: mass 44kg, revenue 190 credits\n* Package H: mass 11kg, revenue 88 credits\n* Package I: mass 22kg, revenue 14 credits\n* Package J: mass 38kg, revenue 36 credits\n* Package K: mass 37kg, revenue 89 credits\n* Package L: mass 23kg, revenue 195 credits\n\nDue to routing restrictions, exactly one of Package A and Package B must be included in the shipment.\n\nIf Package C is selected, the drone's effective maximum payload is diminished by 10 kg.\nThe drone's nominal maximum payload is 244 kg. The manager must determine the optimal set of packages to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

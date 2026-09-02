@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_8_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 8 delivery trucks through 8 specialized loading bays.\n\nEach truck must follow a specific loading sequence represented as (Bay, Duration) pairs,\nwhere each pair indicates the required loading bay and the time needed to complete that loading step.\nThe order of pairs defines the strict sequence in which loading operations must be performed.\n\nTruck details:\n* T1 requires the sequence: (Bay7, 6) → (Bay2, 5) → (Bay5, 2) → (Bay4, 1) → (Bay3, 7) → (Bay1, 5) → (Bay6, 6) → (Bay8, 10)\n* T2 requires the sequence: (Bay4, 8) → (Bay3, 3) → (Bay8, 6) → (Bay2, 7) → (Bay1, 7) → (Bay6, 7) → (Bay5, 6) → (Bay7, 10)\n* T3 requires the sequence: (Bay2, 8) → (Bay1, 4) → (Bay5, 7) → (Bay4, 2) → (Bay8, 7) → (Bay7, 1) → (Bay3, 5) → (Bay6, 10)\n* T4 requires the sequence: (Bay3, 3) → (Bay8, 1) → (Bay7, 2) → (Bay5, 6) → (Bay1, 6) → (Bay6, 8) → (Bay2, 4) → (Bay4, 4)\n* T5 requires the sequence: (Bay6, 7) → (Bay8, 1) → (Bay5, 2) → (Bay4, 1) → (Bay3, 2) → (Bay7, 6) → (Bay1, 4) → (Bay2, 5)\n* T6 requires the sequence: (Bay2, 4) → (Bay5, 2) → (Bay3, 3) → (Bay1, 8) → (Bay7, 3) → (Bay6, 3) → (Bay8, 8) → (Bay4, 5)\n* T7 requires the sequence: (Bay3, 2) → (Bay4, 2) → (Bay6, 5) → (Bay5, 2) → (Bay1, 7) → (Bay8, 4) → (Bay2, 5) → (Bay7, 7)\n* T8 requires the sequence: (Bay4, 10) → (Bay8, 7) → (Bay6, 10) → (Bay5, 4) → (Bay3, 5) → (Bay1, 6) → (Bay2, 9) → (Bay7, 6)\n\nEach loading operation must run continuously once it begins and cannot be interrupted,\nand each loading bay can only accommodate one truck at a time.\nThe objective is to determine the processing schedule for all loading operations across the bays\nso that the total completion time for all trucks is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

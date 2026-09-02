@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to perform maintenance at five critical facilities scattered across a region. The geographical positions of these facilities are recorded as follows:\n\nFacility Alpha: Coordinates (134,70)\nFacility Beta: Coordinates (133,60)\nFacility Gamma: Coordinates (55,173)\nFacility Delta: Coordinates (150,107)\nFacility Epsilon: Coordinates (148,70)\n\nTravel distances between facilities, measured in kilometers, are precomputed and known:\nAlpha to Gamma: 129.8 km\nAlpha to Delta: 40.3 km\nAlpha to Epsilon: 14.0 km\nBeta to Gamma: 137.3 km\nBeta to Delta: 50.0 km\nBeta to Epsilon: 18.0 km\nGamma to Delta: 115.7 km\nGamma to Epsilon: 138.8 km\nDelta to Epsilon: 37.1 km\n\nDue to geographical obstructions, no direct service route exists between Facility Alpha and Facility Beta. Furthermore, a routing directive mandates that the final itinerary must incorporate exactly one, but not both, of the following two possible connections: the link between Facility Beta and Facility Gamma, or the link between Facility Gamma and Facility Delta.\n\nThe objective is to determine the most efficient closed-circuit inspection tour, where the technician visits each facility precisely one time before returning to the origin point, thereby minimizing the total travel distance.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

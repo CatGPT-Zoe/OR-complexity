@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_29_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes onto identical shelving units. The items are as follows:\n* Document set Alpha: thickness 53mm\n* Document set Beta: thickness 57mm\n* Document set Gamma: thickness 62mm\n* Document set Delta: thickness 38mm\n* Document set Epsilon: thickness 35mm\n* Document set Zeta: thickness 70mm\n* Document set Eta: thickness 62mm\n* Document set Theta: thickness 32mm\n* Document set Iota: thickness 65mm\n* Document set Kappa: thickness 45mm\n* Document set Lambda: thickness 36mm\n* Document set Mu: thickness 54mm\n* Document set Nu: thickness 53mm\n* Document set Xi: thickness 63mm\n* Document set Omicron: thickness 50mm\n* Document set Pi: thickness 65mm\n* Document set Rho: thickness 66mm\n* Document set Sigma: thickness 64mm\n* Document set Tau: thickness 55mm\n* Document set Upsilon: thickness 49mm\n* Document set Phi: thickness 45mm\n* Document set Chi: thickness 66mm\n* Document set Psi: thickness 35mm\n* Document set Omega: thickness 39mm\n* Document set AA: thickness 68mm\n* Document set BB: thickness 55mm\n* Document set CC: thickness 53mm\n* Document set DD: thickness 48mm\n* Document set EE: thickness 52mm\n\nEach shelving unit can accommodate a cumulative thickness of up to 100 mm. The objective is to assign every archival box to a shelving unit, ensuring the total thickness on any unit does not surpass its capacity, while minimizing the total number of shelving units utilized. Every box must be placed on exactly one unit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_28_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of scientific sensor modules onto identical transport drones. The modules are as follows:\n\n* Module Alpha: mass 67 units\n* Module Beta: mass 68 units\n* Module Gamma: mass 49 units\n* Module Delta: mass 60 units\n* Module Epsilon: mass 65 units\n* Module Zeta: mass 53 units\n* Module Eta: mass 49 units\n* Module Theta: mass 56 units\n* Module Iota: mass 67 units\n* Module Kappa: mass 40 units\n* Module Lambda: mass 52 units\n* Module Mu: mass 32 units\n* Module Nu: mass 57 units\n* Module Xi: mass 58 units\n* Module Omicron: mass 58 units\n* Module Pi: mass 49 units\n* Module Rho: mass 34 units\n* Module Sigma: mass 44 units\n* Module Tau: mass 51 units\n* Module Upsilon: mass 44 units\n* Module Phi: mass 54 units\n* Module Chi: mass 31 units\n* Module Psi: mass 69 units\n* Module Omega: mass 51 units\n* Module Digamma: mass 39 units\n* Module San: mass 41 units\n* Module Qoppa: mass 61 units\n* Module Sampi: mass 34 units\n\nEach drone can carry a maximum payload of 100 mass units. The coordinator must assign every module to exactly one drone, ensuring the combined mass on any drone does not surpass its capacity. The objective is to complete the allocation utilizing the smallest possible number of drones.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

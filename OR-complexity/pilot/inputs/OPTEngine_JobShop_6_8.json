@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 6 delivery routes through 6 distribution centers.\n\nEach route consists of a sequence of handling steps represented as pairs (Center, Duration),\nwhere each pair specifies the distribution center where the handling must occur and the time required.\nThe order of pairs indicates the required sequence in which the handling steps must be performed.\n\nRoute details:\n* R1 requires the sequence: (C3, 3) → (C5, 7) → (C2, 10) → (C6, 6) → (C4, 2) → (C1, 7)\n* R2 requires the sequence: (C4, 4) → (C2, 8) → (C6, 7) → (C5, 10) → (C1, 2) → (C3, 5)\n* R3 requires the sequence: (C3, 4) → (C5, 5) → (C6, 1) → (C4, 10) → (C1, 6) → (C2, 7)\n* R4 requires the sequence: (C6, 7) → (C1, 7) → (C5, 7) → (C4, 2) → (C2, 8) → (C3, 10)\n* R5 requires the sequence: (C4, 3) → (C2, 10) → (C5, 5) → (C6, 9) → (C3, 2) → (C1, 6)\n* R6 requires the sequence: (C3, 5) → (C2, 3) → (C6, 10) → (C5, 6) → (C1, 5) → (C4, 7)\n\nEach handling step must run continuously once it begins and cannot be interrupted,\nand each distribution center can only handle one route's package at a time.\nThe objective is to determine the processing order of all handling steps across the centers\nso that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

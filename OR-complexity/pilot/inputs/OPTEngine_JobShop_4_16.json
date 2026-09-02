@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 4 delivery trucks through 4 different distribution centers.\n\nEach truck follows a specific route represented as pairs (Distribution Center, Handling Time), where each pair indicates the center where the truck must stop and the time required to handle its cargo. The order of pairs shows the required sequence of stops.\n\nTruck details:\n* Truck 1 follows the route: (DC1, 10) → (DC2, 3) → (DC4, 7) → (DC3, 4)\n* Truck 2 follows the route: (DC3, 9) → (DC1, 8) → (DC4, 4) → (DC2, 2)\n* Truck 3 follows the route: (DC4, 1) → (DC2, 4) → (DC3, 10) → (DC1, 3)\n* Truck 4 follows the route: (DC1, 6) → (DC4, 9) → (DC2, 3) → (DC3, 2)\n\nEach truck must complete its handling at each center without interruption once started, and each distribution center can only handle one truck at a time. The objective is to determine the optimal scheduling of all truck handling operations at the distribution centers so that the total completion time for all deliveries is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

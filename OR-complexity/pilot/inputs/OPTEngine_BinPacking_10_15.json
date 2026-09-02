@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of crates for shipping a collection of delicate scientific instruments. The instruments, each with a distinct mass, are as follows:\n* Instrument Alpha: mass 57 kilograms.\n* Instrument Beta: mass 50 kilograms.\n* Instrument Gamma: mass 69 kilograms.\n* Instrument Delta: mass 70 kilograms.\n* Instrument Epsilon: mass 43 kilograms.\n* Instrument Zeta: mass 65 kilograms.\n* Instrument Eta: mass 60 kilograms.\n* Instrument Theta: mass 58 kilograms.\n* Instrument Iota: mass 63 kilograms.\n* Instrument Kappa: mass 46 kilograms.\n\nEach shipping crate possesses a maximum safe load capacity of 100 kilograms. The objective is to assign every instrument to a crate, ensuring the combined mass within any single crate does not surpass its capacity, while utilizing the smallest possible number of crates for the entire shipment. No instrument may be divided or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

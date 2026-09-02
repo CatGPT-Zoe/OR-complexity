@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_22_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must select packages to load onto a cargo plane. Available packages are:\n* Package 1: volume 46 cubic meters, revenue $108\n* Package 2: volume 2 cubic meters, revenue $202\n* Package 3: volume 22 cubic meters, revenue $145\n* Package 4: volume 23 cubic meters, revenue $139\n* Package 5: volume 29 cubic meters, revenue $275\n* Package 6: volume 48 cubic meters, revenue $29\n* Package 7: volume 20 cubic meters, revenue $238\n* Package 8: volume 28 cubic meters, revenue $124\n* Package 9: volume 49 cubic meters, revenue $252\n* Package 10: volume 1 cubic meter, revenue $277\n* Package 11: volume 39 cubic meters, revenue $212\n* Package 12: volume 46 cubic meters, revenue $182\n* Package 13: volume 14 cubic meters, revenue $298\n* Package 14: volume 23 cubic meters, revenue $160\n* Package 15: volume 11 cubic meters, revenue $100\n* Package 16: volume 47 cubic meters, revenue $153\n* Package 17: volume 13 cubic meters, revenue $70\n* Package 18: volume 23 cubic meters, revenue $203\n* Package 19: volume 10 cubic meters, revenue $164\n* Package 20: volume 17 cubic meters, revenue $95\n* Package 21: volume 26 cubic meters, revenue $24\n* Package 22: volume 43 cubic meters, revenue $49\n\nThe aircraft's cargo hold has a maximum capacity of 406 cubic meters. Choose the package combination that maximizes total revenue without exceeding this volume limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

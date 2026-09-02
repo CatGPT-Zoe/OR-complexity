@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_5_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to assign delivery volume across 5 regional hubs to maximize total projected on-time delivery rate.  \nThe performance metrics for each hub are as follows:  \n* Hub 1: projected on-time rate is 0.139, delay risk is 0.223, allowable share [0.092, 0.341]  \n* Hub 2: projected on-time rate is 0.108, delay risk is 0.028, allowable share [0.053, 0.341]  \n* Hub 3: projected on-time rate is 0.054, delay risk is 0.101, allowable share [0.006, 0.817]  \n* Hub 4: projected on-time rate is 0.059, delay risk is 0.025, allowable share [0.051, 0.542]  \n* Hub 5: projected on-time rate is 0.031, delay risk is 0.148, allowable share [0.085, 0.865]  \n\nEach hub must be assigned a proportion of total volume within its specified range, and the sum of all proportions must equal 1.  \nTo ensure adequate capacity in high-priority zones, the company requires that hubs in the set H = {2, 3, 5} together handle at least 0.486 of the total volume.  \nAdditionally, the overall network delay risk, measured by a composite index, must not exceed 0.153, and the total projected on-time rate must be at least 0.059.  \nDetermine the optimal volume allocation across hubs that maximizes the total projected on-time delivery rate while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A factory must assemble 4 different electronic devices, each requiring a specific sequence of 4 testing procedures.\n\nEach device undergoes its tests in a fixed order, represented as pairs (Test Station, Duration), where each pair specifies the testing station to be used and the time required to complete the test. The sequence of pairs indicates the mandatory order in which the tests must be performed.\n\nDevice details:\n* D1 requires the sequence: (Station 4, 9) → (Station 1, 8) → (Station 2, 6) → (Station 3, 8)\n* D2 requires the sequence: (Station 4, 1) → (Station 3, 6) → (Station 1, 6) → (Station 2, 6)\n* D3 requires the sequence: (Station 1, 10) → (Station 3, 3) → (Station 4, 7) → (Station 2, 10)\n* D4 requires the sequence: (Station 3, 2) → (Station 4, 9) → (Station 2, 1) → (Station 1, 2)\n\nOnce a test begins on a device, it must run to completion without interruption, and each testing station can only handle one device at a time. The goal is to schedule all tests on the stations to minimize the total time needed to complete all devices.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

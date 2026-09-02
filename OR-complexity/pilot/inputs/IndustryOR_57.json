@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_57",
+  "annotation_mode": "semantic",
+  "problem_text": "Assuming a paper mill receives three orders for rolls of paper, with length and width requirements as shown in Table 1.2.\n\nTable 1.2\n\n| Order Number | Width (meters) | Length (meters) |\n| :---: | :---: | :---: |\n| 1 | 0.5 | 1000 |\n| 2 | 0.7 | 3000 |\n| 3 | 0.9 | 2000 |\n\nThe mill produces rolls of paper with standard widths of 1 meter and 2 meters. Assuming the length of the rolls is unlimited and can be spliced to reach the required length, how should the rolls be cut to minimize the area of waste?",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

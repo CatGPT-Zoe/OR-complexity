@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_37_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of fragile equipment modules to identical reinforced transport crates for an international airlift. The modules and their respective masses are as follows:\n\n* Module Alpha: mass 59 kg\n* Module Bravo: mass 41 kg\n* Module Charlie: mass 70 kg\n* Module Delta: mass 67 kg\n* Module Echo: mass 67 kg\n* Module Foxtrot: mass 48 kg\n* Module Golf: mass 63 kg\n* Module Hotel: mass 64 kg\n* Module India: mass 60 kg\n* Module Juliett: mass 53 kg\n* Module Kilo: mass 36 kg\n* Module Lima: mass 30 kg\n* Module Mike: mass 51 kg\n* Module November: mass 52 kg\n* Module Oscar: mass 59 kg\n* Module Papa: mass 39 kg\n* Module Quebec: mass 64 kg\n* Module Romeo: mass 47 kg\n* Module Sierra: mass 33 kg\n* Module Tango: mass 34 kg\n* Module Uniform: mass 58 kg\n* Module Victor: mass 41 kg\n* Module Whiskey: mass 61 kg\n* Module X-ray: mass 49 kg\n* Module Yankee: mass 70 kg\n* Module Zulu: mass 62 kg\n* Module Bracket: mass 39 kg\n* Module Backslash: mass 40 kg\n* Module Brace: mass 67 kg\n* Module Caret: mass 34 kg\n* Module Underscore: mass 45 kg\n* Module Grave: mass 62 kg\n* Module a: mass 40 kg\n* Module b: mass 59 kg\n* Module c: mass 32 kg\n* Module d: mass 37 kg\n* Module e: mass 63 kg\n\nEach reinforced crate has a certified maximum safe load capacity of 100 kg. The coordinator must load every single module, assigning each to precisely one crate, such that the aggregate mass within any given crate does not surpass its load limit. The overarching objective is to accomplish this loading scheme while utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

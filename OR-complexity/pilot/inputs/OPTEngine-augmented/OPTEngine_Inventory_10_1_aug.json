@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail outlet must devise a procurement and stock management strategy for a seasonal product over a sales window of 10 consecutive days.  \nThe initial stock available at the start of the first day is 7 units.  \nOn any given day \\( t = 1, \\dots, 10 \\), the supplier permits the outlet to request a shipment whose size can range from 0 up to 35 units.  \nAll shipments are delivered instantly upon ordering, meaning they become available immediately to meet the day’s sales requirements.  \nThe forecasted daily sales (demand) for the product is as follows:  \n- Day 1: 46 units  \n- Day 2: 44 units  \n- Day 3: 13 units  \n- Day 4: 56 units  \n- Day 5: 50 units  \n- Day 6: 19 units  \n- Day 7: 32 units  \n- Day 8: 11 units  \n- Day 9: 41 units  \n- Day 10: 50 units  \n\nStockouts are allowed; any sales not fulfilled on the day they occur are simply lost and cannot be recovered later.  \nQuantities of the product can be handled as continuous values, and the total stock physically held in the store at the end of any day must never exceed the storage limit of 30 units.\n\nOn the first day, the maximum permissible shipment size is restricted to 22 units.  \nBy the end of day 7, the on‑hand stock must be no less than 4 units.\n\nThe overall expense across the planning window comprises three elements: the procurement cost, charged at 1 monetary unit per unit ordered; the storage cost, charged at 1 per unit kept overnight; and a lost‑sales penalty, levied at 11 per unit of unmet demand.  \nThe objective is to decide the optimal shipment quantity for each day and to monitor the ensuing stock and lost‑sales levels in order to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

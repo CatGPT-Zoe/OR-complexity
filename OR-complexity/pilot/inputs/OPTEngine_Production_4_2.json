@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_4_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must allocate its fleet capacity to transport four distinct categories of cargo, each requiring four sequential handling stages. The revenue generated per ton for each cargo category is as follows:\n* For Cargo Alpha, revenue is 10.922 per ton\n* For Cargo Beta, revenue is 13.227 per ton\n* For Cargo Gamma, revenue is 9.401 per ton\n* For Cargo Delta, revenue is 12.171 per ton\n\nThe handling duration required per ton for each stage is detailed below:\n*For Cargo Alpha, Stage 1 consumes 0.631 (ton-hours), Stage 2 consumes 0.287 (ton-hours), Stage 3 consumes 0.523 (ton-hours), Stage 4 consumes 1.141 (ton-hours)\n*For Cargo Beta, Stage 1 consumes 0.328 (ton-hours), Stage 2 consumes 0.926 (ton-hours), Stage 3 consumes 0.791 (ton-hours), Stage 4 consumes 0.946 (ton-hours)\n*For Cargo Gamma, Stage 1 consumes 0.379 (ton-hours), Stage 2 consumes 1.836 (ton-hours), Stage 3 consumes 1.053 (ton-hours), Stage 4 consumes 1.714 (ton-hours)\n*For Cargo Delta, Stage 1 consumes 1.957 (ton-hours), Stage 2 consumes 0.819 (ton-hours), Stage 3 consumes 1.062 (ton-hours), Stage 4 consumes 1.459 (ton-hours)\n\n* The cumulative handling time for Stage 1 across all cargo must not surpass 134.935 hours\n* The cumulative handling time for Stage 2 across all cargo must not surpass 150.21 hours\n* The cumulative handling time for Stage 3 across all cargo must not surpass 158.005 hours\n* The cumulative handling time for Stage 4 across all cargo must not surpass 206.432 hours\n\nUnder the condition that the total processing duration for each individual stage—Stage 1, Stage 2, Stage 3, and Stage 4—remains within its respective available time budget, determine the optimal tonnage allocation for each cargo category to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

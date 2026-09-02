@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of critical components into standardized shipping crates. The components are as follows:\n* Component Alpha: mass 45kg\n* Component Beta: mass 30kg\n* Component Gamma: mass 53kg\n* Component Delta: mass 38kg\n* Component Epsilon: mass 31kg\n* Component Zeta: mass 58kg\n* Component Eta: mass 56kg\n* Component Theta: mass 66kg\n* Component Iota: mass 36kg\n* Component Kappa: mass 33kg\n* Component Lambda: mass 54kg\n* Component Mu: mass 48kg\n* Component Nu: mass 69kg\n* Component Xi: mass 42kg\n* Component Omicron: mass 57kg\n* Component Pi: mass 30kg\n* Component Rho: mass 69kg\n* Component Sigma: mass 44kg\n* Component Tau: mass 55kg\n* Component Upsilon: mass 69kg\n* Component Phi: mass 61kg\n* Component Chi: mass 61kg\n* Component Psi: mass 68kg\n* Component Omega: mass 57kg\n* Component Aleph: mass 55kg\n* Component Beth: mass 55kg\n* Component Gimel: mass 33kg\n* Component Dalet: mass 49kg\n* Component He: mass 41kg\n* Component Waw: mass 40kg\n* Component Zayin: mass 50kg\n* Component Het: mass 37kg\n* Component Tet: mass 62kg\n\nEach crate possesses a maximum safe load capacity of 100 kilograms. The objective is to assign every component to a crate, ensuring the aggregate mass within any single crate does not surpass its load limit, while simultaneously minimizing the total number of crates utilized. Every component must be placed into precisely one crate.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

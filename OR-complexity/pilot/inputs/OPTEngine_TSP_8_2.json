@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A museum curator is organizing a tour of eight distinct historical sites across a region. The travel times between sites are recorded in minutes as follows:\n\n* Site P to Q: 161.5 minutes\n* Site P to R: 46.2 minutes\n* Site P to S: 26.0 minutes\n* Site P to T: 56.8 minutes\n* Site P to U: 136.4 minutes\n* Site P to V: 92.1 minutes\n* Site P to W: 173.0 minutes\n* Site Q to R: 138.5 minutes\n* Site Q to S: 146.5 minutes\n* Site Q to T: 218.0 minutes\n* Site Q to U: 193.3 minutes\n* Site Q to V: 84.3 minutes\n* Site Q to W: 49.7 minutes\n* Site R to S: 20.2 minutes\n* Site R to T: 94.9 minutes\n* Site R to U: 171.4 minutes\n* Site R to V: 92.1 minutes\n* Site R to W: 162.7 minutes\n* Site S to T: 77.6 minutes\n* Site S to U: 154.8 minutes\n* Site S to V: 88.3 minutes\n* Site S to W: 164.8 minutes\n* Site T to U: 150.3 minutes\n* Site T to V: 144.3 minutes\n* Site T to W: 226.3 minutes\n* Site U to V: 117.0 minutes\n* Site U to W: 166.5 minutes\n* Site V to W: 82.0 minutes\n\nThe objective is to determine the sequence for the tour that minimizes the total travel duration, requiring that each site is visited precisely once before the tour concludes at the original starting point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

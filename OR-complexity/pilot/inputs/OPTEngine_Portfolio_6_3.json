@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_6_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A company needs to distribute its marketing budget across 6 different advertising channels to maximize the total expected audience reach. The performance metrics for each channel are as follows: * Channel A: expected reach is 0.067, audience volatility is 0.090, allocation bounds [0.014, 0.626]\n* Channel B: expected reach is 0.065, audience volatility is 0.032, allocation bounds [0.023, 0.549]\n* Channel C: expected reach is 0.135, audience volatility is 0.093, allocation bounds [0.069, 0.424]\n* Channel D: expected reach is 0.158, audience volatility is 0.089, allocation bounds [0.071, 0.552]\n* Channel E: expected reach is 0.114, audience volatility is 0.103, allocation bounds [0.006, 0.843]\n* Channel F: expected reach is 0.133, audience volatility is 0.167, allocation bounds [0.041, 0.650] \nEach channel must receive a budget share that falls within its specified minimum and maximum allocation limits, and the sum of all budget shares must equal the total budget. To maintain brand visibility across key platforms, the company requires that the group of digital channels, represented by the subset L ={B, D, E, F}, collectively receive at least 0.288 of the total budget. Additionally, the overall campaign volatility, measured by a composite risk index, must not exceed 0.088, and the total expected audience reach must be no less than 0.082. Determine the optimal budget allocation that maximizes total expected audience reach while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

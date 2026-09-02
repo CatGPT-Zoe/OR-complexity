@@ -1,0 +1,27 @@
+{
+  "instance_id": "LEAN_AP2",
+  "annotation_mode": "semantic",
+  "problem_text": "In the construction industry, we have a set of managers and a set of construction projects. Each manager incurs different costs for each project, based on their experience and expertise. The cost information for each manager and project is saved in the CSV file \"manager_project_costs.csv\", where each row represents a manager, and each column represents the cost for that manager to complete a specific project. The objective is to find the optimal assignment that minimizes the total cost of completing all projects. Each manager must be assigned to exactly one project, and each project must be managed by exactly one manager. The goal is to minimize the total cost while satisfying these one-to-one assignment constraints.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "manager_project_costs",
+      "indices": [
+        "row_label",
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "unit": "",
+      "values": "| row_label | P1 | P2 | P3 |\n|---|---|---|---|\n| MA | 3000 | 3200 | 3100 |\n| MB | 2800 | 3300 | 2900 |\n| MC | 2900 | 3100 | 3000 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/AP_testing/AP2/manager_project_costs.csv",
+      "role": "parameter_table",
+      "table": "manager_project_costs"
+    }
+  ],
+  "notes": ""
+}

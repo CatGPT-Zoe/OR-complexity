@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional power grid operator must inspect eight substations scattered across a service territory.  \nThe transmission line distances between substations are as follows (in kilometers):\n* Substation Alpha to Beta: 174.1 km  \n* Alpha to Gamma: 51.3 km  \n* Alpha to Delta: 109.3 km  \n* Alpha to Epsilon: 183.4 km  \n* Alpha to Zeta: 180.7 km  \n* Alpha to Eta: 35.1 km  \n* Alpha to Theta: 175.4 km  \n* Beta to Gamma: 179.8 km  \n* Beta to Delta: 64.9 km  \n* Beta to Epsilon: 20.8 km  \n* Beta to Zeta: 160.0 km  \n* Beta to Eta: 196.8 km  \n* Beta to Theta: 121.4 km  \n* Gamma to Delta: 120.4 km  \n* Gamma to Epsilon: 183.5 km  \n* Gamma to Zeta: 141.4 km  \n* Gamma to Eta: 32.0 km  \n* Gamma to Theta: 145.7 km  \n* Delta to Epsilon: 76.4 km  \n* Delta to Zeta: 148.4 km  \n* Delta to Eta: 133.6 km  \n* Delta to Theta: 119.6 km  \n* Epsilon to Zeta: 147.0 km  \n* Epsilon to Eta: 203.3 km  \n* Epsilon to Theta: 107.2 km  \n* Zeta to Eta: 173.4 km  \n* Zeta to Theta: 40.4 km  \n* Eta to Theta: 176.1 km  \n\nThe inspection team must devise a route that visits every substation precisely once, concluding back at the initial substation, while minimizing the total travel distance along the transmission corridors.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

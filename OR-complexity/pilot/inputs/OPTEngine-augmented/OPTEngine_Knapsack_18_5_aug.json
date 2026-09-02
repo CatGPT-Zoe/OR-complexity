@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner must allocate a fleet of cargo drones to transport emergency relief packages to isolated communities. Each drone can carry a variety of supply packages, but the total payload weight for the entire fleet is strictly limited. The planner must select a combination of packages to maximize the total utility score while adhering to the fleet's total weight constraint.\n\nThe available supply packages are:\n* Package A: weight 33kg, utility 157 points\n* Package B: weight 45kg, utility 259 points\n* Package C: weight 27kg, utility 170 points\n* Package D: weight 44kg, utility 207 points\n* Package E: weight 4kg, utility 68 points\n* Package F: weight 4kg, utility 181 points\n* Package G: weight 11kg, utility 146 points\n* Package H: weight 40kg, utility 296 points\n* Package I: weight 29kg, utility 168 points\n* Package J: weight 36kg, utility 222 points\n* Package K: weight 31kg, utility 201 points\n* Package L: weight 15kg, utility 55 points\n* Package M: weight 47kg, utility 51 points\n* Package N: weight 41kg, utility 56 points\n* Package O: weight 33kg, utility 18 points\n* Package P: weight 43kg, utility 272 points\n* Package Q: weight 22kg, utility 59 points\n* Package R: weight 37kg, utility 130 points\n\nDue to logistical protocols, exactly one of Package A or Package B must be included in the shipment.\n\nIf Package C is selected, it requires a special handling container that reduces the fleet's effective payload capacity by 10 kg.\nThe maximum aggregate payload weight the drone fleet can lift is 379 kg. The planner must determine the optimal set of packages to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

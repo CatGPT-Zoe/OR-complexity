@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager needs to distribute a total shipment volume across 7 different transportation routes to maximize the overall delivery efficiency. The characteristics of each route are as follows:\n* Route X: delivery efficiency is 0.130, congestion factor is 0.060, allocation bounds [0.071, 0.697]\n* Route Y: delivery efficiency is 0.153, congestion factor is 0.032, allocation bounds [0.070, 0.860]\n* Route Z: delivery efficiency is 0.191, congestion factor is 0.011, allocation bounds [0.045, 0.555]\n* Route W: delivery efficiency is 0.057, congestion factor is 0.141, allocation bounds [0.069, 0.627]\n* Route V: delivery efficiency is 0.058, congestion factor is 0.182, allocation bounds [0.092, 0.689]\n* Route U: delivery efficiency is 0.139, congestion factor is 0.094, allocation bounds [0.079, 0.845]\n* Route T: delivery efficiency is 0.048, congestion factor is 0.077, allocation bounds [0.063, 0.796]\n\nEach route must receive a proportion of the total shipment volume that satisfies its individual lower and upper bounds, and the sum of all allocation proportions must equal one. To ensure reliable coverage, the manager requires that the group of high-capacity routes, represented by the set H = {Y, Z, W, V, U, T}, collectively handle at least 0.418 of the total shipment volume.\n\nAdditionally, the overall network congestion, measured by a composite congestion index, must not exceed 0.150, and the total delivery efficiency must be no less than 0.081. Determine the optimal shipment allocation that maximizes total delivery efficiency while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

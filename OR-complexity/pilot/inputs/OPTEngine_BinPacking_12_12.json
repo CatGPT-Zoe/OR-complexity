@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of antique sculptures to identical reinforced shipping crates. The collection consists of the following pieces, each with a distinct mass:\n\n* Sculpture Alpha: mass 38kg\n* Sculpture Beta: mass 30kg\n* Sculpture Gamma: mass 55kg\n* Sculpture Delta: mass 56kg\n* Sculpture Epsilon: mass 50kg\n* Sculpture Zeta: mass 30kg\n* Sculpture Eta: mass 43kg\n* Sculpture Theta: mass 30kg\n* Sculpture Iota: mass 30kg\n* Sculpture Kappa: mass 63kg\n* Sculpture Lambda: mass 69kg\n* Sculpture Mu: mass 36kg\n\nEach shipping crate is certified to safely support a maximum load of 100 kilograms. The coordinator must devise a packing scheme that places every sculpture into precisely one crate, ensuring the combined mass within any single crate does not surpass its load capacity. The objective is to complete this assignment utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

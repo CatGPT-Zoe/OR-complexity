@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of archival boxes into a fleet of identical transport vehicles. The archival boxes contain historical documents with the following total masses:\n* Collection Alpha: 69 kilograms\n* Collection Beta: 46 kilograms\n* Collection Gamma: 60 kilograms\n* Collection Delta: 34 kilograms\n* Collection Epsilon: 35 kilograms\n* Collection Zeta: 38 kilograms\n* Collection Eta: 39 kilograms\n* Collection Theta: 32 kilograms\n* Collection Iota: 35 kilograms\n* Collection Kappa: 64 kilograms\n\nEach transport vehicle has a maximum safe load capacity of 100 kg. The coordinator must ensure every archival box is placed onto exactly one vehicle, and the combined mass loaded onto any single vehicle must not surpass its capacity limit. The objective is to complete the allocation utilizing the minimal possible number of vehicles.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a circuit of five regional distribution centers:\nCenter P: Positioned at grid reference (31,162)\nCenter Q: Positioned at grid reference (48,155)\nCenter R: Positioned at grid reference (147,30)\nCenter S: Positioned at grid reference (100,23)\nCenter T: Positioned at grid reference (94,29)\n\nThe travel distances between centers are recorded in kilometers:\nP to R: 175.7 km\nP to S: 155.2 km\nP to T: 147.2 km\nQ to R: 159.5 km\nQ to S: 141.9 km\nQ to T: 134.1 km\nR to S: 47.5 km\nR to T: 53.0 km\nS to T: 8.5 km\n\nDirect transit between Center P and Center Q is not feasible.\nFurthermore, the route must incorporate exactly one of two specific critical links: either the connection between Center Q and Center R, or the connection between Center R and Center S.\n\nThe objective is to determine the minimal total travel distance for a closed loop that visits every distribution center precisely once before returning to the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

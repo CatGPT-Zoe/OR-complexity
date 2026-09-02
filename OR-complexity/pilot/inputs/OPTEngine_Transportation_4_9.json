@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing conglomerate seeks to allocate production runs across four specialized fabrication facilities to fulfill orders from four distinct retail distribution centers, with the objective of minimizing aggregate processing and logistics expenditure.\n\nThe production capacity at each fabrication facility (designated as Facility F1 through F4) is strictly limited as follows:\n*F1 can accommodate up to 135 units.\n*F2 can accommodate up to 155 units.\n*F3 can accommodate up to 113 units.\n*F4 can accommodate up to 118 units.\n\nThe contractual obligation for units to be delivered to each distribution center (labeled Center C1 through C4) is non-negotiable and specified as:\n*C1 requires exactly 151 units.\n*C2 requires exactly 82 units.\n*C3 requires exactly 8 units.\n*C4 requires exactly 100 units.\n\nThe comprehensive per-unit cost, encompassing material handling, specialized processing, and final-mile delivery, from each fabrication facility to each distribution center is provided in the matrix below:\n\n| From / To | C1 | C2 | C3 | C4 |\n|-----------|----|----|----|----|\n| F1        | 7  | 15 | 12 | 10 |\n| F2        | 8  | 8  | 1  | 7  |\n| F3        | 13 | 11 | 9  | 3  |\n| F4        | 9  | 12 | 17 | 13 |\n\nDetermine the optimal quantity of units to route from each facility to each center such that all capacities and obligations are precisely satisfied and the total incurred cost is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

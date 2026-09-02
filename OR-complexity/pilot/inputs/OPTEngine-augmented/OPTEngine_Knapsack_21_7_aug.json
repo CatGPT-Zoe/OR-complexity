@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment for a specialized cargo drone, which must transport a selection of high-value components across a remote region over a three-leg journey. The goal is to maximize the total utility score of the delivered components without exceeding the drone's maximum lift capacity.\n\nThe components available are:\n* Component A: mass 22kg, utility 146 units\n* Component B: mass 34kg, utility 165 units\n* Component C: mass 29kg, utility 283 units\n* Component D: mass 22kg, utility 215 units\n* Component E: mass 43kg, utility 181 units\n* Component F: mass 26kg, utility 153 units\n* Component G: mass 45kg, utility 17 units\n* Component H: mass 14kg, utility 249 units\n* Component I: mass 49kg, utility 162 units\n* Component J: mass 26kg, utility 229 units\n* Component K: mass 48kg, utility 76 units\n* Component L: mass 12kg, utility 254 units\n* Component M: mass 13kg, utility 97 units\n* Component N: mass 40kg, utility 108 units\n* Component O: mass 5kg, utility 148 units\n* Component P: mass 33kg, utility 269 units\n* Component Q: mass 11kg, utility 104 units\n* Component R: mass 43kg, utility 258 units\n* Component S: mass 8kg, utility 256 units\n* Component T: mass 16kg, utility 232 units\n* Component U: mass 12kg, utility 69 units\n\nA critical compatibility rule dictates that exactly one of Component A and Component B can be included in the shipment.\n\nFurthermore, if Component C is selected, it requires a dedicated cooling apparatus that reduces the drone's effective lift capacity by 10 kg.\nThe drone's maximum allowable takeoff mass is 385 kg. The coordinator must determine the optimal set of components to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

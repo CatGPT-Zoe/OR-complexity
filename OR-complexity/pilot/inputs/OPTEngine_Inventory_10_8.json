@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A municipal water utility must devise a pumping and storage schedule for a reservoir over a ten-day forecast window.  \nThe initial water volume in the reservoir at the start of the planning interval is 27 million gallons.  \nIn each day \\( t = 1,\\dots,10 \\), the pumping station can extract from an aquifer an amount that must be between 9 and 76 million gallons.  \nThis pumped water becomes available instantly—there is no delay before it enters the reservoir.  \nThe forecasted municipal consumption for each day is as follows:  \n\n* Day 1: 11 million gallons  \n* Day 2: 17 million gallons  \n* Day 3: 49 million gallons  \n* Day 4: 60 million gallons  \n* Day 5: 55 million gallons  \n* Day 6: 16 million gallons  \n* Day 7: 21 million gallons  \n* Day 8: 56 million gallons  \n* Day 9: 36 million gallons  \n* Day 10: 25 million gallons  \n\nShortfalls are permissible; any consumption not met from the reservoir is simply lost and will not be deferred to later days.  \nThroughout the ten-day horizon, water volumes are treated as continuous quantities, and the total storage in the reservoir at any moment must not exceed its capacity of 39 million gallons.  \n\nThe total operational cost comprises three elements: the extraction cost, which is 6 per million gallons pumped; the storage cost, which is 3 per million gallons held overnight from one day to the next; and a penalty for unmet demand, assessed at 14 per million gallons of shortfall.  \nThe objective is to determine the optimal pumping volume each day and to monitor the resulting reservoir levels and daily deficits so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

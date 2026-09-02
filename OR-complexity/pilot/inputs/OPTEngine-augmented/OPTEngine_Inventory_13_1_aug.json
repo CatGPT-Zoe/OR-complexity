@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage schedule across a 13‑week planning window.  \nInitial stock at the start of the planning interval is 76 liters.  \nIn each week \\( t = 1,\\dots,13 \\), the blood‑bank permits the hospital to request a shipment whose volume must be between 4 and 73 liters.  \nEach shipment, once requested, requires a 4‑week lead time before it becomes available for transfusions or replenishing reserves.  \nWeekly transfusion requirements are as follows:  \n* Week 1: 24 liters  \n* Week 2: 37 liters  \n* Week 3: 25 liters  \n* Week 4: 26 liters  \n* Week 5: 40 liters  \n* Week 6: 40 liters  \n* Week 7: 19 liters  \n* Week 8: 24 liters  \n* Week 9: 38 liters  \n* Week 10: 28 liters  \n* Week 11: 33 liters  \n* Week 12: 51 liters  \n* Week 13: 41 liters  \n\nDeficits are tolerated, but any unmet transfusion need is lost and not carried forward.  \nThroughout the 13‑week horizon, plasma volumes may be treated as continuous quantities, and the total on‑hand reserve at any moment must not surpass the refrigeration capacity of 76 liters.  \n\nIn week 9, the maximum allowable shipment volume is 19 liters.  \nIn week 1, the on‑hand reserve must be no less than 19 liters.  \n\nThe aggregate cost comprises three elements: the procurement cost, charged at 6 per liter ordered; the storage cost, charged at 1 per liter held from one week to the next; and the shortage penalty, assessed at 9 per liter of unmet transfusion need.  \nDetermine the optimal shipment volume for each week and monitor the resulting reserve levels and deficits so as to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

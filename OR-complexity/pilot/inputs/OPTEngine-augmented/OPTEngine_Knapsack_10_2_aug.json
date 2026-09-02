@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is planning the cargo for a three-stage airlift mission. They need to select a combination of crates to maximize total utility points while staying within the aircraft's maximum payload allowance.\n\nThe crates available are:\n* Crate A: mass 27kg, utility 33 points\n* Crate B: mass 9kg, utility 20 points\n* Crate C: mass 26kg, utility 49 points\n* Crate D: mass 45kg, utility 47 points\n* Crate E: mass 9kg, utility 225 points\n* Crate F: mass 20kg, utility 291 points\n* Crate G: mass 27kg, utility 82 points\n* Crate H: mass 38kg, utility 226 points\n* Crate I: mass 20kg, utility 191 points\n* Crate J: mass 6kg, utility 137 points\n\nFurthermore, due to compatibility requirements, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is loaded, a special handling apparatus must also be carried, which effectively diminishes the available payload capacity by 10 kg.\nThe aircraft can accommodate a maximum total mass of 158 kg. The manager must determine the optimal set of crates to transport.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must devise a procurement and storage strategy for a critical component across a 13-week operational cycle.  \nThe starting stock at the commencement of the cycle is 12 units.  \nIn each week \\( t = 1, \\dots, 13 \\), the vendor permits an order whose size must fall between 2 and 41 units.  \nNevertheless, every order placed is subject to a 2-week lead time before it becomes available to meet requirements or augment the stock.  \nThe requirement for the component in each week is as follows:  \n* Week 1: requirement 54 units  \n* Week 2: requirement 41 units  \n* Week 3: requirement 40 units  \n* Week 4: requirement 15 units  \n* Week 5: requirement 13 units  \n* Week 6: requirement 44 units  \n* Week 7: requirement 35 units  \n* Week 8: requirement 60 units  \n* Week 9: requirement 60 units  \n* Week 10: requirement 26 units  \n* Week 11: requirement 11 units  \n* Week 12: requirement 51 units  \n* Week 13: requirement 43 units  \n\nStockouts are permissible, but any unsatisfied requirement is forfeited and not carried forward.  \nThroughout the planning cycle, component quantities may be fractional, and the total quantity of physical stock on hand at any moment must not surpass the storage limit of 35 units.  \nThe aggregate expenditure over the cycle comprises three elements: the procurement cost, which is 1 per unit ordered; the storage cost, which is 2 per unit kept from one week to the next; and the shortage penalty, which is 6 per unit of unmet requirement. Determine the optimal order quantity for each week and monitor the consequent stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

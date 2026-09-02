@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of shipments onto identical transport pallets. The shipments are as follows:\n\n* Shipment Alpha: mass 51kg\n* Shipment Beta: mass 53kg\n* Shipment Gamma: mass 33kg\n* Shipment Delta: mass 54kg\n* Shipment Epsilon: mass 51kg\n* Shipment Zeta: mass 41kg\n* Shipment Eta: mass 48kg\n* Shipment Theta: mass 60kg\n* Shipment Iota: mass 32kg\n* Shipment Kappa: mass 64kg\n* Shipment Lambda: mass 62kg\n* Shipment Mu: mass 49kg\n* Shipment Nu: mass 50kg\n* Shipment Xi: mass 47kg\n* Shipment Omicron: mass 69kg\n* Shipment Pi: mass 70kg\n* Shipment Rho: mass 50kg\n* Shipment Sigma: mass 34kg\n* Shipment Tau: mass 52kg\n* Shipment Upsilon: mass 31kg\n* Shipment Phi: mass 58kg\n* Shipment Chi: mass 69kg\n* Shipment Psi: mass 41kg\n* Shipment Omega: mass 52kg\n* Shipment A1: mass 69kg\n* Shipment B1: mass 48kg\n* Shipment C1: mass 46kg\n* Shipment D1: mass 61kg\n* Shipment E1: mass 30kg\n* Shipment F1: mass 58kg\n* Shipment G1: mass 40kg\n* Shipment H1: mass 45kg\n* Shipment I1: mass 52kg\n\nEach pallet possesses a maximum safe load capacity of 100 kilograms. The coordinator must assign every shipment to precisely one pallet, ensuring the cumulative mass on any given pallet does not surpass its designated limit. The objective is to complete this allocation utilizing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

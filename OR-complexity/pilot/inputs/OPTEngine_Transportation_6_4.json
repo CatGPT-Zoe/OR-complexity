@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company seeks to allocate its fleet of delivery vehicles across six regional warehouses to fulfill online retail orders, minimizing total fuel expenditure.\n\nThe number of vehicles ready at each distribution hub (set H) is fixed as follows:  \n*Hub H1 has 118 vehicles available.  \n*Hub H2 has 197 vehicles available.  \n*Hub H3 has 60 vehicles available.  \n*Hub H4 has 94 vehicles available.  \n*Hub H5 has 170 vehicles available.  \n*Hub H6 has 182 vehicles available.\n\nThe required number of vehicle dispatches to meet pending deliveries at each warehouse (set W) is specified below:  \n*Warehouse W1 must receive 215 vehicles.  \n*Warehouse W2 must receive 43 vehicles.  \n*Warehouse W3 must receive 137 vehicles.  \n*Warehouse W4 must receive 148 vehicles.  \n*Warehouse W5 must receive 115 vehicles.  \n*Warehouse W6 must receive 21 vehicles.\n\nThe fuel cost per vehicle dispatched from each hub to each warehouse is provided in the table:\n\n| From / To | W1 | W2 | W3 | W4 | W5 | W6 |\n|-----------|----|----|----|----|----|----|\n| H1        | 12 | 14 | 11 | 11 | 4  | 6  |\n| H2        | 11 | 14 | 16 | 10 | 13 | 18 |\n| H3        | 2  | 15 | 3  | 11 | 9  | 11 |\n| H4        | 4  | 13 | 17 | 1  | 18 | 15 |\n| H5        | 14 | 2  | 7  | 17 | 12 | 20 |\n| H6        | 16 | 15 | 2  | 7  | 9  | 18 |\n\nDetermine how many vehicles to route from each hub to each warehouse so that the aggregate fuel consumption expense is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate resources from seven manufacturing hubs to seven distribution centers while minimizing total transfer expenses.\n\nEach hub has a fixed production capacity, detailed as follows:\n*Hub P1 can provide 107 units.\n*Hub P2 can provide 57 units.\n*Hub P3 can provide 131 units.\n*Hub P4 can provide 75 units.\n*Hub P5 can provide 135 units.\n*Hub P6 can provide 87 units.\n*Hub P7 can provide 85 units.\n\nEach distribution center has a non-negotiable resource requirement:\n*Center D1 requires 77 units.\n*Center D2 requires 40 units.\n*Center D3 requires 70 units.\n*Center D4 requires 63 units.\n*Center D5 requires 39 units.\n*Center D6 requires 51 units.\n*Center D7 requires 75 units.\n\nThe expense incurred per unit transferred between any specific hub and center is provided in the matrix:\n\n| From / To | D1 | D2 | D3 | D4 | D5 | D6 | D7 |\n|---|---|---|---|---|---|---|---|\n| P1 | 1  | 9  | 7  | 5  | 18 | 20 | 17 |\n| P2 | 14 | 4  | 10 | 8  | 10 | 4  | 2  |\n| P3 | 8  | 14 | 20 | 15 | 3  | 4  | 16 |\n| P4 | 20 | 18 | 1  | 17 | 19 | 8  | 5  |\n| P5 | 10 | 14 | 1  | 20 | 12 | 8  | 19 |\n| P6 | 14 | 6  | 3  | 17 | 12 | 3  | 17 |\n| P7 | 18 | 17 | 17 | 18 | 1  | 13 | 16 |\n\nDetermine the optimal allocation of units to be transferred, ensuring all requirements are met and capacities are not exceeded, so that the aggregate expense is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_6_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers to load onto a delivery truck. Available containers are:\n* Container 1: occupies 11 cubic meters, revenue $185\n* Container 2: occupies 34 cubic meters, revenue $138\n* Container 3: occupies 8 cubic meters, revenue $236\n* Container 4: occupies 43 cubic meters, revenue $99\n* Container 5: occupies 1 cubic meter, revenue $251\n* Container 6: occupies 44 cubic meters, revenue $219\nThe truck's cargo hold has a maximum capacity of 98 cubic meters. Choose the container combination that maximizes total revenue without exceeding this capacity. Each container is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

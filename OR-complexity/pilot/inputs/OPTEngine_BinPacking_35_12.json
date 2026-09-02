@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of cargo parcels to identical transport vehicles. The parcels are as follows:\n\n* Parcel Alpha: mass 41kg\n* Parcel Bravo: mass 32kg\n* Parcel Charlie: mass 63kg\n* Parcel Delta: mass 41kg\n* Parcel Echo: mass 40kg\n* Parcel Foxtrot: mass 57kg\n* Parcel Golf: mass 42kg\n* Parcel Hotel: mass 49kg\n* Parcel India: mass 68kg\n* Parcel Juliet: mass 64kg\n* Parcel Kilo: mass 67kg\n* Parcel Lima: mass 33kg\n* Parcel Mike: mass 33kg\n* Parcel November: mass 44kg\n* Parcel Oscar: mass 31kg\n* Parcel Papa: mass 66kg\n* Parcel Quebec: mass 53kg\n* Parcel Romeo: mass 46kg\n* Parcel Sierra: mass 59kg\n* Parcel Tango: mass 69kg\n* Parcel Uniform: mass 48kg\n* Parcel Victor: mass 47kg\n* Parcel Whiskey: mass 63kg\n* Parcel X-ray: mass 51kg\n* Parcel Yankee: mass 53kg\n* Parcel Zulu: mass 38kg\n* Parcel [SquareBracket]: mass 34kg\n* Parcel [Backslash]: mass 58kg\n* Parcel [CloseBracket]: mass 64kg\n* Parcel [Caret]: mass 37kg\n* Parcel [Underscore]: mass 36kg\n* Parcel [Grave]: mass 39kg\n* Parcel a: mass 40kg\n* Parcel b: mass 51kg\n* Parcel c: mass 56kg\n\nEach vehicle has a maximum load capacity of 100 kg. The coordinator must load all parcels, with each parcel assigned to exactly one vehicle, ensuring the total mass in any vehicle does not surpass its capacity. The objective is to utilize the minimum possible number of vehicles.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A warehouse supervisor needs to load boxes onto identical pallets for shipping. The boxes are as follows:\n\n* Box A: weight 36kg  \n* Box B: weight 66kg  \n* Box C: weight 64kg  \n* Box D: weight 32kg  \n* Box E: weight 43kg  \n* Box F: weight 67kg  \n* Box G: weight 67kg  \n* Box H: weight 56kg  \n* Box I: weight 47kg  \n* Box J: weight 36kg  \n* Box K: weight 36kg  \n* Box L: weight 41kg  \n* Box M: weight 37kg  \n* Box N: weight 39kg  \n* Box O: weight 65kg  \n* Box P: weight 45kg  \n* Box Q: weight 44kg  \n* Box R: weight 60kg  \n* Box S: weight 68kg  \n* Box T: weight 46kg  \n* Box U: weight 55kg  \n* Box V: weight 43kg  \n* Box W: weight 33kg  \n* Box X: weight 63kg  \n* Box Y: weight 63kg  \n* Box Z: weight 61kg  \n* Box [: weight 34kg  \n* Box \\: weight 44kg  \n* Box ]: weight 38kg  \n* Box ^: weight 55kg  \n* Box _: weight 59kg  \n* Box `: weight 34kg  \n* Box a: weight 45kg  \n* Box b: weight 44kg  \n\nEach pallet can support a maximum load of 100 kg. Load all boxes using the fewest pallets. Every box must be placed on exactly one pallet, and the total weight on a pallet must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

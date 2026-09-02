@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment of specialized components to maximize total utility points while staying within a cargo aircraft's payload allowance.\n\nThe components under consideration are:\n* Component A: mass 24kg, utility 34 points\n* Component B: mass 7kg, utility 234 points\n* Component C: mass 41kg, utility 291 points\n* Component D: mass 41kg, utility 127 points\n* Component E: mass 2kg, utility 242 points\n* Component F: mass 31kg, utility 43 points\n* Component G: mass 16kg, utility 48 points\n* Component H: mass 14kg, utility 116 points\n* Component I: mass 42kg, utility 111 points\n* Component J: mass 23kg, utility 200 points\n* Component K: mass 1kg, utility 162 points\n* Component L: mass 45kg, utility 153 points\n* Component M: mass 44kg, utility 14 points\n* Component N: mass 22kg, utility 40 points\n* Component O: mass 23kg, utility 94 points\n* Component P: mass 27kg, utility 50 points\n* Component Q: mass 47kg, utility 231 points\n* Component R: mass 36kg, utility 84 points\n* Component S: mass 43kg, utility 243 points\n* Component T: mass 31kg, utility 284 points\n* Component U: mass 43kg, utility 170 points\n* Component V: mass 1kg, utility 201 points\n* Component W: mass 2kg, utility 52 points\n* Component X: mass 30kg, utility 258 points\n* Component Y: mass 46kg, utility 13 points\n\nFurthermore, due to compatibility requirements, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, it necessitates special handling equipment that reduces the aircraft's effective payload capacity by 10 kg.\nThe maximum allowable total mass for the cargo is 477 kg. The coordinator must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

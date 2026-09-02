@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_23_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes onto standardized shelving units. The boxes contain historical documents with the following masses:\n\n* Box Alpha: mass 43kg\n* Box Beta: mass 68kg\n* Box Gamma: mass 58kg\n* Box Delta: mass 32kg\n* Box Epsilon: mass 45kg\n* Box Zeta: mass 61kg\n* Box Eta: mass 68kg\n* Box Theta: mass 50kg\n* Box Iota: mass 65kg\n* Box Kappa: mass 42kg\n* Box Lambda: mass 30kg\n* Box Mu: mass 32kg\n* Box Nu: mass 33kg\n* Box Xi: mass 38kg\n* Box Omicron: mass 45kg\n* Box Pi: mass 58kg\n* Box Rho: mass 69kg\n* Box Sigma: mass 44kg\n* Box Tau: mass 36kg\n* Box Upsilon: mass 63kg\n* Box Phi: mass 57kg\n* Box Chi: mass 70kg\n* Box Psi: mass 48kg\n\nEach shelving unit can safely support a maximum load of 100 kg. The coordinator must place all boxes onto shelves, with every box assigned to exactly one shelf and the combined mass on any shelf not surpassing its load limit. The objective is to utilize the minimal possible number of shelving units.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

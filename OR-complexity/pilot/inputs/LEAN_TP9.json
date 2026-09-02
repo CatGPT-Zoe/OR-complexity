@@ -1,0 +1,56 @@
+{
+  "instance_id": "LEAN_TP9",
+  "annotation_mode": "semantic",
+  "problem_text": "“BrewCo,” a beverage manufacturer, operates multiple production facilities that distribute drinks to various retail locations. The daily demand for each retail outlet is specified in “customer_demand.csv,” while the production capacity of each plant is outlined in “supply_capacity.csv.” The transportation cost per unit of beverages from each plant to each outlet is recorded in “transportation_costs.csv.” The goal is to determine the optimal quantity of beverages to be shipped from each production plant to each retail outlet, ensuring all outlet demands are met without surpassing any plant’s production capacity, while minimizing the total transportation cost.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "customer_demand",
+      "indices": [
+        "customer",
+        "demand"
+      ],
+      "unit": "",
+      "values": "| customer | demand |\n|---|---|\n| C1 | 94 |\n| C2 | 39 |\n| C3 | 65 |\n| C4 | 435 |"
+    },
+    {
+      "name": "supply_capacity",
+      "indices": [
+        "row_label",
+        "supply_capacity"
+      ],
+      "unit": "",
+      "values": "| row_label | supply_capacity |\n|---|---|\n| S1 | 2531 |\n| S2 | 20 |\n| S3 | 210 |\n| S4 | 241 |"
+    },
+    {
+      "name": "transportation_costs",
+      "indices": [
+        "row_label",
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "unit": "",
+      "values": "| row_label | C1 | C2 | C3 | C4 |\n|---|---|---|---|---|\n| S1 | 543.756480860856 | 23.685276141764653 | 23.676386730773032 | 447.75143678673766 |\n| S2 | 883.9151090405642 | 0.04977684765576961 | 0.0350986687216299 | 44.45588531711622 |\n| S3 | 537.3456896658107 | 23.769274659075112 | 498.95659249465467 | 440.60737890439776 |\n| S4 | 1791.493192397229 | 68.21633865655126 | 1432.4837339656747 | 1527.7635425462734 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/TP_testing/TP9/customer_demand.csv",
+      "role": "parameter_table",
+      "table": "customer_demand"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/TP_testing/TP9/supply_capacity.csv",
+      "role": "parameter_table",
+      "table": "supply_capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/TP_testing/TP9/transportation_costs.csv",
+      "role": "parameter_table",
+      "table": "transportation_costs"
+    }
+  ],
+  "notes": ""
+}

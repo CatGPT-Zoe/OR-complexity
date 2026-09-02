@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a set of critical components to standardized transport pallets. The components are as follows:\n* Component Alpha: mass 45 units\n* Component Beta: mass 59 units\n* Component Gamma: mass 60 units\n* Component Delta: mass 35 units\n* Component Epsilon: mass 68 units\n* Component Zeta: mass 47 units\n* Component Eta: mass 48 units\n* Component Theta: mass 55 units\n* Component Iota: mass 51 units\n* Component Kappa: mass 49 units\n* Component Lambda: mass 35 units\n* Component Mu: mass 69 units\n* Component Nu: mass 37 units\n* Component Xi: mass 61 units\n* Component Omicron: mass 53 units\n* Component Pi: mass 69 units\n* Component Rho: mass 69 units\n* Component Sigma: mass 35 units\n* Component Tau: mass 44 units\n* Component Upsilon: mass 38 units\n* Component Phi: mass 56 units\n* Component Chi: mass 45 units\n* Component Psi: mass 31 units\n* Component Omega: mass 61 units\n* Component Digamma: mass 48 units\n* Component San: mass 39 units\n* Component Koppa: mass 63 units\n\nEach pallet has a maximum safe load capacity of 100 mass units. The objective is to allocate every component to a pallet, ensuring each component is placed on exactly one pallet and the cumulative mass on any given pallet does not surpass its load limit, while minimizing the total number of pallets utilized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

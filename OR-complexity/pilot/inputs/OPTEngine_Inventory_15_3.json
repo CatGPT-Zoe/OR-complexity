@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_15_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and storage schedule across a 15-day planning window.  \nThe initial stock of a critical medication at the start of the period is 73 vials.  \nIn each day \\( t = 1, \\dots, 15 \\), the pharmaceutical supplier permits the hospital to place a replenishment request for a quantity between 10 and 32 vials.  \nEach request, once placed, undergoes a 3‑day preparation and delivery lag before it becomes available for patient administration or to replenish the pharmacy stock.  \nThe daily patient requirement for the medication is as follows:  \n* Day 1: 15 vials  \n* Day 2: 26 vials  \n* Day 3: 16 vials  \n* Day 4: 55 vials  \n* Day 5: 16 vials  \n* Day 6: 27 vials  \n* Day 7: 11 vials  \n* Day 8: 54 vials  \n* Day 9: 19 vials  \n* Day 10: 49 vials  \n* Day 11: 59 vials  \n* Day 12: 52 vials  \n* Day 13: 18 vials  \n* Day 14: 34 vials  \n* Day 15: 23 vials  \n\nPatient shortfalls are tolerated, but any unfulfilled daily requirement is not carried forward to subsequent days.  \nThroughout the 15‑day horizon, medication quantities may be treated as continuous measures, and the total volume of medication physically stored at any moment must not exceed the pharmacy’s refrigeration capacity of 73 vials.  \nThe aggregate cost comprises three elements: the procurement cost, charged at 5 per vial ordered; the storage cost, levied at 3 per vial kept overnight; and a clinical penalty of 7 per vial of unmet daily need.  \nThe objective is to determine the optimal replenishment quantity for each day and to monitor the resulting stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

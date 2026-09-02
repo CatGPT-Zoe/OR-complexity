@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is preparing to allocate a fleet of cargo drones for a critical three-day supply mission. The drones must transport a selection of crates to maximize total utility points while adhering to a strict total payload limit.\n\nThe crates available for transport are:\n* Crate 1: mass 22kg, utility 247 points\n* Crate 2: mass 2kg, utility 282 points\n* Crate 3: mass 44kg, utility 259 points\n* Crate 4: mass 47kg, utility 216 points\n* Crate 5: mass 19kg, utility 23 points\n* Crate 6: mass 16kg, utility 192 points\n* Crate 7: mass 23kg, utility 174 points\n* Crate 8: mass 11kg, utility 224 points\n* Crate 9: mass 13kg, utility 212 points\n* Crate 10: mass 4kg, utility 24 points\n* Crate 11: mass 18kg, utility 288 points\n* Crate 12: mass 14kg, utility 163 points\n* Crate 13: mass 10kg, utility 16 points\n* Crate 14: mass 47kg, utility 215 points\n* Crate 15: mass 17kg, utility 136 points\n* Crate 16: mass 2kg, utility 30 points\n* Crate 17: mass 40kg, utility 101 points\n* Crate 18: mass 48kg, utility 241 points\n* Crate 19: mass 39kg, utility 86 points\n* Crate 20: mass 15kg, utility 178 points\n* Crate 21: mass 20kg, utility 210 points\n* Crate 22: mass 33kg, utility 49 points\n* Crate 23: mass 33kg, utility 253 points\n* Crate 24: mass 15kg, utility 147 points\n* Crate 25: mass 17kg, utility 27 points\n* Crate 26: mass 24kg, utility 162 points\n* Crate 27: mass 37kg, utility 140 points\n\nFurthermore, due to compatibility restrictions, exactly one of Crate 1 and Crate 2 must be included in the shipment.\n\nIf Crate 3 is selected, the effective total payload capacity for the mission is diminished by 10 kg.\nThe aggregate payload capacity for the drone fleet is 441 kg. The firm must determine the optimal set of crates to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment of specialized equipment for a remote research outpost. They must select a combination of cargo modules to maximize the total utility score, while ensuring the total mass does not exceed the transport vessel's payload capacity.\n\nThe available cargo modules are:\n* Module A: mass 24kg, utility 155 points\n* Module B: mass 25kg, utility 77 points\n* Module C: mass 3kg, utility 108 points\n* Module D: mass 40kg, utility 163 points\n* Module E: mass 14kg, utility 239 points\n* Module F: mass 19kg, utility 11 points\n* Module G: mass 3kg, utility 229 points\n* Module H: mass 28kg, utility 291 points\n* Module I: mass 45kg, utility 15 points\n* Module J: mass 45kg, utility 95 points\n* Module K: mass 44kg, utility 62 points\n* Module L: mass 24kg, utility 224 points\n* Module M: mass 15kg, utility 147 points\n* Module N: mass 50kg, utility 215 points\n* Module O: mass 33kg, utility 191 points\n* Module P: mass 37kg, utility 89 points\n* Module Q: mass 47kg, utility 56 points\n* Module R: mass 21kg, utility 120 points\n* Module S: mass 43kg, utility 31 points\n* Module T: mass 26kg, utility 202 points\n* Module U: mass 18kg, utility 178 points\n* Module V: mass 13kg, utility 268 points\n* Module W: mass 46kg, utility 131 points\n* Module X: mass 37kg, utility 300 points\n* Module Y: mass 3kg, utility 261 points\n\nFurthermore, due to compatibility protocols, exactly one of Module A and Module B must be included in the shipment.\n\nIf Module C is selected, it requires a dedicated support frame that reduces the effective payload capacity of the vessel by 10 kg.\nThe vessel's maximum allowable payload is 492 kg. The coordinator must determine the optimal selection of modules.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

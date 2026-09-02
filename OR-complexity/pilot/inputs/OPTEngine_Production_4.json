@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must allocate cargo space for four distinct types of freight containers, each requiring four sequential handling stages before dispatch.  \nThe revenue generated per ton of each container type is listed below:  \n* For Container Type Alpha, revenue is 8.238 per ton  \n* For Container Type Beta, revenue is 7.195 per ton  \n* For Container Type Gamma, revenue is 7.97 per ton  \n* For Container Type Delta, revenue is 10.67 per ton  \n\nHandling duration required per ton for each stage is as follows:  \n* For Container Alpha, Stage 1 consumes 1.184 (ton-hours), Stage 2 consumes 0.472 (ton-hours), Stage 3 consumes 1.98 (ton-hours), Stage 4 consumes 1.969 (ton-hours)  \n* For Container Beta, Stage 1 consumes 0.467 (ton-hours), Stage 2 consumes 0.931 (ton-hours), Stage 3 consumes 1.424 (ton-hours), Stage 4 consumes 1.78 (ton-hours)  \n* For Container Gamma, Stage 1 consumes 1.092 (ton-hours), Stage 2 consumes 1.851 (ton-hours), Stage 3 consumes 0.78 (ton-hours), Stage 4 consumes 1.097 (ton-hours)  \n* For Container Delta, Stage 1 consumes 1.098 (ton-hours), Stage 2 consumes 1.406 (ton-hours), Stage 3 consumes 0.564 (ton-hours), Stage 4 consumes 1.298 (ton-hours)  \n\nThe total available handling time for each stage is strictly limited:  \n* Stage 1 cannot exceed 76.28 hours  \n* Stage 2 cannot exceed 114.015 hours  \n* Stage 3 cannot exceed 99.204 hours  \n* Stage 4 cannot exceed 169.163 hours  \n\nProvided that every handling stage’s total duration remains within its respective time allowance, determine the optimal tonnage allocation for each container type so as to maximize the shipping company’s total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

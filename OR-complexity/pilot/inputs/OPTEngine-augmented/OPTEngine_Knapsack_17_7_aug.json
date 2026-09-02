@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_17_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is organizing a shipment of specialized crates to maximize total profit while adhering to a strict weight limit for a cargo plane.\n\nThe crates available are:\n* Crate A: weight 33kg, profit 284 units\n* Crate B: weight 5kg, profit 14 units\n* Crate C: weight 3kg, profit 17 units\n* Crate D: weight 50kg, profit 80 units\n* Crate E: weight 8kg, profit 218 units\n* Crate F: weight 25kg, profit 256 units\n* Crate G: weight 2kg, profit 170 units\n* Crate H: weight 41kg, profit 81 units\n* Crate I: weight 6kg, profit 210 units\n* Crate J: weight 42kg, profit 125 units\n* Crate K: weight 4kg, profit 117 units\n* Crate L: weight 27kg, profit 24 units\n* Crate M: weight 4kg, profit 214 units\n* Crate N: weight 9kg, profit 296 units\n* Crate O: weight 47kg, profit 162 units\n* Crate P: weight 27kg, profit 217 units\n* Crate Q: weight 35kg, profit 38 units\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, the aircraft's effective payload capacity is diminished by 10 kg.\nThe plane can transport a maximum of 257 kg. The firm must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

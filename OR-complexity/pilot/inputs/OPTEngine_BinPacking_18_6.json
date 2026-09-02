@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load parcels onto identical delivery trucks. Parcels:\n* Parcel 1: size 38 units\n* Parcel 2: size 68 units\n* Parcel 3: size 55 units\n* Parcel 4: size 42 units\n* Parcel 5: size 50 units\n* Parcel 6: size 48 units\n* Parcel 7: size 54 units\n* Parcel 8: size 33 units\n* Parcel 9: size 43 units\n* Parcel 10: size 32 units\n* Parcel 11: size 50 units\n* Parcel 12: size 45 units\n* Parcel 13: size 51 units\n* Parcel 14: size 58 units\n* Parcel 15: size 44 units\n* Parcel 16: size 46 units\n* Parcel 17: size 52 units\n* Parcel 18: size 40 units\n\nEach truck has a maximum capacity of 100 units. Load all parcels using the fewest trucks possible. Every parcel must be placed on exactly one truck, and the total size of parcels on any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

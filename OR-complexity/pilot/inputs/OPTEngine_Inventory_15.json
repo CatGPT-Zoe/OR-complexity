@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A coastal water treatment facility must schedule its seawater intake and storage of purified fresh water across a 15-day operational cycle.  \nThe initial freshwater reserve in the main storage tank at the cycle's start is 66 thousand gallons.  \nEach day \\( t = 1,\\dots,15 \\), the desalination plant can initiate an intake and purification run, with a daily processing volume constrained between 19 and 74 thousand gallons.  \nDue to pipeline transit and purification lag, any water processed on a given day becomes available for distribution or storage only after a delay of 3 days.  \nThe daily municipal demand for fresh water (in thousand gallons) is as follows:  \nDay 1: 12  \nDay 2: 10  \nDay 3: 34  \nDay 4: 44  \nDay 5: 10  \nDay 6: 18  \nDay 7: 17  \nDay 8: 48  \nDay 9: 48  \nDay 10: 22  \nDay 11: 15  \nDay 12: 57  \nDay 13: 39  \nDay 14: 22  \nDay 15: 10  \n\nShortfalls in meeting daily demand are allowed, but unmet demand is lost and cannot be recovered later.  \nWater volumes are treated as continuous quantities, and at any moment the total volume held in the storage tank cannot surpass its capacity of 66 thousand gallons.  \nThe total operational cost comprises three elements: a purification cost of 1 per thousand gallons processed; a storage cost of 3 per thousand gallons held overnight; and a penalty of 8 per thousand gallons of unmet daily demand.  \nThe objective is to determine the optimal daily processing volume, along with the resulting storage and shortage levels, that minimizes the total cost over the 15-day cycle.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

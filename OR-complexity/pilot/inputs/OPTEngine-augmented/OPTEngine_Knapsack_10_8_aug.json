@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must assemble a shipment of ten distinct cargo containers to maximize total profit, while adhering to a strict weight limit for the transport vehicle.\n\nThe containers available are:\n* Container A: weight 25 tons, profit 215 units\n* Container B: weight 38 tons, profit 249 units\n* Container C: weight 9 tons, profit 296 units\n* Container D: weight 43 tons, profit 163 units\n* Container E: weight 23 tons, profit 252 units\n* Container F: weight 48 tons, profit 222 units\n* Container G: weight 14 tons, profit 254 units\n* Container H: weight 32 tons, profit 266 units\n* Container I: weight 21 tons, profit 262 units\n* Container J: weight 42 tons, profit 40 units\n\nA contractual obligation stipulates that exactly one of Container A and Container B must be included in the shipment.\n\nFurthermore, if Container C is selected, it requires special handling equipment that reduces the vehicle's effective load capacity by 10 tons.\nThe vehicle can carry a maximum of 206 tons. The manager must determine the optimal selection of containers.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

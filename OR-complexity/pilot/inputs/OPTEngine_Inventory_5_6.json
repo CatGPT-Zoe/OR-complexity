@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A coastal water treatment facility must devise a procurement and storage schedule for a critical chemical reagent over a five-day operational cycle.\nThe initial stock in the storage tank at the cycle's commencement is 65 kiloliters.\nFor each operational day \\( t = 1, \\dots, 5 \\), the supplier permits the facility to initiate a delivery, the volume of which must fall between 15 and 45 kiloliters.\nCrucially, any delivery dispatched will require a lead time of 2 full days before it becomes available for meeting consumption needs or augmenting the on-site reserves.\nThe daily consumption of the reagent is projected as follows:\n* Day 1: consumption 34 kiloliters\n* Day 2: consumption 58 kiloliters\n* Day 3: consumption 36 kiloliters\n* Day 4: consumption 12 kiloliters\n* Day 5: consumption 26 kiloliters\n\nSupply deficits are tolerated, but any consumption not satisfied in its respective day is permanently lost and cannot be deferred.\nThroughout the planning window, reagent volumes are treated as continuous quantities, and the aggregate volume held in the storage tank at any moment must not surpass the tank's maximum capacity of 65 kiloliters.\nThe cumulative expenditure over the cycle comprises three distinct elements: the procurement cost, calculated at 4 per kiloliter ordered; the storage cost, levied at 2 per kiloliter of reagent retained from one day to the next; and a deficit penalty, assessed at 15 per kiloliter of unmet daily consumption. The objective is to ascertain the optimal delivery volume for each day and to monitor the consequent stock and deficit levels, thereby minimizing the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

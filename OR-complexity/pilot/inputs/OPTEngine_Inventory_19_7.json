@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_19_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical component over a 19-week planning window.  \nThe initial stock available at the start of the first week is 11 units.  \nIn each week \\( t = 1, \\dots, 19 \\), the supplier permits the firm to place a procurement request, the size of which must be between 3 and 54 units.  \nEvery such request, however, is subject to a 3-week lead time before it becomes available to meet requirements or replenish the stock.  \nWeekly requirements for the component are as follows:  \n* Week 1: 59 units  \n* Week 2: 55 units  \n* Week 3: 55 units  \n* Week 4: 44 units  \n* Week 5: 46 units  \n* Week 6: 19 units  \n* Week 7: 51 units  \n* Week 8: 12 units  \n* Week 9: 29 units  \n* Week 10: 49 units  \n* Week 11: 38 units  \n* Week 12: 43 units  \n* Week 13: 58 units  \n* Week 14: 46 units  \n* Week 15: 36 units  \n* Week 16: 23 units  \n* Week 17: 39 units  \n* Week 18: 23 units  \n* Week 19: 35 units  \n\nStockouts are tolerated, but any requirement not satisfied in the given week is considered lost and cannot be deferred.  \nThroughout the planning interval, component quantities may be treated as continuous, and the total physical stock on hand at any moment must not surpass the storage facility’s limit of 55 units.  \nThe aggregate expense over the 19 weeks comprises three elements: the procurement cost, amounting to 1 per unit ordered; the storage cost, amounting to 3 per unit held over from one week to the next; and the shortage penalty, amounting to 13 per unit of unmet weekly requirement.  \nThe objective is to determine the optimal procurement quantity for each week and to monitor the ensuing stock and shortage levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

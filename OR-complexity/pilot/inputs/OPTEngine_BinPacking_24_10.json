@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_24_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of archival boxes to a fleet of identical transport trolleys. The boxes are as follows:\n\n* Box Alpha: mass 63 units\n* Box Beta: mass 52 units\n* Box Gamma: mass 42 units\n* Box Delta: mass 45 units\n* Box Epsilon: mass 39 units\n* Box Zeta: mass 44 units\n* Box Eta: mass 49 units\n* Box Theta: mass 39 units\n* Box Iota: mass 41 units\n* Box Kappa: mass 65 units\n* Box Lambda: mass 46 units\n* Box Mu: mass 64 units\n* Box Nu: mass 31 units\n* Box Xi: mass 41 units\n* Box Omicron: mass 44 units\n* Box Pi: mass 56 units\n* Box Rho: mass 40 units\n* Box Sigma: mass 45 units\n* Box Tau: mass 65 units\n* Box Upsilon: mass 38 units\n* Box Phi: mass 67 units\n* Box Chi: mass 40 units\n* Box Psi: mass 45 units\n* Box Omega: mass 63 units\n\nEach trolley has a safe load capacity of 100 mass units. The coordinator must load all boxes onto trolleys, using the smallest possible number of them. Every box must be placed on exactly one trolley, and the combined mass on any given trolley must not surpass its load limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

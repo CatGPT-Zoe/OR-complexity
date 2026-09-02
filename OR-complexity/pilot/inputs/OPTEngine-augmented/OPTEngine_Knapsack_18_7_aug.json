@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a fleet of cargo drones to transport a selection of high-priority parcels to a remote outpost. The objective is to maximize the total revenue from delivered parcels while adhering to the drones' collective weight capacity.\n\nThe parcels available for dispatch are:\n* Parcel A: weight 38kg, revenue 154 units\n* Parcel B: weight 14kg, revenue 156 units\n* Parcel C: weight 36kg, revenue 210 units\n* Parcel D: weight 5kg, revenue 99 units\n* Parcel E: weight 25kg, revenue 68 units\n* Parcel F: weight 38kg, revenue 58 units\n* Parcel G: weight 34kg, revenue 80 units\n* Parcel H: weight 46kg, revenue 245 units\n* Parcel I: weight 10kg, revenue 226 units\n* Parcel J: weight 17kg, revenue 284 units\n* Parcel K: weight 13kg, revenue 100 units\n* Parcel L: weight 48kg, revenue 45 units\n* Parcel M: weight 17kg, revenue 235 units\n* Parcel N: weight 21kg, revenue 202 units\n* Parcel O: weight 33kg, revenue 36 units\n* Parcel P: weight 23kg, revenue 209 units\n* Parcel Q: weight 48kg, revenue 206 units\n* Parcel R: weight 36kg, revenue 74 units\n\nDue to a routing conflict, exactly one of Parcel A and Parcel B can be included in the shipment.\n\nIf Parcel C is selected, it requires a special cooling apparatus that reduces the effective total weight capacity of the fleet by 10 kg.\nThe maximum allowable total weight for the entire shipment is 351 kg. The firm must determine which parcels to load onto the drones.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

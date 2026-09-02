@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a courier to four distinct distribution hubs:\nHub P: Positioned at grid coordinates (120,143)\nHub Q: Positioned at grid coordinates (25,90)\nHub R: Positioned at grid coordinates (111,80)\nHub S: Positioned at grid coordinates (156,163)\n\nTransportation distances between hubs are quantified in kilometers:\nP to R: 63.6 km\nP to S: 41.2 km\nQ to R: 86.6 km\nQ to S: 150.0 km\nR to S: 94.4 km\n\nDirect freight linkage between Hub P and Hub Q is unavailable.\nFurthermore, the delivery circuit must incorporate exactly one of the following two critical connections: the route between Hub Q and Hub R, or the route between Hub R and Hub S.\n\nThe objective is to determine the minimal total travel distance for a closed circuit, wherein each hub is visited precisely once before returning to the origin hub.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

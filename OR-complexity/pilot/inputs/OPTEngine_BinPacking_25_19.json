@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a collection of fragile artifacts to identical reinforced crates for an international shipment. The artifacts are as follows:\n\n* Artifact Alpha: mass 31kg\n* Artifact Beta: mass 63kg\n* Artifact Gamma: mass 62kg\n* Artifact Delta: mass 37kg\n* Artifact Epsilon: mass 32kg\n* Artifact Zeta: mass 66kg\n* Artifact Eta: mass 52kg\n* Artifact Theta: mass 32kg\n* Artifact Iota: mass 53kg\n* Artifact Kappa: mass 41kg\n* Artifact Lambda: mass 51kg\n* Artifact Mu: mass 47kg\n* Artifact Nu: mass 61kg\n* Artifact Xi: mass 60kg\n* Artifact Omicron: mass 56kg\n* Artifact Pi: mass 30kg\n* Artifact Rho: mass 45kg\n* Artifact Sigma: mass 60kg\n* Artifact Tau: mass 52kg\n* Artifact Upsilon: mass 40kg\n* Artifact Phi: mass 32kg\n* Artifact Chi: mass 60kg\n* Artifact Psi: mass 63kg\n* Artifact Omega: mass 40kg\n* Artifact Digamma: mass 54kg\n\nEach crate has a maximum safe load capacity of 100 kg. The coordinator must place every artifact into exactly one crate, ensuring the combined mass within any single crate does not surpass its load limit. The objective is to complete this assignment while utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

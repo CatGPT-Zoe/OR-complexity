@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a fleet of cargo drones for a critical three-stage supply mission. They must select a combination of payload packages to maximize total utility points while staying within the maximum allowable takeoff mass.\n\nThe available payload packages are:\n* Package A: mass 36kg, utility 292 points\n* Package B: mass 16kg, utility 227 points\n* Package C: mass 16kg, utility 121 points\n* Package D: mass 40kg, utility 59 points\n* Package E: mass 22kg, utility 99 points\n* Package F: mass 46kg, utility 161 points\n* Package G: mass 7kg, utility 239 points\n* Package H: mass 29kg, utility 113 points\n* Package I: mass 42kg, utility 253 points\n* Package J: mass 17kg, utility 255 points\n* Package K: mass 13kg, utility 241 points\n* Package L: mass 43kg, utility 91 points\n* Package M: mass 39kg, utility 119 points\n* Package N: mass 37kg, utility 216 points\n* Package O: mass 23kg, utility 230 points\n* Package P: mass 17kg, utility 209 points\n* Package Q: mass 11kg, utility 77 points\n* Package R: mass 47kg, utility 287 points\n* Package S: mass 32kg, utility 66 points\n* Package T: mass 16kg, utility 186 points\n* Package U: mass 44kg, utility 299 points\n* Package V: mass 18kg, utility 13 points\n* Package W: mass 20kg, utility 238 points\n* Package X: mass 14kg, utility 212 points\n\nDue to compatibility protocols, exactly one of Package A or Package B must be included in the final selection.\n\nIf Package C is selected, it necessitates the inclusion of a specialized cooling unit that reduces the effective available mass capacity by 10 kg.\nThe total maximum takeoff mass for the drone fleet is 451 kg. The firm must determine the optimal set of packages to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

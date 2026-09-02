@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_17_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of high-value components to be transported via a specialized cargo drone. The manager must select a combination of components to maximize the total profit from the shipment, while adhering to the drone's strict payload capacity.\n\nThe components available are:\n* Component A: mass 39kg, profit 62 credits\n* Component B: mass 17kg, profit 10 credits\n* Component C: mass 14kg, profit 104 credits\n* Component D: mass 40kg, profit 98 credits\n* Component E: mass 43kg, profit 194 credits\n* Component F: mass 40kg, profit 147 credits\n* Component G: mass 1kg, profit 18 credits\n* Component H: mass 2kg, profit 95 credits\n* Component I: mass 20kg, profit 130 credits\n* Component J: mass 26kg, profit 265 credits\n* Component K: mass 48kg, profit 195 credits\n* Component L: mass 23kg, profit 54 credits\n* Component M: mass 38kg, profit 231 credits\n* Component N: mass 8kg, profit 22 credits\n* Component O: mass 50kg, profit 98 credits\n* Component P: mass 1kg, profit 282 credits\n* Component Q: mass 18kg, profit 190 credits\n\nA critical compatibility requirement dictates that exactly one of Component A and Component B must be included in the shipment.\n\nFurthermore, if Component C is included, it necessitates a dedicated cooling apparatus that reduces the drone's effective payload capacity by 10 kg.\nThe drone's maximum allowable payload is 299 kg. The manager must determine the optimal selection of components to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

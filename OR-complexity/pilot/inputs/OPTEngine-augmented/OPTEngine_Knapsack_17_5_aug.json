@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_17_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must allocate a fleet of cargo drones to transport a selection of specialized equipment modules to a remote research station. The goal is to maximize the total utility score of the delivered modules, while adhering to the drones' collective maximum lift capacity.\n\nThe available equipment modules are:\n* Module A: mass 39kg, utility 179 credits\n* Module B: mass 18kg, utility 49 credits\n* Module C: mass 30kg, utility 91 credits\n* Module D: mass 7kg, utility 272 credits\n* Module E: mass 17kg, utility 296 credits\n* Module F: mass 46kg, utility 217 credits\n* Module G: mass 39kg, utility 239 credits\n* Module H: mass 27kg, utility 91 credits\n* Module I: mass 39kg, utility 224 credits\n* Module J: mass 50kg, utility 74 credits\n* Module K: mass 44kg, utility 67 credits\n* Module L: mass 38kg, utility 67 credits\n* Module M: mass 12kg, utility 256 credits\n* Module N: mass 19kg, utility 61 credits\n* Module O: mass 44kg, utility 227 credits\n* Module P: mass 17kg, utility 151 credits\n* Module Q: mass 8kg, utility 192 credits\n\nA critical compatibility requirement dictates that exactly one of Module A and Module B must be included in the shipment.\n\nFurthermore, if Module C is selected, it necessitates a dedicated support apparatus that reduces the effective available lift capacity by 10 kg.\nThe entire drone fleet can sustain a maximum lift mass of 345 kg. The manager must determine the optimal set of modules to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

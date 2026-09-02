@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a cargo shipment for a specialized three-stage transport mission. They need to select a combination of crates to maximize the total utility score, while ensuring the total mass does not exceed the vehicle's load limit.\n\nThe available crates are:\n* Crate A: mass 19kg, utility 160 credits\n* Crate B: mass 21kg, utility 263 credits\n* Crate C: mass 26kg, utility 230 credits\n* Crate D: mass 11kg, utility 10 credits\n* Crate E: mass 10kg, utility 32 credits\n* Crate F: mass 29kg, utility 74 credits\n* Crate G: mass 22kg, utility 14 credits\n* Crate H: mass 47kg, utility 255 credits\n* Crate I: mass 43kg, utility 141 credits\n* Crate J: mass 48kg, utility 106 credits\n* Crate K: mass 5kg, utility 291 credits\n* Crate L: mass 28kg, utility 152 credits\n\nFurthermore, due to compatibility restrictions, exactly one of Crate A and Crate B must be included in the shipment.\n\nA specific handling requirement applies to Crate C: if it is loaded, the effective load capacity of the vehicle is diminished by 10 kg.\nThe vehicle's maximum permissible load is 216 kg. The coordinator must determine the optimal set of crates to include.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

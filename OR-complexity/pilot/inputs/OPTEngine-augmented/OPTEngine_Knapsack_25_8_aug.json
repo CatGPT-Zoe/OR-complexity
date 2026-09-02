@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment to maximize total profit while adhering to a cargo weight limit for a freight transport.\n\nThe available cargo units are:\n* Unit A: weight 25kg, profit 296 credits\n* Unit B: weight 19kg, profit 106 credits\n* Unit C: weight 14kg, profit 45 credits\n* Unit D: weight 25kg, profit 116 credits\n* Unit E: weight 12kg, profit 108 credits\n* Unit F: weight 4kg, profit 182 credits\n* Unit G: weight 25kg, profit 42 credits\n* Unit H: weight 7kg, profit 290 credits\n* Unit I: weight 40kg, profit 33 credits\n* Unit J: weight 24kg, profit 88 credits\n* Unit K: weight 11kg, profit 193 credits\n* Unit L: weight 30kg, profit 222 credits\n* Unit M: weight 22kg, profit 163 credits\n* Unit N: weight 50kg, profit 158 credits\n* Unit O: weight 21kg, profit 228 credits\n* Unit P: weight 48kg, profit 97 credits\n* Unit Q: weight 29kg, profit 80 credits\n* Unit R: weight 43kg, profit 247 credits\n* Unit S: weight 9kg, profit 219 credits\n* Unit T: weight 35kg, profit 190 credits\n* Unit U: weight 21kg, profit 72 credits\n* Unit V: weight 2kg, profit 84 credits\n* Unit W: weight 45kg, profit 192 credits\n* Unit X: weight 21kg, profit 114 credits\n* Unit Y: weight 8kg, profit 158 credits\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, it imposes a mandatory administrative overhead that reduces the effective cargo capacity by 10 kg.\nThe transport vehicle can handle a maximum of 413 kg. The coordinator must determine which units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

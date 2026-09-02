@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load packages onto identical delivery trucks. The packages are:\n* Package P: 61 cubic feet\n* Package Q: 39 cubic feet\n* Package R: 66 cubic feet\n* Package S: 55 cubic feet\n* Package T: 70 cubic feet\n* Package U: 57 cubic feet\n* Package V: 63 cubic feet\n* Package W: 61 cubic feet\n* Package X: 50 cubic feet\n* Package Y: 61 cubic feet\n* Package Z: 61 cubic feet\n* Package AA: 70 cubic feet\n* Package BB: 42 cubic feet\n\nEach truck has a maximum cargo capacity of 100 cubic feet. Load all packages using the fewest trucks possible. Every package must be placed on exactly one truck, and the total volume in any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

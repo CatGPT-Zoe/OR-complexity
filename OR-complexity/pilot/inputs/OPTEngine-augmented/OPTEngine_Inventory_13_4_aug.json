@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood-plasma storage strategy across a 13-week planning cycle.  \nThe initial stock of plasma at the start of the cycle is 57 liters.  \nIn each week \\(t = 1, \\dots, 13\\), the central blood bank permits the hospital to request a shipment whose volume must be between 8 and 76 liters.  \nEach shipment, once requested, requires 1 week for delivery before it can be used to fulfill clinical needs or replenish the storage.  \nThe clinical consumption of plasma each week is as follows:  \n* Week 1: 11 liters  \n* Week 2: 59 liters  \n* Week 3: 25 liters  \n* Week 4: 49 liters  \n* Week 5: 11 liters  \n* Week 6: 47 liters  \n* Week 7: 42 liters  \n* Week 8: 33 liters  \n* Week 9: 19 liters  \n* Week 10: 39 liters  \n* Week 11: 26 liters  \n* Week 12: 17 liters  \n* Week 13: 47 liters  \n\nClinical shortfalls are tolerated, but any unmet demand is lost and cannot be deferred to later weeks.  \nThroughout the planning cycle, plasma volumes may be fractional, and the total on-hand plasma stored at any moment must not exceed the refrigeration capacity of 57 liters.  \n\nIn week 4, the maximum shipment volume allowed is 41 liters.  \nIn week 2, the on-hand plasma inventory must be no less than 2 liters.  \n\nThe total cost over the planning cycle comprises three elements: the procurement cost, which is 4 per liter ordered; the refrigeration cost, which is 2 per liter kept in storage from one week to the next; and the clinical‑shortfall penalty, which is 14 per liter of unmet demand.  \nDetermine the optimal shipment volume for each week and monitor the resulting inventory and shortfall levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

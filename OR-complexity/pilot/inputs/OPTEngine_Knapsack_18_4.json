@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a cargo plane. The available packages are:\n\n* Package 1: size 2 cubic meters, revenue $31\n* Package 2: size 7 cubic meters, revenue $169\n* Package 3: size 6 cubic meters, revenue $210\n* Package 4: size 46 cubic meters, revenue $75\n* Package 5: size 50 cubic meters, revenue $281\n* Package 6: size 13 cubic meters, revenue $152\n* Package 7: size 19 cubic meters, revenue $91\n* Package 8: size 12 cubic meters, revenue $125\n* Package 9: size 9 cubic meters, revenue $76\n* Package 10: size 15 cubic meters, revenue $142\n* Package 11: size 32 cubic meters, revenue $165\n* Package 12: size 10 cubic meters, revenue $148\n* Package 13: size 14 cubic meters, revenue $50\n* Package 14: size 9 cubic meters, revenue $218\n* Package 15: size 12 cubic meters, revenue $111\n* Package 16: size 38 cubic meters, revenue $18\n* Package 17: size 23 cubic meters, revenue $285\n* Package 18: size 43 cubic meters, revenue $255\n\nThe plane's cargo hold has a maximum capacity of 251 cubic meters. Choose the set of packages that maximizes total revenue without exceeding this capacity. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

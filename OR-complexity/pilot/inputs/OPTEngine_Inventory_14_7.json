@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must devise a procurement and storage strategy for a critical component over a 14-day operational window.  \nThe starting stock at the dawn of the planning interval is 64 units.  \nIn each day \\( t = 1, \\dots, 14 \\), the vendor permits the center to issue a purchase request whose size must fall between 15 and 55 units.  \nNevertheless, every requested shipment requires a 3‑day transit period before it becomes available to meet requirements or augment the stockpile.  \nThe required usage of the component on each day is as follows:  \n\n* Day 1: 34 units  \n* Day 2: 15 units  \n* Day 3: 51 units  \n* Day 4: 47 units  \n* Day 5: 35 units  \n* Day 6: 31 units  \n* Day 7: 24 units  \n* Day 8: 42 units  \n* Day 9: 39 units  \n* Day 10: 12 units  \n* Day 11: 40 units  \n* Day 12: 49 units  \n* Day 13: 16 units  \n* Day 14: 27 units  \n\nStock‑outs are tolerated, but any unsatisfied requirement is permanently lost and not deferred to later days.  \nThroughout the 14‑day span, component quantities may be treated as continuous values, and the total physical inventory present at any moment must not surpass the storage‑facility limit of 64 units.  \nThe aggregate expenditure comprises three elements: the procurement expense, charged at 4 per unit acquired; the storage expense, levied at 2 per unit kept overnight; and the deficiency penalty, assessed at 8 per unit of unfulfilled requirement.  \nThe objective is to establish the optimal purchase quantity for each day and to monitor the consequent stock and shortfall levels so as to minimize the total outlay.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

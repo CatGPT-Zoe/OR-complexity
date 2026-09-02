@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical freight pallets for air transport. The cargo pieces are as follows:\n\n* Component Alpha: mass 49 units\n* Component Beta: mass 45 units\n* Component Gamma: mass 62 units\n* Component Delta: mass 57 units\n* Component Epsilon: mass 47 units\n* Component Zeta: mass 48 units\n* Component Eta: mass 54 units\n* Component Theta: mass 50 units\n* Component Iota: mass 50 units\n* Component Kappa: mass 43 units\n* Component Lambda: mass 36 units\n* Component Mu: mass 49 units\n* Component Nu: mass 49 units\n* Component Xi: mass 42 units\n* Component Omicron: mass 36 units\n* Component Pi: mass 45 units\n* Component Rho: mass 56 units\n* Component Sigma: mass 64 units\n* Component Tau: mass 40 units\n* Component Upsilon: mass 50 units\n* Component Phi: mass 43 units\n* Component Chi: mass 56 units\n* Component Psi: mass 59 units\n* Component Omega: mass 45 units\n* Component Aleph: mass 47 units\n* Component Beth: mass 63 units\n* Component Gimel: mass 53 units\n* Component Dalet: mass 55 units\n* Component He: mass 34 units\n* Component Waw: mass 67 units\n* Component Zayin: mass 60 units\n* Component Het: mass 58 units\n* Component Tet: mass 36 units\n* Component Yod: mass 40 units\n\nEach pallet has a maximum allowable load of 100 mass units. The coordinator must assign every cargo piece to exactly one pallet, ensuring the cumulative mass on any given pallet does not surpass its capacity, while striving to utilize the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

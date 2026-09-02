@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_17_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must devise a procurement and storage strategy for a critical fuel additive across a 17‑week schedule.  \nThe starting stock at the outset of the schedule is 77 gallons.  \nIn each week \\( t = 1, \\dots, 17 \\), the supplier permits the center to submit a purchase request whose volume must fall between 5 and 73 gallons.  \nEvery request placed, however, requires a 2‑week transit time before it becomes available for consumption or for replenishing the on‑hand reserve.  \nThe weekly consumption of the additive is specified as follows:  \n\n* Week 1: 16 gallons  \n* Week 2: 26 gallons  \n* Week 3: 60 gallons  \n* Week 4: 10 gallons  \n* Week 5: 23 gallons  \n* Week 6: 21 gallons  \n* Week 7: 49 gallons  \n* Week 8: 21 gallons  \n* Week 9: 52 gallons  \n* Week 10: 33 gallons  \n* Week 11: 49 gallons  \n* Week 12: 27 gallons  \n* Week 13: 10 gallons  \n* Week 14: 53 gallons  \n* Week 15: 52 gallons  \n* Week 16: 11 gallons  \n* Week 17: 11 gallons  \n\nStock‑outs are tolerated, but any unsatisfied consumption is permanently lost and will not be deferred to later weeks.  \nThroughout the schedule, additive quantities may be treated as continuous measures, and the total physical stock held at any instant must not surpass the storage‑tank limit of 77 gallons.  \nThe aggregate expenditure over the schedule comprises three elements: the procurement cost, amounting to 2 per gallon purchased; the storage cost, amounting to 2 per gallon kept in the tank from one week to the next; and the shortage penalty, amounting to 13 per gallon of unfulfilled consumption.  \nThe objective is to identify the optimal purchase volume for each week and to monitor the consequent stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

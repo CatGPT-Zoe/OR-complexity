@@ -1,0 +1,39 @@
+{
+  "instance_id": "LEAN_Others7",
+  "annotation_mode": "semantic",
+  "problem_text": "A traveling salesman must visit 15 customers at 15 different locations, and the (symmetric) distance matrix is restored in 20.csv file.\n    Develop a mathematical program to determine the visiting order starting from location 1 and ending at location 1, in order to minimize the traveling distance.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "20",
+      "indices": [
+        "row_label",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "unit": "",
+      "values": "| row_label | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| 1 |  | 67 | 55 | 80 | 21 | 77 | 78 | 74 | 85 | 28 | 55 | 53 | 66 | 89 | 78 |\n| 2 |  |  | 38 | 29 | 68 | 36 | 62 | 54 | 49 | 92 | 37 | 51 | 38 | 82 | 31 |\n| 3 |  |  |  | 28 | 44 | 27 | 56 | 34 | 33 | 68 | 70 | 55 | 46 | 32 | 40 |\n| 4 |  |  |  |  | 21 | 51 | 46 | 48 | 31 | 55 | 68 | 85 | 58 | 56 | 22 |\n| 5 |  |  |  |  |  | 42 | 57 | 31 | 55 | 79 | 49 | 70 | 43 | 55 | 78 |\n| 6 |  |  |  |  |  |  | 63 | 41 | 39 | 52 | 76 | 54 | 59 | 44 | 76 |\n| 7 |  |  |  |  |  |  |  | 38 | 35 | 37 | 55 | 54 | 51 | 14 | 64 |\n| 8 |  |  |  |  |  |  |  |  | 53 | 24 | 60 | 42 | 31 | 42 | 27 |\n| 9 |  |  |  |  |  |  |  |  |  | 88 | 28 | 65 | 12 | 63 | 45 |\n| 10 |  |  |  |  |  |  |  |  |  |  | 84 | 40 | 43 | 81 | 37 |\n| 11 |  |  |  |  |  |  |  |  |  |  |  | 41 | 38 | 56 | 35 |\n| 12 |  |  |  |  |  |  |  |  |  |  |  |  | 65 | 47 | 38 |\n| 13 |  |  |  |  |  |  |  |  |  |  |  |  |  | 35 | 77 |\n| 14 |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 54 |\n| 15 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/Others_example/Others7/20.csv",
+      "role": "parameter_table",
+      "table": "20"
+    }
+  ],
+  "notes": ""
+}

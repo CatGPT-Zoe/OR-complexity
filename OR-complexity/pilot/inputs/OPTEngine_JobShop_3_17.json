@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company needs to route 3 cargo vessels through 3 different port terminals.\n\nEach vessel must follow a predetermined sequence of terminal stops represented as (Terminal, Handling time) pairs,\nwhere each pair specifies the terminal where the cargo must be processed and the number of hours required for handling.\nThe order of pairs indicates the mandatory sequence in which the terminal stops must occur.\n\nVessel itineraries:\n* Vessel 1 follows the route: (T1, 4) → (T3, 5) → (T2, 6)\n* Vessel 2 follows the route: (T3, 4) → (T2, 1) → (T1, 3)\n* Vessel 3 follows the route: (T1, 2) → (T2, 10) → (T3, 8)\n\nEach cargo handling operation must run continuously once it begins and cannot be interrupted,\nand each terminal can only process one vessel at a time.\nThe objective is to determine the processing schedule of all vessels at the terminals\nso that the total completion time for all vessels is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

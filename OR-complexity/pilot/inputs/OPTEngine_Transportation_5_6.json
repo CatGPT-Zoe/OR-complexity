@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A distribution network seeks to allocate a certain quantity of goods from a series of regional warehouses to a set of retail outlets, with the objective of minimizing the aggregate delivery expense.\n\nThe inventory available at each warehouse (set W) is precisely as follows:\n*Warehouse W1 holds 169 units.\n*Warehouse W2 holds 115 units.\n*Warehouse W3 holds 144 units.\n*Warehouse W4 holds 92 units.\n*Warehouse W5 holds 79 units.\n\nThe required fulfillment quantity for each retail outlet (set R) is detailed below:\n*Outlet R1 requires 34 units.\n*Outlet R2 requires 64 units.\n*Outlet R3 requires 118 units.\n*Outlet R4 requires 189 units.\n*Outlet R5 requires 117 units.\n\nThe per-unit transportation cost from each warehouse to each outlet is provided in the following matrix:\n\n| From / To | R1 | R2 | R3 | R4 | R5 |\n|-----------|----|----|----|----|----|\n| W1        | 13 | 13 | 7  | 3  | 19 |\n| W2        | 8  | 4  | 10 | 20 | 4  |\n| W3        | 19 | 2  | 12 | 18 | 14 |\n| W4        | 12 | 3  | 17 | 11 | 1  |\n| W5        | 14 | 16 | 4  | 14 | 12 |\n\nDetermine the optimal shipment quantities to achieve the lowest possible total logistical expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

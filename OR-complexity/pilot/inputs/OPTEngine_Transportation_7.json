@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing enterprise seeks to allocate its weekly output of a specialized component from seven fabrication plants to seven assembly facilities, with the objective of minimizing the total logistical expenditure.\n\nThe weekly production capacity at each fabrication plant (set F) is as follows:\n*F1's capacity is 66.\n*F2's capacity is 82.\n*F3's capacity is 120.\n*F4's capacity is 199.\n*F5's capacity is 190.\n*F6's capacity is 133.\n*F7's capacity is 147.\n\nThe weekly component requirement at each assembly facility (set R) is specified below:\n*R1's requirement is 121.\n*R2's requirement is 104.\n*R3's requirement is 139.\n*R4's requirement is 22.\n*R5's requirement is 160.\n*R6's requirement is 194.\n*R7's requirement is 148.\n\nThe per-unit handling and transit cost from each fabrication plant to each receiving facility is detailed in the subsequent matrix:\n\n| From / To | R1 | R2 | R3 | R4 | R5 | R6 | R7 |\n|--|-|-|-|-|-|-|\n| F1 | 18 | 7 | 14 | 15 | 8 | 14 | 11 |\n| F2 | 15 | 13 | 14 | 4 | 11 | 14 | 11 |\n| F3 | 9 | 12 | 5 | 16 | 3 | 3 | 3 |\n| F4 | 3 | 14 | 4 | 12 | 5 | 18 | 2 |\n| F5 | 19 | 18 | 18 | 11 | 4 | 14 | 12 |\n| F6 | 14 | 2 | 10 | 20 | 10 | 12 | 4 |\n| F7 | 19 | 17 | 7 | 5 | 16 | 8 | 4 |\n\nDetermine the optimal weekly shipment quantities to achieve the lowest possible total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

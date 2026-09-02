@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_8_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing facility must schedule 8 distinct product batches through 8 specialized workstations.\n\nEach product batch follows a predetermined routing sequence represented as (Workstation, Processing duration) pairs, where each pair specifies the workstation required and the time needed for that processing step. The sequence of pairs indicates the strict order in which processing steps must occur.\n\nBatch specifications:\n* Batch A follows: (WS7, 6) → (WS8, 4) → (WS1, 7) → (WS3, 1) → (WS4, 7) → (WS5, 9) → (WS2, 5) → (WS6, 3)\n* Batch B follows: (WS5, 5) → (WS1, 4) → (WS6, 3) → (WS3, 5) → (WS7, 6) → (WS2, 9) → (WS8, 2) → (WS4, 3)\n* Batch C follows: (WS8, 5) → (WS2, 1) → (WS5, 1) → (WS6, 10) → (WS1, 3) → (WS7, 6) → (WS3, 3) → (WS4, 7)\n* Batch D follows: (WS4, 9) → (WS5, 8) → (WS7, 10) → (WS2, 10) → (WS1, 6) → (WS3, 6) → (WS8, 6) → (WS6, 2)\n* Batch E follows: (WS1, 4) → (WS4, 10) → (WS3, 8) → (WS2, 7) → (WS7, 7) → (WS8, 3) → (WS5, 3) → (WS6, 7)\n* Batch F follows: (WS7, 5) → (WS4, 3) → (WS6, 2) → (WS2, 3) → (WS3, 5) → (WS1, 3) → (WS8, 7) → (WS5, 5)\n* Batch G follows: (WS7, 10) → (WS3, 6) → (WS5, 5) → (WS4, 5) → (WS6, 5) → (WS2, 7) → (WS1, 10) → (WS8, 9)\n* Batch H follows: (WS1, 1) → (WS4, 1) → (WS6, 7) → (WS5, 9) → (WS2, 2) → (WS7, 5) → (WS3, 1) → (WS8, 1)\n\nEach processing step must run without interruption once initiated, and each workstation can only handle one processing step at any given time. The objective is to determine the optimal sequence for all processing steps across the workstations to minimize the total production completion time for all batches.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

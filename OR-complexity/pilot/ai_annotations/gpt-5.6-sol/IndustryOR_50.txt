@@ -1,0 +1,343 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "IndustryOR_50",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "MONTH",
+      "canonical_name": "planning months",
+      "members": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "ordered": true,
+      "source_grounding": "The purchase and sales plan runs from July to December.",
+      "source_spans": [
+        "from July to December",
+        "Month | 7 | 8 | 9 | 10 | 11 | 12"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "warehouse_capacity",
+      "canonical_name": "warehouse stock capacity",
+      "value": 500,
+      "unit": "units",
+      "indexing": [],
+      "source_grounding": "The warehouse capacity must not exceed 500 units.",
+      "source_spans": [
+        "the warehouse capacity must not exceed 500 units"
+      ]
+    },
+    {
+      "id": "initial_stock",
+      "canonical_name": "stock before the planning horizon",
+      "value": 200,
+      "unit": "units",
+      "indexing": [],
+      "temporal_reference": "end of June",
+      "source_grounding": "There are 200 units in stock at the end of June.",
+      "source_spans": [
+        "with 200 units in stock at the end of June"
+      ]
+    },
+    {
+      "id": "purchase_price",
+      "canonical_name": "unit purchase price",
+      "indexing": [
+        "MONTH"
+      ],
+      "values": {
+        "7": 28,
+        "8": 24,
+        "9": 25,
+        "10": 27,
+        "11": 23,
+        "12": 23
+      },
+      "unit": "currency per unit",
+      "source_grounding": "The Buy row of Table 1-21 gives the monthly purchase prices.",
+      "source_spans": [
+        "| Buy   | 28 | 24 | 25 | 27 | 23 | 23 |"
+      ]
+    },
+    {
+      "id": "selling_price",
+      "canonical_name": "unit selling price",
+      "indexing": [
+        "MONTH"
+      ],
+      "values": {
+        "7": 29,
+        "8": 24,
+        "9": 26,
+        "10": 28,
+        "11": 22,
+        "12": 25
+      },
+      "unit": "currency per unit",
+      "source_grounding": "The Sell row of Table 1-21 gives the monthly selling prices.",
+      "source_spans": [
+        "| Sell  | 29 | 24 | 26 | 28 | 22 | 25 |"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "purchase_quantity",
+      "canonical_family": "PURCHASE_FLOW",
+      "canonical_name": "monthly product purchase quantity",
+      "entity_role": "decision",
+      "argument_slots": [
+        {
+          "name": "month",
+          "set_ref": "MONTH"
+        }
+      ],
+      "temporal_granularity": "month",
+      "timing": "beginning of month",
+      "value_semantics": "quantity of product purchased in the month",
+      "domain_metadata": {
+        "quantity_type": "nonnegative physical quantity",
+        "integrality": "not specified"
+      },
+      "source_grounding": "Purchases are made at the beginning of each month, and the question asks how much should be purchased each month.",
+      "source_spans": [
+        "purchases are made at the beginning of each month",
+        "How much should be purchased and sold each month"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "sales_quantity",
+      "canonical_family": "SALES_FLOW",
+      "canonical_name": "monthly product sales quantity",
+      "entity_role": "decision",
+      "argument_slots": [
+        {
+          "name": "month",
+          "set_ref": "MONTH"
+        }
+      ],
+      "temporal_granularity": "month",
+      "timing": "within month; exact timing is not specified",
+      "value_semantics": "quantity of product sold in the month",
+      "domain_metadata": {
+        "quantity_type": "nonnegative physical quantity",
+        "integrality": "not specified"
+      },
+      "source_grounding": "The question asks how much should be sold each month.",
+      "source_spans": [
+        "How much should be purchased and sold each month"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "inventory_stock",
+      "canonical_family": "INVENTORY_STATE",
+      "canonical_name": "warehouse stock on hand",
+      "entity_role": "state",
+      "argument_slots": [
+        {
+          "name": "month",
+          "set_ref": "MONTH"
+        },
+        {
+          "name": "inventory_checkpoint",
+          "description": "Relevant monthly warehouse-stock checkpoint; exact within-month checkpoint is not explicit."
+        }
+      ],
+      "temporal_granularity": "month",
+      "value_semantics": "quantity of product held in the warehouse",
+      "domain_metadata": {
+        "quantity_type": "nonnegative physical quantity",
+        "integrality": "not specified"
+      },
+      "source_grounding": "The text specifies initial stock and a warehouse capacity while purchases and sales occur over successive months.",
+      "source_spans": [
+        "the warehouse capacity must not exceed 500 units",
+        "with 200 units in stock at the end of June",
+        "purchases are made at the beginning of each month"
+      ],
+      "confidence": 0.92
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "stated_business_measure": "total revenue",
+    "support_entity_ids": [
+      "purchase_quantity",
+      "sales_quantity"
+    ],
+    "parameter_refs": [
+      "purchase_price",
+      "selling_price"
+    ],
+    "normalized_semantics": "Choose monthly purchase and sales quantities to maximize the stated total revenue. The text supplies both purchase and selling prices but does not unambiguously state whether purchase expenditure is deducted from sales revenue.",
+    "candidate_interpretations": [
+      {
+        "interpretation": "maximize net trading return",
+        "semantic_expression": "sales proceeds minus purchase expenditures"
+      },
+      {
+        "interpretation": "maximize gross sales revenue",
+        "semantic_expression": "sales proceeds only"
+      }
+    ],
+    "source_grounding": "The problem provides monthly purchase and selling prices and asks for purchases and sales that maximize total revenue.",
+    "source_spans": [
+      "Assume the purchase and selling prices of this product for each month are shown in Table 1-21.",
+      "How much should be purchased and sold each month to maximize the total revenue?"
+    ],
+    "confidence": 0.65
+  },
+  "obligations": [
+    {
+      "id": "inventory_capacity_upper_bound",
+      "canonical_family": "INVENTORY_CAPACITY_UPPER_BOUND",
+      "canonical_name": "warehouse stock cannot exceed capacity",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "storage capacity enforcement",
+      "normalized_semantics": "Warehouse stock on hand at every capacity-relevant checkpoint must be no greater than the warehouse capacity of 500 units.",
+      "support_entity_ids": [
+        "inventory_stock"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory_stock",
+          "temporal_role": "capacity-relevant stock checkpoint",
+          "index_relation": "month t"
+        }
+      ],
+      "quantifier": "for every capacity-relevant checkpoint during each month in MONTH",
+      "scope_kind": "unary",
+      "parameter_refs": [
+        "warehouse_capacity"
+      ],
+      "condition": "The exact within-month checkpoint at which capacity is tested is not stated.",
+      "coupling_active": false,
+      "source_status": "explicit rule with ambiguous within-month incidence",
+      "normalization_rationale": "The numerical capacity is a parameter of one stable upper-bound family; it is not a separate entity.",
+      "source_grounding": "The warehouse capacity must not exceed 500 units.",
+      "source_spans": [
+        "the warehouse capacity must not exceed 500 units"
+      ],
+      "confidence": 0.93
+    },
+    {
+      "id": "monthly_inventory_conservation",
+      "canonical_family": "INVENTORY_FLOW_BALANCE",
+      "canonical_name": "monthly stock conservation",
+      "structural_form": "BALANCE",
+      "business_role": "inventory continuity across purchases and sales",
+      "normalized_semantics": "For each planning month, stock carried from the preceding month is increased by that month's purchases and decreased by that month's sales to determine the resulting stock.",
+      "support_entity_ids": [
+        "inventory_stock",
+        "purchase_quantity",
+        "sales_quantity"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory_stock",
+          "temporal_role": "preceding stock",
+          "index_relation": "predecessor of month t"
+        },
+        {
+          "entity_id": "purchase_quantity",
+          "temporal_role": "inflow",
+          "index_relation": "month t",
+          "timing": "beginning of month"
+        },
+        {
+          "entity_id": "sales_quantity",
+          "temporal_role": "outflow",
+          "index_relation": "month t"
+        },
+        {
+          "entity_id": "inventory_stock",
+          "temporal_role": "resulting stock",
+          "index_relation": "month t"
+        }
+      ],
+      "quantifier": "for every month t in MONTH",
+      "scope_kind": "multi_entity",
+      "parameter_refs": [
+        "initial_stock"
+      ],
+      "boundary_variants": [
+        {
+          "condition": "t is July, the first planning month",
+          "semantic_variant": "Use the 200 units held at the end of June as preceding stock.",
+          "parameter_refs": [
+            "initial_stock"
+          ],
+          "source_spans": [
+            "with 200 units in stock at the end of June"
+          ]
+        },
+        {
+          "condition": "t is after July",
+          "semantic_variant": "Use the preceding planning month's resulting stock as preceding stock."
+        }
+      ],
+      "coupling_active": true,
+      "source_status": "operational relation implied by the stated stock, monthly purchases, and monthly sales",
+      "normalization_rationale": "The July initial condition is a boundary clause of the same inventory-balance family, not a separate obligation.",
+      "source_grounding": "The product begins with stock at the end of June and is subsequently purchased and sold month by month.",
+      "source_spans": [
+        "with 200 units in stock at the end of June",
+        "Thereafter, purchases are made at the beginning of each month.",
+        "How much should be purchased and sold each month"
+      ],
+      "confidence": 0.88
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [
+    {
+      "id": "objective_measure_ambiguity",
+      "issue": "The phrase 'maximize the total revenue' does not clarify whether purchase expenditure is deducted. Both purchase and selling prices are supplied, suggesting net trading return, but gross sales revenue is the literal reading.",
+      "affected_component": "objective",
+      "source_spans": [
+        "purchase and selling prices",
+        "maximize the total revenue"
+      ],
+      "resolution_needed": "Clarify whether the objective is gross sales revenue or sales revenue minus purchase cost."
+    },
+    {
+      "id": "capacity_checkpoint_ambiguity",
+      "issue": "Purchases occur at the beginning of each month, but the text does not specify whether the 500-unit capacity applies immediately after purchase, at month end, continuously, or at another monthly checkpoint.",
+      "affected_component": "inventory_capacity_upper_bound",
+      "source_spans": [
+        "the warehouse capacity must not exceed 500 units",
+        "purchases are made at the beginning of each month"
+      ],
+      "resolution_needed": "Specify the within-month stock checkpoint or checkpoints subject to capacity."
+    },
+    {
+      "id": "sales_timing_ambiguity",
+      "issue": "The timing of sales within each month is not stated, so the exact temporal incidence between beginning-of-month purchases, sales, and capacity cannot be fixed.",
+      "affected_component": "monthly_inventory_conservation",
+      "source_spans": [
+        "purchases are made at the beginning of each month",
+        "purchased and sold each month"
+      ],
+      "resolution_needed": "Specify whether sales occur before, after, or throughout the month relative to purchases."
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "no_unstated_market_or_terminal_rules",
+      "warning": "No demand limits, purchase budget, purchase-rate bounds, sales-rate bounds, or terminal-stock requirement are stated; none have been added."
+    },
+    {
+      "id": "quantity_integrality_unspecified",
+      "warning": "The product is measured in units, but the text does not explicitly require integer-valued purchase, sales, or stock quantities."
+    }
+  ]
+}

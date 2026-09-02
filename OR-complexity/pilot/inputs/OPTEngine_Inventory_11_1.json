@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_11_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and storage schedule for a critical drug over an 11-week planning cycle.  \nThe initial stock at the start of the planning cycle is 39 doses.  \nIn each week \\( t = 1, \\dots, 11 \\), the pharmaceutical supplier permits the hospital to submit a purchase request for a quantity between 0 and 34 doses.  \nHowever, each requested shipment requires a lead time of 4 weeks before it becomes available for patient administration or restocking the pharmacy.  \nThe weekly patient demand for the drug is as follows:  \n* Week 1: 18 doses  \n* Week 2: 50 doses  \n* Week 3: 41 doses  \n* Week 4: 16 doses  \n* Week 5: 49 doses  \n* Week 6: 11 doses  \n* Week 7: 43 doses  \n* Week 8: 48 doses  \n* Week 9: 32 doses  \n* Week 10: 41 doses  \n* Week 11: 39 doses  \n\nStock‑outs are permissible, but any unsatisfied demand is lost and cannot be deferred to later weeks.  \nThroughout the planning horizon, drug quantities may be treated as continuous values, and the total physical inventory on hand at any moment must not exceed the pharmacy’s cold‑storage capacity of 51 doses.  \nThe total cost over the 11‑week horizon comprises three elements: the procurement cost, which is 6 per dose ordered; the storage cost, which is 1 per dose held in inventory from one week to the next; and the shortage penalty, which is 13 per dose of unmet demand.  \nDetermine the optimal purchase quantity for each week and monitor the resulting inventory and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

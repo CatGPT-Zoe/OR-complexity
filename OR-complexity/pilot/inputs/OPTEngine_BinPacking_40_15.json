@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of antique books into identical shipping crates for an international exhibition. The volumes are as follows:\n\n* Volume A: mass 44kg  \n* Volume B: mass 51kg  \n* Volume C: mass 51kg  \n* Volume D: mass 52kg  \n* Volume E: mass 53kg  \n* Volume F: mass 39kg  \n* Volume G: mass 50kg  \n* Volume H: mass 51kg  \n* Volume I: mass 35kg  \n* Volume J: mass 46kg  \n* Volume K: mass 51kg  \n* Volume L: mass 70kg  \n* Volume M: mass 47kg  \n* Volume N: mass 70kg  \n* Volume O: mass 48kg  \n* Volume P: mass 39kg  \n* Volume Q: mass 56kg  \n* Volume R: mass 67kg  \n* Volume S: mass 55kg  \n* Volume T: mass 44kg  \n* Volume U: mass 68kg  \n* Volume V: mass 36kg  \n* Volume W: mass 44kg  \n* Volume X: mass 47kg  \n* Volume Y: mass 58kg  \n* Volume Z: mass 70kg  \n* Volume [: mass 38kg  \n* Volume \\: mass 48kg  \n* Volume ]: mass 38kg  \n* Volume ^: mass 47kg  \n* Volume _: mass 33kg  \n* Volume `: mass 30kg  \n* Volume a: mass 45kg  \n* Volume b: mass 53kg  \n* Volume c: mass 51kg  \n* Volume d: mass 70kg  \n* Volume e: mass 37kg  \n* Volume f: mass 58kg  \n* Volume g: mass 70kg  \n* Volume h: mass 33kg  \n\nEach shipping crate can safely support a maximum load of 100 kg. The coordinator must place every volume into exactly one crate, ensuring the combined mass in any crate does not surpass its capacity, while utilizing the smallest possible number of crates for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,39 @@
+{
+  "instance_id": "LEAN_NYCPropertySales1",
+  "annotation_mode": "semantic",
+  "problem_text": "A real-estate developer is planning property development in New York City. For each area (e.g., Queens, Brooklyn, etc.), the developer has a “products.csv” file that records the benefit coefficient for that area.\n    The developer also faces a single overall development-capacity constraint, provided in “capacity.csv.” file. The objective is to decide the daily scale of development in each area so as to maximize total benefit while ensuring that the sum of all development units does not exceed the overall capacity. The decision variables  x_i  represent the scale of development in area  i  each day.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Capacity |\n|---|\n| 4466 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Queens | 443 | 104 |\n| Brooklyn | 522 | 368 |\n| Manhattan | 300 | 483 |\n| Bronx | 767 | 165 |\n| Staten Island | 300 | 105 |\n| Harlem | 309 | 123 |\n| Upper East Side | 598 | 131 |\n| Lower Manhattan | 460 | 341 |\n| Midtown | 318 | 258 |\n| Long Island City | 126 | 469 |\n| Williamsburg | 593 | 387 |\n| Bushwick | 871 | 425 |\n| Flatbush | 858 | 482 |\n| Greenpoint | 321 | 495 |\n| Park Slope | 275 | 305 |\n| Astoria | 700 | 377 |\n| Jackson Heights | 685 | 318 |\n| Flushing | 940 | 56 |\n| Sunnyside | 522 | 213 |\n| Ditmars | 763 | 472 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA6/NYCPropertySales1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA6/NYCPropertySales1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

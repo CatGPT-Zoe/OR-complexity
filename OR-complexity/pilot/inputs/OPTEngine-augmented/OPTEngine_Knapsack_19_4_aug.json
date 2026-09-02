@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a fleet of cargo drones to deliver a selection of high-priority parcels to a remote outpost. The objective is to maximize the total revenue from delivered parcels while adhering to the total payload capacity of the drone mothership.\n\nThe parcels available for dispatch are:\n* Parcel A: mass 13kg, revenue 258 credits\n* Parcel B: mass 31kg, revenue 145 credits\n* Parcel C: mass 33kg, revenue 216 credits\n* Parcel D: mass 9kg, revenue 264 credits\n* Parcel E: mass 18kg, revenue 98 credits\n* Parcel F: mass 45kg, revenue 17 credits\n* Parcel G: mass 14kg, revenue 183 credits\n* Parcel H: mass 17kg, revenue 65 credits\n* Parcel I: mass 43kg, revenue 25 credits\n* Parcel J: mass 28kg, revenue 168 credits\n* Parcel K: mass 21kg, revenue 108 credits\n* Parcel L: mass 22kg, revenue 220 credits\n* Parcel M: mass 50kg, revenue 75 credits\n* Parcel N: mass 42kg, revenue 73 credits\n* Parcel O: mass 16kg, revenue 193 credits\n* Parcel P: mass 49kg, revenue 251 credits\n* Parcel Q: mass 29kg, revenue 98 credits\n* Parcel R: mass 44kg, revenue 191 credits\n* Parcel S: mass 28kg, revenue 233 credits\n\nFurthermore, due to routing conflicts, exactly one of Parcel A and Parcel B can be included in the shipment.\n\nIf Parcel C is selected, it requires a dedicated support module that reduces the effective payload capacity of the mothership by 10 kg.\nThe mothership's maximum allowable payload is 386 kg. The firm must determine the optimal set of parcels to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

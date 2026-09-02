@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_19_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are:\n* Package 1: size 45 cubic feet\n* Package 2: size 47 cubic feet\n* Package 3: size 41 cubic feet\n* Package 4: size 56 cubic feet\n* Package 5: size 34 cubic feet\n* Package 6: size 66 cubic feet\n* Package 7: size 58 cubic feet\n* Package 8: size 45 cubic feet\n* Package 9: size 58 cubic feet\n* Package 10: size 62 cubic feet\n* Package 11: size 36 cubic feet\n* Package 12: size 42 cubic feet\n* Package 13: size 40 cubic feet\n* Package 14: size 58 cubic feet\n* Package 15: size 34 cubic feet\n* Package 16: size 57 cubic feet\n* Package 17: size 70 cubic feet\n* Package 18: size 55 cubic feet\n* Package 19: size 47 cubic feet\n\nEach truck can carry up to 100 cubic feet of cargo. Load all packages using the minimum number of trucks. Every package must be placed in exactly one truck, and the total cargo volume in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

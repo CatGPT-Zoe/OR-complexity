@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_12",
+  "annotation_mode": "semantic",
+  "problem_text": "An urban planner is tasked with assigning community events to identical municipal venues. The events are as follows:\n* Festival Alpha: requires 45 parking spaces\n* Festival Beta: requires 50 parking spaces\n* Festival Gamma: requires 34 parking spaces\n* Festival Delta: requires 42 parking spaces\n* Festival Epsilon: requires 66 parking spaces\n* Festival Zeta: requires 44 parking spaces\n* Festival Eta: requires 45 parking spaces\n* Festival Theta: requires 39 parking spaces\n* Festival Iota: requires 64 parking spaces\n* Festival Kappa: requires 58 parking spaces\n\nEach venue has a maximum capacity of 100 parking spaces. The planner must schedule all events, ensuring each event is assigned to exactly one venue and the total parking space requirement for the events at any given venue does not surpass its capacity. The objective is to utilize the minimum possible number of venues.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

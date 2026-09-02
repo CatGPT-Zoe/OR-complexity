@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A company needs to distribute its marketing budget across 7 different advertising channels to maximize total expected customer reach. The characteristics of each channel are as follows:\n* Channel A: expected reach is 0.200, engagement score is 0.142, allocation bounds [0.004, 0.888]\n* Channel B: expected reach is 0.108, engagement score is 0.103, allocation bounds [0.074, 0.597]\n* Channel C: expected reach is 0.047, engagement score is 0.065, allocation bounds [0.071, 0.322]\n* Channel D: expected reach is 0.117, engagement score is 0.212, allocation bounds [0.081, 0.601]\n* Channel E: expected reach is 0.082, engagement score is 0.176, allocation bounds [0.039, 0.654]\n* Channel F: expected reach is 0.119, engagement score is 0.078, allocation bounds [0.066, 0.822]\n* Channel G: expected reach is 0.118, engagement score is 0.235, allocation bounds [0.082, 0.825]\n\nEach channel must receive a budget allocation percentage that stays within its specified bounds, and all allocations must sum to 100% of the total budget. To maintain adequate market presence, the company requires that the group of digital channels, represented by the subset L = {C, D, F, G}, collectively receive at least 46.0% of the total budget.\n\nAdditionally, the overall campaign engagement score must not exceed 0.201, and the total expected reach across all channels must be no less than 0.097. Determine the optimal budget allocation percentages that maximize total expected reach while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

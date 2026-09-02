@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage strategy for a critical type of plasma over a 12‑week planning cycle.  \nThe initial stock at the start of the cycle is 58 liters.  \nIn each week t = 1, …, 12, the supplier permits the hospital to submit a procurement request, the volume of which must be between 19 and 35 liters.  \nEach request, however, requires a 3‑week lead time before the plasma becomes available for transfusion or restocking.  \nThe transfusion requirement for this plasma in each week is as follows:  \n* Week 1: 50 liters  \n* Week 2: 47 liters  \n* Week 3: 21 liters  \n* Week 4: 51 liters  \n* Week 5: 42 liters  \n* Week 6: 12 liters  \n* Week 7: 58 liters  \n* Week 8: 30 liters  \n* Week 9: 14 liters  \n* Week 10: 22 liters  \n* Week 11: 51 liters  \n* Week 12: 60 liters  \n\nShortfalls are allowed; any unsatisfied transfusion requirement is lost and cannot be deferred to later weeks.  \nThroughout the 12‑week horizon, plasma volumes may be treated as continuous quantities, and the total on‑hand stock at any moment must not surpass the refrigerated storage capacity of 58 liters.  \nThe overall cost comprises three elements: the procurement cost, which is 5 per liter ordered; the refrigeration cost, which is 1 per liter of plasma kept from one week to the next; and the shortage penalty, which is 11 per liter of unmet transfusion requirement.  \nThe objective is to decide the optimal procurement volume for each week and to monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

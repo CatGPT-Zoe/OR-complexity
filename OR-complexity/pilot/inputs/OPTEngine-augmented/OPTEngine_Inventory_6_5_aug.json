@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A renewable energy provider must devise a procurement and storage schedule for hydrogen fuel over a planning horizon of 6 consecutive days.  \nThe initial storage level at the start of the planning period is 7 kiloliters.  \nIn each day t = 1, ..., 6, the supplier permits the provider to request a delivery whose volume must fall between 16 and 49 kiloliters.  \nEach delivery, however, is instantaneous and becomes available immediately to meet consumption or replenish storage.  \nThe projected consumption of hydrogen for each day is as follows:  \n* Day 1: consumption 14 kiloliters  \n* Day 2: consumption 51 kiloliters  \n* Day 3: consumption 29 kiloliters  \n* Day 4: consumption 32 kiloliters  \n* Day 5: consumption 37 kiloliters  \n* Day 6: consumption 21 kiloliters  \n\nSupply shortfalls are tolerated, but any unsatisfied consumption is simply lost and cannot be deferred to later days.  \nThroughout the planning horizon, fuel quantities may be treated as continuous, and the total volume of fuel held in storage at any moment must not surpass the tank capacity of 29 kiloliters.  \n\nSpecifically, on day 3, the maximum allowable delivery volume is 46 kiloliters.  \nOn day 5, the on-hand stored volume must be no less than 5 kiloliters.  \n\nThe total cost incurred over the planning horizon comprises three elements: the procurement cost, which is 5 per kiloliter ordered; the storage cost, which is 1 per kiloliter kept in the tank from one day to the next; and the shortage penalty, which is 12 per kiloliter of unmet consumption. The objective is to determine the optimal delivery volume for each day and to monitor the resulting storage and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

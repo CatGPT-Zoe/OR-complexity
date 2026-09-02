@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_14_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must assemble a shipment of cargo containers to maximize total profit while adhering to a truck's total load limit.\n\nThe available containers are:\n* Container A: weight 41kg, profit 31 units\n* Container B: weight 19kg, profit 292 units\n* Container C: weight 28kg, profit 27 units\n* Container D: weight 44kg, profit 220 units\n* Container E: weight 18kg, profit 202 units\n* Container F: weight 47kg, profit 116 units\n* Container G: weight 23kg, profit 78 units\n* Container H: weight 9kg, profit 66 units\n* Container I: weight 40kg, profit 192 units\n* Container J: weight 11kg, profit 25 units\n* Container K: weight 28kg, profit 213 units\n* Container L: weight 30kg, profit 48 units\n* Container M: weight 42kg, profit 49 units\n* Container N: weight 50kg, profit 227 units\n\nA specific contractual clause dictates that precisely one of Container A and Container B must be included in the final load.\n\nFurthermore, if Container C is selected, it necessitates special handling equipment that reduces the truck's effective load capacity by 10 kg.\nThe truck's maximum allowable gross load is 301 kg. The manager must determine the optimal set of containers to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

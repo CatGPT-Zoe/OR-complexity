@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with organizing a collection of distinct archival boxes into a series of uniform shipping crates. The contents of the boxes are as follows:\n\n* Box Alpha: 70 kilograms\n* Box Beta: 35 kilograms\n* Box Gamma: 34 kilograms\n* Box Delta: 35 kilograms\n* Box Epsilon: 42 kilograms\n* Box Zeta: 44 kilograms\n* Box Eta: 33 kilograms\n* Box Theta: 54 kilograms\n* Box Iota: 30 kilograms\n* Box Kappa: 36 kilograms\n* Box Lambda: 55 kilograms\n* Box Mu: 65 kilograms\n* Box Nu: 63 kilograms\n\nEach shipping crate possesses a maximum safe load capacity of 100 kg. The objective is to allocate every archival box into a shipping crate, ensuring that no crate's total load surpasses its capacity, while simultaneously minimizing the total number of crates employed in the shipment. Every individual box must be placed into precisely one crate.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

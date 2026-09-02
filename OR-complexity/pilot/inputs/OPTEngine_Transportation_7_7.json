@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate computing tasks across a network of server clusters to minimize total processing latency.  \n\nThe available computational capacity at each source cluster (set S) is specified as follows:  \n*S1 can handle 136 units of workload.  \n*S2 can handle 83 units of workload.  \n*S3 can handle 146 units of workload.  \n*S4 can handle 89 units of workload.  \n*S5 can handle 91 units of workload.  \n*S6 can handle 96 units of workload.  \n*S7 can handle 92 units of workload.  \n\nThe required workload that must be assigned to each destination data center (set D) is listed below:  \n*D1 requires 7 units.  \n*D2 requires 54 units.  \n*D3 requires 106 units.  \n*D4 requires 143 units.  \n*D5 requires 89 units.  \n*D6 requires 110 units.  \n*D7 requires 115 units.  \n\nThe latency per unit of workload transferred from each source cluster to each destination data center is provided in the table:  \n\n| From / To | D1 | D2 | D3 | D4 | D5 | D6 | D7 |  \n|-----------|----|----|----|----|----|----|----|  \n| S1        | 8  | 18 | 8  | 10 | 16 | 7  | 12 |  \n| S2        | 19 | 15 | 15 | 10 | 13 | 17 | 17 |  \n| S3        | 14 | 6  | 7  | 20 | 5  | 9  | 2  |  \n| S4        | 16 | 12 | 18 | 4  | 17 | 4  | 10 |  \n| S5        | 3  | 6  | 9  | 15 | 17 | 5  | 14 |  \n| S6        | 3  | 8  | 15 | 12 | 1  | 14 | 2  |  \n| S7        | 13 | 17 | 12 | 8  | 13 | 3  | 12 |  \n\nDetermine the workload distribution that minimizes the aggregate latency across the network.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

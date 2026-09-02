@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of delicate shipments to identical transport pods for planetary transfer. The cargo manifests are as follows:\n\n* Shipment Alpha: mass 39 units\n* Shipment Beta: mass 44 units\n* Shipment Gamma: mass 32 units\n* Shipment Delta: mass 66 units\n* Shipment Epsilon: mass 70 units\n* Shipment Zeta: mass 64 units\n* Shipment Eta: mass 68 units\n* Shipment Theta: mass 34 units\n* Shipment Iota: mass 31 units\n* Shipment Kappa: mass 37 units\n* Shipment Lambda: mass 70 units\n\nEach transport pod has a maximum safe payload capacity of 100 mass units. The objective is to load all shipments while utilizing the minimum possible number of pods. Every individual shipment must be placed into exactly one pod, and the aggregate mass within any given pod must not surpass its designated capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

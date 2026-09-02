@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers for shipment. Available containers are:\n* Container A: weight 38 tons, revenue $121K\n* Container B: weight 33 tons, revenue $81K\n* Container C: weight 19 tons, revenue $81K\n* Container D: weight 49 tons, revenue $58K\n* Container E: weight 40 tons, revenue $138K\nThe transport vessel has a maximum capacity of 125 tons. Choose the container combination that maximizes total revenue without exceeding this weight limit. Each container must be shipped entirely or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

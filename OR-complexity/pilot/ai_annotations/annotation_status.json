@@ -1,0 +1,127 @@
+[
+  {
+    "anchor": "IndustryOR_22",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "IndustryOR_50",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "IndustryOR_Easy_077_machine_assignment",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "IndustryOR_Easy_092_bus_rental",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "IndustryOR_Hard_026_shift_scheduling",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "IndustryOR_Hard_036_vrp",
+    "model": "gpt-5.6-sol",
+    "status": "json_extract_failed: unbalanced braces"
+  },
+  {
+    "anchor": "LEAN_Mixture6_truck_scheduling",
+    "model": "gpt-5.6-sol",
+    "status": "json_extract_failed: unbalanced braces"
+  },
+  {
+    "anchor": "LEAN_TP8_transportation",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "MIPLIB_NL_flugpl_fleet",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "MIPLIB_NL_graph20_20_cuts",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "NL4OPT_000_oil_spill_transport",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "NL4OPT_013_radiation_beams",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_BinPacking",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Inventory_5",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Inventory_5_1",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Inventory_5_2_aug",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Inventory_5_3_aug",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_JobShop",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Knapsack_10",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Knapsack_10_1",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Knapsack_10_1_aug",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Knapsack_10_2",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_Knapsack_10_3_aug",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_TSP_4",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  },
+  {
+    "anchor": "OPTEngine_TSP_4_6_aug",
+    "model": "gpt-5.6-sol",
+    "status": "schema_invalid (1 errors)"
+  }
+]

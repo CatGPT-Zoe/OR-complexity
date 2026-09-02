@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and vaccine stock management strategy over a nine-week immunization campaign.\nThe initial stock of a critical vaccine at the start of the campaign is 63 doses.\nIn each week t = 1, ..., 9, the supplier permits the hospital to place a procurement request, the size of which must be between 20 and 24 doses.\nEach order, however, is subject to a 3-week lead time for delivery before it can be utilized to fulfill immunization needs or replenish the stock.\nThe projected weekly vaccine demand is as follows:\n* Week 1: 40 doses\n* Week 2: 57 doses\n* Week 3: 36 doses\n* Week 4: 23 doses\n* Week 5: 40 doses\n* Week 6: 41 doses\n* Week 7: 54 doses\n* Week 8: 42 doses\n* Week 9: 30 doses\n\nShortfalls are permissible, but any unsatisfied demand is considered lost and will not be carried forward.\nThroughout the campaign, vaccine quantities can be fractional, and the total on-hand inventory at any point must not exceed the refrigeration capacity of 63 doses.\nThe total campaign expenditure comprises three elements: the procurement cost, amounting to 3 per dose ordered; the storage cost, which is 1 per dose kept in stock from one week to the next; and a penalty for missed immunizations, assessed at 13 per dose of unmet demand. The objective is to determine the optimal procurement quantity for each week and monitor the consequent stock and shortfall levels to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

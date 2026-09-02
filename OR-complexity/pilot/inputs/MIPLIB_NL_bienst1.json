@@ -1,0 +1,103 @@
+{
+  "instance_id": "MIPLIB_NL_bienst1",
+  "annotation_mode": "semantic",
+  "problem_text": "A company is preparing an operations plan for a fixed planning window and must decide how to allocate limited linehaul capacity between 8 regional sites. It can activate a set of candidate directed service lanes (for example, a scheduled shuttle from one site to another). Activating a lane by 1 unit means committing one full standard capacity block for that lane during the window; activating it by a fraction means committing only the corresponding fraction of that capacity block (for example by sharing trucks, booking partial space, or running fewer departures).\n\nDuring the same window, the company must move 8 independent product streams. A product stream represents a group of shipments that must be planned separately (for example a customer segment, a product family, or a handling class). All quantities are measured in a consistent shipment unit (e.g., pallets, roll cages, or standardized containers). Each stream has a designated origin site where its shipments enter the network. For each other site, the stream has a net receipt requirement: by the end of the window, the site must have received a specified number of shipment units of that stream more than it sends onward, so transshipment through intermediate sites is allowed.\n\nTo keep the network easy to operate and resilient, each site must activate exactly 2 outgoing lanes and exactly 2 incoming lanes. After choosing lane activations, the company can route each stream through intermediate sites and can split the stream across multiple lanes.\n\nThe company’s key risk metric is operational congestion: if any one lane carries too much total volume, it becomes the bottleneck for staffing, docking, and dispatch. The model therefore tracks a single congestion indicator, defined as the largest (over all lanes) total shipped volume on that lane when summing across all product streams. The goal is to meet all net receipt requirements while minimizing this congestion indicator, i.e., making the busiest lane as light as possible.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "nodes",
+      "indices": [
+        "node_id",
+        "node_name"
+      ],
+      "unit": "",
+      "values": "| node_id | node_name |\n|---|---|\n| a | Site A |\n| b | Site B |\n| c | Site C |\n| d | Site D |\n| e | Site E |\n| f | Site F |\n| g | Site G |\n| h | Site H |"
+    },
+    {
+      "name": "commodities",
+      "indices": [
+        "commodity_id",
+        "source_node",
+        "commodity_name"
+      ],
+      "unit": "",
+      "values": "| commodity_id | source_node | commodity_name |\n|---|---|---|\n| a | a | Commodity_A |\n| b | b | Commodity_B |\n| c | c | Commodity_C |\n| d | d | Commodity_D |\n| e | e | Commodity_E |\n| f | f | Commodity_F |\n| g | g | Commodity_G |\n| h | h | Commodity_H |"
+    },
+    {
+      "name": "arcs",
+      "indices": [
+        "arc_id",
+        "from_node",
+        "to_node",
+        "x_decision_type",
+        "x_lb",
+        "x_ub"
+      ],
+      "unit": "",
+      "values": "| arc_id | from_node | to_node | x_decision_type | x_lb | x_ub |\n|---|---|---|---|---|---|\n| a_b | a | b | integer | 0.0 | 1.0 |\n| a_c | a | c | integer | 0.0 | 1.0 |\n| a_d | a | d | integer | 0.0 | 1.0 |\n| a_e | a | e | integer | 0.0 | 1.0 |\n| a_f | a | f | integer | 0.0 | 1.0 |\n| a_g | a | g | integer | 0.0 | 1.0 |\n| a_h | a | h | integer | 0.0 | 1.0 |\n| b_a | b | a | integer | 0.0 | 1.0 |\n| b_c | b | c | integer | 0.0 | 1.0 |\n| b_d | b | d | integer | 0.0 | 1.0 |\n| b_e | b | e | integer | 0.0 | 1.0 |\n| b_f | b | f | integer | 0.0 | 1.0 |\n| b_g | b | g | integer | 0.0 | 1.0 |\n| b_h | b | h | integer | 0.0 | 1.0 |\n| c_a | c | a | integer | 0.0 | 1.0 |\n| c_b | c | b | integer | 0.0 | 1.0 |\n| c_d | c | d | integer | 0.0 | 1.0 |\n| c_e | c | e | integer | 0.0 | 1.0 |\n| c_f | c | f | integer | 0.0 | 1.0 |\n| c_g | c | g | integer | 0.0 | 1.0 |\n| c_h | c | h | integer | 0.0 | 1.0 |\n| d_a | d | a | integer | 0.0 | 1.0 |\n| d_b | d | b | integer | 0.0 | 1.0 |\n| d_c | d | c | integer | 0.0 | 1.0 |\n| d_e | d | e | integer | 0.0 | 1.0 |\n| d_f | d | f | integer | 0.0 | 1.0 |\n| d_g | d | g | integer | 0.0 | 1.0 |\n| d_h | d | h | integer | 0.0 | 1.0 |\n| e_a | e | a | continuous | 0.0 | 1.0 |\n| e_b | e | b | continuous | 0.0 | 1.0 |\n| e_c | e | c | continuous | 0.0 | 1.0 |\n| e_d | e | d | continuous | 0.0 | 1.0 |\n| e_f | e | f | continuous | 0.0 | 1.0 |\n| e_g | e | g | continuous | 0.0 | 1.0 |\n| e_h | e | h | continuous | 0.0 | 1.0 |\n| f_a | f | a | continuous | 0.0 | 1.0 |\n| f_b | f | b | continuous | 0.0 | 1.0 |\n| f_c | f | c | continuous | 0.0 | 1.0 |\n| f_d | f | d | continuous | 0.0 | 1.0 |\n| f_e | f | e | continuous | 0.0 | 1.0 |\n| f_g | f | g | continuous | 0.0 | 1.0 |\n| f_h | f | h | continuous | 0.0 | 1.0 |\n| g_a | g | a | continuous | 0.0 | 1.0 |\n| g_b | g | b | continuous | 0.0 | 1.0 |\n| g_c | g | c | continuous | 0.0 | 1.0 |\n| g_d | g | d | continuous | 0.0 | 1.0 |\n| g_e | g | e | continuous | 0.0 | 1.0 |\n| g_f | g | f | continuous | 0.0 | 1.0 |\n| g_h | g | h | continuous | 0.0 | 1.0 |\n| h_a | h | a | continuous | 0.0 | 1.0 |\n| h_b | h | b | continuous | 0.0 | 1.0 |\n| h_c | h | c | continuous | 0.0 | 1.0 |\n| h_d | h | d | continuous | 0.0 | 1.0 |\n| h_e | h | e | continuous | 0.0 | 1.0 |\n| h_f | h | f | continuous | 0.0 | 1.0 |\n| h_g | h | g | continuous | 0.0 | 1.0 |"
+    },
+    {
+      "name": "degree_requirements",
+      "indices": [
+        "node_id",
+        "required_outgoing",
+        "required_incoming"
+      ],
+      "unit": "",
+      "values": "| node_id | required_outgoing | required_incoming |\n|---|---|---|\n| a | 2 | 2 |\n| b | 2 | 2 |\n| c | 2 | 2 |\n| d | 2 | 2 |\n| e | 2 | 2 |\n| f | 2 | 2 |\n| g | 2 | 2 |\n| h | 2 | 2 |"
+    },
+    {
+      "name": "demands",
+      "indices": [
+        "commodity_id",
+        "node_id",
+        "net_inflow"
+      ],
+      "unit": "",
+      "values": "| commodity_id | node_id | net_inflow |\n|---|---|---|\n| a | b | 10 |\n| a | c | 7 |\n| a | d | 13 |\n| a | e | 12 |\n| a | f | 13 |\n| a | g | 6 |\n| a | h | 13 |\n| b | a | 14 |\n| b | c | 15 |\n| b | d | 13 |\n| b | e | 12 |\n| b | f | 9 |\n| b | g | 9 |\n| b | h | 9 |\n| c | a | 13 |\n| c | b | 9 |\n| c | d | 11 |\n| c | e | 6 |\n| c | f | 5 |\n| c | g | 11 |\n| c | h | 8 |\n| d | a | 7 |\n| d | b | 8 |\n| d | c | 15 |\n| d | e | 7 |\n| d | f | 6 |\n| d | g | 11 |\n| d | h | 9 |\n| e | a | 8 |\n| e | b | 12 |\n| e | c | 12 |\n| e | d | 9 |\n| e | f | 9 |\n| e | g | 14 |\n| e | h | 11 |\n| f | a | 5 |\n| f | b | 11 |\n| f | c | 11 |\n| f | d | 7 |\n| f | e | 9 |\n| f | g | 15 |\n| f | h | 12 |\n| g | a | 6 |\n| g | b | 9 |\n| g | c | 7 |\n| g | d | 14 |\n| g | e | 10 |\n| g | f | 12 |\n| g | h | 7 |\n| h | a | 11 |\n| h | b | 7 |\n| h | c | 8 |\n| h | d | 6 |\n| h | e | 10 |\n| h | f | 5 |\n| h | g | 14 |"
+    },
+    {
+      "name": "capacity_multipliers",
+      "indices": [
+        "commodity_id",
+        "arc_id",
+        "capacity_multiplier"
+      ],
+      "unit": "",
+      "values": "| commodity_id | arc_id | capacity_multiplier |\n|---|---|---|\n| a | a_b | 74 |\n| a | a_c | 74 |\n| a | a_d | 74 |\n| a | a_e | 74 |\n| a | a_f | 74 |\n| a | a_g | 74 |\n| a | a_h | 74 |\n| a | b_c | 64 |\n| a | b_d | 64 |\n| a | b_e | 64 |\n| a | b_f | 64 |\n| a | b_g | 64 |\n| a | b_h | 64 |\n| a | c_b | 67 |\n| a | c_d | 67 |\n| a | c_e | 67 |\n| a | c_f | 67 |\n| a | c_g | 67 |\n| a | c_h | 67 |\n| a | d_b | 61 |\n| a | d_c | 61 |\n| a | d_e | 61 |\n| a | d_f | 61 |\n| a | d_g | 61 |\n| a | d_h | 61 |\n| a | e_b | 62 |\n| a | e_c | 62 |\n| a | e_d | 62 |\n| a | e_f | 62 |\n| a | e_g | 62 |\n| a | e_h | 62 |\n| a | f_b | 61 |\n| a | f_c | 61 |\n| a | f_d | 61 |\n| a | f_e | 61 |\n| a | f_g | 61 |\n| a | f_h | 61 |\n| a | g_b | 68 |\n| a | g_c | 68 |\n| a | g_d | 68 |\n| a | g_e | 68 |\n| a | g_f | 68 |\n| a | g_h | 68 |\n| a | h_b | 61 |\n| a | h_c | 61 |\n| a | h_d | 61 |\n| a | h_e | 61 |\n| a | h_f | 61 |\n| a | h_g | 61 |\n| b | a_c | 67 |\n| b | a_d | 67 |\n| b | a_e | 67 |\n| b | a_f | 67 |\n| b | a_g | 67 |\n| b | a_h | 67 |\n| b | b_a | 81 |\n| b | b_c | 81 |\n| b | b_d | 81 |\n| b | b_e | 81 |\n| b | b_f | 81 |\n| b | b_g | 81 |\n| b | b_h | 81 |\n| b | c_a | 66 |\n| b | c_d | 66 |\n| b | c_e | 66 |\n| b | c_f | 66 |\n| b | c_g | 66 |\n| b | c_h | 66 |\n| b | d_a | 68 |\n| b | d_c | 68 |\n| b | d_e | 68 |\n| b | d_f | 68 |\n| b | d_g | 68 |\n| b | d_h | 68 |\n| b | e_a | 69 |\n| b | e_c | 69 |\n| b | e_d | 69 |\n| b | e_f | 69 |\n| b | e_g | 69 |\n| b | e_h | 69 |\n| b | f_a | 72 |\n| b | f_c | 72 |\n| b | f_d | 72 |\n| b | f_e | 72 |\n| b | f_g | 72 |\n| b | f_h | 72 |\n| b | g_a | 72 |\n| b | g_c | 72 |\n| b | g_d | 72 |\n| b | g_e | 72 |\n| b | g_f | 72 |\n| b | g_h | 72 |\n| b | h_a | 72 |\n| b | h_c | 72 |\n| b | h_d | 72 |\n| b | h_e | 72 |\n| b | h_f | 72 |\n| b | h_g | 72 |\n| c | a_b | 50 |\n| c | a_d | 50 |\n| c | a_e | 50 |\n| c | a_f | 50 |\n| c | a_g | 50 |\n| c | a_h | 50 |\n| c | b_a | 54 |\n| c | b_d | 54 |\n| c | b_e | 54 |\n| c | b_f | 54 |\n| c | b_g | 54 |\n| c | b_h | 54 |\n| c | c_a | 63 |\n| c | c_b | 63 |\n| c | c_d | 63 |\n| c | c_e | 63 |\n| c | c_f | 63 |\n| c | c_g | 63 |\n| c | c_h | 63 |\n| c | d_a | 52 |\n| c | d_b | 52 |\n| c | d_e | 52 |\n| c | d_f | 52 |\n| c | d_g | 52 |\n| c | d_h | 52 |\n| c | e_a | 57 |\n| c | e_b | 57 |\n| c | e_d | 57 |\n| c | e_f | 57 |\n| c | e_g | 57 |\n| c | e_h | 57 |\n| c | f_a | 58 |\n| c | f_b | 58 |\n| c | f_d | 58 |\n| c | f_e | 58 |\n| c | f_g | 58 |\n| c | f_h | 58 |\n| c | g_a | 52 |\n| c | g_b | 52 |\n| c | g_d | 52 |\n| c | g_e | 52 |\n| c | g_f | 52 |\n| c | g_h | 52 |\n| c | h_a | 55 |\n| c | h_b | 55 |\n| c | h_d | 55 |\n| c | h_e | 55 |\n| c | h_f | 55 |\n| c | h_g | 55 |\n| d | a_b | 56 |\n| d | a_c | 56 |\n| d | a_e | 56 |\n| d | a_f | 56 |\n| d | a_g | 56 |\n| d | a_h | 56 |\n| d | b_a | 55 |\n| d | b_c | 55 |\n| d | b_e | 55 |\n| d | b_f | 55 |\n| d | b_g | 55 |\n| d | b_h | 55 |\n| d | c_a | 48 |\n| d | c_b | 48 |\n| d | c_e | 48 |\n| d | c_f | 48 |\n| d | c_g | 48 |\n| d | c_h | 48 |\n| d | d_a | 63 |\n| d | d_b | 63 |\n| d | d_c | 63 |\n| d | d_e | 63 |\n| d | d_f | 63 |\n| d | d_g | 63 |\n| d | d_h | 63 |\n| d | e_a | 56 |\n| d | e_b | 56 |\n| d | e_c | 56 |\n| d | e_f | 56 |\n| d | e_g | 56 |\n| d | e_h | 56 |\n| d | f_a | 57 |\n| d | f_b | 57 |\n| d | f_c | 57 |\n| d | f_e | 57 |\n| d | f_g | 57 |\n| d | f_h | 57 |\n| d | g_a | 52 |\n| d | g_b | 52 |\n| d | g_c | 52 |\n| d | g_e | 52 |\n| d | g_f | 52 |\n| d | g_h | 52 |\n| d | h_a | 54 |\n| d | h_b | 54 |\n| d | h_c | 54 |\n| d | h_e | 54 |\n| d | h_f | 54 |\n| d | h_g | 54 |\n| e | a_b | 67 |\n| e | a_c | 67 |\n| e | a_d | 67 |\n| e | a_f | 67 |\n| e | a_g | 67 |\n| e | a_h | 67 |\n| e | b_a | 63 |\n| e | b_c | 63 |\n| e | b_d | 63 |\n| e | b_f | 63 |\n| e | b_g | 63 |\n| e | b_h | 63 |\n| e | c_a | 63 |\n| e | c_b | 63 |\n| e | c_d | 63 |\n| e | c_f | 63 |\n| e | c_g | 63 |\n| e | c_h | 63 |\n| e | d_a | 66 |\n| e | d_b | 66 |\n| e | d_c | 66 |\n| e | d_f | 66 |\n| e | d_g | 66 |\n| e | d_h | 66 |\n| e | e_a | 75 |\n| e | e_b | 75 |\n| e | e_c | 75 |\n| e | e_d | 75 |\n| e | e_f | 75 |\n| e | e_g | 75 |\n| e | e_h | 75 |\n| e | f_a | 66 |\n| e | f_b | 66 |\n| e | f_c | 66 |\n| e | f_d | 66 |\n| e | f_g | 66 |\n| e | f_h | 66 |\n| e | g_a | 61 |\n| e | g_b | 61 |\n| e | g_c | 61 |\n| e | g_d | 61 |\n| e | g_f | 61 |\n| e | g_h | 61 |\n| e | h_a | 64 |\n| e | h_b | 64 |\n| e | h_c | 64 |\n| e | h_d | 64 |\n| e | h_f | 64 |\n| e | h_g | 64 |\n| f | a_b | 65 |\n| f | a_c | 65 |\n| f | a_d | 65 |\n| f | a_e | 65 |\n| f | a_g | 65 |\n| f | a_h | 65 |\n| f | b_a | 59 |\n| f | b_c | 59 |\n| f | b_d | 59 |\n| f | b_e | 59 |\n| f | b_g | 59 |\n| f | b_h | 59 |\n| f | c_a | 59 |\n| f | c_b | 59 |\n| f | c_d | 59 |\n| f | c_e | 59 |\n| f | c_g | 59 |\n| f | c_h | 59 |\n| f | d_a | 63 |\n| f | d_b | 63 |\n| f | d_c | 63 |\n| f | d_e | 63 |\n| f | d_g | 63 |\n| f | d_h | 63 |\n| f | e_a | 61 |\n| f | e_b | 61 |\n| f | e_c | 61 |\n| f | e_d | 61 |\n| f | e_g | 61 |\n| f | e_h | 61 |\n| f | f_a | 70 |\n| f | f_b | 70 |\n| f | f_c | 70 |\n| f | f_d | 70 |\n| f | f_e | 70 |\n| f | f_g | 70 |\n| f | f_h | 70 |\n| f | g_a | 55 |\n| f | g_b | 55 |\n| f | g_c | 55 |\n| f | g_d | 55 |\n| f | g_e | 55 |\n| f | g_h | 55 |\n| f | h_a | 58 |\n| f | h_b | 58 |\n| f | h_c | 58 |\n| f | h_d | 58 |\n| f | h_e | 58 |\n| f | h_g | 58 |\n| g | a_b | 59 |\n| g | a_c | 59 |\n| g | a_d | 59 |\n| g | a_e | 59 |\n| g | a_f | 59 |\n| g | a_h | 59 |\n| g | b_a | 56 |\n| g | b_c | 56 |\n| g | b_d | 56 |\n| g | b_e | 56 |\n| g | b_f | 56 |\n| g | b_h | 56 |\n| g | c_a | 58 |\n| g | c_b | 58 |\n| g | c_d | 58 |\n| g | c_e | 58 |\n| g | c_f | 58 |\n| g | c_h | 58 |\n| g | d_a | 51 |\n| g | d_b | 51 |\n| g | d_c | 51 |\n| g | d_e | 51 |\n| g | d_f | 51 |\n| g | d_h | 51 |\n| g | e_a | 55 |\n| g | e_b | 55 |\n| g | e_c | 55 |\n| g | e_d | 55 |\n| g | e_f | 55 |\n| g | e_h | 55 |\n| g | f_a | 53 |\n| g | f_b | 53 |\n| g | f_c | 53 |\n| g | f_d | 53 |\n| g | f_e | 53 |\n| g | f_h | 53 |\n| g | g_a | 65 |\n| g | g_b | 65 |\n| g | g_c | 65 |\n| g | g_d | 65 |\n| g | g_e | 65 |\n| g | g_f | 65 |\n| g | g_h | 65 |\n| g | h_a | 58 |\n| g | h_b | 58 |\n| g | h_c | 58 |\n| g | h_d | 58 |\n| g | h_e | 58 |\n| g | h_f | 58 |\n| h | a_b | 50 |\n| h | a_c | 50 |\n| h | a_d | 50 |\n| h | a_e | 50 |\n| h | a_f | 50 |\n| h | a_g | 50 |\n| h | b_a | 54 |\n| h | b_c | 54 |\n| h | b_d | 54 |\n| h | b_e | 54 |\n| h | b_f | 54 |\n| h | b_g | 54 |\n| h | c_a | 53 |\n| h | c_b | 53 |\n| h | c_d | 53 |\n| h | c_e | 53 |\n| h | c_f | 53 |\n| h | c_g | 53 |\n| h | d_a | 55 |\n| h | d_b | 55 |\n| h | d_c | 55 |\n| h | d_e | 55 |\n| h | d_f | 55 |\n| h | d_g | 55 |\n| h | e_a | 51 |\n| h | e_b | 51 |\n| h | e_c | 51 |\n| h | e_d | 51 |\n| h | e_f | 51 |\n| h | e_g | 51 |\n| h | f_a | 56 |\n| h | f_b | 56 |\n| h | f_c | 56 |\n| h | f_d | 56 |\n| h | f_e | 56 |\n| h | f_g | 56 |\n| h | g_a | 47 |\n| h | g_b | 47 |\n| h | g_c | 47 |\n| h | g_d | 47 |\n| h | g_e | 47 |\n| h | g_f | 47 |\n| h | h_a | 61 |\n| h | h_b | 61 |\n| h | h_c | 61 |\n| h | h_d | 61 |\n| h | h_e | 61 |\n| h | h_f | 61 |\n| h | h_g | 61 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/bienst1/data/nodes.csv",
+      "role": "parameter_table",
+      "table": "nodes"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/bienst1/data/commodities.csv",
+      "role": "parameter_table",
+      "table": "commodities"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/bienst1/data/arcs.csv",
+      "role": "parameter_table",
+      "table": "arcs"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/bienst1/data/degree_requirements.csv",
+      "role": "parameter_table",
+      "table": "degree_requirements"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/bienst1/data/demands.csv",
+      "role": "parameter_table",
+      "table": "demands"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/bienst1/data/capacity_multipliers.csv",
+      "role": "parameter_table",
+      "table": "capacity_multipliers"
+    }
+  ],
+  "notes": ""
+}

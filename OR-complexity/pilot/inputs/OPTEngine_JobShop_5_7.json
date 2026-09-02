@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing facility has 5 different products that must go through 5 specialized processing stations.\n\nEach product requires a specific sequence of treatments represented as (Station, Duration) pairs, where each pair indicates the processing station needed and the time required for that treatment. The order of pairs shows the mandatory sequence in which treatments must be performed.\n\nProduct specifications:\n* P1 requires: (Station B, 1) → (Station E, 2) → (Station D, 7) → (Station A, 5) → (Station C, 2)\n* P2 requires: (Station E, 4) → (Station C, 2) → (Station A, 9) → (Station B, 5) → (Station D, 6)\n* P3 requires: (Station B, 10) → (Station C, 3) → (Station D, 3) → (Station E, 1) → (Station A, 9)\n* P4 requires: (Station E, 7) → (Station C, 3) → (Station B, 3) → (Station A, 9) → (Station D, 2)\n* P5 requires: (Station B, 3) → (Station E, 4) → (Station D, 7) → (Station A, 6) → (Station C, 10)\n\nEach treatment must run continuously without interruption once initiated, and each processing station can only handle one treatment at a time. The goal is to determine the optimal scheduling sequence for all treatments across the stations to minimize the total production completion time for all products.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

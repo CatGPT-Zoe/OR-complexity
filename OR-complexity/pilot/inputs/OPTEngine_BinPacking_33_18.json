@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments into identical cargo compartments for an air transport operation. The consignments are as follows:\n\n* Consignment Alpha: mass 69kg\n* Consignment Beta: mass 58kg\n* Consignment Gamma: mass 40kg\n* Consignment Delta: mass 66kg\n* Consignment Epsilon: mass 54kg\n* Consignment Zeta: mass 44kg\n* Consignment Eta: mass 38kg\n* Consignment Theta: mass 46kg\n* Consignment Iota: mass 31kg\n* Consignment Kappa: mass 59kg\n* Consignment Lambda: mass 50kg\n* Consignment Mu: mass 60kg\n* Consignment Nu: mass 52kg\n* Consignment Xi: mass 62kg\n* Consignment Omicron: mass 44kg\n* Consignment Pi: mass 49kg\n* Consignment Rho: mass 66kg\n* Consignment Sigma: mass 31kg\n* Consignment Tau: mass 61kg\n* Consignment Upsilon: mass 38kg\n* Consignment Phi: mass 47kg\n* Consignment Chi: mass 43kg\n* Consignment Psi: mass 53kg\n* Consignment Omega: mass 30kg\n* Consignment Aleph: mass 48kg\n* Consignment Beth: mass 69kg\n* Consignment Gimel: mass 57kg\n* Consignment Dalet: mass 44kg\n* Consignment He: mass 30kg\n* Consignment Waw: mass 44kg\n* Consignment Zayin: mass 68kg\n* Consignment Het: mass 54kg\n* Consignment Tet: mass 38kg\n\nEach cargo compartment possesses a maximum permissible load of 100 kg. The coordinator must arrange all consignments utilizing the smallest possible number of compartments. Every individual consignment must be placed into precisely one compartment, and the aggregate mass assigned to any given compartment must not surpass its designated capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_37_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with allocating a series of distinct shipments into standardized freight compartments. The cargo manifests are as follows:\n\n* Shipment Alpha: mass 39 units\n* Shipment Beta: mass 62 units\n* Shipment Gamma: mass 67 units\n* Shipment Delta: mass 31 units\n* Shipment Epsilon: mass 68 units\n* Shipment Zeta: mass 68 units\n* Shipment Eta: mass 69 units\n* Shipment Theta: mass 56 units\n* Shipment Iota: mass 46 units\n* Shipment Kappa: mass 60 units\n* Shipment Lambda: mass 47 units\n* Shipment Mu: mass 69 units\n* Shipment Nu: mass 64 units\n* Shipment Xi: mass 44 units\n* Shipment Omicron: mass 48 units\n* Shipment Pi: mass 40 units\n* Shipment Rho: mass 45 units\n* Shipment Sigma: mass 42 units\n* Shipment Tau: mass 61 units\n* Shipment Upsilon: mass 45 units\n* Shipment Phi: mass 45 units\n* Shipment Chi: mass 47 units\n* Shipment Psi: mass 52 units\n* Shipment Omega: mass 42 units\n* Shipment A1: mass 66 units\n* Shipment B1: mass 50 units\n* Shipment C1: mass 39 units\n* Shipment D1: mass 34 units\n* Shipment E1: mass 54 units\n* Shipment F1: mass 42 units\n* Shipment G1: mass 43 units\n* Shipment H1: mass 69 units\n* Shipment I1: mass 68 units\n* Shipment J1: mass 43 units\n* Shipment K1: mass 54 units\n* Shipment L1: mass 40 units\n* Shipment M1: mass 61 units\n\nEach freight compartment possesses a maximum load capacity of 100 mass units. The objective is to assign every shipment to exactly one compartment such that the cumulative mass within any given compartment does not surpass its stipulated limit, while simultaneously minimizing the total number of compartments utilized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

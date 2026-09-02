@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_5_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate the municipal budget among 5 infrastructure projects to maximize the total projected benefit score. The profile for each project is as follows:\n* Project 1: benefit score 0.092, impact factor 0.140, allocation limits [0.044, 0.802]\n* Project 2: benefit score 0.081, impact factor 0.132, allocation limits [0.086, 0.881]\n* Project 3: benefit score 0.175, impact factor 0.091, allocation limits [0.055, 0.856]\n* Project 4: benefit score 0.065, impact factor 0.082, allocation limits [0.005, 0.809]\n* Project 5: benefit score 0.054, impact factor 0.278, allocation limits [0.100, 0.400]\nEach project must receive a budget share within its specified limits, and the sum of all shares must equal the entire budget. To ensure equitable development, the set of community-focused projects, represented by Q = {2, 3, 4, 5}, must collectively receive at least 0.479 of the total funds. Additionally, the overall community disruption, measured by a composite impact index, must not exceed 0.227, and the total benefit score must be at least 0.085. Determine the optimal budget allocation that maximizes the total benefit score while satisfying all requirements.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

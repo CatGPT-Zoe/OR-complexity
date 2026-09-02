@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_15_14",
+  "annotation_mode": "semantic",
+  "problem_text": "An expedition leader must allocate archaeological artifacts into standardized transport crates for shipment. The artifacts are as follows:\n* Artifact Alpha: mass 41 kilograms\n* Artifact Beta: mass 67 kilograms\n* Artifact Gamma: mass 35 kilograms\n* Artifact Delta: mass 36 kilograms\n* Artifact Epsilon: mass 64 kilograms\n* Artifact Zeta: mass 67 kilograms\n* Artifact Eta: mass 49 kilograms\n* Artifact Theta: mass 40 kilograms\n* Artifact Iota: mass 54 kilograms\n* Artifact Kappa: mass 39 kilograms\n* Artifact Lambda: mass 38 kilograms\n* Artifact Mu: mass 44 kilograms\n* Artifact Nu: mass 50 kilograms\n* Artifact Xi: mass 62 kilograms\n* Artifact Omicron: mass 45 kilograms\n\nEach reinforced crate possesses a maximum safe load capacity of 100 kg. The objective is to securely transport the entire collection utilizing the minimal number of crates. Every individual artifact must be placed into precisely one crate, and the aggregate mass within any given crate must not surpass its designated load limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

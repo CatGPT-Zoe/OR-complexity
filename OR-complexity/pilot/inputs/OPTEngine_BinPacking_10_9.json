@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to load packages onto identical delivery trucks. The packages are:\n* Package Alpha: 54 cubic feet\n* Package Beta: 56 cubic feet\n* Package Gamma: 32 cubic feet\n* Package Delta: 46 cubic feet\n* Package Epsilon: 62 cubic feet\n* Package Zeta: 61 cubic feet\n* Package Eta: 55 cubic feet\n* Package Theta: 49 cubic feet\n* Package Iota: 60 cubic feet\n* Package Kappa: 52 cubic feet\n\nEach truck has a maximum cargo capacity of 100 cubic feet. Load all packages using the fewest trucks possible. Every package must be placed on exactly one truck, and the total volume in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate 4 delivery trucks across 4 different distribution hubs.\n\nEach truck has a specific route represented as pairs (Hub, Loading time),\nwhere each pair specifies the hub where the truck must be loaded and the time required to complete the loading.\nThe order of pairs indicates the required sequence in which the loading operations must be performed.\n\nTruck details:\n* Truck 1 requires the sequence: (Hub 4, 2) → (Hub 2, 8) → (Hub 3, 2) → (Hub 1, 8)\n* Truck 2 requires the sequence: (Hub 4, 3) → (Hub 1, 3) → (Hub 2, 10) → (Hub 3, 7)\n* Truck 3 requires the sequence: (Hub 1, 4) → (Hub 4, 1) → (Hub 3, 7) → (Hub 2, 1)\n* Truck 4 requires the sequence: (Hub 1, 8) → (Hub 2, 10) → (Hub 3, 4) → (Hub 4, 7)\n\nEach loading operation must proceed without interruption once it begins,\nand each hub can only accommodate one truck at a time for loading.\nThe objective is to determine the optimal schedule for all loading operations at the hubs\nso that the total completion time for all trucks is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage schedule for a critical reservoir over a five-day forecast window. The initial water volume in the reservoir at the start of the planning interval is 96 megaliters. For each day t = 1, ..., 5, the utility may activate a pumping station to transfer water from a distant source; the volume pumped on any given day must be between 3 and 59 megaliters. However, due to transmission delays in the pipeline network, water pumped on a given day will only become available in the reservoir after a lag of 2 full days. The projected water consumption for the region each day is specified as follows:\n* Day 1: consumption 23 megaliters\n* Day 2: consumption 42 megaliters\n* Day 3: consumption 18 megaliters\n* Day 4: consumption 28 megaliters\n* Day 5: consumption 18 megaliters\n\nSupply deficits are permissible, but any consumption not met from available reservoir volume is simply lost and will not be compensated later. Throughout the schedule, water volumes are treated as continuous quantities, and the total stored volume in the reservoir at any moment must not exceed its maximum safe capacity of 96 megaliters. The total operational cost over the five days comprises three elements: the pumping cost, which is 5 per megaliter transferred; the storage cost, which is 3 per megaliter of water held overnight from one day to the next; and a deficit penalty, which is 15 per megaliter of unmet daily consumption. The objective is to determine the optimal pumping volume for each day and to monitor the resulting reservoir storage and deficit levels in order to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

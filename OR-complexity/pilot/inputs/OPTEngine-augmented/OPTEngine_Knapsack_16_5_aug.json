@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment to maximize total utility within a cargo aircraft's weight allowance. The available equipment units are as follows:\n\n* Unit A: weight 5 tons, utility 170 credits\n* Unit B: weight 21 tons, utility 290 credits\n* Unit C: weight 42 tons, utility 157 credits\n* Unit D: weight 4 tons, utility 137 credits\n* Unit E: weight 45 tons, utility 274 credits\n* Unit F: weight 9 tons, utility 142 credits\n* Unit G: weight 39 tons, utility 38 credits\n* Unit H: weight 25 tons, utility 224 credits\n* Unit I: weight 18 tons, utility 125 credits\n* Unit J: weight 17 tons, utility 170 credits\n* Unit K: weight 35 tons, utility 260 credits\n* Unit L: weight 29 tons, utility 72 credits\n* Unit M: weight 28 tons, utility 201 credits\n* Unit N: weight 11 tons, utility 276 credits\n* Unit O: weight 4 tons, utility 128 credits\n* Unit P: weight 46 tons, utility 254 credits\n\nA logistical requirement dictates that exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, it necessitates special handling that reduces the effective cargo capacity by 10 tons.\nThe aircraft's maximum payload is 264 tons. The manager must determine the optimal selection of units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

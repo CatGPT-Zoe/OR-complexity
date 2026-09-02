@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator seeks to allocate a fleet of delivery vehicles from distribution hubs to retail outlets in order to minimize total fuel expenditure.\n\nThe number of vehicles ready for dispatch at each hub (set H) is as follows:\n*H1 has 192 vehicles available.\n*H2 has 52 vehicles available.\n*H3 has 182 vehicles available.\n*H4 has 98 vehicles available.\n*H5 has 71 vehicles available.\n\nThe required number of vehicle arrivals at each retail outlet (set R) is specified below:\n*R1 must receive 70 vehicles.\n*R2 must receive 95 vehicles.\n*R3 must receive 40 vehicles.\n*R4 must receive 81 vehicles.\n*R5 must receive 121 vehicles.\n\nThe fuel cost per vehicle dispatched from each hub to each outlet is provided in the following matrix:\n| From / To | R1 | R2 | R3 | R4 | R5 |\n|--|-|-|-|-|\n| H1 | 15 | 1 | 3 | 10 | 8 |\n| H2 | 13 | 8 | 10 | 19 | 12 |\n| H3 | 16 | 18 | 17 | 12 | 14 |\n| H4 | 18 | 11 | 12 | 15 | 9 |\n| H5 | 10 | 9 | 8 | 4 | 7 |\n\nDetermine the optimal vehicle allocation to minimize the aggregate fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

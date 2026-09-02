@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of shipments to identical cargo aircraft. Shipments are as follows:\n\n* Shipment Alpha: mass 49 tonnes\n* Shipment Bravo: mass 58 tonnes\n* Shipment Charlie: mass 57 tonnes\n* Shipment Delta: mass 44 tonnes\n* Shipment Echo: mass 60 tonnes\n* Shipment Foxtrot: mass 30 tonnes\n* Shipment Golf: mass 63 tonnes\n* Shipment Hotel: mass 68 tonnes\n* Shipment India: mass 55 tonnes\n* Shipment Juliett: mass 51 tonnes\n* Shipment Kilo: mass 43 tonnes\n* Shipment Lima: mass 66 tonnes\n* Shipment Mike: mass 52 tonnes\n* Shipment November: mass 48 tonnes\n* Shipment Oscar: mass 40 tonnes\n* Shipment Papa: mass 41 tonnes\n* Shipment Quebec: mass 47 tonnes\n* Shipment Romeo: mass 42 tonnes\n* Shipment Sierra: mass 37 tonnes\n* Shipment Tango: mass 52 tonnes\n* Shipment Uniform: mass 54 tonnes\n* Shipment Victor: mass 39 tonnes\n* Shipment Whiskey: mass 49 tonnes\n* Shipment X-ray: mass 46 tonnes\n* Shipment Yankee: mass 69 tonnes\n* Shipment Zulu: mass 40 tonnes\n* Shipment [Bracket]: mass 55 tonnes\n* Shipment [Backslash]: mass 31 tonnes\n* Shipment [Brace]: mass 34 tonnes\n* Shipment [Caret]: mass 41 tonnes\n* Shipment [Underscore]: mass 54 tonnes\n\nEach aircraft has a maximum payload capacity of 100 tonnes. The coordinator must load all shipments, using the smallest possible number of aircraft. Every shipment must be placed on exactly one aircraft, and the combined mass on any aircraft must not exceed its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

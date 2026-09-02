@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is planning the cargo loading for a specialized aerial transport drone that will execute a three-stage supply delivery mission. They must select a combination of cargo modules to maximize total utility points while adhering to the drone's maximum payload capacity.\n\nThe available cargo modules are:\n* Module A: mass 31kg, utility 56 credits\n* Module B: mass 39kg, utility 151 credits\n* Module C: mass 42kg, utility 158 credits\n* Module D: mass 26kg, utility 178 credits\n* Module E: mass 48kg, utility 162 credits\n* Module F: mass 43kg, utility 55 credits\n* Module G: mass 40kg, utility 73 credits\n* Module H: mass 32kg, utility 199 credits\n* Module I: mass 40kg, utility 55 credits\n* Module J: mass 15kg, utility 79 credits\n* Module K: mass 27kg, utility 132 credits\n* Module L: mass 2kg, utility 258 credits\n* Module M: mass 19kg, utility 83 credits\n* Module N: mass 34kg, utility 199 credits\n* Module O: mass 48kg, utility 84 credits\n* Module P: mass 8kg, utility 270 credits\n* Module Q: mass 21kg, utility 173 credits\n* Module R: mass 44kg, utility 48 credits\n\nFurthermore, due to compatibility protocols, exactly one of Module A and Module B must be included in the final loadout.\n\nIf Module C is selected, it necessitates the installation of a supplementary cooling system that reduces the drone's effective payload allowance by 10 kg.\nThe drone's structural limit for total lifted mass is 391 kg. The manager must determine the optimal set of modules to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

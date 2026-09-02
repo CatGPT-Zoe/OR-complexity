@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is tasked with delivering three distinct categories of cargo, where each category necessitates a specific sequence of three handling procedures to be completed. The revenue generated per ton of cargo is as follows:\n* For Cargo Alpha, revenue is 18.532 per ton.\n* For Cargo Beta, revenue is 9.652 per ton.\n* For Cargo Gamma, revenue is 15.947 per ton.\n\nThe handling duration required per ton for each procedure is detailed below:\n* For Cargo Alpha, Procedure X consumes 1.818 (ton-hours), Procedure Y consumes 1.431 (ton-hours), and Procedure Z consumes 1.05 (ton-hours).\n* For Cargo Beta, Procedure X consumes 0.381 (ton-hours), Procedure Y consumes 0.982 (ton-hours), and Procedure Z consumes 1.3 (ton-hours).\n* For Cargo Gamma, Procedure X consumes 1.843 (ton-hours), Procedure Y consumes 1.94 (ton-hours), and Procedure Z consumes 1.059 (ton-hours).\n\nThe cumulative available time for each handling procedure is strictly limited:\n* The total allocated time for Procedure X cannot surpass 200.944 hours.\n* The total allocated time for Procedure Y cannot surpass 337.465 hours.\n* The total allocated time for Procedure Z cannot surpass 253.891 hours.\n\nUnder the condition that the cumulative processing time for Procedure X, Procedure Y, and Procedure Z each remains within their respective temporal capacities, determine the optimal tonnage for each cargo category to maximize the aggregate revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must assemble a shipment of specialized containers to maximize total revenue while adhering to a strict aircraft weight limit.\n\nThe containers available are:\n* Container A: weight 38kg, revenue 290 credits\n* Container B: weight 13kg, revenue 26 credits\n* Container C: weight 42kg, revenue 288 credits\n* Container D: weight 49kg, revenue 107 credits\n* Container E: weight 30kg, revenue 289 credits\n* Container F: weight 43kg, revenue 240 credits\n* Container G: weight 38kg, revenue 181 credits\n* Container H: weight 23kg, revenue 196 credits\n* Container I: weight 8kg, revenue 18 credits\n* Container J: weight 27kg, revenue 196 credits\n* Container K: weight 12kg, revenue 255 credits\n* Container L: weight 15kg, revenue 207 credits\n* Container M: weight 49kg, revenue 17 credits\n* Container N: weight 43kg, revenue 106 credits\n* Container O: weight 40kg, revenue 263 credits\n* Container P: weight 27kg, revenue 210 credits\n* Container Q: weight 11kg, revenue 88 credits\n* Container R: weight 44kg, revenue 229 credits\n* Container S: weight 25kg, revenue 237 credits\n* Container T: weight 48kg, revenue 119 credits\n\nFurthermore, due to contractual obligations, exactly one of Container A and Container B must be included in the final manifest.\n\nShould Container C be selected, the aircraft's effective payload capacity is diminished by 10 kg.\nThe maximum permissible total weight for the aircraft is 437 kg. The firm must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Knapsack_10_2",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "packages",
+      "description": "packages available for selection for the shipment",
+      "values": [
+        "Package 1",
+        "Package 2",
+        "Package 3",
+        "Package 4",
+        "Package 5",
+        "Package 6",
+        "Package 7",
+        "Package 8",
+        "Package 9",
+        "Package 10"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "package_size",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "cargo volume occupied by each package",
+      "unit": "cubic feet",
+      "values": {
+        "Package 1": 29,
+        "Package 2": 41,
+        "Package 3": 4,
+        "Package 4": 27,
+        "Package 5": 27,
+        "Package 6": 29,
+        "Package 7": 24,
+        "Package 8": 31,
+        "Package 9": 12,
+        "Package 10": 18
+      },
+      "data_ref": null
+    },
+    {
+      "id": "package_revenue",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "revenue obtained from shipping each package",
+      "unit": "USD",
+      "values": {
+        "Package 1": 199,
+        "Package 2": 280,
+        "Package 3": 202,
+        "Package 4": 14,
+        "Package 5": 174,
+        "Package 6": 114,
+        "Package 7": 160,
+        "Package 8": 56,
+        "Package 9": 65,
+        "Package 10": 67
+      },
+      "data_ref": null
+    },
+    {
+      "id": "container_capacity",
+      "indices": [],
+      "description": "maximum cargo volume available in the container",
+      "unit": "cubic feet",
+      "values": 169,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "package_selection",
+      "canonical_name": "package_selection",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "whether each available package is selected for shipment",
+      "value_semantics": "binary selection: 1 if the package is shipped and 0 if it is not shipped; fractional shipment is not allowed",
+      "unit": "selection indicator",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "A logistics manager needs to select packages for a shipment.",
+        "Each package must be shipped entirely or not at all."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_revenue",
+    "normalized_semantics": "maximize the sum of revenues from all selected packages",
+    "description": "Choose the package combination yielding the highest total revenue.",
+    "entity_scope": [
+      "package_selection"
+    ],
+    "parameter_refs": [
+      "package_revenue"
+    ],
+    "source_spans": [
+      "Choose the package combination that yields the highest total revenue without exceeding this capacity."
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "container_volume_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the total volume of all selected packages must not exceed the cargo container capacity",
+      "support_entity_ids": [
+        "package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "role": "selected_package_volume",
+          "aggregation_axes": [
+            "package"
+          ],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [
+        "over all packages"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "package_size",
+        "container_capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The cargo container has a maximum capacity of 169 cubic feet.",
+        "Choose the package combination that yields the highest total revenue without exceeding this capacity."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "unresolved_items": []
+}

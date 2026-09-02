@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n\n* Container 1: size 17 cubic meters, revenue $84\n* Container 2: size 29 cubic meters, revenue $91\n* Container 3: size 14 cubic meters, revenue $132\n* Container 4: size 42 cubic meters, revenue $122\n* Container 5: size 35 cubic meters, revenue $19\n* Container 6: size 4 cubic meters, revenue $239\n* Container 7: size 32 cubic meters, revenue $179\n* Container 8: size 10 cubic meters, revenue $46\n* Container 9: size 4 cubic meters, revenue $34\n* Container 10: size 4 cubic meters, revenue $126\n* Container 11: size 26 cubic meters, revenue $145\n* Container 12: size 1 cubic meter, revenue $263\n* Container 13: size 17 cubic meters, revenue $61\n* Container 14: size 36 cubic meters, revenue $86\n* Container 15: size 6 cubic meters, revenue $199\n* Container 16: size 47 cubic meters, revenue $173\n* Container 17: size 41 cubic meters, revenue $277\n* Container 18: size 42 cubic meters, revenue $112\n* Container 19: size 35 cubic meters, revenue $118\n* Container 20: size 36 cubic meters, revenue $273\n* Container 21: size 20 cubic meters, revenue $278\n* Container 22: size 16 cubic meters, revenue $90\n* Container 23: size 12 cubic meters, revenue $191\n* Container 24: size 5 cubic meters, revenue $61\n* Container 25: size 19 cubic meters, revenue $222\n\nThe vehicle has a maximum capacity of 385 cubic meters. Choose the combination of containers that maximizes total revenue without exceeding this capacity limit. Each container must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

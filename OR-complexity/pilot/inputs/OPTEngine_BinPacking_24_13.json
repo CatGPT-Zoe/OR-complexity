@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_24_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of delicate scientific instruments to a series of identical protective crates for international shipment. The instruments and their respective masses are as follows:\n* Apparatus Alpha: mass 68kg\n* Apparatus Beta: mass 39kg\n* Apparatus Gamma: mass 52kg\n* Apparatus Delta: mass 52kg\n* Apparatus Epsilon: mass 53kg\n* Apparatus Zeta: mass 49kg\n* Apparatus Eta: mass 62kg\n* Apparatus Theta: mass 46kg\n* Apparatus Iota: mass 38kg\n* Apparatus Kappa: mass 31kg\n* Apparatus Lambda: mass 60kg\n* Apparatus Mu: mass 42kg\n* Apparatus Nu: mass 68kg\n* Apparatus Xi: mass 55kg\n* Apparatus Omicron: mass 51kg\n* Apparatus Pi: mass 60kg\n* Apparatus Rho: mass 49kg\n* Apparatus Sigma: mass 58kg\n* Apparatus Tau: mass 38kg\n* Apparatus Upsilon: mass 60kg\n* Apparatus Phi: mass 48kg\n* Apparatus Chi: mass 51kg\n* Apparatus Psi: mass 52kg\n* Apparatus Omega: mass 70kg\n\nEach protective crate has a maximum safe load capacity of 100 kg. The coordinator must ensure every instrument is placed into precisely one crate, and the aggregate mass within any single crate must not surpass its load limit. The objective is to utilize the smallest possible number of crates to accomplish this secure allocation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

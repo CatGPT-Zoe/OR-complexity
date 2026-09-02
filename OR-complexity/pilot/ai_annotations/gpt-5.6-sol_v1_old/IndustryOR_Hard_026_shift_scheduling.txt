@@ -1,0 +1,215 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_Hard_026_shift_scheduling",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "time_periods",
+      "name": "time_periods",
+      "description": "six consecutive 4-hour staffing windows forming a cyclic 24-hour day",
+      "values": [
+        "2-6",
+        "6-10",
+        "10-14",
+        "14-18",
+        "18-22",
+        "22-2"
+      ]
+    },
+    {
+      "id": "shift_starts",
+      "name": "shift_starts",
+      "description": "allowed start times for fixed, continuous 8-hour shifts",
+      "values": [
+        "2:00",
+        "6:00",
+        "10:00",
+        "14:00",
+        "18:00",
+        "22:00"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "staff_requirements",
+      "name": "staff_requirements",
+      "description": "minimum number of salespeople required on duty in each time period",
+      "indices": [
+        {
+          "role": "time_period",
+          "set_id": "time_periods"
+        }
+      ],
+      "unit": "people",
+      "values": {
+        "2-6": 10,
+        "6-10": 15,
+        "10-14": 25,
+        "14-18": 20,
+        "18-22": 18,
+        "22-2": 12
+      },
+      "source_spans": [
+        "2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people."
+      ]
+    },
+    {
+      "id": "shift_duration",
+      "name": "shift_duration",
+      "description": "continuous duration of every shift",
+      "indices": [],
+      "unit": "hours",
+      "values": 8,
+      "source_spans": [
+        "working continuously for 8 hours"
+      ]
+    },
+    {
+      "id": "shift_coverage",
+      "name": "shift_coverage",
+      "description": "cyclic relation identifying the shift starts whose fixed 8-hour shifts cover each 4-hour time period",
+      "indices": [
+        {
+          "role": "time_period",
+          "set_id": "time_periods"
+        },
+        {
+          "role": "shift_start",
+          "set_id": "shift_starts"
+        }
+      ],
+      "unit": "binary indicator",
+      "values": {
+        "2-6": {
+          "2:00": 1,
+          "6:00": 0,
+          "10:00": 0,
+          "14:00": 0,
+          "18:00": 0,
+          "22:00": 1
+        },
+        "6-10": {
+          "2:00": 1,
+          "6:00": 1,
+          "10:00": 0,
+          "14:00": 0,
+          "18:00": 0,
+          "22:00": 0
+        },
+        "10-14": {
+          "2:00": 0,
+          "6:00": 1,
+          "10:00": 1,
+          "14:00": 0,
+          "18:00": 0,
+          "22:00": 0
+        },
+        "14-18": {
+          "2:00": 0,
+          "6:00": 0,
+          "10:00": 1,
+          "14:00": 1,
+          "18:00": 0,
+          "22:00": 0
+        },
+        "18-22": {
+          "2:00": 0,
+          "6:00": 0,
+          "10:00": 0,
+          "14:00": 1,
+          "18:00": 1,
+          "22:00": 0
+        },
+        "22-2": {
+          "2:00": 0,
+          "6:00": 0,
+          "10:00": 0,
+          "14:00": 0,
+          "18:00": 1,
+          "22:00": 1
+        }
+      },
+      "source_spans": [
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours."
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "shift_staffing",
+      "canonical_name": "shift_staffing",
+      "semantic_type": "allocation",
+      "indices": [
+        {
+          "role": "shift_start",
+          "set_id": "shift_starts"
+        }
+      ],
+      "description": "number of salespeople assigned to begin a continuous 8-hour shift at each allowed start time",
+      "value_semantics": "nonnegative integer count of salespeople",
+      "unit": "people",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours.",
+        "Determine the minimum number of salespeople needed to meet the requirements."
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "normalized_semantics": "minimize the total number of salespeople assigned across all shift start times",
+    "scope_entity_ids": [
+      "shift_staffing"
+    ],
+    "parameter_refs": [],
+    "source_spans": [
+      "Determine the minimum number of salespeople needed to meet the requirements."
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "minimum_staff_coverage",
+      "obligation_type": "coverage",
+      "normalized_semantics": "in every time period, the total number of salespeople assigned to 8-hour shifts covering that period must be at least the stated staffing requirement",
+      "support_entity_ids": [
+        "shift_staffing"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "shift_staffing",
+          "role": "on_duty_staff_contribution",
+          "aggregation_axes": [
+            "shift_start"
+          ],
+          "index_binding": {
+            "time_period": "p",
+            "shift_start": "s such that shift_coverage[p,s] = 1"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all time periods p in time_periods"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "staff_requirements",
+        "shift_duration",
+        "shift_coverage"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people.",
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours.",
+        "meet the requirements"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": []
+}

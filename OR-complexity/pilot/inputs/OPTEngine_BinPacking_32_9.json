@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments of various cargo boxes onto identical delivery trucks. The boxes are as follows:\n* Box 1: weight 36kg\n* Box 2: weight 67kg\n* Box 3: weight 49kg\n* Box 4: weight 50kg\n* Box 5: weight 34kg\n* Box 6: weight 57kg\n* Box 7: weight 51kg\n* Box 8: weight 30kg\n* Box 9: weight 36kg\n* Box 10: weight 51kg\n* Box 11: weight 67kg\n* Box 12: weight 36kg\n* Box 13: weight 65kg\n* Box 14: weight 42kg\n* Box 15: weight 66kg\n* Box 16: weight 30kg\n* Box 17: weight 31kg\n* Box 18: weight 31kg\n* Box 19: weight 49kg\n* Box 20: weight 59kg\n* Box 21: weight 37kg\n* Box 22: weight 63kg\n* Box 23: weight 31kg\n* Box 24: weight 61kg\n* Box 25: weight 45kg\n* Box 26: weight 47kg\n* Box 27: weight 62kg\n* Box 28: weight 49kg\n* Box 29: weight 46kg\n* Box 30: weight 42kg\n* Box 31: weight 55kg\n* Box 32: weight 68kg\n\nEach truck has a maximum load capacity of 100 kg. Assign all boxes to trucks using the minimum number of trucks possible. Every box must be placed on exactly one truck, and the total weight loaded onto any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

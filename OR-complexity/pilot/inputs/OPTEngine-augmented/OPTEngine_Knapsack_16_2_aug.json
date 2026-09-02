@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a cargo shipment to maximize total profit while adhering to a strict weight limit for a transport vessel.\n\nThe available cargo containers are:\n* Container A: weight 6 tons, profit 32 units\n* Container B: weight 10 tons, profit 171 units\n* Container C: weight 41 tons, profit 298 units\n* Container D: weight 32 tons, profit 42 units\n* Container E: weight 34 tons, profit 255 units\n* Container F: weight 28 tons, profit 173 units\n* Container G: weight 25 tons, profit 22 units\n* Container H: weight 8 tons, profit 232 units\n* Container I: weight 39 tons, profit 78 units\n* Container J: weight 49 tons, profit 82 units\n* Container K: weight 2 tons, profit 70 units\n* Container L: weight 46 tons, profit 230 units\n* Container M: weight 16 tons, profit 26 units\n* Container N: weight 41 tons, profit 149 units\n* Container O: weight 17 tons, profit 206 units\n* Container P: weight 8 tons, profit 186 units\n\nFurthermore, due to contractual obligations, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, the vessel's effective load capacity is diminished by 10 tons.\nThe vessel can carry a maximum of 281 tons. The firm must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments into identical cargo pods for interstellar transport. The consignments are as follows:\n\n* Component Alpha: mass 34 units\n* Component Beta: mass 49 units\n* Component Gamma: mass 55 units\n* Component Delta: mass 51 units\n* Component Epsilon: mass 49 units\n* Component Zeta: mass 56 units\n* Component Eta: mass 36 units\n* Component Theta: mass 36 units\n* Component Iota: mass 65 units\n* Component Kappa: mass 60 units\n* Component Lambda: mass 60 units\n* Component Mu: mass 51 units\n* Component Nu: mass 51 units\n\nEach cargo pod possesses a maximum load capacity of 100 mass units. The coordinator must assign all components, with each component placed into precisely one pod, ensuring the aggregate mass within any pod does not surpass its limit. The objective is to utilize the minimal possible number of pods to complete the allocation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

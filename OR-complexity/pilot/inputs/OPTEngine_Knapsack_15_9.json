@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must select packages to load onto a delivery truck. Available packages are:\n* Package 1: volume 27 cubic feet, revenue $264\n* Package 2: volume 13 cubic feet, revenue $95\n* Package 3: volume 26 cubic feet, revenue $34\n* Package 4: volume 50 cubic feet, revenue $183\n* Package 5: volume 49 cubic feet, revenue $276\n* Package 6: volume 13 cubic feet, revenue $177\n* Package 7: volume 12 cubic feet, revenue $275\n* Package 8: volume 35 cubic feet, revenue $232\n* Package 9: volume 10 cubic feet, revenue $262\n* Package 10: volume 43 cubic feet, revenue $119\n* Package 11: volume 39 cubic feet, revenue $235\n* Package 12: volume 3 cubic feet, revenue $134\n* Package 13: volume 32 cubic feet, revenue $172\n* Package 14: volume 36 cubic feet, revenue $110\n* Package 15: volume 1 cubic feet, revenue $32\n\nThe truck has a maximum cargo capacity of 272 cubic feet. Choose the package combination that maximizes total revenue without exceeding this volume limit. Each package is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

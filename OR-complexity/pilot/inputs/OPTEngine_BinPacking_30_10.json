@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of cargo parcels to identical transport pods for orbital transfer. The parcels are as follows:\n\n* Component Alpha: mass 56 units\n* Component Beta: mass 47 units\n* Component Gamma: mass 61 units\n* Component Delta: mass 57 units\n* Component Epsilon: mass 61 units\n* Component Zeta: mass 54 units\n* Component Eta: mass 39 units\n* Component Theta: mass 57 units\n* Component Iota: mass 43 units\n* Component Kappa: mass 57 units\n* Component Lambda: mass 70 units\n* Component Mu: mass 42 units\n* Component Nu: mass 47 units\n* Component Xi: mass 34 units\n* Component Omicron: mass 38 units\n* Component Pi: mass 59 units\n* Component Rho: mass 50 units\n* Component Sigma: mass 53 units\n* Component Tau: mass 48 units\n* Component Upsilon: mass 58 units\n* Component Phi: mass 51 units\n* Component Chi: mass 45 units\n* Component Psi: mass 40 units\n* Component Omega: mass 59 units\n* Artifact Ares: mass 38 units\n* Artifact Boreas: mass 51 units\n* Artifact Charon: mass 44 units\n* Artifact Demeter: mass 61 units\n* Artifact Eos: mass 39 units\n* Artifact Fides: mass 36 units\n\nEach transport pod has a maximum safe payload capacity of 100 mass units. The objective is to load all parcels while utilizing the minimal number of pods. Every parcel must be placed into exactly one pod, and the aggregate mass within any single pod must not surpass its designated capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

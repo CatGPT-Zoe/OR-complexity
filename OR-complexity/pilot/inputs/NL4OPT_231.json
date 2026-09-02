@@ -1,0 +1,9 @@
+{
+  "instance_id": "NL4OPT_231",
+  "annotation_mode": "semantic",
+  "problem_text": "Platinum Database sells two types of subscription software packages: a personal license and a commercial license which will cost $550 and $2000 to generate respectively. The marketing department estimates that they can sell at most 300 licenses for both versions combined a month. The profit per personal license is $450 and the profit per commercial version is $1200. If the company does not want to spend more than $400000, how many of each software package should they produce to maximize the profits.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,215 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "LEAN_TP8_transportation",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "suppliers",
+      "name": "suppliers",
+      "description": "5 warehouses that supply fresh produce"
+    },
+    {
+      "id": "stores",
+      "name": "stores",
+      "description": "6 retail stores that require fresh produce"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "customer_demand",
+      "canonical_name": "customer_demand",
+      "indices": [
+        {
+          "role": "store",
+          "set_id": "stores"
+        }
+      ],
+      "description": "daily demand for fresh produce at each store",
+      "unit": "",
+      "source_spans": [
+        "The daily demand for each store is outlined in “customer_demand.csv.”"
+      ]
+    },
+    {
+      "id": "supply_capacity",
+      "canonical_name": "supply_capacity",
+      "indices": [
+        {
+          "role": "supplier",
+          "set_id": "suppliers"
+        }
+      ],
+      "description": "available daily supply capacity of each warehouse",
+      "unit": "",
+      "source_spans": [
+        "the available supply capacity of each warehouse is provided in “supply_capacity.csv.”"
+      ]
+    },
+    {
+      "id": "transportation_costs",
+      "canonical_name": "transportation_cost",
+      "indices": [
+        {
+          "role": "supplier",
+          "set_id": "suppliers"
+        },
+        {
+          "role": "store",
+          "set_id": "stores"
+        }
+      ],
+      "description": "transportation cost per unit of fresh produce from each warehouse to each store",
+      "unit": "",
+      "source_spans": [
+        "The transportation cost per unit of produce from each warehouse to each store is recorded in “transportation_costs.csv.”"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "shipment",
+      "canonical_name": "shipment",
+      "semantic_type": "flow",
+      "indices": [
+        {
+          "role": "supplier",
+          "set_id": "suppliers"
+        },
+        {
+          "role": "store",
+          "set_id": "stores"
+        }
+      ],
+      "description": "amount of fresh produce shipped daily from each warehouse to each store",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "amount of fresh produce",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "determine the optimal amount of fresh produce to be shipped from each warehouse to each store"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "normalized_semantics": "minimize total transportation cost across all warehouse-to-store shipments, computed from shipment amounts and per-unit transportation costs",
+    "scope_entity_ids": [
+      "shipment"
+    ],
+    "parameter_refs": [
+      "transportation_costs"
+    ],
+    "source_spans": [
+      "while minimizing the total transportation cost"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "store_demand_satisfaction",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "the total amount shipped to each store from all warehouses must satisfy that store's daily demand",
+      "support_entity_ids": [
+        "shipment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "shipment",
+          "role": "inbound_supply_to_store",
+          "aggregation_axes": [
+            "supplier"
+          ],
+          "index_binding": {
+            "store": "j"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all stores j"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "customer_demand"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "ensuring that all store demands are met"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "id": "o2",
+      "canonical_name": "warehouse_supply_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the total amount shipped from each warehouse to all stores must not exceed that warehouse's available supply capacity",
+      "support_entity_ids": [
+        "shipment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "shipment",
+          "role": "outbound_use_of_warehouse_capacity",
+          "aggregation_axes": [
+            "store"
+          ],
+          "index_binding": {
+            "supplier": "i"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all suppliers i"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "supply_capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "without exceeding the warehouse capacities"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "u1",
+      "description": "The inline customer_demand table contains repeated headers rather than store identifiers and numerical demand values, and no external file is available.",
+      "source_spans": [
+        "customer_demand.csv"
+      ]
+    },
+    {
+      "id": "u2",
+      "description": "The inline supply_capacity table contains repeated headers rather than supplier identifiers and numerical capacity values, and no external file is available.",
+      "source_spans": [
+        "supply_capacity.csv"
+      ]
+    },
+    {
+      "id": "u3",
+      "description": "The inline transportation_costs table contains repeated labels rather than numerical supplier-to-store transportation costs, and its supplier row identifiers are absent.",
+      "source_spans": [
+        "transportation_costs.csv"
+      ]
+    },
+    {
+      "id": "u4",
+      "description": "Units for demand, supply capacity, shipment amounts, and transportation costs are not specified.",
+      "source_spans": [
+        "The transportation cost per unit of produce from each warehouse to each store"
+      ]
+    },
+    {
+      "id": "u5",
+      "description": "The statement requires store demands to be met but does not explicitly state whether inbound shipments must equal demand exactly or may exceed demand; the obligation therefore records demand satisfaction without imposing an unstated exact-equality interpretation.",
+      "source_spans": [
+        "ensuring that all store demands are met"
+      ]
+    }
+  ]
+}

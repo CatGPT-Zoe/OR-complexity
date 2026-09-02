@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: volume 55 m³\n* Shipment Beta: volume 48 m³\n* Shipment Gamma: volume 40 m³\n* Shipment Delta: volume 54 m³\n* Shipment Epsilon: volume 31 m³\n* Shipment Zeta: volume 50 m³\n* Shipment Eta: volume 70 m³\n* Shipment Theta: volume 56 m³\n* Shipment Iota: volume 63 m³\n* Shipment Kappa: volume 42 m³\n* Shipment Lambda: volume 62 m³\n* Shipment Mu: volume 52 m³\n* Shipment Nu: volume 68 m³\n* Shipment Xi: volume 45 m³\n* Shipment Omicron: volume 32 m³\n* Shipment Pi: volume 56 m³\n* Shipment Rho: volume 61 m³\n* Shipment Sigma: volume 62 m³\n* Shipment Tau: volume 70 m³\n* Shipment Upsilon: volume 33 m³\n* Shipment Phi: volume 42 m³\n* Shipment Chi: volume 51 m³\n* Shipment Psi: volume 59 m³\n* Shipment Omega: volume 41 m³\n* Shipment Ares: volume 66 m³\n* Shipment Boreas: volume 42 m³\n* Shipment Ceres: volume 43 m³\n* Shipment Demeter: volume 32 m³\n* Shipment Eos: volume 42 m³\n* Shipment Fides: volume 37 m³\n* Shipment Gaia: volume 48 m³\n\nEach cargo plane can carry up to 100 m³ of volume. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total volume on a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

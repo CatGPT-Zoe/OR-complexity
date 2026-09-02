@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_17_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical delivery trucks. Shipments:\n* Shipment Alpha: volume 44 cubic meters\n* Shipment Beta: volume 59 cubic meters\n* Shipment Gamma: volume 42 cubic meters\n* Shipment Delta: volume 51 cubic meters\n* Shipment Epsilon: volume 68 cubic meters\n* Shipment Zeta: volume 36 cubic meters\n* Shipment Eta: volume 68 cubic meters\n* Shipment Theta: volume 35 cubic meters\n* Shipment Iota: volume 50 cubic meters\n* Shipment Kappa: volume 50 cubic meters\n* Shipment Lambda: volume 64 cubic meters\n* Shipment Mu: volume 59 cubic meters\n* Shipment Nu: volume 50 cubic meters\n* Shipment Xi: volume 46 cubic meters\n* Shipment Omicron: volume 31 cubic meters\n* Shipment Pi: volume 63 cubic meters\n* Shipment Rho: volume 32 cubic meters\n\nEach truck can carry up to 100 cubic meters of cargo. Assign all shipments using the fewest trucks. Each shipment must be loaded onto exactly one truck, and the total volume in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

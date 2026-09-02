@@ -1,0 +1,25 @@
+{
+  "instance_id": "MIPLIB_NL_neos-3072252-nete",
+  "annotation_mode": "semantic",
+  "problem_text": "Assume you are the operations manager of a thermal power plant. You need to create a generation schedule for the upcoming T time periods. For each time period, there is a specific minimum electricity demand that must be met, as detailed in Table D1. To reduce fuel waste, your objective is to minimize the total power generation over all periods while satisfying these demands. However, due to mechanical constraints and operational stability requirements, you are allowed to change the power output level (ramp up or down) at most K times throughout the entire schedule. In periods where no adjustment is made, the output must remain constant. Additionally, the generator is limited by a maximum power capacity of M.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "files_1",
+      "indices": [
+        "id",
+        "demand"
+      ],
+      "unit": "",
+      "values": "| id | demand |\n|---|---|\n| 1 | 36085.0 |\n| 2 | 31408.0 |\n| 3 | 27754.0 |\n| 4 | 24592.0 |\n| 5 | 21508.0 |\n| 6 | 18737.0 |\n| 7 | 16268.0 |\n| 8 | 14268.0 |\n| 9 | 12563.0 |\n| 10 | 11106.0 |\n| 11 | 9861.0 |\n| 12 | 8823.0 |\n| 13 | 7906.0 |\n| 14 | 7081.0 |\n| 15 | 6321.0 |\n| 16 | 5589.0 |\n| 17 | 5028.0 |\n| 18 | 4719.0 |\n| 19 | 4378.0 |\n| 20 | 4000.0 |\n| 21 | 3747.0 |\n| 22 | 3511.0 |\n| 23 | 3295.0 |\n| 24 | 3200.0 |\n| 25 | 3079.0 |\n| 26 | 3017.0 |\n| 27 | 3034.0 |\n| 28 | 3235.0 |\n| 29 | 3479.0 |\n| 30 | 3824.0 |\n| 31 | 4213.0 |\n| 32 | 4715.0 |\n| 33 | 5517.0 |\n| 34 | 6576.0 |\n| 35 | 8004.0 |\n| 36 | 10059.0 |\n| 37 | 12157.0 |\n| 38 | 14791.0 |\n| 39 | 17809.0 |\n| 40 | 21195.0 |\n| 41 | 24919.0 |\n| 42 | 29343.0 |\n| 43 | 34195.0 |\n| 44 | 38573.0 |\n| 45 | 42409.0 |\n| 46 | 46741.0 |\n| 47 | 50712.0 |\n| 48 | 54742.0 |\n| 49 | 58850.0 |\n| 50 | 62396.0 |\n| 51 | 65664.0 |\n| 52 | 68105.0 |\n| 53 | 70411.0 |\n| 54 | 71627.0 |\n| 55 | 73451.0 |\n| 56 | 74909.0 |\n| 57 | 76142.0 |\n| 58 | 77507.0 |\n| 59 | 79237.0 |\n| 60 | 81243.0 |\n| 61 | 83374.0 |\n| 62 | 85175.0 |\n| 63 | 86293.0 |\n| 64 | 87098.0 |\n| 65 | 88582.0 |\n| 66 | 88837.0 |\n| 67 | 89660.0 |\n| 68 | 90787.0 |\n| 69 | 90379.0 |\n| 70 | 90046.0 |\n| 71 | 90375.0 |\n| 72 | 90819.0 |\n| 73 | 91343.0 |\n| 74 | 90760.0 |\n| 75 | 89970.0 |\n| 76 | 89633.0 |\n| 77 | 89961.0 |\n| 78 | 90393.0 |\n| 79 | 93029.0 |\n| 80 | 95265.0 |\n| 81 | 95723.0 |\n| 82 | 95420.0 |\n| 83 | 94760.0 |\n| 84 | 93913.0 |\n| 85 | 92639.0 |\n| 86 | 91348.0 |\n| 87 | 90266.0 |\n| 88 | 89284.0 |\n| 89 | 88211.0 |\n| 90 | 87583.0 |\n| 91 | 87773.0 |\n| 92 | 86931.0 |\n| 93 | 86541.0 |\n| 94 | 86085.0 |\n| 95 | 86099.0 |\n| 96 | 85975.0 |\n| 97 | 86293.0 |\n| 98 | 86356.0 |\n| 99 | 86846.0 |\n| 100 | 88480.0 |\n| 101 | 89047.0 |\n| 102 | 90412.0 |\n| 103 | 92773.0 |\n| 104 | 94498.0 |\n| 105 | 96964.0 |\n| 106 | 100355.0 |\n| 107 | 103619.0 |\n| 108 | 107127.0 |\n| 109 | 111208.0 |\n| 110 | 113727.0 |\n| 111 | 117459.0 |\n| 112 | 121927.0 |\n| 113 | 128423.0 |\n| 114 | 136076.0 |\n| 115 | 144482.0 |\n| 116 | 151278.0 |\n| 117 | 155701.0 |\n| 118 | 159808.0 |\n| 119 | 161999.0 |\n| 120 | 162632.0 |\n| 121 | 164296.0 |\n| 122 | 166314.0 |\n| 123 | 166171.0 |\n| 124 | 165293.0 |\n| 125 | 166665.0 |\n| 126 | 167940.0 |\n| 127 | 167241.0 |\n| 128 | 165101.0 |\n| 129 | 161337.0 |\n| 130 | 159232.0 |\n| 131 | 154210.0 |\n| 132 | 147027.0 |\n| 133 | 139904.0 |\n| 134 | 129898.0 |\n| 135 | 118625.0 |\n| 136 | 106991.0 |\n| 137 | 95730.0 |\n| 138 | 85644.0 |\n| 139 | 76796.0 |\n| 140 | 67836.0 |\n| 141 | 60614.0 |\n| 142 | 53639.0 |\n| 143 | 47918.0 |\n| 144 | 43656.0 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-3072252-nete/data/D1.csv",
+      "role": "parameter_table",
+      "table": "files_1"
+    }
+  ],
+  "notes": ""
+}

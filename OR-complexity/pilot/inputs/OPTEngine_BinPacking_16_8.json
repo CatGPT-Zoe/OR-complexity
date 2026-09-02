@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load parcels into identical delivery trucks. Parcels:\n* Parcel 1: weight 43kg\n* Parcel 2: weight 60kg\n* Parcel 3: weight 61kg\n* Parcel 4: weight 62kg\n* Parcel 5: weight 50kg\n* Parcel 6: weight 61kg\n* Parcel 7: weight 33kg\n* Parcel 8: weight 58kg\n* Parcel 9: weight 49kg\n* Parcel 10: weight 39kg\n* Parcel 11: weight 61kg\n* Parcel 12: weight 33kg\n* Parcel 13: weight 69kg\n* Parcel 14: weight 43kg\n* Parcel 15: weight 31kg\n* Parcel 16: weight 52kg\n\nEach truck can carry up to 100 kg. Load all parcels using the fewest trucks. Each parcel must be placed in exactly one truck, and the total weight in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_14_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company needs to select packages for a cargo shipment. The available packages are:\n* Package A: size 25 cubic feet, revenue $294\n* Package B: size 20 cubic feet, revenue $130\n* Package C: size 25 cubic feet, revenue $187\n* Package D: size 25 cubic feet, revenue $251\n* Package E: size 33 cubic feet, revenue $166\n* Package F: size 27 cubic feet, revenue $218\n* Package G: size 7 cubic feet, revenue $88\n* Package H: size 10 cubic feet, revenue $12\n* Package I: size 38 cubic feet, revenue $274\n* Package J: size 7 cubic feet, revenue $114\n* Package K: size 39 cubic feet, revenue $272\n* Package L: size 8 cubic feet, revenue $146\n* Package M: size 45 cubic feet, revenue $96\n* Package N: size 25 cubic feet, revenue $53\n\nThe cargo container has a maximum capacity of 233 cubic feet. Choose the package combination that yields the highest total revenue without exceeding this capacity limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "NL4OPT_013_radiation_beams",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "beams",
+      "name": "beams",
+      "description": "radiation beams available for treatment",
+      "values": [
+        "Beam 1",
+        "Beam 2"
+      ]
+    },
+    {
+      "id": "body_regions",
+      "name": "body_regions",
+      "description": "body regions receiving medicine from the radiation beams",
+      "values": [
+        "pancreas",
+        "skin",
+        "tumor"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "dose_rates",
+      "name": "dose_rates",
+      "indices": [
+        {
+          "role": "beam",
+          "set_id": "beams"
+        },
+        {
+          "role": "region",
+          "set_id": "body_regions"
+        }
+      ],
+      "description": "medicine dose delivered per minute by each beam to each body region",
+      "unit": "units per minute",
+      "values": {
+        "Beam 1": {
+          "pancreas": 0.3,
+          "skin": 0.2,
+          "tumor": 0.6
+        },
+        "Beam 2": {
+          "pancreas": 0.2,
+          "skin": 0.1,
+          "tumor": 0.4
+        }
+      }
+    },
+    {
+      "id": "limits",
+      "name": "limits",
+      "indices": [
+        {
+          "role": "region",
+          "set_id": "body_regions"
+        }
+      ],
+      "description": "region-specific total-dose thresholds and their required directions",
+      "unit": "units",
+      "values": {
+        "skin": {
+          "relation": "at_most",
+          "value": 4
+        },
+        "tumor": {
+          "relation": "at_least",
+          "value": 3
+        }
+      }
+    }
+  ],
+  "entities": [
+    {
+      "id": "beam_duration",
+      "canonical_name": "beam_duration",
+      "semantic_type": "allocation",
+      "indices": [
+        {
+          "role": "beam",
+          "set_id": "beams"
+        }
+      ],
+      "description": "number of minutes for which each radiation beam is used",
+      "value_semantics": "continuous nonnegative duration",
+      "unit": "minutes",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "How many minutes of each beam should be used"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "delivered_dose",
+      "canonical_name": "delivered_dose",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "region",
+          "set_id": "body_regions"
+        }
+      ],
+      "description": "total medicine dose received by each body region over the treatment",
+      "value_semantics": "continuous nonnegative amount of medicine",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "At most 4 units of medicine should be received by the skin",
+        "at least 3 units of medicine should be delivered to the tumor",
+        "minimize the total radiation received by the pancreas"
+      ],
+      "confidence": 0.97
+    }
+  ],
+  "objective": {
+    "direction": "minimize",
+    "normalized_semantics": "minimize the total medicine dose received by the pancreas",
+    "objective_entity_scope": [
+      "delivered_dose"
+    ],
+    "index_scope": {
+      "delivered_dose.region": "pancreas"
+    },
+    "parameter_refs": [],
+    "source_spans": [
+      "minimize the total radiation received by the pancreas"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "dose_accumulation_by_region",
+      "obligation_type": "balance",
+      "normalized_semantics": "the total dose delivered to each body region equals the sum, over beams, of that beam's duration multiplied by its dose rate for the region",
+      "support_entity_ids": [
+        "beam_duration",
+        "delivered_dose"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "beam_duration",
+          "role": "dose_contributing_beam_duration",
+          "aggregation_axes": [
+            "beam"
+          ],
+          "index_binding": {
+            "beam": "b"
+          }
+        },
+        {
+          "entity_id": "delivered_dose",
+          "role": "accumulated_region_dose",
+          "aggregation_axes": [],
+          "index_binding": {
+            "region": "r"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all body regions r"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "dose_rates"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Beam 1 delivers a dose of 0.3 units of medicine per minute to the benign area of the pancreas and 0.2 units of medicine per minute to the benign area of the skin.",
+        "Beam 2 delivers 0.2 units of medicine per minute to the benign area of the pancreas and 0.1 units of medicine per minute to the benign area of the skin.",
+        "beam 1 delivers 0.6 units of medicine per minute to the tumor and beam 2 delivers 0.4 units of medicine per minute to the tumor."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o2",
+      "canonical_name": "skin_maximum_dose",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "the total dose received by the skin must not exceed 4 units",
+      "support_entity_ids": [
+        "delivered_dose"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "delivered_dose",
+          "role": "limited_skin_dose",
+          "aggregation_axes": [],
+          "index_binding": {
+            "region": "skin"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [
+        "limits"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "At most 4 units of medicine should be received by the skin"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o3",
+      "canonical_name": "tumor_minimum_dose",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "the total dose delivered to the tumor must be at least 3 units",
+      "support_entity_ids": [
+        "delivered_dose"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "delivered_dose",
+          "role": "required_tumor_dose",
+          "aggregation_axes": [],
+          "index_binding": {
+            "region": "tumor"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [
+        "limits"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "at least 3 units of medicine should be delivered to the tumor"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "unresolved_items": []
+}

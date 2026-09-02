@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks.  \nPackages:  \n* Package 1: volume 49 cubic feet  \n* Package 2: volume 64 cubic feet  \n* Package 3: volume 65 cubic feet  \n* Package 4: volume 60 cubic feet  \n* Package 5: volume 53 cubic feet  \n* Package 6: volume 69 cubic feet  \n* Package 7: volume 60 cubic feet  \n* Package 8: volume 38 cubic feet  \n* Package 9: volume 64 cubic feet  \n* Package 10: volume 44 cubic feet  \n* Package 11: volume 70 cubic feet  \n* Package 12: volume 33 cubic feet  \n* Package 13: volume 58 cubic feet  \n* Package 14: volume 66 cubic feet  \n* Package 15: volume 45 cubic feet  \n* Package 16: volume 45 cubic feet  \n* Package 17: volume 67 cubic feet  \n* Package 18: volume 44 cubic feet  \n* Package 19: volume 32 cubic feet  \n* Package 20: volume 48 cubic feet  \n* Package 21: volume 37 cubic feet  \n* Package 22: volume 54 cubic feet  \n* Package 23: volume 51 cubic feet  \n* Package 24: volume 56 cubic feet  \n* Package 25: volume 52 cubic feet  \n* Package 26: volume 39 cubic feet  \n* Package 27: volume 67 cubic feet  \n* Package 28: volume 54 cubic feet  \n* Package 29: volume 59 cubic feet  \n* Package 30: volume 38 cubic feet  \n* Package 31: volume 56 cubic feet  \n* Package 32: volume 40 cubic feet  \n* Package 33: volume 44 cubic feet  \n* Package 34: volume 32 cubic feet  \n* Package 35: volume 53 cubic feet  \n* Package 36: volume 59 cubic feet  \n* Package 37: volume 59 cubic feet  \n* Package 38: volume 37 cubic feet  \n\nEach truck can carry up to 100 cubic feet of cargo. Assign all packages using the fewest trucks. Every package must be loaded onto exactly one truck, and the total volume in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

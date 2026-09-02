@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_4_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing network aims to devise a resource‑conservation strategy to lower total chemical‑waste discharge from a set of production units. Initially, no treatment technologies are in place.\n\nThe operational parameters for each production unit are as follows:\n* For Unit A, waste coefficient is 1.463, output volume is 50.423.\n* For Unit B, waste coefficient is 1.941, output volume is 281.394.\n* For Unit C, waste coefficient is 1.137, output volume is 184.613.\n* For Unit D, waste coefficient is 2.272, output volume is 229.857.\n\nSeveral purification techniques can be deployed, each with a distinct removal rate:\n* Technique‑1 reduces discharge by 31%\n* Technique‑2 reduces discharge by 36%\n* Technique‑3 reduces discharge by 61%\n* Technique‑4 reduces discharge by 84%\n\nImplementing a technique at a unit entails an extra expense per unit of output. The cost matrix for all unit–technique pairings is given below:\n\n| Unit \\ Technique | Technique‑1 | Technique‑2 | Technique‑3 | Technique‑4 |\n|---|---|---|---|---|\n| Unit A | 136.205 | 72.738 | 69.644 | 171.123 |\n| Unit B | 146.753 | 67.061 | 68.764 | 87.595 |\n| Unit C | 86.456 | 66.174 | 34.185 | 89.885 |\n| Unit D | 188.669 | 138.690 | 181.533 | 126.948 |\n\nManagement must decide which techniques to apply at each production unit (multiple techniques may be used concurrently on a single unit), and a unit may also operate with partial treatment if needed.\nThe objective is to guarantee that the aggregate chemical‑waste discharge is lowered by at least a fraction P = 0.35 of the baseline amount, while minimizing the overall expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

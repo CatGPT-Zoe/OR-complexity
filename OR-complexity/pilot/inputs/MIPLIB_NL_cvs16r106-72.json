@@ -1,0 +1,25 @@
+{
+  "instance_id": "MIPLIB_NL_cvs16r106-72",
+  "annotation_mode": "semantic",
+  "problem_text": "A secure research facility has 106 researchers belonging to 72 different project groups. The membership structure is detailed in the file `project_teams` (a researcher can belong to multiple groups). The facility contains 16 enclosed secure labs. Due to ventilation and security constraints, each lab can accommodate at most 8 researchers. To maximize security, the goal is to assign as many researchers as possible to these secure labs. Researchers who cannot be assigned to a lab must work in the 'Public Hall'. To ensure collaboration efficiency and prevent unauthorized cross-lab data flow, the following rule must be strictly followed: **For any given project group, all members assigned to secure labs must be placed in the SAME lab.** (i.e., members of the same group cannot be split across different secure labs; they must either be in the designated lab for that group or in the Public Hall). Find the maximum number of researchers that can be assigned to the secure labs under these constraints.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "project_teams",
+      "indices": [
+        "team_id",
+        "researcher_id"
+      ],
+      "unit": "",
+      "values": "| team_id | researcher_id |\n|---|---|\n| 0 | 15 |\n| 0 | 22 |\n| 0 | 102 |\n| 1 | 13 |\n| 1 | 22 |\n| 1 | 65 |\n| 2 | 32 |\n| 2 | 86 |\n| 3 | 21 |\n| 3 | 61 |\n| 3 | 101 |\n| 4 | 33 |\n| 4 | 73 |\n| 4 | 75 |\n| 5 | 37 |\n| 5 | 42 |\n| 5 | 48 |\n| 6 | 32 |\n| 6 | 78 |\n| 6 | 90 |\n| 7 | 39 |\n| 7 | 43 |\n| 8 | 4 |\n| 8 | 7 |\n| 8 | 47 |\n| 9 | 14 |\n| 9 | 56 |\n| 9 | 95 |\n| 9 | 96 |\n| 10 | 29 |\n| 10 | 35 |\n| 11 | 16 |\n| 11 | 60 |\n| 11 | 71 |\n| 12 | 28 |\n| 12 | 79 |\n| 13 | 38 |\n| 13 | 54 |\n| 13 | 57 |\n| 13 | 92 |\n| 14 | 43 |\n| 14 | 61 |\n| 14 | 84 |\n| 15 | 21 |\n| 15 | 51 |\n| 15 | 59 |\n| 15 | 103 |\n| 16 | 27 |\n| 16 | 41 |\n| 16 | 60 |\n| 17 | 66 |\n| 17 | 68 |\n| 17 | 69 |\n| 17 | 89 |\n| 18 | 29 |\n| 18 | 59 |\n| 19 | 20 |\n| 19 | 48 |\n| 20 | 18 |\n| 20 | 57 |\n| 20 | 62 |\n| 21 | 13 |\n| 21 | 17 |\n| 21 | 80 |\n| 21 | 91 |\n| 22 | 2 |\n| 22 | 40 |\n| 23 | 22 |\n| 23 | 32 |\n| 23 | 49 |\n| 23 | 64 |\n| 24 | 10 |\n| 24 | 22 |\n| 24 | 87 |\n| 25 | 31 |\n| 25 | 57 |\n| 25 | 75 |\n| 26 | 86 |\n| 26 | 95 |\n| 27 | 15 |\n| 27 | 26 |\n| 27 | 59 |\n| 27 | 69 |\n| 28 | 6 |\n| 28 | 35 |\n| 28 | 43 |\n| 29 | 4 |\n| 29 | 28 |\n| 29 | 60 |\n| 29 | 94 |\n| 30 | 2 |\n| 30 | 67 |\n| 30 | 72 |\n| 30 | 79 |\n| 31 | 42 |\n| 31 | 104 |\n| 32 | 36 |\n| 32 | 64 |\n| 33 | 2 |\n| 33 | 30 |\n| 33 | 71 |\n| 34 | 35 |\n| 34 | 41 |\n| 34 | 53 |\n| 34 | 84 |\n| 35 | 18 |\n| 35 | 66 |\n| 35 | 90 |\n| 35 | 93 |\n| 36 | 22 |\n| 36 | 38 |\n| 36 | 44 |\n| 36 | 76 |\n| 37 | 43 |\n| 37 | 66 |\n| 37 | 70 |\n| 37 | 98 |\n| 38 | 1 |\n| 38 | 15 |\n| 38 | 59 |\n| 38 | 94 |\n| 39 | 3 |\n| 39 | 50 |\n| 39 | 82 |\n| 39 | 105 |\n| 40 | 74 |\n| 40 | 98 |\n| 41 | 30 |\n| 41 | 92 |\n| 41 | 100 |\n| 42 | 34 |\n| 42 | 39 |\n| 42 | 53 |\n| 43 | 59 |\n| 43 | 101 |\n| 43 | 105 |\n| 44 | 69 |\n| 44 | 75 |\n| 44 | 97 |\n| 44 | 102 |\n| 45 | 23 |\n| 45 | 25 |\n| 45 | 33 |\n| 46 | 31 |\n| 46 | 44 |\n| 47 | 15 |\n| 47 | 16 |\n| 47 | 29 |\n| 47 | 33 |\n| 48 | 8 |\n| 48 | 45 |\n| 48 | 97 |\n| 48 | 99 |\n| 49 | 7 |\n| 49 | 11 |\n| 49 | 59 |\n| 49 | 77 |\n| 50 | 4 |\n| 50 | 5 |\n| 50 | 10 |\n| 50 | 57 |\n| 51 | 41 |\n| 51 | 85 |\n| 51 | 92 |\n| 52 | 5 |\n| 52 | 16 |\n| 52 | 29 |\n| 52 | 87 |\n| 53 | 2 |\n| 53 | 53 |\n| 53 | 78 |\n| 53 | 100 |\n| 54 | 27 |\n| 54 | 46 |\n| 55 | 7 |\n| 55 | 81 |\n| 56 | 0 |\n| 56 | 88 |\n| 56 | 90 |\n| 57 | 55 |\n| 57 | 89 |\n| 58 | 19 |\n| 58 | 64 |\n| 59 | 5 |\n| 59 | 24 |\n| 60 | 7 |\n| 60 | 56 |\n| 60 | 98 |\n| 61 | 9 |\n| 61 | 87 |\n| 61 | 90 |\n| 61 | 95 |\n| 62 | 1 |\n| 62 | 38 |\n| 62 | 75 |\n| 62 | 77 |\n| 63 | 58 |\n| 63 | 87 |\n| 64 | 36 |\n| 64 | 78 |\n| 65 | 7 |\n| 65 | 49 |\n| 65 | 91 |\n| 66 | 12 |\n| 66 | 24 |\n| 66 | 51 |\n| 67 | 14 |\n| 67 | 31 |\n| 67 | 62 |\n| 68 | 48 |\n| 68 | 50 |\n| 68 | 70 |\n| 69 | 63 |\n| 69 | 88 |\n| 69 | 89 |\n| 70 | 5 |\n| 70 | 13 |\n| 70 | 85 |\n| 71 | 52 |\n| 71 | 83 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/cvs16r106-72/data/project_teams.csv",
+      "role": "parameter_table",
+      "table": "project_teams"
+    }
+  ],
+  "notes": ""
+}

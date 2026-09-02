@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_29_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes. Shipments:\n* Cargo A: volume 59 cubic meters\n* Cargo B: volume 66 cubic meters\n* Cargo C: volume 38 cubic meters\n* Cargo D: volume 66 cubic meters\n* Cargo E: volume 46 cubic meters\n* Cargo F: volume 35 cubic meters\n* Cargo G: volume 49 cubic meters\n* Cargo H: volume 52 cubic meters\n* Cargo I: volume 38 cubic meters\n* Cargo J: volume 59 cubic meters\n* Cargo K: volume 53 cubic meters\n* Cargo L: volume 32 cubic meters\n* Cargo M: volume 51 cubic meters\n* Cargo N: volume 36 cubic meters\n* Cargo O: volume 36 cubic meters\n* Cargo P: volume 69 cubic meters\n* Cargo Q: volume 37 cubic meters\n* Cargo R: volume 49 cubic meters\n* Cargo S: volume 49 cubic meters\n* Cargo T: volume 67 cubic meters\n* Cargo U: volume 53 cubic meters\n* Cargo V: volume 41 cubic meters\n* Cargo W: volume 30 cubic meters\n* Cargo X: volume 60 cubic meters\n* Cargo Y: volume 55 cubic meters\n* Cargo Z: volume 55 cubic meters\n* Cargo [: volume 70 cubic meters\n* Cargo \\: volume 43 cubic meters\n* Cargo ]: volume 35 cubic meters\n\nEach plane can carry up to 100 cubic meters of cargo. Assign all shipments using the fewest planes possible. Each shipment must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

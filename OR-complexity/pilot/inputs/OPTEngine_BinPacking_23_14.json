@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_23_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of specialized equipment modules to identical transport pallets. The modules are as follows:\n\n* Module Alpha: mass 30 units\n* Module Beta: mass 43 units\n* Module Gamma: mass 56 units\n* Module Delta: mass 69 units\n* Module Epsilon: mass 53 units\n* Module Zeta: mass 49 units\n* Module Eta: mass 35 units\n* Module Theta: mass 31 units\n* Module Iota: mass 45 units\n* Module Kappa: mass 69 units\n* Module Lambda: mass 31 units\n* Module Mu: mass 67 units\n* Module Nu: mass 62 units\n* Module Xi: mass 53 units\n* Module Omicron: mass 39 units\n* Module Pi: mass 59 units\n* Module Rho: mass 46 units\n* Module Sigma: mass 37 units\n* Module Tau: mass 67 units\n* Module Upsilon: mass 58 units\n* Module Phi: mass 47 units\n* Module Chi: mass 44 units\n* Module Psi: mass 54 units\n\nEach pallet is certified for a maximum load of 100 mass units. The objective is to accommodate all modules while utilizing the minimal number of pallets. Every module must be placed on exactly one pallet, and the aggregate mass on any given pallet must not surpass its certified capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

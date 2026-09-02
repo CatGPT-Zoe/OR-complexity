@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized components to maximize total utility while adhering to a cargo weight restriction for a freighter.\n\nThe components under consideration are:\n* Component A: weight 50kg, utility 93 units\n* Component B: weight 12kg, utility 123 units\n* Component C: weight 30kg, utility 175 units\n* Component D: weight 42kg, utility 21 units\n* Component E: weight 24kg, utility 252 units\n* Component F: weight 40kg, utility 156 units\n* Component G: weight 44kg, utility 136 units\n* Component H: weight 2kg, utility 62 units\n* Component I: weight 30kg, utility 274 units\n* Component J: weight 12kg, utility 111 units\n* Component K: weight 25kg, utility 179 units\n* Component L: weight 36kg, utility 78 units\n* Component M: weight 3kg, utility 261 units\n* Component N: weight 27kg, utility 249 units\n* Component O: weight 29kg, utility 198 units\n* Component P: weight 1kg, utility 111 units\n* Component Q: weight 37kg, utility 114 units\n* Component R: weight 5kg, utility 261 units\n* Component S: weight 9kg, utility 54 units\n\nFurthermore, due to compatibility requirements, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, it necessitates special handling that effectively reduces the freighter's usable capacity by 10 kg.\nThe maximum allowable total weight for the shipment is 320 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

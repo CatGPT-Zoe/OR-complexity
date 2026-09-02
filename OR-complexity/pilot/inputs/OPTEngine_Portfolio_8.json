@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate the annual budget across 8 infrastructure projects to maximize the total projected benefit score.\nThe profile for each project is detailed below:\n* Project P1: benefit score is 0.189, implementation complexity is 0.055, allocation bounds [0.043, 0.716]\n* Project P2: benefit score is 0.096, implementation complexity is 0.150, allocation bounds [0.056, 0.317]\n* Project P3: benefit score is 0.185, implementation complexity is 0.256, allocation bounds [0.077, 0.464]\n* Project P4: benefit score is 0.029, implementation complexity is 0.112, allocation bounds [0.062, 0.757]\n* Project P5: benefit score is 0.072, implementation complexity is 0.171, allocation bounds [0.067, 0.853]\n* Project P6: benefit score is 0.076, implementation complexity is 0.043, allocation bounds [0.056, 0.511]\n* Project P7: benefit score is 0.039, implementation complexity is 0.091, allocation bounds [0.061, 0.409]\n* Project P8: benefit score is 0.111, implementation complexity is 0.076, allocation bounds [0.066, 0.386]\nEach project must receive a portion of the total budget that falls within its specified minimum and maximum allocation limits, and the sum of all budget portions must equal the entire budget. To ensure timely completion, the planner requires that the group of quick-delivery projects, represented by the subset Q = {P3, P6}, collectively receive at least 0.489 of the total funds. Furthermore, the overall portfolio complexity, measured by a composite complexity index, must not exceed 0.196, and the total projected benefit score must be no less than 0.102. Please determine the optimal budget allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage strategy for a critical therapeutic agent over a 12‑week planning window.  \nInitial stock at the start of the planning interval is 5 liters.  \nIn each week \\( t = 1,\\dots,12 \\), the supplier permits the hospital to submit a procurement request whose volume must fall between 16 and 22 liters.  \nEach request, once placed, requires a lead time of 4 weeks before the agent becomes available for patient treatment or for replenishing the storage stock.  \nWeekly patient demand for the agent is as follows:  \n\n* Week 1: 29 liters  \n* Week 2: 42 liters  \n* Week 3: 13 liters  \n* Week 4: 20 liters  \n* Week 5: 18 liters  \n* Week 6: 18 liters  \n* Week 7: 40 liters  \n* Week 8: 55 liters  \n* Week 9: 51 liters  \n* Week 10: 55 liters  \n* Week 11: 58 liters  \n* Week 12: 56 liters  \n\nShortfalls are tolerated, but any unsatisfied demand is lost and cannot be deferred to later weeks.  \nThroughout the 12‑week horizon, agent volumes may be treated as continuous quantities, and the total on‑hand stock at any moment must not exceed the refrigerated storage capacity of 59 liters.  \nTotal cost comprises three elements: the procurement cost, charged at 6 per liter ordered; the storage cost, charged at 3 per liter carried from one week to the next; and the shortage penalty, charged at 12 per liter of unmet weekly demand.  \nDetermine the optimal procurement volume for each week and monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

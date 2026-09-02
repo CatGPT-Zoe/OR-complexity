@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 6 delivery trucks to transport packages through 6 different distribution hubs.\n\nEach truck must follow a specific route represented as pairs (Hub, Loading time), where each pair indicates the hub where the truck must stop and the time required to load the packages. The order of pairs specifies the mandatory sequence of hub visits.\n\nTruck routes:\n* Truck 1 follows the route: (Hub 6, 2) → (Hub 5, 8) → (Hub 1, 1) → (Hub 4, 3) → (Hub 2, 9) → (Hub 3, 5)\n* Truck 2 follows the route: (Hub 1, 3) → (Hub 6, 3) → (Hub 4, 3) → (Hub 2, 4) → (Hub 5, 10) → (Hub 3, 6)\n* Truck 3 follows the route: (Hub 1, 5) → (Hub 4, 6) → (Hub 5, 3) → (Hub 6, 4) → (Hub 3, 6) → (Hub 2, 4)\n* Truck 4 follows the route: (Hub 2, 10) → (Hub 4, 1) → (Hub 5, 3) → (Hub 6, 10) → (Hub 1, 1) → (Hub 3, 7)\n* Truck 5 follows the route: (Hub 6, 9) → (Hub 2, 1) → (Hub 5, 1) → (Hub 1, 1) → (Hub 3, 2) → (Hub 4, 10)\n* Truck 6 follows the route: (Hub 5, 7) → (Hub 2, 7) → (Hub 6, 10) → (Hub 3, 6) → (Hub 4, 4) → (Hub 1, 3)\n\nEach loading operation must proceed without interruption once it begins, and each hub can only accommodate one truck at a time for loading. The objective is to schedule all loading operations at the hubs so that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

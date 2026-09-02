@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes.  \nShipments:  \n* Component A: size 46 units  \n* Component B: size 70 units  \n* Component C: size 66 units  \n* Component D: size 65 units  \n* Component E: size 42 units  \n* Component F: size 38 units  \n* Component G: size 54 units  \n* Component H: size 66 units  \n* Component I: size 60 units  \n* Component J: size 53 units  \n* Component K: size 60 units  \n* Component L: size 69 units  \n* Component M: size 38 units  \n* Component N: size 31 units  \n* Component O: size 68 units  \n* Component P: size 55 units  \n* Component Q: size 57 units  \n* Component R: size 52 units  \n* Component S: size 49 units  \n* Component T: size 39 units  \n* Component U: size 48 units  \n* Component V: size 61 units  \n* Component W: size 46 units  \n* Component X: size 55 units  \n* Component Y: size 68 units  \n* Component Z: size 45 units  \n* Component [: size 59 units  \n* Component \\: size 42 units  \n* Component ]: size 41 units  \n* Component ^: size 61 units  \n* Component _: size 59 units  \n* Component `: size 32 units  \n* Component a: size 56 units  \n\nEach plane can carry up to 100 units of cargo. Assign all shipments using the fewest planes possible. Each shipment must be placed on exactly one plane, and the total size of shipments on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

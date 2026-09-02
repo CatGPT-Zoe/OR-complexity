@@ -1,0 +1,124 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "NL4OPT_013_radiation_beams",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "beams",
+      "description": "Beam 1 and Beam 2",
+      "values": ["Beam 1", "Beam 2"]
+    },
+    {
+      "id": "body_regions",
+      "description": "pancreas, skin, tumor",
+      "values": ["pancreas", "skin", "tumor"]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "dose_rate",
+      "canonical_name": "dose_rate",
+      "indices": [
+        {"role": "beam", "set_id": "beams"},
+        {"role": "region", "set_id": "body_regions"}
+      ],
+      "unit": "units per minute",
+      "description": "dose delivered per minute by each beam to each region",
+      "values": {
+        "Beam 1": {"pancreas": 0.3, "skin": 0.2, "tumor": 0.6},
+        "Beam 2": {"pancreas": 0.2, "skin": 0.1, "tumor": 0.4}
+      }
+    },
+    {
+      "id": "skin_max_dose",
+      "canonical_name": "skin_max_dose",
+      "indices": [],
+      "unit": "units",
+      "description": "maximum allowed dose to skin",
+      "value": 4
+    },
+    {
+      "id": "tumor_min_dose",
+      "canonical_name": "tumor_min_dose",
+      "indices": [],
+      "unit": "units",
+      "description": "minimum required dose to tumor",
+      "value": 3
+    }
+  ],
+  "entities": [
+    {
+      "id": "beam_duration",
+      "canonical_name": "beam_duration",
+      "semantic_type": "quantity",
+      "indices": [
+        {"role": "beam", "set_id": "beams"}
+      ],
+      "description": "number of minutes each beam is used",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "minutes",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["How many minutes of each beam should be used"],
+      "confidence": 0.95
+    }
+  ],
+  "objective": {
+    "id": "obj",
+    "canonical_name": "minimize_pancreas_dose",
+    "semantics": "minimize total radiation dose received by the pancreas",
+    "entity_scope": ["beam_duration"],
+    "expression": "sum_{beam in beams} beam_duration[beam] * dose_rate[beam, pancreas]",
+    "excluded_from_feasibility_hypergraph": true,
+    "parameter_refs": ["dose_rate"]
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "skin_dose_limit",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "Total radiation dose to skin must not exceed 4 units.",
+      "support_entity_ids": ["beam_duration"],
+      "incidence_slots": [
+        {
+          "entity_id": "beam_duration",
+          "role": "dose_contribution",
+          "aggregation_axes": ["beam"],
+          "index_binding": {},
+          "coefficient": "dose_rate[beam, skin]"
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["dose_rate", "skin_max_dose"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["At most 4 units of medicine should be received by the skin"],
+      "confidence": 0.98
+    },
+    {
+      "id": "o2",
+      "canonical_name": "tumor_dose_minimum",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "Total radiation dose to tumor must be at least 3 units.",
+      "support_entity_ids": ["beam_duration"],
+      "incidence_slots": [
+        {
+          "entity_id": "beam_duration",
+          "role": "dose_contribution",
+          "aggregation_axes": ["beam"],
+          "index_binding": {},
+          "coefficient": "dose_rate[beam, tumor]"
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["dose_rate", "tumor_min_dose"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["at least 3 units of medicine should be delivered to the tumor"],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": []
+}

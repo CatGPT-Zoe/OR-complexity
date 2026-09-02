@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage schedule for a critical blood type over a seven-day planning window. The initial stock in the refrigeration units at the start of the period is 71 units. For each day \\( t = 1, \\dots, 7 \\), the central supplier permits an order to be placed, with the quantity required to be between 15 and 50 units. However, each procurement request is subject to a processing and delivery lag of 2 days before it becomes available for meeting needs or replenishing reserves. The projected daily usage for this blood type is as follows:\n* Day 1: 29 units\n* Day 2: 35 units\n* Day 3: 31 units\n* Day 4: 29 units\n* Day 5: 36 units\n* Day 6: 16 units\n* Day 7: 16 units\n\nStockouts are permissible, but any unsatisfied usage is considered lost and will not be carried forward. Throughout the schedule, all blood quantities may be treated as continuous measures, and the total volume held in storage at any point must not exceed the refrigeration capacity of 71 units. The aggregate cost over the planning horizon comprises three elements: the procurement cost, calculated at 3 per unit ordered; the storage cost, assessed at 1 per unit held overnight; and a shortage penalty, levied at 13 per unit of unmet usage. The objective is to establish the optimal order quantity for each day and to monitor the consequent stock and shortage levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

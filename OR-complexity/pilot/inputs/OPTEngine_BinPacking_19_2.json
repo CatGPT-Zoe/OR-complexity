@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_19_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments into identical cargo pods. The items to be shipped are:\n* Component Alpha: mass 48 units\n* Component Beta: mass 30 units\n* Component Gamma: mass 57 units\n* Component Delta: mass 47 units\n* Component Epsilon: mass 46 units\n* Component Zeta: mass 64 units\n* Component Eta: mass 63 units\n* Component Theta: mass 65 units\n* Component Iota: mass 50 units\n* Component Kappa: mass 51 units\n* Component Lambda: mass 42 units\n* Component Mu: mass 57 units\n* Component Nu: mass 39 units\n* Component Xi: mass 30 units\n* Component Omicron: mass 62 units\n* Component Pi: mass 39 units\n* Component Rho: mass 66 units\n* Component Sigma: mass 54 units\n* Component Tau: mass 53 units\n\nEach cargo pod has a maximum capacity of 100 mass units. Load all components using the minimum number of pods. Every component must be placed in exactly one pod, and the total mass in any pod cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

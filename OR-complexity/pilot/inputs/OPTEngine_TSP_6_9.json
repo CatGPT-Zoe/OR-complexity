@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales director must personally visit six branch offices across the state.\n\nThe travel times between offices, measured in minutes, are as follows:\n* Office 1 to Office 2: 88.0 minutes\n* Office 1 to Office 3: 124.3 minutes\n* Office 1 to Office 4: 104.8 minutes\n* Office 1 to Office 5: 78.2 minutes\n* Office 1 to Office 6: 123.3 minutes\n* Office 2 to Office 3: 101.3 minutes\n* Office 2 to Office 4: 32.6 minutes\n* Office 2 to Office 5: 106.2 minutes\n* Office 2 to Office 6: 81.4 minutes\n* Office 3 to Office 4: 75.2 minutes\n* Office 3 to Office 5: 186.6 minutes\n* Office 3 to Office 6: 27.1 minutes\n* Office 4 to Office 5: 137.1 minutes\n* Office 4 to Office 6: 51.7 minutes\n* Office 5 to Office 6: 176.3 minutes\n\nThe objective is to determine the itinerary with the minimal total travel duration that allows the director to conduct a site visit at each branch exactly once before concluding the tour back at the initial office.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a technician's maintenance tour across six regional facilities.\n\nThe travel times between facilities are recorded in minutes:\n* Facility Alpha to Beta: 70.9 minutes\n* Facility Alpha to Gamma: 82.2 minutes\n* Facility Alpha to Delta: 23.5 minutes\n* Facility Alpha to Epsilon: 113.3 minutes\n* Facility Alpha to Zeta: 49.8 minutes\n* Beta to Gamma: 37.9 minutes\n* Beta to Delta: 94.2 minutes\n* Beta to Epsilon: 77.2 minutes\n* Beta to Zeta: 97.9 minutes\n* Gamma to Delta: 102.1 minutes\n* Gamma to Epsilon: 114.5 minutes\n* Gamma to Zeta: 88.1 minutes\n* Delta to Epsilon: 133.7 minutes\n* Delta to Zeta: 44.7 minutes\n* Epsilon to Zeta: 158.1 minutes\n\nThe objective is to determine the most time-efficient circuit that allows the technician to perform a single service call at each facility precisely once before concluding back at the initial depot.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

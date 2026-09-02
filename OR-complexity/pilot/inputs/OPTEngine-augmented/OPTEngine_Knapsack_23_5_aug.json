@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must assemble a shipment of crates to maximize total profit while adhering to a vehicle's weight capacity.\n\nThe available crates are:\n* Crate A: weight 48kg, profit 276 units\n* Crate B: weight 16kg, profit 236 units\n* Crate C: weight 34kg, profit 19 units\n* Crate D: weight 44kg, profit 205 units\n* Crate E: weight 21kg, profit 31 units\n* Crate F: weight 34kg, profit 113 units\n* Crate G: weight 46kg, profit 68 units\n* Crate H: weight 36kg, profit 134 units\n* Crate I: weight 2kg, profit 285 units\n* Crate J: weight 21kg, profit 86 units\n* Crate K: weight 46kg, profit 133 units\n* Crate L: weight 37kg, profit 262 units\n* Crate M: weight 35kg, profit 262 units\n* Crate N: weight 28kg, profit 102 units\n* Crate O: weight 29kg, profit 144 units\n* Crate P: weight 12kg, profit 29 units\n* Crate Q: weight 24kg, profit 161 units\n* Crate R: weight 48kg, profit 184 units\n* Crate S: weight 41kg, profit 150 units\n* Crate T: weight 15kg, profit 210 units\n* Crate U: weight 1kg, profit 40 units\n* Crate V: weight 50kg, profit 61 units\n* Crate W: weight 9kg, profit 179 units\n\nFurthermore, due to a contractual obligation, precisely one of Crate A and Crate B must be included in the shipment.\n\nShould Crate C be selected, the vehicle's effective load-bearing capacity is diminished by 10 kg.\nThe vehicle can transport a maximum of 473 kg. The manager must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

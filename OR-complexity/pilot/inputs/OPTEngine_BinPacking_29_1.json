@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_29_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes. Shipments:\n\n* Crate Alpha: weight 62kg\n* Crate Beta: weight 53kg\n* Crate Gamma: weight 31kg\n* Crate Delta: weight 30kg\n* Crate Epsilon: weight 30kg\n* Crate Zeta: weight 39kg\n* Crate Eta: weight 46kg\n* Crate Theta: weight 43kg\n* Crate Iota: weight 38kg\n* Crate Kappa: weight 41kg\n* Crate Lambda: weight 37kg\n* Crate Mu: weight 61kg\n* Crate Nu: weight 60kg\n* Crate Xi: weight 38kg\n* Crate Omicron: weight 47kg\n* Crate Pi: weight 46kg\n* Crate Rho: weight 38kg\n* Crate Sigma: weight 32kg\n* Crate Tau: weight 41kg\n* Crate Upsilon: weight 52kg\n* Crate Phi: weight 50kg\n* Crate Chi: weight 42kg\n* Crate Psi: weight 70kg\n* Crate Omega: weight 36kg\n* Crate Ares: weight 62kg\n* Crate Boreas: weight 61kg\n* Crate Ceres: weight 39kg\n* Crate Dionysus: weight 70kg\n* Crate Eos: weight 46kg\n\nEach plane can carry a maximum load of 100 kg. Assign all shipments using the fewest planes possible. Each crate must be loaded onto exactly one plane, and the total weight loaded onto any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

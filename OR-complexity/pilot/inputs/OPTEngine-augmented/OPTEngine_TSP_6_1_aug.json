@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate a fleet of drones to perform maintenance checks at six distinct cellular network towers spread across a region.  \nThe towers are positioned at these GPS coordinates:  \nTower Alpha: (111,46)  \nTower Beta: (15,128)  \nTower Gamma: (119,10)  \nTower Delta: (152,25)  \nTower Epsilon: (179,100)  \nTower Zeta: (51,66)  \n\nThe flight distances between towers, measured in kilometers, are as follows:  \nAlpha to Gamma: 36.9 km  \nAlpha to Delta: 46.1 km  \nAlpha to Epsilon: 86.8 km  \nAlpha to Zeta: 63.2 km  \nBeta to Gamma: 157.3 km  \nBeta to Delta: 171.4 km  \nBeta to Epsilon: 166.4 km  \nBeta to Zeta: 71.7 km  \nGamma to Delta: 36.2 km  \nGamma to Epsilon: 108.2 km  \nGamma to Zeta: 88.1 km  \nDelta to Epsilon: 79.7 km  \nDelta to Zeta: 109.0 km  \nEpsilon to Zeta: 132.4 km  \n\nDue to restricted airspace, no direct flight path exists between Tower Alpha and Tower Beta.  \nAdditionally, operational rules mandate that exactly one of the following two flight corridors must be part of the inspection circuit: the corridor between Beta and Gamma, or the corridor between Gamma and Delta.  \n\nThe objective is to determine the minimal total flight distance for a closed-loop route that visits each tower precisely once and returns to the origin tower.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

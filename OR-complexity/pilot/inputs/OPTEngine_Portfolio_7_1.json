@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate budget across 7 infrastructure projects to maximize overall community benefit score.  \nThe characteristics of each project are:  \n* Project P: benefit score 0.184, environmental impact 0.156, allocation bounds [0.087, 0.705]  \n* Project Q: benefit score 0.079, environmental impact 0.089, allocation bounds [0.080, 0.538]  \n* Project R: benefit score 0.095, environmental impact 0.058, allocation bounds [0.047, 0.807]  \n* Project S: benefit score 0.056, environmental impact 0.275, allocation bounds [0.008, 0.634]  \n* Project T: benefit score 0.162, environmental impact 0.284, allocation bounds [0.075, 0.354]  \n* Project U: benefit score 0.178, environmental impact 0.291, allocation bounds [0.023, 0.537]  \n* Project V: benefit score 0.086, environmental impact 0.096, allocation bounds [0.068, 0.459]  \n\nEach project must receive a budget share within its specified bounds, and the total allocation across all projects must sum to 1. To ensure regional equity, the set of high-priority projects L = {P, Q, R, S, T, U} must collectively receive at least 0.459 of the total budget. Additionally, the total environmental impact index must not exceed 0.203, and the overall benefit score must be at least 0.100. Determine the optimal budget allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

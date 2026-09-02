@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional courier must dispatch a vehicle to collect documents from five different branch offices scattered across a metropolitan area.\n\nThe travel times between offices are as follows:\n* Office Alpha to Beta: 116.1 minutes\n* Office Alpha to Gamma: 121.5 minutes\n* Office Alpha to Delta: 78.9 minutes\n* Office Alpha to Epsilon: 128.7 minutes\n* Office Beta to Gamma: 183.6 minutes\n* Office Beta to Delta: 179.1 minutes\n* Office Beta to Epsilon: 22.0 minutes\n* Office Gamma to Delta: 67.9 minutes\n* Office Gamma to Epsilon: 181.0 minutes\n* Office Delta to Epsilon: 184.8 minutes\n\nThe objective is to determine the most time-efficient circuit that allows the courier to arrive at each branch precisely once before concluding the collection run back at the initial office.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

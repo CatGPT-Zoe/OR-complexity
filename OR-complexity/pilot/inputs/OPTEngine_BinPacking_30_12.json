@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of shipments to identical freight trucks. The cargo manifests are as follows:\n\n* Shipment Alpha: 46 cubic meters\n* Shipment Beta: 36 cubic meters\n* Shipment Gamma: 33 cubic meters\n* Shipment Delta: 54 cubic meters\n* Shipment Epsilon: 35 cubic meters\n* Shipment Zeta: 55 cubic meters\n* Shipment Eta: 59 cubic meters\n* Shipment Theta: 61 cubic meters\n* Shipment Iota: 39 cubic meters\n* Shipment Kappa: 39 cubic meters\n* Shipment Lambda: 33 cubic meters\n* Shipment Mu: 37 cubic meters\n* Shipment Nu: 39 cubic meters\n* Shipment Xi: 70 cubic meters\n* Shipment Omicron: 37 cubic meters\n* Shipment Pi: 55 cubic meters\n* Shipment Rho: 68 cubic meters\n* Shipment Sigma: 36 cubic meters\n* Shipment Tau: 48 cubic meters\n* Shipment Upsilon: 35 cubic meters\n* Shipment Phi: 66 cubic meters\n* Shipment Chi: 67 cubic meters\n* Shipment Psi: 36 cubic meters\n* Shipment Omega: 43 cubic meters\n* Shipment Aster: 49 cubic meters\n* Shipment Prime: 55 cubic meters\n* Shipment Brace: 41 cubic meters\n* Shipment Slash: 63 cubic meters\n* Shipment Bracket: 58 cubic meters\n* Shipment Caret: 47 cubic meters\n\nEach truck possesses a maximum volumetric capacity of 100 cubic meters. The objective is to accommodate all shipments utilizing the minimal number of trucks. Every distinct shipment must be placed entirely on exactly one truck, and the aggregate volume assigned to any given truck must remain within its prescribed volumetric limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail outlet must devise a procurement and storage strategy for a seasonal product over a 12-week sales season.\nThe initial stock at the start of the season is 70 items.\nIn each week t = 1, ..., 12, the distributor permits the outlet to place a restocking shipment whose size must be between 13 and 37 items.\nHowever, each shipment placed will take 1 week(s) to be delivered before it can be used to meet sales or replenish stock.\nThe projected sales for the product in each week are given as follows:\n* Week 1: sales 31 items\n* Week 2: sales 10 items\n* Week 3: sales 56 items\n* Week 4: sales 40 items\n* Week 5: sales 52 items\n* Week 6: sales 52 items\n* Week 7: sales 59 items\n* Week 8: sales 26 items\n* Week 9: sales 57 items\n* Week 10: sales 49 items\n* Week 11: sales 22 items\n* Week 12: sales 14 items\n\nStockouts are allowed, but any unfulfilled sales will be lost and not carried forward.\nThroughout the sales season, product quantities are allowed to be fractional, and the total amount of physical stock on the premises at any time must not exceed the storage capacity of 70 items.\nThe total expense over the season comprises three components: the procurement cost, which equals 5 per item ordered; the storage cost, which equals 1 per item of stock held from one week to the next; and the lost-sales penalty, which equals 7 per item of unmet sales. Please determine the optimal restocking quantity for each week and monitor the resulting stock and lost-sales levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

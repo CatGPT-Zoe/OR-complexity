@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage schedule for a critical therapeutic agent across a 12‑week treatment cycle.  \nThe initial stock at the start of the cycle is 37 liters.  \nIn each week t = 1, …, 12, the supplier permits the hospital to submit a procurement request whose volume must be between 4 and 43 liters.  \nEach request, once placed, requires 0 weeks for delivery before it becomes available for meeting patient needs or replenishing reserves.  \nWeekly patient consumption of the agent is as follows:  \n* Week 1: 14 liters  \n* Week 2: 14 liters  \n* Week 3: 40 liters  \n* Week 4: 35 liters  \n* Week 5: 46 liters  \n* Week 6: 36 liters  \n* Week 7: 45 liters  \n* Week 8: 15 liters  \n* Week 9: 26 liters  \n* Week 10: 40 liters  \n* Week 11: 24 liters  \n* Week 12: 17 liters  \n\nSupply shortfalls are tolerated, but any unmet consumption is lost and cannot be deferred to later weeks.  \nThroughout the cycle, agent volumes may be treated as continuous quantities, and the total quantity of plasma held in storage at any moment must not exceed the refrigeration capacity of 42 liters.  \n\nIn week 3, the maximum procurement volume allowed is 41 liters.  \nIn week 9, the on‑hand stock must be no less than 12 liters.  \n\nThe total expenditure over the 12‑week cycle comprises three elements: the procurement cost, charged at 2 per liter ordered; the storage cost, charged at 3 per liter carried over from one week to the next; and a shortage penalty, levied at 6 per liter of unmet consumption.  \nThe objective is to identify the optimal procurement volume for each week and to monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

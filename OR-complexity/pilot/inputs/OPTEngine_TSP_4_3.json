@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must schedule a technician to perform maintenance at four different regional facilities.\n\nThe travel times between facilities are recorded in minutes:\n* Facility Alpha to Beta: 129.2 minutes\n* Facility Alpha to Gamma: 46.6 minutes\n* Facility Alpha to Delta: 139.6 minutes\n* Facility Beta to Gamma: 86.3 minutes\n* Facility Beta to Delta: 58.3 minutes\n* Facility Gamma to Delta: 110.3 minutes\n\nThe objective is to determine the most time-efficient circuit that allows the technician to arrive at each facility precisely one time, concluding the tour back at the initial facility.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must assemble a shipment of specialized components to maximize total utility score while staying within the cargo plane's maximum payload allowance.\n\nThe components available are:\n* Component A: mass 24 units, utility 108 credits\n* Component B: mass 13 units, utility 161 credits\n* Component C: mass 34 units, utility 227 credits\n* Component D: mass 42 units, utility 203 credits\n* Component E: mass 26 units, utility 28 credits\n* Component F: mass 10 units, utility 235 credits\n* Component G: mass 5 units, utility 157 credits\n* Component H: mass 41 units, utility 89 credits\n* Component I: mass 34 units, utility 106 credits\n* Component J: mass 39 units, utility 260 credits\n* Component K: mass 23 units, utility 89 credits\n* Component L: mass 38 units, utility 86 credits\n* Component M: mass 37 units, utility 229 credits\n* Component N: mass 17 units, utility 118 credits\n* Component O: mass 8 units, utility 90 credits\n* Component P: mass 9 units, utility 236 credits\n* Component Q: mass 35 units, utility 226 credits\n* Component R: mass 12 units, utility 29 credits\n* Component S: mass 20 units, utility 250 credits\n\nFurthermore, due to compatibility restrictions, exactly one of Component A and Component B must be included in the final shipment.\n\nIf Component C is selected, it necessitates special handling equipment that reduces the effective payload capacity of the aircraft by 10 units.\nThe aircraft can transport a maximum of 326 units. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

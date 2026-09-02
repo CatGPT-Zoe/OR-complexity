@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_8_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 8 cargo shipments through 8 specialized customs checkpoints.\n\nEach shipment must pass through the checkpoints in a specific sequence, represented as pairs (Checkpoint, Processing time), where each pair indicates the required checkpoint and the time needed for inspection. The order of pairs defines the mandatory sequence for processing the shipment.\n\nShipment details:\n* S1 follows the route: (C8, 9) → (C6, 8) → (C4, 10) → (C5, 3) → (C3, 10) → (C7, 1) → (C2, 10) → (C1, 6)\n* S2 follows the route: (C4, 3) → (C3, 8) → (C8, 6) → (C1, 8) → (C2, 3) → (C5, 8) → (C7, 5) → (C6, 8)\n* S3 follows the route: (C6, 9) → (C8, 10) → (C5, 2) → (C2, 5) → (C1, 3) → (C7, 9) → (C3, 3) → (C4, 3)\n* S4 follows the route: (C2, 10) → (C3, 9) → (C8, 1) → (C1, 3) → (C5, 8) → (C6, 10) → (C7, 3) → (C4, 10)\n* S5 follows the route: (C5, 6) → (C1, 2) → (C3, 2) → (C6, 10) → (C2, 2) → (C4, 5) → (C8, 5) → (C7, 10)\n* S6 follows the route: (C6, 7) → (C2, 5) → (C1, 8) → (C4, 7) → (C5, 8) → (C7, 7) → (C8, 3) → (C3, 7)\n* S7 follows the route: (C4, 6) → (C7, 6) → (C8, 5) → (C2, 8) → (C3, 6) → (C1, 4) → (C6, 3) → (C5, 8)\n* S8 follows the route: (C3, 6) → (C6, 3) → (C8, 2) → (C2, 6) → (C4, 3) → (C1, 5) → (C7, 6) → (C5, 2)\n\nOnce a shipment begins inspection at a checkpoint, it must be processed continuously without interruption. Each checkpoint can only handle one shipment at a time. The objective is to determine the processing sequence for all shipments at the checkpoints such that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

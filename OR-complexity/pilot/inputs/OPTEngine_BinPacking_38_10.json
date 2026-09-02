@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo packages onto identical freight pallets for air shipment. The packages are as follows:\n\n* Package Alpha: mass 42kg\n* Package Bravo: mass 45kg\n* Package Charlie: mass 38kg\n* Package Delta: mass 69kg\n* Package Echo: mass 55kg\n* Package Foxtrot: mass 60kg\n* Package Golf: mass 54kg\n* Package Hotel: mass 33kg\n* Package India: mass 67kg\n* Package Juliett: mass 41kg\n* Package Kilo: mass 68kg\n* Package Lima: mass 31kg\n* Package Mike: mass 48kg\n* Package November: mass 36kg\n* Package Oscar: mass 33kg\n* Package Papa: mass 57kg\n* Package Quebec: mass 32kg\n* Package Romeo: mass 39kg\n* Package Sierra: mass 43kg\n* Package Tango: mass 49kg\n* Package Uniform: mass 34kg\n* Package Victor: mass 42kg\n* Package Whiskey: mass 31kg\n* Package X-ray: mass 66kg\n* Package Yankee: mass 58kg\n* Package Zulu: mass 54kg\n* Package [Aster]: mass 57kg\n* Package [Backslash]: mass 60kg\n* Package [Bracket]: mass 43kg\n* Package [Caret]: mass 47kg\n* Package [Underscore]: mass 34kg\n* Package [Grave]: mass 52kg\n* Package [Alpha2]: mass 61kg\n* Package [Bravo2]: mass 57kg\n* Package [Charlie2]: mass 51kg\n* Package [Delta2]: mass 69kg\n* Package [Echo2]: mass 31kg\n* Package [Foxtrot2]: mass 32kg\n\nEach pallet possesses a maximum safe load capacity of 100 kg. The coordinator must assign every package to precisely one pallet, ensuring the cumulative mass on any given pallet does not surpass its load limit. The objective is to utilize the minimal possible number of pallets to accommodate the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

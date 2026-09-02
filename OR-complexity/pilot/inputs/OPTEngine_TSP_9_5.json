@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a specialized courier network linking nine regional distribution hubs.\n\nThe travel durations between hubs are recorded in minutes:\n* Hub Alpha to Beta: 169.3 minutes\n* Alpha to Gamma: 120.6 minutes\n* Alpha to Delta: 140.4 minutes\n* Alpha to Epsilon: 122.3 minutes\n* Alpha to Zeta: 144.8 minutes\n* Alpha to Eta: 99.0 minutes\n* Alpha to Theta: 88.6 minutes\n* Alpha to Iota: 166.5 minutes\n* Beta to Gamma: 95.0 minutes\n* Beta to Delta: 121.2 minutes\n* Beta to Epsilon: 137.0 minutes\n* Beta to Zeta: 43.3 minutes\n* Beta to Eta: 208.1 minutes\n* Beta to Theta: 89.5 minutes\n* Beta to Iota: 130.6 minutes\n* Gamma to Delta: 165.1 minutes\n* Gamma to Epsilon: 166.1 minutes\n* Gamma to Zeta: 106.6 minutes\n* Gamma to Eta: 200.4 minutes\n* Gamma to Theta: 95.1 minutes\n* Gamma to Iota: 185.9 minutes\n* Delta to Epsilon: 26.1 minutes\n* Delta to Zeta: 78.3 minutes\n* Delta to Eta: 113.7 minutes\n* Delta to Theta: 73.1 minutes\n* Delta to Iota: 26.2 minutes\n* Epsilon to Zeta: 93.9 minutes\n* Epsilon to Eta: 87.7 minutes\n* Epsilon to Theta: 71.0 minutes\n* Epsilon to Iota: 47.8 minutes\n* Zeta to Eta: 168.4 minutes\n* Zeta to Theta: 57.0 minutes\n* Zeta to Iota: 90.1 minutes\n* Eta to Theta: 121.0 minutes\n* Eta to Iota: 132.1 minutes\n* Theta to Iota: 97.0 minutes\n\nThe objective is to determine the most time-efficient inspection circuit that allows a supervisor to visit every hub precisely once, concluding the tour at the initial point of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of shipments onto identical cargo planes. The shipments are as follows:\n\n* Shipment Alpha: mass 36 metric tons\n* Shipment Beta: mass 58 metric tons\n* Shipment Gamma: mass 47 metric tons\n* Shipment Delta: mass 51 metric tons\n* Shipment Epsilon: mass 46 metric tons\n* Shipment Zeta: mass 58 metric tons\n* Shipment Eta: mass 31 metric tons\n* Shipment Theta: mass 51 metric tons\n* Shipment Iota: mass 50 metric tons\n* Shipment Kappa: mass 70 metric tons\n* Shipment Lambda: mass 45 metric tons\n* Shipment Mu: mass 52 metric tons\n* Shipment Nu: mass 53 metric tons\n* Shipment Xi: mass 52 metric tons\n* Shipment Omicron: mass 54 metric tons\n* Shipment Pi: mass 42 metric tons\n* Shipment Rho: mass 31 metric tons\n* Shipment Sigma: mass 55 metric tons\n* Shipment Tau: mass 70 metric tons\n* Shipment Upsilon: mass 67 metric tons\n* Shipment Phi: mass 64 metric tons\n* Shipment Chi: mass 49 metric tons\n* Shipment Psi: mass 55 metric tons\n* Shipment Omega: mass 68 metric tons\n* Shipment Digamma: mass 31 metric tons\n* Shipment San: mass 64 metric tons\n* Shipment Qoppa: mass 37 metric tons\n* Shipment Sampi: mass 50 metric tons\n* Shipment Sho: mass 31 metric tons\n* Shipment Heng: mass 57 metric tons\n* Shipment Hwair: mass 39 metric tons\n* Shipment Wynn: mass 35 metric tons\n\nEach aircraft has a maximum payload capacity of 100 metric tons. The objective is to assign every shipment to exactly one aircraft, ensuring the combined mass on any given aircraft does not surpass its payload limit, while utilizing the minimal possible number of planes.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

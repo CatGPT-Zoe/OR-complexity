@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of freight packages onto identical transport pallets. The cargo consists of:\n* Package Alpha: mass 67kg\n* Package Beta: mass 33kg\n* Package Gamma: mass 54kg\n* Package Delta: mass 32kg\n* Package Epsilon: mass 44kg\n* Package Zeta: mass 70kg\n* Package Eta: mass 35kg\n* Package Theta: mass 41kg\n* Package Iota: mass 53kg\n* Package Kappa: mass 33kg\n* Package Lambda: mass 70kg\n* Package Mu: mass 41kg\n* Package Nu: mass 44kg\n* Package Xi: mass 69kg\n* Package Omicron: mass 49kg\n* Package Pi: mass 69kg\n\nEach pallet has a maximum load capacity of 100 kg. The objective is to assign every package to exactly one pallet such that the total mass on any pallet does not surpass its limit, while minimizing the total number of pallets utilized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

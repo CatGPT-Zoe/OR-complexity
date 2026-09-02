@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail pharmacy must devise a procurement and stock management strategy for a critical vaccine over an upcoming 8-week schedule.  \nThe starting stock level at the commencement of the schedule is 88 doses.  \nIn each week t = 1, ..., 8, the distributor permits the pharmacy to submit a procurement request whose volume must fall between 0 and 42 doses.  \nNevertheless, every request submitted will undergo a 2-week lead time before the doses become available for fulfilling patient needs or replenishing the stock.  \nThe patient demand for the vaccine in each week is provided as follows:  \n* Week 1: demand 30 doses  \n* Week 2: demand 56 doses  \n* Week 3: demand 26 doses  \n* Week 4: demand 15 doses  \n* Week 5: demand 32 doses  \n* Week 6: demand 14 doses  \n* Week 7: demand 17 doses  \n* Week 8: demand 32 doses  \n\nStock‑outs are tolerated, but any unsatisfied demand will be lost and not carried forward.  \nThroughout the 8‑week schedule, vaccine quantities may be fractional, and the total quantity of physical stock on hand at any moment must not surpass the refrigerated storage capacity of 88 doses.  \nThe aggregate expense over the planning horizon comprises three elements: the procurement cost, which is 2 per dose ordered; the storage cost, which is 1 per dose kept in stock from one week to the next; and the shortage penalty, which is 9 per dose of unfulfilled demand. The objective is to ascertain the optimal procurement quantity for each week and to monitor the consequent stock and shortage amounts so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

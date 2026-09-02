@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n\n* Component A: volume 41 m³\n* Component B: volume 32 m³\n* Component C: volume 63 m³\n* Component D: volume 41 m³\n* Component E: volume 40 m³\n* Component F: volume 57 m³\n* Component G: volume 42 m³\n* Component H: volume 49 m³\n* Component I: volume 68 m³\n* Component J: volume 64 m³\n* Component K: volume 67 m³\n* Component L: volume 33 m³\n* Component M: volume 33 m³\n* Component N: volume 44 m³\n* Component O: volume 31 m³\n* Component P: volume 66 m³\n* Component Q: volume 53 m³\n* Component R: volume 46 m³\n* Component S: volume 59 m³\n* Component T: volume 69 m³\n* Component U: volume 48 m³\n* Component V: volume 47 m³\n* Component W: volume 63 m³\n* Component X: volume 51 m³\n* Component Y: volume 53 m³\n* Component Z: volume 38 m³\n* Component [: volume 34 m³\n* Component \\: volume 58 m³\n* Component ]: volume 64 m³\n* Component ^: volume 37 m³\n* Component _: volume 36 m³\n* Component `: volume 39 m³\n* Component a: volume 40 m³\n* Component b: volume 51 m³\n* Component c: volume 56 m³\n\nEach cargo plane can carry up to 100 m³ of volume. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

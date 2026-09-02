@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A network of data centers must allocate computational workloads across several cloud service regions to minimize total processing latency.\n\nThe available processing capacity at each data center (set C) is as follows:\n*C1's capacity is 106.\n*C2's capacity is 55.\n*C3's capacity is 184.\n*C4's capacity is 172.\n*C5's capacity is 50.\n*C6's capacity is 134.\n*C7's capacity is 101.\n*C8's capacity is 83.\n*C9's capacity is 137.\n\nThe required computational load that must be satisfied at each service region (set R) is specified below:\n*R1's load is 132.\n*R2's load is 121.\n*R3's load is 47.\n*R4's load is 4.\n*R5's load is 83.\n*R6's load is 130.\n*R7's load is 110.\n*R8's load is 120.\n*R9's load is 122.\n\nThe unit latency cost for processing a workload unit from each data center to each region is provided in the following matrix:\n| From / To | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 |\n|--|-|-|-|-|-|-|-|-|\n| C1 | 3 | 12 | 13 | 19 | 4 | 11 | 10 | 11 | 5 |\n| C2 | 6 | 14 | 16 | 11 | 6 | 18 | 20 | 12 | 8 |\n| C3 | 19 | 6 | 13 | 10 | 10 | 5 | 6 | 1 | 19 |\n| C4 | 13 | 19 | 2 | 6 | 20 | 11 | 20 | 8 | 19 |\n| C5 | 4 | 16 | 5 | 11 | 3 | 8 | 12 | 11 | 6 |\n| C6 | 3 | 11 | 15 | 1 | 9 | 7 | 8 | 3 | 12 |\n| C7 | 9 | 4 | 1 | 2 | 13 | 15 | 14 | 6 | 14 |\n| C8 | 16 | 13 | 12 | 18 | 13 | 4 | 16 | 19 | 8 |\n| C9 | 6 | 15 | 3 | 2 | 10 | 1 | 11 | 9 | 4 |\n\nDetermine the optimal allocation of workloads to minimize the aggregate latency cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_28_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to select packages to load onto a cargo plane. Available packages are:\n* Package 1: weight 20 tons, revenue $121K\n* Package 2: weight 3 tons, revenue $295K\n* Package 3: weight 28 tons, revenue $219K\n* Package 4: weight 35 tons, revenue $183K\n* Package 5: weight 14 tons, revenue $76K\n* Package 6: weight 19 tons, revenue $54K\n* Package 7: weight 9 tons, revenue $40K\n* Package 8: weight 22 tons, revenue $35K\n* Package 9: weight 9 tons, revenue $44K\n* Package 10: weight 34 tons, revenue $66K\n* Package 11: weight 8 tons, revenue $34K\n* Package 12: weight 8 tons, revenue $85K\n* Package 13: weight 25 tons, revenue $166K\n* Package 14: weight 2 tons, revenue $235K\n* Package 15: weight 7 tons, revenue $107K\n* Package 16: weight 39 tons, revenue $270K\n* Package 17: weight 36 tons, revenue $16K\n* Package 18: weight 15 tons, revenue $94K\n* Package 19: weight 1 ton, revenue $234K\n* Package 20: weight 17 tons, revenue $158K\n* Package 21: weight 39 tons, revenue $102K\n* Package 22: weight 33 tons, revenue $211K\n* Package 23: weight 21 tons, revenue $63K\n* Package 24: weight 11 tons, revenue $71K\n* Package 25: weight 36 tons, revenue $84K\n* Package 26: weight 31 tons, revenue $89K\n* Package 27: weight 1 ton, revenue $27K\n* Package 28: weight 20 tons, revenue $121K\n\nThe aircraft has a maximum payload capacity of 380 tons. Choose the package combination that maximizes total revenue without exceeding this weight limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

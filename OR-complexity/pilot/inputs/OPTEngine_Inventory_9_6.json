@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical component over a 9-day operational window.  \nThe starting stock at the dawn of the planning interval is 51 units.  \nFor each day t = 1, …, 9, the supplier permits the firm to submit a purchase request, the size of which must be no less than 18 and no more than 49 units.  \nEvery order placed, however, requires a lead time of 1 day before it becomes available for meeting requirements or augmenting stock.  \nThe daily requirement for the component is specified as:  \n* Day 1: 33 units  \n* Day 2: 46 units  \n* Day 3: 50 units  \n* Day 4: 18 units  \n* Day 5: 20 units  \n* Day 6: 17 units  \n* Day 7: 54 units  \n* Day 8: 17 units  \n* Day 9: 34 units  \n\nStock‑outs are tolerated, but any unsatisfied requirement is entirely lost and not carried forward.  \nThroughout the 9‑day span, component quantities may be treated as continuous measures, and the total physical stock on hand at any moment must remain within the storage‑facility limit of 51 units.  \nThe aggregate expense comprises three elements: the procurement cost, charged at 5 per unit acquired; the storage cost, assessed at 3 per unit held overnight; and the penalty for unmet requirements, levied at 10 per unit of shortfall.  \nThe objective is to identify the optimal purchase quantity for each day and to monitor the consequent stock and deficit levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

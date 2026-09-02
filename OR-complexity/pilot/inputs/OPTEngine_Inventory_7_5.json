@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital pharmacy must devise a procurement and stock management strategy for a critical medication over a treatment week of 7 days.  \nThe initial stock at the start of the week is 41 doses.  \nOn each day t = 1, ..., 7, the wholesaler permits the pharmacy to place a supply request whose size must be between 15 and 51 doses.  \nHowever, each requested supply will require 1 day(s) for delivery before it can be used to meet patient needs or replenish the pharmacy stock.  \nThe anticipated patient need for the medication on each day is as follows:  \n* Day 1: need 35 doses  \n* Day 2: need 50 doses  \n* Day 3: need 53 doses  \n* Day 4: need 37 doses  \n* Day 5: need 43 doses  \n* Day 6: need 41 doses  \n* Day 7: need 53 doses  \n\nStock‑outs are permissible, but any unsatisfied need is lost and cannot be deferred to a later day.  \nThroughout the week, medication quantities may be fractional, and the total quantity of medication physically stored in the pharmacy at any moment must not exceed the refrigerated storage capacity of 41 doses.  \nThe total expenditure over the week comprises three elements: the procurement cost, which is 5 per dose ordered; the storage cost, which is 3 per dose kept in stock from one day to the next; and the shortage penalty, which is 9 per dose of unmet patient need.  \nThe pharmacy seeks to determine the optimal supply quantity for each day and to monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

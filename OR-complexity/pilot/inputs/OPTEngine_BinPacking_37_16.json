@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_37_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a collection of fragile equipment pieces to identical reinforced shipping crates for international transport. The items to be dispatched are as follows:\n* Component Alpha: mass 64kg\n* Component Beta: mass 39kg\n* Component Gamma: mass 38kg\n* Component Delta: mass 34kg\n* Component Epsilon: mass 39kg\n* Component Zeta: mass 35kg\n* Component Eta: mass 46kg\n* Component Theta: mass 32kg\n* Component Iota: mass 44kg\n* Component Kappa: mass 62kg\n* Component Lambda: mass 52kg\n* Component Mu: mass 54kg\n* Component Nu: mass 65kg\n* Component Xi: mass 52kg\n* Component Omicron: mass 36kg\n* Component Pi: mass 62kg\n* Component Rho: mass 67kg\n* Component Sigma: mass 60kg\n* Component Tau: mass 31kg\n* Component Upsilon: mass 42kg\n* Component Phi: mass 64kg\n* Component Chi: mass 56kg\n* Component Psi: mass 31kg\n* Component Omega: mass 56kg\n* Component Digamma: mass 57kg\n* Component Stigma: mass 67kg\n* Component Heta: mass 65kg\n* Component San: mass 65kg\n* Component Koppa: mass 45kg\n* Component Sampi: mass 36kg\n* Component Sho: mass 35kg\n* Component Tsan: mass 51kg\n* Component Archaic Alpha: mass 56kg\n* Component Archaic Beta: mass 64kg\n* Component Archaic Gamma: mass 49kg\n* Component Archaic Delta: mass 43kg\n* Component Archaic Epsilon: mass 61kg\n\nEach reinforced crate possesses a certified maximum safe load capacity of 100 kg. The coordinator must determine an assignment of every equipment piece to a crate, ensuring each piece is placed in precisely one crate and the aggregate mass within any given crate does not surpass its load limit. The overarching objective is to accomplish this allocation while employing the minimal possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

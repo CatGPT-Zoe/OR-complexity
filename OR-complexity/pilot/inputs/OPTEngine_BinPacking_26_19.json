@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_26_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with distributing a set of specialized equipment modules across several identical transport pallets. The modules have the following masses:\n* Module Alpha: 64 kilograms\n* Module Beta: 55 kilograms\n* Module Gamma: 37 kilograms\n* Module Delta: 62 kilograms\n* Module Epsilon: 59 kilograms\n* Module Zeta: 40 kilograms\n* Module Eta: 32 kilograms\n* Module Theta: 42 kilograms\n* Module Iota: 44 kilograms\n* Module Kappa: 45 kilograms\n* Module Lambda: 36 kilograms\n* Module Mu: 68 kilograms\n* Module Nu: 54 kilograms\n* Module Xi: 56 kilograms\n* Module Omicron: 34 kilograms\n* Module Pi: 65 kilograms\n* Module Rho: 43 kilograms\n* Module Sigma: 63 kilograms\n* Module Tau: 42 kilograms\n* Module Upsilon: 43 kilograms\n* Module Phi: 61 kilograms\n* Module Chi: 35 kilograms\n* Module Psi: 42 kilograms\n* Module Omega: 36 kilograms\n* Module Ares: 62 kilograms\n* Module Zeus: 38 kilograms\n\nEach pallet is certified for a maximum load capacity of 100 kg. The objective is to allocate all modules to pallets, ensuring every module is placed on exactly one pallet and the cumulative weight on any given pallet does not surpass its certified limit, while minimizing the total number of pallets utilized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

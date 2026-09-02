@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must allocate a shipment of specialized components to maximize total profit while staying within the cargo plane's weight capacity.\n\nThe components available are:\n* Component A: weight 48kg, profit 230 units\n* Component B: weight 38kg, profit 242 units\n* Component C: weight 32kg, profit 140 units\n* Component D: weight 46kg, profit 253 units\n* Component E: weight 14kg, profit 182 units\n* Component F: weight 18kg, profit 31 units\n* Component G: weight 3kg, profit 36 units\n* Component H: weight 11kg, profit 189 units\n* Component I: weight 1kg, profit 158 units\n* Component J: weight 42kg, profit 13 units\n* Component K: weight 9kg, profit 42 units\n\nDue to compatibility restrictions, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, the effective cargo capacity of the plane is diminished by 10 kg.\nThe aircraft can transport a maximum of 183 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

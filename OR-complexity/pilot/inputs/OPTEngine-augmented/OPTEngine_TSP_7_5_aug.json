@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A telecommunications firm must establish a fiber-optic ring network connecting seven major regional hubs:\nHub Alpha: Positioned at grid reference (172,135)\nHub Beta: Positioned at grid reference (156,25)\nHub Gamma: Positioned at grid reference (48,30)\nHub Delta: Positioned at grid reference (155,166)\nHub Epsilon: Positioned at grid reference (50,77)\nHub Zeta: Positioned at grid reference (71,176)\nHub Theta: Positioned at grid reference (46,25)\n\nThe required cable lengths between hubs, measured in kilometers, are predetermined:\nAlpha to Gamma: 162.5 km\nAlpha to Delta: 35.4 km\nAlpha to Epsilon: 135.1 km\nAlpha to Zeta: 109.0 km\nAlpha to Theta: 167.3 km\nBeta to Gamma: 108.1 km\nBeta to Delta: 141.0 km\nBeta to Epsilon: 118.1 km\nBeta to Zeta: 173.3 km\nBeta to Theta: 110.0 km\nGamma to Delta: 173.0 km\nGamma to Epsilon: 47.0 km\nGamma to Zeta: 147.8 km\nGamma to Theta: 5.4 km\nDelta to Epsilon: 137.6 km\nDelta to Zeta: 84.6 km\nDelta to Theta: 178.2 km\nEpsilon to Zeta: 101.2 km\nEpsilon to Theta: 52.2 km\nZeta to Theta: 153.1 km\n\nDue to a prohibitive geographical barrier, a direct cable link between Hub Alpha and Hub Beta is infeasible.\nFurthermore, owing to a regulatory stipulation on shared infrastructure, the network design must incorporate exactly one of the following two cable segments: the link between Hub Beta and Hub Gamma, or the link between Hub Gamma and Hub Delta.\n\nThe objective is to determine the minimal total cable length required to construct a continuous ring network that interconnects each hub precisely once, forming a closed loop.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

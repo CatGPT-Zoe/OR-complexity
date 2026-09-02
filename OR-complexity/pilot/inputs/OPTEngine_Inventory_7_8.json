@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and reservoir management strategy across a weekly planning horizon of 7 days.  \nThe initial water volume stored in the main reservoir at the start of the week is 22 megaliters.  \nOn each day \\( t = 1, \\dots, 7 \\), the utility can initiate a pumping operation from a distant source, where the volume pumped must be between 6 and 44 megaliters.  \nHowever, due to transmission pipeline constraints, any water pumped will take 4 full days to reach the reservoir before it becomes available for meeting demand or augmenting storage.  \nThe projected daily water demand for the region is as follows:  \n* Day 1: 55 megaliters  \n* Day 2: 51 megaliters  \n* Day 3: 39 megaliters  \n* Day 4: 50 megaliters  \n* Day 5: 37 megaliters  \n* Day 6: 33 megaliters  \n* Day 7: 44 megaliters  \n\nSupply shortfalls are permissible, but any unmet daily demand is simply lost and cannot be recovered later.  \nThroughout the week, water volumes are treated as continuous quantities, and the total volume held in the reservoir at any moment must not exceed its maximum capacity of 40 megaliters.  \nThe total operational cost over the week comprises three elements: the pumping cost, which is 3 per megaliter pumped; the storage cost, which is 1 per megaliter of water kept in the reservoir from one day to the next; and a deficit penalty, which is 8 per megaliter of unmet daily demand.  \nThe objective is to determine the optimal pumping volume for each day and to monitor the resulting reservoir levels and daily deficits so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

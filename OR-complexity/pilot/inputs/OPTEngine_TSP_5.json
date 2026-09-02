@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales representative must conduct in-person visits to five distinct corporate offices.\n\nThe travel durations between offices are recorded in minutes:\n* Office Alpha to Beta: 63.4 minutes\n* Office Alpha to Gamma: 40.6 minutes\n* Office Alpha to Delta: 90.4 minutes\n* Office Alpha to Epsilon: 66.0 minutes\n* Office Beta to Gamma: 103.3 minutes\n* Office Beta to Delta: 153.8 minutes\n* Office Beta to Epsilon: 116.7 minutes\n* Office Gamma to Delta: 52.9 minutes\n* Office Gamma to Epsilon: 41.6 minutes\n* Office Delta to Epsilon: 74.3 minutes\n\nThe objective is to determine the itinerary of minimal total duration that allows the representative to visit each office precisely once, commencing and concluding at the initial office location.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

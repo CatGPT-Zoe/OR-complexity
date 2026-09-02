@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to perform maintenance checks at eight distinct facilities scattered across a region.\n\nThe travel durations between facilities, recorded in minutes, are as follows:\n* Facility 1 to 2: 160.5 minutes\n* Facility 1 to 3: 15.0 minutes\n* Facility 1 to 4: 65.2 minutes\n* Facility 1 to 5: 138.1 minutes\n* Facility 1 to 6: 99.9 minutes\n* Facility 1 to 7: 135.6 minutes\n* Facility 1 to 8: 105.7 minutes\n* Facility 2 to 3: 151.1 minutes\n* Facility 2 to 4: 127.8 minutes\n* Facility 2 to 5: 138.8 minutes\n* Facility 2 to 6: 84.2 minutes\n* Facility 2 to 7: 102.2 minutes\n* Facility 2 to 8: 61.3 minutes\n* Facility 3 to 4: 69.0 minutes\n* Facility 3 to 5: 142.4 minutes\n* Facility 3 to 6: 97.3 minutes\n* Facility 3 to 7: 136.0 minutes\n* Facility 3 to 8: 99.3 minutes\n* Facility 4 to 5: 73.5 minutes\n* Facility 4 to 6: 46.9 minutes\n* Facility 4 to 7: 72.3 minutes\n* Facility 4 to 8: 66.5 minutes\n* Facility 5 to 6: 68.6 minutes\n* Facility 5 to 7: 37.0 minutes\n* Facility 5 to 8: 93.6 minutes\n* Facility 6 to 7: 43.9 minutes\n* Facility 6 to 8: 26.7 minutes\n* Facility 7 to 8: 63.7 minutes\n\nThe objective is to determine the most time-efficient inspection circuit, whereby the technician must visit every facility precisely once, concluding the tour back at the initial facility from which they departed.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

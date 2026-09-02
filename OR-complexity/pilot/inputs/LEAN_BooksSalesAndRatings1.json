@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_BooksSalesAndRatings1",
+  "annotation_mode": "semantic",
+  "problem_text": "In the context of a bookstore, the store needs to allocate various types of books into different bookshelves. Specifically, the store has several bookshelves, each with a capacity limit provided in “capacity.csv.” The predefined value and weight of each book can be found in “products.csv.” The objective is to determine the optimal number of units of each book to place on each bookshelf to maximize the total value of the books across all bookshelves while ensuring that the total weight of the books on each bookshelf does not exceed its capacity. The decision variables x_ij represent the number of units of book j to be placed on bookshelf i.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "BookshelfID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| BookshelfID | Capacity |\n|---|---|\n| 1 | 200 |\n| 2 | 200 |\n| 3 | 300 |\n| 4 | 400 |\n| 5 | 550 |\n| 6 | 600 |\n| 7 | 650 |\n| 8 | 750 |\n| 9 | 820 |\n| 10 | 570 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| The Great Gatsby | 50 | 10 |\n| To Kill a Mockingbird | 70 | 20 |\n| 1984 | 30 | 5 |\n| Pride and Prejudice | 60 | 15 |\n| The Catcher in the Rye | 80 | 25 |\n| Moby Dick | 90 | 30 |\n| Jane Eyre | 40 | 12 |\n| War and Peace | 100 | 35 |\n| The Odyssey | 55 | 10 |\n| Crime and Punishment | 75 | 20 |\n| The Hobbit | 65 | 18 |\n| Brave New World | 95 | 28 |\n| Anna Karenina | 45 | 8 |\n| Wuthering Heights | 85 | 22 |\n| The Divine Comedy | 70 | 25 |\n| The Iliad | 110 | 40 |\n| Les Misérables | 50 | 14 |\n| Dracula | 60 | 16 |\n| Frankenstein | 120 | 50 |\n| The Brothers Karamazov | 100 | 30 |\n| Don Quixote | 52 | 11 |\n| One Hundred Years of Solitude | 68 | 19 |\n| Ulysses | 38 | 7 |\n| The Alchemist | 58 | 14 |\n| Meditations | 82 | 24 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA18/BooksSalesAndRatings1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA18/BooksSalesAndRatings1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

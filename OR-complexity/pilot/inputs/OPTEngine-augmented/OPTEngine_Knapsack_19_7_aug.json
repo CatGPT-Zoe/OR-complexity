@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized components to maximize total utility while adhering to a cargo aircraft’s weight restriction.\n\nThe components available are:\n* Component A: weight 29kg, utility 23 units\n* Component B: weight 36kg, utility 203 units\n* Component C: weight 2kg, utility 72 units\n* Component D: weight 7kg, utility 168 units\n* Component E: weight 6kg, utility 205 units\n* Component F: weight 14kg, utility 141 units\n* Component G: weight 47kg, utility 206 units\n* Component H: weight 15kg, utility 247 units\n* Component I: weight 42kg, utility 268 units\n* Component J: weight 36kg, utility 198 units\n* Component K: weight 12kg, utility 227 units\n* Component L: weight 41kg, utility 14 units\n* Component M: weight 38kg, utility 225 units\n* Component N: weight 39kg, utility 129 units\n* Component O: weight 19kg, utility 187 units\n* Component P: weight 33kg, utility 170 units\n* Component Q: weight 31kg, utility 249 units\n* Component R: weight 48kg, utility 139 units\n* Component S: weight 23kg, utility 149 units\n\nFurthermore, due to compatibility requirements, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, the aircraft’s effective payload capacity is diminished by 10 kg.\nThe aircraft can accommodate a maximum of 362 kg. The manager must determine which components to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

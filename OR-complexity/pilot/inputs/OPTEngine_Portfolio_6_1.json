@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_6_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate the annual budget across 6 infrastructure projects to maximize overall community benefit.  \nThe project details are as follows:  \n* Project 1: benefit score 0.195, environmental impact 0.172, allocation limits [0.016, 0.769]  \n* Project 2: benefit score 0.027, environmental impact 0.264, allocation limits [0.080, 0.547]  \n* Project 3: benefit score 0.084, environmental impact 0.292, allocation limits [0.018, 0.702]  \n* Project 4: benefit score 0.143, environmental impact 0.227, allocation limits [0.041, 0.741]  \n* Project 5: benefit score 0.140, environmental impact 0.278, allocation limits [0.018, 0.449]  \n* Project 6: benefit score 0.084, environmental impact 0.079, allocation limits [0.092, 0.396]  \n\nEach project must receive a budget share within its specified limits, and the total allocation across all projects must sum to 1.  \nTo ensure equitable regional development, the subset of projects Q = {2, 3, 5} must collectively receive at least 0.209 of the total budget.  \nAdditionally, the total environmental impact of all selected projects must not exceed 0.207, and the overall community benefit must be at least 0.074.  \nDetermine the optimal budget allocation that maximizes the total community benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to service six distinct facilities, each positioned at specific grid coordinates on a regional map:\nFacility Alpha: Coordinates (123,90)\nFacility Beta: Coordinates (156,73)\nFacility Gamma: Coordinates (172,91)\nFacility Delta: Coordinates (151,162)\nFacility Epsilon: Coordinates (158,33)\nFacility Zeta: Coordinates (183,79)\n\nThe travel distances, measured in kilometers, between pairs of facilities are predetermined:\nAlpha to Gamma: 49.0 km\nAlpha to Delta: 77.3 km\nAlpha to Epsilon: 66.9 km\nAlpha to Zeta: 61.0 km\nBeta to Gamma: 24.1 km\nBeta to Delta: 89.1 km\nBeta to Epsilon: 40.0 km\nBeta to Zeta: 27.7 km\nGamma to Delta: 74.0 km\nGamma to Epsilon: 59.7 km\nGamma to Zeta: 16.3 km\nDelta to Epsilon: 129.2 km\nDelta to Zeta: 89.0 km\nEpsilon to Zeta: 52.4 km\n\nDue to infrastructural limitations, direct travel between Facility Alpha and Facility Beta is not possible. Furthermore, a specific routing mandate requires that exactly one of two critical connections must be incorporated into the circuit: either the link between Facility Beta and Gamma, or the link between Facility Gamma and Delta.\n\nThe objective is to determine the most efficient closed-loop itinerary, where the technician visits each facility precisely once before returning to the point of origin, thereby minimizing the total distance traversed.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

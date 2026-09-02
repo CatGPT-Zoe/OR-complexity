@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks.  \n\nPackages:  \n* Package Alpha: weight 43kg  \n* Package Bravo: weight 38kg  \n* Package Charlie: weight 69kg  \n* Package Delta: weight 58kg  \n* Package Echo: weight 54kg  \n* Package Foxtrot: weight 39kg  \n* Package Golf: weight 35kg  \n* Package Hotel: weight 46kg  \n* Package India: weight 54kg  \n* Package Juliet: weight 50kg  \n* Package Kilo: weight 51kg  \n* Package Lima: weight 48kg  \n* Package Mike: weight 70kg  \n* Package November: weight 57kg  \n* Package Oscar: weight 51kg  \n* Package Papa: weight 42kg  \n* Package Quebec: weight 70kg  \n* Package Romeo: weight 31kg  \n* Package Sierra: weight 57kg  \n* Package Tango: weight 39kg  \n* Package Uniform: weight 50kg  \n* Package Victor: weight 34kg  \n* Package Whiskey: weight 38kg  \n* Package X-ray: weight 44kg  \n* Package Yankee: weight 63kg  \n* Package Zulu: weight 38kg  \n* Package Aster: weight 60kg  \n* Package Backslash: weight 49kg  \n* Package Bracket: weight 67kg  \n* Package Caret: weight 32kg  \n* Package Underscore: weight 58kg  \n* Package Grave: weight 58kg  \n* Package Alpha2: weight 64kg  \n* Package Bravo2: weight 39kg  \n* Package Charlie2: weight 62kg  \n* Package Delta2: weight 54kg  \n* Package Echo2: weight 35kg  \n* Package Foxtrot2: weight 68kg  \n* Package Golf2: weight 68kg  \n\nEach truck can carry a maximum load of 100 kg. Assign all packages to trucks using the fewest number of trucks. Every package must be placed in exactly one truck, and the total weight in any truck must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

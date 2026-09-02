@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company is assembling a cargo load for a specialized air freight container. They must select a combination of packages to maximize total revenue while adhering to the container's maximum weight allowance.\n\nThe packages available are:\n* Package A: weight 34kg, revenue 153 credits\n* Package B: weight 27kg, revenue 120 credits\n* Package C: weight 33kg, revenue 62 credits\n* Package D: weight 49kg, revenue 195 credits\n* Package E: weight 41kg, revenue 180 credits\n* Package F: weight 17kg, revenue 270 credits\n* Package G: weight 15kg, revenue 265 credits\n* Package H: weight 38kg, revenue 118 credits\n* Package I: weight 37kg, revenue 36 credits\n* Package J: weight 37kg, revenue 65 credits\n* Package K: weight 17kg, revenue 231 credits\n* Package L: weight 42kg, revenue 61 credits\n* Package M: weight 3kg, revenue 61 credits\n* Package N: weight 21kg, revenue 179 credits\n* Package O: weight 8kg, revenue 154 credits\n* Package P: weight 7kg, revenue 133 credits\n* Package Q: weight 20kg, revenue 43 credits\n* Package R: weight 7kg, revenue 210 credits\n* Package S: weight 31kg, revenue 86 credits\n* Package T: weight 21kg, revenue 125 credits\n* Package U: weight 9kg, revenue 131 credits\n* Package V: weight 9kg, revenue 30 credits\n* Package W: weight 46kg, revenue 37 credits\n* Package X: weight 30kg, revenue 254 credits\n\nDue to a contractual stipulation, precisely one of Package A or Package B must be included in the shipment.\n\nIf Package C is selected, it requires special internal padding that occupies space, effectively reducing the usable weight capacity of the container by 10 kg.\nThe container's maximum gross weight allowance is 419 kg. The logistics manager must determine the optimal set of packages to accept.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

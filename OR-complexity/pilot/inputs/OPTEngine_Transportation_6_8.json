@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics network must allocate computational tasks across a cluster of processing nodes to minimize the total execution latency.  \n\nThe available processing capacity at each source node (set S) is specified as follows:  \n*S1's capacity is 187.  \n*S2's capacity is 84.  \n*S3's capacity is 149.  \n*S4's capacity is 166.  \n*S5's capacity is 144.  \n*S6's capacity is 188.  \n\nThe required workload that must be assigned to each destination server (set D) is given below:  \n*D1's workload is 221.  \n*D2's workload is 46.  \n*D3's workload is 123.  \n*D4's workload is 29.  \n*D5's workload is 145.  \n*D6's workload is 121.  \n\nThe latency per unit of transferred workload from each source node to each destination server is shown in the following table:  \n\n| From / To | D1 | D2 | D3 | D4 | D5 | D6 |  \n|-----------|----|----|----|----|----|----|  \n| S1        | 9  | 2  | 12 | 7  | 15 | 15 |  \n| S2        | 8  | 12 | 4  | 12 | 18 | 12 |  \n| S3        | 2  | 13 | 9  | 7  | 4  | 15 |  \n| S4        | 3  | 7  | 20 | 1  | 2  | 11 |  \n| S5        | 8  | 5  | 19 | 7  | 3  | 18 |  \n| S6        | 7  | 19 | 7  | 8  | 11 | 5  |  \n\nDetermine the optimal distribution of workloads to minimize the total latency across the entire system.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

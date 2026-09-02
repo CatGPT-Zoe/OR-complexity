@@ -1,0 +1,73 @@
+{
+  "instance_id": "LEAN_UFLP4",
+  "annotation_mode": "semantic",
+  "problem_text": "The company must select an optimal subset of potential warehouse locations to serve all customers. The objective is to minimize total cost, which includes the fixed annual opening costs of each selected warehouse and the variable transportation costs for fulfilling all customer demand. Each potential warehouse has a maximum service capacity. Relevant information is provided in the tables.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "cost",
+      "indices": [
+        "Warehouse ID",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20"
+      ],
+      "unit": "",
+      "values": "| Warehouse ID | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 | C12 | C13 | C14 | C15 | C16 | C17 | C18 | C19 | C20 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| W1 | 10 | 15 | 20 | 11 | 16 | 18 | 7 | 12 | 22 | 9 | 14 | 19 | 25 | 13 | 17 | 6 | 21 | 15 | 8 | 10 |\n| W2 | 18 | 12 | 9 | 14 | 10 | 5 | 19 | 23 | 11 | 16 | 20 | 8 | 15 | 22 | 7 | 13 | 24 | 17 | 12 | 6 |\n| W3 | 13 | 17 | 15 | 8 | 12 | 21 | 16 | 10 | 5 | 24 | 13 | 22 | 7 | 19 | 14 | 18 | 9 | 25 | 11 | 16 |\n| W4 | 7 | 22 | 11 | 16 | 20 | 8 | 15 | 19 | 13 | 25 | 6 | 14 | 21 | 9 | 23 | 17 | 10 | 18 | 24 | 5 |\n| W5 | 16 | 9 | 25 | 13 | 7 | 10 | 23 | 14 | 18 | 21 | 5 | 17 | 9 | 24 | 12 | 20 | 6 | 15 | 19 | 11 |\n| W6 | 22 | 6 | 14 | 19 | 23 | 11 | 8 | 17 | 9 | 12 | 15 | 24 | 5 | 20 | 10 | 25 | 13 | 7 | 18 | 16 |\n| W7 | 8 | 25 | 17 | 9 | 14 | 22 | 11 | 6 | 16 | 20 | 18 | 13 | 24 | 5 | 19 | 12 | 23 | 10 | 7 | 15 |\n| W8 | 19 | 11 | 7 | 21 | 15 | 24 | 13 | 16 | 20 | 8 | 17 | 10 | 12 | 23 | 5 | 14 | 22 | 9 | 16 | 25 |\n| W9 | 12 | 20 | 5 | 23 | 17 | 14 | 9 | 25 | 18 | 11 | 16 | 21 | 10 | 7 | 24 | 15 | 19 | 6 | 13 | 22 |\n| W10 | 25 | 14 | 22 | 5 | 19 | 12 | 24 | 7 | 15 | 17 | 23 | 6 | 16 | 10 | 20 | 9 | 18 | 11 | 25 | 14 |"
+    },
+    {
+      "name": "demand",
+      "indices": [
+        "Customer ID",
+        "Demand"
+      ],
+      "unit": "",
+      "values": "| Customer ID | Demand |\n|---|---|\n| C1 | 800 |\n| C2 | 600 |\n| C3 | 500 |\n| C4 | 700 |\n| C5 | 450 |\n| C6 | 950 |\n| C7 | 350 |\n| C8 | 850 |\n| C9 | 400 |\n| C10 | 750 |\n| C11 | 900 |\n| C12 | 550 |\n| C13 | 650 |\n| C14 | 820 |\n| C15 | 480 |\n| C16 | 920 |\n| C17 | 320 |\n| C18 | 780 |\n| C19 | 520 |\n| C20 | 680 |"
+    },
+    {
+      "name": "warehouse",
+      "indices": [
+        "Warehouse ID",
+        "Fixed_Cost",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Warehouse ID | Fixed_Cost | Capacity |\n|---|---|---|\n| W1 | 2000 | 1000 |\n| W2 | 2500 | 1500 |\n| W3 | 1800 | 1200 |\n| W4 | 3200 | 2000 |\n| W5 | 1500 | 800 |\n| W6 | 4000 | 2500 |\n| W7 | 2800 | 1800 |\n| W8 | 1950 | 1100 |\n| W9 | 3500 | 2100 |\n| W10 | 2200 | 1300 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP4/cost.csv",
+      "role": "parameter_table",
+      "table": "cost"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP4/demand.csv",
+      "role": "parameter_table",
+      "table": "demand"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP4/warehouse.csv",
+      "role": "parameter_table",
+      "table": "warehouse"
+    }
+  ],
+  "notes": ""
+}

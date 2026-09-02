@@ -1,0 +1,29 @@
+{
+  "instance_id": "IndustryOR_Easy_092_bus_rental",
+  "annotation_mode": "semantic",
+  "problem_text": "A school is preparing a trip for 400 students. The transportation company has 10 buses with 50 seats each and 8 minibuses with 40 seats each, but only 9 drivers are available. The rental cost for a bus is £800, and the rental cost for a minibus is £600. Calculate how many of each type of bus should be used to achieve the lowest cost.\n\nTry to formulate a model for this problem.",
+  "sets": [
+    {
+      "name": "bus_types",
+      "description": "bus and minibus types"
+    }
+  ],
+  "parameter_tables_inline": [
+    {
+      "name": "bus_params",
+      "indices": [
+        "bus_type"
+      ],
+      "unit": "",
+      "values": "| bus_type | seats | rental_cost | drivers_needed |\n|---|---|---|---|\n| bus | 50 | 800 | 1 |\n| minibus | 40 | 600 | 1 |"
+    },
+    {
+      "name": "context",
+      "indices": [],
+      "unit": "",
+      "values": "| students | available_drivers |\n|---|---|\n| 400 | 9 |"
+    }
+  ],
+  "external_file_manifest": [],
+  "notes": "Two decision families (count per bus type); seat coverage, driver limit, and demand obligations."
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: weight 46 tons\n* Shipment Beta: weight 34 tons\n* Shipment Charlie: weight 44 tons\n* Shipment Delta: weight 34 tons\n* Shipment Echo: weight 49 tons\n* Shipment Foxtrot: weight 52 tons\n* Shipment Golf: weight 57 tons\n* Shipment Hotel: weight 41 tons\n* Shipment India: weight 33 tons\n* Shipment Juliet: weight 62 tons\n* Shipment Kilo: weight 59 tons\n\nEach cargo plane can carry up to 100 tons. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total weight on a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

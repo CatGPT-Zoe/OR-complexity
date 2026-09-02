@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital needs to schedule 4 patients through 4 specialized medical stations. Each patient requires a specific sequence of diagnostic tests, where each test is represented as (Station, Duration), indicating the medical station where the test must be performed and the time required to complete it. The order of tests must be followed exactly as prescribed for each patient.\n\nPatient details:\n* Patient 1 requires the sequence: (Station A, 10) → (Station B, 3) → (Station D, 7) → (Station C, 4)\n* Patient 2 requires the sequence: (Station C, 9) → (Station A, 8) → (Station D, 4) → (Station B, 2)\n* Patient 3 requires the sequence: (Station D, 1) → (Station B, 4) → (Station C, 10) → (Station A, 3)\n* Patient 4 requires the sequence: (Station A, 6) → (Station D, 9) → (Station B, 3) → (Station C, 2)\n\nEach diagnostic test must run continuously without interruption once it begins, and each medical station can only accommodate one patient at a time. The objective is to determine the optimal scheduling order for all tests across the medical stations so that the total completion time for all patients is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

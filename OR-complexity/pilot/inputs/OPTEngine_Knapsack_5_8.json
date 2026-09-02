@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a delivery truck. The available packages are:\n* Package A: volume 10 cubic meters, revenue $288\n* Package B: volume 29 cubic meters, revenue $56\n* Package C: volume 6 cubic meters, revenue $173\n* Package D: volume 33 cubic meters, revenue $260\n* Package E: volume 7 cubic meters, revenue $164\nThe truck has a maximum capacity of 59 cubic meters. Choose the package combination that yields the highest total revenue without exceeding this capacity. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

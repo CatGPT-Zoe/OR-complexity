@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must allocate the distribution of a specialized commodity from nine regional storage facilities to nine retail outlets in order to minimize total handling and transit expenses.\n\nThe inventory available at each storage facility is precisely fixed:\n* Facility R1 holds 91 units.\n* Facility R2 holds 177 units.\n* Facility R3 holds 138 units.\n* Facility R4 holds 183 units.\n* Facility R5 holds 182 units.\n* Facility R6 holds 116 units.\n* Facility R7 holds 92 units.\n* Facility R8 holds 145 units.\n* Facility R9 holds 82 units.\n\nThe contractual requirement that must be satisfied at each retail outlet is explicitly defined:\n* Outlet S1 requires 177 units.\n* Outlet S2 requires 148 units.\n* Outlet S3 requires 24 units.\n* Outlet S4 requires 182 units.\n* Outlet S5 requires 68 units.\n* Outlet S6 requires 87 units.\n* Outlet S7 requires 105 units.\n* Outlet S8 requires 53 units.\n* Outlet S9 requires 196 units.\n\nThe per-unit expense for transferring the commodity from any given storage facility to any specific retail outlet is detailed in the following matrix:\n\n| From / To | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 |\n|---|---|---|---|---|---|---|---|---|---|\n| R1 | 3 | 16 | 15 | 17 | 12 | 2 | 16 | 19 | 6 |\n| R2 | 12 | 6 | 9 | 4 | 19 | 4 | 8 | 17 | 1 |\n| R3 | 2 | 1 | 8 | 2 | 16 | 12 | 13 | 5 | 6 |\n| R4 | 2 | 18 | 14 | 8 | 11 | 8 | 14 | 11 | 9 |\n| R5 | 3 | 19 | 12 | 4 | 17 | 2 | 6 | 8 | 17 |\n| R6 | 2 | 13 | 3 | 15 | 10 | 10 | 11 | 3 | 18 |\n| R7 | 15 | 1 | 12 | 7 | 10 | 19 | 10 | 20 | 8 |\n| R8 | 15 | 12 | 19 | 16 | 7 | 18 | 8 | 5 | 1 |\n| R9 | 14 | 1 | 8 | 18 | 12 | 1 | 11 | 1 | 13 |\n\nDetermine the optimal allocation of commodity flows that minimizes the aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_21_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments into standard-sized cargo boxes. Items to be shipped:\n* Component Alpha: weight 69kg\n* Component Beta: weight 36kg\n* Component Gamma: weight 47kg\n* Component Delta: weight 62kg\n* Component Epsilon: weight 61kg\n* Component Zeta: weight 65kg\n* Component Eta: weight 55kg\n* Component Theta: weight 60kg\n* Component Iota: weight 46kg\n* Component Kappa: weight 41kg\n* Component Lambda: weight 44kg\n* Component Mu: weight 64kg\n* Component Nu: weight 53kg\n* Component Xi: weight 40kg\n* Component Omicron: weight 49kg\n* Component Pi: weight 68kg\n* Component Rho: weight 39kg\n* Component Sigma: weight 59kg\n* Component Tau: weight 34kg\n* Component Upsilon: weight 34kg\n* Component Phi: weight 60kg\n\nEach cargo box has a maximum capacity of 100 kg. Load all components using the minimum number of boxes. Every component must be placed in exactly one box, and the total weight in any box cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

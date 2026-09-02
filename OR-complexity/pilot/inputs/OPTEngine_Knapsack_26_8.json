@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must select packages to load onto a cargo plane. The available shipments are:\n* Package 1: volume 4 cubic meters, revenue $108\n* Package 2: volume 3 cubic meters, revenue $263\n* Package 3: volume 1 cubic meter, revenue $91\n* Package 4: volume 7 cubic meters, revenue $93\n* Package 5: volume 34 cubic meters, revenue $118\n* Package 6: volume 44 cubic meters, revenue $67\n* Package 7: volume 44 cubic meters, revenue $72\n* Package 8: volume 28 cubic meters, revenue $106\n* Package 9: volume 34 cubic meters, revenue $20\n* Package 10: volume 11 cubic meters, revenue $203\n* Package 11: volume 11 cubic meters, revenue $70\n* Package 12: volume 27 cubic meters, revenue $181\n* Package 13: volume 33 cubic meters, revenue $125\n* Package 14: volume 44 cubic meters, revenue $244\n* Package 15: volume 4 cubic meters, revenue $66\n* Package 16: volume 8 cubic meters, revenue $111\n* Package 17: volume 34 cubic meters, revenue $63\n* Package 18: volume 7 cubic meters, revenue $297\n* Package 19: volume 46 cubic meters, revenue $53\n* Package 20: volume 40 cubic meters, revenue $50\n* Package 21: volume 1 cubic meter, revenue $102\n* Package 22: volume 17 cubic meters, revenue $244\n* Package 23: volume 38 cubic meters, revenue $278\n* Package 24: volume 10 cubic meters, revenue $168\n* Package 25: volume 43 cubic meters, revenue $160\n* Package 26: volume 37 cubic meters, revenue $299\n\nThe aircraft's cargo hold has a maximum capacity of 427 cubic meters. Choose the set of packages that maximizes total revenue without exceeding this volume limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

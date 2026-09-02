@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of research equipment modules onto standardized transport pallets. The modules are as follows:\n\n* Module Alpha: mass 33 kg  \n* Module Beta: mass 45 kg  \n* Module Gamma: mass 67 kg  \n* Module Delta: mass 47 kg  \n* Module Epsilon: mass 42 kg  \n* Module Zeta: mass 51 kg  \n* Module Eta: mass 36 kg  \n* Module Theta: mass 47 kg  \n* Module Iota: mass 61 kg  \n* Module Kappa: mass 53 kg  \n* Module Lambda: mass 48 kg  \n* Module Mu: mass 33 kg  \n* Module Nu: mass 46 kg  \n* Module Xi: mass 36 kg  \n* Module Omicron: mass 52 kg  \n* Module Pi: mass 48 kg  \n* Module Rho: mass 42 kg  \n* Module Sigma: mass 51 kg  \n* Module Tau: mass 44 kg  \n* Module Upsilon: mass 45 kg  \n* Module Phi: mass 42 kg  \n* Module Chi: mass 42 kg  \n* Module Psi: mass 54 kg  \n* Module Omega: mass 37 kg  \n* Module A1: mass 64 kg  \n* Module B1: mass 46 kg  \n* Module C1: mass 40 kg  \n* Module D1: mass 52 kg  \n* Module E1: mass 55 kg  \n* Module F1: mass 31 kg  \n* Module G1: mass 64 kg  \n* Module H1: mass 32 kg  \n\nEach pallet has a maximum safe load capacity of 100 kg. The coordinator must assign every module to exactly one pallet, ensuring that the total mass on any given pallet does not exceed the capacity limit. The objective is to complete the allocation while utilizing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

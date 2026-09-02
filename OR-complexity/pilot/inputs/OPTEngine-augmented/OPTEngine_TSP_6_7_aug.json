@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a specialized technician to service six critical facilities located across a region.  \nThe facility coordinates are as follows:  \n\nFacility P: (99,191)  \nFacility Q: (106,166)  \nFacility R: (20,0)  \nFacility S: (152,49)  \nFacility T: (178,85)  \nFacility U: (40,61)  \n\nTravel distances between facilities, measured in kilometers, are predetermined:  \n\nP to R: 206.7 km  \nP to S: 151.6 km  \nP to T: 132.2 km  \nP to U: 142.8 km  \nQ to R: 187.0 km  \nQ to S: 125.7 km  \nQ to T: 108.4 km  \nQ to U: 124.0 km  \nR to S: 140.8 km  \nR to T: 179.4 km  \nR to U: 64.2 km  \nS to T: 44.4 km  \nS to U: 112.6 km  \nT to U: 140.1 km  \n\nDue to infrastructure limitations, direct travel between Facility P and Facility Q is impossible.  \nAdditionally, operational constraints require that exactly one of the following two connections be part of the route: the link between Facility Q and Facility R, or the link between Facility R and Facility S.  \n\nThe objective is to determine the shortest possible circuit that visits each facility exactly once and returns to the origin, minimizing total travel distance.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized containers to maximize total utility score, while staying within the maximum allowable gross vehicle weight.\n\nThe available containers are:\n* Container A: mass 22 kg, utility 56 credits\n* Container B: mass 5 kg, utility 166 credits\n* Container C: mass 37 kg, utility 226 credits\n* Container D: mass 15 kg, utility 198 credits\n* Container E: mass 25 kg, utility 84 credits\n* Container F: mass 15 kg, utility 157 credits\n* Container G: mass 13 kg, utility 256 credits\n* Container H: mass 43 kg, utility 193 credits\n* Container I: mass 19 kg, utility 206 credits\n* Container J: mass 40 kg, utility 76 credits\n* Container K: mass 50 kg, utility 71 credits\n* Container L: mass 26 kg, utility 191 credits\n* Container M: mass 33 kg, utility 251 credits\n* Container N: mass 15 kg, utility 201 credits\n* Container O: mass 41 kg, utility 193 credits\n\nDue to a compatibility restriction, exactly one of Container A and Container B must be included in the final shipment.\n\nIf Container C is selected, the vehicle's effective weight capacity is diminished by 10 kg.\nThe vehicle's maximum permissible gross weight is 279 kg. The manager must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

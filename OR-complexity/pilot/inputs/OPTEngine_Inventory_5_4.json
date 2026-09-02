@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and reservoir management strategy across a five-day operational window.  \nThe initial water volume stored in the reservoir at the start of the planning interval is 63 megaliters.  \nIn each day \\( t = 1,\\dots,5 \\), the utility may schedule a pumping run from a remote source, where the pumped volume must be between 10 and 35 megaliters.  \nHowever, water pumped on a given day requires a 2‑day transit delay through the pipeline before it becomes available for consumption or storage.  \nThe daily municipal water demand is forecasted as follows:  \n* Day 1: 60 megaliters  \n* Day 2: 52 megaliters  \n* Day 3: 50 megaliters  \n* Day 4: 10 megaliters  \n* Day 5: 49 megaliters  \n\nTemporary shortfalls are permissible, but any unmet demand is lost and cannot be recovered later.  \nThroughout the five‑day horizon, water volumes may be treated as continuous quantities, and the total volume stored in the reservoir at any moment must not exceed its capacity of 67 megaliters.  \nThe total operational cost comprises three elements: a pumping cost of 6 per megaliter pumped; a storage cost of 1 per megaliter kept in the reservoir overnight; and a shortage penalty of 9 per megaliter of demand not satisfied.  \nThe objective is to determine the optimal pumping volume each day and to monitor the resulting reservoir levels and daily deficits so as to minimize the total cost over the planning horizon.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

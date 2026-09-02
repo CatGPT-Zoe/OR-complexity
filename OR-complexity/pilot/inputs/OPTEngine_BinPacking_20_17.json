@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical freight compartments.  \nShipments include:  \n\n* Shipment Alpha: mass 51 units  \n* Shipment Beta: mass 45 units  \n* Shipment Gamma: mass 38 units  \n* Shipment Delta: mass 53 units  \n* Shipment Epsilon: mass 62 units  \n* Shipment Zeta: mass 43 units  \n* Shipment Eta: mass 64 units  \n* Shipment Theta: mass 55 units  \n* Shipment Iota: mass 34 units  \n* Shipment Kappa: mass 38 units  \n* Shipment Lambda: mass 56 units  \n* Shipment Mu: mass 66 units  \n* Shipment Nu: mass 52 units  \n* Shipment Xi: mass 36 units  \n* Shipment Omicron: mass 57 units  \n* Shipment Pi: mass 57 units  \n* Shipment Rho: mass 45 units  \n* Shipment Sigma: mass 60 units  \n* Shipment Tau: mass 54 units  \n* Shipment Upsilon: mass 44 units  \n\nEach compartment can accommodate a maximum total mass of 100 units.  \nAll shipments must be placed into exactly one compartment, and the combined mass in any compartment must not surpass its capacity.  \nThe objective is to utilize the smallest possible number of compartments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

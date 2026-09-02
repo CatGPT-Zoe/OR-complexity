@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 7 delivery trucks to unload at 7 different warehouse docks.\n\nEach truck has a specific unloading sequence represented as pairs (Dock, Unloading time),\nwhere each pair specifies the dock where unloading must occur and the time required to complete it.\nThe order of pairs indicates the strict sequence in which the unloading operations must be performed.\n\nTruck details:\n* Truck 1 requires the sequence: (Dock 3, 5) → (Dock 5, 6) → (Dock 6, 3) → (Dock 1, 6) → (Dock 4, 2) → (Dock 2, 10) → (Dock 7, 9)\n* Truck 2 requires the sequence: (Dock 4, 8) → (Dock 1, 1) → (Dock 3, 9) → (Dock 6, 4) → (Dock 5, 6) → (Dock 7, 2) → (Dock 2, 9)\n* Truck 3 requires the sequence: (Dock 7, 4) → (Dock 6, 10) → (Dock 2, 8) → (Dock 5, 6) → (Dock 3, 3) → (Dock 1, 5) → (Dock 4, 6)\n* Truck 4 requires the sequence: (Dock 5, 9) → (Dock 2, 1) → (Dock 6, 2) → (Dock 4, 6) → (Dock 7, 5) → (Dock 1, 6) → (Dock 3, 1)\n* Truck 5 requires the sequence: (Dock 1, 4) → (Dock 5, 9) → (Dock 7, 9) → (Dock 3, 6) → (Dock 6, 8) → (Dock 4, 2) → (Dock 2, 7)\n* Truck 6 requires the sequence: (Dock 5, 3) → (Dock 7, 5) → (Dock 4, 4) → (Dock 1, 7) → (Dock 6, 5) → (Dock 2, 1) → (Dock 3, 1)\n* Truck 7 requires the sequence: (Dock 7, 9) → (Dock 1, 5) → (Dock 3, 1) → (Dock 6, 4) → (Dock 5, 9) → (Dock 2, 3) → (Dock 4, 5)\n\nEach unloading operation must proceed without interruption once it begins,\nand each dock can only accommodate one truck at a time.\nThe objective is to determine the optimal sequence for all unloading operations at the docks\nso that the total completion time for all trucks is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

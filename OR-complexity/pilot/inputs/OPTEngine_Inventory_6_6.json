@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must schedule its procurement and stock management for a critical component across a six-week operational timeline.  \nInitial component stock at the start of the planning window is 12 units.  \nIn each week \\( t = 1,\\dots,6 \\), the vendor permits the center to submit a procurement request, the size of which must be between 15 and 74 units.  \nEach request, once submitted, experiences a lead time of 3 weeks before the components become available for use or for replenishing the stock.  \nWeekly demand for the component is forecast as follows:  \n* Week 1: 51 units  \n* Week 2: 22 units  \n* Week 3: 29 units  \n* Week 4: 27 units  \n* Week 5: 54 units  \n* Week 6: 21 units  \n\nStockouts are permissible, but any unsatisfied demand is lost and not carried forward.  \nThroughout the six weeks, component quantities may be treated as continuous values, and the total physical inventory on hand at any moment must not surpass the storage limit of 34 units.  \nThe aggregate cost comprises three elements: the procurement cost, charged at 6 per unit ordered; the storage cost, assessed at 1 per unit kept from one week to the next; and the shortage penalty, levied at 6 per unit of unmet weekly demand.  \nThe objective is to decide the optimal procurement quantity each week and to monitor the resulting stock and shortage levels, minimizing the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

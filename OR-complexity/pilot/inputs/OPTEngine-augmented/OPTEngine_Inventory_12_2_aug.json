@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical component over a 12-day operational window.  \nThe initial stock available at the start of the window is 62 units.  \nFor each day \\( t = 1, \\dots, 12 \\), the supplier permits an order whose size must be between 7 and 79 units.  \nEvery order placed, however, requires a lead time of 1 day before it becomes available to meet requirements or replenish the stock.  \nThe required usage of the component on each day is as follows:  \n* Day 1: requirement 33 units  \n* Day 2: requirement 56 units  \n* Day 3: requirement 40 units  \n* Day 4: requirement 30 units  \n* Day 5: requirement 16 units  \n* Day 6: requirement 53 units  \n* Day 7: requirement 38 units  \n* Day 8: requirement 33 units  \n* Day 9: requirement 47 units  \n* Day 10: requirement 54 units  \n* Day 11: requirement 26 units  \n* Day 12: requirement 52 units  \n\nStockouts are allowed, but any unsatisfied requirement is lost and cannot be recovered later.  \nThroughout the planning interval, component quantities may be treated as continuous, and the total physical stock held at any moment must not surpass the storage limit of 62 units.\n\nOn day 9, the maximum allowable order size is reduced to 28 units.  \nOn day 1, the physical stock on hand must be no less than 52 units.\n\nThe overall expense comprises three elements: the procurement cost, charged at 5 per unit ordered; the storage cost, charged at 3 per unit kept overnight; and the penalty for unmet requirements, charged at 7 per unit short. The objective is to decide the optimal order quantity each day and to monitor the resulting stock and shortage levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

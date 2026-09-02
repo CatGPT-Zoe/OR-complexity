@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing facility has 5 different custom parts that must each pass through 5 specialized workstations.\n\nEach part has a predetermined routing sequence, represented as (Workstation, Processing duration) pairs, where each entry specifies the workstation where the operation occurs and the time needed to complete it. The sequence of pairs defines the strict order in which the operations must be executed.\n\nPart details:\n* Part A follows the route: (Station 2, 1) → (Station 5, 2) → (Station 4, 7) → (Station 1, 5) → (Station 3, 2)\n* Part B follows the route: (Station 5, 4) → (Station 3, 2) → (Station 1, 9) → (Station 2, 5) → (Station 4, 6)\n* Part C follows the route: (Station 2, 10) → (Station 3, 3) → (Station 4, 3) → (Station 5, 1) → (Station 1, 9)\n* Part D follows the route: (Station 5, 7) → (Station 3, 3) → (Station 2, 3) → (Station 1, 9) → (Station 4, 2)\n* Part E follows the route: (Station 2, 3) → (Station 5, 4) → (Station 4, 7) → (Station 1, 6) → (Station 3, 10)\n\nOnce an operation begins at a workstation, it must run to completion without interruption, and each workstation can only handle one operation at any given time. The goal is to schedule all operations across the workstations such that the total time to complete all parts is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

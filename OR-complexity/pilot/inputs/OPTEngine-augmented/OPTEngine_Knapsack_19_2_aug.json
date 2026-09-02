@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a fleet of cargo drones for a critical three-day supply mission. They must select a combination of resource crates to maximize the total utility score while adhering to the total payload capacity of the drone swarm.\n\nThe available resource crates are:\n* Crate A: mass 37 units, utility 53 credits\n* Crate B: mass 44 units, utility 197 credits\n* Crate C: mass 42 units, utility 60 credits\n* Crate D: mass 7 units, utility 263 credits\n* Crate E: mass 16 units, utility 276 credits\n* Crate F: mass 3 units, utility 25 credits\n* Crate G: mass 46 units, utility 54 credits\n* Crate H: mass 30 units, utility 143 credits\n* Crate I: mass 48 units, utility 141 credits\n* Crate J: mass 45 units, utility 297 credits\n* Crate K: mass 25 units, utility 93 credits\n* Crate L: mass 16 units, utility 72 credits\n* Crate M: mass 44 units, utility 275 credits\n* Crate N: mass 11 units, utility 264 credits\n* Crate O: mass 42 units, utility 134 credits\n* Crate P: mass 1 unit, utility 125 credits\n* Crate Q: mass 10 units, utility 83 credits\n* Crate R: mass 41 units, utility 89 credits\n* Crate S: mass 49 units, utility 100 credits\n\nFurthermore, due to compatibility protocols, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, it necessitates a dedicated support module that reduces the effective payload capacity of the swarm by 10 units.\nThe aggregate payload capacity for the drone fleet is capped at 389 units. The manager must determine the optimal set of crates to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

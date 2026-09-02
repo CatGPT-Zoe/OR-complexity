@@ -1,0 +1,144 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Knapsack_10_3_aug",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "packages",
+      "description": "Available cargo packages",
+      "values": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "weight",
+      "indices": [{"role": "package", "set_id": "packages"}],
+      "description": "Weight of each cargo package in kg",
+      "unit": "kg",
+      "values": {
+        "A": 36,
+        "B": 45,
+        "C": 26,
+        "D": 50,
+        "E": 28,
+        "F": 16,
+        "G": 22,
+        "H": 10,
+        "I": 30,
+        "J": 31
+      },
+      "data_ref": null
+    },
+    {
+      "id": "profit",
+      "indices": [{"role": "package", "set_id": "packages"}],
+      "description": "Profit contribution of each cargo package in monetary units",
+      "unit": "monetary units",
+      "values": {
+        "A": 88,
+        "B": 238,
+        "C": 104,
+        "D": 225,
+        "E": 99,
+        "F": 242,
+        "G": 277,
+        "H": 191,
+        "I": 54,
+        "J": 114
+      },
+      "data_ref": null
+    },
+    {
+      "id": "max_weight_capacity",
+      "indices": [],
+      "description": "Maximum gross weight capacity of the vehicle in kg",
+      "unit": "kg",
+      "values": 205,
+      "data_ref": null
+    },
+    {
+      "id": "penalty_weight_if_C",
+      "indices": [],
+      "description": "Reduction in effective load capacity (kg) if package C is selected",
+      "unit": "kg",
+      "values": 10,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "package_selection",
+      "canonical_name": "package_selection",
+      "semantic_type": "assignment",
+      "indices": [{"role": "package", "set_id": "packages"}],
+      "description": "Binary decision indicating whether a package is loaded (1) or not (0)",
+      "value_semantics": "binary",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["The manager must determine the optimal set of packages to load."],
+      "confidence": 0.95
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_profit",
+    "normalized_semantics": "maximize the total profit contribution from the selected packages, summed over all packages",
+    "description": "Maximize total profit",
+    "entity_scope": ["package_selection"],
+    "parameter_refs": ["profit"],
+    "source_spans": ["maximize total profit contribution"],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "weight_capacity",
+      "canonical_name": "weight_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "The total weight of selected packages plus a 10 kg penalty if package C is selected must not exceed the vehicle's maximum weight capacity of 205 kg.",
+      "support_entity_ids": ["package_selection"],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "role": "weight_contribution",
+          "aggregation_axes": ["package"],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": ["for the entire shipment"],
+      "condition": null,
+      "parameter_refs": ["weight", "max_weight_capacity", "penalty_weight_if_C"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "adhering to the vehicle's strict weight allowance",
+        "maximum gross weight capacity is 205 kg",
+        "If Package C is selected, it requires special handling equipment that reduces the vehicle's effective load capacity by 10 kg."
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "exactly_one_A_or_B",
+      "canonical_name": "exactly_one_A_or_B",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "Exactly one of Package A or Package B must be included in the shipment.",
+      "support_entity_ids": ["package_selection"],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "role": "selection_status",
+          "aggregation_axes": [],
+          "index_binding": {"package": ["A", "B"]}
+        }
+      ],
+      "quantifiers": ["for the specific packages A and B"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["exactly one of Package A or Package B must be included in the shipment."],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": []
+}

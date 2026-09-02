@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a delivery truck. The available packages are:\n* Package A: volume 38 cubic feet, revenue $157\n* Package B: volume 29 cubic feet, revenue $56\n* Package C: volume 39 cubic feet, revenue $207\n* Package D: volume 21 cubic feet, revenue $133\n* Package E: volume 19 cubic feet, revenue $104\n\nThe truck's cargo hold has a maximum capacity of 102 cubic feet. Choose the set of packages that maximizes total revenue without exceeding this volume limit. Each package must be shipped in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes. Shipments:\n* Component A: volume 33 cubic meters\n* Component B: volume 44 cubic meters\n* Component C: volume 44 cubic meters\n* Component D: volume 61 cubic meters\n* Component E: volume 46 cubic meters\n* Component F: volume 49 cubic meters\n* Component G: volume 66 cubic meters\n* Component H: volume 53 cubic meters\n* Component I: volume 64 cubic meters\n* Component J: volume 50 cubic meters\n* Component K: volume 61 cubic meters\n* Component L: volume 69 cubic meters\n* Component M: volume 62 cubic meters\n* Component N: volume 33 cubic meters\n* Component O: volume 45 cubic meters\n* Component P: volume 38 cubic meters\n* Component Q: volume 43 cubic meters\n* Component R: volume 44 cubic meters\n* Component S: volume 36 cubic meters\n* Component T: volume 38 cubic meters\n* Component U: volume 36 cubic meters\n* Component V: volume 32 cubic meters\n* Component W: volume 68 cubic meters\n* Component X: volume 65 cubic meters\n* Component Y: volume 35 cubic meters\n* Component Z: volume 67 cubic meters\n* Component [: volume 69 cubic meters\n* Component \\: volume 57 cubic meters\n* Component ]: volume 59 cubic meters\n* Component ^: volume 58 cubic meters\n* Component _: volume 55 cubic meters\n* Component `: volume 30 cubic meters\n\nEach cargo plane can carry up to 100 cubic meters of volume. Assign all shipments using the fewest planes possible. Each shipment must be loaded onto exactly one plane, and the total volume in any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

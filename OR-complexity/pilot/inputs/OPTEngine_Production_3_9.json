@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is tasked with distributing three distinct categories of relief supplies to a disaster-stricken region, where each category must undergo three sequential handling phases before being dispatched. The net benefit per ton delivered for each category is specified as follows:\n* For Category Alpha, the net benefit is 11.384 per ton.\n* For Category Beta, the net benefit is 6.523 per ton.\n* For Category Gamma, the net benefit is 8.899 per ton.\n\nThe handling duration required per ton for each phase is detailed below:\n* For Category Alpha, Phase 1 consumes 0.597 (ton-hours), Phase 2 consumes 1.364 (ton-hours), and Phase 3 consumes 0.831 (ton-hours).\n* For Category Beta, Phase 1 consumes 0.525 (ton-hours), Phase 2 consumes 1.107 (ton-hours), and Phase 3 consumes 0.271 (ton-hours).\n* For Category Gamma, Phase 1 consumes 0.382 (ton-hours), Phase 2 consumes 1.979 (ton-hours), and Phase 3 consumes 0.559 (ton-hours).\n\nThe cumulative available time for each handling phase is strictly limited:\n* Phase 1’s total handling duration cannot surpass 55.557 hours.\n* Phase 2’s total handling duration cannot surpass 208.594 hours.\n* Phase 3’s total handling duration cannot surpass 83.41 hours.\n\nUnder the condition that the total processing time for Phase 1, Phase 2, and Phase 3 each remains within its respective temporal capacity, determine the optimal allocation of tonnage for each supply category in order to maximize the aggregate net benefit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

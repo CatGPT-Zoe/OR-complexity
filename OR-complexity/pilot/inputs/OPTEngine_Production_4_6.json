@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_4_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate its fleet to transport four distinct categories of cargo, each requiring passage through four sequential handling terminals.  \nThe revenue generated per ton of cargo is as follows:  \n* For Cargo Alpha, revenue is 17.635 per ton  \n* For Cargo Beta, revenue is 13.744 per ton  \n* For Cargo Gamma, revenue is 15.772 per ton  \n* For Cargo Delta, revenue is 17.106 per ton  \n\nThe terminal processing duration per ton for each cargo category is detailed below:  \n* For Cargo Alpha, Terminal 1 consumes 0.319 (ton-hours), Terminal 2 consumes 0.352 (ton-hours), Terminal 3 consumes 1.764 (ton-hours), Terminal 4 consumes 0.271 (ton-hours)  \n* For Cargo Beta, Terminal 1 consumes 0.605 (ton-hours), Terminal 2 consumes 0.273 (ton-hours), Terminal 3 consumes 0.228 (ton-hours), Terminal 4 consumes 1.719 (ton-hours)  \n* For Cargo Gamma, Terminal 1 consumes 0.795 (ton-hours), Terminal 2 consumes 0.489 (ton-hours), Terminal 3 consumes 0.468 (ton-hours), Terminal 4 consumes 1.381 (ton-hours)  \n* For Cargo Delta, Terminal 1 consumes 1.943 (ton-hours), Terminal 2 consumes 1.109 (ton-hours), Terminal 3 consumes 1.822 (ton-hours), Terminal 4 consumes 1.104 (ton-hours)  \n\nThe cumulative available processing hours at each terminal are strictly limited:  \n* Terminal 1’s total handling time cannot surpass 186.758 hours  \n* Terminal 2’s total handling time cannot surpass 117.932 hours  \n* Terminal 3’s total handling time cannot surpass 164.397 hours  \n* Terminal 4’s total handling time cannot surpass 197.961 hours  \n\nProvided that the operational capacity at Terminals 1 through 4 is not exceeded, determine the optimal tonnage allocation for each cargo category to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

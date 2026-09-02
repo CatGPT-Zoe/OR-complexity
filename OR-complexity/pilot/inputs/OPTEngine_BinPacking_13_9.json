@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: size 32 cubic meters\n* Shipment Beta: size 43 cubic meters\n* Shipment Gamma: size 69 cubic meters\n* Shipment Delta: size 39 cubic meters\n* Shipment Epsilon: size 36 cubic meters\n* Shipment Zeta: size 42 cubic meters\n* Shipment Eta: size 59 cubic meters\n* Shipment Theta: size 54 cubic meters\n* Shipment Iota: size 53 cubic meters\n* Shipment Kappa: size 64 cubic meters\n* Shipment Lambda: size 39 cubic meters\n* Shipment Mu: size 36 cubic meters\n* Shipment Nu: size 68 cubic meters\n\nEach plane has a maximum cargo capacity of 100 cubic meters. Assign all shipments using the fewest planes possible. Every shipment must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

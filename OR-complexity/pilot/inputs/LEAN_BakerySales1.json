@@ -1,0 +1,39 @@
+{
+  "instance_id": "LEAN_BakerySales1",
+  "annotation_mode": "semantic",
+  "problem_text": "A small bakery in South Korea, and each day need to stock up on various types of bread. For each type of bread, we have an expected profit, which can be found in \"products.csv.\" However, the shop has limited storage capacity, with details provided in \"capacity.csv.\".Therefore, we must decide which types of bread to order each day to maximize our total expected profit while staying within our storage limits. The decision variables x_i represents the number of units of bread type i to be ordered each day.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Capacity |\n|---|\n| 180 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Baguette | 888 | 4 |\n| Croissant | 134 | 2 |\n| Sourdough | 129 | 4 |\n| Rye Bread | 370 | 3 |\n| Brioche | 921 | 2 |\n| Focaccia | 765 | 1 |\n| Ciabatta | 154 | 2 |\n| Pita | 837 | 1 |\n| Bagel | 584 | 3 |\n| English Muffin | 365 | 3 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA1/BakerySales1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA1/BakerySales1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

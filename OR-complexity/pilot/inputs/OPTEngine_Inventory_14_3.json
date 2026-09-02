@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical fuel additive over a 14-day operational cycle.  \nInitial stock at the start of the cycle is 62 gallons.  \nOn any day \\( t = 1, \\dots, 14 \\), the supplier permits an order whose volume must be between 7 and 79 gallons.  \nEach order, however, requires a lead time of 1 day before it becomes available to meet requirements or augment stock.  \nDaily consumption of the additive is as follows:  \n\n* Day 1: 10 gallons  \n* Day 2: 17 gallons  \n* Day 3: 33 gallons  \n* Day 4: 56 gallons  \n* Day 5: 40 gallons  \n* Day 6: 30 gallons  \n* Day 7: 16 gallons  \n* Day 8: 53 gallons  \n* Day 9: 38 gallons  \n* Day 10: 33 gallons  \n* Day 11: 47 gallons  \n* Day 12: 54 gallons  \n* Day 13: 26 gallons  \n* Day 14: 52 gallons  \n\nShortfalls are tolerated, but any unsatisfied consumption is lost and not carried forward.  \nThroughout the 14-day window, additive quantities may be treated as continuous, and the physical storage tank can hold at most 62 gallons at any moment.  \nTotal cost comprises three elements: a procurement cost of 5 per gallon ordered; a storage cost of 3 per gallon kept overnight; and a penalty of 7 per gallon of unmet daily consumption.  \nThe objective is to schedule optimal order quantities each day and monitor the consequent stock and shortage levels so as to minimize the aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

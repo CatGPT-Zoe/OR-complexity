@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_9_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A company needs to distribute its marketing budget across 9 different advertising channels to maximize the total expected audience reach.  \nThe profile for each channel is given below:  \n* Channel A: expected reach is 0.026, engagement score is 0.262, allocation limits [0.054, 0.619]  \n* Channel B: expected reach is 0.094, engagement score is 0.273, allocation limits [0.053, 0.794]  \n* Channel C: expected reach is 0.158, engagement score is 0.119, allocation limits [0.073, 0.449]  \n* Channel D: expected reach is 0.158, engagement score is 0.208, allocation limits [0.022, 0.508]  \n* Channel E: expected reach is 0.196, engagement score is 0.202, allocation limits [0.000, 0.465]  \n* Channel F: expected reach is 0.136, engagement score is 0.166, allocation limits [0.002, 0.862]  \n* Channel G: expected reach is 0.096, engagement score is 0.200, allocation limits [0.030, 0.735]  \n* Channel H: expected reach is 0.199, engagement score is 0.111, allocation limits [0.067, 0.368]  \n* Channel I: expected reach is 0.089, engagement score is 0.062, allocation limits [0.054, 0.786]  \n\nEach channel must receive a portion of the total budget within its specified allocation limits, and the sum of all budget portions must equal one.  \nTo ensure adequate digital presence, the company requires that the group of high-visibility channels, represented by the subset L = {D}, collectively receive at least 0.496 of the total budget.  \nAdditionally, the overall campaign engagement score must not exceed 0.190, and the total expected audience reach must be no less than 0.102.  \nDetermine the optimal budget allocation that maximizes total expected audience reach while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager needs to select packages for shipment. The available packages are:\n* Package A: size 13 cubic feet, revenue $105\n* Package B: size 3 cubic feet, revenue $143\n* Package C: size 31 cubic feet, revenue $45\n* Package D: size 6 cubic feet, revenue $76\n* Package E: size 10 cubic feet, revenue $29\n\nThe cargo container has a maximum capacity of 44 cubic feet. Determine which combination of packages will generate the highest total revenue without exceeding this capacity. Each package must be shipped in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_29_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a cargo drone. The available packages are:\n* Package 1: weight 47kg, revenue 110 credits\n* Package 2: weight 4kg, revenue 32 credits\n* Package 3: weight 18kg, revenue 192 credits\n* Package 4: weight 11kg, revenue 252 credits\n* Package 5: weight 20kg, revenue 206 credits\n* Package 6: weight 16kg, revenue 22 credits\n* Package 7: weight 10kg, revenue 291 credits\n* Package 8: weight 18kg, revenue 98 credits\n* Package 9: weight 26kg, revenue 165 credits\n* Package 10: weight 40kg, revenue 145 credits\n* Package 11: weight 2kg, revenue 187 credits\n* Package 12: weight 7kg, revenue 298 credits\n* Package 13: weight 24kg, revenue 185 credits\n* Package 14: weight 34kg, revenue 177 credits\n* Package 15: weight 46kg, revenue 124 credits\n* Package 16: weight 47kg, revenue 269 credits\n* Package 17: weight 16kg, revenue 139 credits\n* Package 18: weight 2kg, revenue 272 credits\n* Package 19: weight 11kg, revenue 171 credits\n* Package 20: weight 46kg, revenue 276 credits\n* Package 21: weight 48kg, revenue 116 credits\n* Package 22: weight 40kg, revenue 145 credits\n* Package 23: weight 23kg, revenue 135 credits\n* Package 24: weight 26kg, revenue 186 credits\n* Package 25: weight 35kg, revenue 203 credits\n* Package 26: weight 21kg, revenue 179 credits\n* Package 27: weight 43kg, revenue 233 credits\n* Package 28: weight 26kg, revenue 159 credits\n* Package 29: weight 15kg, revenue 284 credits\n\nThe drone has a maximum payload capacity of 505 kg. Choose the combination of packages that maximizes total revenue without exceeding this weight limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

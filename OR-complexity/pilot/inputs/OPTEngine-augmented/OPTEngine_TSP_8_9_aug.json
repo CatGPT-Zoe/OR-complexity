@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "An engineering firm must dispatch a field inspector to evaluate eight critical infrastructure sites across a region.  \nThe sites are positioned at these grid coordinates (in miles):  \n\nSite Alpha: (8,146)  \nSite Beta: (23,173)  \nSite Gamma: (132,194)  \nSite Delta: (153,19)  \nSite Epsilon: (191,109)  \nSite Zeta: (193,52)  \nSite Eta: (74,137)  \nSite Theta: (153,106)  \n\nTravel distances between sites are as follows (in miles):  \nAlpha to Gamma: 133.0  \nAlpha to Delta: 192.8  \nAlpha to Epsilon: 186.7  \nAlpha to Zeta: 207.5  \nAlpha to Eta: 66.6  \nAlpha to Theta: 150.4  \nBeta to Gamma: 111.0  \nBeta to Delta: 201.5  \nBeta to Epsilon: 179.8  \nBeta to Zeta: 208.7  \nBeta to Eta: 62.4  \nBeta to Theta: 146.2  \nGamma to Delta: 176.3  \nGamma to Epsilon: 103.5  \nGamma to Zeta: 154.5  \nGamma to Eta: 81.3  \nGamma to Theta: 90.5  \nDelta to Epsilon: 97.7  \nDelta to Zeta: 51.9  \nDelta to Eta: 142.0  \nDelta to Theta: 87.0  \nEpsilon to Zeta: 57.0  \nEpsilon to Eta: 120.3  \nEpsilon to Theta: 38.1  \nZeta to Eta: 146.2  \nZeta to Theta: 67.2  \nEta to Theta: 84.9  \n\nDue to terrain restrictions, there is no direct route connecting Site Alpha and Site Beta.  \nFurthermore, owing to scheduling and access limitations, exactly one of the following two inspection segments must be incorporated into the circuit: the route between Site Beta and Site Gamma, or the route between Site Gamma and Site Delta.  \n\nThe objective is to determine the most efficient inspection tour that visits every site precisely once, begins and ends at the same location, and minimizes the total travel distance.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

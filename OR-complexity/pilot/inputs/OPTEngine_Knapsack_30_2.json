@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_30_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting cargo containers to ship on a freighter. Available containers are:\n\n* Container 1: volume 36 m³, revenue $277\n* Container 2: volume 36 m³, revenue $242\n* Container 3: volume 12 m³, revenue $258\n* Container 4: volume 45 m³, revenue $76\n* Container 5: volume 31 m³, revenue $256\n* Container 6: volume 36 m³, revenue $194\n* Container 7: volume 44 m³, revenue $267\n* Container 8: volume 49 m³, revenue $26\n* Container 9: volume 14 m³, revenue $94\n* Container 10: volume 5 m³, revenue $170\n* Container 11: volume 25 m³, revenue $264\n* Container 12: volume 26 m³, revenue $278\n* Container 13: volume 26 m³, revenue $28\n* Container 14: volume 38 m³, revenue $172\n* Container 15: volume 10 m³, revenue $91\n* Container 16: volume 17 m³, revenue $93\n* Container 17: volume 38 m³, revenue $96\n* Container 18: volume 30 m³, revenue $61\n* Container 19: volume 39 m³, revenue $189\n* Container 20: volume 40 m³, revenue $124\n* Container 21: volume 35 m³, revenue $216\n* Container 22: volume 21 m³, revenue $80\n* Container 23: volume 38 m³, revenue $276\n* Container 24: volume 39 m³, revenue $237\n* Container 25: volume 34 m³, revenue $65\n* Container 26: volume 26 m³, revenue $202\n* Container 27: volume 19 m³, revenue $180\n* Container 28: volume 29 m³, revenue $298\n* Container 29: volume 43 m³, revenue $173\n* Container 30: volume 25 m³, revenue $243\n\nThe freighter has a maximum cargo capacity of 634 m³. Select the container combination that maximizes total revenue without exceeding this volume limit. Each container is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_36_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a series of critical shipments to a fleet of identical cargo aircraft. The shipments are as follows:\n\n* Component Alpha: mass 31 tonnes\n* Component Beta: mass 57 tonnes\n* Component Gamma: mass 36 tonnes\n* Component Delta: mass 50 tonnes\n* Component Epsilon: mass 54 tonnes\n* Component Zeta: mass 57 tonnes\n* Component Eta: mass 53 tonnes\n* Component Theta: mass 45 tonnes\n* Component Iota: mass 38 tonnes\n* Component Kappa: mass 53 tonnes\n* Component Lambda: mass 54 tonnes\n* Component Mu: mass 54 tonnes\n* Component Nu: mass 65 tonnes\n* Component Xi: mass 48 tonnes\n* Component Omicron: mass 42 tonnes\n* Component Pi: mass 43 tonnes\n* Component Rho: mass 34 tonnes\n* Component Sigma: mass 54 tonnes\n* Component Tau: mass 43 tonnes\n* Component Upsilon: mass 41 tonnes\n* Component Phi: mass 42 tonnes\n* Component Chi: mass 33 tonnes\n* Component Psi: mass 51 tonnes\n* Component Omega: mass 54 tonnes\n* Component A1: mass 34 tonnes\n* Component B1: mass 36 tonnes\n* Component C1: mass 68 tonnes\n* Component D1: mass 65 tonnes\n* Component E1: mass 69 tonnes\n* Component F1: mass 32 tonnes\n* Component G1: mass 53 tonnes\n* Component H1: mass 39 tonnes\n* Component I1: mass 40 tonnes\n* Component J1: mass 52 tonnes\n* Component K1: mass 59 tonnes\n* Component L1: mass 56 tonnes\n\nEach aircraft possesses a maximum safe payload capacity of 100 tonnes. The coordinator must assign every shipment to precisely one aircraft, ensuring the cumulative mass on any given aircraft does not surpass its operational limit. The overarching objective is to utilize the smallest possible number of aircraft to complete the entire assignment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

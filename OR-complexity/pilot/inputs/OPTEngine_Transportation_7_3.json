@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments from seven distribution hubs to seven retail outlets, minimizing overall freight expenses.\n\nThe inventory available at each hub (set H) is as follows:  \n*Hub Alpha's stock is 122.  \n*Hub Beta's stock is 174.  \n*Hub Gamma's stock is 184.  \n*Hub Delta's stock is 128.  \n*Hub Epsilon's stock is 61.  \n*Hub Zeta's stock is 106.  \n*Hub Eta's stock is 151.\n\nThe required fulfillment at each retail outlet (set R) is specified below:  \n*Outlet R1 requires 16 units.  \n*Outlet R2 requires 57 units.  \n*Outlet R3 requires 263 units.  \n*Outlet R4 requires 213 units.  \n*Outlet R5 requires 212 units.  \n*Outlet R6 requires 80 units.  \n*Outlet R7 requires 33 units.\n\nThe per-unit freight cost from each hub to each outlet is detailed in the table:\n\n| From / To | R1 | R2 | R3 | R4 | R5 | R6 | R7 |\n|---|---|---|---|---|---|---|---|\n| Alpha   | 16 | 14 | 6  | 5  | 13 | 18 | 8  |\n| Beta    | 17 | 18 | 12 | 3  | 13 | 2  | 14 |\n| Gamma   | 1  | 15 | 3  | 11 | 19 | 14 | 19 |\n| Delta   | 13 | 14 | 10 | 4  | 13 | 1  | 11 |\n| Epsilon | 6  | 20 | 15 | 12 | 3  | 14 | 4  |\n| Zeta    | 8  | 14 | 19 | 13 | 17 | 3  | 13 |\n| Eta     | 10 | 11 | 8  | 11 | 6  | 3  | 17 |\n\nDetermine the optimal shipment quantities to achieve the minimal total freight expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

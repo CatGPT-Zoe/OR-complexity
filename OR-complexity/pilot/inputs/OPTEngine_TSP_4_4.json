@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a critical inspection tour across four regional facilities.\n\nThe travel times between facilities are precisely recorded as follows:\n* Facility Alpha to Beta: 75.4 minutes\n* Facility Alpha to Gamma: 110.4 minutes\n* Facility Alpha to Delta: 37.0 minutes\n* Facility Beta to Gamma: 48.3 minutes\n* Facility Beta to Delta: 110.4 minutes\n* Facility Gamma to Delta: 139.3 minutes\n\nThe objective is to determine the most time-efficient inspection circuit, wherein each facility is visited precisely once before returning to the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

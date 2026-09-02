@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load packages onto identical delivery trucks.  \nPackages:  \n* Package 1: weight 37kg  \n* Package 2: weight 67kg  \n* Package 3: weight 68kg  \n* Package 4: weight 60kg  \n* Package 5: weight 58kg  \n* Package 6: weight 42kg  \n* Package 7: weight 58kg  \n* Package 8: weight 62kg  \n* Package 9: weight 30kg  \n* Package 10: weight 46kg  \n* Package 11: weight 45kg  \n* Package 12: weight 32kg  \n* Package 13: weight 44kg  \n* Package 14: weight 50kg  \n* Package 15: weight 62kg  \n* Package 16: weight 47kg  \n* Package 17: weight 32kg  \n* Package 18: weight 55kg  \n* Package 19: weight 53kg  \n* Package 20: weight 43kg  \n* Package 21: weight 45kg  \n* Package 22: weight 42kg  \n* Package 23: weight 50kg  \n* Package 24: weight 31kg  \n* Package 25: weight 69kg  \n* Package 26: weight 36kg  \n* Package 27: weight 33kg  \n* Package 28: weight 35kg  \n* Package 29: weight 44kg  \n* Package 30: weight 52kg  \n* Package 31: weight 68kg  \n* Package 32: weight 36kg  \n* Package 33: weight 64kg  \n* Package 34: weight 55kg  \n* Package 35: weight 47kg  \n* Package 36: weight 70kg  \n* Package 37: weight 42kg  \n* Package 38: weight 41kg  \n\nEach truck can carry a maximum load of 100 kg. Load all packages using the fewest trucks possible. Every package must be placed in exactly one truck, and the total weight in a truck must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical cargo planes.  \nShipments:  \n* Component α: mass 31 tons  \n* Component β: mass 67 tons  \n* Component γ: mass 35 tons  \n* Component δ: mass 59 tons  \n* Component ε: mass 46 tons  \n* Component ζ: mass 67 tons  \n* Component η: mass 46 tons  \n* Component θ: mass 65 tons  \n* Component ι: mass 54 tons  \n* Component κ: mass 40 tons  \n* Component λ: mass 45 tons  \n* Component μ: mass 70 tons  \n* Component ν: mass 37 tons  \n* Component ξ: mass 67 tons  \n* Component ο: mass 63 tons  \n* Component π: mass 40 tons  \n* Component ρ: mass 61 tons  \n* Component σ: mass 70 tons  \n* Component τ: mass 45 tons  \n* Component υ: mass 30 tons  \n* Component φ: mass 44 tons  \n* Component χ: mass 39 tons  \n* Component ψ: mass 68 tons  \n* Component ω: mass 39 tons  \n* Component Ω: mass 70 tons  \n* Component Σ: mass 39 tons  \n* Component Φ: mass 67 tons  \n\nEach aircraft can carry a maximum load of 100 tons. Assign every shipment to exactly one aircraft, ensuring the total mass on any aircraft does not exceed its capacity. The objective is to utilize the smallest possible number of aircraft.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

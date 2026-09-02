@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with allocating a series of shipments into standardized freight modules. The cargo manifests are as follows:\n* Shipment Alpha: mass 59 units\n* Shipment Beta: mass 69 units\n* Shipment Gamma: mass 70 units\n* Shipment Delta: mass 51 units\n* Shipment Epsilon: mass 37 units\n* Shipment Zeta: mass 69 units\n* Shipment Eta: mass 48 units\n* Shipment Theta: mass 38 units\n* Shipment Iota: mass 54 units\n* Shipment Kappa: mass 48 units\n* Shipment Lambda: mass 37 units\n* Shipment Mu: mass 63 units\n* Shipment Nu: mass 42 units\n* Shipment Xi: mass 32 units\n\nEach freight module possesses a maximum capacity of 100 mass units. The objective is to assign every shipment to a module, ensuring the aggregate mass within any single module does not surpass its designated limit, while simultaneously minimizing the total number of modules employed. Every distinct shipment must be placed into precisely one module.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

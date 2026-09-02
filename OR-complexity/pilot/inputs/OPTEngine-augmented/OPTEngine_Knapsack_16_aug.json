@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must assemble a shipment of cargo containers to maximize total profit while adhering to the aircraft's weight restriction.\n\nThe available containers are:\n* Container A: weight 49 tons, profit 89 units\n* Container B: weight 26 tons, profit 247 units\n* Container C: weight 46 tons, profit 286 units\n* Container D: weight 14 tons, profit 198 units\n* Container E: weight 46 tons, profit 33 units\n* Container F: weight 2 tons, profit 217 units\n* Container G: weight 14 tons, profit 54 units\n* Container H: weight 27 tons, profit 220 units\n* Container I: weight 35 tons, profit 117 units\n* Container J: weight 41 tons, profit 12 units\n* Container K: weight 43 tons, profit 79 units\n* Container L: weight 34 tons, profit 260 units\n* Container M: weight 20 tons, profit 204 units\n* Container N: weight 35 tons, profit 285 units\n* Container O: weight 5 tons, profit 50 units\n* Container P: weight 39 tons, profit 262 units\n\nFurthermore, due to routing incompatibility, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, it requires special handling equipment that reduces the effective aircraft payload capacity by 10 tons.\nThe aircraft's maximum payload capacity is 333 tons. The manager must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

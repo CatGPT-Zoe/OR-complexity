@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate computing tasks across a network of distributed data centers to minimize total processing latency.  \n\nThe available computational capacity at each source data center (set S) is as follows:  \n*S1’s capacity is 158.  \n*S2’s capacity is 114.  \n*S3’s capacity is 166.  \n*S4’s capacity is 127.  \n*S5’s capacity is 100.  \n*S6’s capacity is 148.  \n\nThe required workload that must be handled at each client cluster (set C) is specified below:  \n*C1’s workload is 42.  \n*C2’s workload is 150.  \n*C3’s workload is 141.  \n*C4’s workload is 116.  \n*C5’s workload is 273.  \n*C6’s workload is 8.  \n\nThe unit latency (in milliseconds) for transmitting a standard task unit from each source data center to each client cluster is given in the table:  \n\n| From / To | C1 | C2 | C3 | C4 | C5 | C6 |\n|-----------|----|----|----|----|----|----|\n| S1        | 13 | 9  | 1  | 19 | 2  | 20 |\n| S2        | 16 | 10 | 8  | 20 | 12 | 8  |\n| S3        | 7  | 20 | 9  | 5  | 4  | 2  |\n| S4        | 10 | 15 | 2  | 19 | 12 | 5  |\n| S5        | 3  | 10 | 11 | 14 | 6  | 7  |\n| S6        | 5  | 18 | 12 | 17 | 17 | 9  |\n\nDetermine the optimal distribution of tasks to minimize the total transmission latency.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

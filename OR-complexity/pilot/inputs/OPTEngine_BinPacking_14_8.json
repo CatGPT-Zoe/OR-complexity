@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. Packages:\n* Package Alpha: size 55 cubic feet\n* Package Beta: size 58 cubic feet\n* Package Gamma: size 53 cubic feet\n* Package Delta: size 42 cubic feet\n* Package Epsilon: size 59 cubic feet\n* Package Zeta: size 52 cubic feet\n* Package Eta: size 70 cubic feet\n* Package Theta: size 34 cubic feet\n* Package Iota: size 32 cubic feet\n* Package Kappa: size 32 cubic feet\n* Package Lambda: size 61 cubic feet\n* Package Mu: size 46 cubic feet\n* Package Nu: size 31 cubic feet\n* Package Xi: size 63 cubic feet\n\nEach truck can carry up to 100 cubic feet of cargo. Assign all packages using the fewest trucks. Each package must be loaded onto exactly one truck, and the total cargo volume in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

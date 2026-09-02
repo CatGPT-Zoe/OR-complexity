@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_33",
+  "annotation_mode": "semantic",
+  "problem_text": "A wealthy noble passed away, leaving the following inheritance:\n\n- A painting by Caillebotte: $25000\n- A bust of Diocletian: $5000\n- A Yuan dynasty Chinese vase: $20000\n- A 911 Porsche: $40000\n- Three diamonds: each $12000\n- A Louis XV sofa: $3000\n- Two very precious Jack Russell racing dogs: each $3000 (will stipulates they must not be separated)\n- A sculpture from 200 AD: $10000\n- A sailing boat: $15000\n- A Harley Davidson motorcycle: $10000\n- A piece of furniture once belonging to Cavour: $13000,\n\nwhich must be shared between two sons. How to formulate a mathematical program and solve it using COPTPY to minimize the difference in value between the two parts?",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

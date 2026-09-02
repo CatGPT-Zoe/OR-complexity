@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A network of six remote research stations requires a maintenance team to conduct a periodic inspection circuit. The stations are positioned at the following GPS waypoints:\n\nStation Alpha: (41,87)\nStation Bravo: (135,64)\nStation Charlie: (30,152)\nStation Delta: (113,170)\nStation Echo: (44,3)\nStation Foxtrot: (120,174)\n\nTravel distances between stations, measured in nautical miles, are predefined:\n\nAlpha to Charlie: 65.9 nm\nAlpha to Delta: 109.9 nm\nAlpha to Echo: 84.1 nm\nAlpha to Foxtrot: 117.5 nm\nBravo to Charlie: 137.0 nm\nBravo to Delta: 108.3 nm\nBravo to Echo: 109.6 nm\nBravo to Foxtrot: 111.0 nm\nCharlie to Delta: 84.9 nm\nCharlie to Echo: 149.7 nm\nCharlie to Foxtrot: 92.6 nm\nDelta to Echo: 180.7 nm\nDelta to Foxtrot: 8.1 nm\nEcho to Foxtrot: 187.1 nm\n\nDue to permanent terrain obstructions, direct transit between Station Alpha and Station Bravo is impossible. Furthermore, operational protocol mandates that the inspection route must incorporate exactly one of two critical supply corridors: either the link between Station Bravo and Station Charlie, or the link between Station Charlie and Station Delta.\n\nThe objective is to determine the most efficient closed-loop itinerary that visits every station precisely once and returns to the point of origin, minimizing the total distance traversed.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

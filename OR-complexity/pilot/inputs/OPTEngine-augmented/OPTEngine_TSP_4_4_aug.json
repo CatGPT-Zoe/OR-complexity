@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to service equipment at four distinct facilities:\n\nFacility Alpha: Coordinates (72, 35)\nFacility Beta: Coordinates (193, 24)\nFacility Gamma: Coordinates (158, 64)\nFacility Delta: Coordinates (136, 180)\n\nThe cable-run distances between facilities, measured in meters, are predetermined:\nAlpha to Gamma: 90.8 meters\nAlpha to Delta: 158.5 meters\nBeta to Gamma: 53.2 meters\nBeta to Delta: 166.1 meters\nGamma to Delta: 118.1 meters\n\nDue to infrastructure limitations, a direct connection between Facility Alpha and Facility Beta is unavailable. Furthermore, the routing plan must incorporate exactly one of two critical cable segments: either the link between Beta and Gamma, or the link between Gamma and Delta.\n\nThe objective is to determine the minimal total cable-run distance for a closed-loop inspection tour, where the technician begins at one facility, visits each of the other three exactly once, and finally returns to the starting point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

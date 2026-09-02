@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A coastal water utility must devise a pumping and reservoir management strategy across a nine-day forecast window.  \nThe initial water volume stored in the reservoir at the start of the planning interval is 40 megaliters.  \nIn each day \\( t = 1,\\dots,9 \\), the desalination plant can be activated to pump an amount of water that must be between 10 and 54 megaliters.  \nHowever, pumped water requires a pipeline transit time of 3 days before it becomes available in the reservoir for meeting consumption or raising storage levels.  \nThe projected municipal consumption for each day is as follows:  \n\n* Day 1: 24 megaliters  \n* Day 2: 39 megaliters  \n* Day 3: 22 megaliters  \n* Day 4: 31 megaliters  \n* Day 5: 48 megaliters  \n* Day 6: 16 megaliters  \n* Day 7: 48 megaliters  \n* Day 8: 15 megaliters  \n* Day 9: 60 megaliters  \n\nTemporary supply deficits are tolerated, but any unsatisfied consumption is lost and not deferred to later days.  \nThroughout the nine days, water volumes may be treated as continuous quantities, and the total volume stored in the reservoir at any moment must not exceed its capacity of 40 megaliters.  \n\nOn the fourth day, the maximum allowable pumping volume is restricted to 33 megaliters.  \nOn the second day, the reservoir must contain at least 13 megaliters of usable water.  \n\nThe total operational expenditure comprises three elements: the pumping cost, charged at 3 per megaliter pumped; the storage cost, charged at 2 per megaliter held overnight; and a penalty for consumption shortfalls, levied at 6 per megaliter of unmet demand.  \nThe objective is to decide the optimal pumping volume each day and to monitor the resulting reservoir storage and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

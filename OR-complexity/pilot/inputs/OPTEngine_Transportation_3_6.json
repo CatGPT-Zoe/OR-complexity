@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate the dispatch of specialized technicians from three regional offices to three client facilities for urgent maintenance tasks. The objective is to minimize the total travel expense incurred.\n\nThe number of available technicians at each regional office is fixed:\n* The first office has 179 technicians.\n* The second office has 56 technicians.\n* The third office has 193 technicians.\n\nThe required number of technicians at each client facility is predetermined:\n* The first facility requires 132 technicians.\n* The second facility requires 110 technicians.\n* The third facility requires 44 technicians.\n\nThe per-technician travel cost from each office to each facility is provided in the table below:\n| Dispatch / Destination | Facility 1 | Facility 2 | Facility 3 |\n|--|-|-|\n| Office 1 | 19 | 9 | 1 |\n| Office 2 | 6 | 14 | 11 |\n| Office 3 | 9 | 5 | 7 |\n\nDetermine the optimal assignment of technicians to minimize the aggregate travel expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

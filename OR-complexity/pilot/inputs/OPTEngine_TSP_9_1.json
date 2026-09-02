@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a specialized courier's circuit across nine regional distribution centers.\n\nThe travel durations between centers are recorded in minutes:\n* Alpha to Bravo: 151.0 minutes\n* Alpha to Charlie: 123.2 minutes\n* Alpha to Delta: 145.1 minutes\n* Alpha to Echo: 174.4 minutes\n* Alpha to Foxtrot: 190.6 minutes\n* Alpha to Golf: 66.6 minutes\n* Alpha to Hotel: 204.0 minutes\n* Alpha to India: 251.5 minutes\n* Bravo to Charlie: 192.1 minutes\n* Bravo to Delta: 168.7 minutes\n* Bravo to Echo: 31.6 minutes\n* Bravo to Foxtrot: 132.6 minutes\n* Bravo to Golf: 131.2 minutes\n* Bravo to Hotel: 101.5 minutes\n* Bravo to India: 195.5 minutes\n* Charlie to Delta: 49.1 minutes\n* Charlie to Echo: 196.8 minutes\n* Charlie to Foxtrot: 134.2 minutes\n* Charlie to Golf: 71.8 minutes\n* Charlie to Hotel: 177.5 minutes\n* Charlie to India: 170.8 minutes\n* Delta to Echo: 166.2 minutes\n* Delta to Foxtrot: 86.6 minutes\n* Delta to Golf: 80.1 minutes\n* Delta to Hotel: 133.8 minutes\n* Delta to India: 122.7 minutes\n* Echo to Foxtrot: 114.7 minutes\n* Echo to Golf: 144.0 minutes\n* Echo to Hotel: 75.0 minutes\n* Echo to India: 173.2 minutes\n* Foxtrot to Golf: 128.0 minutes\n* Foxtrot to Hotel: 54.0 minutes\n* Foxtrot to India: 66.7 minutes\n* Golf to Hotel: 151.3 minutes\n* Golf to India: 186.0 minutes\n* Hotel to India: 100.0 minutes\n\nThe objective is to determine the most time-efficient closed-loop itinerary, ensuring the courier stops at every distribution center precisely once before returning to the initial point of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

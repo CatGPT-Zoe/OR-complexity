@@ -1,0 +1,554 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_Inventory_5_2_aug",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "SET_DAY",
+      "canonical_name": "planning_days",
+      "members": [1, 2, 3, 4, 5],
+      "ordering": "chronological",
+      "source_grounding": "5-day operational window; in each day t = 1, ..., 5",
+      "source_spans": [
+        "over a 5-day operational window",
+        "In each day t = 1, ..., 5"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "PAR_INITIAL_STOCK",
+      "canonical_name": "initial_stock",
+      "value": 10,
+      "unit": "gallon",
+      "source_grounding": "The initial stock at the start of the window is 10 gallons.",
+      "source_spans": [
+        "The initial stock at the start of the window is 10 gallons."
+      ]
+    },
+    {
+      "id": "PAR_PROCUREMENT_MIN",
+      "canonical_name": "minimum_daily_procurement_request",
+      "value": 10,
+      "unit": "gallon",
+      "source_grounding": "the volume required to fall between 10 and 76 gallons",
+      "source_spans": [
+        "with the volume required to fall between 10 and 76 gallons"
+      ]
+    },
+    {
+      "id": "PAR_PROCUREMENT_MAX",
+      "canonical_name": "maximum_daily_procurement_request",
+      "value": 76,
+      "unit": "gallon",
+      "source_grounding": "the volume required to fall between 10 and 76 gallons",
+      "source_spans": [
+        "with the volume required to fall between 10 and 76 gallons"
+      ]
+    },
+    {
+      "id": "PAR_DAY1_PROCUREMENT_MAX",
+      "canonical_name": "day_specific_maximum_procurement_request",
+      "value": 52,
+      "unit": "gallon",
+      "index": {
+        "day": 1
+      },
+      "source_grounding": "On the first day, the maximum allowable procurement volume is 52 gallons.",
+      "source_spans": [
+        "On the first day, the maximum allowable procurement volume is 52 gallons."
+      ]
+    },
+    {
+      "id": "PAR_LEAD_TIME",
+      "canonical_name": "procurement_lead_time",
+      "value": 4,
+      "unit": "day",
+      "source_grounding": "every request submitted is subject to a 4-day lead time",
+      "source_spans": [
+        "every request submitted is subject to a 4-day lead time before the additive becomes available for consumption or to replenish reserves"
+      ]
+    },
+    {
+      "id": "PAR_DAILY_REQUIREMENT",
+      "canonical_name": "daily_consumption_requirement",
+      "index_set": "SET_DAY",
+      "values": {
+        "1": 25,
+        "2": 19,
+        "3": 44,
+        "4": 38,
+        "5": 15
+      },
+      "unit": "gallon",
+      "source_grounding": "The consumption requirement for the additive on each day is as follows.",
+      "source_spans": [
+        "Day 1: requirement 25 gallons",
+        "Day 2: requirement 19 gallons",
+        "Day 3: requirement 44 gallons",
+        "Day 4: requirement 38 gallons",
+        "Day 5: requirement 15 gallons"
+      ]
+    },
+    {
+      "id": "PAR_STORAGE_CAPACITY",
+      "canonical_name": "storage_capacity",
+      "value": 34,
+      "unit": "gallon",
+      "source_grounding": "the aggregate volume held in storage at any moment must not surpass the tank capacity of 34 gallons",
+      "source_spans": [
+        "the aggregate volume held in storage at any moment must not surpass the tank capacity of 34 gallons"
+      ]
+    },
+    {
+      "id": "PAR_TERMINAL_STOCK_MIN",
+      "canonical_name": "minimum_terminal_stock",
+      "value": 13,
+      "unit": "gallon",
+      "index": {
+        "day": 5
+      },
+      "source_grounding": "By the conclusion of day 5, the physical stock on hand must be no less than 13 gallons.",
+      "source_spans": [
+        "By the conclusion of day 5, the physical stock on hand must be no less than 13 gallons."
+      ]
+    },
+    {
+      "id": "PAR_PROCUREMENT_UNIT_COST",
+      "canonical_name": "procurement_cost_per_requested_unit",
+      "value": 4,
+      "unit": "cost_per_gallon",
+      "source_grounding": "the procurement expense, calculated at 4 per gallon requested",
+      "source_spans": [
+        "the procurement expense, calculated at 4 per gallon requested"
+      ]
+    },
+    {
+      "id": "PAR_STORAGE_UNIT_COST",
+      "canonical_name": "storage_cost_per_carried_unit",
+      "value": 1,
+      "unit": "cost_per_gallon",
+      "source_grounding": "the storage expense, calculated at 1 per gallon retained from one day to the next",
+      "source_spans": [
+        "the storage expense, calculated at 1 per gallon retained from one day to the next"
+      ]
+    },
+    {
+      "id": "PAR_DEFICIT_UNIT_PENALTY",
+      "canonical_name": "unmet_requirement_penalty_per_unit",
+      "value": 10,
+      "unit": "cost_per_gallon",
+      "source_grounding": "the deficit penalty, levied at 10 per gallon of unmet requirement",
+      "source_spans": [
+        "the deficit penalty, levied at 10 per gallon of unmet requirement"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT_PROCUREMENT_REQUEST",
+      "canonical_family": "procurement_request_volume",
+      "canonical_name": "procurement requested",
+      "entity_role": "decision",
+      "indices": ["SET_DAY"],
+      "temporal_granularity": "day",
+      "unit": "gallon",
+      "domain_metadata": {
+        "numeric_type": "continuous",
+        "quantity_kind": "volume"
+      },
+      "aliases": [
+        "procurement request",
+        "procurement volume",
+        "volume requested"
+      ],
+      "source_grounding": "the supplier permits the company to submit a procurement request; additive volumes are treated as continuous quantities",
+      "source_spans": [
+        "In each day t = 1, ..., 5, the supplier permits the company to submit a procurement request",
+        "Throughout the operational window, additive volumes are treated as continuous quantities",
+        "ascertain the optimal procurement volume for each day"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "ENT_STOCK",
+      "canonical_family": "physical_inventory_stock",
+      "canonical_name": "additive stock on hand",
+      "entity_role": "state",
+      "indices": ["SET_DAY"],
+      "temporal_granularity": "day",
+      "unit": "gallon",
+      "state_timing": "day-boundary stock; exact within-day measurement convention is not explicitly stated",
+      "domain_metadata": {
+        "numeric_type": "continuous",
+        "quantity_kind": "physical_volume"
+      },
+      "aliases": [
+        "stock",
+        "physical stock on hand",
+        "volume held in storage",
+        "reserves"
+      ],
+      "source_grounding": "initial stock; volume held in storage; physical stock on hand; consequent stock levels",
+      "source_spans": [
+        "The initial stock at the start of the window is 10 gallons.",
+        "the aggregate volume held in storage at any moment",
+        "the physical stock on hand",
+        "monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "ENT_UNMET_REQUIREMENT",
+      "canonical_family": "unmet_demand_volume",
+      "canonical_name": "unmet additive requirement",
+      "entity_role": "service_outcome",
+      "indices": ["SET_DAY"],
+      "temporal_granularity": "day",
+      "unit": "gallon",
+      "domain_metadata": {
+        "numeric_type": "continuous",
+        "quantity_kind": "volume"
+      },
+      "aliases": [
+        "supply deficit",
+        "unsatisfied requirement",
+        "deficit"
+      ],
+      "source_grounding": "Supply deficits are tolerated; deficit levels are monitored and penalized per gallon of unmet requirement.",
+      "source_spans": [
+        "Supply deficits are tolerated",
+        "any unsatisfied requirement is entirely forfeited",
+        "the deficit penalty, levied at 10 per gallon of unmet requirement",
+        "monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "total procurement_storage_and_deficit_expense",
+    "components": [
+      {
+        "canonical_name": "procurement_expense",
+        "entity_id": "ENT_PROCUREMENT_REQUEST",
+        "coefficient_parameter_ref": "PAR_PROCUREMENT_UNIT_COST",
+        "aggregation_scope": "all planning days",
+        "normalized_semantics": "Charge 4 per gallon requested on each planning day."
+      },
+      {
+        "canonical_name": "storage_expense",
+        "entity_id": "ENT_STOCK",
+        "coefficient_parameter_ref": "PAR_STORAGE_UNIT_COST",
+        "aggregation_scope": "stock retained across consecutive-day boundaries",
+        "normalized_semantics": "Charge 1 per gallon retained from one day to the next; the exact inclusion of the terminal stock level is unresolved."
+      },
+      {
+        "canonical_name": "deficit_penalty",
+        "entity_id": "ENT_UNMET_REQUIREMENT",
+        "coefficient_parameter_ref": "PAR_DEFICIT_UNIT_PENALTY",
+        "aggregation_scope": "all planning days",
+        "normalized_semantics": "Charge 10 per gallon of unmet daily requirement."
+      }
+    ],
+    "source_grounding": "The aggregate expense comprises procurement expense, storage expense, and deficit penalty, and is to be minimized.",
+    "source_spans": [
+      "The aggregate expense over the planning window comprises three elements: the procurement expense, calculated at 4 per gallon requested; the storage expense, calculated at 1 per gallon retained from one day to the next; and the deficit penalty, levied at 10 per gallon of unmet requirement.",
+      "in order to minimize the total expense"
+    ]
+  },
+  "obligations": [
+    {
+      "id": "OBL_PROCUREMENT_LOWER_BOUND",
+      "canonical_family": "procurement_request_lower_bound",
+      "canonical_name": "minimum daily procurement request",
+      "structural_form": "LOWER_BOUND",
+      "business_role": "supplier_request_policy",
+      "normalized_semantics": "On every planning day, requested procurement volume must be at least 10 gallons.",
+      "support_entity_ids": [
+        "ENT_PROCUREMENT_REQUEST"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "argument_role": "request_volume",
+          "time_slot": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "universal_temporal",
+      "parameter_refs": [
+        "PAR_PROCUREMENT_MIN"
+      ],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "Each daily procurement-request volume is required to fall between 10 and 76 gallons.",
+      "source_spans": [
+        "In each day t = 1, ..., 5, the supplier permits the company to submit a procurement request, with the volume required to fall between 10 and 76 gallons."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_PROCUREMENT_UPPER_BOUND",
+      "canonical_family": "procurement_request_upper_bound",
+      "canonical_name": "maximum daily procurement request",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "supplier_request_policy",
+      "normalized_semantics": "The daily requested procurement volume may not exceed 76 gallons, except that the day-1 maximum is 52 gallons.",
+      "support_entity_ids": [
+        "ENT_PROCUREMENT_REQUEST"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "argument_role": "request_volume",
+          "time_slot": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "universal_temporal_with_override",
+      "parameter_refs": [
+        "PAR_PROCUREMENT_MAX",
+        "PAR_DAY1_PROCUREMENT_MAX"
+      ],
+      "parameter_overrides": [
+        {
+          "condition": "t = 1",
+          "base_parameter_ref": "PAR_PROCUREMENT_MAX",
+          "override_parameter_ref": "PAR_DAY1_PROCUREMENT_MAX",
+          "effect": "replace the base upper bound of 76 gallons by 52 gallons"
+        }
+      ],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "normalization_rationale": "The day-1 maximum is a parameter override of the same upper-bound family, not a separate obligation family.",
+      "source_grounding": "The general maximum is 76 gallons, with a first-day maximum of 52 gallons.",
+      "source_spans": [
+        "with the volume required to fall between 10 and 76 gallons",
+        "On the first day, the maximum allowable procurement volume is 52 gallons."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_STOCK_FLOW_BALANCE",
+      "canonical_family": "inventory_stock_conservation",
+      "canonical_name": "daily stock transition with delayed procurement",
+      "structural_form": "BALANCE",
+      "business_role": "material_conservation",
+      "normalized_semantics": "Daily stock is carried from the preceding day, increased by procurement that becomes available after the 4-day lead time, and reduced by the portion of that day's requirement that is not recorded as unmet. The initial boundary stock is 10 gallons.",
+      "support_entity_ids": [
+        "ENT_PROCUREMENT_REQUEST",
+        "ENT_STOCK",
+        "ENT_UNMET_REQUIREMENT"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_STOCK",
+          "argument_role": "current_stock",
+          "time_slot": "t"
+        },
+        {
+          "entity_id": "ENT_STOCK",
+          "argument_role": "preceding_stock",
+          "time_slot": "t-1"
+        },
+        {
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "argument_role": "procurement_becoming_available",
+          "time_slot": "t-PAR_LEAD_TIME"
+        },
+        {
+          "entity_id": "ENT_UNMET_REQUIREMENT",
+          "argument_role": "unmet_part_of_current_requirement",
+          "time_slot": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "universal_temporal_with_boundary_variant",
+      "parameter_refs": [
+        "PAR_INITIAL_STOCK",
+        "PAR_LEAD_TIME",
+        "PAR_DAILY_REQUIREMENT"
+      ],
+      "boundary_variants": [
+        {
+          "condition": "t = 1",
+          "normalized_semantics": "Use the stated initial stock of 10 gallons in place of preceding-day stock."
+        },
+        {
+          "condition": "t-PAR_LEAD_TIME is not a member of SET_DAY",
+          "normalized_semantics": "No procurement request made within the stated planning window occupies the delayed-arrival slot."
+        },
+        {
+          "condition": "t = 5",
+          "normalized_semantics": "The request submitted on day 1 reaches its 4-day availability time on day 5."
+        }
+      ],
+      "coupling_active": true,
+      "source_status": "operationally_implied",
+      "normalization_rationale": "Initial stock and the lead-time shift are boundary and temporal-incidence variants of one stock-conservation family.",
+      "source_grounding": "Stock starts at 10 gallons; requests become available after four days for consumption or reserve replenishment; daily requirements may be partly unmet; consequent stock and deficit levels are monitored.",
+      "source_spans": [
+        "The initial stock at the start of the window is 10 gallons.",
+        "every request submitted is subject to a 4-day lead time before the additive becomes available for consumption or to replenish reserves",
+        "The consumption requirement for the additive on each day is as follows:",
+        "Supply deficits are tolerated",
+        "monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "OBL_UNMET_REQUIREMENT_NO_CARRYOVER",
+      "canonical_family": "unmet_demand_no_carryover",
+      "canonical_name": "forfeiture of unmet daily requirement",
+      "structural_form": "NO_CARRYOVER",
+      "business_role": "lost_demand_policy",
+      "normalized_semantics": "Any requirement left unmet on a day is forfeited and does not become demand or backlog on a later day.",
+      "support_entity_ids": [
+        "ENT_UNMET_REQUIREMENT"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_UNMET_REQUIREMENT",
+          "argument_role": "forfeited_unmet_requirement",
+          "time_slot": "t"
+        },
+        {
+          "entity_id": "ENT_UNMET_REQUIREMENT",
+          "argument_role": "prohibited_carryover",
+          "time_slot": "later than t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "universal_temporal",
+      "parameter_refs": [],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "Any unsatisfied requirement is entirely forfeited and will not be carried forward.",
+      "source_spans": [
+        "Supply deficits are tolerated, but any unsatisfied requirement is entirely forfeited and will not be carried forward."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_STORAGE_CAPACITY",
+      "canonical_family": "inventory_storage_capacity_upper_bound",
+      "canonical_name": "tank capacity limit",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "physical_storage_limit",
+      "normalized_semantics": "The volume of additive held in storage may not exceed 34 gallons.",
+      "support_entity_ids": [
+        "ENT_STOCK"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_STOCK",
+          "argument_role": "stored_volume",
+          "time_slot": "t"
+        }
+      ],
+      "quantifier": "throughout the operational window",
+      "scope_kind": "universal_temporal",
+      "parameter_refs": [
+        "PAR_STORAGE_CAPACITY"
+      ],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "The aggregate volume held in storage at any moment must not surpass 34 gallons.",
+      "source_spans": [
+        "the aggregate volume held in storage at any moment must not surpass the tank capacity of 34 gallons"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "OBL_TERMINAL_STOCK_LOWER_BOUND",
+      "canonical_family": "terminal_inventory_lower_bound",
+      "canonical_name": "minimum stock at conclusion of horizon",
+      "structural_form": "LOWER_BOUND",
+      "business_role": "terminal_reserve_requirement",
+      "normalized_semantics": "At the conclusion of day 5, physical stock on hand must be at least 13 gallons.",
+      "support_entity_ids": [
+        "ENT_STOCK"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_STOCK",
+          "argument_role": "terminal_stock",
+          "time_slot": "5"
+        }
+      ],
+      "quantifier": "at the conclusion of day 5",
+      "scope_kind": "terminal",
+      "parameter_refs": [
+        "PAR_TERMINAL_STOCK_MIN"
+      ],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "By the conclusion of day 5, physical stock must be no less than 13 gallons.",
+      "source_spans": [
+        "By the conclusion of day 5, the physical stock on hand must be no less than 13 gallons."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "derived_checks": [
+    {
+      "id": "CHK_UNMET_NOT_ABOVE_REQUIREMENT",
+      "canonical_name": "unmet requirement does not exceed daily requirement",
+      "normalized_semantics": "For each day, the amount described as unmet requirement cannot exceed that day's stated requirement.",
+      "support_entity_ids": [
+        "ENT_UNMET_REQUIREMENT"
+      ],
+      "parameter_refs": [
+        "PAR_DAILY_REQUIREMENT"
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "derivation_basis": "Definitional consequence of interpreting the deficit as the unsatisfied portion of the day's requirement; it is not promoted to an independent primary obligation.",
+      "source_grounding": "The text calls the deficit an unsatisfied or unmet requirement and provides each day's total requirement.",
+      "source_spans": [
+        "any unsatisfied requirement is entirely forfeited",
+        "the deficit penalty, levied at 10 per gallon of unmet requirement",
+        "The consumption requirement for the additive on each day is as follows:"
+      ],
+      "confidence": 0.97
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "UNRESOLVED_PREWINDOW_PIPELINE",
+      "issue": "The text does not explicitly state whether procurement requests placed before day 1 can arrive during the five-day window.",
+      "impact": "Such arrivals, if allowed, would affect the stock transition during days 1 through 4.",
+      "source_spans": [
+        "The initial stock at the start of the window is 10 gallons.",
+        "every request submitted is subject to a 4-day lead time"
+      ]
+    },
+    {
+      "id": "UNRESOLVED_STOCK_TIMING",
+      "issue": "The exact within-day timing of receipt, consumption, deficit measurement, and the stock level subject to capacity is not explicitly stated.",
+      "impact": "The phrase 'at any moment' may require an intra-day peak-stock interpretation rather than only an end-of-day stock check.",
+      "source_spans": [
+        "before the additive becomes available for consumption or to replenish reserves",
+        "the aggregate volume held in storage at any moment must not surpass the tank capacity of 34 gallons"
+      ]
+    },
+    {
+      "id": "UNRESOLVED_STORAGE_COST_BOUNDARIES",
+      "issue": "The text does not specify whether storage cost includes stock retained beyond day 5 or how the initial-to-day-1 boundary is charged.",
+      "impact": "The set of stock boundaries included in the storage-cost objective component is ambiguous.",
+      "source_spans": [
+        "the storage expense, calculated at 1 per gallon retained from one day to the next"
+      ]
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "WARN_IMPLICIT_BALANCE",
+      "message": "The stock-conservation family is operationally implied by the linked descriptions of stock, delayed procurement availability, consumption requirements, and deficits; no explicit algebraic stock-transition statement appears in the source."
+    },
+    {
+      "id": "WARN_POSTHORIZON_REQUESTS",
+      "message": "With a 4-day lead time, requests made on days 2 through 5 become available after the stated window. The source still subjects every daily request to the request bounds and procurement cost, but states no post-horizon pipeline requirement or salvage treatment."
+    }
+  ]
+}

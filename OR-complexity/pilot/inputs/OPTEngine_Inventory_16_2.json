@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_16_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood-plasma storage strategy for a critical therapeutic agent over a 16-day campaign. The initial stock in the refrigeration unit at the campaign's outset is 95 liters. For each day \\( t = 1, \\dots, 16 \\), the distributor permits the hospital to request a shipment whose volume must be between 16 and 79 liters. Each shipment, once requested, requires a 2-day delivery window before it becomes available for clinical use or to replenish reserves. The projected daily consumption of the agent is as follows:\n* Day 1: 25 liters\n* Day 2: 49 liters\n* Day 3: 11 liters\n* Day 4: 47 liters\n* Day 5: 42 liters\n* Day 6: 33 liters\n* Day 7: 19 liters\n* Day 8: 39 liters\n* Day 9: 26 liters\n* Day 10: 17 liters\n* Day 11: 47 liters\n* Day 12: 38 liters\n* Day 13: 27 liters\n* Day 14: 24 liters\n* Day 15: 34 liters\n* Day 16: 34 liters\n\nClinical shortfalls are permissible, but any unfulfilled demand is considered lost and will not be carried forward. Throughout the planning window, agent volumes are treated as continuous quantities, and the total volume held in storage at any moment must not surpass the refrigeration capacity of 95 liters. The aggregate expenditure over the campaign comprises three elements: the procurement cost, assessed at 2 per liter ordered; the storage cost, assessed at 3 per liter kept in refrigeration from one day to the next; and a clinical deficit penalty, assessed at 10 per liter of unmet demand. Determine the optimal shipment volume for each day and monitor the consequent stock and deficit levels to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_37_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical cargo planes. Shipments:\n\n* Component A: mass 52 tons\n* Component B: mass 51 tons\n* Component C: mass 57 tons\n* Component D: mass 52 tons\n* Component E: mass 44 tons\n* Component F: mass 37 tons\n* Component G: mass 56 tons\n* Component H: mass 61 tons\n* Component I: mass 68 tons\n* Component J: mass 67 tons\n* Component K: mass 62 tons\n* Component L: mass 35 tons\n* Component M: mass 66 tons\n* Component N: mass 68 tons\n* Component O: mass 67 tons\n* Component P: mass 59 tons\n* Component Q: mass 49 tons\n* Component R: mass 31 tons\n* Component S: mass 51 tons\n* Component T: mass 64 tons\n* Component U: mass 60 tons\n* Component V: mass 37 tons\n* Component W: mass 65 tons\n* Component X: mass 49 tons\n* Component Y: mass 36 tons\n* Component Z: mass 69 tons\n* Component [: mass 53 tons\n* Component \\: mass 32 tons\n* Component ]: mass 67 tons\n* Component ^: mass 41 tons\n* Component _: mass 49 tons\n* Component `: mass 41 tons\n* Component a: mass 51 tons\n* Component b: mass 60 tons\n* Component c: mass 44 tons\n* Component d: mass 54 tons\n* Component e: mass 51 tons\n\nEach aircraft can accommodate a maximum payload of 100 tons. All shipments must be transported, with each assigned to exactly one aircraft, and the cumulative mass on any aircraft must not surpass its capacity. The objective is to utilize the smallest possible number of aircraft.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

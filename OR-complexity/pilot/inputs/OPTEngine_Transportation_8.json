@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8",
+  "annotation_mode": "semantic",
+  "problem_text": "In a logistics network for distributing specialized components, the objective is to minimize the overall fulfillment expense from manufacturing hubs (Group M) to assembly facilities (Group N).\n\nThe inventory available at each manufacturing hub (Group M) is detailed as follows:\n*M1 has an inventory of 92 units.\n*M2 has an inventory of 91 units.\n*M3 has an inventory of 132 units.\n*M4 has an inventory of 107 units.\n*M5 has an inventory of 138 units.\n*M6 has an inventory of 182 units.\n*M7 has an inventory of 122 units.\n*M8 has an inventory of 70 units.\n\nThe required consumption at each assembly facility (Group N) is specified below:\n*N1 requires 109 units.\n*N2 requires 95 units.\n*N3 requires 22 units.\n*N4 requires 52 units.\n*N5 requires 91 units.\n*N6 requires 85 units.\n*N7 requires 28 units.\n*N8 requires 160 units.\n\nThe per-unit fulfillment cost from each manufacturing hub to every assembly facility is provided in the following matrix:\n\n| From / To | N1 | N2 | N3 | N4 | N5 | N6 | N7 | N8 |\n|--|-|-|-|-|-|-|-|\n| M1 | 5 | 6 | 20 | 20 | 11 | 19 | 2 | 1 |\n| M2 | 3 | 2 | 19 | 9 | 7 | 19 | 14 | 20 |\n| M3 | 1 | 16 | 18 | 10 | 10 | 16 | 8 | 13 |\n| M4 | 10 | 15 | 3 | 2 | 6 | 15 | 14 | 16 |\n| M5 | 15 | 7 | 11 | 20 | 5 | 11 | 11 | 12 |\n| M6 | 13 | 5 | 12 | 17 | 18 | 4 | 11 | 8 |\n| M7 | 15 | 4 | 9 | 15 | 8 | 5 | 4 | 2 |\n| M8 | 10 | 13 | 20 | 14 | 8 | 6 | 11 | 19 |\n\nDetermine the optimal allocation of component shipments to achieve the minimal total fulfillment expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

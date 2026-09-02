@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a specialized cargo shipment to maximize total profit while adhering to a strict weight ceiling for the transport vehicle.\n\nThe available cargo units are:\n* Unit A: weight 25kg, profit 283 monetary units\n* Unit B: weight 1kg, profit 76 monetary units\n* Unit C: weight 8kg, profit 112 monetary units\n* Unit D: weight 6kg, profit 248 monetary units\n* Unit E: weight 13kg, profit 10 monetary units\n* Unit F: weight 34kg, profit 222 monetary units\n* Unit G: weight 5kg, profit 284 monetary units\n* Unit H: weight 12kg, profit 129 monetary units\n* Unit I: weight 15kg, profit 222 monetary units\n* Unit J: weight 25kg, profit 253 monetary units\n* Unit K: weight 1kg, profit 233 monetary units\n* Unit L: weight 14kg, profit 205 monetary units\n* Unit M: weight 49kg, profit 31 monetary units\n* Unit N: weight 40kg, profit 147 monetary units\n* Unit O: weight 2kg, profit 187 monetary units\n\nFurthermore, due to contractual obligations, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, the effective weight capacity of the vehicle is diminished by 10 kg.\nThe vehicle can accommodate a maximum of 175 kg. The firm must determine which cargo units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

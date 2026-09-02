@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo packages onto identical transport pallets for air shipment. The packages are labeled as follows:\n\n* Package Alpha: mass 69kg\n* Package Bravo: mass 70kg\n* Package Charlie: mass 63kg\n* Package Delta: mass 70kg\n* Package Echo: mass 50kg\n* Package Foxtrot: mass 63kg\n* Package Golf: mass 43kg\n* Package Hotel: mass 38kg\n* Package India: mass 69kg\n* Package Juliett: mass 49kg\n* Package Kilo: mass 65kg\n* Package Lima: mass 48kg\n* Package Mike: mass 55kg\n* Package November: mass 68kg\n* Package Oscar: mass 63kg\n* Package Papa: mass 33kg\n* Package Quebec: mass 59kg\n* Package Romeo: mass 66kg\n* Package Sierra: mass 66kg\n* Package Tango: mass 45kg\n* Package Uniform: mass 55kg\n* Package Victor: mass 46kg\n* Package Whiskey: mass 65kg\n* Package X-ray: mass 49kg\n* Package Yankee: mass 37kg\n* Package Zulu: mass 50kg\n* Package Asterisk: mass 66kg\n* Package Backslash: mass 46kg\n* Package Bracket: mass 62kg\n* Package Caret: mass 47kg\n* Package Underscore: mass 58kg\n* Package Grave: mass 58kg\n\nEach pallet is certified for a maximum safe load of 100 kg. The coordinator must assign every package to precisely one pallet, ensuring the cumulative mass on any given pallet does not surpass its certified limit. The objective is to complete this allocation utilizing the minimal possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

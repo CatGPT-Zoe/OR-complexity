@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional power grid operator must devise a procurement and storage strategy for a critical fuel supply across a six-day operational window.  \nThe initial fuel reserve at the start of the planning window is 60 thousand cubic feet.  \nFor each day \\( t = 1, \\dots, 6 \\), the fuel supplier permits the operator to request a delivery whose volume must fall between 18 and 30 thousand cubic feet.  \nEach delivery, once requested, requires exactly one day to be transported and becomes available for consumption or storage only on the following day.  \nThe projected fuel consumption for each day is as follows:  \n* Day 1: 54 thousand cubic feet  \n* Day 2: 35 thousand cubic feet  \n* Day 3: 22 thousand cubic feet  \n* Day 4: 26 thousand cubic feet  \n* Day 5: 32 thousand cubic feet  \n* Day 6: 56 thousand cubic feet  \n\nConsumption shortfalls are tolerated, but any unmet demand is simply lost and cannot be recovered later.  \nThroughout the six-day period, fuel quantities may be treated as continuous values, and the total volume held in on-site storage at any moment must not exceed the facility’s capacity of 60 thousand cubic feet.  \nThe total operational cost comprises three elements: the procurement cost, which is 1 per thousand cubic feet ordered; the storage cost, which is 3 per thousand cubic feet kept in reserve from one day to the next; and a penalty for unmet demand, assessed at 8 per thousand cubic feet of consumption not satisfied.  \nThe objective is to determine the optimal delivery volume for each day and to monitor the resulting reserve levels and shortfalls so as to minimize the total cost over the planning horizon.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

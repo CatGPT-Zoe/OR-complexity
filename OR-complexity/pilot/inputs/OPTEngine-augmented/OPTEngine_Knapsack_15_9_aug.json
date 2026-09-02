@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized components for a critical three-stage assembly line. They need to select a combination of components to maximize the total utility score, while ensuring the total freight weight does not exceed the cargo plane's maximum payload.\n\nThe components under consideration are:\n* Component A: weight 8kg, utility 270 units\n* Component B: weight 29kg, utility 250 units\n* Component C: weight 12kg, utility 242 units\n* Component D: weight 36kg, utility 183 units\n* Component E: weight 9kg, utility 223 units\n* Component F: weight 17kg, utility 203 units\n* Component G: weight 6kg, utility 299 units\n* Component H: weight 33kg, utility 181 units\n* Component I: weight 15kg, utility 242 units\n* Component J: weight 16kg, utility 189 units\n* Component K: weight 31kg, utility 220 units\n* Component L: weight 2kg, utility 238 units\n* Component M: weight 47kg, utility 13 units\n* Component N: weight 36kg, utility 217 units\n* Component O: weight 49kg, utility 238 units\n\nA critical compatibility requirement dictates that exactly one of Component A and Component B must be included in the final shipment.\n\nFurthermore, if Component C is selected, it necessitates special protective casing that permanently reduces the effective cargo capacity by 10 kg.\nThe aircraft's maximum allowable payload is 242 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

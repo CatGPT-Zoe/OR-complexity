@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. Packages:\n* Package Alpha: volume 31 cubic feet\n* Package Beta: volume 50 cubic feet\n* Package Gamma: volume 70 cubic feet\n* Package Delta: volume 38 cubic feet\n* Package Epsilon: volume 35 cubic feet\n* Package Zeta: volume 55 cubic feet\n* Package Eta: volume 67 cubic feet\n* Package Theta: volume 44 cubic feet\n* Package Iota: volume 33 cubic feet\n* Package Kappa: volume 43 cubic feet\n* Package Lambda: volume 56 cubic feet\n* Package Mu: volume 31 cubic feet\n* Package Nu: volume 33 cubic feet\n* Package Xi: volume 68 cubic feet\n* Package Omicron: volume 55 cubic feet\n* Package Pi: volume 38 cubic feet\n* Package Rho: volume 65 cubic feet\n* Package Sigma: volume 49 cubic feet\n* Package Tau: volume 56 cubic feet\n* Package Upsilon: volume 55 cubic feet\n* Package Phi: volume 64 cubic feet\n* Package Chi: volume 33 cubic feet\n* Package Psi: volume 58 cubic feet\n* Package Omega: volume 64 cubic feet\n* Package Digamma: volume 39 cubic feet\n\nEach truck can carry up to 100 cubic feet of total volume. Assign all packages using the fewest trucks. Every package must be loaded onto exactly one truck, and the total volume in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

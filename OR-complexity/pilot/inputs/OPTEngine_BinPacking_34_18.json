@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of cargo parcels into standardized freight compartments.  \nThe parcels are identified as follows:  \n* Cargo Alpha: mass 36kg  \n* Cargo Beta: mass 66kg  \n* Cargo Gamma: mass 64kg  \n* Cargo Delta: mass 32kg  \n* Cargo Epsilon: mass 43kg  \n* Cargo Zeta: mass 67kg  \n* Cargo Eta: mass 67kg  \n* Cargo Theta: mass 56kg  \n* Cargo Iota: mass 47kg  \n* Cargo Kappa: mass 36kg  \n* Cargo Lambda: mass 36kg  \n* Cargo Mu: mass 41kg  \n* Cargo Nu: mass 37kg  \n* Cargo Xi: mass 39kg  \n* Cargo Omicron: mass 65kg  \n* Cargo Pi: mass 45kg  \n* Cargo Rho: mass 44kg  \n* Cargo Sigma: mass 60kg  \n* Cargo Tau: mass 68kg  \n* Cargo Upsilon: mass 46kg  \n* Cargo Phi: mass 55kg  \n* Cargo Chi: mass 43kg  \n* Cargo Psi: mass 33kg  \n* Cargo Omega: mass 63kg  \n* Cargo Alpha Prime: mass 63kg  \n* Cargo Beta Prime: mass 61kg  \n* Cargo Gamma Prime: mass 34kg  \n* Cargo Delta Prime: mass 44kg  \n* Cargo Epsilon Prime: mass 38kg  \n* Cargo Zeta Prime: mass 55kg  \n* Cargo Eta Prime: mass 59kg  \n* Cargo Theta Prime: mass 34kg  \n* Cargo Iota Prime: mass 45kg  \n* Cargo Kappa Prime: mass 44kg  \n\nEach compartment can accommodate a maximum load of 100 kg.  \nAll parcels must be assigned, with every parcel placed into exactly one compartment, and the combined mass within any compartment must not surpass its capacity.  \nThe objective is to utilize the smallest possible number of compartments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

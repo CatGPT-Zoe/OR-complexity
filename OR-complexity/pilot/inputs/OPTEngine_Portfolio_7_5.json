@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate the annual budget across 7 infrastructure projects to maximize total community benefit.  \nThe characteristics of each project are as follows:  \n* Project P1: community benefit score 0.152, environmental impact score 0.016, allocation limits [0.044, 0.545]  \n* Project P2: community benefit score 0.129, environmental impact score 0.232, allocation limits [0.028, 0.493]  \n* Project P3: community benefit score 0.025, environmental impact score 0.248, allocation limits [0.100, 0.363]  \n* Project P4: community benefit score 0.061, environmental impact score 0.177, allocation limits [0.044, 0.396]  \n* Project P5: community benefit score 0.141, environmental impact score 0.231, allocation limits [0.081, 0.547]  \n* Project P6: community benefit score 0.175, environmental impact score 0.061, allocation limits [0.097, 0.597]  \n* Project P7: community benefit score 0.126, environmental impact score 0.160, allocation limits [0.047, 0.698]  \n\nEach project must receive a budget share within its specified limits, and the total allocation across all projects must sum to one.  \nTo address urgent needs, the planner requires that the group of high-priority projects, represented by the set H = {P1, P2, P4, P5, P7}, collectively receive at least 0.244 of the total budget.  \nAt the same time, the overall environmental impact of the portfolio, measured by a composite index, must not exceed 0.214, and the total community benefit score must be no less than 0.096.  \nDetermine the optimal budget allocation that maximizes the total community benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

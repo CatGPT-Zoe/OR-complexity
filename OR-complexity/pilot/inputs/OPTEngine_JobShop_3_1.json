@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital has three patients requiring sequential diagnostic tests on three specialized medical devices.\n\nEach patient's treatment plan consists of a series of tests represented as (Device, Duration) pairs, where each pair specifies the medical device needed and the testing time required. The sequence of pairs indicates the mandatory order in which tests must be administered.\n\nPatient treatment plans:\n* Patient A requires: (Device B, 2 hours) → (Device A, 2 hours) → (Device C, 6 hours)\n* Patient B requires: (Device B, 7 hours) → (Device A, 6 hours) → (Device C, 10 hours)\n* Patient C requires: (Device C, 8 hours) → (Device A, 9 hours) → (Device B, 5 hours)\n\nEach test must run continuously without interruption once initiated, and each medical device can only accommodate one patient's test at a time. The objective is to schedule all tests across the medical devices to minimize the total completion time for all patients.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

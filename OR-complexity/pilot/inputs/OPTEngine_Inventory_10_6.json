@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical fuel additive across a 10-week operational window.\nThe starting stock at the commencement of the planning interval is 37 kiloliters.\nIn each week t = 1, ..., 10, the vendor permits the firm to place a purchase whose volume must fall between 14 and 52 kiloliters.\nNevertheless, every purchase initiated will require a 4-week lead time before it becomes available to meet consumption or replenish reserves.\nThe consumption of the additive in each week is specified as follows:\n* Week 1: consumption 30 kiloliters\n* Week 2: consumption 37 kiloliters\n* Week 3: consumption 16 kiloliters\n* Week 4: consumption 45 kiloliters\n* Week 5: consumption 28 kiloliters\n* Week 6: consumption 49 kiloliters\n* Week 7: consumption 44 kiloliters\n* Week 8: consumption 60 kiloliters\n* Week 9: consumption 22 kiloliters\n* Week 10: consumption 55 kiloliters\n\nSupply deficits are tolerated, but any unsatisfied consumption will be entirely lost and not deferred.\nThroughout the planning span, additive quantities may be treated as continuous, and the aggregate volume of physical stock held at any moment must not surpass the storage facility's limit of 39 kiloliters.\nThe aggregate expenditure over the planning horizon comprises three elements: the procurement expense, which amounts to 4 per kiloliter purchased; the storage expense, which amounts to 3 per kiloliter of stock retained from one week to the next; and the deficit penalty, which amounts to 10 per kiloliter of unfulfilled consumption. The objective is to ascertain the optimal purchase volume for each week and monitor the consequent stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

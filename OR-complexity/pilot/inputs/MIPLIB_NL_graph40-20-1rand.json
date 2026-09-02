@@ -1,0 +1,25 @@
+{
+  "instance_id": "MIPLIB_NL_graph40-20-1rand",
+  "annotation_mode": "semantic",
+  "problem_text": "A critical infrastructure protection project involves a network of 40 distinct processing nodes and 151 physical transmission conduits. The system architecture requires the implementation of multiple parallel 'Cyber-Physical Segmentation Layers' (CPSLs) to achieve depth-in-defense. Each CPSL is defined as a topological partition that strictly separates the entire set of nodes into two disjoint operational domains (Domain Alpha and Domain Beta), necessitating the deployment of hardware-based traffic inspection probes on every conduit bridging these two domains. Nodes are categorized into Primary and Secondary tiers based on their processing throughput, where Primary nodes account for approximately 35% of the total energy consumption. Physical constraints on the conduit interface ports dictate that each transmission conduit can accommodate the hardware for exactly one inspection probe, meaning a conduit assigned to one CPSL cannot be utilized by another. The deployment of each probe incurs a signal latency penalty of 0.4ms and a capital expenditure of 1,500 units. The objective is to determine the theoretical upper limit of the number of independent CPSLs that can be simultaneously active within the network without any conduit resource conflicts.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "network_topology",
+      "indices": [
+        "id1",
+        "id2"
+      ],
+      "unit": "",
+      "values": "| id1 | id2 |\n|---|---|\n| 0 | 1 |\n| 0 | 2 |\n| 0 | 3 |\n| 0 | 5 |\n| 0 | 14 |\n| 0 | 16 |\n| 0 | 18 |\n| 0 | 26 |\n| 0 | 30 |\n| 0 | 39 |\n| 1 | 17 |\n| 1 | 20 |\n| 1 | 23 |\n| 1 | 25 |\n| 1 | 31 |\n| 1 | 34 |\n| 2 | 3 |\n| 2 | 6 |\n| 2 | 10 |\n| 2 | 20 |\n| 2 | 33 |\n| 3 | 10 |\n| 3 | 12 |\n| 3 | 17 |\n| 3 | 37 |\n| 4 | 10 |\n| 4 | 19 |\n| 4 | 20 |\n| 4 | 22 |\n| 4 | 23 |\n| 4 | 25 |\n| 5 | 10 |\n| 5 | 20 |\n| 5 | 24 |\n| 5 | 28 |\n| 5 | 31 |\n| 5 | 34 |\n| 6 | 19 |\n| 6 | 23 |\n| 6 | 27 |\n| 6 | 28 |\n| 6 | 32 |\n| 7 | 11 |\n| 7 | 20 |\n| 7 | 29 |\n| 7 | 31 |\n| 7 | 33 |\n| 7 | 39 |\n| 8 | 11 |\n| 8 | 15 |\n| 8 | 17 |\n| 8 | 23 |\n| 8 | 28 |\n| 8 | 39 |\n| 9 | 10 |\n| 9 | 16 |\n| 9 | 19 |\n| 9 | 27 |\n| 9 | 29 |\n| 9 | 30 |\n| 9 | 33 |\n| 9 | 35 |\n| 9 | 39 |\n| 10 | 15 |\n| 10 | 23 |\n| 10 | 24 |\n| 10 | 25 |\n| 10 | 29 |\n| 10 | 30 |\n| 11 | 12 |\n| 11 | 15 |\n| 11 | 16 |\n| 11 | 27 |\n| 11 | 32 |\n| 11 | 33 |\n| 11 | 36 |\n| 12 | 14 |\n| 12 | 15 |\n| 12 | 18 |\n| 12 | 23 |\n| 12 | 28 |\n| 12 | 35 |\n| 12 | 38 |\n| 13 | 15 |\n| 13 | 16 |\n| 13 | 19 |\n| 13 | 24 |\n| 13 | 26 |\n| 13 | 31 |\n| 14 | 23 |\n| 14 | 25 |\n| 14 | 27 |\n| 14 | 28 |\n| 14 | 32 |\n| 15 | 29 |\n| 15 | 34 |\n| 15 | 39 |\n| 16 | 17 |\n| 16 | 19 |\n| 16 | 20 |\n| 16 | 29 |\n| 16 | 33 |\n| 17 | 20 |\n| 17 | 31 |\n| 18 | 20 |\n| 18 | 24 |\n| 18 | 37 |\n| 18 | 39 |\n| 19 | 23 |\n| 19 | 25 |\n| 19 | 27 |\n| 19 | 32 |\n| 19 | 35 |\n| 19 | 36 |\n| 20 | 26 |\n| 20 | 34 |\n| 21 | 25 |\n| 21 | 32 |\n| 21 | 37 |\n| 22 | 25 |\n| 22 | 32 |\n| 22 | 33 |\n| 23 | 34 |\n| 23 | 39 |\n| 24 | 33 |\n| 24 | 36 |\n| 25 | 26 |\n| 25 | 29 |\n| 25 | 31 |\n| 26 | 32 |\n| 26 | 39 |\n| 27 | 28 |\n| 27 | 35 |\n| 28 | 36 |\n| 29 | 32 |\n| 29 | 34 |\n| 29 | 36 |\n| 29 | 37 |\n| 30 | 31 |\n| 30 | 34 |\n| 30 | 35 |\n| 31 | 34 |\n| 31 | 35 |\n| 32 | 33 |\n| 32 | 37 |\n| 32 | 39 |\n| 33 | 35 |\n| 34 | 38 |\n| 35 | 36 |\n| 37 | 39 |\n| 38 | 39 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/graph40-20-1rand/data/network_topology.csv",
+      "role": "parameter_table",
+      "table": "network_topology"
+    }
+  ],
+  "notes": ""
+}

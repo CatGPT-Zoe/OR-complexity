@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is coordinating a shipment of specialized equipment to a remote research station, selecting a combination of crates to maximize total utility score while staying within the aircraft's payload allowance.\n\nThe crates available are:\n* Crate A: mass 2kg, utility 116 points\n* Crate B: mass 41kg, utility 162 points\n* Crate C: mass 5kg, utility 119 points\n* Crate D: mass 20kg, utility 53 points\n* Crate E: mass 14kg, utility 91 points\n* Crate F: mass 16kg, utility 232 points\n* Crate G: mass 41kg, utility 176 points\n* Crate H: mass 19kg, utility 90 points\n* Crate I: mass 16kg, utility 276 points\n* Crate J: mass 32kg, utility 13 points\n* Crate K: mass 49kg, utility 77 points\n* Crate L: mass 32kg, utility 43 points\n* Crate M: mass 1kg, utility 167 points\n* Crate N: mass 29kg, utility 147 points\n* Crate O: mass 13kg, utility 273 points\n* Crate P: mass 35kg, utility 81 points\n* Crate Q: mass 41kg, utility 184 points\n* Crate R: mass 20kg, utility 79 points\n* Crate S: mass 12kg, utility 175 points\n* Crate T: mass 26kg, utility 161 points\n* Crate U: mass 23kg, utility 240 points\n* Crate V: mass 31kg, utility 222 points\n* Crate W: mass 12kg, utility 242 points\n* Crate X: mass 14kg, utility 145 points\n* Crate Y: mass 49kg, utility 224 points\n* Crate Z: mass 42kg, utility 233 points\n\nDue to compatibility requirements, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, the aircraft's effective payload capacity is diminished by 10 kg.\nThe aircraft's maximum permissible payload is 444 kg. The manager must determine the optimal set of crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

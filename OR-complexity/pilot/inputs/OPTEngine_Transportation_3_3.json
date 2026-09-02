@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery vehicles from distribution centers to retail outlets in order to minimize total fuel expenditure.\n\nThe available number of vehicles at each distribution center (group X) is as follows:  \n*Center X1 has 78 vehicles ready.  \n*Center X2 has 56 vehicles ready.  \n*Center X3 has 120 vehicles ready.\n\nThe required number of vehicles at each retail outlet (group Y) is detailed below:  \n*Outlet Y1 requires 25 vehicles.  \n*Outlet Y2 requires 18 vehicles.  \n*Outlet Y3 requires 131 vehicles.\n\nThe fuel cost per vehicle dispatched from each distribution center to each retail outlet is provided in the following table:\n\n| From / To | Y1 | Y2 | Y3 |\n|---|---|---|---|\n| X1 | 18 | 3 | 19 |\n| X2 | 14 | 2 | 1 |\n| X3 | 3 | 7 | 8 |\n\nDetermine the optimal vehicle dispatch plan to minimize the overall fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical fuel additive over a six-week operational cycle.  \nThe initial stockpile at the start of the cycle is 10 kiloliters.  \nIn each week \\( t = 1, \\dots, 6 \\), the supplier permits the company to submit a procurement request whose volume must be between 0 and 37 kiloliters.  \nHowever, every request placed is subject to a 3‑week lead time before the additive becomes available for consumption or restocking.  \nThe weekly consumption requirement for the additive is as follows:  \n* Week 1: 54 kiloliters  \n* Week 2: 21 kiloliters  \n* Week 3: 16 kiloliters  \n* Week 4: 40 kiloliters  \n* Week 5: 35 kiloliters  \n* Week 6: 50 kiloliters  \n\nDeficits are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.  \nThroughout the planning cycle, additive volumes may be treated as continuous quantities, and the total physical stock held at any moment must not exceed the storage‑tank capacity of 47 kiloliters.  \n\nIn the sixth week, the maximum allowable procurement volume is 22 kiloliters.  \nDuring the first week, the on‑site stockpile must be no less than 9 kiloliters.  \n\nThe aggregate expense over the planning horizon comprises three elements: the procurement cost, charged at 1 per kiloliter ordered; the storage cost, charged at 2 per kiloliter kept from one week to the next; and the deficit penalty, charged at 8 per kiloliter of unmet consumption. Determine the optimal procurement volume for each week and monitor the resulting stockpile and deficit levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

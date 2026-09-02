@@ -1,0 +1,157 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Knapsack_10_1",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "containers",
+      "description": "cargo containers available for selection",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "container_volume",
+      "indices": [
+        {
+          "role": "container",
+          "set_id": "containers"
+        }
+      ],
+      "description": "volume occupied by each cargo container",
+      "unit": "m³",
+      "values": {
+        "1": 27,
+        "2": 9,
+        "3": 26,
+        "4": 45,
+        "5": 9,
+        "6": 20,
+        "7": 27,
+        "8": 38,
+        "9": 20,
+        "10": 6
+      },
+      "data_ref": null
+    },
+    {
+      "id": "container_revenue",
+      "indices": [
+        {
+          "role": "container",
+          "set_id": "containers"
+        }
+      ],
+      "description": "revenue earned by shipping each cargo container",
+      "unit": "USD",
+      "values": {
+        "1": 33,
+        "2": 20,
+        "3": 49,
+        "4": 47,
+        "5": 225,
+        "6": 291,
+        "7": 82,
+        "8": 226,
+        "9": 191,
+        "10": 137
+      },
+      "data_ref": null
+    },
+    {
+      "id": "vehicle_volume_capacity",
+      "indices": [],
+      "description": "maximum cargo volume that the transport vehicle can carry",
+      "unit": "m³",
+      "values": 158,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "container_selection",
+      "canonical_name": "container_selection",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "container",
+          "set_id": "containers"
+        }
+      ],
+      "description": "whether each available cargo container is fully shipped",
+      "value_semantics": "binary selection indicator: 1 if the container is fully shipped and 0 if it is not shipped",
+      "unit": "binary indicator",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Choose the container combination",
+        "Each container is either fully shipped or not shipped."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_revenue",
+    "normalized_semantics": "maximize the total revenue earned from all selected cargo containers",
+    "description": "Maximize total revenue from the shipped containers.",
+    "entity_scope": [
+      "container_selection"
+    ],
+    "parameter_refs": [
+      "container_revenue"
+    ],
+    "source_spans": [
+      "Choose the container combination that maximizes total revenue without exceeding this volume limit."
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "vehicle_volume_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the total volume of all selected cargo containers must not exceed the transport vehicle's maximum volume capacity",
+      "support_entity_ids": [
+        "container_selection"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "container_selection",
+          "role": "selected_container_volume",
+          "aggregation_axes": [
+            "container"
+          ],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [
+        "over all containers"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "container_volume",
+        "vehicle_volume_capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The transport vehicle has a maximum capacity of 158 m³.",
+        "Choose the container combination that maximizes total revenue without exceeding this volume limit."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "unresolved_items": []
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting packages to load onto a cargo plane. Available shipments are:\n* Package 1: volume 17 cubic meters, revenue $232\n* Package 2: volume 12 cubic meters, revenue $29\n* Package 3: volume 46 cubic meters, revenue $279\n* Package 4: volume 12 cubic meters, revenue $92\n* Package 5: volume 28 cubic meters, revenue $111\n* Package 6: volume 20 cubic meters, revenue $282\n* Package 7: volume 38 cubic meters, revenue $36\n* Package 8: volume 4 cubic meters, revenue $127\n* Package 9: volume 2 cubic meters, revenue $199\n* Package 10: volume 17 cubic meters, revenue $242\n* Package 11: volume 47 cubic meters, revenue $154\n* Package 12: volume 18 cubic meters, revenue $278\n* Package 13: volume 22 cubic meters, revenue $201\n* Package 14: volume 9 cubic meters, revenue $44\n* Package 15: volume 42 cubic meters, revenue $235\n* Package 16: volume 35 cubic meters, revenue $68\n* Package 17: volume 47 cubic meters, revenue $59\n* Package 18: volume 10 cubic meters, revenue $94\n* Package 19: volume 22 cubic meters, revenue $222\n* Package 20: volume 14 cubic meters, revenue $285\n* Package 21: volume 17 cubic meters, revenue $190\n* Package 22: volume 41 cubic meters, revenue $191\n* Package 23: volume 17 cubic meters, revenue $269\n* Package 24: volume 48 cubic meters, revenue $15\n\nThe aircraft has a maximum cargo capacity of 409 cubic meters. Choose the set of packages that maximizes total revenue without exceeding this volume limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

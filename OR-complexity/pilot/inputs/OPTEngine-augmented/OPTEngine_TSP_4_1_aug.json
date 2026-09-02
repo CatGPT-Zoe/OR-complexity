@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to perform maintenance at four separate facilities:\n\nFacility Alpha: Positioned at grid reference (23,20)  \nFacility Beta: Positioned at grid reference (81,130)  \nFacility Gamma: Positioned at grid reference (125,27)  \nFacility Delta: Positioned at grid reference (77,141)\n\nThe travel distances between facilities, measured in kilometers, are precomputed as follows:  \nAlpha to Gamma: 102.2 km  \nAlpha to Delta: 132.5 km  \nBeta to Gamma: 112.0 km  \nBeta to Delta: 11.7 km  \nGamma to Delta: 123.7 km  \n\nDue to geographical obstacles, a direct route between Facility Alpha and Facility Beta is unavailable.  \nFurthermore, the planned circuit must incorporate exactly one of two specified critical links: either the connection between Beta and Gamma, or the connection between Gamma and Delta.\n\nThe objective is to determine the minimal total travel distance for a closed loop that visits every facility precisely once and concludes at the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

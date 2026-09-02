@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign parcels to identical delivery vehicles. Parcels:\n* Parcel Alpha: mass 41kg\n* Parcel Beta: mass 61kg\n* Parcel Gamma: mass 39kg\n* Parcel Delta: mass 69kg\n* Parcel Epsilon: mass 67kg\n* Parcel Zeta: mass 62kg\n* Parcel Eta: mass 56kg\n* Parcel Theta: mass 67kg\n* Parcel Iota: mass 70kg\n* Parcel Kappa: mass 44kg\n* Parcel Lambda: mass 30kg\n* Parcel Mu: mass 33kg\n* Parcel Nu: mass 57kg\n* Parcel Xi: mass 68kg\n* Parcel Omicron: mass 32kg\n* Parcel Pi: mass 38kg\n* Parcel Rho: mass 62kg\n* Parcel Sigma: mass 35kg\n* Parcel Tau: mass 56kg\n* Parcel Upsilon: mass 49kg\n* Parcel Phi: mass 51kg\n* Parcel Chi: mass 70kg\n* Parcel Psi: mass 70kg\n* Parcel Omega: mass 69kg\n* Parcel Digamma: mass 42kg\n\nEach vehicle has a maximum load capacity of 100 kg. All parcels must be dispatched using the smallest possible fleet of vehicles. Every parcel must be placed on exactly one vehicle, and the combined mass on any vehicle must not surpass its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

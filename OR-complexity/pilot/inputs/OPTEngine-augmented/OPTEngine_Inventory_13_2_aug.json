@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail distributor must formulate a procurement and stock management strategy for a seasonal product over a 13-week sales cycle.  \nThe starting stock at the cycle’s commencement is 69 items.  \nIn each week \\( t = 1, \\dots, 13 \\), the wholesaler permits an order whose size must be between 6 and 77 items.  \nHowever, every order placed is subject to a 2‑week shipping delay before it becomes available to meet sales or replenish stock.  \nThe projected sales volume for the product each week is as follows:  \n* Week 1: 52 items  \n* Week 2: 30 items  \n* Week 3: 39 items  \n* Week 4: 14 items  \n* Week 5: 19 items  \n* Week 6: 24 items  \n* Week 7: 58 items  \n* Week 8: 17 items  \n* Week 9: 58 items  \n* Week 10: 19 items  \n* Week 11: 35 items  \n* Week 12: 39 items  \n* Week 13: 55 items  \n\nStock‑outs are allowed, but any unsatisfied sales are lost and cannot be recovered later.  \nThroughout the sales cycle, product quantities may be fractional, and the total physical stock on hand at any moment must not exceed the storage‑facility capacity of 69 items.\n\nIn week 2, the maximum allowable order size is 58 items.  \nIn week 10, the on‑hand stock must be no less than 52 items.\n\nThe total expense over the cycle comprises three elements: the procurement cost, which is 6 per item ordered; the storage cost, which is 1 per item carried over from one week to the next; and the lost‑sales penalty, which is 6 per unit of unmet sales. Determine the optimal order quantity for each week and monitor the resulting stock and lost‑sales levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

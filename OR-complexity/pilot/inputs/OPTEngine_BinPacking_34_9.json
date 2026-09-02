@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: volume 49 cubic meters\n* Shipment Beta: volume 45 cubic meters\n* Shipment Gamma: volume 62 cubic meters\n* Shipment Delta: volume 57 cubic meters\n* Shipment Epsilon: volume 47 cubic meters\n* Shipment Zeta: volume 48 cubic meters\n* Shipment Eta: volume 54 cubic meters\n* Shipment Theta: volume 50 cubic meters\n* Shipment Iota: volume 50 cubic meters\n* Shipment Kappa: volume 43 cubic meters\n* Shipment Lambda: volume 36 cubic meters\n* Shipment Mu: volume 49 cubic meters\n* Shipment Nu: volume 49 cubic meters\n* Shipment Xi: volume 42 cubic meters\n* Shipment Omicron: volume 36 cubic meters\n* Shipment Pi: volume 45 cubic meters\n* Shipment Rho: volume 56 cubic meters\n* Shipment Sigma: volume 64 cubic meters\n* Shipment Tau: volume 40 cubic meters\n* Shipment Upsilon: volume 50 cubic meters\n* Shipment Phi: volume 43 cubic meters\n* Shipment Chi: volume 56 cubic meters\n* Shipment Psi: volume 59 cubic meters\n* Shipment Omega: volume 45 cubic meters\n* Shipment A1: volume 47 cubic meters\n* Shipment B1: volume 63 cubic meters\n* Shipment C1: volume 53 cubic meters\n* Shipment D1: volume 55 cubic meters\n* Shipment E1: volume 34 cubic meters\n* Shipment F1: volume 67 cubic meters\n* Shipment G1: volume 60 cubic meters\n* Shipment H1: volume 58 cubic meters\n* Shipment I1: volume 36 cubic meters\n* Shipment J1: volume 40 cubic meters\n\nEach cargo plane can carry up to 100 cubic meters of volume. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

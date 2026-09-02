@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_36_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load cargo boxes onto identical pallets for shipping. The cargo items are:\n\n* Item 1: weight 34kg\n* Item 2: weight 45kg\n* Item 3: weight 34kg\n* Item 4: weight 43kg\n* Item 5: weight 43kg\n* Item 6: weight 68kg\n* Item 7: weight 42kg\n* Item 8: weight 52kg\n* Item 9: weight 53kg\n* Item 10: weight 30kg\n* Item 11: weight 49kg\n* Item 12: weight 47kg\n* Item 13: weight 30kg\n* Item 14: weight 51kg\n* Item 15: weight 69kg\n* Item 16: weight 33kg\n* Item 17: weight 52kg\n* Item 18: weight 40kg\n* Item 19: weight 56kg\n* Item 20: weight 35kg\n* Item 21: weight 57kg\n* Item 22: weight 65kg\n* Item 23: weight 39kg\n* Item 24: weight 59kg\n* Item 25: weight 60kg\n* Item 26: weight 64kg\n* Item 27: weight 50kg\n* Item 28: weight 30kg\n* Item 29: weight 53kg\n* Item 30: weight 31kg\n* Item 31: weight 35kg\n* Item 32: weight 59kg\n* Item 33: weight 61kg\n* Item 34: weight 30kg\n* Item 35: weight 45kg\n* Item 36: weight 63kg\n\nEach pallet can support a maximum load of 100 kg. Load all cargo items using the minimum number of pallets. Every item must be placed on exactly one pallet, and the total weight on any pallet cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

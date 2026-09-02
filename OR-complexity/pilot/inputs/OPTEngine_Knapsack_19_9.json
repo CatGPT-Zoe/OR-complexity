@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to select packages for a shipment. Available packages are:\n* Package 1: volume 47 m³, revenue $275\n* Package 2: volume 45 m³, revenue $293\n* Package 3: volume 26 m³, revenue $152\n* Package 4: volume 14 m³, revenue $50\n* Package 5: volume 28 m³, revenue $21\n* Package 6: volume 35 m³, revenue $254\n* Package 7: volume 46 m³, revenue $185\n* Package 8: volume 48 m³, revenue $11\n* Package 9: volume 13 m³, revenue $161\n* Package 10: volume 49 m³, revenue $224\n* Package 11: volume 29 m³, revenue $273\n* Package 12: volume 45 m³, revenue $155\n* Package 13: volume 5 m³, revenue $29\n* Package 14: volume 6 m³, revenue $187\n* Package 15: volume 25 m³, revenue $221\n* Package 16: volume 25 m³, revenue $128\n* Package 17: volume 19 m³, revenue $258\n* Package 18: volume 26 m³, revenue $293\n* Package 19: volume 1 m³, revenue $232\n\nThe cargo plane has a maximum capacity of 372 m³. Choose the package combination that maximizes total revenue without exceeding this volume limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

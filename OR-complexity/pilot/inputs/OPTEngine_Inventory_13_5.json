@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage schedule for a critical blood type over a 13-day planning cycle.  \nThe initial stock in the blood bank’s refrigerated storage at the start of the planning window is 99 units.  \nFor each day \\( t = 1, \\dots, 13 \\), the central supplier permits the blood bank to place a procurement request, the volume of which must fall between 5 and 60 units.  \nEach requested shipment, however, requires a lead time of 1 day before it becomes available for fulfilling transfusion needs or replenishing the stored supply.  \nThe projected transfusion demand for this blood type on each day is as follows:  \n* Day 1: 43 units  \n* Day 2: 50 units  \n* Day 3: 28 units  \n* Day 4: 12 units  \n* Day 5: 10 units  \n* Day 6: 34 units  \n* Day 7: 31 units  \n* Day 8: 20 units  \n* Day 9: 45 units  \n* Day 10: 54 units  \n* Day 11: 19 units  \n* Day 12: 20 units  \n* Day 13: 21 units  \n\nShortfalls in meeting daily demand are permissible, but any unmet need is lost and cannot be deferred to later days.  \nThroughout the 13-day horizon, blood volumes may be treated as continuous quantities, and the total on-hand inventory in storage at any moment must not exceed the refrigerated capacity of 99 units.  \nThe total operational cost comprises three elements: the procurement cost, charged at 5 per unit ordered; the storage cost, incurred at 2 per unit held overnight; and a shortage penalty, assessed at 6 per unit of unfulfilled daily demand.  \nThe objective is to determine the optimal procurement quantity for each day and to monitor the resulting inventory and shortage levels so as to minimize the aggregate cost over the planning cycle.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

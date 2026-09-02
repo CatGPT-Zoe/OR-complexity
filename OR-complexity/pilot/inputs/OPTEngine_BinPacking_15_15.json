@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_15_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes onto identical shelving units. The items to be stored are:\n* Archive set Alpha: requires 45 units of space\n* Archive set Beta: requires 41 units of space\n* Archive set Gamma: requires 48 units of space\n* Archive set Delta: requires 53 units of space\n* Archive set Epsilon: requires 56 units of space\n* Archive set Zeta: requires 32 units of space\n* Archive set Eta: requires 38 units of space\n* Archive set Theta: requires 68 units of space\n* Archive set Iota: requires 31 units of space\n* Archive set Kappa: requires 55 units of space\n* Archive set Lambda: requires 34 units of space\n* Archive set Mu: requires 34 units of space\n* Archive set Nu: requires 38 units of space\n* Archive set Xi: requires 56 units of space\n* Archive set Omicron: requires 49 units of space\n\nEach shelving unit has a maximum volumetric capacity of 100 space units. The coordinator must place every archive set onto a shelving unit, with no set divided or left out, and the total space occupied on any single unit cannot surpass its limit. The objective is to utilize the smallest possible number of shelving units to accommodate the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

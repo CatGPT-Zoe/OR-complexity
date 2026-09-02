@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A city is planning a water conservation initiative to lower total dissolved solids (TDS) discharge from several industrial effluent outlets. Currently, no treatment technologies are in place.\n\nThe discharge profile for each outlet is as follows:\n* For Outlet A, the discharge coefficient is 0.516, and the flow rate is 135.063.\n* For Outlet B, the discharge coefficient is 2.515, and the flow rate is 88.87.\n* For Outlet C, the discharge coefficient is 2.245, and the flow rate is 289.303.\n\nTo address the discharge, multiple purification technologies can be implemented, each with a distinct removal rate:\n* Technology X achieves a 63% reduction in TDS.\n* Technology Y achieves an 83% reduction in TDS.\n* Technology Z achieves an 82% reduction in TDS.\n\nDeploying a technology at an outlet introduces an incremental cost per unit of flow. The cost matrix for all outlet-technology pairings is provided:\n\n| Outlet \\ Technology | Technology X | Technology Y | Technology Z |\n|---|---|---|---|\n| Outlet A | 171.024 | 124.708 | 163.354 |\n| Outlet B | 148.649 | 111.883 | 194.892 |\n| Outlet C | 81.922 | 114.888 | 167.587 |\n\nThe decision involves selecting which technologies to apply to each outlet (outlets may employ multiple technologies concurrently), and it is permissible for an outlet to have a portion of its flow untreated. The objective is to guarantee that the aggregate TDS discharge is curtailed by at least a fraction P = 0.369 of the baseline discharge, while minimizing the aggregate implementation cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

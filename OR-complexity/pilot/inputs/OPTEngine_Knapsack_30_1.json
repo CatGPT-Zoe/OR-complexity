@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_30_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a cargo drone. Available packages are:\n* Package 1: volume 17 m³, revenue $99\n* Package 2: volume 48 m³, revenue $11\n* Package 3: volume 42 m³, revenue $260\n* Package 4: volume 17 m³, revenue $30\n* Package 5: volume 5 m³, revenue $26\n* Package 6: volume 23 m³, revenue $296\n* Package 7: volume 31 m³, revenue $233\n* Package 8: volume 37 m³, revenue $259\n* Package 9: volume 50 m³, revenue $73\n* Package 10: volume 13 m³, revenue $35\n* Package 11: volume 24 m³, revenue $209\n* Package 12: volume 17 m³, revenue $186\n* Package 13: volume 34 m³, revenue $183\n* Package 14: volume 9 m³, revenue $178\n* Package 15: volume 10 m³, revenue $72\n* Package 16: volume 47 m³, revenue $192\n* Package 17: volume 6 m³, revenue $148\n* Package 18: volume 23 m³, revenue $214\n* Package 19: volume 7 m³, revenue $170\n* Package 20: volume 38 m³, revenue $82\n* Package 21: volume 25 m³, revenue $268\n* Package 22: volume 19 m³, revenue $139\n* Package 23: volume 23 m³, revenue $93\n* Package 24: volume 37 m³, revenue $38\n* Package 25: volume 8 m³, revenue $109\n* Package 26: volume 31 m³, revenue $57\n* Package 27: volume 21 m³, revenue $123\n* Package 28: volume 17 m³, revenue $236\n* Package 29: volume 11 m³, revenue $229\n* Package 30: volume 41 m³, revenue $114\nThe drone's cargo hold has a maximum capacity of 511 m³. Select the package combination that maximizes total revenue without exceeding this volume limit. Each package is either fully loaded or not loaded.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,36 @@
+{
+  "instance_id": "NL4OPT_013_radiation_beams",
+  "annotation_mode": "semantic",
+  "problem_text": "A patient is undergoing radiation treatment involving two beams, Beam 1 and Beam 2. Beam 1 delivers a dose of 0.3 units of medicine per minute to the benign area of the pancreas and 0.2 units of medicine per minute to the benign area of the skin. Beam 2 delivers 0.2 units of medicine per minute to the benign area of the pancreas and 0.1 units of medicine per minute to the benign area of the skin.  In addition, beam 1 delivers 0.6 units of medicine per minute to the tumor and beam 2 delivers 0.4 units of medicine per minute to the tumor. At most 4 units of medicine should be received by the skin and at least 3 units of medicine should be delivered to the tumor.  How many minutes of each beam should be used to minimize the total radiation received by the pancreas?",
+  "sets": [
+    {
+      "name": "beams",
+      "description": "Beam 1 and Beam 2"
+    },
+    {
+      "name": "body_regions",
+      "description": "pancreas, skin, tumor"
+    }
+  ],
+  "parameter_tables_inline": [
+    {
+      "name": "dose_rates",
+      "indices": [
+        "beam",
+        "region"
+      ],
+      "unit": "units per minute",
+      "values": "| beam | pancreas | skin | tumor |\n|---|---|---|---|\n| Beam 1 | 0.3 | 0.2 | 0.6 |\n| Beam 2 | 0.2 | 0.1 | 0.4 |"
+    },
+    {
+      "name": "limits",
+      "indices": [
+        "region"
+      ],
+      "unit": "units",
+      "values": "| region | limit |\n|---|---|\n| skin | at most 4 |\n| tumor | at least 3 |"
+    }
+  ],
+  "external_file_manifest": [],
+  "notes": "Two decision families; multiple dose obligations across regions."
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_29_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a freight truck. Available containers are:\n\n* Container 1: weight 46kg, revenue 228 credits\n* Container 2: weight 11kg, revenue 133 credits\n* Container 3: weight 46kg, revenue 267 credits\n* Container 4: weight 45kg, revenue 294 credits\n* Container 5: weight 38kg, revenue 95 credits\n* Container 6: weight 30kg, revenue 206 credits\n* Container 7: weight 13kg, revenue 37 credits\n* Container 8: weight 34kg, revenue 228 credits\n* Container 9: weight 37kg, revenue 262 credits\n* Container 10: weight 10kg, revenue 218 credits\n* Container 11: weight 40kg, revenue 273 credits\n* Container 12: weight 33kg, revenue 49 credits\n* Container 13: weight 12kg, revenue 96 credits\n* Container 14: weight 21kg, revenue 92 credits\n* Container 15: weight 40kg, revenue 220 credits\n* Container 16: weight 24kg, revenue 226 credits\n* Container 17: weight 43kg, revenue 223 credits\n* Container 18: weight 19kg, revenue 115 credits\n* Container 19: weight 26kg, revenue 218 credits\n* Container 20: weight 38kg, revenue 223 credits\n* Container 21: weight 33kg, revenue 124 credits\n* Container 22: weight 47kg, revenue 245 credits\n* Container 23: weight 6kg, revenue 15 credits\n* Container 24: weight 44kg, revenue 253 credits\n* Container 25: weight 34kg, revenue 28 credits\n* Container 26: weight 21kg, revenue 182 credits\n* Container 27: weight 50kg, revenue 176 credits\n* Container 28: weight 31kg, revenue 154 credits\n* Container 29: weight 49kg, revenue 281 credits\n\nThe truck has a maximum load capacity of 644 kg. Choose the combination of containers that maximizes total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is preparing a cargo shipment for a three-stage transport route. They must select a collection of packages to maximize total revenue while adhering to the vehicle's weight capacity.\n\nThe packages available are:\n* Package A: weight 24kg, revenue 232 units\n* Package B: weight 50kg, revenue 134 units\n* Package C: weight 35kg, revenue 22 units\n* Package D: weight 34kg, revenue 269 units\n* Package E: weight 8kg, revenue 30 units\n* Package F: weight 37kg, revenue 193 units\n* Package G: weight 3kg, revenue 197 units\n* Package H: weight 12kg, revenue 184 units\n* Package I: weight 18kg, revenue 258 units\n* Package J: weight 31kg, revenue 224 units\n* Package K: weight 1kg, revenue 130 units\n* Package L: weight 42kg, revenue 254 units\n* Package M: weight 48kg, revenue 186 units\n* Package N: weight 44kg, revenue 92 units\n* Package O: weight 3kg, revenue 255 units\n* Package P: weight 34kg, revenue 94 units\n* Package Q: weight 25kg, revenue 157 units\n* Package R: weight 44kg, revenue 257 units\n\nFurthermore, due to a contractual obligation, exactly one of Package A and Package B must be included.\n\nIf Package C is included, the effective load capacity of the vehicle is diminished by 10 kg.\nThe vehicle can accommodate a maximum of 345 kg. The firm must determine which packages to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

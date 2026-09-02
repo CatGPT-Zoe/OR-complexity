@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_23_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of research equipment modules onto identical transport pallets for an expedition. The modules are as follows:\n\n* Module Alpha: mass 54kg\n* Module Beta: mass 62kg\n* Module Gamma: mass 51kg\n* Module Delta: mass 44kg\n* Module Epsilon: mass 67kg\n* Module Zeta: mass 46kg\n* Module Eta: mass 35kg\n* Module Theta: mass 32kg\n* Module Iota: mass 39kg\n* Module Kappa: mass 50kg\n* Module Lambda: mass 70kg\n* Module Mu: mass 67kg\n* Module Nu: mass 66kg\n* Module Xi: mass 61kg\n* Module Omicron: mass 34kg\n* Module Pi: mass 63kg\n* Module Rho: mass 60kg\n* Module Sigma: mass 57kg\n* Module Tau: mass 50kg\n* Module Upsilon: mass 54kg\n* Module Phi: mass 31kg\n* Module Chi: mass 37kg\n* Module Psi: mass 57kg\n\nEach pallet has a maximum safe load capacity of 100 kg. The objective is to assign every module to precisely one pallet, ensuring the cumulative mass on any pallet does not surpass the capacity, while minimizing the total number of pallets utilized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

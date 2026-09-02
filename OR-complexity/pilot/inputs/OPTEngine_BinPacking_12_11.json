@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of antique sculptures to identical reinforced crates for international shipment. The collection consists of the following pieces, each with a distinct mass:\n* Sculpture Alpha: mass 56 kg\n* Sculpture Beta: mass 32 kg\n* Sculpture Gamma: mass 40 kg\n* Sculpture Delta: mass 58 kg\n* Sculpture Epsilon: mass 34 kg\n* Sculpture Zeta: mass 46 kg\n* Sculpture Eta: mass 40 kg\n* Sculpture Theta: mass 58 kg\n* Sculpture Iota: mass 63 kg\n* Sculpture Kappa: mass 61 kg\n* Sculpture Lambda: mass 65 kg\n* Sculpture Mu: mass 68 kg\n\nEach shipping crate possesses a maximum safe load capacity of 100 kg. The coordinator must determine an arrangement that places every sculpture into precisely one crate, without exceeding the load limit of any crate, while minimizing the total number of crates employed for the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

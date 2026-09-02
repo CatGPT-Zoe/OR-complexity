@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A certain factory needs to use a special tool over $n$ planning stages. At stage $j$, $r_j$ specialized tools are needed. At the end of this stage, all tools used within this stage must be sent for repair before they can be reused. There are two repair methods: one is slow repair, which is cheaper (costs $b$ per tool) but takes longer ($p$ stages to return); the other is fast repair, which costs $c$ per tool $(c > b)$ and is faster, requiring only $q$ stages to return $(q < p)$. If the repaired tools cannot meet the needs, new ones must be purchased, with a cost of $a$ per new tool $(a > c)$. This special tool will no longer be used after $n$ stages. Determine an optimal plan for purchasing and repairing the tools to minimize the cost spent on tools during the planning period.\\n\\nn = 10  # number of stages\\nr = [3, 5, 2, 4, 6, 5, 4, 3, 2, 1]  # tool requirements per stage, indexing starts at 1\\na = 10  # cost of buying a new tool\\nb = 1   # cost of slow repair\\nc = 3   # cost of fast repair\\np = 3   # slow repair duration\\nq = 1   # fast repair duration",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

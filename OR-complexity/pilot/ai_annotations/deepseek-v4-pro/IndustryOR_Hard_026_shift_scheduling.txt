@@ -1,0 +1,92 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_Hard_026_shift_scheduling",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "time_periods",
+      "description": "six 4-hour windows over the 24h cycle",
+      "elements": ["2-6", "6-10", "10-14", "14-18", "18-22", "22-2"]
+    },
+    {
+      "id": "shift_starts",
+      "description": "six 8-hour shift start times",
+      "elements": ["2:00", "6:00", "10:00", "14:00", "18:00", "22:00"]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "staff_requirements",
+      "description": "required number of salespeople in each 4-hour period",
+      "indices": [
+        { "role": "time_period", "set_id": "time_periods" }
+      ],
+      "unit": "people",
+      "values": {
+        "2-6": 10,
+        "6-10": 15,
+        "10-14": 25,
+        "14-18": 20,
+        "18-22": 18,
+        "22-2": 12
+      },
+      "source_status": "explicit"
+    }
+  ],
+  "entities": [
+    {
+      "id": "staff_count_per_shift",
+      "canonical_name": "staff_count_per_shift",
+      "semantic_type": "quantity",
+      "indices": [
+        { "role": "shift_start", "set_id": "shift_starts" }
+      ],
+      "description": "number of salespeople starting a shift at the given start time",
+      "value_semantics": "nonnegative integer",
+      "unit": "people",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00",
+        "Determine the minimum number of salespeople needed to meet the requirements."
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "objective": {
+    "id": "min_total_staff",
+    "canonical_name": "minimize_totl_staff",
+    "sense": "minimize",
+    "entity_ids": ["staff_count_per_shift"],
+    "aggregation": "sum",
+    "description": "total number of salespeople hired across all shifts",
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "staffing_coverage",
+      "canonical_name": "staffing_requirement",
+      "obligation_type": "coverage",
+      "normalized_semantics": "For each time period, the total number of staff from shifts that cover that period must be at least the required staff.",
+      "support_entity_ids": ["staff_count_per_shift"],
+      "incidence_slots": [
+        {
+          "entity_id": "staff_count_per_shift",
+          "role": "provided_staff",
+          "aggregation_axes": ["shift_start"],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": ["for all time periods p"],
+      "condition": "shift start s covers time period p (derived from 8-hour shift duration)",
+      "parameter_refs": ["staff_requirements"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people. Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours. Determine the minimum number of salespeople needed to meet the requirements."
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": []
+}

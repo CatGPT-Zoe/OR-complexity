@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo packages to load onto a delivery truck. The available packages are:\n\n* Package 1: weight 10 kg, revenue $239\n* Package 2: weight 46 kg, revenue $85\n* Package 3: weight 34 kg, revenue $171\n* Package 4: weight 9 kg, revenue $116\n* Package 5: weight 12 kg, revenue $237\n* Package 6: weight 23 kg, revenue $209\n* Package 7: weight 28 kg, revenue $261\n* Package 8: weight 25 kg, revenue $122\n* Package 9: weight 13 kg, revenue $234\n* Package 10: weight 14 kg, revenue $35\n* Package 11: weight 25 kg, revenue $27\n\nThe truck has a maximum cargo capacity of 167 kg. Determine which combination of packages to load to maximize total revenue without exceeding the weight limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

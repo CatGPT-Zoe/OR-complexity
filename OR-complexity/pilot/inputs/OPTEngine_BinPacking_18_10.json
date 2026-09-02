@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto uniform pallets for air freight. The cargo pieces are as follows:\n\n* Component Alpha: mass 62 kg\n* Component Beta: mass 34 kg\n* Component Gamma: mass 38 kg\n* Component Delta: mass 43 kg\n* Component Epsilon: mass 61 kg\n* Component Zeta: mass 66 kg\n* Component Eta: mass 43 kg\n* Component Theta: mass 45 kg\n* Component Iota: mass 38 kg\n* Component Kappa: mass 44 kg\n* Component Lambda: mass 54 kg\n* Component Mu: mass 52 kg\n* Component Nu: mass 68 kg\n* Component Xi: mass 67 kg\n* Component Omicron: mass 38 kg\n* Component Pi: mass 70 kg\n* Component Rho: mass 61 kg\n* Component Sigma: mass 36 kg\n\nEvery pallet possesses a maximum allowable load of 100 kilograms. The coordinator must assign all cargo pieces using the smallest possible number of pallets. Each piece must be placed on exactly one pallet, and the aggregate mass on any given pallet must not surpass its designated capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

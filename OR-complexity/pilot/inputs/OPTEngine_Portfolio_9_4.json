@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_9_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute a fixed budget across 9 infrastructure projects to maximize the total projected community benefit.  \nThe characteristics of each project are as follows:  \n* Project A: projected benefit is 0.177, disruption index is 0.162, allocation limits [0.072, 0.557]  \n* Project B: projected benefit is 0.072, disruption index is 0.268, allocation limits [0.001, 0.497]  \n* Project C: projected benefit is 0.027, disruption index is 0.049, allocation limits [0.034, 0.540]  \n* Project D: projected benefit is 0.074, disruption index is 0.156, allocation limits [0.030, 0.357]  \n* Project E: projected benefit is 0.129, disruption index is 0.089, allocation limits [0.067, 0.889]  \n* Project F: projected benefit is 0.187, disruption index is 0.245, allocation limits [0.019, 0.586]  \n* Project G: projected benefit is 0.080, disruption index is 0.106, allocation limits [0.061, 0.861]  \n* Project H: projected benefit is 0.102, disruption index is 0.222, allocation limits [0.064, 0.304]  \n* Project I: projected benefit is 0.135, disruption index is 0.198, allocation limits [0.041, 0.530]  \n\nEach project must receive a budget share within its specified allocation limits, and the total of all shares must sum to one.  \nTo ensure timely completion, the planner requires that the group of quick-delivery projects, represented by the subset Q = {A, C, D, E, F, G, H, I}, collectively receive at least 0.455 of the total budget.  \nAdditionally, the overall disruption index for the portfolio must not exceed 0.183, and the total projected benefit must be at least 0.105.  \nDetermine the optimal budget allocation that maximizes the total projected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized components for a critical three-phase construction project. They need to select a combination of components to maximize total utility score while staying within the cargo plane's total weight allowance.\n\nThe components under consideration are:\n* Component A: weight 12kg, utility 281 points\n* Component B: weight 11kg, utility 42 points\n* Component C: weight 43kg, utility 90 points\n* Component D: weight 38kg, utility 66 points\n* Component E: weight 33kg, utility 288 points\n* Component F: weight 39kg, utility 206 points\n* Component G: weight 49kg, utility 232 points\n* Component H: weight 18kg, utility 169 points\n* Component I: weight 19kg, utility 16 points\n* Component J: weight 28kg, utility 153 points\n* Component K: weight 17kg, utility 285 points\n* Component L: weight 34kg, utility 293 points\n\nFurthermore, due to compatibility protocols, exactly one of Component A and Component B must be included in the final shipment.\n\nIf Component C is selected, it necessitates special handling equipment that consumes 10 kg of the plane's effective payload capacity.\nThe aircraft has a maximum gross payload limit of 238 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

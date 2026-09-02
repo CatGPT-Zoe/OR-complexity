@@ -1,0 +1,243 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_Knapsack_10",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "PACKAGE",
+      "canonical_name": "packages",
+      "members": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "source_grounding": "The available packages are Packages A through J.",
+      "source_spans": [
+        "The available packages are:",
+        "Package A",
+        "Package B",
+        "Package C",
+        "Package D",
+        "Package E",
+        "Package F",
+        "Package G",
+        "Package H",
+        "Package I",
+        "Package J"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "package_size",
+      "canonical_name": "package size",
+      "index_sets": [
+        "PACKAGE"
+      ],
+      "unit": "units",
+      "values": {
+        "A": 36,
+        "B": 45,
+        "C": 26,
+        "D": 50,
+        "E": 28,
+        "F": 16,
+        "G": 22,
+        "H": 10,
+        "I": 30,
+        "J": 31
+      },
+      "source_grounding": "Each package is listed with its size in units.",
+      "source_spans": [
+        "Package A: size 36 units",
+        "Package B: size 45 units",
+        "Package C: size 26 units",
+        "Package D: size 50 units",
+        "Package E: size 28 units",
+        "Package F: size 16 units",
+        "Package G: size 22 units",
+        "Package H: size 10 units",
+        "Package I: size 30 units",
+        "Package J: size 31 units"
+      ]
+    },
+    {
+      "id": "package_revenue",
+      "canonical_name": "package revenue",
+      "index_sets": [
+        "PACKAGE"
+      ],
+      "unit": "credits",
+      "values": {
+        "A": 88,
+        "B": 238,
+        "C": 104,
+        "D": 225,
+        "E": 99,
+        "F": 242,
+        "G": 277,
+        "H": 191,
+        "I": 54,
+        "J": 114
+      },
+      "source_grounding": "Each package is listed with its revenue in credits.",
+      "source_spans": [
+        "Package A: size 36 units, revenue 88 credits",
+        "Package B: size 45 units, revenue 238 credits",
+        "Package C: size 26 units, revenue 104 credits",
+        "Package D: size 50 units, revenue 225 credits",
+        "Package E: size 28 units, revenue 99 credits",
+        "Package F: size 16 units, revenue 242 credits",
+        "Package G: size 22 units, revenue 277 credits",
+        "Package H: size 10 units, revenue 191 credits",
+        "Package I: size 30 units, revenue 54 credits",
+        "Package J: size 31 units, revenue 114 credits"
+      ]
+    },
+    {
+      "id": "cargo_capacity",
+      "canonical_name": "drone cargo capacity",
+      "index_sets": [],
+      "unit": "units",
+      "value": 205,
+      "source_grounding": "The drone's cargo capacity is limited to 205 units.",
+      "source_spans": [
+        "The drone's cargo capacity is limited to 205 units."
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "package_selection",
+      "canonical_family": "ITEM_SELECTION",
+      "canonical_name": "package loading selection",
+      "entity_role": "decision",
+      "index_sets": [
+        "PACKAGE"
+      ],
+      "semantic_arguments": [
+        {
+          "role": "item",
+          "set_ref": "PACKAGE"
+        }
+      ],
+      "domain_metadata": {
+        "value_kind": "binary",
+        "interpretation": {
+          "selected": "package is fully loaded",
+          "not_selected": "package is left behind"
+        }
+      },
+      "source_grounding": "The manager chooses which packages to load, with each package either fully loaded or left behind.",
+      "source_spans": [
+        "A logistics manager is selecting packages to load onto a cargo drone.",
+        "Choose the set of packages",
+        "Each package must be either fully loaded or left behind."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "id": "maximize_total_revenue",
+    "sense": "maximize",
+    "canonical_name": "total revenue from loaded packages",
+    "normalized_semantics": "Maximize the sum of package revenue over all selected packages.",
+    "support_entity_ids": [
+      "package_selection"
+    ],
+    "parameter_refs": [
+      "package_revenue"
+    ],
+    "source_grounding": "Choose the set of packages that maximizes total revenue.",
+    "source_spans": [
+      "Choose the set of packages that maximizes total revenue without exceeding this capacity limit."
+    ],
+    "confidence": 1.0
+  },
+  "obligations": [
+    {
+      "id": "OBL_cargo_capacity",
+      "canonical_family": "RESOURCE_CAPACITY_LIMIT",
+      "canonical_name": "drone cargo capacity limit",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "capacity_feasibility",
+      "normalized_semantics": "The aggregate size of all loaded packages must not exceed the drone's cargo capacity.",
+      "support_entity_ids": [
+        "package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "argument_roles": {
+            "item": "p"
+          },
+          "aggregation": "sum over p in PACKAGE",
+          "coefficient_parameter_ref": "package_size"
+        }
+      ],
+      "quantifier": "single aggregate over all packages",
+      "scope_kind": "global",
+      "parameter_refs": [
+        "package_size",
+        "cargo_capacity"
+      ],
+      "condition": null,
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "The total size of loaded packages may not exceed 205 units.",
+      "source_spans": [
+        "The drone's cargo capacity is limited to 205 units.",
+        "without exceeding this capacity limit"
+      ],
+      "normalization_rationale": "This is one aggregate resource upper-bound family. It has only one CSDE family in its support, so it is not active in the coupling hypergraph.",
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_package_all_or_nothing",
+      "canonical_family": "ITEM_SELECTION_INDIVISIBILITY",
+      "canonical_name": "all-or-nothing package loading",
+      "structural_form": "OTHER_RELATION",
+      "business_role": "selection_indivisibility",
+      "normalized_semantics": "For every package, the loading outcome must be exactly one of fully loaded or left behind; partial loading is prohibited.",
+      "support_entity_ids": [
+        "package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "argument_roles": {
+            "item": "p"
+          },
+          "allowed_semantic_outcomes": [
+            "fully_loaded",
+            "left_behind"
+          ]
+        }
+      ],
+      "quantifier": "for every p in PACKAGE",
+      "scope_kind": "per_item",
+      "parameter_refs": [],
+      "condition": null,
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "Each package must be either fully loaded or left behind.",
+      "source_spans": [
+        "Each package must be either fully loaded or left behind."
+      ],
+      "normalization_rationale": "Although represented as binary domain metadata on the selection entity, the text explicitly states all-or-nothing loading as a mandatory operational rule.",
+      "confidence": 1.0
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [],
+  "annotation_warnings": []
+}

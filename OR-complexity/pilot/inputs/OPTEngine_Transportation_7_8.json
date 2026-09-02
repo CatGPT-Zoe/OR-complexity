@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must allocate its fleet of trucks from distribution hubs to retail outlets in a manner that minimizes total fuel expenditure.\n\nThe number of trucks available at each distribution hub (set H) is specified as:  \n*Hub Alpha has 101 vehicles.  \n*Hub Beta has 81 vehicles.  \n*Hub Gamma has 84 vehicles.  \n*Hub Delta has 68 vehicles.  \n*Hub Epsilon has 165 vehicles.  \n*Hub Zeta has 94 vehicles.  \n*Hub Eta has 163 vehicles.\n\nThe required number of deliveries at each retail outlet (set R) is as follows:  \n*Outlet P requires 117 trucks.  \n*Outlet Q requires 140 trucks.  \n*Outlet S requires 142 trucks.  \n*Outlet T requires 96 trucks.  \n*Outlet U requires 102 trucks.  \n*Outlet V requires 79 trucks.  \n*Outlet W requires 41 trucks.\n\nThe fuel cost per truck dispatched from each hub to each outlet is provided in the table:\n\n| Hub / Outlet | P | Q | S | T | U | V | W |\n|---|---|---|---|---|---|---|---|\n| Alpha   | 10 | 6 | 6 | 12 | 17 | 8 | 4 |\n| Beta    | 7 | 5 | 8 | 16 | 1 | 12 | 18 |\n| Gamma   | 19 | 12 | 15 | 18 | 5 | 20 | 3 |\n| Delta   | 3 | 10 | 13 | 16 | 17 | 14 | 14 |\n| Epsilon | 19 | 3 | 5 | 11 | 3 | 15 | 15 |\n| Zeta    | 17 | 12 | 5 | 18 | 19 | 6 | 5 |\n| Eta     | 14 | 17 | 2 | 4 | 17 | 5 | 10 |\n\nDetermine the optimal assignment of trucks from hubs to outlets so that the overall fuel consumption cost is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

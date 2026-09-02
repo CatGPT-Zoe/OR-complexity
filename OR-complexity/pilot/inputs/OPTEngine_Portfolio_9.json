@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate municipal budget across 9 infrastructure projects to maximize overall community benefit.  \nThe profile of each project is as follows:  \n* Project A: benefit score 0.115, environmental impact 0.265, allocation limits [0.015, 0.681]  \n* Project B: benefit score 0.158, environmental impact 0.236, allocation limits [0.016, 0.631]  \n* Project C: benefit score 0.168, environmental impact 0.196, allocation limits [0.032, 0.375]  \n* Project D: benefit score 0.033, environmental impact 0.063, allocation limits [0.071, 0.482]  \n* Project E: benefit score 0.195, environmental impact 0.290, allocation limits [0.035, 0.620]  \n* Project F: benefit score 0.136, environmental impact 0.135, allocation limits [0.094, 0.602]  \n* Project G: benefit score 0.101, environmental impact 0.274, allocation limits [0.089, 0.401]  \n* Project H: benefit score 0.142, environmental impact 0.026, allocation limits [0.085, 0.865]  \n* Project I: benefit score 0.082, environmental impact 0.046, allocation limits [0.025, 0.393]  \n\nEach project must receive a budget share within its specified limits, and the total allocation across all projects must equal the entire budget.  \nTo ensure equitable regional development, the subset of projects L = {A, D, E, F, G} must collectively receive at least 0.399 of the total budget.  \nAdditionally, the total environmental impact index for all projects must not exceed 0.183, and the overall benefit score must be at least 0.099.  \nDetermine the optimal budget allocation that maximizes total benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

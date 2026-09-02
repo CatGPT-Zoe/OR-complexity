@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate resources from a series of distribution hubs to a network of retail outlets, aiming to reduce the overall transfer expenditure.\n\nThe inventory available at each distribution hub (set H) is as follows:\n*Hub H1 holds 100 units.\n*Hub H2 holds 167 units.\n*Hub H3 holds 77 units.\n*Hub H4 holds 84 units.\n*Hub H5 holds 127 units.\n*Hub H6 holds 51 units.\n*Hub H7 holds 151 units.\n*Hub H8 holds 135 units.\n*Hub H9 holds 147 units.\n\nThe required fulfillment at each retail outlet (set R) is detailed below:\n*Outlet R1 requires 62 units.\n*Outlet R2 requires 63 units.\n*Outlet R3 requires 152 units.\n*Outlet R4 requires 160 units.\n*Outlet R5 requires 181 units.\n*Outlet R6 requires 25 units.\n*Outlet R7 requires 59 units.\n*Outlet R8 requires 176 units.\n*Outlet R9 requires 37 units.\n\nThe per-unit transfer cost from each hub to each outlet is provided in the following matrix:\n| Source / Destination | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 |\n|--|-|-|-|-|-|-|-|-|\n| H1 | 11 | 6 | 13 | 11 | 10 | 16 | 19 | 8 | 11 |\n| H2 | 13 | 9 | 13 | 12 | 4 | 19 | 7 | 19 | 18 |\n| H3 | 6 | 18 | 1 | 15 | 7 | 15 | 10 | 3 | 14 |\n| H4 | 16 | 5 | 10 | 8 | 9 | 5 | 14 | 13 | 3 |\n| H5 | 15 | 20 | 16 | 19 | 13 | 18 | 17 | 14 | 18 |\n| H6 | 2 | 12 | 18 | 20 | 3 | 4 | 8 | 12 | 6 |\n| H7 | 20 | 2 | 19 | 13 | 11 | 14 | 4 | 1 | 4 |\n| H8 | 9 | 8 | 17 | 17 | 18 | 19 | 19 | 8 | 15 |\n| H9 | 12 | 13 | 15 | 19 | 17 | 5 | 12 | 1 | 16 |\n\nDetermine the optimal allocation of units to be transferred in order to minimize the cumulative expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

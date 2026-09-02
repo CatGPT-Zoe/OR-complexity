@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment for a critical three-day expedition to a remote outpost. They must select a combination of cargo containers to maximize total utility points while adhering to the transport vehicle's weight limit.\n\nThe available containers are:\n* Container A: weight 48kg, utility 202 points\n* Container B: weight 2kg, utility 28 points\n* Container C: weight 32kg, utility 55 points\n* Container D: weight 23kg, utility 159 points\n* Container E: weight 43kg, utility 87 points\n* Container F: weight 30kg, utility 130 points\n* Container G: weight 33kg, utility 192 points\n* Container H: weight 11kg, utility 217 points\n* Container I: weight 22kg, utility 148 points\n* Container J: weight 32kg, utility 211 points\n* Container K: weight 1kg, utility 169 points\n* Container L: weight 34kg, utility 157 points\n\nFurthermore, due to a contractual obligation, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, it requires special handling equipment that reduces the vehicle's effective load capacity by 10 kg.\nThe vehicle's maximum permissible load is 217 kg. The manager must determine the optimal set of containers to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport ship. Available containers are:\n\n* Container 1: weight 31 tons, revenue 199 units\n* Container 2: weight 40 tons, revenue 252 units\n* Container 3: weight 9 tons, revenue 286 units\n* Container 4: weight 15 tons, revenue 35 units\n* Container 5: weight 29 tons, revenue 300 units\n* Container 6: weight 16 tons, revenue 137 units\n* Container 7: weight 38 tons, revenue 126 units\n* Container 8: weight 44 tons, revenue 27 units\n* Container 9: weight 19 tons, revenue 66 units\n* Container 10: weight 25 tons, revenue 182 units\n* Container 11: weight 27 tons, revenue 186 units\n* Container 12: weight 10 tons, revenue 206 units\n* Container 13: weight 30 tons, revenue 75 units\n* Container 14: weight 27 tons, revenue 90 units\n* Container 15: weight 15 tons, revenue 29 units\n* Container 16: weight 24 tons, revenue 246 units\n* Container 17: weight 43 tons, revenue 242 units\n* Container 18: weight 8 tons, revenue 178 units\n* Container 19: weight 17 tons, revenue 76 units\n* Container 20: weight 47 tons, revenue 162 units\n* Container 21: weight 3 tons, revenue 110 units\n* Container 22: weight 34 tons, revenue 159 units\n* Container 23: weight 17 tons, revenue 131 units\n* Container 24: weight 6 tons, revenue 244 units\n* Container 25: weight 8 tons, revenue 282 units\n* Container 26: weight 32 tons, revenue 174 units\n* Container 27: weight 12 tons, revenue 166 units\n\nThe ship's maximum cargo capacity is 438 tons. Select the container combination that maximizes total revenue without exceeding this weight limit. Each container is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

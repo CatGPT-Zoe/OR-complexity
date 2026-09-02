@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is preparing shipments for a fleet of delivery drones. The packages to be delivered are:\n* Package Alpha: size 37 units\n* Package Beta: size 47 units\n* Package Gamma: size 32 units\n* Package Delta: size 30 units\n* Package Epsilon: size 46 units\n* Package Zeta: size 55 units\n* Package Eta: size 63 units\n* Package Theta: size 67 units\n* Package Iota: size 55 units\n* Package Kappa: size 58 units\n* Package Lambda: size 36 units\n* Package Mu: size 46 units\n* Package Nu: size 52 units\n* Package Xi: size 48 units\n* Package Omicron: size 42 units\n* Package Pi: size 68 units\n\nEach drone can carry a maximum load of 100 size units. Assign all packages to drones using the minimum number of drones. Every package must be assigned to exactly one drone, and the total size of packages assigned to any drone cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

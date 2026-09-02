@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is coordinating a shipment of specialized components to a remote research station via a cargo aircraft. They must select a combination of crates to maximize total utility score while adhering to the aircraft's payload capacity.\n\nThe crates available for shipment are:\n* Crate A: mass 23kg, utility 286 units\n* Crate B: mass 4kg, utility 87 units\n* Crate C: mass 23kg, utility 21 units\n* Crate D: mass 32kg, utility 41 units\n* Crate E: mass 2kg, utility 133 units\n* Crate F: mass 3kg, utility 16 units\n* Crate G: mass 15kg, utility 177 units\n* Crate H: mass 5kg, utility 41 units\n* Crate I: mass 23kg, utility 226 units\n* Crate J: mass 9kg, utility 120 units\n* Crate K: mass 29kg, utility 232 units\n* Crate L: mass 10kg, utility 193 units\n\nFurthermore, due to a compatibility constraint, exactly one of Crate A or Crate B must be included in the shipment.\n\nShould Crate C be loaded, it requires special handling equipment that reduces the aircraft's effective payload allowance by 10 kg.\nThe maximum allowable total mass for the flight is 124 kg. The manager must determine the optimal set of crates to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

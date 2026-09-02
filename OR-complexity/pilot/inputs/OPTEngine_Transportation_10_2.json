@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_10_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate the dispatch of specialized technicians from regional offices to client project sites, seeking to minimize total travel expenses.\n\nThe available number of technicians at each regional office (set R) is as follows:\n*R1 has 92 technicians.\n*R2 has 69 technicians.\n*R3 has 175 technicians.\n*R4 has 132 technicians.\n*R5 has 111 technicians.\n*R6 has 134 technicians.\n*R7 has 121 technicians.\n*R8 has 62 technicians.\n*R9 has 179 technicians.\n*R10 has 107 technicians.\n\nThe required staffing level at each project site (set P) is specified below:\n*P1 requires 73 technicians.\n*P2 requires 156 technicians.\n*P3 requires 15 technicians.\n*P4 requires 85 technicians.\n*P5 requires 110 technicians.\n*P6 requires 16 technicians.\n*P7 requires 94 technicians.\n*P8 requires 60 technicians.\n*P9 requires 186 technicians.\n*P10 requires 141 technicians.\n\nThe per-technician travel cost from each office to each project site is provided in the matrix:\n| From / To | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | P9 | P10 |\n|--|-|-|-|-|-|-|-|-|-|\n| R1 | 1 | 4 | 13 | 14 | 2 | 18 | 18 | 1 | 3 | 20 |\n| R2 | 20 | 10 | 17 | 18 | 7 | 15 | 11 | 12 | 2 | 8 |\n| R3 | 15 | 11 | 18 | 20 | 20 | 16 | 12 | 15 | 4 | 4 |\n| R4 | 8 | 1 | 11 | 12 | 10 | 18 | 17 | 12 | 4 | 2 |\n| R5 | 6 | 16 | 5 | 14 | 4 | 9 | 20 | 7 | 7 | 4 |\n| R6 | 13 | 7 | 15 | 7 | 11 | 4 | 14 | 2 | 19 | 4 |\n| R7 | 15 | 15 | 19 | 17 | 5 | 16 | 1 | 17 | 2 | 18 |\n| R8 | 14 | 19 | 16 | 17 | 6 | 19 | 6 | 5 | 4 | 13 |\n| R9 | 20 | 20 | 11 | 17 | 13 | 14 | 20 | 8 | 9 | 13 |\n| R10 | 11 | 10 | 15 | 5 | 5 | 14 | 20 | 17 | 10 | 18 |\n\nDetermine the optimal assignment of technicians to project sites to achieve the minimum total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

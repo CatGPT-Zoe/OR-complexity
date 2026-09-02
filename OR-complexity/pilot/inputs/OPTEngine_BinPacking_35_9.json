@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. Packages:\n* Package Alpha: volume 40 cubic feet\n* Package Bravo: volume 46 cubic feet\n* Package Charlie: volume 48 cubic feet\n* Package Delta: volume 64 cubic feet\n* Package Echo: volume 48 cubic feet\n* Package Foxtrot: volume 57 cubic feet\n* Package Golf: volume 67 cubic feet\n* Package Hotel: volume 30 cubic feet\n* Package India: volume 61 cubic feet\n* Package Juliet: volume 34 cubic feet\n* Package Kilo: volume 60 cubic feet\n* Package Lima: volume 48 cubic feet\n* Package Mike: volume 59 cubic feet\n* Package November: volume 65 cubic feet\n* Package Oscar: volume 53 cubic feet\n* Package Papa: volume 60 cubic feet\n* Package Quebec: volume 69 cubic feet\n* Package Romeo: volume 34 cubic feet\n* Package Sierra: volume 49 cubic feet\n* Package Tango: volume 43 cubic feet\n* Package Uniform: volume 56 cubic feet\n* Package Victor: volume 59 cubic feet\n* Package Whiskey: volume 52 cubic feet\n* Package X-ray: volume 58 cubic feet\n* Package Yankee: volume 39 cubic feet\n* Package Zulu: volume 60 cubic feet\n* Package Asterisk: volume 53 cubic feet\n* Package Slash: volume 34 cubic feet\n* Package Plus: volume 46 cubic feet\n* Package Ampersand: volume 66 cubic feet\n* Package Percent: volume 43 cubic feet\n* Package Dollar: volume 67 cubic feet\n* Package At: volume 38 cubic feet\n* Package Hash: volume 63 cubic feet\n* Package Exclamation: volume 48 cubic feet\n\nEach truck can carry up to 100 cubic feet of total volume. Assign all packages using the fewest trucks. Each package must be loaded onto exactly one truck, and the total volume in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

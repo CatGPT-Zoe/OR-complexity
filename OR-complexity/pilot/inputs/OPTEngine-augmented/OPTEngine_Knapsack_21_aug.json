@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with selecting a subset of cargo containers to load onto a freight aircraft, aiming to maximize total revenue while adhering to the aircraft's maximum payload capacity.\n\nThe available containers are:\n* Container 1: mass 6 tonnes, revenue 164 units\n* Container 2: mass 23 tonnes, revenue 76 units\n* Container 3: mass 30 tonnes, revenue 199 units\n* Container 4: mass 3 tonnes, revenue 178 units\n* Container 5: mass 7 tonnes, revenue 61 units\n* Container 6: mass 40 tonnes, revenue 66 units\n* Container 7: mass 20 tonnes, revenue 167 units\n* Container 8: mass 38 tonnes, revenue 197 units\n* Container 9: mass 12 tonnes, revenue 13 units\n* Container 10: mass 43 tonnes, revenue 253 units\n* Container 11: mass 26 tonnes, revenue 217 units\n* Container 12: mass 41 tonnes, revenue 119 units\n* Container 13: mass 6 tonnes, revenue 223 units\n* Container 14: mass 18 tonnes, revenue 258 units\n* Container 15: mass 28 tonnes, revenue 262 units\n* Container 16: mass 25 tonnes, revenue 84 units\n* Container 17: mass 28 tonnes, revenue 115 units\n* Container 18: mass 49 tonnes, revenue 227 units\n* Container 19: mass 41 tonnes, revenue 108 units\n* Container 20: mass 18 tonnes, revenue 46 units\n* Container 21: mass 9 tonnes, revenue 248 units\n\nFurthermore, a logistical requirement dictates that exactly one of Container 1 and Container 2 must be included in the shipment.\n\nShould Container 3 be selected, the aircraft's effective payload capacity is diminished by 10 tonnes.\nThe aircraft's maximum allowable payload is 357 tonnes. The coordinator must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

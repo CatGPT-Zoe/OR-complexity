@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to perform maintenance checks at four distinct regional facilities.\n\nThe travel times between facilities, recorded in minutes, are as follows:\n* Facility Alpha to Facility Beta: 184.2 minutes\n* Facility Alpha to Facility Gamma: 71.6 minutes\n* Facility Alpha to Facility Delta: 94.6 minutes\n* Facility Beta to Facility Gamma: 126.8 minutes\n* Facility Beta to Facility Delta: 94.5 minutes\n* Facility Gamma to Facility Delta: 64.0 minutes\n\nThe objective is to determine the most time-efficient inspection circuit, wherein the technician must visit each facility precisely once before concluding the tour back at the initial facility.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

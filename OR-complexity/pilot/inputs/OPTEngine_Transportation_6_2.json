@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate the distribution of specialized components from its regional warehouses to various assembly plants. The objective is to minimize the total procurement expense incurred from these transfers.\n\nThe inventory available at each regional warehouse (set R) is precisely:\n* Warehouse R1 holds 83 units.\n* Warehouse R2 holds 123 units.\n* Warehouse R3 holds 162 units.\n* Warehouse R4 holds 174 units.\n* Warehouse R5 holds 81 units.\n* Warehouse R6 holds 57 units.\n\nThe requisite number of components for each assembly plant (set P) is detailed as:\n* Plant P1 requires 177 units.\n* Plant P2 requires 70 units.\n* Plant P3 requires 46 units.\n* Plant P4 requires 159 units.\n* Plant P5 requires 160 units.\n* Plant P6 requires 27 units.\n\nThe per-unit transfer cost from each warehouse to each plant is provided in the following matrix:\n| Source / Destination | P1 | P2 | P3 | P4 | P5 | P6 |\n|--|-|-|-|-|-|\n| R1 | 4 | 15 | 4 | 5 | 16 | 10 |\n| R2 | 17 | 9 | 14 | 16 | 16 | 8 |\n| R3 | 15 | 18 | 5 | 13 | 7 | 20 |\n| R4 | 17 | 5 | 3 | 9 | 14 | 11 |\n| R5 | 17 | 9 | 1 | 10 | 10 | 19 |\n| R6 | 19 | 16 | 5 | 15 | 18 | 16 |\n\nDetermine the optimal allocation of component shipments to achieve the minimal total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

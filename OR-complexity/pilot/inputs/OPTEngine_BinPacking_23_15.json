@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_23_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of archival boxes to be shipped via courier. The boxes are uniform in size and each has a maximum allowable shipment weight of 100 kilograms. The following historical documents, each with a precise weight, must be dispatched:\n* Ledger Alpha: weight 51kg\n* Ledger Beta: weight 61kg\n* Ledger Gamma: weight 42kg\n* Ledger Delta: weight 40kg\n* Ledger Epsilon: weight 53kg\n* Ledger Zeta: weight 65kg\n* Ledger Eta: weight 52kg\n* Ledger Theta: weight 58kg\n* Ledger Iota: weight 55kg\n* Ledger Kappa: weight 58kg\n* Ledger Lambda: weight 50kg\n* Ledger Mu: weight 59kg\n* Ledger Nu: weight 34kg\n* Ledger Xi: weight 39kg\n* Ledger Omicron: weight 44kg\n* Ledger Pi: weight 37kg\n* Ledger Rho: weight 39kg\n* Ledger Sigma: weight 55kg\n* Ledger Tau: weight 59kg\n* Ledger Upsilon: weight 64kg\n* Ledger Phi: weight 43kg\n* Ledger Chi: weight 53kg\n* Ledger Psi: weight 32kg\n\nEvery document must be placed into exactly one shipping box, and the collective weight within any single box cannot surpass the 100 kg limit. The objective is to determine an allocation that utilizes the minimal possible number of boxes for the entire consignment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

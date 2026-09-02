@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate drone inspections across eight remote sensor stations:\n\nStation Alpha: Position (85,188)\nStation Beta: Position (175,39)\nStation Gamma: Position (42,160)\nStation Delta: Position (144,96)\nStation Epsilon: Position (163,22)\nStation Zeta: Position (16,21)\nStation Eta: Position (50,191)\nStation Theta: Position (56,15)\n\nThe flight distances between stations, in kilometers, are precisely known:\nAlpha to Gamma: 51.3 km\nAlpha to Delta: 109.3 km\nAlpha to Epsilon: 183.4 km\nAlpha to Zeta: 180.7 km\nAlpha to Eta: 35.1 km\nAlpha to Theta: 175.4 km\nBeta to Gamma: 179.8 km\nBeta to Delta: 64.9 km\nBeta to Epsilon: 20.8 km\nBeta to Zeta: 160.0 km\nBeta to Eta: 196.8 km\nBeta to Theta: 121.4 km\nGamma to Delta: 120.4 km\nGamma to Epsilon: 183.5 km\nGamma to Zeta: 141.4 km\nGamma to Eta: 32.0 km\nGamma to Theta: 145.7 km\nDelta to Epsilon: 76.4 km\nDelta to Zeta: 148.4 km\nDelta to Eta: 133.6 km\nDelta to Theta: 119.6 km\nEpsilon to Zeta: 147.0 km\nEpsilon to Eta: 203.3 km\nEpsilon to Theta: 107.2 km\nZeta to Eta: 173.4 km\nZeta to Theta: 40.4 km\nEta to Theta: 176.1 km\n\nDue to a permanent signal interference zone, direct flight between Station Alpha and Station Beta is impossible. Furthermore, operational protocols mandate that exactly one of two critical flight corridors must be utilized: either the link between Station Beta and Station Gamma, or the link between Station Gamma and Station Delta.\n\nThe objective is to determine the most fuel-efficient inspection circuit, where the drone must visit every station exactly once before returning to its origin, thereby minimizing the total flight distance.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

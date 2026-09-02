@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a freight truck. Available containers are:\n* Container 1: weight 30kg, value $190\n* Container 2: weight 29kg, value $84\n* Container 3: weight 50kg, value $256\n* Container 4: weight 24kg, value $42\n* Container 5: weight 17kg, value $299\n* Container 6: weight 14kg, value $79\n* Container 7: weight 43kg, value $279\n* Container 8: weight 19kg, value $51\n* Container 9: weight 12kg, value $12\n* Container 10: weight 36kg, value $285\n* Container 11: weight 30kg, value $294\n* Container 12: weight 31kg, value $152\n* Container 13: weight 12kg, value $12\n* Container 14: weight 42kg, value $232\n* Container 15: weight 23kg, value $164\n* Container 16: weight 28kg, value $34\n* Container 17: weight 45kg, value $26\n* Container 18: weight 3kg, value $137\n* Container 19: weight 28kg, value $56\n* Container 20: weight 3kg, value $202\n* Container 21: weight 31kg, value $117\n* Container 22: weight 8kg, value $146\n* Container 23: weight 2kg, value $98\n* Container 24: weight 31kg, value $34\n* Container 25: weight 5kg, value $19\n\nThe truck has a maximum payload capacity of 417 kg. Determine which containers to load to maximize the total value without exceeding this weight limit. Each container must be loaded entirely or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

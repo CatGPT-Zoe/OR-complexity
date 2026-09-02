@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of shipments to identical cargo aircraft for international dispatch. The shipments are as follows:\n\n* Shipment Alpha: mass 42 metric tons\n* Shipment Beta: mass 34 metric tons\n* Shipment Gamma: mass 47 metric tons\n* Shipment Delta: mass 62 metric tons\n* Shipment Epsilon: mass 62 metric tons\n* Shipment Zeta: mass 40 metric tons\n* Shipment Eta: mass 67 metric tons\n* Shipment Theta: mass 41 metric tons\n* Shipment Iota: mass 61 metric tons\n* Shipment Kappa: mass 37 metric tons\n* Shipment Lambda: mass 60 metric tons\n* Shipment Mu: mass 45 metric tons\n* Shipment Nu: mass 57 metric tons\n* Shipment Xi: mass 41 metric tons\n* Shipment Omicron: mass 37 metric tons\n* Shipment Pi: mass 33 metric tons\n* Shipment Rho: mass 63 metric tons\n* Shipment Sigma: mass 32 metric tons\n* Shipment Tau: mass 35 metric tons\n* Shipment Upsilon: mass 36 metric tons\n* Shipment Phi: mass 67 metric tons\n* Shipment Chi: mass 38 metric tons\n* Shipment Psi: mass 39 metric tons\n* Shipment Omega: mass 66 metric tons\n* Shipment Aleph: mass 43 metric tons\n* Shipment Beth: mass 52 metric tons\n* Shipment Gimel: mass 53 metric tons\n* Shipment Dalet: mass 36 metric tons\n* Shipment He: mass 36 metric tons\n* Shipment Waw: mass 54 metric tons\n\nEach aircraft possesses a maximum permissible takeoff payload of 100 metric tons. The coordinator must allocate every shipment to precisely one aircraft, ensuring the combined mass for any given aircraft does not surpass its payload capacity. The objective is to utilize the minimal possible number of aircraft to complete the dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

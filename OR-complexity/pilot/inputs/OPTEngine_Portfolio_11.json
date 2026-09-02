@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute a fixed budget across 11 infrastructure projects to maximize the total projected benefit score.  \nEach project has the following characteristics:  \n* Project A: benefit score 0.060, impact rating 0.095, allocation limits [0.015, 0.485]  \n* Project B: benefit score 0.113, impact rating 0.238, allocation limits [0.093, 0.423]  \n* Project C: benefit score 0.028, impact rating 0.224, allocation limits [0.002, 0.890]  \n* Project D: benefit score 0.092, impact rating 0.080, allocation limits [0.054, 0.552]  \n* Project E: benefit score 0.178, impact rating 0.117, allocation limits [0.064, 0.877]  \n* Project F: benefit score 0.176, impact rating 0.292, allocation limits [0.069, 0.884]  \n* Project G: benefit score 0.159, impact rating 0.299, allocation limits [0.001, 0.385]  \n* Project H: benefit score 0.076, impact rating 0.235, allocation limits [0.034, 0.468]  \n* Project I: benefit score 0.036, impact rating 0.222, allocation limits [0.076, 0.326]  \n* Project J: benefit score 0.102, impact rating 0.169, allocation limits [0.038, 0.439]  \n* Project K: benefit score 0.086, impact rating 0.241, allocation limits [0.074, 0.807]  \n\nThe budget share allocated to each project must stay within its specified limits, and all shares must sum to one.  \nTo prioritize essential services, the subset of high-priority projects L = {D, E, J} must receive at least 0.540 of the total budget.  \nAdditionally, the overall impact rating of the portfolio must not exceed 0.192, and the total benefit score must be at least 0.094.  \nDetermine the optimal budget allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

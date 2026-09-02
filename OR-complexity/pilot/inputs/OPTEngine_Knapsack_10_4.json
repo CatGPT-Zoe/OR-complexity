@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a delivery truck. The available containers are:\n\n* Container 1: size 35 cubic feet, revenue $217\n* Container 2: size 18 cubic feet, revenue $21\n* Container 3: size 8 cubic feet, revenue $148\n* Container 4: size 43 cubic feet, revenue $30\n* Container 5: size 1 cubic feet, revenue $141\n* Container 6: size 26 cubic feet, revenue $279\n* Container 7: size 38 cubic feet, revenue $212\n* Container 8: size 29 cubic feet, revenue $62\n* Container 9: size 48 cubic feet, revenue $139\n* Container 10: size 23 cubic feet, revenue $155\n\nThe truck's cargo hold has a maximum capacity of 188 cubic feet. Choose the combination of containers that maximizes total revenue without exceeding this capacity. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

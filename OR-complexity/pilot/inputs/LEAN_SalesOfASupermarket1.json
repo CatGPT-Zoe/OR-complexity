@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_SalesOfASupermarket1",
+  "annotation_mode": "semantic",
+  "problem_text": "A supermarket manager needs to select a variety of products to stock in different sections of the store. Particularly, the store has several sections, each with a display space limit provided in \"capacity.csv.\" The predefined price and shelf space requirement of each product are detailed in \"products.csv.\" The objective is to determine the optimal number of units of each product to stock in each section to maximize the total revenue, while ensuring that the total space used by the products in each section does not exceed the available capacity. The decision variables x_ij denote the number of units of product j to be placed in section i.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "SectionID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| SectionID | Capacity |\n|---|---|\n| 1 | 100 |\n| 2 | 150 |\n| 3 | 120 |\n| 4 | 130 |\n| 5 | 90 |\n| 6 | 110 |\n| 7 | 160 |\n| 8 | 140 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| 1 | 10 | 2 |\n| 2 | 15 | 3 |\n| 3 | 8 | 1 |\n| 4 | 12 | 2 |\n| 5 | 20 | 4 |\n| 6 | 25 | 5 |\n| 7 | 5 | 1 |\n| 8 | 30 | 6 |\n| 9 | 18 | 3 |\n| 10 | 22 | 4 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA10/SalesOfASupermarket1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA10/SalesOfASupermarket1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

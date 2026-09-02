@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to perform maintenance at six distinct regional facilities.\n\nThe travel times between facilities are recorded in minutes:\n* Facility P to Q: 37.1 minutes\n* Facility P to R: 49.0 minutes\n* Facility P to S: 77.3 minutes\n* Facility P to T: 66.9 minutes\n* Facility P to U: 61.0 minutes\n* Facility Q to R: 24.1 minutes\n* Facility Q to S: 89.1 minutes\n* Facility Q to T: 40.0 minutes\n* Facility Q to U: 27.7 minutes\n* Facility R to S: 74.0 minutes\n* Facility R to T: 59.7 minutes\n* Facility R to U: 16.3 minutes\n* Facility S to T: 129.2 minutes\n* Facility S to U: 89.0 minutes\n* Facility T to U: 52.4 minutes\n\nThe objective is to determine the most time-efficient itinerary that allows the technician to service each facility precisely once, concluding the circuit at the initial departure point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

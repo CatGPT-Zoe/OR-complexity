@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a fleet of delivery vehicles to transport a selection of high-priority cargo containers. The objective is to maximize the total revenue generated from the shipments while adhering to a strict total weight constraint for the fleet.\n\nThe available cargo containers are:\n* Container A: weight 40 tons, revenue 11 thousand dollars\n* Container B: weight 18 tons, revenue 159 thousand dollars\n* Container C: weight 47 tons, revenue 126 thousand dollars\n* Container D: weight 10 tons, revenue 157 thousand dollars\n* Container E: weight 13 tons, revenue 63 thousand dollars\n* Container F: weight 28 tons, revenue 245 thousand dollars\n* Container G: weight 46 tons, revenue 179 thousand dollars\n* Container H: weight 25 tons, revenue 96 thousand dollars\n* Container I: weight 22 tons, revenue 225 thousand dollars\n* Container J: weight 42 tons, revenue 232 thousand dollars\n\nA contractual obligation stipulates that exactly one of Container A and Container B must be included in the shipment plan.\n\nFurthermore, if Container C is selected, it necessitates a special handling protocol that reduces the effective total load capacity of the fleet by 10 tons.\nThe maximum allowable gross weight for the assembled fleet is 203 tons. The manager must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

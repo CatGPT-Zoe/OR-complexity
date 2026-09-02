@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to service six critical substations across a regional power grid:\n\nSubstation Alpha: Grid coordinates (91,187)\nSubstation Beta: Coordinates (120,145)\nSubstation Gamma: Coordinates (43,178)\nSubstation Delta: Coordinates (172,52)\nSubstation Epsilon: Coordinates (196,14)\nSubstation Zeta: Coordinates (173,40)\n\nThe fiber-optic communication links between substations, which dictate travel pathways, have the following exact lengths in kilometers:\nAlpha to Gamma: 48.8 km\nAlpha to Delta: 157.4 km\nAlpha to Epsilon: 202.4 km\nAlpha to Zeta: 168.3 km\nBeta to Gamma: 83.8 km\nBeta to Delta: 106.6 km\nBeta to Epsilon: 151.4 km\nBeta to Zeta: 117.6 km\nGamma to Delta: 180.3 km\nGamma to Epsilon: 224.3 km\nGamma to Zeta: 189.6 km\nDelta to Epsilon: 44.9 km\nDelta to Zeta: 12.0 km\nEpsilon to Zeta: 34.7 km\n\nDue to incompatible network protocols, a direct connection between Substation Alpha and Substation Beta is prohibited. Furthermore, a critical network redundancy rule stipulates that exactly one of the following two backbone links must be actively traversed in the service circuit: the link between Substation Beta and Gamma, or the link between Substation Gamma and Delta.\n\nThe objective is to determine the most efficient inspection circuit that visits each substation precisely once, concluding at the origin point, while minimizing the total distance traveled.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

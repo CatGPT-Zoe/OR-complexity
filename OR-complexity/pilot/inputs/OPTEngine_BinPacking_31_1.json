@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Component Alpha: size 30 cubic meters\n* Component Beta: size 33 cubic meters\n* Component Gamma: size 42 cubic meters\n* Component Delta: size 51 cubic meters\n* Component Epsilon: size 57 cubic meters\n* Component Zeta: size 45 cubic meters\n* Component Eta: size 51 cubic meters\n* Component Theta: size 57 cubic meters\n* Component Iota: size 67 cubic meters\n* Component Kappa: size 37 cubic meters\n* Component Lambda: size 51 cubic meters\n* Component Mu: size 34 cubic meters\n* Component Nu: size 60 cubic meters\n* Component Xi: size 68 cubic meters\n* Component Omicron: size 61 cubic meters\n* Component Pi: size 49 cubic meters\n* Component Rho: size 45 cubic meters\n* Component Sigma: size 54 cubic meters\n* Component Tau: size 33 cubic meters\n* Component Upsilon: size 52 cubic meters\n* Component Phi: size 51 cubic meters\n* Component Chi: size 40 cubic meters\n* Component Psi: size 35 cubic meters\n* Component Omega: size 65 cubic meters\n* Component Ares: size 47 cubic meters\n* Component Zeus: size 59 cubic meters\n* Component Hera: size 30 cubic meters\n* Component Poseidon: size 69 cubic meters\n* Component Athena: size 70 cubic meters\n* Component Apollo: size 40 cubic meters\n* Component Artemis: size 39 cubic meters\n\nEach cargo plane has a maximum capacity of 100 cubic meters. Assign all shipments using the fewest planes possible. Each shipment must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

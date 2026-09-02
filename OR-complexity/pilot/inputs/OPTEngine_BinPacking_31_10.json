@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of fragile experimental components into standardized protective crates for international shipment. The components, each with a distinct identifier, have the following precise masses in kilograms:\n\n* Component Alpha: 65 kg\n* Component Beta: 66 kg\n* Component Gamma: 51 kg\n* Component Delta: 59 kg\n* Component Epsilon: 34 kg\n* Component Zeta: 54 kg\n* Component Eta: 47 kg\n* Component Theta: 59 kg\n* Component Iota: 48 kg\n* Component Kappa: 31 kg\n* Component Lambda: 55 kg\n* Component Mu: 31 kg\n* Component Nu: 59 kg\n* Component Xi: 37 kg\n* Component Omicron: 38 kg\n* Component Pi: 49 kg\n* Component Rho: 51 kg\n* Component Sigma: 49 kg\n* Component Tau: 68 kg\n* Component Upsilon: 39 kg\n* Component Phi: 61 kg\n* Component Chi: 58 kg\n* Component Psi: 30 kg\n* Component Omega: 68 kg\n* Component Digamma: 50 kg\n* Component San: 39 kg\n* Component Koppa: 56 kg\n* Component Sampi: 31 kg\n* Component Sho: 49 kg\n* Component Tsan: 41 kg\n* Component Heng: 66 kg\n\nEach protective crate is certified to safely support a maximum total load of 100 kilograms. The coordinator must devise an allocation scheme such that every component is placed into exactly one crate, the combined mass within any given crate does not surpass its certified limit, and the total number of crates employed is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

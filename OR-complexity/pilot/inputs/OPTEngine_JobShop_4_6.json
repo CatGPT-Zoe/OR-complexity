@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 4 shipments through 4 distribution hubs.\n\nEach shipment follows a predetermined route represented as pairs (Hub, Handling time),\nwhere each pair specifies the hub where the package must be processed and the duration required for handling.\nThe sequence of pairs indicates the mandatory order in which hubs must process the shipment.\n\nShipment details:\n* S1 follows the route: (H2, 1) → (H1, 8) → (H3, 6) → (H4, 3)\n* S2 follows the route: (H2, 9) → (H3, 7) → (H4, 9) → (H1, 9)\n* S3 follows the route: (H1, 7) → (H3, 4) → (H4, 5) → (H2, 9)\n* S4 follows the route: (H4, 1) → (H2, 1) → (H3, 3) → (H1, 5)\n\nEach handling procedure must run continuously once initiated without interruption,\nand each hub can only process one shipment at a time.\nThe objective is to determine the processing sequence of all shipments at the hubs\nso that the total delivery completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

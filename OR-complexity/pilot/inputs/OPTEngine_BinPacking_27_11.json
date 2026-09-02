@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of archival boxes into identical shipping crates.  \nThe archival boxes are as follows:  \n\n* Box Alpha: mass 68kg  \n* Box Beta: mass 42kg  \n* Box Gamma: mass 65kg  \n* Box Delta: mass 66kg  \n* Box Epsilon: mass 63kg  \n* Box Zeta: mass 70kg  \n* Box Eta: mass 69kg  \n* Box Theta: mass 57kg  \n* Box Iota: mass 68kg  \n* Box Kappa: mass 55kg  \n* Box Lambda: mass 46kg  \n* Box Mu: mass 60kg  \n* Box Nu: mass 70kg  \n* Box Xi: mass 70kg  \n* Box Omicron: mass 68kg  \n* Box Pi: mass 31kg  \n* Box Rho: mass 52kg  \n* Box Sigma: mass 52kg  \n* Box Tau: mass 43kg  \n* Box Upsilon: mass 32kg  \n* Box Phi: mass 42kg  \n* Box Chi: mass 58kg  \n* Box Psi: mass 43kg  \n* Box Omega: mass 63kg  \n* Box Digamma: mass 43kg  \n* Box San: mass 30kg  \n* Box Qoppa: mass 39kg  \n\nEvery shipping crate can support a maximum load of 100 kg. The coordinator must place all archival boxes into crates, using the smallest possible number of crates. Each box must be assigned to exactly one crate, and the total mass in any crate must not exceed the 100 kg limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

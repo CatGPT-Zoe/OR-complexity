@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood plasma storage strategy for a critical therapeutic agent across a 5-week schedule.\nThe initial stock available at the start of the schedule is 33 liters.\nIn each week t = 1, ..., 5, the pharmaceutical supplier permits the hospital to submit a request, where the requested volume must be between 1 and 71 liters.\nNevertheless, each request submitted requires a lead time of 4 week(s) for delivery before it can be utilized to meet patient needs or augment existing reserves.\nThe clinical consumption of the agent for each week is specified as follows:\n* Week 1: consumption 23 liters\n* Week 2: consumption 45 liters\n* Week 3: consumption 40 liters\n* Week 4: consumption 38 liters\n* Week 5: consumption 43 liters\n\nSupply deficits are tolerated, but any unsatisfied consumption will not be carried forward.\nThroughout the scheduling horizon, agent volumes are permitted to be continuous, and the aggregate quantity of plasma held in storage at any moment must not surpass the refrigeration capacity of 51 liters.\nThe cumulative expenditure over the schedule comprises three elements: the procurement cost, amounting to 1 per liter requested; the storage cost, amounting to 1 per liter of plasma kept from one week to the next; and the deficit penalty, amounting to 12 per liter of unfulfilled consumption. Please ascertain the optimal request volume for each week and monitor the consequent storage and deficit quantities so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

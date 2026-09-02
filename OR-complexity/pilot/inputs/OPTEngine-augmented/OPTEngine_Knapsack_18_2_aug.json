@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment for a critical three-leg transport route. They must select a combination of cargo units to maximize total utility points while adhering to the vehicle's total load capacity.\n\nThe available cargo units are:\n* Cargo A: mass 14kg, utility 23 points\n* Cargo B: mass 46kg, utility 242 points\n* Cargo C: mass 40kg, utility 98 points\n* Cargo D: mass 40kg, utility 236 points\n* Cargo E: mass 21kg, utility 177 points\n* Cargo F: mass 28kg, utility 300 points\n* Cargo G: mass 50kg, utility 83 points\n* Cargo H: mass 33kg, utility 229 points\n* Cargo I: mass 26kg, utility 131 points\n* Cargo J: mass 24kg, utility 205 points\n* Cargo K: mass 19kg, utility 133 points\n* Cargo L: mass 14kg, utility 140 points\n* Cargo M: mass 16kg, utility 284 points\n* Cargo N: mass 38kg, utility 200 points\n* Cargo O: mass 30kg, utility 131 points\n* Cargo P: mass 39kg, utility 182 points\n* Cargo Q: mass 40kg, utility 84 points\n* Cargo R: mass 21kg, utility 134 points\n\nFurthermore, due to contractual obligations, exactly one of Cargo A and Cargo B must be included in the shipment.\n\nIf Cargo C is selected, it necessitates special handling equipment that reduces the vehicle's effective load capacity by 10 kg.\nThe vehicle's maximum allowable gross load is 377 kg. The coordinator must determine the optimal selection of cargo units.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

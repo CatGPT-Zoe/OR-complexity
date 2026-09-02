@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_19_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of shipments onto identical transport vehicles. The cargo manifests are as follows:\n\n* Shipment Alpha: mass 65 metric tons\n* Shipment Beta: mass 57 metric tons\n* Shipment Gamma: mass 47 metric tons\n* Shipment Delta: mass 41 metric tons\n* Shipment Epsilon: mass 63 metric tons\n* Shipment Zeta: mass 40 metric tons\n* Shipment Eta: mass 34 metric tons\n* Shipment Theta: mass 70 metric tons\n* Shipment Iota: mass 40 metric tons\n* Shipment Kappa: mass 67 metric tons\n* Shipment Lambda: mass 37 metric tons\n* Shipment Mu: mass 62 metric tons\n* Shipment Nu: mass 70 metric tons\n* Shipment Xi: mass 64 metric tons\n* Shipment Omicron: mass 68 metric tons\n* Shipment Pi: mass 54 metric tons\n* Shipment Rho: mass 57 metric tons\n* Shipment Sigma: mass 47 metric tons\n* Shipment Tau: mass 49 metric tons\n\nEach vehicle possesses a maximum load capacity of 100 metric tons. The objective is to assign every shipment to a vehicle such that the total mass on any vehicle does not surpass its capacity, and the number of vehicles deployed is minimized. Every shipment must be placed on exactly one vehicle.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

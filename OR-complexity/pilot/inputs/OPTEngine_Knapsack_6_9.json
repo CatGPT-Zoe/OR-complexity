@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_6_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a delivery truck. The available packages are:\n* Package A: size 37 cubic feet, revenue $270\n* Package B: size 20 cubic feet, revenue $192\n* Package C: size 25 cubic feet, revenue $138\n* Package D: size 10 cubic feet, revenue $297\n* Package E: size 45 cubic feet, revenue $16\n* Package F: size 30 cubic feet, revenue $50\n\nThe truck's cargo hold has a maximum capacity of 116 cubic feet. Determine which package combination yields the highest total revenue without exceeding this capacity. Each package must be loaded in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

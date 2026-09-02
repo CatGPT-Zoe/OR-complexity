@@ -1,0 +1,205 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Knapsack_10_3_aug",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "packages",
+      "description": "cargo packages available for inclusion in the shipment",
+      "values": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "package_weight",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "weight of each cargo package",
+      "unit": "kg",
+      "values": {
+        "A": 36,
+        "B": 45,
+        "C": 26,
+        "D": 50,
+        "E": 28,
+        "F": 16,
+        "G": 22,
+        "H": 10,
+        "I": 30,
+        "J": 31
+      },
+      "data_ref": null
+    },
+    {
+      "id": "package_profit_contribution",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "profit contribution obtained from including each cargo package",
+      "unit": "monetary units",
+      "values": {
+        "A": 88,
+        "B": 238,
+        "C": 104,
+        "D": 225,
+        "E": 99,
+        "F": 242,
+        "G": 277,
+        "H": 191,
+        "I": 54,
+        "J": 114
+      },
+      "data_ref": null
+    },
+    {
+      "id": "maximum_gross_weight_capacity",
+      "indices": [],
+      "description": "vehicle maximum gross weight capacity before any reduction for special handling equipment",
+      "unit": "kg",
+      "values": 205,
+      "data_ref": null
+    },
+    {
+      "id": "special_handling_capacity_reduction",
+      "indices": [],
+      "description": "reduction in effective vehicle load capacity when Package C is selected",
+      "unit": "kg",
+      "values": 10,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "package_selection",
+      "canonical_name": "package_selection",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "whether each available cargo package is included in the shipment",
+      "value_semantics": "binary inclusion decision",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "They must select a combination of cargo packages to maximize total profit contribution",
+        "The manager must determine the optimal set of packages to load."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_profit_contribution",
+    "normalized_semantics": "maximize the sum of profit contributions from all selected cargo packages",
+    "description": "Maximize total profit contribution from the packages included in the shipment.",
+    "entity_scope": [
+      "package_selection"
+    ],
+    "parameter_refs": [
+      "package_profit_contribution"
+    ],
+    "source_spans": [
+      "They must select a combination of cargo packages to maximize total profit contribution"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "exclusive_selection_of_package_A_or_B",
+      "obligation_type": "policy",
+      "normalized_semantics": "exactly one of Package A and Package B must be selected",
+      "support_entity_ids": [
+        "package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "role": "exclusive_choice",
+          "aggregation_axes": [
+            "package"
+          ],
+          "index_binding": {
+            "package": [
+              "A",
+              "B"
+            ]
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Furthermore, due to contractual obligations, exactly one of Package A or Package B must be included in the shipment."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o2",
+      "canonical_name": "vehicle_effective_weight_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the total weight of selected packages must not exceed 205 kg, with the effective capacity reduced by 10 kg when Package C is selected",
+      "support_entity_ids": [
+        "package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "role": "selected_package_weight",
+          "aggregation_axes": [
+            "package"
+          ],
+          "index_binding": {}
+        },
+        {
+          "entity_id": "package_selection",
+          "role": "special_handling_capacity_reduction_trigger",
+          "aggregation_axes": [],
+          "index_binding": {
+            "package": "C"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": "the 10 kg capacity reduction applies if Package C is selected",
+      "parameter_refs": [
+        "package_weight",
+        "maximum_gross_weight_capacity",
+        "special_handling_capacity_reduction"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "If Package C is selected, it requires special handling equipment that reduces the vehicle's effective load capacity by 10 kg.",
+        "The vehicle's maximum gross weight capacity is 205 kg."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "unresolved_items": []
+}

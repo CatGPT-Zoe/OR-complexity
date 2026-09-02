@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must allocate its fleet of available vehicles across nine regional distribution hubs to fulfill anticipated delivery orders. The objective is to minimize the total fuel expenditure for all trips.\n\nThe number of vehicles ready for dispatch at each depot (set D) is fixed:\n*Depot D1 has 128 vehicles.\n*Depot D2 has 76 vehicles.\n*Depot D3 has 102 vehicles.\n*Depot D4 has 185 vehicles.\n*Depot D5 has 110 vehicles.\n*Depot D6 has 157 vehicles.\n*Depot D7 has 175 vehicles.\n*Depot D8 has 65 vehicles.\n*Depot D9 has 86 vehicles.\n\nThe required number of vehicles to be stationed at each hub (set H) by the end of the day is predetermined:\n*Hub H1 requires 19 vehicles.\n*Hub H2 requires 182 vehicles.\n*Hub H3 requires 178 vehicles.\n*Hub H4 requires 103 vehicles.\n*Hub H5 requires 139 vehicles.\n*Hub H6 requires 73 vehicles.\n*Hub H7 requires 192 vehicles.\n*Hub H8 requires 16 vehicles.\n*Hub H9 requires 18 vehicles.\n\nThe fuel cost, in monetary units, to move one vehicle from a given depot to a specific hub is detailed in the table:\n| From / To | H1 | H2 | H3 | H4 | H5 | H6 | H7 | H8 | H9 |\n|--|-|-|-|-|-|-|-|-|\n| D1 | 5 | 13 | 3 | 19 | 19 | 2 | 14 | 5 | 8 |\n| D2 | 10 | 9 | 11 | 13 | 11 | 11 | 15 | 9 | 8 |\n| D3 | 3 | 7 | 5 | 19 | 4 | 5 | 4 | 6 | 15 |\n| D4 | 15 | 11 | 14 | 4 | 18 | 12 | 7 | 15 | 10 |\n| D5 | 15 | 9 | 4 | 3 | 6 | 10 | 20 | 2 | 7 |\n| D6 | 11 | 5 | 3 | 8 | 12 | 13 | 17 | 2 | 10 |\n| D7 | 9 | 6 | 1 | 13 | 15 | 18 | 18 | 8 | 4 |\n| D8 | 15 | 4 | 5 | 4 | 1 | 2 | 8 | 5 | 7 |\n| D9 | 13 | 12 | 3 | 19 | 19 | 9 | 3 | 1 | 3 |\n\nDetermine the optimal vehicle transfer plan to achieve the minimal aggregate fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,42 @@
+{
+  "instance_id": "MIPLIB_NL_csched007",
+  "annotation_mode": "semantic",
+  "problem_text": "An operations team must launch 50 independent work orders on one shared facility over a discrete calendar. The facility can provide at most 25 units of capacity at any time tick, and each order continuously consumes a fixed amount of that capacity while it is being processed. Each order requires a fixed number of consecutive ticks; once it begins it must proceed without pausing. Every order becomes ready at its own ready time and must be launched no later than its last allowed start time. In addition, each order has a preferred (target) launch tick; starting later than that target creates a service delay. The delay for an order is the amount of time its chosen start tick exceeds its target (and is zero if it starts on or before the target). The plan must choose exactly one start tick for each order within its allowed window, while never exceeding shared capacity at any tick, and minimize the sum of delays across all orders. The calendar spans ticks 0 through 200, covering 201 ticks in total.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "tasks",
+      "indices": [
+        "task_id",
+        "duration",
+        "resource_demand",
+        "release_time",
+        "latest_start",
+        "target_start"
+      ],
+      "unit": "",
+      "values": "| task_id | duration | resource_demand | release_time | latest_start | target_start |\n|---|---|---|---|---|---|\n| 1 | 42 | 2 | 72 | 103 | 72 |\n| 2 | 24 | 1 | 65 | 108 | 65 |\n| 3 | 12 | 4 | 56 | 69 | 56 |\n| 4 | 34 | 3 | 106 | 153 | 106 |\n| 5 | 18 | 5 | 147 | 156 | 147 |\n| 6 | 24 | 4 | 111 | 158 | 111 |\n| 7 | 41 | 5 | 56 | 86 | 56 |\n| 8 | 55 | 3 | 104 | 125 | 104 |\n| 9 | 45 | 3 | 72 | 104 | 72 |\n| 10 | 5 | 4 | 9 | 25 | 9 |\n| 11 | 10 | 5 | 30 | 49 | 30 |\n| 12 | 30 | 3 | 157 | 167 | 157 |\n| 13 | 25 | 1 | 143 | 162 | 143 |\n| 14 | 34 | 5 | 4 | 33 | 4 |\n| 15 | 21 | 2 | 46 | 98 | 46 |\n| 16 | 37 | 3 | 41 | 70 | 41 |\n| 17 | 17 | 5 | 143 | 174 | 143 |\n| 18 | 36 | 3 | 68 | 92 | 68 |\n| 19 | 20 | 3 | 13 | 73 | 13 |\n| 20 | 25 | 5 | 122 | 132 | 122 |\n| 21 | 39 | 5 | 61 | 83 | 61 |\n| 22 | 23 | 2 | 21 | 47 | 21 |\n| 23 | 59 | 4 | 52 | 74 | 52 |\n| 24 | 32 | 1 | 48 | 80 | 48 |\n| 25 | 25 | 2 | 3 | 48 | 3 |\n| 26 | 33 | 1 | 79 | 115 | 79 |\n| 27 | 33 | 1 | 95 | 136 | 95 |\n| 28 | 36 | 3 | 118 | 134 | 118 |\n| 29 | 15 | 3 | 174 | 186 | 174 |\n| 30 | 28 | 4 | 86 | 124 | 86 |\n| 31 | 27 | 5 | 66 | 110 | 66 |\n| 32 | 5 | 5 | 135 | 151 | 135 |\n| 33 | 14 | 4 | 31 | 54 | 31 |\n| 34 | 17 | 4 | 4 | 30 | 4 |\n| 35 | 9 | 1 | 74 | 87 | 74 |\n| 36 | 18 | 4 | 22 | 75 | 22 |\n| 37 | 48 | 5 | 14 | 34 | 14 |\n| 38 | 23 | 5 | 148 | 156 | 148 |\n| 39 | 10 | 4 | 90 | 114 | 90 |\n| 40 | 42 | 3 | 30 | 50 | 30 |\n| 41 | 45 | 4 | 72 | 95 | 72 |\n| 42 | 34 | 1 | 12 | 32 | 12 |\n| 43 | 19 | 2 | 156 | 171 | 156 |\n| 44 | 23 | 2 | 60 | 115 | 60 |\n| 45 | 10 | 1 | 51 | 64 | 51 |\n| 46 | 41 | 3 | 26 | 54 | 26 |\n| 47 | 19 | 4 | 111 | 117 | 111 |\n| 48 | 17 | 2 | 45 | 108 | 45 |\n| 49 | 11 | 3 | 119 | 144 | 119 |\n| 50 | 18 | 2 | 80 | 130 | 80 |"
+    },
+    {
+      "name": "parameters",
+      "indices": [
+        "value"
+      ],
+      "unit": "",
+      "values": "| parameter | value |\n|---|---|\n| num_tasks | 50 |\n| resource_capacity | 25 |\n| min_time | 0 |\n| max_time | 200 |\n| horizon | 201 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/csched007/data/tasks.csv",
+      "role": "parameter_table",
+      "table": "tasks"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/csched007/data/parameters.csv",
+      "role": "parameter_table",
+      "table": "parameters"
+    }
+  ],
+  "notes": ""
+}

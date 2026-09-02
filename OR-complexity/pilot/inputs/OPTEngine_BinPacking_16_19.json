@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of shipments into identical cargo holds.  \nShipments to be transported:  \n* Shipment Alpha: mass 70 metric tons  \n* Shipment Beta: mass 38 metric tons  \n* Shipment Gamma: mass 40 metric tons  \n* Shipment Delta: mass 37 metric tons  \n* Shipment Epsilon: mass 37 metric tons  \n* Shipment Zeta: mass 54 metric tons  \n* Shipment Eta: mass 55 metric tons  \n* Shipment Theta: mass 67 metric tons  \n* Shipment Iota: mass 59 metric tons  \n* Shipment Kappa: mass 38 metric tons  \n* Shipment Lambda: mass 65 metric tons  \n* Shipment Mu: mass 49 metric tons  \n* Shipment Nu: mass 52 metric tons  \n* Shipment Xi: mass 70 metric tons  \n* Shipment Omicron: mass 60 metric tons  \n* Shipment Pi: mass 56 metric tons  \n\nEach cargo hold can accommodate up to 100 metric tons.  \nAll shipments must be placed into exactly one hold, and the total mass in any hold cannot surpass its capacity.  \nDetermine an allocation that minimizes the total number of cargo holds required.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

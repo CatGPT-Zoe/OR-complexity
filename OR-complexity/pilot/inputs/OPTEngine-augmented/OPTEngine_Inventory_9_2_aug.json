@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical component across a 9-week planning window.  \nThe initial stock at the start of the planning interval is 21 units.  \nIn each week \\( t = 1, \\dots, 9 \\), the vendor permits the company to issue a procurement request, with the amount required to fall between 10 and 46 units.  \nHowever, every procurement request is subject to a 3‑week lead time before the components become available for meeting requirements or replenishing stock.  \nThe requirement for the component in each week is as follows:  \n* Week 1: requirement 46 units  \n* Week 2: requirement 28 units  \n* Week 3: requirement 22 units  \n* Week 4: requirement 16 units  \n* Week 5: requirement 37 units  \n* Week 6: requirement 39 units  \n* Week 7: requirement 55 units  \n* Week 8: requirement 31 units  \n* Week 9: requirement 34 units  \n\nStock‑outs are tolerated, but any unsatisfied requirement is forfeited and not carried forward.  \nThroughout the planning window, component quantities may be treated as continuous, and the total physical stock on hand at any moment must not surpass the storage limit of 41 units.  \n\nIn week 3, the maximum procurement quantity is restricted to 23 units.  \nIn week 3, the physical stock on hand must be no less than 28 units.  \n\nThe aggregate expenditure over the planning horizon comprises three elements: the procurement expense, which is 2 per unit procured; the storage expense, which is 2 per unit held from one week to the next; and the shortage penalty, which is 8 per unit of unfulfilled requirement. The objective is to establish the optimal procurement quantity each week and monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

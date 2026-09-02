@@ -1,0 +1,169 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "LEAN_TP8_transportation",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "suppliers",
+      "description": "warehouses that distribute fresh produce",
+      "cardinality": 5
+    },
+    {
+      "id": "stores",
+      "description": "retail stores that receive fresh produce",
+      "cardinality": 6
+    }
+  ],
+  "parameters": [
+    {
+      "id": "demand",
+      "canonical_name": "demand",
+      "indices": [
+        {
+          "role": "store",
+          "set_id": "stores"
+        }
+      ],
+      "unit": "units",
+      "description": "daily demand of each store for fresh produce",
+      "source": "customer_demand.csv"
+    },
+    {
+      "id": "capacity",
+      "canonical_name": "supply_capacity",
+      "indices": [
+        {
+          "role": "supplier",
+          "set_id": "suppliers"
+        }
+      ],
+      "unit": "units",
+      "description": "daily supply capacity of each warehouse",
+      "source": "supply_capacity.csv"
+    },
+    {
+      "id": "cost",
+      "canonical_name": "transportation_cost",
+      "indices": [
+        {
+          "role": "supplier",
+          "set_id": "suppliers"
+        },
+        {
+          "role": "store",
+          "set_id": "stores"
+        }
+      ],
+      "unit": "cost per unit",
+      "description": "cost to ship one unit of produce from a warehouse to a store",
+      "source": "transportation_costs.csv"
+    }
+  ],
+  "entities": [
+    {
+      "id": "shipment",
+      "canonical_name": "shipment",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "supplier",
+          "set_id": "suppliers"
+        },
+        {
+          "role": "store",
+          "set_id": "stores"
+        }
+      ],
+      "description": "amount of fresh produce shipped from a warehouse to a store",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "determine the optimal amount of fresh produce to be shipped from each warehouse to each store"
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "objective": {
+    "id": "minimize_total_cost",
+    "description": "minimize total transportation cost",
+    "direction": "minimize",
+    "entity_ids": [
+      "shipment"
+    ],
+    "expression": "sum_{supplier, store} shipment[supplier, store] * cost[supplier, store]",
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "demand_satisfaction",
+      "canonical_name": "demand_satisfaction",
+      "obligation_type": "coverage",
+      "normalized_semantics": "For each store, the total amount shipped from all warehouses must equal the store's demand",
+      "support_entity_ids": [
+        "shipment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "shipment",
+          "role": "inflow",
+          "aggregation_axes": [
+            "supplier"
+          ],
+          "index_binding": {
+            "store": "s"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all stores s"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "demand"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "ensuring that all store demands are met"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "supply_capacity",
+      "canonical_name": "supply_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "For each warehouse, the total amount shipped to all stores must not exceed the warehouse's supply capacity",
+      "support_entity_ids": [
+        "shipment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "shipment",
+          "role": "outflow",
+          "aggregation_axes": [
+            "store"
+          ],
+          "index_binding": {
+            "supplier": "w"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all warehouses w"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "without exceeding the warehouse capacities"
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": []
+}

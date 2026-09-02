@@ -1,0 +1,432 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "integrated_routing_facility_inventory",
+  "dataset": "examples",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "depots",
+      "description": "candidate depot locations"
+    },
+    {
+      "id": "customers",
+      "description": "customers that must be served"
+    },
+    {
+      "id": "vehicles",
+      "description": "available vehicles"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "customer_demand",
+      "indices": ["customers"],
+      "description": "demand quantity of each customer",
+      "unit": "units"
+    },
+    {
+      "id": "depot_capacity",
+      "indices": ["depots"],
+      "description": "inventory capacity of each depot",
+      "unit": "units"
+    },
+    {
+      "id": "facility_fixed_cost",
+      "indices": ["depots"],
+      "description": "fixed cost of opening each depot",
+      "unit": "currency"
+    },
+    {
+      "id": "vehicle_duty_time",
+      "indices": ["vehicles"],
+      "description": "maximum duty time of each vehicle",
+      "unit": "time"
+    },
+    {
+      "id": "loading_time",
+      "indices": [],
+      "description": "loading/service time per delivered unit",
+      "unit": "time"
+    },
+    {
+      "id": "travel_time",
+      "indices": ["depots", "vehicles", "from", "to"],
+      "description": "travel time between locations for each vehicle",
+      "unit": "time"
+    }
+  ],
+  "entities": [
+    {
+      "id": "customer_assignment",
+      "canonical_name": "customer_assignment",
+      "semantic_type": "assignment",
+      "indices": [
+        {"role": "customer", "set_id": "customers"},
+        {"role": "depot", "set_id": "depots"}
+      ],
+      "description": "assignment of each customer to a serving depot",
+      "value_semantics": "binary relation",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["each customer must be assigned to a depot"]
+    },
+    {
+      "id": "depot_open",
+      "canonical_name": "depot_open",
+      "semantic_type": "activation",
+      "indices": [
+        {"role": "depot", "set_id": "depots"}
+      ],
+      "description": "whether a depot is opened",
+      "value_semantics": "binary state",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["depots may be opened at a fixed cost"]
+    },
+    {
+      "id": "route_arc",
+      "canonical_name": "route_arc",
+      "semantic_type": "route",
+      "indices": [
+        {"role": "depot", "set_id": "depots"},
+        {"role": "vehicle", "set_id": "vehicles"},
+        {"role": "from", "set_id": "locations"},
+        {"role": "to", "set_id": "locations"}
+      ],
+      "description": "travel arc used by a vehicle from one location to another",
+      "value_semantics": "binary relation",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["vehicles travel between locations"]
+    },
+    {
+      "id": "vehicle_active",
+      "canonical_name": "vehicle_active",
+      "semantic_type": "activation",
+      "indices": [
+        {"role": "depot", "set_id": "depots"},
+        {"role": "vehicle", "set_id": "vehicles"}
+      ],
+      "description": "whether a vehicle is used from a depot",
+      "value_semantics": "binary state",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["each vehicle may be activated"]
+    },
+    {
+      "id": "delivered_quantity",
+      "canonical_name": "delivered_quantity",
+      "semantic_type": "quantity",
+      "indices": [
+        {"role": "depot", "set_id": "depots"},
+        {"role": "vehicle", "set_id": "vehicles"},
+        {"role": "customer", "set_id": "customers"}
+      ],
+      "description": "quantity delivered to each customer by each vehicle from each depot",
+      "value_semantics": "continuous nonnegative quantity",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["deliveries must satisfy customer demand"]
+    },
+    {
+      "id": "inventory_allocated",
+      "canonical_name": "inventory_allocated",
+      "semantic_type": "quantity",
+      "indices": [
+        {"role": "depot", "set_id": "depots"}
+      ],
+      "description": "inventory quantity allocated at each depot",
+      "value_semantics": "continuous nonnegative quantity",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["depots hold allocated inventory"]
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "description": "minimize total fixed opening cost plus total travel time",
+    "entity_scope": ["depot_open", "route_arc"],
+    "parameter_refs": ["facility_fixed_cost", "travel_time"],
+    "excluded_from_feasibility_hypergraph": true,
+    "source_spans": ["minimize fixed opening cost plus travel time"]
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "customer_assigned_exactly_once",
+      "obligation_type": "assignment",
+      "normalized_semantics": "each customer is assigned to exactly one depot",
+      "support_entity_ids": ["customer_assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_assignment",
+          "role": "assignment",
+          "aggregation_axes": ["depot"],
+          "index_binding": {"customer": "c"}
+        }
+      ],
+      "quantifiers": ["for all customers c"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["each customer is assigned to exactly one depot"]
+    },
+    {
+      "id": "o2",
+      "canonical_name": "assignment_requires_open_depot",
+      "obligation_type": "linking",
+      "normalized_semantics": "a customer can only be assigned to a depot that is opened",
+      "support_entity_ids": ["customer_assignment", "depot_open"],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_assignment",
+          "role": "assignment",
+          "aggregation_axes": [],
+          "index_binding": {"customer": "c", "depot": "d"}
+        },
+        {
+          "entity_id": "depot_open",
+          "role": "opens",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d"}
+        }
+      ],
+      "quantifiers": ["for all customers c", "for all depots d"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["assigned only to opened depots"]
+    },
+    {
+      "id": "o3",
+      "canonical_name": "route_flow_conservation",
+      "obligation_type": "conservation",
+      "normalized_semantics": "at every location, inbound flow equals outbound flow for each vehicle route",
+      "support_entity_ids": ["route_arc"],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "inbound_flow",
+          "aggregation_axes": ["from"],
+          "index_binding": {"to": "i"}
+        },
+        {
+          "entity_id": "route_arc",
+          "role": "outbound_flow",
+          "aggregation_axes": ["to"],
+          "index_binding": {"from": "i"}
+        }
+      ],
+      "quantifiers": ["for all locations i"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["route flow must be conserved at each location"]
+    },
+    {
+      "id": "o4",
+      "canonical_name": "assigned_customer_visited_by_depot_route",
+      "obligation_type": "linking",
+      "normalized_semantics": "a customer assigned to a depot must be visited by a route leaving that depot",
+      "support_entity_ids": ["route_arc", "customer_assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "serves",
+          "aggregation_axes": ["vehicle", "from"],
+          "index_binding": {"to": "c", "depot": "d"}
+        },
+        {
+          "entity_id": "customer_assignment",
+          "role": "assignment",
+          "aggregation_axes": [],
+          "index_binding": {"customer": "c", "depot": "d"}
+        }
+      ],
+      "quantifiers": ["for all customers c", "for all depots d"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["assigned customers are served by routes from their depot"]
+    },
+    {
+      "id": "o5",
+      "canonical_name": "route_requires_active_vehicle",
+      "obligation_type": "linking",
+      "normalized_semantics": "any route used must correspond to an active vehicle",
+      "support_entity_ids": ["route_arc", "vehicle_active"],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "uses_vehicle",
+          "aggregation_axes": ["from", "to"],
+          "index_binding": {"depot": "d", "vehicle": "k"}
+        },
+        {
+          "entity_id": "vehicle_active",
+          "role": "activated",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d", "vehicle": "k"}
+        }
+      ],
+      "quantifiers": ["for all depots d", "for all vehicles k"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["routes require an active vehicle"]
+    },
+    {
+      "id": "o6",
+      "canonical_name": "vehicle_duty_time_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "total travel plus loading time of a vehicle route must not exceed its duty time",
+      "support_entity_ids": ["route_arc", "vehicle_active", "delivered_quantity"],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "travel_time",
+          "aggregation_axes": ["from", "to"],
+          "index_binding": {"depot": "d", "vehicle": "k"}
+        },
+        {
+          "entity_id": "delivered_quantity",
+          "role": "loading_time",
+          "aggregation_axes": ["customer"],
+          "index_binding": {"depot": "d", "vehicle": "k"}
+        },
+        {
+          "entity_id": "vehicle_active",
+          "role": "activated",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d", "vehicle": "k"}
+        }
+      ],
+      "quantifiers": ["for all depots d", "for all vehicles k"],
+      "condition": null,
+      "parameter_refs": ["travel_time", "loading_time", "vehicle_duty_time"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["travel plus loading time cannot exceed the vehicle duty time"]
+    },
+    {
+      "id": "o7",
+      "canonical_name": "demand_fulfilled_through_assigned_depot",
+      "obligation_type": "coverage",
+      "normalized_semantics": "each customer's demand is fulfilled through its assigned depot",
+      "support_entity_ids": ["delivered_quantity", "customer_assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "delivered_quantity",
+          "role": "delivers",
+          "aggregation_axes": ["vehicle"],
+          "index_binding": {"depot": "d", "customer": "c"}
+        },
+        {
+          "entity_id": "customer_assignment",
+          "role": "assignment",
+          "aggregation_axes": [],
+          "index_binding": {"customer": "c", "depot": "d"}
+        }
+      ],
+      "quantifiers": ["for all customers c", "for all depots d"],
+      "condition": null,
+      "parameter_refs": ["customer_demand"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["demand is fulfilled through the assigned depot"]
+    },
+    {
+      "id": "o8",
+      "canonical_name": "deliveries_within_allocated_inventory",
+      "obligation_type": "capacity",
+      "normalized_semantics": "total quantity delivered from a depot must not exceed its allocated inventory",
+      "support_entity_ids": ["inventory_allocated", "delivered_quantity"],
+      "incidence_slots": [
+        {
+          "entity_id": "delivered_quantity",
+          "role": "delivers",
+          "aggregation_axes": ["vehicle", "customer"],
+          "index_binding": {"depot": "d"}
+        },
+        {
+          "entity_id": "inventory_allocated",
+          "role": "allocated",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d"}
+        }
+      ],
+      "quantifiers": ["for all depots d"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["deliveries cannot exceed allocated inventory"]
+    },
+    {
+      "id": "o9",
+      "canonical_name": "inventory_within_open_depot_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "inventory allocated at a depot must not exceed the capacity of that depot if opened",
+      "support_entity_ids": ["inventory_allocated", "depot_open"],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory_allocated",
+          "role": "allocated",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d"}
+        },
+        {
+          "entity_id": "depot_open",
+          "role": "opens",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d"}
+        }
+      ],
+      "quantifiers": ["for all depots d"],
+      "condition": null,
+      "parameter_refs": ["depot_capacity"],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["inventory is bounded by opened depot capacity"]
+    },
+    {
+      "id": "o10",
+      "canonical_name": "vehicle_active_only_at_open_depot",
+      "obligation_type": "linking",
+      "normalized_semantics": "a vehicle can only be activated at a depot that is opened",
+      "support_entity_ids": ["vehicle_active", "depot_open"],
+      "incidence_slots": [
+        {
+          "entity_id": "vehicle_active",
+          "role": "activated",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d", "vehicle": "k"}
+        },
+        {
+          "entity_id": "depot_open",
+          "role": "opens",
+          "aggregation_axes": [],
+          "index_binding": {"depot": "d"}
+        }
+      ],
+      "quantifiers": ["for all depots d", "for all vehicles k"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["vehicles activate only at opened depots"]
+    }
+  ],
+  "unresolved_items": []
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must select a subset of shipping containers to load onto a cargo vessel, aiming to maximize total revenue while adhering to a strict weight limit for the voyage.\n\nThe containers available are:\n* Container A: weight 40 tons, revenue 17 thousand dollars\n* Container B: weight 19 tons, revenue 68 thousand dollars\n* Container C: weight 11 tons, revenue 150 thousand dollars\n* Container D: weight 13 tons, revenue 272 thousand dollars\n* Container E: weight 36 tons, revenue 187 thousand dollars\n* Container F: weight 29 tons, revenue 55 thousand dollars\n* Container G: weight 27 tons, revenue 267 thousand dollars\n* Container H: weight 35 tons, revenue 219 thousand dollars\n* Container I: weight 8 tons, revenue 51 thousand dollars\n* Container J: weight 38 tons, revenue 247 thousand dollars\n* Container K: weight 21 tons, revenue 99 thousand dollars\n* Container L: weight 19 tons, revenue 133 thousand dollars\n* Container M: weight 41 tons, revenue 233 thousand dollars\n* Container N: weight 44 tons, revenue 156 thousand dollars\n* Container O: weight 3 tons, revenue 21 thousand dollars\n* Container P: weight 1 ton, revenue 147 thousand dollars\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, it requires special handling equipment that occupies space, effectively reducing the vessel's usable weight capacity by 10 tons.\nThe vessel's maximum allowable load for this journey is 269 tons. The coordinator must determine the optimal set of containers to accept.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

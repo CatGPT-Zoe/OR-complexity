@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_22_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to uniform cargo aircraft. Shipments:\n* Cargo Alpha: mass 69 tons\n* Cargo Beta: mass 47 tons\n* Cargo Gamma: mass 31 tons\n* Cargo Delta: mass 67 tons\n* Cargo Epsilon: mass 52 tons\n* Cargo Zeta: mass 53 tons\n* Cargo Eta: mass 51 tons\n* Cargo Theta: mass 59 tons\n* Cargo Iota: mass 38 tons\n* Cargo Kappa: mass 68 tons\n* Cargo Lambda: mass 63 tons\n* Cargo Mu: mass 35 tons\n* Cargo Nu: mass 46 tons\n* Cargo Xi: mass 36 tons\n* Cargo Omicron: mass 36 tons\n* Cargo Pi: mass 47 tons\n* Cargo Rho: mass 31 tons\n* Cargo Sigma: mass 39 tons\n* Cargo Tau: mass 69 tons\n* Cargo Upsilon: mass 38 tons\n* Cargo Phi: mass 54 tons\n* Cargo Chi: mass 43 tons\n\nEach aircraft has a maximum payload capacity of 100 tons. The objective is to transport all shipments utilizing the smallest possible fleet of aircraft. Every shipment must be loaded onto exactly one aircraft, and the combined mass on any aircraft must not surpass its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

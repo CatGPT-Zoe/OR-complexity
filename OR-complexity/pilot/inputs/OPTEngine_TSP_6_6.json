@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to service six remote field installations.  \n\nThe travel times between installations are as follows (in minutes):  \n* Base to Site 1: 104.7 minutes  \n* Base to Site 2: 75.7 minutes  \n* Base to Site 3: 83.9 minutes  \n* Base to Site 4: 29.1 minutes  \n* Base to Site 5: 87.7 minutes  \n* Site 1 to Site 2: 123.9 minutes  \n* Site 1 to Site 3: 136.7 minutes  \n* Site 1 to Site 4: 90.3 minutes  \n* Site 1 to Site 5: 75.6 minutes  \n* Site 2 to Site 3: 12.8 minutes  \n* Site 2 to Site 4: 99.2 minutes  \n* Site 2 to Site 5: 56.9 minutes  \n* Site 3 to Site 4: 109.0 minutes  \n* Site 3 to Site 5: 68.5 minutes  \n* Site 4 to Site 5: 96.2 minutes  \n\nThe technician must visit each installation precisely once, concluding the circuit back at the starting location, and the objective is to determine the itinerary that minimizes total travel duration.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate the dispatch of a single vehicle to four distinct warehouses for inventory audits.\n\nThe travel times between warehouses, measured in minutes, are as follows:\n* Warehouse Alpha to Beta: 76.0 minutes\n* Warehouse Alpha to Gamma: 37.2 minutes\n* Warehouse Alpha to Delta: 51.5 minutes\n* Warehouse Beta to Gamma: 107.2 minutes\n* Warehouse Beta to Delta: 112.7 minutes\n* Warehouse Gamma to Delta: 66.9 minutes\n\nThe objective is to determine the most time-efficient inspection circuit, wherein the vehicle must arrive at each warehouse precisely one time before concluding its tour back at the initial departure point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are as follows:\n\n* Package Alpha: weight 69kg\n* Package Bravo: weight 49kg\n* Package Charlie: weight 31kg\n* Package Delta: weight 58kg\n* Package Echo: weight 36kg\n* Package Foxtrot: weight 42kg\n* Package Golf: weight 68kg\n* Package Hotel: weight 68kg\n* Package India: weight 62kg\n* Package Juliet: weight 65kg\n* Package Kilo: weight 30kg\n* Package Lima: weight 44kg\n* Package Mike: weight 40kg\n* Package November: weight 30kg\n* Package Oscar: weight 66kg\n* Package Papa: weight 58kg\n* Package Quebec: weight 46kg\n* Package Romeo: weight 48kg\n* Package Sierra: weight 68kg\n* Package Tango: weight 68kg\n* Package Uniform: weight 41kg\n* Package Victor: weight 62kg\n* Package Whiskey: weight 68kg\n* Package X-ray: weight 55kg\n* Package Yankee: weight 50kg\n* Package Zulu: weight 36kg\n* Package Asterisk: weight 40kg\n* Package Dash: weight 37kg\n* Package Plus: weight 65kg\n* Package Equals: weight 39kg\n* Package Ampersand: weight 60kg\n* Package Percent: weight 39kg\n* Package Dollar: weight 30kg\n* Package Pound: weight 68kg\n* Package At: weight 32kg\n* Package Hash: weight 49kg\n* Package Tilde: weight 43kg\n* Package Slash: weight 37kg\n* Package Backslash: weight 46kg\n* Package Pipe: weight 46kg\n\nEach truck can carry a maximum load of 100 kg. Assign all packages to trucks using the minimum number of trucks. Every package must be loaded onto exactly one truck, and the total weight in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

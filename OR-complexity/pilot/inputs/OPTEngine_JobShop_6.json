@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 6 delivery routes across 6 distribution hubs.\n\nEach route consists of a sequence of handling stages represented as pairs (Hub, Duration),\nwhere each pair specifies the hub where the stage must occur and the time required for handling.\nThe order of pairs indicates the required sequence in which the stages must be completed.\n\nRoute details:\n* R1 requires the sequence: (H5, 8) → (H2, 8) → (H4, 5) → (H1, 1) → (H3, 4) → (H6, 9)\n* R2 requires the sequence: (H6, 2) → (H2, 5) → (H4, 3) → (H3, 10) → (H5, 7) → (H1, 4)\n* R3 requires the sequence: (H3, 6) → (H6, 4) → (H4, 6) → (H1, 8) → (H5, 4) → (H2, 5)\n* R4 requires the sequence: (H3, 3) → (H2, 6) → (H6, 1) → (H1, 8) → (H5, 1) → (H4, 1)\n* R5 requires the sequence: (H2, 1) → (H1, 6) → (H5, 7) → (H4, 3) → (H6, 4) → (H3, 8)\n* R6 requires the sequence: (H4, 7) → (H2, 7) → (H3, 1) → (H5, 7) → (H1, 5) → (H6, 9)\n\nEach handling stage must run continuously once it begins and cannot be interrupted,\nand each hub can only handle one stage at a time.\nThe objective is to determine the processing order of all stages at the hubs\nso that the total completion time of all routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

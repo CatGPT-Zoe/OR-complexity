@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Component A: size 40 cubic meters\n* Component B: size 37 cubic meters\n* Component C: size 56 cubic meters\n* Component D: size 51 cubic meters\n* Component E: size 62 cubic meters\n* Component F: size 44 cubic meters\n* Component G: size 59 cubic meters\n* Component H: size 33 cubic meters\n* Component I: size 37 cubic meters\n* Component J: size 37 cubic meters\n* Component K: size 42 cubic meters\n* Component L: size 63 cubic meters\n* Component M: size 36 cubic meters\n* Component N: size 36 cubic meters\n* Component O: size 65 cubic meters\n* Component P: size 35 cubic meters\n* Component Q: size 69 cubic meters\n* Component R: size 35 cubic meters\n* Component S: size 30 cubic meters\n* Component T: size 41 cubic meters\n* Component U: size 46 cubic meters\n* Component V: size 59 cubic meters\n* Component W: size 67 cubic meters\n* Component X: size 63 cubic meters\n* Component Y: size 39 cubic meters\n* Component Z: size 49 cubic meters\n* Component [: size 48 cubic meters\n* Component \\: size 66 cubic meters\n* Component ]: size 66 cubic meters\n* Component ^: size 69 cubic meters\n* Component _: size 44 cubic meters\n* Component `: size 50 cubic meters\n* Component a: size 47 cubic meters\n* Component b: size 38 cubic meters\n* Component c: size 70 cubic meters\n* Component d: size 61 cubic meters\n* Component e: size 40 cubic meters\n* Component f: size 51 cubic meters\n\nEach cargo plane has a maximum capacity of 100 cubic meters. Transport all components using the fewest planes. Each component must be loaded onto exactly one plane, and the total volume in a plane cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

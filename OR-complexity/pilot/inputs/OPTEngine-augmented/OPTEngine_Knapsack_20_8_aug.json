@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a fleet of cargo drones for a critical three-day airlift operation. They need to select a combination of specialized sensor packages to maximize the total mission utility score, while ensuring the total payload does not exceed the drones' collective lift capacity.\n\nThe available sensor packages are:\n* Package A: mass 29kg, utility 89 credits\n* Package B: mass 32kg, utility 139 credits\n* Package C: mass 32kg, utility 184 credits\n* Package D: mass 46kg, utility 278 credits\n* Package E: mass 47kg, utility 124 credits\n* Package F: mass 50kg, utility 32 credits\n* Package G: mass 24kg, utility 271 credits\n* Package H: mass 17kg, utility 211 credits\n* Package I: mass 35kg, utility 59 credits\n* Package J: mass 20kg, utility 76 credits\n* Package K: mass 33kg, utility 81 credits\n* Package L: mass 10kg, utility 42 credits\n* Package M: mass 22kg, utility 109 credits\n* Package N: mass 3kg, utility 23 credits\n* Package O: mass 32kg, utility 251 credits\n* Package P: mass 5kg, utility 278 credits\n* Package Q: mass 4kg, utility 81 credits\n* Package R: mass 41kg, utility 248 credits\n* Package S: mass 37kg, utility 79 credits\n* Package T: mass 37kg, utility 142 credits\n\nAn operational requirement dictates that exactly one of Package A or Package B must be included in the shipment.\n\nFurthermore, if Package C is included, it necessitates a dedicated power unit that reduces the effective total lift capacity by 10 kg.\nThe maximum allowable payload mass for the drone fleet is 389 kg. The manager must determine the optimal selection of packages.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

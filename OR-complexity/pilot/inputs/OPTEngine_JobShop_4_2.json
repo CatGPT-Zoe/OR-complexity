@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 4 delivery routes through 4 distribution hubs.\n\nEach route consists of a sequence of handling stages represented as (Hub, Duration) pairs, where each pair specifies the hub where the stage must occur and the time required for handling. The order of pairs indicates the required sequence in which the stages must be completed.\n\nRoute details:\n* R1 requires the sequence: (H3, 10) → (H2, 1) → (H1, 1) → (H4, 5)\n* R2 requires the sequence: (H2, 7) → (H1, 9) → (H4, 3) → (H3, 5)\n* R3 requires the sequence: (H1, 5) → (H2, 3) → (H4, 9) → (H3, 2)\n* R4 requires the sequence: (H3, 7) → (H2, 2) → (H4, 2) → (H1, 9)\n\nEach handling stage must proceed without interruption once it begins, and each hub can only accommodate one delivery stage at a time. The objective is to determine the processing sequence of all stages at the hubs so that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

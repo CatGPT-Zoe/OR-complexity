@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate the dispatch of specialized technicians from regional training centers to urban project sites, minimizing the aggregate travel expenditure.\n\nThe number of technicians ready at each training center (set R) is as follows:\n*R1 has 61 technicians available.\n*R2 has 149 technicians available.\n*R3 has 145 technicians available.\n*R4 has 114 technicians available.\n*R5 has 54 technicians available.\n*R6 has 141 technicians available.\n*R7 has 67 technicians available.\n\nThe required staffing level at each project site (set S) is detailed below:\n*S1 requires 102 technicians.\n*S2 requires 88 technicians.\n*S3 requires 107 technicians.\n*S4 requires 102 technicians.\n*S5 requires 46 technicians.\n*S6 requires 6 technicians.\n*S7 requires 75 technicians.\n\nThe per-person travel cost from each training center to each project site is provided in the following matrix:\n\n| From / To | S1 | S2 | S3 | S4 | S5 | S6 | S7 |\n|---|---|---|---|---|---|---|---|\n| R1 | 6 | 15 | 16 | 6 | 5 | 3 | 15 |\n| R2 | 2 | 10 | 7 | 2 | 7 | 2 | 11 |\n| R3 | 10 | 17 | 13 | 18 | 16 | 9 | 2 |\n| R4 | 7 | 10 | 12 | 2 | 11 | 9 | 4 |\n| R5 | 12 | 14 | 13 | 15 | 13 | 11 | 6 |\n| R6 | 16 | 16 | 12 | 17 | 9 | 3 | 14 |\n| R7 | 3 | 14 | 20 | 6 | 18 | 10 | 11 |\n\nDetermine the optimal assignment of technicians to minimize the total travel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

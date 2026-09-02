@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_29_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment of specialized equipment to maximize total utility points while adhering to a cargo plane's weight capacity.\n\nThe equipment units available are:\n* Unit A: weight 26kg, utility 188 points\n* Unit B: weight 1kg, utility 251 points\n* Unit C: weight 37kg, utility 189 points\n* Unit D: weight 12kg, utility 135 points\n* Unit E: weight 50kg, utility 104 points\n* Unit F: weight 33kg, utility 94 points\n* Unit G: weight 18kg, utility 234 points\n* Unit H: weight 30kg, utility 80 points\n* Unit I: weight 14kg, utility 148 points\n* Unit J: weight 12kg, utility 73 points\n* Unit K: weight 43kg, utility 123 points\n* Unit L: weight 9kg, utility 52 points\n* Unit M: weight 18kg, utility 240 points\n* Unit N: weight 31kg, utility 186 points\n* Unit O: weight 42kg, utility 14 points\n* Unit P: weight 10kg, utility 110 points\n* Unit Q: weight 23kg, utility 136 points\n* Unit R: weight 3kg, utility 19 points\n* Unit S: weight 17kg, utility 105 points\n* Unit T: weight 37kg, utility 28 points\n* Unit U: weight 29kg, utility 143 points\n* Unit V: weight 23kg, utility 64 points\n* Unit W: weight 41kg, utility 202 points\n* Unit X: weight 18kg, utility 175 points\n* Unit Y: weight 26kg, utility 184 points\n* Unit Z: weight 25kg, utility 190 points\n* Unit AA: weight 21kg, utility 108 points\n* Unit BB: weight 34kg, utility 165 points\n* Unit CC: weight 43kg, utility 260 points\n\nFurthermore, due to compatibility requirements, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, it requires special handling that reduces the effective cargo capacity by 10 kg.\nThe aircraft can carry a maximum of 508 kg. The coordinator must determine the optimal selection of units.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

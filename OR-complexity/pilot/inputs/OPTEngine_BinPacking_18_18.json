@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of distinct parcels into identical delivery trucks. The parcels are as follows:\n* Parcel Alpha: weight 47kg\n* Parcel Bravo: weight 61kg\n* Parcel Charlie: weight 55kg\n* Parcel Delta: weight 30kg\n* Parcel Echo: weight 49kg\n* Parcel Foxtrot: weight 63kg\n* Parcel Golf: weight 48kg\n* Parcel Hotel: weight 65kg\n* Parcel India: weight 60kg\n* Parcel Juliet: weight 32kg\n* Parcel Kilo: weight 64kg\n* Parcel Lima: weight 66kg\n* Parcel Mike: weight 65kg\n* Parcel November: weight 46kg\n* Parcel Oscar: weight 32kg\n* Parcel Papa: weight 59kg\n* Parcel Quebec: weight 55kg\n* Parcel Romeo: weight 37kg\n\nEach truck has a maximum load capacity of 100 kg. The coordinator must ensure every parcel is assigned to exactly one truck, and the combined weight of parcels in any given truck must not surpass its capacity. The objective is to determine an allocation scheme that minimizes the total number of trucks required for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

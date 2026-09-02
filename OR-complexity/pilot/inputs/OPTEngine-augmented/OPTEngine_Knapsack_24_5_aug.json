@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment to maximize total profit while adhering to a cargo weight limit for a transport vessel.\n\nThe available cargo containers are:\n* Container A: weight 17 tons, profit 14 units\n* Container B: weight 25 tons, profit 211 units\n* Container C: weight 13 tons, profit 22 units\n* Container D: weight 39 tons, profit 93 units\n* Container E: weight 4 tons, profit 222 units\n* Container F: weight 28 tons, profit 180 units\n* Container G: weight 28 tons, profit 204 units\n* Container H: weight 3 tons, profit 146 units\n* Container I: weight 31 tons, profit 17 units\n* Container J: weight 6 tons, profit 28 units\n* Container K: weight 10 tons, profit 296 units\n* Container L: weight 16 tons, profit 94 units\n* Container M: weight 47 tons, profit 180 units\n* Container N: weight 28 tons, profit 81 units\n* Container O: weight 33 tons, profit 159 units\n* Container P: weight 49 tons, profit 259 units\n* Container Q: weight 16 tons, profit 48 units\n* Container R: weight 18 tons, profit 85 units\n* Container S: weight 40 tons, profit 109 units\n* Container T: weight 16 tons, profit 78 units\n* Container U: weight 1 ton, profit 24 units\n* Container V: weight 29 tons, profit 151 units\n* Container W: weight 20 tons, profit 279 units\n* Container X: weight 2 tons, profit 205 units\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, it requires special handling equipment that reduces the vessel's effective cargo capacity by 10 tons.\nThe vessel's maximum allowable cargo weight is 363 tons. The manager must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

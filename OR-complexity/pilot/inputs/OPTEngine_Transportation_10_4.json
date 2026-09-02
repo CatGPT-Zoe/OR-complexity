@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_10_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate shipments from a network of distribution centers to a series of retail outlets in order to minimize total freight expense.\n\nThe inventory available at each distribution center (set C) is as follows:\n*C1 has 130 units.\n*C2 has 191 units.\n*C3 has 105 units.\n*C4 has 101 units.\n*C5 has 103 units.\n*C6 has 124 units.\n*C7 has 138 units.\n*C8 has 83 units.\n*C9 has 95 units.\n*C10 has 178 units.\n\nThe required fulfillment at each retail outlet (set R) is specified below:\n*R1 must receive 90 units.\n*R2 must receive 100 units.\n*R3 must receive 107 units.\n*R4 must receive 80 units.\n*R5 must receive 82 units.\n*R6 must receive 133 units.\n*R7 must receive 99 units.\n*R8 must receive 94 units.\n*R9 must receive 125 units.\n*R10 must receive 75 units.\n\nThe per-unit freight cost from each distribution center to each retail outlet is detailed in the following matrix:\n\n| From / To | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 | R10 |\n|--|-|-|-|-|-|-|-|-|-|\n| C1 | 14 | 1 | 17 | 4 | 1 | 13 | 5 | 2 | 2 | 7 |\n| C2 | 9 | 6 | 10 | 9 | 5 | 2 | 10 | 7 | 18 | 2 |\n| C3 | 12 | 15 | 4 | 20 | 18 | 8 | 18 | 13 | 8 | 17 |\n| C4 | 10 | 2 | 13 | 13 | 14 | 11 | 18 | 2 | 1 | 9 |\n| C5 | 7 | 20 | 15 | 8 | 12 | 19 | 18 | 20 | 7 | 7 |\n| C6 | 10 | 15 | 6 | 3 | 6 | 6 | 17 | 4 | 13 | 2 |\n| C7 | 14 | 9 | 18 | 9 | 5 | 6 | 19 | 9 | 1 | 11 |\n| C8 | 15 | 5 | 2 | 5 | 11 | 20 | 2 | 20 | 10 | 16 |\n| C9 | 19 | 18 | 12 | 3 | 11 | 17 | 8 | 6 | 17 | 3 |\n| C10 | 17 | 6 | 14 | 18 | 18 | 13 | 3 | 12 | 8 | 7 |\n\nDetermine the optimal shipment quantities to achieve the minimal total freight cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

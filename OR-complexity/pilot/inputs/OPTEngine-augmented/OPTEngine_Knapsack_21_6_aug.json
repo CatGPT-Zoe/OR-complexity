@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment for a critical supply chain operation. They must select a collection of cargo units to maximize total utility points while adhering to the transport vehicle's strict mass allowance.\n\nThe available cargo units are:\n* Unit A: mass 4kg, utility 274 points\n* Unit B: mass 3kg, utility 56 points\n* Unit C: mass 48kg, utility 58 points\n* Unit D: mass 38kg, utility 80 points\n* Unit E: mass 10kg, utility 298 points\n* Unit F: mass 14kg, utility 193 points\n* Unit G: mass 24kg, utility 61 points\n* Unit H: mass 7kg, utility 202 points\n* Unit I: mass 32kg, utility 74 points\n* Unit J: mass 22kg, utility 277 points\n* Unit K: mass 14kg, utility 124 points\n* Unit L: mass 49kg, utility 237 points\n* Unit M: mass 39kg, utility 156 points\n* Unit N: mass 7kg, utility 81 points\n* Unit O: mass 27kg, utility 58 points\n* Unit P: mass 48kg, utility 106 points\n* Unit Q: mass 46kg, utility 76 points\n* Unit R: mass 12kg, utility 146 points\n* Unit S: mass 18kg, utility 176 points\n* Unit T: mass 11kg, utility 238 points\n* Unit U: mass 46kg, utility 182 points\n\nFurthermore, due to compatibility protocols, precisely one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, the vehicle's effective payload capacity is diminished by 10 kg.\nThe vehicle's maximum permissible load is 363 kg. The coordinator must determine which units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

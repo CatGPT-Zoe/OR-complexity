@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing facility has 6 different product batches that must go through 6 specialized processing stations.\n\nEach product batch follows a predetermined route through the stations, represented as (Station, Duration) pairs, where each pair specifies the processing station and the time required. The sequence of pairs indicates the exact order in which the processing steps must be completed.\n\nBatch processing details:\n* Batch A follows: (Station5, 3) → (Station6, 1) → (Station3, 9) → (Station2, 3) → (Station1, 10) → (Station4, 7)\n* Batch B follows: (Station3, 1) → (Station4, 6) → (Station1, 9) → (Station6, 3) → (Station2, 4) → (Station5, 6)\n* Batch C follows: (Station6, 5) → (Station4, 3) → (Station1, 7) → (Station3, 2) → (Station5, 10) → (Station2, 8)\n* Batch D follows: (Station2, 2) → (Station4, 7) → (Station1, 7) → (Station5, 5) → (Station3, 5) → (Station6, 7)\n* Batch E follows: (Station3, 8) → (Station5, 1) → (Station6, 5) → (Station1, 4) → (Station2, 7) → (Station4, 7)\n* Batch F follows: (Station4, 10) → (Station6, 3) → (Station1, 10) → (Station3, 5) → (Station2, 6) → (Station5, 1)\n\nEach processing step must run continuously without interruption once initiated, and each station can only handle one batch at a time. The goal is to schedule all processing steps across the stations to minimize the total completion time for all batches.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood-plasma storage schedule across a 14-day emergency preparedness cycle.  \nThe initial plasma reserve at the start of the cycle is 1 unit.  \nFor each day \\( t = 1, \\dots, 14 \\), the central blood bank permits the hospital to request a shipment whose volume must be between 19 and 54 units.  \nEach shipment, once requested, requires 2 days for processing and delivery before it becomes available for clinical use or to replenish reserves.  \nThe projected daily clinical consumption of plasma is as follows:  \n\n* Day 1: 35 units  \n* Day 2: 41 units  \n* Day 3: 57 units  \n* Day 4: 33 units  \n* Day 5: 32 units  \n* Day 6: 15 units  \n* Day 7: 47 units  \n* Day 8: 37 units  \n* Day 9: 60 units  \n* Day 10: 17 units  \n* Day 11: 54 units  \n* Day 12: 11 units  \n* Day 13: 59 units  \n* Day 14: 21 units  \n\nClinical shortfalls are tolerated, but any unmet daily need is permanently lost and cannot be recovered later.  \nThroughout the planning cycle, plasma volumes may be treated as continuous quantities, and the total on‑hand reserve at any moment must not surpass the storage‑freezer capacity of 55 units.  \n\nOn the seventh day, the maximum allowable shipment volume is restricted to 31 units.  \nOn the sixth day, the on‑hand reserve must be maintained at a minimum of 11 units.  \n\nThe total operational expenditure comprises three elements: the procurement cost, charged at 3 per unit ordered; the refrigeration cost, charged at 3 per unit of plasma held overnight; and the clinical‑shortfall penalty, levied at 9 per unit of unmet daily need.  \nDetermine the optimal shipment volume for each day and monitor the resulting reserve and shortfall levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

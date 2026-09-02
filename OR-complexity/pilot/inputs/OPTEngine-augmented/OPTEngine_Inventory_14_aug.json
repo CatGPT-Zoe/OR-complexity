@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A coastal desalination facility must devise a pumping and storage schedule for fresh water over a forthcoming fortnight.  \nAt the outset, the reservoir holds 29 thousand cubic meters.  \nOn each day \\( t = 1,\\dots,14 \\), the facility may pump from a nearby aquifer an amount that must be between 13 and 79 thousand cubic meters, though the pumped water requires one full day to be treated and transferred into the reservoir before it becomes available.  \nThe daily water demand for municipal supply is as follows:  \n\n- Day 1: 32  \n- Day 2: 22  \n- Day 3: 25  \n- Day 4: 19  \n- Day 5: 24  \n- Day 6: 29  \n- Day 7: 60  \n- Day 8: 19  \n- Day 9: 21  \n- Day 10: 45  \n- Day 11: 26  \n- Day 12: 44  \n- Day 13: 11  \n- Day 14: 21  \n\n(all in thousand cubic meters).  \n\nShortfalls are allowed, but any unsatisfied demand is simply lost (not carried forward).  \nThroughout the fortnight, water volumes may be treated as continuous quantities, and the total stored water in the reservoir at any moment must not surpass the capacity limit of 42 thousand cubic meters.  \n\nOn day 10, the maximum allowable pumping volume is restricted to 34 thousand cubic meters.  \nOn day 12, the on‑hand stored water must be at least 15 thousand cubic meters.  \n\nThe total operating cost comprises three elements: a pumping cost of 2 per thousand cubic meters pumped; a storage cost of 3 per thousand cubic meters held overnight; and a shortage penalty of 8 per thousand cubic meters of unmet daily demand.  \nThe objective is to determine the optimal pumping quantity each day and to trace the resulting storage and shortage levels so as to minimize the total cost over the planning horizon.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

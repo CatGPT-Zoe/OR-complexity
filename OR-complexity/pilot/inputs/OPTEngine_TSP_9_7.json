@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales representative must conduct in-person meetings across nine corporate branch offices.\n\nThe travel durations between offices are measured in minutes:\n* Office 1 to Office 2: 136.2 minutes\n* Office 1 to Office 3: 92.3 minutes\n* Office 1 to Office 4: 24.2 minutes\n* Office 1 to Office 5: 78.2 minutes\n* Office 1 to Office 6: 120.4 minutes\n* Office 1 to Office 7: 97.9 minutes\n* Office 1 to Office 8: 87.6 minutes\n* Office 1 to Office 9: 66.2 minutes\n* Office 2 to Office 3: 164.4 minutes\n* Office 2 to Office 4: 160.3 minutes\n* Office 2 to Office 5: 121.7 minutes\n* Office 2 to Office 6: 193.9 minutes\n* Office 2 to Office 7: 193.1 minutes\n* Office 2 to Office 8: 172.0 minutes\n* Office 2 to Office 9: 101.1 minutes\n* Office 3 to Office 4: 93.1 minutes\n* Office 3 to Office 5: 165.6 minutes\n* Office 3 to Office 6: 31.8 minutes\n* Office 3 to Office 7: 33.6 minutes\n* Office 3 to Office 8: 13.6 minutes\n* Office 3 to Office 9: 65.0 minutes\n* Office 4 to Office 5: 93.6 minutes\n* Office 4 to Office 6: 117.2 minutes\n* Office 4 to Office 7: 90.2 minutes\n* Office 4 to Office 8: 85.2 minutes\n* Office 4 to Office 9: 83.6 minutes\n* Office 5 to Office 6: 195.9 minutes\n* Office 5 to Office 7: 175.8 minutes\n* Office 5 to Office 8: 163.5 minutes\n* Office 5 to Office 9: 116.8 minutes\n* Office 6 to Office 7: 32.0 minutes\n* Office 6 to Office 8: 32.8 minutes\n* Office 6 to Office 9: 96.1 minutes\n* Office 7 to Office 8: 21.8 minutes\n* Office 7 to Office 9: 92.0 minutes\n* Office 8 to Office 9: 71.2 minutes\n\nThe objective is to determine the itinerary of minimal total duration that visits every branch office precisely once, concluding the circuit back at the initial office.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

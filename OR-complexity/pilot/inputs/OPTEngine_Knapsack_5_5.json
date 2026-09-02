@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers for shipment. Available containers are:\n* Container A: size 7 cubic meters, profit $191\n* Container B: size 28 cubic meters, profit $171\n* Container C: size 40 cubic meters, profit $114\n* Container D: size 36 cubic meters, profit $254\n* Container E: size 29 cubic meters, profit $276\nThe transport vehicle has a maximum capacity of 98 cubic meters. Choose the container combination that yields the highest total profit without exceeding this capacity. Each container is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

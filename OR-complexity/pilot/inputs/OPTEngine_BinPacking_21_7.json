@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_21_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are as follows:\n* Package 1: size 60 units\n* Package 2: size 50 units\n* Package 3: size 36 units\n* Package 4: size 58 units\n* Package 5: size 53 units\n* Package 6: size 67 units\n* Package 7: size 46 units\n* Package 8: size 61 units\n* Package 9: size 44 units\n* Package 10: size 40 units\n* Package 11: size 65 units\n* Package 12: size 65 units\n* Package 13: size 34 units\n* Package 14: size 62 units\n* Package 15: size 40 units\n* Package 16: size 31 units\n* Package 17: size 40 units\n* Package 18: size 63 units\n* Package 19: size 56 units\n* Package 20: size 68 units\n* Package 21: size 43 units\n\nEach truck can carry a maximum load of 100 units. Assign all packages using the minimum number of trucks. Every package must be placed on exactly one truck, and the total size of packages on any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

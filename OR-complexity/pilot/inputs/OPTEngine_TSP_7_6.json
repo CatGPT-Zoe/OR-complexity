@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales representative must personally visit seven distinct corporate branches to conduct quarterly reviews.\n\nThe travel durations between branches are recorded in minutes:\n* Headquarters to Branch 1: 64.5 minutes\n* Headquarters to Branch 2: 86.1 minutes\n* Headquarters to Branch 3: 81.3 minutes\n* Headquarters to Branch 4: 93.6 minutes\n* Headquarters to Branch 5: 74.3 minutes\n* Headquarters to Branch 6: 116.1 minutes\n* Branch 1 to Branch 2: 70.3 minutes\n* Branch 1 to Branch 3: 34.7 minutes\n* Branch 1 to Branch 4: 135.1 minutes\n* Branch 1 to Branch 5: 103.4 minutes\n* Branch 1 to Branch 6: 91.6 minutes\n* Branch 2 to Branch 3: 42.4 minutes\n* Branch 2 to Branch 4: 179.0 minutes\n* Branch 2 to Branch 5: 154.7 minutes\n* Branch 2 to Branch 6: 161.7 minutes\n* Branch 3 to Branch 4: 164.6 minutes\n* Branch 3 to Branch 5: 134.9 minutes\n* Branch 3 to Branch 6: 124.7 minutes\n* Branch 4 to Branch 5: 34.9 minutes\n* Branch 4 to Branch 6: 113.1 minutes\n* Branch 5 to Branch 6: 81.4 minutes\n\nThe objective is to determine the most time-efficient itinerary that allows the representative to arrive at each branch precisely one time, concluding the circuit back at the starting location.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

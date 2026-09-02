@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_8_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute a fixed budget across 8 different public infrastructure projects to maximize the total projected benefit to the community. The features of each project are as follows:\n* Project A: projected benefit is 0.152, implementation complexity is 0.093, allocation limits [0.009, 0.811]\n* Project B: projected benefit is 0.110, implementation complexity is 0.276, allocation limits [0.068, 0.727]\n* Project C: projected benefit is 0.090, implementation complexity is 0.152, allocation limits [0.085, 0.856]\n* Project D: projected benefit is 0.121, implementation complexity is 0.046, allocation limits [0.032, 0.683]\n* Project E: projected benefit is 0.067, implementation complexity is 0.257, allocation limits [0.035, 0.776]\n* Project F: projected benefit is 0.067, implementation complexity is 0.141, allocation limits [0.006, 0.605]\n* Project G: projected benefit is 0.100, implementation complexity is 0.271, allocation limits [0.054, 0.373]\n* Project H: projected benefit is 0.199, implementation complexity is 0.139, allocation limits [0.089, 0.421]\nEach project must receive a portion of the total budget that falls within its specified minimum and maximum allocation limits, and the sum of all budget portions must equal the entire budget. To ensure timely completion, the planner requires that the group of quick-delivery projects, represented by the subset Q = {B}, collectively receive at least 0.324 of the total funding. At the same time, the overall implementation complexity of the portfolio must not exceed 0.286, and the total projected benefit must be no less than 0.109. Please determine the optimal budget allocation that maximizes the total projected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

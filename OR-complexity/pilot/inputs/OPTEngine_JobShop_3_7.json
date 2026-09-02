@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 3 delivery trucks to transport goods through 3 different distribution centers.\n\nEach truck must follow a specific route through the centers, represented as pairs (Distribution Center, Loading/Unloading Time), where each pair specifies the distribution center where the truck must stop and the time required for loading/unloading operations. The order of pairs indicates the required sequence of stops.\n\nTruck schedules:\n* Truck A follows the route: (DC2, 5) → (DC3, 9) → (DC1, 8)\n* Truck B follows the route: (DC2, 6) → (DC3, 10) → (DC1, 4)\n* Truck C follows the route: (DC3, 3) → (DC1, 2) → (DC2, 10)\n\nEach loading/unloading operation must be completed without interruption once it begins, and each distribution center can only accommodate one truck at a time for these operations. The objective is to determine the processing sequence of all trucks at the distribution centers so that the total completion time for all delivery operations is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

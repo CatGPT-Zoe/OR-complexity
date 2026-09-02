@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_26_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of crates to identical freight pallets for air shipment. The crates are as follows:\n* Crate Alpha: mass 62 pounds\n* Crate Beta: mass 48 pounds\n* Crate Gamma: mass 61 pounds\n* Crate Delta: mass 56 pounds\n* Crate Epsilon: mass 50 pounds\n* Crate Zeta: mass 54 pounds\n* Crate Eta: mass 33 pounds\n* Crate Theta: mass 37 pounds\n* Crate Iota: mass 33 pounds\n* Crate Kappa: mass 51 pounds\n* Crate Lambda: mass 40 pounds\n* Crate Mu: mass 47 pounds\n* Crate Nu: mass 69 pounds\n* Crate Xi: mass 65 pounds\n* Crate Omicron: mass 58 pounds\n* Crate Pi: mass 49 pounds\n* Crate Rho: mass 65 pounds\n* Crate Sigma: mass 56 pounds\n* Crate Tau: mass 60 pounds\n* Crate Upsilon: mass 53 pounds\n* Crate Phi: mass 44 pounds\n* Crate Chi: mass 35 pounds\n* Crate Psi: mass 35 pounds\n* Crate Omega: mass 70 pounds\n* Crate Digamma: mass 35 pounds\n* Crate Stigma: mass 62 pounds\n\nEach pallet is certified for a maximum load of 100 pounds. The coordinator must allocate every crate to a pallet, ensuring no pallet's total mass surpasses its certified limit, while utilizing the smallest possible number of pallets. Every crate must be placed on exactly one pallet.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

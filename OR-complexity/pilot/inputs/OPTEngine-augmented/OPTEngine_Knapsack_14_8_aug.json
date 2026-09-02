@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_14_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized containers to maximize total profit while adhering to a cargo aircraft's weight restriction.\n\nThe containers available are:\n* Container A: weight 39kg, profit 116 units\n* Container B: weight 29kg, profit 217 units\n* Container C: weight 17kg, profit 20 units\n* Container D: weight 38kg, profit 78 units\n* Container E: weight 25kg, profit 97 units\n* Container F: weight 29kg, profit 299 units\n* Container G: weight 4kg, profit 202 units\n* Container H: weight 6kg, profit 217 units\n* Container I: weight 22kg, profit 129 units\n* Container J: weight 33kg, profit 243 units\n* Container K: weight 3kg, profit 255 units\n* Container L: weight 40kg, profit 62 units\n* Container M: weight 18kg, profit 269 units\n* Container N: weight 32kg, profit 292 units\n\nFurthermore, due to a compatibility restriction, exactly one of Container A or Container B must be included in the shipment.\n\nIf Container C is loaded, it requires special handling equipment that reduces the aircraft's usable payload capacity by 10 kg.\nThe aircraft's maximum allowable payload is 234 kg. The manager must determine the optimal selection of containers.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

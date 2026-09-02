@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of freight parcels onto identical pallets for air transport. The parcels are as follows:\n* Parcel Alpha: mass 67kg\n* Parcel Bravo: mass 43kg\n* Parcel Charlie: mass 62kg\n* Parcel Delta: mass 38kg\n* Parcel Echo: mass 48kg\n* Parcel Foxtrot: mass 38kg\n* Parcel Golf: mass 36kg\n* Parcel Hotel: mass 69kg\n* Parcel India: mass 46kg\n* Parcel Juliett: mass 64kg\n\nEach pallet is certified for a maximum load of 100 kg. The coordinator must ensure every parcel is assigned to precisely one pallet, with the cumulative mass on any given pallet not surpassing its certified limit. The objective is to determine an allocation scheme that minimizes the total number of pallets required for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_29_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting cargo containers to load onto a transport aircraft. Available containers are:\n* Container 1: weight 22 kg, revenue $130\n* Container 2: weight 22 kg, revenue $254\n* Container 3: weight 36 kg, revenue $210\n* Container 4: weight 36 kg, revenue $108\n* Container 5: weight 15 kg, revenue $210\n* Container 6: weight 5 kg, revenue $258\n* Container 7: weight 32 kg, revenue $18\n* Container 8: weight 29 kg, revenue $110\n* Container 9: weight 1 kg, revenue $110\n* Container 10: weight 15 kg, revenue $168\n* Container 11: weight 39 kg, revenue $274\n* Container 12: weight 11 kg, revenue $56\n* Container 13: weight 32 kg, revenue $211\n* Container 14: weight 26 kg, revenue $98\n* Container 15: weight 2 kg, revenue $41\n* Container 16: weight 5 kg, revenue $60\n* Container 17: weight 32 kg, revenue $58\n* Container 18: weight 5 kg, revenue $114\n* Container 19: weight 26 kg, revenue $174\n* Container 20: weight 18 kg, revenue $38\n* Container 21: weight 49 kg, revenue $266\n* Container 22: weight 38 kg, revenue $253\n* Container 23: weight 34 kg, revenue $288\n* Container 24: weight 48 kg, revenue $177\n* Container 25: weight 42 kg, revenue $60\n* Container 26: weight 43 kg, revenue $184\n* Container 27: weight 50 kg, revenue $142\n* Container 28: weight 2 kg, revenue $148\n* Container 29: weight 4 kg, revenue $27\n\nThe aircraft has a maximum payload capacity of 503 kg. Determine which containers to load to maximize total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

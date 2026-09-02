@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_6_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers for a shipment. Available containers are:\n* Container 1: volume 6 cubic meters, revenue $286\n* Container 2: volume 44 cubic meters, revenue $210\n* Container 3: volume 46 cubic meters, revenue $278\n* Container 4: volume 18 cubic meters, revenue $277\n* Container 5: volume 16 cubic meters, revenue $120\n* Container 6: volume 44 cubic meters, revenue $224\nThe cargo plane has a maximum capacity of 121 cubic meters. Choose the container combination that yields the highest total revenue without exceeding this volume limit. Each container must be shipped entirely or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

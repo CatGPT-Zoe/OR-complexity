@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_22_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assembling a shipment of specialized components to maximize total utility points while adhering to a strict weight limit for a cargo aircraft.\n\nThe components available are:\n* Component A: weight 42kg, utility 168 points\n* Component B: weight 35kg, utility 125 points\n* Component C: weight 38kg, utility 165 points\n* Component D: weight 1kg, utility 221 points\n* Component E: weight 23kg, utility 46 points\n* Component F: weight 22kg, utility 153 points\n* Component G: weight 50kg, utility 187 points\n* Component H: weight 7kg, utility 163 points\n* Component I: weight 37kg, utility 86 points\n* Component J: weight 23kg, utility 29 points\n* Component K: weight 47kg, utility 17 points\n* Component L: weight 42kg, utility 215 points\n* Component M: weight 1kg, utility 231 points\n* Component N: weight 15kg, utility 230 points\n* Component O: weight 37kg, utility 248 points\n* Component P: weight 19kg, utility 12 points\n* Component Q: weight 12kg, utility 242 points\n* Component R: weight 35kg, utility 44 points\n* Component S: weight 42kg, utility 17 points\n* Component T: weight 43kg, utility 32 points\n* Component U: weight 6kg, utility 75 points\n* Component V: weight 26kg, utility 206 points\n\nFurthermore, due to compatibility constraints, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, it requires special handling equipment that reduces the effective cargo capacity of the aircraft by 10 kg.\nThe maximum allowable total weight for the shipment is 422 kg. The coordinator must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

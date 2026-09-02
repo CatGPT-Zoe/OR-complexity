@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical component over a 9-week operational cycle.  \nThe starting stock at the cycle’s commencement is 50 units.  \nIn each week \\( t = 1, \\dots, 9 \\), the vendor permits the company to submit a procurement request, the size of which must fall between 0 and 43 units.  \nAll shipments are received instantly and can immediately be used to meet requirements or augment stock.  \nThe weekly requirement for the component is as follows:  \n* Week 1: requirement 35 units  \n* Week 2: requirement 10 units  \n* Week 3: requirement 43 units  \n* Week 4: requirement 14 units  \n* Week 5: requirement 53 units  \n* Week 6: requirement 15 units  \n* Week 7: requirement 53 units  \n* Week 8: requirement 57 units  \n* Week 9: requirement 52 units  \n\nStock‑outs are allowed, but any unsatisfied requirement is lost and cannot be deferred to a later week.  \nThroughout the cycle, component quantities may be fractional, and the total physical stock on hand at any moment must not exceed the storage‑facility limit of 59 units.\n\nIn week 5, the maximum procurement quantity is restricted to 14 units.  \nIn week 3, the on‑hand stock must be maintained at a level no lower than 48 units.\n\nThe total expenditure over the 9‑week cycle comprises three elements: the procurement cost, charged at 1 per unit acquired; the storage cost, charged at 3 per unit kept from one week to the next; and the penalty for unmet requirements, charged at 6 per unit of unsatisfied demand.  \nDetermine the optimal procurement quantity for each week and monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

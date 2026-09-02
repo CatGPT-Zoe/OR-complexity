@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_7_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to ship on a cargo plane. The available packages are:\n* Package A: size 18 cubic meters, revenue $19\n* Package B: size 3 cubic meters, revenue $30\n* Package C: size 14 cubic meters, revenue $142\n* Package D: size 36 cubic meters, revenue $171\n* Package E: size 24 cubic meters, revenue $300\n* Package F: size 3 cubic meters, revenue $263\n* Package G: size 46 cubic meters, revenue $244\n\nThe cargo plane has a maximum capacity of 100 cubic meters. Choose the set of packages that maximizes total revenue without exceeding this capacity limit. Each package must be shipped entirely or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

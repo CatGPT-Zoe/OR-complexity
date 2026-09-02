@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must assemble a shipment of crates to maximize total profit while staying within a truck's weight limit.\n\nThe available crates are:\n* Crate A: weight 43kg, profit 39 units\n* Crate B: weight 43kg, profit 80 units\n* Crate C: weight 38kg, profit 296 units\n* Crate D: weight 13kg, profit 13 units\n* Crate E: weight 3kg, profit 217 units\n* Crate F: weight 36kg, profit 261 units\n* Crate G: weight 46kg, profit 64 units\n* Crate H: weight 31kg, profit 296 units\n* Crate I: weight 23kg, profit 185 units\n* Crate J: weight 7kg, profit 12 units\n* Crate K: weight 16kg, profit 126 units\n* Crate L: weight 32kg, profit 169 units\n* Crate M: weight 18kg, profit 125 units\n* Crate N: weight 1kg, profit 263 units\n* Crate O: weight 23kg, profit 270 units\n\nDue to a contractual stipulation, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, the truck's effective load capacity is diminished by 10 kg.\nThe truck can transport a maximum of 261 kg. The manager must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

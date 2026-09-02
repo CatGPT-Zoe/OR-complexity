@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 5 delivery trucks to complete 5 different routes.  \n\nEach route consists of a sequence of checkpoint stops, represented as pairs (Checkpoint, Service time), where each pair specifies the checkpoint station the truck must visit and the time required to service the truck there. The order of the pairs indicates the mandatory sequence of stops for the route.  \n\nRoute details:  \n* R1 follows the sequence: (C5, 2) → (C4, 2) → (C1, 7) → (C3, 3) → (C2, 1)  \n* R2 follows the sequence: (C4, 8) → (C5, 6) → (C3, 5) → (C2, 2) → (C1, 6)  \n* R3 follows the sequence: (C1, 6) → (C5, 3) → (C2, 1) → (C4, 4) → (C3, 6)  \n* R4 follows the sequence: (C1, 2) → (C2, 1) → (C5, 5) → (C3, 6) → (C4, 1)  \n* R5 follows the sequence: (C5, 2) → (C2, 8) → (C1, 6) → (C3, 5) → (C4, 3)  \n\nEach service at a checkpoint must be completed without interruption once started, and each checkpoint can only service one truck at a time. The goal is to determine the order in which all trucks are serviced at the checkpoints so that the total completion time for all routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

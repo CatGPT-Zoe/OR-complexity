@@ -1,0 +1,9 @@
+{
+  "instance_id": "NL4OPT_137",
+  "annotation_mode": "semantic",
+  "problem_text": "A farmer decides to move his cows to a nearby farm using helicopters and trucks. A helicopter can take 3 cows per trip and creates 5 units of pollution. A truck can take 7 cows per trip and creates 10 units of pollution. The farmer needs to transport 80 cows and he only has enough money for at most 8 truck trips. How many of each type of trip should be taken to minimize the total amount of pollution produced?",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A water treatment facility must devise a procurement and storage strategy for a critical chemical reagent across a 12-week planning cycle.  \nThe initial stock of the reagent at the start of the planning window is 19 kiloliters.  \nIn each week \\( t = 1, \\dots, 12 \\), the supplier permits the facility to submit a procurement request, where the volume ordered must fall between 18 and 44 kiloliters.  \nHowever, every order placed is subject to a 2-week delivery lag before it becomes available to meet consumption needs or to replenish storage.  \nWeekly consumption of the reagent is projected as follows:  \n* Week 1: 45 kiloliters  \n* Week 2: 30 kiloliters  \n* Week 3: 31 kiloliters  \n* Week 4: 22 kiloliters  \n* Week 5: 55 kiloliters  \n* Week 6: 60 kiloliters  \n* Week 7: 37 kiloliters  \n* Week 8: 60 kiloliters  \n* Week 9: 19 kiloliters  \n* Week 10: 10 kiloliters  \n* Week 11: 58 kiloliters  \n* Week 12: 42 kiloliters  \n\nConsumption deficits are tolerated, but any unmet weekly need is entirely lost and cannot be deferred to a later week.  \nThroughout the 12-week horizon, reagent quantities may be treated as continuous values, and the total volume held in on-site storage tanks at any moment must not surpass the maximum capacity of 59 kiloliters.  \nThe aggregate cost over the planning cycle comprises three elements: the procurement cost, charged at 4 per kiloliter ordered; the storage cost, assessed at 1 per kiloliter kept in inventory from one week to the next; and a penalty for unmet consumption, levied at 14 per kiloliter of weekly shortfall. The objective is to establish the optimal procurement volume for each week and to monitor the ensuing inventory and deficit levels so as to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

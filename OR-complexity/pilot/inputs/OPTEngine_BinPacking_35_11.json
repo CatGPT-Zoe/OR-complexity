@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of crates onto identical pallets for air freight. The crates have the following masses:\n\n* Crate Alpha: mass 48kg\n* Crate Beta: mass 61kg\n* Crate Gamma: mass 45kg\n* Crate Delta: mass 70kg\n* Crate Epsilon: mass 34kg\n* Crate Zeta: mass 47kg\n* Crate Eta: mass 39kg\n* Crate Theta: mass 69kg\n* Crate Iota: mass 42kg\n* Crate Kappa: mass 45kg\n* Crate Lambda: mass 38kg\n* Crate Mu: mass 30kg\n* Crate Nu: mass 31kg\n* Crate Xi: mass 58kg\n* Crate Omicron: mass 47kg\n* Crate Pi: mass 49kg\n* Crate Rho: mass 63kg\n* Crate Sigma: mass 31kg\n* Crate Tau: mass 54kg\n* Crate Upsilon: mass 59kg\n* Crate Phi: mass 69kg\n* Crate Chi: mass 40kg\n* Crate Psi: mass 32kg\n* Crate Omega: mass 40kg\n* Crate Asteria: mass 30kg\n* Crate Boreas: mass 63kg\n* Crate Ceres: mass 55kg\n* Crate Draco: mass 52kg\n* Crate Echo: mass 35kg\n* Crate Frost: mass 50kg\n* Crate Gale: mass 31kg\n* Crate Helios: mass 59kg\n* Crate Iris: mass 62kg\n* Crate Juno: mass 44kg\n* Crate Krios: mass 46kg\n\nEach pallet has a certified maximum load capacity of 100 kg. The coordinator must place all crates onto pallets, with each crate assigned to exactly one pallet and the combined mass on any pallet not surpassing its limit. The objective is to minimize the total number of pallets required for the complete shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

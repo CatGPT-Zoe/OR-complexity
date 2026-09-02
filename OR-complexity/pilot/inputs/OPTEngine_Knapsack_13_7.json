@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a cargo drone. The available packages are:\n\n* Package A: size 31 units, revenue $51\n* Package B: size 4 units, revenue $284\n* Package C: size 26 units, revenue $144\n* Package D: size 2 units, revenue $274\n* Package E: size 7 units, revenue $51\n* Package F: size 22 units, revenue $193\n* Package G: size 7 units, revenue $251\n* Package H: size 3 units, revenue $88\n* Package I: size 34 units, revenue $156\n* Package J: size 3 units, revenue $10\n* Package K: size 25 units, revenue $182\n* Package L: size 11 units, revenue $290\n* Package M: size 45 units, revenue $85\n\nThe drone has a maximum capacity of 154 units. Determine which packages to load to maximize total revenue without exceeding this capacity limit. Each package must be loaded in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

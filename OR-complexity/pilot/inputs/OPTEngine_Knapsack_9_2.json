@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_9_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers to load onto a delivery truck. The available containers are:\n\n* Container A: weight 37 tons, value $140,000\n* Container B: weight 22 tons, value $43,000\n* Container C: weight 32 tons, value $144,000\n* Container D: weight 20 tons, value $218,000\n* Container E: weight 25 tons, value $206,000\n* Container F: weight 4 tons, value $93,000\n* Container G: weight 42 tons, value $75,000\n* Container H: weight 16 tons, value $156,000\n* Container I: weight 47 tons, value $181,000\n\nThe truck has a maximum payload capacity of 171 tons. Choose the combination of containers that maximizes total value without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

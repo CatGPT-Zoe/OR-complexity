@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment for a critical three-stage delivery route. They must select a combination of cargo containers to maximize total utility points, while adhering to a strict total weight limit for the transport vehicle.\n\nThe containers available are:\n* Container A: weight 40kg, utility 273 points\n* Container B: weight 47kg, utility 85 points\n* Container C: weight 6kg, utility 178 points\n* Container D: weight 16kg, utility 100 points\n* Container E: weight 16kg, utility 21 points\n* Container F: weight 11kg, utility 297 points\n* Container G: weight 11kg, utility 50 points\n* Container H: weight 28kg, utility 63 points\n* Container I: weight 40kg, utility 244 points\n* Container J: weight 46kg, utility 86 points\n* Container K: weight 40kg, utility 30 points\n* Container L: weight 17kg, utility 184 points\n\nFurthermore, due to routing protocols, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, the vehicle's effective load capacity is diminished by 10 kg.\nThe vehicle's maximum allowable gross weight is 222 kg. The manager must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

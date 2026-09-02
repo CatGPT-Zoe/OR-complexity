@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assemble a shipment of crates to maximize total revenue while adhering to the truck's weight capacity.\n\nThe crates available are:\n* Crate 1: weight 20kg, revenue 115 units\n* Crate 2: weight 9kg, revenue 65 units\n* Crate 3: weight 44kg, revenue 134 units\n* Crate 4: weight 41kg, revenue 117 units\n* Crate 5: weight 20kg, revenue 139 units\n* Crate 6: weight 4kg, revenue 64 units\n* Crate 7: weight 10kg, revenue 288 units\n* Crate 8: weight 32kg, revenue 144 units\n* Crate 9: weight 46kg, revenue 78 units\n* Crate 10: weight 6kg, revenue 67 units\n* Crate 11: weight 49kg, revenue 112 units\n* Crate 12: weight 40kg, revenue 268 units\n* Crate 13: weight 16kg, revenue 123 units\n* Crate 14: weight 9kg, revenue 241 units\n* Crate 15: weight 13kg, revenue 264 units\n* Crate 16: weight 40kg, revenue 263 units\n* Crate 17: weight 7kg, revenue 195 units\n* Crate 18: weight 28kg, revenue 288 units\n* Crate 19: weight 12kg, revenue 10 units\n* Crate 20: weight 27kg, revenue 75 units\n* Crate 21: weight 38kg, revenue 77 units\n* Crate 22: weight 45kg, revenue 209 units\n* Crate 23: weight 24kg, revenue 281 units\n* Crate 24: weight 35kg, revenue 111 units\n* Crate 25: weight 46kg, revenue 114 units\n* Crate 26: weight 23kg, revenue 125 units\n* Crate 27: weight 40kg, revenue 265 units\n\nFurthermore, precisely one of Crate 1 and Crate 2 must be included in the shipment.\n\nIf Crate 3 is selected, the truck's effective load capacity is diminished by 10 kg.\nThe maximum gross weight the truck can transport is 506 kg. The coordinator must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a cargo shipment for a critical three-stage delivery route. They need to select a combination of cargo containers to maximize total utility points while adhering to the transport vehicle's maximum load capacity.\n\nThe available containers are:\n* Container A: mass 8 units, utility 299 credits\n* Container B: mass 23 units, utility 127 credits\n* Container C: mass 44 units, utility 289 credits\n* Container D: mass 43 units, utility 154 credits\n* Container E: mass 15 units, utility 132 credits\n* Container F: mass 5 units, utility 275 credits\n* Container G: mass 20 units, utility 177 credits\n* Container H: mass 15 units, utility 201 credits\n* Container I: mass 41 units, utility 255 credits\n* Container J: mass 19 units, utility 97 credits\n* Container K: mass 9 units, utility 17 credits\n\nFurthermore, due to routing compatibility, exactly one of Container A and Container B must be included in the shipment.\n\nShould Container C be selected, the vehicle's effective load-bearing capacity is diminished by 10 units.\nThe vehicle can transport a maximum of 169 mass units. The coordinator must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_10_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute municipal funding across 10 infrastructure projects to maximize the overall community benefit score.  \nThe profile for each project is as follows:  \n* Project 1: benefit score 0.065, environmental impact 0.194, funding share limits [0.077, 0.427]  \n* Project 2: benefit score 0.148, environmental impact 0.265, funding share limits [0.073, 0.461]  \n* Project 3: benefit score 0.169, environmental impact 0.037, funding share limits [0.073, 0.797]  \n* Project 4: benefit score 0.157, environmental impact 0.160, funding share limits [0.046, 0.503]  \n* Project 5: benefit score 0.142, environmental impact 0.091, funding share limits [0.066, 0.647]  \n* Project 6: benefit score 0.108, environmental impact 0.282, funding share limits [0.036, 0.640]  \n* Project 7: benefit score 0.124, environmental impact 0.117, funding share limits [0.006, 0.591]  \n* Project 8: benefit score 0.068, environmental impact 0.286, funding share limits [0.053, 0.506]  \n* Project 9: benefit score 0.095, environmental impact 0.105, funding share limits [0.022, 0.710]  \n* Project 10: benefit score 0.101, environmental impact 0.011, funding share limits [0.043, 0.329]  \n\nEach project must receive a share of the total budget within its specified limits, and all shares must sum to 1.  \nTo ensure rapid implementation, the set of quick-delivery projects Q = {3, 5, 10} must together receive at least 0.237 of the total funding.  \nAdditionally, the total environmental impact index for all selected projects must not exceed 0.170, and the overall community benefit score must be at least 0.086.  \nDetermine the optimal funding allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

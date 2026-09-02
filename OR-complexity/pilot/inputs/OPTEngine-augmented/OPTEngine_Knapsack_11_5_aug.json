@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assembling a shipment of specialized components to maximize total utility points while adhering to a strict total weight allowance for a cargo drone.\n\nThe components under consideration are:\n* Component A: weight 1kg, utility 245 points\n* Component B: weight 32kg, utility 234 points\n* Component C: weight 4kg, utility 221 points\n* Component D: weight 32kg, utility 245 points\n* Component E: weight 29kg, utility 70 points\n* Component F: weight 6kg, utility 51 points\n* Component G: weight 16kg, utility 60 points\n* Component H: weight 49kg, utility 88 points\n* Component I: weight 27kg, utility 119 points\n* Component J: weight 29kg, utility 49 points\n* Component K: weight 28kg, utility 296 points\n\nA critical compatibility rule dictates that precisely one of Component A and Component B must be included in the final shipment.\n\nFurthermore, if Component C is selected, it introduces a parasitic load that effectively diminishes the drone's usable weight capacity by 10 kg.\nThe drone's maximum gross lift capacity is 177 kg. The coordinator must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

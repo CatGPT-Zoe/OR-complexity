@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with allocating a set of shipments onto identical cargo vessels. The freight manifests include:\n* Shipment Alpha: mass 57 tonnes\n* Shipment Beta: mass 57 tonnes\n* Shipment Gamma: mass 65 tonnes\n* Shipment Delta: mass 30 tonnes\n* Shipment Epsilon: mass 40 tonnes\n* Shipment Zeta: mass 36 tonnes\n* Shipment Eta: mass 53 tonnes\n* Shipment Theta: mass 56 tonnes\n* Shipment Iota: mass 44 tonnes\n* Shipment Kappa: mass 47 tonnes\n* Shipment Lambda: mass 55 tonnes\n* Shipment Mu: mass 62 tonnes\n* Shipment Nu: mass 52 tonnes\n* Shipment Xi: mass 66 tonnes\n* Shipment Omicron: mass 39 tonnes\n* Shipment Pi: mass 35 tonnes\n* Shipment Rho: mass 50 tonnes\n* Shipment Sigma: mass 43 tonnes\n* Shipment Tau: mass 32 tonnes\n* Shipment Upsilon: mass 55 tonnes\n* Shipment Phi: mass 54 tonnes\n* Shipment Chi: mass 47 tonnes\n* Shipment Psi: mass 51 tonnes\n* Shipment Omega: mass 42 tonnes\n* Shipment Ares: mass 62 tonnes\n* Shipment Boreas: mass 45 tonnes\n* Shipment Cronus: mass 66 tonnes\n* Shipment Demeter: mass 67 tonnes\n* Shipment Eos: mass 66 tonnes\n* Shipment Helios: mass 32 tonnes\n* Shipment Iris: mass 61 tonnes\n* Shipment Janus: mass 45 tonnes\n* Shipment Krios: mass 43 tonnes\n* Shipment Leto: mass 47 tonnes\n* Shipment Metis: mass 40 tonnes\n\nEach vessel has a maximum cargo capacity of 100 tonnes. The coordinator must assign all shipments to vessels, ensuring every shipment is placed on exactly one vessel and the combined mass on any vessel does not surpass its capacity limit. The objective is to complete the allocation using the minimal possible number of vessels.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

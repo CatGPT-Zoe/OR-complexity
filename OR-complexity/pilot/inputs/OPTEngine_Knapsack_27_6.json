@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vessel. Available containers are:\n\n* Container 1: volume 33 cubic meters, revenue $63\n* Container 2: volume 1 cubic meter, revenue $114\n* Container 3: volume 15 cubic meters, revenue $195\n* Container 4: volume 35 cubic meters, revenue $101\n* Container 5: volume 24 cubic meters, revenue $180\n* Container 6: volume 15 cubic meters, revenue $168\n* Container 7: volume 13 cubic meters, revenue $273\n* Container 8: volume 49 cubic meters, revenue $38\n* Container 9: volume 44 cubic meters, revenue $203\n* Container 10: volume 17 cubic meters, revenue $158\n* Container 11: volume 25 cubic meters, revenue $147\n* Container 12: volume 6 cubic meters, revenue $39\n* Container 13: volume 1 cubic meter, revenue $77\n* Container 14: volume 15 cubic meters, revenue $296\n* Container 15: volume 1 cubic meter, revenue $286\n* Container 16: volume 47 cubic meters, revenue $75\n* Container 17: volume 38 cubic meters, revenue $157\n* Container 18: volume 43 cubic meters, revenue $98\n* Container 19: volume 11 cubic meters, revenue $259\n* Container 20: volume 3 cubic meters, revenue $264\n* Container 21: volume 39 cubic meters, revenue $169\n* Container 22: volume 36 cubic meters, revenue $132\n* Container 23: volume 44 cubic meters, revenue $193\n* Container 24: volume 8 cubic meters, revenue $117\n* Container 25: volume 15 cubic meters, revenue $88\n* Container 26: volume 10 cubic meters, revenue $153\n* Container 27: volume 34 cubic meters, revenue $254\n\nThe vessel has a maximum cargo capacity of 435 cubic meters. Choose the combination of containers that maximizes total revenue without exceeding this volume limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

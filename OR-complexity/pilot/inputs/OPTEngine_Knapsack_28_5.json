@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_28_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n* Container 1: weight 8 kg, revenue 143 credits\n* Container 2: weight 17 kg, revenue 240 credits\n* Container 3: weight 32 kg, revenue 123 credits\n* Container 4: weight 18 kg, revenue 294 credits\n* Container 5: weight 28 kg, revenue 243 credits\n* Container 6: weight 20 kg, revenue 237 credits\n* Container 7: weight 15 kg, revenue 288 credits\n* Container 8: weight 27 kg, revenue 64 credits\n* Container 9: weight 27 kg, revenue 210 credits\n* Container 10: weight 13 kg, revenue 72 credits\n* Container 11: weight 48 kg, revenue 196 credits\n* Container 12: weight 41 kg, revenue 298 credits\n* Container 13: weight 16 kg, revenue 20 credits\n* Container 14: weight 33 kg, revenue 45 credits\n* Container 15: weight 2 kg, revenue 218 credits\n* Container 16: weight 23 kg, revenue 112 credits\n* Container 17: weight 46 kg, revenue 114 credits\n* Container 18: weight 22 kg, revenue 233 credits\n* Container 19: weight 7 kg, revenue 33 credits\n* Container 20: weight 47 kg, revenue 261 credits\n* Container 21: weight 28 kg, revenue 166 credits\n* Container 22: weight 18 kg, revenue 209 credits\n* Container 23: weight 39 kg, revenue 152 credits\n* Container 24: weight 25 kg, revenue 89 credits\n* Container 25: weight 41 kg, revenue 74 credits\n* Container 26: weight 2 kg, revenue 45 credits\n* Container 27: weight 12 kg, revenue 31 credits\n* Container 28: weight 21 kg, revenue 196 credits\n\nThe vehicle has a maximum load capacity of 473 kg. Determine which containers to load to maximize total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

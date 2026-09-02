@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate cargo parcels to identical transport vehicles for a cross-country shipment. The parcels are as follows:\n* Parcel Alpha: mass 54 units\n* Parcel Beta: mass 41 units\n* Parcel Gamma: mass 39 units\n* Parcel Delta: mass 31 units\n* Parcel Epsilon: mass 31 units\n* Parcel Zeta: mass 50 units\n* Parcel Eta: mass 62 units\n* Parcel Theta: mass 30 units\n* Parcel Iota: mass 32 units\n* Parcel Kappa: mass 33 units\n* Parcel Lambda: mass 37 units\n* Parcel Mu: mass 66 units\n* Parcel Nu: mass 69 units\n* Parcel Xi: mass 39 units\n* Parcel Omicron: mass 39 units\n* Parcel Pi: mass 54 units\n* Parcel Rho: mass 31 units\n* Parcel Sigma: mass 56 units\n* Parcel Tau: mass 57 units\n* Parcel Upsilon: mass 66 units\n\nEach vehicle possesses a maximum load capacity of 100 mass units. The objective is to assign every parcel to a vehicle, ensuring no vehicle's total load surpasses its capacity, while minimizing the total number of vehicles employed. Each parcel must be placed in exactly one vehicle.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

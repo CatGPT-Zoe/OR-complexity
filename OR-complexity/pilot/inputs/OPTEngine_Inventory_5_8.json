@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A municipal water utility must devise a pumping and storage strategy for a critical reservoir over the upcoming 5-day forecast window.  \nThe initial water volume in the reservoir at the start of the forecast period is 23 million gallons.  \nOn each day \\( t = 1, \\dots, 5 \\), the utility may activate a pumping station to transfer water from a distant source; the pumped volume on any given day must be between 6 and 72 million gallons.  \nDue to pipeline transit time, any water pumped on a given day will become available in the reservoir only after a delay of 1 day.  \nThe projected daily municipal consumption is as follows:  \n* Day 1: 34 million gallons  \n* Day 2: 30 million gallons  \n* Day 3: 46 million gallons  \n* Day 4: 25 million gallons  \n* Day 5: 28 million gallons  \n\nService interruptions are allowed, meaning any consumption that cannot be met from available water is simply lost and will not be deferred to later days.  \nThroughout the planning horizon, water volumes are treated as continuous quantities, and the total volume stored in the reservoir at any moment must not exceed its capacity of 38 million gallons.  \nThe total operational cost over the 5-day horizon comprises three elements: the pumping cost, which is 1 per million gallons pumped; the storage cost, which is 3 per million gallons held overnight in the reservoir; and a service penalty, which is 10 per million gallons of unmet daily consumption. The utility seeks to determine the optimal pumping volume for each day and to monitor the resulting reservoir levels and service shortfalls in order to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

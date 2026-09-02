@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_13",
+  "annotation_mode": "semantic",
+  "problem_text": "An archivist must allocate historical manuscripts into identical preservation boxes. The manuscripts are categorized as follows:\n* Manuscript Alpha: thickness 51mm\n* Manuscript Beta: thickness 40mm\n* Manuscript Gamma: thickness 45mm\n* Manuscript Delta: thickness 44mm\n* Manuscript Epsilon: thickness 70mm\n* Manuscript Zeta: thickness 58mm\n* Manuscript Eta: thickness 54mm\n* Manuscript Theta: thickness 66mm\n* Manuscript Iota: thickness 56mm\n* Manuscript Kappa: thickness 32mm\n* Manuscript Lambda: thickness 55mm\n* Manuscript Mu: thickness 66mm\n\nEach preservation box can accommodate a cumulative stack height of up to 100 mm. The archivist must place every manuscript into exactly one box, ensuring the combined thickness in any given box does not surpass the limit. The objective is to determine the allocation that minimizes the total number of boxes required.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

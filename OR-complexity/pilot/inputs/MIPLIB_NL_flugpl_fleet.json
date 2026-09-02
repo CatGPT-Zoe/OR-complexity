@@ -1,0 +1,43 @@
+{
+  "instance_id": "MIPLIB_NL_flugpl_fleet",
+  "annotation_mode": "semantic",
+  "problem_text": "A commercial aviation enterprise is charting its fleet operations strategy for the upcoming semi-annual cycle, facing a dynamic market where travel demand fluctuates month by month. The central challenge lies in orchestrating a fleet composition that remains responsive to these shifting needs without incurring excessive financial liabilities. Strategic planners must navigate a trade-off between leveraging their existing, high-capacity standard fleet and integrating temporary rental units that offer flexibility but come with different operational profiles.\n\nThe operational landscape is governed by strict resource constraints: while the core fleet provides a reliable baseline of flight hours, rental additions are available to bridge capacity gaps but require integration time, effectively offering fewer service hours upon induction. Furthermore, the workforce has limits-overtime can be utilized to squeeze more flight hours out of the existing lineup, but this comes at a premium and is capped to prevent burnout. Complicating matters is the natural attrition of the fleet and specific regulatory bounds on fleet size that kick in after the initial month. The objective is to devise a master schedule that dictates aircraft acquisition, retention, and utilization levels for each month, ensuring every hour of projected passenger demand is met. Success is measured by the ability to deliver this service continuity at the absolute lowest total cost, factoring in the expenses of operating standard units, commissioning rentals, and paying for overtime labor.",
+  "sets": [
+    {
+      "name": "periods",
+      "description": "six monthly planning periods"
+    }
+  ],
+  "parameter_tables_inline": [
+    {
+      "name": "periods",
+      "indices": [
+        "period",
+        "aircraft_balance",
+        "min_flight_hours",
+        "max_overtime"
+      ],
+      "unit": "",
+      "values": "| period | aircraft_balance | min_flight_hours | max_overtime |\n|---|---|---|---|\n| 1 | 60 | 8000 | 0 |\n| 2 | 0 | 9000 | 0 |\n| 3 | 0 | 8000 | 0 |\n| 4 | 0 | 10000 | 0 |\n| 5 | 0 | 9000 | 0 |\n| 6 | 0 | 12000 | 0 |"
+    },
+    {
+      "name": "parameters",
+      "indices": [],
+      "unit": "",
+      "values": "| standard_aircraft_cost | rental_aircraft_cost | overtime_cost | standard_aircraft_hours | rental_aircraft_hours | max_rental_aircraft | aircraft_retention_rate | min_standard_aircraft_period_2_6 | max_standard_aircraft_period_2_6 |\n|---|---|---|---|---|---|---|---|---|\n| 2700 | 1500 | 30 | 150 | 100 | 18 | 0.9 | 57 | 75 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/flugpl/data/periods.csv",
+      "role": "parameter_table",
+      "table": "periods"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/flugpl/data/parameters.csv",
+      "role": "parameter_table",
+      "table": "parameters"
+    }
+  ],
+  "notes": "Fleet planning: standard aircraft + rentals + overtime; balance and capacity obligations."
+}

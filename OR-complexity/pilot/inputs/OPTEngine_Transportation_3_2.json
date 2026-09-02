@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate its fleet of delivery vehicles from three regional depots to fulfill urgent orders at three retail centers, minimizing the total fuel expenditure.\n\nThe number of available vehicles at each regional depot is fixed:\n* Depot X has 140 vehicles ready for dispatch.\n* Depot Y has 103 vehicles available.\n* Depot Z has 118 vehicles on standby.\n\nThe required number of vehicles to be delivered to each retail center is predetermined:\n* Center P requires 150 vehicles.\n* Center Q requires 16 vehicles.\n* Center R requires 139 vehicles.\n\nThe fuel cost per vehicle dispatched from a given depot to a specific center varies, as shown in the table:\n\n| From / To | P | Q | R |\n|--|-|-|\n| X | 18 | 8 | 6 |\n| Y | 15 | 13 | 9 |\n| Z | 18 | 8 | 11 |\n\nDetermine the optimal vehicle allocation to achieve the minimum total fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

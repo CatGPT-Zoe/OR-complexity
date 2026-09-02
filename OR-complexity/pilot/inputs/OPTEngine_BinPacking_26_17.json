@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_26_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical transport vehicles. The cargo pieces are as follows:\n\n*  Component Alpha: mass 58 units\n*  Component Beta: mass 50 units\n*  Component Gamma: mass 54 units\n*  Component Delta: mass 62 units\n*  Component Epsilon: mass 33 units\n*  Component Zeta: mass 52 units\n*  Component Eta: mass 54 units\n*  Component Theta: mass 54 units\n*  Component Iota: mass 65 units\n*  Component Kappa: mass 38 units\n*  Component Lambda: mass 64 units\n*  Component Mu: mass 66 units\n*  Component Nu: mass 39 units\n*  Component Xi: mass 32 units\n*  Component Omicron: mass 49 units\n*  Component Pi: mass 69 units\n*  Component Rho: mass 58 units\n*  Component Sigma: mass 63 units\n*  Component Tau: mass 66 units\n*  Component Upsilon: mass 56 units\n*  Component Phi: mass 43 units\n*  Component Chi: mass 59 units\n*  Component Psi: mass 43 units\n*  Component Omega: mass 55 units\n*  Article Ypsilon: mass 35 units\n*  Article Zeta Prime: mass 36 units\n\nEvery vehicle possesses a maximum load capacity of 100 mass units. The objective is to allocate all cargo pieces to vehicles, ensuring each piece is assigned to precisely one vehicle and the cumulative mass on any vehicle does not surpass its limit, while minimizing the total number of vehicles employed.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_AmazonProductsSalesDataset2023",
+  "annotation_mode": "semantic",
+  "problem_text": "Amazon needs to allocate different types of air conditioners into different warehouse storage areas. Specifically, Amazon has several storage areas, each with a capacity limit provided in “capacity.csv.” The predefined value and size of each air conditioner type can be found in “products.csv.” The objective is to determine the optimal number of units of each air conditioner type to place in each storage area to maximize the total value of the air conditioners across all areas, while ensuring that the total size of the units in each area does not exceed its capacity. The decision variablesx_ijrepresent the number of units of air conditioner type j to be placed in storage area i.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "StorageID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| StorageID | Capacity |\n|---|---|\n| 1 | 1083 |\n| 2 | 1840 |\n| 3 | 770 |\n| 4 | 1299 |\n| 5 | 1259 |\n| 6 | 543 |\n| 7 | 1831 |\n| 8 | 855 |\n| 9 | 619 |\n| 10 | 637 |\n| 11 | 935 |\n| 12 | 626 |\n| 13 | 1457 |\n| 14 | 1198 |\n| 15 | 837 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Window Unit | 4811 | 114 |\n| Portable Unit | 1130 | 200 |\n| Split System | 1611 | 106 |\n| Ductless System | 3368 | 256 |\n| Central AC | 2135 | 268 |\n| Hybrid AC | 1046 | 185 |\n| Geothermal AC | 4030 | 299 |\n| Smart AC | 3761 | 131 |\n| Evaporative Cooler | 3523 | 139 |\n| Package Unit | 1701 | 105 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA14/AmazonProductsSalesDataset2023/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA14/AmazonProductsSalesDataset2023/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

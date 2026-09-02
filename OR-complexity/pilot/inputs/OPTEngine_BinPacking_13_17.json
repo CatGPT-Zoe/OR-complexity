@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of archival boxes to identical shipping crates. The archival boxes are as follows:\n\n* Box Alpha: mass 61kg\n* Box Beta: mass 39kg\n* Box Gamma: mass 66kg\n* Box Delta: mass 55kg\n* Box Epsilon: mass 70kg\n* Box Zeta: mass 57kg\n* Box Eta: mass 63kg\n* Box Theta: mass 61kg\n* Box Iota: mass 50kg\n* Box Kappa: mass 61kg\n* Box Lambda: mass 61kg\n* Box Mu: mass 70kg\n* Box Nu: mass 42kg\n\nEach shipping crate has a maximum load capacity of 100 kg. The coordinator must place every archival box into a crate, with no box split between crates, and the aggregate mass in any given crate must not surpass its limit. The objective is to utilize the smallest possible number of crates to accomplish the complete assignment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

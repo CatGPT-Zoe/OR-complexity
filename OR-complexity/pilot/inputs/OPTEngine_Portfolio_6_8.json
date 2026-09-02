@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_6_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute a fixed budget across 6 different infrastructure projects to maximize the total expected community benefit.  \nThe profile for each project is as follows:  \n* Project 1: expected benefit is 0.043, impact score is 0.228, allocation bounds [0.097, 0.646]  \n* Project 2: expected benefit is 0.028, impact score is 0.040, allocation bounds [0.025, 0.712]  \n* Project 3: expected benefit is 0.030, impact score is 0.014, allocation bounds [0.086, 0.391]  \n* Project 4: expected benefit is 0.073, impact score is 0.092, allocation bounds [0.011, 0.787]  \n* Project 5: expected benefit is 0.190, impact score is 0.149, allocation bounds [0.007, 0.869]  \n* Project 6: expected benefit is 0.135, impact score is 0.109, allocation bounds [0.049, 0.351]  \n\nEach project must receive a budget share within its specified bounds, and the sum of all shares must equal the total budget of 1. To ensure timely completion, the group of quick-delivery projects, represented by the subset Q = {3, 4, 5, 6}, must collectively receive at least 0.596 of the total budget. Additionally, the overall impact score of the portfolio must not exceed 0.135, and the total expected benefit must be at least 0.060.  \nFind the optimal budget allocation that maximizes total expected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

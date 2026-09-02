@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company needs to route 7 cargo shipments through 7 different ports.\n\nEach shipment must pass through a specific sequence of ports for unloading/loading operations, represented as pairs (Port, Handling time), where each pair specifies the port where the operation must occur and the time required to complete it. The order of pairs indicates the mandatory sequence in which these port operations must be performed.\n\nShipment details:\n* S1 follows the route: (P3, 5) → (P5, 6) → (P6, 3) → (P1, 6) → (P4, 2) → (P2, 10) → (P7, 9)\n* S2 follows the route: (P4, 8) → (P1, 1) → (P3, 9) → (P6, 4) → (P5, 6) → (P7, 2) → (P2, 9)\n* S3 follows the route: (P7, 4) → (P6, 10) → (P2, 8) → (P5, 6) → (P3, 3) → (P1, 5) → (P4, 6)\n* S4 follows the route: (P5, 9) → (P2, 1) → (P6, 2) → (P4, 6) → (P7, 5) → (P1, 6) → (P3, 1)\n* S5 follows the route: (P1, 4) → (P5, 9) → (P7, 9) → (P3, 6) → (P6, 8) → (P4, 2) → (P2, 7)\n* S6 follows the route: (P5, 3) → (P7, 5) → (P4, 4) → (P1, 7) → (P6, 5) → (P2, 1) → (P3, 1)\n* S7 follows the route: (P7, 9) → (P1, 5) → (P3, 1) → (P6, 4) → (P5, 9) → (P2, 3) → (P4, 5)\n\nEach port operation must be completed without interruption once it begins, and each port can only handle one shipment's operation at any given time. The objective is to schedule all port operations for the shipments to minimize the total completion time for all shipments to reach their final destinations.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

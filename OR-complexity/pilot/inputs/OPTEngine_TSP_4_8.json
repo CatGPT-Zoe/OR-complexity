@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator for a regional blood bank must schedule a refrigerated truck to collect plasma donations from four separate collection centers.\n\nThe travel times between centers are recorded in minutes:\n* Center 1 to Center 2: 197.5 minutes\n* Center 1 to Center 3: 251.0 minutes\n* Center 1 to Center 4: 216.8 minutes\n* Center 2 to Center 3: 98.0 minutes\n* Center 2 to Center 4: 59.4 minutes\n* Center 3 to Center 4: 41.2 minutes\n\nThe objective is to determine the most time-efficient circuit that allows the truck to visit every collection center precisely once before concluding its route back at the initial depot.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

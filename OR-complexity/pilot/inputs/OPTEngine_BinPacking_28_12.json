@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_28_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of fragile laboratory samples to identical protective shipping crates. The samples are as follows:\n\n* Specimen Alpha: mass 37g\n* Specimen Beta: mass 36g\n* Specimen Gamma: mass 49g\n* Specimen Delta: mass 35g\n* Specimen Epsilon: mass 70g\n* Specimen Zeta: mass 54g\n* Specimen Eta: mass 43g\n* Specimen Theta: mass 46g\n* Specimen Iota: mass 54g\n* Specimen Kappa: mass 44g\n* Specimen Lambda: mass 59g\n* Specimen Mu: mass 68g\n* Specimen Nu: mass 62g\n* Specimen Xi: mass 65g\n* Specimen Omicron: mass 53g\n* Specimen Pi: mass 41g\n* Specimen Rho: mass 57g\n* Specimen Sigma: mass 70g\n* Specimen Tau: mass 30g\n* Specimen Upsilon: mass 67g\n* Specimen Phi: mass 56g\n* Specimen Chi: mass 68g\n* Specimen Psi: mass 44g\n* Specimen Omega: mass 48g\n* Specimen Ares: mass 52g\n* Specimen Boreas: mass 62g\n* Specimen Ceres: mass 50g\n* Specimen Deimos: mass 60g\n\nEach crate is designed to withstand a maximum internal load of 100 grams. The objective is to arrange all samples into these crates, ensuring every specimen is placed in precisely one crate and the aggregate mass within any given crate does not surpass its capacity, while utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

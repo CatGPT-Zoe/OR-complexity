@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to load boxes onto identical delivery trucks. The boxes are:\n* Box 1: weight 56kg\n* Box 2: weight 32kg\n* Box 3: weight 40kg\n* Box 4: weight 58kg\n* Box 5: weight 34kg\n* Box 6: weight 46kg\n* Box 7: weight 40kg\n* Box 8: weight 58kg\n* Box 9: weight 63kg\n* Box 10: weight 61kg\n* Box 11: weight 65kg\n* Box 12: weight 68kg\n\nEach truck can carry a maximum load of 100 kg. Load all boxes using the fewest trucks possible. Every box must be placed on exactly one truck, and the total weight loaded onto any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

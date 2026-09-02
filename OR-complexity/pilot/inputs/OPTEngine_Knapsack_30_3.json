@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_30_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. Available containers are:\n* Container 1: weight 42kg, revenue $285\n* Container 2: weight 12kg, revenue $288\n* Container 3: weight 26kg, revenue $126\n* Container 4: weight 16kg, revenue $272\n* Container 5: weight 6kg, revenue $21\n* Container 6: weight 49kg, revenue $197\n* Container 7: weight 1kg, revenue $102\n* Container 8: weight 20kg, revenue $215\n* Container 9: weight 31kg, revenue $40\n* Container 10: weight 10kg, revenue $196\n* Container 11: weight 49kg, revenue $73\n* Container 12: weight 20kg, revenue $84\n* Container 13: weight 25kg, revenue $225\n* Container 14: weight 43kg, revenue $259\n* Container 15: weight 31kg, revenue $175\n* Container 16: weight 47kg, revenue $300\n* Container 17: weight 11kg, revenue $137\n* Container 18: weight 23kg, revenue $172\n* Container 19: weight 40kg, revenue $97\n* Container 20: weight 37kg, revenue $218\n* Container 21: weight 48kg, revenue $205\n* Container 22: weight 22kg, revenue $177\n* Container 23: weight 48kg, revenue $287\n* Container 24: weight 27kg, revenue $83\n* Container 25: weight 29kg, revenue $50\n* Container 26: weight 42kg, revenue $165\n* Container 27: weight 25kg, revenue $110\n* Container 28: weight 2kg, revenue $277\n* Container 29: weight 50kg, revenue $234\n* Container 30: weight 15kg, revenue $166\nThe vehicle has a maximum load capacity of 592 kg. Choose which containers to load to maximize total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

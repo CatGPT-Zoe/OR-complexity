@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 6 delivery trucks to handle 6 different customer routes.\n\nEach route consists of a sequence of checkpoint stops represented as pairs (Truck Type, Handling Time),\nwhere each pair specifies the specialized truck type required for that checkpoint and the time needed to complete the handling.\nThe order of pairs indicates the mandatory sequence in which checkpoints must be visited.\n\nRoute details:\n* Route 1 requires the sequence: (T6, 2) → (T5, 8) → (T1, 1) → (T4, 3) → (T2, 9) → (T3, 5)\n* Route 2 requires the sequence: (T1, 3) → (T6, 3) → (T4, 3) → (T2, 4) → (T5, 10) → (T3, 6)\n* Route 3 requires the sequence: (T1, 5) → (T4, 6) → (T5, 3) → (T6, 4) → (T3, 6) → (T2, 4)\n* Route 4 requires the sequence: (T2, 10) → (T4, 1) → (T5, 3) → (T6, 10) → (T1, 1) → (T3, 7)\n* Route 5 requires the sequence: (T6, 9) → (T2, 1) → (T5, 1) → (T1, 1) → (T3, 2) → (T4, 10)\n* Route 6 requires the sequence: (T5, 7) → (T2, 7) → (T6, 10) → (T3, 6) → (T4, 4) → (T1, 3)\n\nEach checkpoint handling must proceed without interruption once it begins,\nand each specialized truck can only service one checkpoint at a time.\nThe objective is to determine the optimal scheduling sequence for all checkpoint handlings\nso that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

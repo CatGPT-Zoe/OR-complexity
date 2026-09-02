@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n\n* Container 1: weight 30 kg, revenue 155 credits\n* Container 2: weight 2 kg, revenue 217 credits\n* Container 3: weight 2 kg, revenue 243 credits\n* Container 4: weight 8 kg, revenue 77 credits\n* Container 5: weight 20 kg, revenue 178 credits\n* Container 6: weight 20 kg, revenue 89 credits\n* Container 7: weight 32 kg, revenue 237 credits\n* Container 8: weight 1 kg, revenue 176 credits\n* Container 9: weight 10 kg, revenue 222 credits\n* Container 10: weight 2 kg, revenue 162 credits\n* Container 11: weight 12 kg, revenue 90 credits\n* Container 12: weight 6 kg, revenue 225 credits\n* Container 13: weight 49 kg, revenue 272 credits\n* Container 14: weight 29 kg, revenue 283 credits\n* Container 15: weight 42 kg, revenue 80 credits\n* Container 16: weight 27 kg, revenue 183 credits\n* Container 17: weight 9 kg, revenue 297 credits\n* Container 18: weight 24 kg, revenue 96 credits\n* Container 19: weight 6 kg, revenue 57 credits\n* Container 20: weight 16 kg, revenue 67 credits\n* Container 21: weight 13 kg, revenue 254 credits\n\nThe vehicle has a maximum weight capacity of 251 kg. Choose the combination of containers that maximizes total revenue without exceeding this weight limit. Each container must be loaded in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

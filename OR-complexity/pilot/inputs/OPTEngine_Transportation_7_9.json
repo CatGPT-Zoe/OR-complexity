@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company seeks to allocate its fleet of available delivery vehicles to fulfill customer orders across various regional warehouses, minimizing the total operational expense.\n\nThe number of vehicles currently stationed at each dispatch center (set D) is fixed:\n* Center D1 has 76 vehicles ready.\n* Center D2 has 70 vehicles ready.\n* Center D3 has 133 vehicles ready.\n* Center D4 has 125 vehicles ready.\n* Center D5 has 128 vehicles ready.\n* Center D6 has 164 vehicles ready.\n* Center D7 has 159 vehicles ready.\n\nThe required number of vehicles to be delivered to each regional warehouse (set W) is predetermined:\n* Warehouse W1 requires 60 vehicles.\n* Warehouse W2 requires 60 vehicles.\n* Warehouse W3 requires 97 vehicles.\n* Warehouse W4 requires 122 vehicles.\n* Warehouse W5 requires 81 vehicles.\n* Warehouse W6 requires 57 vehicles.\n* Warehouse W7 requires 85 vehicles.\n\nThe cost per vehicle for routing from a given dispatch center to a specific warehouse, accounting for fuel and tolls, is detailed in the matrix:\n\n| From / To | W1 | W2 | W3 | W4 | W5 | W6 | W7 |\n|--|-|-|-|-|-|-|\n| D1 | 2 | 3 | 13 | 12 | 17 | 6 | 1 |\n| D2 | 5 | 20 | 15 | 2 | 5 | 3 | 8 |\n| D3 | 12 | 12 | 13 | 19 | 2 | 20 | 5 |\n| D4 | 15 | 12 | 12 | 15 | 3 | 19 | 5 |\n| D5 | 17 | 12 | 13 | 11 | 9 | 8 | 4 |\n| D6 | 1 | 6 | 16 | 17 | 13 | 18 | 4 |\n| D7 | 9 | 9 | 15 | 7 | 20 | 10 | 16 |\n\nDetermine the optimal allocation of vehicles from dispatch centers to warehouses to achieve the lowest possible total routing cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

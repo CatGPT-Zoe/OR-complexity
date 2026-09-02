@@ -1,0 +1,56 @@
+{
+  "instance_id": "MIPLIB_NL_markshare_5_0",
+  "annotation_mode": "semantic",
+  "problem_text": "In the wake of a recent natural disaster, a central logistics command is coordinating the distribution of emergency relief supplies to affected zones. The command has access to a set of pre-configured supply drops (packages) from various donors. Each supply drop contains a specific mix of essential resources (standardized into 'utility units') allocated to each zone, as detailed in the shipment manifest. Due to the urgency, the command can either accept or reject each supply drop in its entirety; partial acceptance is not possible. Each zone has a critical demand target representing the population's immediate needs. \n\nCrucially, the local distribution centers in each zone have limited capacity matching their demand targets. Any supply exceeding the target would result in spoilage and logistical gridlock, which is strictly prohibited by the 'Zero Waste' protocol (i.e., total supply to any zone must not exceed its target). \n\nThe operation is fully funded by a global relief fund, so the procurement costs of the supply drops (listed in the cost estimates) are covered and should not influence the distribution strategy. The primary objective is to maximize the **Global Service Fulfillment Ratio**, defined as the total utility units successfully delivered to all zones divided by the total demand across all zones.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "markets",
+      "indices": [
+        "market_code",
+        "market_name",
+        "target_units"
+      ],
+      "unit": "",
+      "values": "| market_code | market_name | target_units |\n|---|---|---|\n| MKT-000 | Region 1 | 987 |\n| MKT-001 | Region 2 | 1111 |\n| MKT-002 | Region 3 | 984 |\n| MKT-003 | Region 4 | 1262 |\n| MKT-004 | Region 5 | 991 |"
+    },
+    {
+      "name": "package_contents",
+      "indices": [
+        "package_code",
+        "market_code",
+        "exposure_units"
+      ],
+      "unit": "",
+      "values": "| package_code | market_code | exposure_units |\n|---|---|---|\n| PKG-000 | MKT-000 | 17 |\n| PKG-000 | MKT-001 | 53 |\n| PKG-000 | MKT-002 | 97 |\n| PKG-000 | MKT-003 | 94 |\n| PKG-000 | MKT-004 | 42 |\n| PKG-001 | MKT-000 | 75 |\n| PKG-001 | MKT-001 | 88 |\n| PKG-001 | MKT-002 | 79 |\n| PKG-001 | MKT-003 | 76 |\n| PKG-001 | MKT-004 | 99 |\n| PKG-002 | MKT-000 | 9 |\n| PKG-002 | MKT-001 | 43 |\n| PKG-002 | MKT-002 | 81 |\n| PKG-002 | MKT-003 | 12 |\n| PKG-002 | MKT-004 | 87 |\n| PKG-003 | MKT-000 | 87 |\n| PKG-003 | MKT-001 | 26 |\n| PKG-003 | MKT-002 | 57 |\n| PKG-003 | MKT-003 | 1 |\n| PKG-003 | MKT-004 | 46 |\n| PKG-004 | MKT-000 | 58 |\n| PKG-004 | MKT-001 | 31 |\n| PKG-004 | MKT-002 | 28 |\n| PKG-004 | MKT-003 | 50 |\n| PKG-004 | MKT-004 | 24 |\n| PKG-005 | MKT-000 | 79 |\n| PKG-005 | MKT-001 | 77 |\n| PKG-005 | MKT-002 | 97 |\n| PKG-005 | MKT-003 | 85 |\n| PKG-005 | MKT-004 | 85 |\n| PKG-006 | MKT-000 | 69 |\n| PKG-006 | MKT-001 | 10 |\n| PKG-006 | MKT-002 | 58 |\n| PKG-006 | MKT-003 | 86 |\n| PKG-006 | MKT-004 | 85 |\n| PKG-007 | MKT-000 | 37 |\n| PKG-007 | MKT-001 | 77 |\n| PKG-007 | MKT-002 | 44 |\n| PKG-007 | MKT-003 | 9 |\n| PKG-007 | MKT-004 | 74 |\n| PKG-008 | MKT-000 | 88 |\n| PKG-008 | MKT-001 | 71 |\n| PKG-008 | MKT-002 | 37 |\n| PKG-008 | MKT-003 | 86 |\n| PKG-008 | MKT-004 | 13 |\n| PKG-009 | MKT-000 | 75 |\n| PKG-009 | MKT-001 | 22 |\n| PKG-009 | MKT-002 | 93 |\n| PKG-009 | MKT-003 | 79 |\n| PKG-009 | MKT-004 | 48 |\n| PKG-010 | MKT-000 | 45 |\n| PKG-010 | MKT-001 | 76 |\n| PKG-010 | MKT-002 | 2 |\n| PKG-010 | MKT-003 | 58 |\n| PKG-010 | MKT-004 | 79 |\n| PKG-011 | MKT-000 | 35 |\n| PKG-011 | MKT-001 | 41 |\n| PKG-011 | MKT-002 | 77 |\n| PKG-011 | MKT-003 | 10 |\n| PKG-011 | MKT-004 | 50 |\n| PKG-012 | MKT-000 | 73 |\n| PKG-012 | MKT-001 | 65 |\n| PKG-012 | MKT-002 | 73 |\n| PKG-012 | MKT-003 | 83 |\n| PKG-012 | MKT-004 | 57 |\n| PKG-013 | MKT-000 | 26 |\n| PKG-013 | MKT-001 | 93 |\n| PKG-013 | MKT-002 | 59 |\n| PKG-013 | MKT-003 | 75 |\n| PKG-013 | MKT-004 | 44 |\n| PKG-014 | MKT-000 | 39 |\n| PKG-014 | MKT-001 | 50 |\n| PKG-014 | MKT-002 | 43 |\n| PKG-014 | MKT-003 | 91 |\n| PKG-014 | MKT-004 | 3 |\n| PKG-015 | MKT-000 | 78 |\n| PKG-015 | MKT-001 | 69 |\n| PKG-015 | MKT-002 | 64 |\n| PKG-015 | MKT-003 | 51 |\n| PKG-015 | MKT-004 | 33 |\n| PKG-016 | MKT-000 | 85 |\n| PKG-016 | MKT-001 | 44 |\n| PKG-016 | MKT-002 | 75 |\n| PKG-016 | MKT-003 | 89 |\n| PKG-016 | MKT-004 | 43 |\n| PKG-017 | MKT-000 | 58 |\n| PKG-017 | MKT-001 | 61 |\n| PKG-017 | MKT-002 | 6 |\n| PKG-017 | MKT-003 | 97 |\n| PKG-017 | MKT-004 | 58 |\n| PKG-018 | MKT-000 | 72 |\n| PKG-018 | MKT-001 | 58 |\n| PKG-018 | MKT-002 | 5 |\n| PKG-018 | MKT-003 | 57 |\n| PKG-018 | MKT-004 | 8 |\n| PKG-019 | MKT-000 | 8 |\n| PKG-019 | MKT-001 | 63 |\n| PKG-019 | MKT-002 | 78 |\n| PKG-019 | MKT-003 | 47 |\n| PKG-019 | MKT-004 | 68 |\n| PKG-020 | MKT-000 | 46 |\n| PKG-020 | MKT-001 | 46 |\n| PKG-020 | MKT-002 | 71 |\n| PKG-020 | MKT-003 | 42 |\n| PKG-020 | MKT-004 | 59 |\n| PKG-021 | MKT-000 | 11 |\n| PKG-021 | MKT-001 | 63 |\n| PKG-021 | MKT-002 | 12 |\n| PKG-021 | MKT-003 | 65 |\n| PKG-021 | MKT-004 | 23 |\n| PKG-022 | MKT-000 | 55 |\n| PKG-022 | MKT-001 | 13 |\n| PKG-022 | MKT-002 | 30 |\n| PKG-022 | MKT-003 | 88 |\n| PKG-022 | MKT-004 | 75 |\n| PKG-023 | MKT-000 | 39 |\n| PKG-023 | MKT-001 | 97 |\n| PKG-023 | MKT-002 | 7 |\n| PKG-023 | MKT-003 | 59 |\n| PKG-023 | MKT-004 | 96 |\n| PKG-024 | MKT-000 | 57 |\n| PKG-024 | MKT-001 | 14 |\n| PKG-024 | MKT-002 | 69 |\n| PKG-024 | MKT-003 | 22 |\n| PKG-024 | MKT-004 | 87 |\n| PKG-025 | MKT-000 | 96 |\n| PKG-025 | MKT-001 | 45 |\n| PKG-025 | MKT-002 | 36 |\n| PKG-025 | MKT-003 | 100 |\n| PKG-025 | MKT-004 | 7 |\n| PKG-026 | MKT-000 | 87 |\n| PKG-026 | MKT-001 | 32 |\n| PKG-026 | MKT-002 | 73 |\n| PKG-026 | MKT-003 | 16 |\n| PKG-026 | MKT-004 | 54 |\n| PKG-027 | MKT-000 | 16 |\n| PKG-027 | MKT-001 | 96 |\n| PKG-027 | MKT-002 | 19 |\n| PKG-027 | MKT-003 | 70 |\n| PKG-027 | MKT-004 | 38 |\n| PKG-028 | MKT-000 | 27 |\n| PKG-028 | MKT-001 | 36 |\n| PKG-028 | MKT-002 | 15 |\n| PKG-028 | MKT-003 | 70 |\n| PKG-029 | MKT-000 | 26 |\n| PKG-029 | MKT-001 | 40 |\n| PKG-029 | MKT-002 | 16 |\n| PKG-029 | MKT-003 | 99 |\n| PKG-029 | MKT-004 | 72 |\n| PKG-030 | MKT-000 | 93 |\n| PKG-030 | MKT-001 | 10 |\n| PKG-030 | MKT-002 | 84 |\n| PKG-030 | MKT-003 | 65 |\n| PKG-030 | MKT-004 | 5 |\n| PKG-031 | MKT-000 | 44 |\n| PKG-031 | MKT-001 | 96 |\n| PKG-031 | MKT-002 | 55 |\n| PKG-031 | MKT-003 | 66 |\n| PKG-031 | MKT-004 | 2 |\n| PKG-032 | MKT-000 | 79 |\n| PKG-032 | MKT-001 | 99 |\n| PKG-032 | MKT-002 | 32 |\n| PKG-032 | MKT-003 | 85 |\n| PKG-032 | MKT-004 | 76 |\n| PKG-033 | MKT-000 | 12 |\n| PKG-033 | MKT-001 | 58 |\n| PKG-033 | MKT-002 | 53 |\n| PKG-033 | MKT-003 | 68 |\n| PKG-033 | MKT-004 | 63 |\n| PKG-034 | MKT-000 | 8 |\n| PKG-034 | MKT-001 | 87 |\n| PKG-034 | MKT-002 | 43 |\n| PKG-034 | MKT-003 | 97 |\n| PKG-034 | MKT-004 | 94 |\n| PKG-035 | MKT-000 | 95 |\n| PKG-035 | MKT-001 | 15 |\n| PKG-035 | MKT-002 | 21 |\n| PKG-035 | MKT-003 | 33 |\n| PKG-035 | MKT-004 | 55 |\n| PKG-036 | MKT-000 | 2 |\n| PKG-036 | MKT-001 | 91 |\n| PKG-036 | MKT-002 | 73 |\n| PKG-036 | MKT-003 | 80 |\n| PKG-036 | MKT-004 | 41 |\n| PKG-037 | MKT-000 | 15 |\n| PKG-037 | MKT-001 | 65 |\n| PKG-037 | MKT-003 | 16 |\n| PKG-037 | MKT-004 | 39 |\n| PKG-038 | MKT-000 | 38 |\n| PKG-038 | MKT-001 | 6 |\n| PKG-038 | MKT-002 | 59 |\n| PKG-038 | MKT-003 | 87 |\n| PKG-038 | MKT-004 | 19 |\n| PKG-039 | MKT-000 | 15 |\n| PKG-039 | MKT-001 | 96 |\n| PKG-039 | MKT-002 | 48 |\n| PKG-039 | MKT-003 | 60 |\n| PKG-039 | MKT-004 | 31 |"
+    },
+    {
+      "name": "costs",
+      "indices": [
+        "package_code",
+        "package_name",
+        "estimated_cost"
+      ],
+      "unit": "",
+      "values": "| package_code | package_name | estimated_cost |\n|---|---|---|\n| PKG-000 | Bundle 1 | 4174 |\n| PKG-001 | Bundle 2 | 4507 |\n| PKG-002 | Bundle 3 | 1860 |\n| PKG-003 | Bundle 4 | 2294 |\n| PKG-004 | Bundle 5 | 2130 |\n| PKG-005 | Bundle 6 | 2095 |\n| PKG-006 | Bundle 7 | 4772 |\n| PKG-007 | Bundle 8 | 4092 |\n| PKG-008 | Bundle 9 | 2638 |\n| PKG-009 | Bundle 10 | 3169 |\n| PKG-010 | Bundle 11 | 1466 |\n| PKG-011 | Bundle 12 | 2238 |\n| PKG-012 | Bundle 13 | 1330 |\n| PKG-013 | Bundle 14 | 2482 |\n| PKG-014 | Bundle 15 | 3135 |\n| PKG-015 | Bundle 16 | 4444 |\n| PKG-016 | Bundle 17 | 4171 |\n| PKG-017 | Bundle 18 | 3919 |\n| PKG-018 | Bundle 19 | 4735 |\n| PKG-019 | Bundle 20 | 1130 |\n| PKG-020 | Bundle 21 | 2685 |\n| PKG-021 | Bundle 22 | 4380 |\n| PKG-022 | Bundle 23 | 1769 |\n| PKG-023 | Bundle 24 | 3391 |\n| PKG-024 | Bundle 25 | 2515 |\n| PKG-025 | Bundle 26 | 4485 |\n| PKG-026 | Bundle 27 | 3853 |\n| PKG-027 | Bundle 28 | 3433 |\n| PKG-028 | Bundle 29 | 2215 |\n| PKG-029 | Bundle 30 | 1955 |\n| PKG-030 | Bundle 31 | 3324 |\n| PKG-031 | Bundle 32 | 2184 |\n| PKG-032 | Bundle 33 | 1459 |\n| PKG-033 | Bundle 34 | 4385 |\n| PKG-034 | Bundle 35 | 1021 |\n| PKG-035 | Bundle 36 | 3300 |\n| PKG-036 | Bundle 37 | 1747 |\n| PKG-037 | Bundle 38 | 3904 |\n| PKG-038 | Bundle 39 | 4632 |\n| PKG-039 | Bundle 40 | 1474 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/markshare_5_0/data/markets.csv",
+      "role": "parameter_table",
+      "table": "markets"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/markshare_5_0/data/package_contents.csv",
+      "role": "parameter_table",
+      "table": "package_contents"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/markshare_5_0/data/costs.csv",
+      "role": "parameter_table",
+      "table": "costs"
+    }
+  ],
+  "notes": ""
+}

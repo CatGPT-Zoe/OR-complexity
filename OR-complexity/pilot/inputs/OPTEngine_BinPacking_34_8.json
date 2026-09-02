@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n\n* Component Alpha: volume 37 cubic meters\n* Component Beta: volume 39 cubic meters\n* Component Gamma: volume 57 cubic meters\n* Component Delta: volume 61 cubic meters\n* Component Epsilon: volume 56 cubic meters\n* Component Zeta: volume 46 cubic meters\n* Component Eta: volume 68 cubic meters\n* Component Theta: volume 42 cubic meters\n* Component Iota: volume 65 cubic meters\n* Component Kappa: volume 32 cubic meters\n* Component Lambda: volume 65 cubic meters\n* Component Mu: volume 54 cubic meters\n* Component Nu: volume 39 cubic meters\n* Component Xi: volume 61 cubic meters\n* Component Omicron: volume 66 cubic meters\n* Component Pi: volume 38 cubic meters\n* Component Rho: volume 33 cubic meters\n* Component Sigma: volume 49 cubic meters\n* Component Tau: volume 54 cubic meters\n* Component Upsilon: volume 67 cubic meters\n* Component Phi: volume 60 cubic meters\n* Component Chi: volume 59 cubic meters\n* Component Psi: volume 68 cubic meters\n* Component Omega: volume 56 cubic meters\n* Part A1: volume 51 cubic meters\n* Part B1: volume 70 cubic meters\n* Part C1: volume 64 cubic meters\n* Part D1: volume 44 cubic meters\n* Part E1: volume 34 cubic meters\n* Part F1: volume 49 cubic meters\n* Part G1: volume 64 cubic meters\n* Part H1: volume 62 cubic meters\n* Part I1: volume 45 cubic meters\n* Part J1: volume 51 cubic meters\n\nEach cargo plane can carry up to 100 cubic meters of volume. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

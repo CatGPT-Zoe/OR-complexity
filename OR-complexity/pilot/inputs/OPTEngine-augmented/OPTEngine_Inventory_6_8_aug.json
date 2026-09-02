@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and reservoir management plan over a 6-week planning window.  \nThe initial water volume stored in the reservoir at the start of the planning period is 96 million gallons.  \nIn each week \\( t = 1, \\dots, 6 \\), the utility may schedule a pumping run from a distant aquifer; the volume pumped must be between 0 and 72 million gallons.  \nHowever, each pumping run requires a 4-week transit time through the pipeline network before the water becomes available for consumption or storage.  \nThe weekly consumption forecast (in million gallons) is as follows:  \n* Week 1: 36  \n* Week 2: 30  \n* Week 3: 10  \n* Week 4: 23  \n* Week 5: 10  \n* Week 6: 55  \n\nSupply shortfalls are tolerated, but any unmet consumption is simply lost and not carried forward.  \nThroughout the planning horizon, water volumes can be treated as continuous quantities, and the total volume stored in the reservoir at any time must not exceed its capacity of 96 million gallons.\n\nIn week 6, the maximum allowable pumping volume is restricted to 25 million gallons.  \nIn week 3, the on-site stored volume must be at least 35 million gallons.\n\nThe total cost over the planning horizon comprises three elements: the pumping cost, which is 5 per million gallons pumped; the storage cost, which is 1 per million gallons held from one week to the next; and the shortage penalty, which is 9 per million gallons of unmet consumption. The utility seeks to determine the optimal pumping volume for each week and to monitor the resulting reservoir storage and shortage levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

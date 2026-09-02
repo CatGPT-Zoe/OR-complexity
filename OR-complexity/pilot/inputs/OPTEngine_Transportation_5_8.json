@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm seeks to allocate its fleet of cargo vessels to fulfill scheduled port deliveries while minimizing total fuel expenditure.\n\nThe fuel capacity available on each vessel (set V) is fixed as follows:  \n*Vessel Alpha carries 194 kiloliters.  \n*Vessel Beta carries 56 kiloliters.  \n*Vessel Gamma carries 71 kiloliters.  \n*Vessel Delta carries 159 kiloliters.  \n*Vessel Epsilon carries 84 kiloliters.\n\nThe required fuel delivery to each destination port (set P) is predetermined:  \n*Port P1 requires 60 kiloliters.  \n*Port P2 requires 85 kiloliters.  \n*Port P3 requires 106 kiloliters.  \n*Port P4 requires 148 kiloliters.  \n*Port P5 requires 110 kiloliters.\n\nThe fuel consumption rate per kiloliter shipped from each vessel to each port is given in the table:\n\n| Vessel / Port | P1 | P2 | P3 | P4 | P5 |\n|---------------|----|----|----|----|----|\n| Alpha         | 13 | 9  | 14 | 9  | 3  |\n| Beta          | 16 | 1  | 18 | 2  | 12 |\n| Gamma         | 8  | 3  | 2  | 1  | 8  |\n| Delta         | 7  | 1  | 20 | 5  | 8  |\n| Epsilon       | 5  | 16 | 4  | 19 | 7  |\n\nDetermine the optimal fuel allocation from vessels to ports that satisfies all delivery requirements without exceeding any vessel’s capacity, while ensuring the aggregate fuel consumption is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

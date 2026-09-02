@@ -1,0 +1,98 @@
+{
+  "instance_id": "MIPLIB_NL_neos-1425699",
+  "annotation_mode": "semantic",
+  "problem_text": "We need to optimize a two-tier supply chain network consisting of N1 upstream manufacturing plants (sources) and N2 potential distribution centers (hubs) used to serve N4 downstream demand areas (customers). Among our customers, the proportion of male customers is relatively high, reaching N5 percentage points; male customers tend to focus more on product innovation and quality, whereas female customers focus more on whether the product has celebrity endorsements. Our objective is to minimize total costs, including the fixed costs of establishing distribution centers and transportation costs, to satisfy customer demand. We must select exactly N3 distribution centers from the N2 potential candidates and determine the quantity of goods transported from each upstream manufacturing plant to each distribution center, as well as the quantity transported from each distribution center to the customers. The types of goods produced by each upstream manufacturing plant are identical, and there is a maximum production capacity limit. Each customer also has a minimum demand requirement for receiving goods. Goods must be produced and transported in integer units.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "files_1",
+      "indices": [
+        "upstream manufacturing plant_1",
+        "90028"
+      ],
+      "unit": "",
+      "values": "| upstream manufacturing plant_1 | 90028 |\n|---|---|\n| upstream manufacturing plant_2 | 105770 |"
+    },
+    {
+      "name": "files_2",
+      "indices": [
+        "distribution center_1",
+        "75000000"
+      ],
+      "unit": "",
+      "values": "| distribution center_1 | 75000000 |\n|---|---|\n| distribution center_2 | 68000000 |\n| distribution center_3 | 70000000 |\n| distribution center_4 | 54000000 |\n| distribution center_5 | 55000000 |"
+    },
+    {
+      "name": "files_3",
+      "indices": [
+        "row_label",
+        "distribution center_1",
+        "distribution center_2",
+        "distribution center_3",
+        "distribution center_4",
+        "distribution center_5"
+      ],
+      "unit": "",
+      "values": "| row_label | distribution center_1 | distribution center_2 | distribution center_3 | distribution center_4 | distribution center_5 |\n|---|---|---|---|---|---|\n| upstream manufacturing plant_1 | 0 | 60448 | 63532 | 73406 | 56196 |\n| upstream manufacturing plant_2 | 62348 | 0 | 56544 | 63212 | 48278 |"
+    },
+    {
+      "name": "files_4",
+      "indices": [
+        "row_label",
+        "customer_1",
+        "customer_2",
+        "customer_3",
+        "customer_4",
+        "customer_5",
+        "customer_6",
+        "customer_7",
+        "customer_8",
+        "customer_9",
+        "customer_10",
+        "customer_11",
+        "customer_12",
+        "customer_13",
+        "customer_14"
+      ],
+      "unit": "",
+      "values": "| row_label | customer_1 | customer_2 | customer_3 | customer_4 | customer_5 | customer_6 | customer_7 | customer_8 | customer_9 | customer_10 | customer_11 | customer_12 | customer_13 | customer_14 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| distribution center_1 | 0 | 60448 | 63532 | 63406 | 55431 | 55156 | 39841 | 55430 | 48725 | 39290 | 51965 | 74440 | 71367 | 53172 |\n| distribution center_2 | 62348 | 0 | 56544 | 63212 | 72296 | 48278 | 62732 | 48057 | 69456 | 79416 | 48038 | 53658 | 95095 | 107890 |\n| distribution center_3 | 71347 | 67297 | 0 | 111165 | 98520 | 39841 | 54919 | 43197 | 68329 | 89563 | 34803 | 109270 | 120780 | 104410 |\n| distribution center_4 | 116169 | 94912 | 129052 | 0 | 84486 | 118928 | 121019 | 114463 | 131037 | 132660 | 109161 | 21355 | 97449 | 147492 |\n| distribution center_5 | 66933 | 52956 | 36879 | 97017 | 80288 | 0 | 51247 | 34165 | 70038 | 81413 | 30748 | 84600 | 102670 | 95271 |"
+    },
+    {
+      "name": "files_5",
+      "indices": [
+        "customer_1",
+        "5060.92"
+      ],
+      "unit": "",
+      "values": "| customer_1 | 5060.92 |\n|---|---|\n| customer_2 | 4012.12 |\n| customer_3 | 5662.6 |\n| customer_4 | 6035.2 |\n| customer_5 | 4986.4 |\n| customer_6 | 5837.4 |\n| customer_7 | 6538.44 |\n| customer_8 | 6259.68 |\n| customer_9 | 6605.6 |\n| customer_10 | 6772.12 |\n| customer_11 | 6368.24 |\n| customer_12 | 1076.4 |\n| customer_13 | 1130.68 |\n| customer_14 | 1388.28 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-1425699/data/facility_production.csv",
+      "role": "parameter_table",
+      "table": "files_1"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-1425699/data/cost1.csv",
+      "role": "parameter_table",
+      "table": "files_2"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-1425699/data/cost2.csv",
+      "role": "parameter_table",
+      "table": "files_3"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-1425699/data/cost3.csv",
+      "role": "parameter_table",
+      "table": "files_4"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-1425699/data/q.csv",
+      "role": "parameter_table",
+      "table": "files_5"
+    }
+  ],
+  "notes": ""
+}

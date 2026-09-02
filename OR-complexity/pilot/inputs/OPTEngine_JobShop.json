@@ -1,0 +1,18 @@
+{
+  "instance_id": "OPTEngine_JobShop",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 3 delivery routes through 3 distribution hubs.\n\nEach route consists of a sequence of handling procedures represented as (Hub, Duration) pairs, where each pair specifies the hub where the procedure must occur and the time required to complete it. The order of pairs indicates the required sequence in which the procedures must be performed.\n\nRoute details:\n* Route 1 requires the sequence: (Hub B, 10) → (Hub A, 7) → (Hub C, 10)\n* Route 2 requires the sequence: (Hub B, 6) → (Hub C, 2) → (Hub A, 6)\n* Route 3 requires the sequence: (Hub C, 10) → (Hub A, 6) → (Hub B, 4)\n\nEach handling procedure must run continuously once it begins and cannot be interrupted, and each hub can only handle one procedure at a time. The objective is to determine the processing order of all procedures at the hubs so that the total completion time for all delivery routes is minimized.",
+  "sets": [
+    {
+      "name": "routes",
+      "description": "3 delivery routes"
+    },
+    {
+      "name": "hubs",
+      "description": "3 distribution hubs"
+    }
+  ],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": "Job shop: per-procedure start times + precedence + non-overlap (resource exclusion) obligations."
+}

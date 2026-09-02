@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting cargo containers to load onto a delivery truck. The available containers are:\n\n* Container 1: weight 10kg, revenue $105\n* Container 2: weight 36kg, revenue $138\n* Container 3: weight 35kg, revenue $23\n* Container 4: weight 12kg, revenue $129\n* Container 5: weight 47kg, revenue $223\n* Container 6: weight 46kg, revenue $90\n* Container 7: weight 16kg, revenue $296\n* Container 8: weight 9kg, revenue $96\n* Container 9: weight 48kg, revenue $136\n* Container 10: weight 34kg, revenue $163\n* Container 11: weight 46kg, revenue $20\n* Container 12: weight 47kg, revenue $245\n* Container 13: weight 13kg, revenue $41\n* Container 14: weight 27kg, revenue $95\n* Container 15: weight 25kg, revenue $268\n* Container 16: weight 25kg, revenue $118\n\nThe truck has a maximum weight capacity of 333 kg. Choose which containers to load in order to maximize total revenue without exceeding the weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

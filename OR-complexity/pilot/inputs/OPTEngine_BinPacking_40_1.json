@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A warehouse manager needs to organize boxes onto identical pallets for shipping. The boxes are as follows:\n* Box 1: weight 62kg\n* Box 2: weight 48kg\n* Box 3: weight 57kg\n* Box 4: weight 48kg\n* Box 5: weight 59kg\n* Box 6: weight 60kg\n* Box 7: weight 69kg\n* Box 8: weight 66kg\n* Box 9: weight 56kg\n* Box 10: weight 43kg\n* Box 11: weight 43kg\n* Box 12: weight 30kg\n* Box 13: weight 43kg\n* Box 14: weight 53kg\n* Box 15: weight 40kg\n* Box 16: weight 49kg\n* Box 17: weight 43kg\n* Box 18: weight 32kg\n* Box 19: weight 65kg\n* Box 20: weight 57kg\n* Box 21: weight 56kg\n* Box 22: weight 64kg\n* Box 23: weight 51kg\n* Box 24: weight 43kg\n* Box 25: weight 38kg\n* Box 26: weight 48kg\n* Box 27: weight 35kg\n* Box 28: weight 38kg\n* Box 29: weight 33kg\n* Box 30: weight 51kg\n* Box 31: weight 33kg\n* Box 32: weight 38kg\n* Box 33: weight 34kg\n* Box 34: weight 63kg\n* Box 35: weight 37kg\n* Box 36: weight 37kg\n* Box 37: weight 33kg\n* Box 38: weight 37kg\n* Box 39: weight 39kg\n* Box 40: weight 54kg\n\nEach pallet can support a maximum load of 100 kg. All boxes must be loaded onto pallets, with each box placed on exactly one pallet. The total weight on any pallet must not exceed its capacity. The goal is to use the minimum number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

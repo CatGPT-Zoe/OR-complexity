@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional air courier must dispatch a single aircraft to seven distinct facilities:\nFacility Alpha: Positioned at grid reference (21,185)\nFacility Beta: Positioned at grid reference (33,3)\nFacility Gamma: Positioned at grid reference (102,173)\nFacility Delta: Positioned at grid reference (106,80)\nFacility Epsilon: Positioned at grid reference (0,54)\nFacility Zeta: Positioned at grid reference (3,183)\nFacility Eta: Positioned at grid reference (193,0)\n\nThe flight distances between facilities, measured in nautical miles, are predetermined:\nAlpha to Gamma: 81.9 nm\nAlpha to Delta: 135.1 nm\nAlpha to Epsilon: 132.7 nm\nAlpha to Zeta: 18.1 nm\nAlpha to Eta: 252.6 nm\nBeta to Gamma: 183.5 nm\nBeta to Delta: 106.1 nm\nBeta to Epsilon: 60.7 nm\nBeta to Zeta: 182.5 nm\nBeta to Eta: 160.0 nm\nGamma to Delta: 93.1 nm\nGamma to Epsilon: 156.7 nm\nGamma to Zeta: 99.5 nm\nGamma to Eta: 195.5 nm\nDelta to Epsilon: 109.1 nm\nDelta to Zeta: 145.7 nm\nDelta to Eta: 118.2 nm\nEpsilon to Zeta: 129.0 nm\nEpsilon to Eta: 200.4 nm\nZeta to Eta: 263.8 nm\n\nDue to airspace restrictions, a direct flight corridor between Facility Alpha and Facility Beta is unavailable.\nFurthermore, the flight plan must incorporate exactly one of the following two restricted corridors: the corridor between Facility Beta and Facility Gamma, or the corridor between Facility Gamma and Facility Delta.\n\nThe objective is to determine the minimal total flight distance for a closed circuit that visits each facility precisely once before returning to the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

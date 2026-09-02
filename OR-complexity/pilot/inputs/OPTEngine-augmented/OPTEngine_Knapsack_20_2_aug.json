@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is tasked with assembling a shipment of specialized containers to maximize total utility while adhering to a strict total mass allowance for a cargo plane.\n\nThe available containers are:\n* Container A: mass 47 units, utility 226 credits\n* Container B: mass 33 units, utility 76 credits\n* Container C: mass 6 units, utility 269 credits\n* Container D: mass 3 units, utility 293 credits\n* Container E: mass 16 units, utility 58 credits\n* Container F: mass 47 units, utility 203 credits\n* Container G: mass 24 units, utility 280 credits\n* Container H: mass 21 units, utility 297 credits\n* Container I: mass 45 units, utility 289 credits\n* Container J: mass 26 units, utility 167 credits\n* Container K: mass 16 units, utility 299 credits\n* Container L: mass 45 units, utility 56 credits\n* Container M: mass 10 units, utility 217 credits\n* Container N: mass 50 units, utility 196 credits\n* Container O: mass 48 units, utility 155 credits\n* Container P: mass 23 units, utility 268 credits\n* Container Q: mass 24 units, utility 20 credits\n* Container R: mass 1 unit, utility 10 credits\n* Container S: mass 10 units, utility 141 credits\n* Container T: mass 48 units, utility 117 credits\n\nFurthermore, due to compatibility requirements, precisely one of Container A or Container B must be included in the final shipment.\n\nShould Container C be selected, the effective cargo capacity of the plane is diminished by 10 units.\nThe aircraft's maximum permissible load is 380 units. The manager must determine the optimal selection of containers.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

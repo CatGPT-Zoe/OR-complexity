@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_28_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of fragile experimental modules to identical reinforced transport pods for delivery. The modules have the following masses:\n\n* Module Alpha: mass 70 kg\n* Module Beta: mass 59 kg\n* Module Gamma: mass 46 kg\n* Module Delta: mass 52 kg\n* Module Epsilon: mass 47 kg\n* Module Zeta: mass 40 kg\n* Module Eta: mass 41 kg\n* Module Theta: mass 44 kg\n* Module Iota: mass 59 kg\n* Module Kappa: mass 50 kg\n* Module Lambda: mass 31 kg\n* Module Mu: mass 53 kg\n* Module Nu: mass 60 kg\n* Module Xi: mass 69 kg\n* Module Omicron: mass 48 kg\n* Module Pi: mass 45 kg\n* Module Rho: mass 31 kg\n* Module Sigma: mass 36 kg\n* Module Tau: mass 59 kg\n* Module Upsilon: mass 63 kg\n* Module Phi: mass 41 kg\n* Module Chi: mass 42 kg\n* Module Psi: mass 54 kg\n* Module Omega: mass 68 kg\n* Module Asteria: mass 51 kg\n* Module Boreas: mass 65 kg\n* Module Caelum: mass 38 kg\n* Module Draco: mass 32 kg\n\nEach pod has a maximum safe payload capacity of 100 kg. The coordinator must determine an allocation that places every module into exactly one pod, ensuring the combined mass within any pod does not surpass its structural limit, while utilizing the smallest possible number of pods for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

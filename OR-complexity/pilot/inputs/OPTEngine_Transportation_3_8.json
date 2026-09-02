@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water authority must allocate water flows from three treatment facilities to three municipal reservoirs, aiming to minimize the total pumping expense.\n\nThe daily water volume available for transfer at each treatment facility (set F) is as follows:  \n*Facility F1 can provide 158 megaliters.  \n*Facility F2 can provide 66 megaliters.  \n*Facility F3 can provide 148 megaliters.\n\nThe daily volume required at each municipal reservoir (set R) is specified below:  \n*Reservoir R1 requires 109 megaliters.  \n*Reservoir R2 requires 58 megaliters.  \n*Reservoir R3 requires 105 megaliters.\n\nThe cost per megaliter to pump water from each facility to each reservoir is detailed in the following table:\n| From / To | R1 | R2 | R3 |\n|---|---|---|---|\n| F1 | 1 | 4 | 18 |\n| F2 | 9 | 11 | 4 |\n| F3 | 10 | 14 | 6 |\n\nDetermine the optimal water allocation to minimize the total pumping cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

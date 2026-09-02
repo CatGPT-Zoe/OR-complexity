@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_37_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. The shipments are as follows:\n\n* Shipment Alpha: 70 tons\n* Shipment Bravo: 64 tons\n* Shipment Charlie: 30 tons\n* Shipment Delta: 53 tons\n* Shipment Echo: 51 tons\n* Shipment Foxtrot: 66 tons\n* Shipment Golf: 58 tons\n* Shipment Hotel: 43 tons\n* Shipment India: 59 tons\n* Shipment Juliet: 56 tons\n* Shipment Kilo: 66 tons\n* Shipment Lima: 66 tons\n* Shipment Mike: 50 tons\n* Shipment November: 57 tons\n* Shipment Oscar: 57 tons\n* Shipment Papa: 60 tons\n* Shipment Quebec: 42 tons\n* Shipment Romeo: 40 tons\n* Shipment Sierra: 60 tons\n* Shipment Tango: 33 tons\n* Shipment Uniform: 42 tons\n* Shipment Victor: 32 tons\n* Shipment Whiskey: 61 tons\n* Shipment X-ray: 30 tons\n* Shipment Yankee: 40 tons\n* Shipment Zulu: 36 tons\n* Shipment [1]: 40 tons\n* Shipment [2]: 63 tons\n* Shipment [3]: 43 tons\n* Shipment [4]: 37 tons\n* Shipment [5]: 37 tons\n* Shipment [6]: 57 tons\n* Shipment [7]: 42 tons\n* Shipment [8]: 63 tons\n* Shipment [9]: 31 tons\n* Shipment [10]: 40 tons\n* Shipment [11]: 54 tons\n\nEach cargo plane can carry a maximum load of 100 tons. Assign all shipments using the fewest planes possible. Every shipment must be placed on exactly one plane, and the total weight on a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

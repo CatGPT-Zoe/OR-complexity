@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_9_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing facility has 9 different products that must be processed through 9 specialized workstations.\n\nEach product follows a specific production route represented as (Workstation, Processing time) pairs, where each pair indicates the workstation where the operation must be performed and the duration it takes. The sequence of pairs defines the strict order in which operations must be completed.\n\nProduct specifications:\n* P1 follows the route: (W5, 7) → (W3, 7) → (W7, 7) → (W2, 1) → (W4, 3) → (W6, 10) → (W1, 5) → (W8, 5) → (W9, 1)\n* P2 follows the route: (W4, 4) → (W5, 10) → (W9, 10) → (W7, 1) → (W1, 2) → (W3, 6) → (W8, 8) → (W2, 4) → (W6, 5)\n* P3 follows the route: (W5, 8) → (W2, 9) → (W7, 7) → (W1, 9) → (W6, 8) → (W4, 3) → (W9, 3) → (W8, 1) → (W3, 9)\n* P4 follows the route: (W8, 10) → (W2, 4) → (W7, 8) → (W4, 7) → (W3, 1) → (W9, 3) → (W1, 5) → (W6, 5) → (W5, 9)\n* P5 follows the route: (W5, 8) → (W7, 9) → (W8, 6) → (W9, 8) → (W1, 10) → (W4, 2) → (W6, 5) → (W2, 4) → (W3, 7)\n* P6 follows the route: (W8, 10) → (W6, 4) → (W4, 10) → (W9, 3) → (W2, 9) → (W7, 5) → (W5, 2) → (W1, 3) → (W3, 1)\n* P7 follows the route: (W9, 6) → (W8, 5) → (W7, 7) → (W5, 1) → (W4, 1) → (W3, 1) → (W1, 4) → (W6, 7) → (W2, 2)\n* P8 follows the route: (W1, 8) → (W7, 10) → (W4, 1) → (W5, 2) → (W2, 1) → (W9, 5) → (W6, 3) → (W8, 8) → (W3, 3)\n* P9 follows the route: (W4, 6) → (W9, 3) → (W6, 2) → (W2, 1) → (W5, 10) → (W1, 1) → (W8, 1) → (W7, 4) → (W3, 7)\n\nEach production operation must run without interruption once initiated, and each workstation can handle only one operation at any given time. The goal is to schedule all production operations across the workstations to minimize the total production completion time for all products.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

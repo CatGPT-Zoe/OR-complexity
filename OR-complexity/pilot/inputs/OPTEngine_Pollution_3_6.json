@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A city must devise a strategy to curtail the release of certain industrial effluents into its waterways from three distinct manufacturing facilities. Currently, no remediation technologies are in place.  \nThe operational profile for each facility is characterized as follows:  \n* Facility Alpha discharges 2.867 units of contaminant per unit of output, with an output level of 67.303.  \n* Facility Beta discharges 0.714 units of contaminant per unit of output, with an output level of 240.151.  \n* Facility Gamma discharges 1.715 units of contaminant per unit of output, with an output level of 241.459.  \n\nThree distinct treatment technologies can be deployed, each offering a specific purification rate:  \n* Technology A achieves a 80% reduction in effluent concentration.  \n* Technology B achieves a 52% reduction in effluent concentration.  \n* Technology C achieves a 46% reduction in effluent concentration.  \n\nImplementing a technology at a facility entails an incremental cost per unit of production. The cost matrix for every facility–technology pairing is provided:  \n| Facility \\ Technology | Technology A | Technology B | Technology C |  \n|---|---|---|---|  \n| Facility Alpha | 60.361 | 175.762 | 90.396 |  \n| Facility Beta  | 50.242 | 112.466 | 148.687 |  \n| Facility Gamma | 48.219 | 69.226 | 199.078 |  \n\nThe decision involves selecting which technologies to apply to each facility (multiple technologies may be employed concurrently at a single site), and facilities are permitted to operate with partial treatment if warranted.  \nThe objective is to guarantee that the aggregate effluent discharge is diminished by at least a fraction P = 0.525 of the baseline discharge, while minimizing the aggregate implementation cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

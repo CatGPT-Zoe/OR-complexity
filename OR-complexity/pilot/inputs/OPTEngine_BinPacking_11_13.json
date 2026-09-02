@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes. The shipments are as follows:\n* Shipment Alpha: mass 45 metric tons\n* Shipment Beta: mass 31 metric tons\n* Shipment Gamma: mass 47 metric tons\n* Shipment Delta: mass 37 metric tons\n* Shipment Epsilon: mass 44 metric tons\n* Shipment Zeta: mass 53 metric tons\n* Shipment Eta: mass 40 metric tons\n* Shipment Theta: mass 51 metric tons\n* Shipment Iota: mass 57 metric tons\n* Shipment Kappa: mass 33 metric tons\n* Shipment Lambda: mass 36 metric tons\n\nEach aircraft has a maximum payload capacity of 100 metric tons. The coordinator must load all shipments using the fewest possible aircraft. Every shipment must be placed on exactly one plane, and the combined mass on any single aircraft cannot surpass its designated payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

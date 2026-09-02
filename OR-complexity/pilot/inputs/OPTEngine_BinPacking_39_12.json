@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes into identical shipping crates. The boxes are labeled as follows:\n\n* Box Alpha: mass 43kg\n* Box Beta: mass 38kg\n* Box Gamma: mass 59kg\n* Box Delta: mass 60kg\n* Box Epsilon: mass 40kg\n* Box Zeta: mass 62kg\n* Box Eta: mass 44kg\n* Box Theta: mass 57kg\n* Box Iota: mass 54kg\n* Box Kappa: mass 47kg\n* Box Lambda: mass 43kg\n* Box Mu: mass 52kg\n* Box Nu: mass 49kg\n* Box Xi: mass 59kg\n* Box Omicron: mass 38kg\n* Box Pi: mass 57kg\n* Box Rho: mass 54kg\n* Box Sigma: mass 58kg\n* Box Tau: mass 56kg\n* Box Upsilon: mass 43kg\n* Box Phi: mass 69kg\n* Box Chi: mass 33kg\n* Box Psi: mass 46kg\n* Box Omega: mass 66kg\n* Box A1: mass 63kg\n* Box B1: mass 33kg\n* Box C1: mass 60kg\n* Box D1: mass 66kg\n* Box E1: mass 33kg\n* Box F1: mass 56kg\n* Box G1: mass 69kg\n* Box H1: mass 68kg\n* Box I1: mass 41kg\n* Box J1: mass 31kg\n* Box K1: mass 30kg\n* Box L1: mass 68kg\n* Box M1: mass 46kg\n* Box N1: mass 41kg\n* Box O1: mass 34kg\n\nEach shipping crate has a maximum safe load capacity of 100 kg. The coordinator must place every box into exactly one crate, ensuring the combined mass in any given crate does not surpass its load limit. The objective is to utilize the smallest possible number of crates to accommodate the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

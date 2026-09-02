@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital has 9 patients who need to complete 9 different medical tests.\n\nEach patient's treatment plan consists of a sequence of tests, represented as (Testing Room, Duration),\nwhere each pair specifies the room where the test must be performed and the time required to complete it.\nThe order of pairs indicates the mandatory sequence in which the tests must be administered.\n\nPatient schedules:\n* P1 requires: (R4, 9) → (R7, 5) → (R8, 8) → (R6, 1) → (R1, 10) → (R3, 3) → (R2, 3) → (R5, 9) → (R9, 10)\n* P2 requires: (R6, 1) → (R8, 7) → (R7, 1) → (R9, 8) → (R1, 2) → (R4, 3) → (R2, 5) → (R3, 6) → (R5, 5)\n* P3 requires: (R3, 5) → (R8, 3) → (R7, 10) → (R4, 3) → (R1, 2) → (R9, 7) → (R5, 9) → (R2, 8) → (R6, 9)\n* P4 requires: (R3, 2) → (R7, 4) → (R8, 2) → (R9, 4) → (R2, 8) → (R6, 4) → (R4, 1) → (R1, 7) → (R5, 6)\n* P5 requires: (R5, 4) → (R6, 8) → (R9, 1) → (R3, 9) → (R4, 10) → (R1, 7) → (R2, 6) → (R8, 4) → (R7, 10)\n* P6 requires: (R6, 7) → (R5, 3) → (R7, 5) → (R2, 5) → (R9, 10) → (R3, 3) → (R1, 7) → (R4, 1) → (R8, 2)\n* P7 requires: (R3, 6) → (R7, 8) → (R4, 9) → (R1, 10) → (R6, 2) → (R2, 3) → (R9, 3) → (R5, 10) → (R8, 10)\n* P8 requires: (R1, 1) → (R8, 10) → (R7, 4) → (R3, 3) → (R2, 8) → (R9, 4) → (R5, 9) → (R4, 5) → (R6, 10)\n* P9 requires: (R2, 10) → (R3, 5) → (R8, 1) → (R5, 10) → (R1, 7) → (R7, 6) → (R4, 2) → (R9, 6) → (R6, 5)\n\nEach test must run continuously once it begins and cannot be interrupted,\nand each testing room can only accommodate one patient at a time.\nThe objective is to schedule all patient tests across the rooms\nso that the total completion time for all patients is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_18_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood-plasma storage strategy over an upcoming 18-day critical care window.  \nThe initial plasma stock at the start of the window is 66 units.  \nFor each day \\( t = 1, \\dots, 18 \\), the central blood bank permits the hospital to submit a request, the volume of which must be between 11 and 63 units.  \nEach request, once placed, requires a 3‑day processing and delivery lag before the plasma becomes available for patient use or to replenish the stock.  \nThe projected daily plasma need (in units) is as follows:  \n\n* Day 1: 21  \n* Day 2: 43  \n* Day 3: 38  \n* Day 4: 54  \n* Day 5: 27  \n* Day 6: 58  \n* Day 7: 31  \n* Day 8: 50  \n* Day 9: 21  \n* Day 10: 51  \n* Day 11: 35  \n* Day 12: 26  \n* Day 13: 21  \n* Day 14: 20  \n* Day 15: 56  \n* Day 16: 15  \n* Day 17: 23  \n* Day 18: 50  \n\nShortfalls are tolerated, but any unmet daily need is lost and cannot be deferred to later days.  \nThroughout the 18‑day window, plasma quantities may be treated as continuous measures, and the total on‑hand stock at any moment must not surpass the refrigeration capacity of 66 units.  \n\nOn the tenth day, the maximum request volume is restricted to 40 units.  \nOn the second day, the on‑hand plasma inventory must be no less than 17 units.  \n\nThe aggregate cost comprises three elements: the procurement cost, charged at 6 per unit requested; the storage cost, incurred at 1 per unit carried over from one day to the next; and a shortage penalty, levied at 11 per unit of unmet daily need.  \nThe objective is to determine the optimal request volume for each day and to monitor the ensuing stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

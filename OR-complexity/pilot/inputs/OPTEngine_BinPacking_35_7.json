@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n\n* Component Alpha: size 57 cubic meters\n* Component Beta: size 57 cubic meters\n* Component Gamma: size 65 cubic meters\n* Component Delta: size 30 cubic meters\n* Component Epsilon: size 40 cubic meters\n* Component Zeta: size 36 cubic meters\n* Component Eta: size 53 cubic meters\n* Component Theta: size 56 cubic meters\n* Component Iota: size 44 cubic meters\n* Component Kappa: size 47 cubic meters\n* Component Lambda: size 55 cubic meters\n* Component Mu: size 62 cubic meters\n* Component Nu: size 52 cubic meters\n* Component Xi: size 66 cubic meters\n* Component Omicron: size 39 cubic meters\n* Component Pi: size 35 cubic meters\n* Component Rho: size 50 cubic meters\n* Component Sigma: size 43 cubic meters\n* Component Tau: size 32 cubic meters\n* Component Upsilon: size 55 cubic meters\n* Component Phi: size 54 cubic meters\n* Component Chi: size 47 cubic meters\n* Component Psi: size 51 cubic meters\n* Component Omega: size 42 cubic meters\n* Component Ares: size 62 cubic meters\n* Component Zeus: size 45 cubic meters\n* Component Hera: size 66 cubic meters\n* Component Poseidon: size 67 cubic meters\n* Component Demeter: size 66 cubic meters\n* Component Athena: size 32 cubic meters\n* Component Apollo: size 61 cubic meters\n* Component Artemis: size 45 cubic meters\n* Component Hermes: size 43 cubic meters\n* Component Dionysus: size 47 cubic meters\n* Component Hephaestus: size 40 cubic meters\n\nEach cargo plane can carry up to 100 cubic meters of shipments. Assign all components using the fewest planes possible. Each component must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

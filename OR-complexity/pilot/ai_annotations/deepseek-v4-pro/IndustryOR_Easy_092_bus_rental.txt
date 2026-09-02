@@ -1,0 +1,174 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_Easy_092_bus_rental",
+  "layer": "semantic",
+  "sets": [
+    {
+      "name": "bus_types",
+      "description": "bus and minibus types",
+      "values": ["bus", "minibus"]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "seats",
+      "indices": ["bus_type"],
+      "unit": "seats",
+      "description": "number of seats per vehicle type",
+      "values": {
+        "bus": 50,
+        "minibus": 40
+      },
+      "source_spans": ["10 buses with 50 seats each and 8 minibuses with 40 seats each"]
+    },
+    {
+      "name": "rental_cost",
+      "indices": ["bus_type"],
+      "unit": "£",
+      "description": "rental cost per vehicle type",
+      "values": {
+        "bus": 800,
+        "minibus": 600
+      },
+      "source_spans": ["The rental cost for a bus is £800, and the rental cost for a minibus is £600"]
+    },
+    {
+      "name": "drivers_needed",
+      "indices": ["bus_type"],
+      "unit": "drivers",
+      "description": "number of drivers required per vehicle type",
+      "values": {
+        "bus": 1,
+        "minibus": 1
+      },
+      "source_spans": ["only 9 drivers are available (implicitly one driver per vehicle)"]
+    },
+    {
+      "name": "max_available",
+      "indices": ["bus_type"],
+      "unit": "vehicles",
+      "description": "maximum number of vehicles of each type available for rent",
+      "values": {
+        "bus": 10,
+        "minibus": 8
+      },
+      "source_spans": ["The transportation company has 10 buses ... and 8 minibuses"]
+    },
+    {
+      "name": "total_students",
+      "indices": [],
+      "unit": "students",
+      "description": "total number of students to transport",
+      "values": 400,
+      "source_spans": ["A school is preparing a trip for 400 students"]
+    },
+    {
+      "name": "available_drivers",
+      "indices": [],
+      "unit": "drivers",
+      "description": "total number of drivers available",
+      "values": 9,
+      "source_spans": ["only 9 drivers are available"]
+    }
+  ],
+  "entities": [
+    {
+      "id": "num_rented",
+      "canonical_name": "num_rented",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "bus_type",
+          "set_id": "bus_types"
+        }
+      ],
+      "description": "number of vehicles of each type to rent",
+      "value_semantics": "nonnegative integer",
+      "unit": "vehicles",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["how many of each type of bus should be used"],
+      "confidence": 0.95
+    }
+  ],
+  "objective": {
+    "id": "minimize_cost",
+    "description": "minimize total rental cost",
+    "sense": "minimize",
+    "entity_scope_ids": ["num_rented"],
+    "expression": "sum_{bus_type} rental_cost[bus_type] * num_rented[bus_type]",
+    "excluded_from_feasibility_hypergraph": true,
+    "source_spans": ["achieve the lowest cost"]
+  },
+  "obligations": [
+    {
+      "id": "seat_coverage",
+      "canonical_name": "seat_coverage",
+      "obligation_type": "coverage",
+      "normalized_semantics": "total seats provided by rented vehicles must be at least the number of students",
+      "support_entity_ids": ["num_rented"],
+      "incidence_slots": [
+        {
+          "entity_id": "num_rented",
+          "role": "seats_provided",
+          "aggregation_axes": ["bus_type"],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["seats", "total_students"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["A school is preparing a trip for 400 students. The transportation company has 10 buses with 50 seats each and 8 minibuses with 40 seats each"],
+      "confidence": 0.98
+    },
+    {
+      "id": "driver_limit",
+      "canonical_name": "driver_limit",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "total drivers needed by rented vehicles must not exceed available drivers",
+      "support_entity_ids": ["num_rented"],
+      "incidence_slots": [
+        {
+          "entity_id": "num_rented",
+          "role": "drivers_used",
+          "aggregation_axes": ["bus_type"],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["drivers_needed", "available_drivers"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["only 9 drivers are available"],
+      "confidence": 0.98
+    },
+    {
+      "id": "availability_limit",
+      "canonical_name": "availability_limit",
+      "obligation_type": "capacity",
+      "normalized_semantics": "number of rented vehicles of each type must not exceed the available fleet size",
+      "support_entity_ids": ["num_rented"],
+      "incidence_slots": [
+        {
+          "entity_id": "num_rented",
+          "role": "rented",
+          "aggregation_axes": [],
+          "index_binding": {
+            "bus_type": "t"
+          }
+        }
+      ],
+      "quantifiers": ["for each bus type t"],
+      "condition": null,
+      "parameter_refs": ["max_available"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": ["The transportation company has 10 buses ... and 8 minibuses"],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": []
+}

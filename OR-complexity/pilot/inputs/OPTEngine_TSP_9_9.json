@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a maintenance tour for nine critical relay stations positioned across a region.\n\nThe travel times between stations, measured in minutes, are as follows:\n* Station P to Q: 71.8 minutes\n* Station P to R: 46.1 minutes\n* Station P to S: 71.8 minutes\n* Station P to T: 134.6 minutes\n* Station P to U: 142.2 minutes\n* Station P to V: 160.9 minutes\n* Station P to W: 16.0 minutes\n* Station P to X: 145.8 minutes\n* Station Q to R: 100.6 minutes\n* Station Q to S: 101.6 minutes\n* Station Q to T: 151.3 minutes\n* Station Q to U: 207.9 minutes\n* Station Q to V: 229.6 minutes\n* Station Q to W: 81.3 minutes\n* Station Q to X: 215.1 minutes\n* Station R to S: 36.0 minutes\n* Station R to T: 177.7 minutes\n* Station R to U: 152.6 minutes\n* Station R to V: 163.5 minutes\n* Station R to W: 56.6 minutes\n* Station R to X: 147.7 minutes\n* Station S to T: 206.5 minutes\n* Station S to U: 188.2 minutes\n* Station S to V: 197.7 minutes\n* Station S to W: 86.0 minutes\n* Station S to X: 181.9 minutes\n* Station T to U: 142.3 minutes\n* Station T to V: 172.5 minutes\n* Station T to W: 121.4 minutes\n* Station T to X: 166.2 minutes\n* Station U to V: 30.3 minutes\n* Station U to W: 128.5 minutes\n* Station U to X: 27.3 minutes\n* Station V to W: 148.7 minutes\n* Station V to X: 15.8 minutes\n* Station W to X: 134.0 minutes\n\nThe objective is to determine the most time-efficient inspection circuit that visits every relay station precisely once before concluding at the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

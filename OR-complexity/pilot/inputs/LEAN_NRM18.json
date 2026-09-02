@@ -1,0 +1,27 @@
+{
+  "instance_id": "LEAN_NRM18",
+  "annotation_mode": "semantic",
+  "problem_text": "The supermarket offers a variety of products with revenue data provided in the ‘Revenue’ column. The company aims to maximize total revenue using the initial inventory of products classified under ‘Organ’. Inventory levels are detailed in the ‘Initial Inventory’ column. Demand quantities are specified in the ‘Demand’ column and are assumed to be deterministic and known in advance. Decision variables x_i indicate the number of units of each ‘Organ’ product i that will be fulfilled.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "SupermartGrocerySales-RetailAnalyticsDataset",
+      "indices": [
+        "Sub Category",
+        "Revenue",
+        "Demand",
+        "Initial Inventory"
+      ],
+      "unit": "",
+      "values": "| Sub Category | Revenue | Demand | Initial Inventory |\n|---|---|---|---|\n| Atta & Flour | 165.2 | 715183 | 5346490.0 |\n| Biscuits | 181.93 | 924398 | 6840830.0 |\n| Breads & Buns | 189.99 | 1006220 | 7425860.0 |\n| Cakes | 484.65 | 924932 | 6856120.0 |\n| Chicken | 207.75 | 702263 | 5204970.0 |\n| Chocolates | 437.69 | 994869 | 7338980.0 |\n| Cookies | 315.21 | 1031871 | 7682130.0 |\n| Dals & Pulses | 47.4 | 714036 | 5233710.0 |\n| Edible Oil & Ghee | 100.8 | 900971 | 6680860.0 |\n| Eggs | 308.44 | 774463 | 5751560.0 |\n| Fish | 271.17 | 756970 | 5605480.0 |\n| Fresh Fruits | 147.76 | 738560 | 5512120.0 |\n| Fresh Vegetables | 89.6 | 709643 | 5258420.0 |\n| Health Drinks | 149.8 | 1419411 | 10514390.0 |\n| Masalas | 401.28 | 937261 | 6974800.0 |\n| Mutton | 386.54 | 818578 | 6112000.0 |\n| Noodles | 420.0 | 996569 | 7354350.0 |\n| Organic Fruits | 60.8 | 678906 | 5034020.0 |\n| Organic Staples | 918.45 | 749927 | 5589290.0 |\n| Organic Vegetables | 77.52 | 699808 | 5202710.0 |\n| Rice | 615.65 | 674626 | 4983230.0 |\n| Soft Drinks | 159.16 | 1389437 | 10338740.0 |\n| Spices | 227.7 | 905834 | 6728760.0 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/NRM_testing/NRM18/SupermartGrocerySales-RetailAnalyticsDataset.csv",
+      "role": "parameter_table",
+      "table": "SupermartGrocerySales-RetailAnalyticsDataset"
+    }
+  ],
+  "notes": ""
+}

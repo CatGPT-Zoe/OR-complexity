@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate computing workloads across a network of distributed data centers to minimize total processing latency.\n\nThe available computational capacity at each source data center (set S) is as follows:\n*S1's capacity is 180.\n*S2's capacity is 186.\n*S3's capacity is 175.\n*S4's capacity is 194.\n*S5's capacity is 126.\n*S6's capacity is 171.\n*S7's capacity is 54.\n*S8's capacity is 144.\n\nThe required computational load for each client application (set C) is specified below:\n*C1's load is 24.\n*C2's load is 90.\n*C3's load is 66.\n*C4's load is 193.\n*C5's load is 187.\n*C6's load is 135.\n*C7's load is 128.\n*C8's load is 57.\n\nThe unit latency for processing one unit of load from each source data center to each client application is provided in the following matrix:\n| Source / Client | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 |\n|--|-|-|-|-|-|-|-|\n| S1 | 19 | 19 | 8 | 2 | 19 | 16 | 6 | 17 |\n| S2 | 20 | 13 | 5 | 8 | 2 | 19 | 4 | 7 |\n| S3 | 1 | 15 | 11 | 14 | 5 | 14 | 7 | 14 |\n| S4 | 17 | 20 | 16 | 2 | 5 | 17 | 7 | 18 |\n| S5 | 11 | 16 | 17 | 13 | 11 | 6 | 15 | 18 |\n| S6 | 11 | 18 | 12 | 9 | 20 | 16 | 7 | 8 |\n| S7 | 9 | 18 | 10 | 8 | 10 | 10 | 7 | 16 |\n| S8 | 11 | 16 | 12 | 18 | 9 | 10 | 4 | 19 |\n\nDetermine the optimal allocation of computational loads to minimize the aggregate processing latency.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

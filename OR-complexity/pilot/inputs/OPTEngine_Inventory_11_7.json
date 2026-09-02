@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_11_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical fuel additive over an operational window of 11 consecutive days.  \nThe initial stockpile at the start of the window is 67 gallons.  \nFor each operational day \\( t = 1, \\dots, 11 \\), the vendor permits the company to issue a procurement request, the volume of which must be between 9 and 55 gallons.  \nEach such request, however, is subject to a 3‑day transit delay before it becomes available for consumption or for replenishing the stockpile.  \nThe consumption requirement for the additive on each day is specified as follows:  \n* Day 1: 32 gallons  \n* Day 2: 20 gallons  \n* Day 3: 57 gallons  \n* Day 4: 58 gallons  \n* Day 5: 35 gallons  \n* Day 6: 31 gallons  \n* Day 7: 27 gallons  \n* Day 8: 41 gallons  \n* Day 9: 35 gallons  \n* Day 10: 10 gallons  \n* Day 11: 29 gallons  \n\nStock‑outs are tolerated, but any unsatisfied consumption is permanently lost and cannot be recovered later.  \nThroughout the 11‑day window, additive quantities may be treated as continuous values, and the total volume of physically stored additive at any moment must not surpass the tank capacity of 67 gallons.  \nThe aggregate expense over the planning horizon comprises three elements: the procurement cost, charged at 1 per gallon ordered; the storage cost, levied at 3 per gallon kept in the tank from one day to the next; and the deficit penalty, assessed at 15 per gallon of unmet consumption.  \nThe objective is to ascertain the optimal procurement volume for each day and to monitor the consequent stockpile and deficit levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

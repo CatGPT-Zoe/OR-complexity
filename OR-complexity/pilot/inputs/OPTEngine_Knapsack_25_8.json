@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport aircraft. The available containers are:\n\n* Container 1: weight 24 tons, value 34 units\n* Container 2: weight 7 tons, value 234 units\n* Container 3: weight 41 tons, value 291 units\n* Container 4: weight 41 tons, value 127 units\n* Container 5: weight 2 tons, value 242 units\n* Container 6: weight 31 tons, value 43 units\n* Container 7: weight 16 tons, value 48 units\n* Container 8: weight 14 tons, value 116 units\n* Container 9: weight 42 tons, value 111 units\n* Container 10: weight 23 tons, value 200 units\n* Container 11: weight 1 ton, value 162 units\n* Container 12: weight 45 tons, value 153 units\n* Container 13: weight 44 tons, value 14 units\n* Container 14: weight 22 tons, value 40 units\n* Container 15: weight 23 tons, value 94 units\n* Container 16: weight 27 tons, value 50 units\n* Container 17: weight 47 tons, value 231 units\n* Container 18: weight 36 tons, value 84 units\n* Container 19: weight 43 tons, value 243 units\n* Container 20: weight 31 tons, value 284 units\n* Container 21: weight 43 tons, value 170 units\n* Container 22: weight 1 ton, value 201 units\n* Container 23: weight 2 tons, value 52 units\n* Container 24: weight 30 tons, value 258 units\n* Container 25: weight 46 tons, value 13 units\n\nThe aircraft has a maximum cargo capacity of 477 tons. Determine which containers to load to maximize the total value of transported cargo without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

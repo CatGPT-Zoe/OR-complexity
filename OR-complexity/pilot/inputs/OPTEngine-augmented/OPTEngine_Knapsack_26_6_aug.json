@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assembling a shipment of specialized equipment to maximize total utility score while adhering to the cargo plane's maximum payload limit.\n\nThe equipment units available are:\n* Unit A: mass 8 tons, utility 274 credits\n* Unit B: mass 23 tons, utility 181 credits\n* Unit C: mass 28 tons, utility 189 credits\n* Unit D: mass 15 tons, utility 67 credits\n* Unit E: mass 27 tons, utility 258 credits\n* Unit F: mass 47 tons, utility 272 credits\n* Unit G: mass 6 tons, utility 249 credits\n* Unit H: mass 20 tons, utility 25 credits\n* Unit I: mass 22 tons, utility 285 credits\n* Unit J: mass 31 tons, utility 70 credits\n* Unit K: mass 43 tons, utility 297 credits\n* Unit L: mass 47 tons, utility 163 credits\n* Unit M: mass 7 tons, utility 200 credits\n* Unit N: mass 3 tons, utility 102 credits\n* Unit O: mass 20 tons, utility 103 credits\n* Unit P: mass 22 tons, utility 254 credits\n* Unit Q: mass 15 tons, utility 204 credits\n* Unit R: mass 22 tons, utility 285 credits\n* Unit S: mass 1 ton, utility 200 credits\n* Unit T: mass 22 tons, utility 300 credits\n* Unit U: mass 29 tons, utility 114 credits\n* Unit V: mass 30 tons, utility 223 credits\n* Unit W: mass 37 tons, utility 171 credits\n* Unit X: mass 28 tons, utility 229 credits\n* Unit Y: mass 31 tons, utility 107 credits\n* Unit Z: mass 11 tons, utility 255 credits\n\nFurthermore, due to compatibility protocols, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, the effective payload capacity of the aircraft is diminished by 10 tons.\nThe aircraft's maximum allowable payload is 416 tons. The coordinator must determine which units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

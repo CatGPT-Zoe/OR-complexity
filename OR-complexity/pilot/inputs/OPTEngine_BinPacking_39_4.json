@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. Packages:\n\n* Package 1: volume 37 m³\n* Package 2: volume 39 m³\n* Package 3: volume 38 m³\n* Package 4: volume 46 m³\n* Package 5: volume 47 m³\n* Package 6: volume 38 m³\n* Package 7: volume 45 m³\n* Package 8: volume 40 m³\n* Package 9: volume 52 m³\n* Package 10: volume 51 m³\n* Package 11: volume 62 m³\n* Package 12: volume 44 m³\n* Package 13: volume 45 m³\n* Package 14: volume 67 m³\n* Package 15: volume 32 m³\n* Package 16: volume 62 m³\n* Package 17: volume 42 m³\n* Package 18: volume 64 m³\n* Package 19: volume 61 m³\n* Package 20: volume 53 m³\n* Package 21: volume 41 m³\n* Package 22: volume 55 m³\n* Package 23: volume 60 m³\n* Package 24: volume 61 m³\n* Package 25: volume 43 m³\n* Package 26: volume 58 m³\n* Package 27: volume 64 m³\n* Package 28: volume 54 m³\n* Package 29: volume 49 m³\n* Package 30: volume 44 m³\n* Package 31: volume 37 m³\n* Package 32: volume 63 m³\n* Package 33: volume 59 m³\n* Package 34: volume 56 m³\n* Package 35: volume 69 m³\n* Package 36: volume 47 m³\n* Package 37: volume 50 m³\n* Package 38: volume 35 m³\n* Package 39: volume 36 m³\n\nEach truck can carry up to 100 m³ of cargo. Load all packages using the fewest trucks. Every package must be placed on exactly one truck, and the total volume in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

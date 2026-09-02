@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and storage schedule for a critical medical supply over a 9-day planning window.  \nThe initial stock available at the start of the planning window is 13 units.  \nIn each day \\( t = 1, \\dots, 9 \\), the supplier permits the hospital to place a single procurement request, with the quantity required to fall between 13 and 60 units inclusive.  \nHowever, each request placed is subject to a fixed delivery lead time of 4 days before the supply becomes available for use or for replenishing the stock.  \nThe daily consumption of the medical supply is forecasted as follows:  \n* Day 1: consumption 28 units  \n* Day 2: consumption 28 units  \n* Day 3: consumption 43 units  \n* Day 4: consumption 18 units  \n* Day 5: consumption 46 units  \n* Day 6: consumption 43 units  \n* Day 7: consumption 50 units  \n* Day 8: consumption 23 units  \n* Day 9: consumption 44 units  \n\nStock‑outs are permissible, but any unsatisfied consumption is lost and cannot be deferred to later days.  \nThroughout the 9‑day horizon, quantities of the supply may be treated as continuous values, and the total physical stock on hand at the end of any day must not exceed the storage‑room capacity of 37 units.  \nThe total expenditure over the planning horizon comprises three elements: the procurement cost, charged at 4 per unit ordered; the storage cost, charged at 3 per unit carried over from one day to the next; and the shortage penalty, charged at 10 per unit of unmet consumption.  \nDetermine the optimal procurement quantity for each day and monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

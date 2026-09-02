@@ -1,0 +1,139 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "MIPLIB_NL_graph20_20_cuts",
+  "layer": "semantic",
+  "sets": [
+    {
+      "name": "stations",
+      "description": "20 observation outposts (nodes)",
+      "source_status": "explicit"
+    },
+    {
+      "name": "links",
+      "description": "37 candidate trails (edges)",
+      "source_status": "explicit"
+    },
+    {
+      "name": "barriers",
+      "description": "candidate barrier layers (unique identifiers); implicit set needed to index decisions; upper bound not given, typically taken as the number of links",
+      "source_status": "implicit_required"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "network_topology",
+      "indices": ["link", "endpoint_index"],
+      "description": "endpoint mapping: for each link, the two incident station identifiers (endpoint_index ∈ {1,2})",
+      "unit": "",
+      "source_status": "explicit",
+      "source_spans": ["the network topology table"]
+    }
+  ],
+  "entities": [
+    {
+      "id": "zone_assignment",
+      "canonical_name": "zone_assignment",
+      "semantic_type": "assignment",
+      "indices": [
+        {"role": "barrier", "set_id": "barriers"},
+        {"role": "station", "set_id": "stations"}
+      ],
+      "description": "binary variable indicating which of the two operational zones (0/1) each station belongs to under a given barrier layer",
+      "value_semantics": "binary (0/1)",
+      "unit": null,
+      "endogeneous": true,
+      "source_status": "explicit",
+      "source_spans": ["establishing one barrier layer necessitates a global binary partition of the entire set of outposts into two distinct, non-communicating operational zones"],
+      "confidence": 0.9
+    },
+    {
+      "id": "scanner_installed",
+      "canonical_name": "scanner_installed",
+      "semantic_type": "activation",
+      "indices": [
+        {"role": "barrier", "set_id": "barriers"},
+        {"role": "link", "set_id": "links"}
+      ],
+      "description": "binary variable indicating whether a specialized bio-scanner is installed on a given trail for a specific barrier layer",
+      "value_semantics": "binary (0/1)",
+      "unit": null,
+      "endogeneous": true,
+      "source_status": "explicit",
+      "source_spans": ["every trail connecting an outpost in one zone to an outpost in the other is fitted with a specialized bio-scanner"],
+      "confidence": 0.95
+    }
+  ],
+  "objective": {
+    "id": "max_active_barriers",
+    "canonical_name": "maximum_number_active_barriers",
+    "description": "maximize the number of barrier layers that have at least one trail equipped with a scanner (i.e., cut at least one edge)",
+    "min_or_max": "max",
+    "entity_ids": ["scanner_installed"],
+    "excluded_from_feasibility_hypergraph": true,
+    "confidence": 0.95
+  },
+  "obligations": [
+    {
+      "id": "cut_crossing_linking",
+      "canonical_name": "cut_crossing_linking",
+      "obligation_type": "linking",
+      "normalized_semantics": "For each barrier l and each link e connecting stations u and v, scanner_installed(l,e) = 1 if and only if zone_assignment(l,u) ≠ zone_assignment(l,v).",
+      "support_entity_ids": ["zone_assignment", "scanner_installed"],
+      "incidence_slots": [
+        {
+          "entity_id": "zone_assignment",
+          "role": "zone_of_u",
+          "aggregation_axes": [],
+          "index_binding": {"barrier": "l", "station": "u"}
+        },
+        {
+          "entity_id": "zone_assignment",
+          "role": "zone_of_v",
+          "aggregation_axes": [],
+          "index_binding": {"barrier": "l", "station": "v"}
+        },
+        {
+          "entity_id": "scanner_installed",
+          "role": "scanner_presence",
+          "aggregation_axes": [],
+          "index_binding": {"barrier": "l", "link": "e"}
+        }
+      ],
+      "quantifiers": "for all barriers l, for all links e=(u,v)",
+      "condition": null,
+      "parameter_refs": ["network_topology"],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["once a partition is defined, every trail connecting an outpost in one zone to an outpost in the other is fitted with a specialized bio-scanner"],
+      "confidence": 0.95
+    },
+    {
+      "id": "edge_disjointness",
+      "canonical_name": "edge_disjointness",
+      "obligation_type": "capacity",
+      "normalized_semantics": "Each trail may carry hardware for at most one barrier layer.",
+      "support_entity_ids": ["scanner_installed"],
+      "incidence_slots": [
+        {
+          "entity_id": "scanner_installed",
+          "role": "count_per_link",
+          "aggregation_axes": ["barrier"],
+          "index_binding": {"link": "e"}
+        }
+      ],
+      "quantifiers": "for each link e",
+      "condition": "sum_{l in barriers} scanner_installed(l,e) ≤ 1",
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": false,
+      "source_spans": ["a specific trail can accommodate hardware for at most one barrier layer", "power grid provides 15A, scanner draws 14.5A, implying at most one scanner per trail"],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": [
+    "The set 'barriers' is not explicitly specified in the problem statement; a fixed upper bound (e.g., number of edges) is assumed fro MILP formulation.",
+    "Power grid parameters (220V, 15A) and scanner current draw (14.5A) are provided but do not add an independent constraint; they merely reinforce the edge capacity of1.",
+    "Federal subsidy (15 percent for first three barriers) is mentioned but has no effect on feasibility or objective.",
+    "Station classification (even-indexed High-Priority Data Hubs, odd-indexed transmission relays) is described but no operational constraint linked to this distinction appears."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "instance_id": "MIPLIB_NL_ex10",
+  "annotation_mode": "semantic",
+  "problem_text": "This is a 10*10 puzzle reconstruction problem. Each puzzle piece has 4 edges: top, right, bottom, and left. Each edge is either a boundary edge marked as 0 (imagine the straight edge of a real puzzle piece) or an internal edge marked with a specific positive integer. Pieces can be rotated. (This differs slightly from the interlocking tabs and blanks of real puzzles.) The puzzle rule requires that the touching edges of adjacent puzzle pieces must have the same integer mark. Based on geometric features, the pieces are classified into three categories: 4 corner pieces have two adjacent boundary edges; 4*10-8 edge (non-corner) pieces have one boundary edge; and the remaining (10-2)^2 internal pieces have no boundary edges. The file `numbers` provides the numbers marked on the four edges of all puzzle pieces. Please find a valid puzzle layout that satisfies the rules. The objective function is the number of successfully placed puzzle pieces.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "numbers",
+      "indices": [
+        "piece_id",
+        "top_edge",
+        "right_edge",
+        "bottom_edge",
+        "left_edge"
+      ],
+      "unit": "",
+      "values": "| piece_id | top_edge | right_edge | bottom_edge | left_edge |\n|---|---|---|---|---|\n| 0 | 5 | 14 | 14 | 1 |\n| 1 | 1 | 11 | 7 | 2 |\n| 2 | 15 | 19 | 17 | 1 |\n| 3 | 5 | 5 | 14 | 22 |\n| 4 | 0 | 13 | 15 | 25 |\n| 5 | 22 | 3 | 17 | 19 |\n| 6 | 7 | 5 | 14 | 2 |\n| 7 | 5 | 15 | 19 | 7 |\n| 8 | 24 | 7 | 0 | 9 |\n| 9 | 14 | 19 | 15 | 16 |\n| 10 | 0 | 7 | 23 | 18 |\n| 11 | 12 | 0 | 23 | 1 |\n| 12 | 5 | 4 | 19 | 15 |\n| 13 | 9 | 0 | 20 | 15 |\n| 14 | 22 | 17 | 1 | 24 |\n| 15 | 7 | 1 | 19 | 5 |\n| 16 | 20 | 0 | 20 | 2 |\n| 17 | 23 | 5 | 15 | 5 |\n| 18 | 7 | 3 | 10 | 0 |\n| 19 | 1 | 24 | 6 | 2 |\n| 20 | 23 | 4 | 17 | 2 |\n| 21 | 24 | 7 | 7 | 3 |\n| 22 | 0 | 0 | 7 | 6 |\n| 23 | 0 | 6 | 23 | 23 |\n| 24 | 1 | 24 | 16 | 15 |\n| 25 | 0 | 20 | 23 | 21 |\n| 26 | 7 | 15 | 15 | 5 |\n| 27 | 2 | 3 | 5 | 5 |\n| 28 | 19 | 1 | 19 | 7 |\n| 29 | 14 | 3 | 11 | 23 |\n| 30 | 14 | 22 | 1 | 23 |\n| 31 | 2 | 8 | 0 | 6 |\n| 32 | 7 | 0 | 21 | 23 |\n| 33 | 17 | 24 | 23 | 7 |\n| 34 | 17 | 6 | 16 | 24 |\n| 35 | 6 | 2 | 15 | 2 |\n| 36 | 0 | 8 | 22 | 13 |\n| 37 | 3 | 17 | 5 | 15 |\n| 38 | 14 | 11 | 4 | 7 |\n| 39 | 1 | 24 | 15 | 2 |\n| 40 | 24 | 5 | 23 | 15 |\n| 41 | 2 | 17 | 5 | 1 |\n| 42 | 9 | 0 | 12 | 11 |\n| 43 | 17 | 5 | 7 | 22 |\n| 44 | 1 | 2 | 4 | 14 |\n| 45 | 0 | 13 | 16 | 24 |\n| 46 | 24 | 24 | 13 | 0 |\n| 47 | 7 | 0 | 15 | 3 |\n| 48 | 16 | 4 | 6 | 23 |\n| 49 | 19 | 22 | 6 | 16 |\n| 50 | 6 | 19 | 17 | 5 |\n| 51 | 19 | 14 | 3 | 7 |\n| 52 | 11 | 19 | 4 | 17 |\n| 53 | 7 | 0 | 10 | 5 |\n| 54 | 4 | 11 | 23 | 14 |\n| 55 | 23 | 16 | 0 | 18 |\n| 56 | 14 | 7 | 6 | 22 |\n| 57 | 7 | 23 | 21 | 0 |\n| 58 | 7 | 0 | 0 | 15 |\n| 59 | 22 | 14 | 19 | 5 |\n| 60 | 22 | 19 | 24 | 22 |\n| 61 | 16 | 0 | 18 | 23 |\n| 62 | 0 | 21 | 1 | 13 |\n| 63 | 25 | 15 | 23 | 0 |\n| 64 | 0 | 16 | 15 | 0 |\n| 65 | 6 | 4 | 23 | 14 |\n| 66 | 20 | 0 | 16 | 3 |\n| 67 | 17 | 15 | 23 | 7 |\n| 68 | 6 | 0 | 7 | 22 |\n| 69 | 5 | 18 | 0 | 9 |\n| 70 | 17 | 17 | 1 | 7 |\n| 71 | 24 | 3 | 14 | 1 |\n| 72 | 10 | 0 | 16 | 11 |\n| 73 | 7 | 12 | 0 | 18 |\n| 74 | 16 | 7 | 19 | 11 |\n| 75 | 13 | 14 | 20 | 0 |\n| 76 | 5 | 5 | 11 | 11 |\n| 77 | 1 | 24 | 23 | 11 |\n| 78 | 1 | 2 | 24 | 3 |\n| 79 | 2 | 15 | 15 | 5 |\n| 80 | 7 | 19 | 23 | 19 |\n| 81 | 24 | 4 | 7 | 24 |\n| 82 | 15 | 0 | 16 | 17 |\n| 83 | 23 | 7 | 15 | 16 |\n| 84 | 18 | 0 | 24 | 19 |\n| 85 | 19 | 23 | 7 | 15 |\n| 86 | 1 | 7 | 2 | 15 |\n| 87 | 5 | 7 | 5 | 22 |\n| 88 | 11 | 16 | 17 | 17 |\n| 89 | 7 | 5 | 1 | 23 |\n| 90 | 12 | 7 | 16 | 0 |\n| 91 | 16 | 0 | 10 | 24 |\n| 92 | 1 | 22 | 11 | 2 |\n| 93 | 23 | 24 | 0 | 0 |\n| 94 | 4 | 3 | 19 | 2 |\n| 95 | 6 | 15 | 4 | 17 |\n| 96 | 15 | 15 | 14 | 1 |\n| 97 | 2 | 23 | 5 | 11 |\n| 98 | 7 | 16 | 23 | 4 |\n| 99 | 24 | 6 | 5 | 14 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/ex10/data/numbers.csv",
+      "role": "parameter_table",
+      "table": "numbers"
+    }
+  ],
+  "notes": ""
+}

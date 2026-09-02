@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of antique sculptures onto identical pallets for secure international transport. The sculptures are as follows:\n* Marble bust: 37 kilograms\n* Bronze horse: 60 kilograms\n* Alabaster vase: 37 kilograms\n* Granite lion: 61 kilograms\n* Terracotta warrior: 57 kilograms\n* Porcelain fountain: 32 kilograms\n* Jade statue: 49 kilograms\n* Onyx obelisk: 51 kilograms\n* Sandstone relief: 39 kilograms\n* Limestone sphinx: 40 kilograms\n* Iron cannon: 70 kilograms\n* Steel anvil: 66 kilograms\n* Copper bell: 54 kilograms\n\nEach reinforced pallet has a maximum safe load capacity of 100 kg. The coordinator must arrange for all sculptures to be placed, with each sculpture assigned to exactly one pallet, and the collective weight on any given pallet must not surpass its load limit. The objective is to utilize the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

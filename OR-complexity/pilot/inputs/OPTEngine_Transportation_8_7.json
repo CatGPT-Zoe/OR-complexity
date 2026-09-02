@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate the distribution of a specialized commodity from a network of regional warehouses to a collection of major retail hubs. The objective is to orchestrate the flow of goods to achieve the lowest possible aggregate expenditure on freight.\n\nThe inventory available at each warehouse, designated as source W, is precisely quantified:\n*Warehouse W1 holds 85 units in stock.\n*Warehouse W2 holds 178 units.\n*Warehouse W3 holds 124 units.\n*Warehouse W4 holds 109 units.\n*Warehouse W5 holds 197 units.\n*Warehouse W6 holds 131 units.\n*Warehouse W7 holds 197 units.\n*Warehouse W8 holds 132 units.\n\nThe consumption requirements that must be satisfied at each retail hub, designated as destination H, are explicitly stipulated:\n*Hub H1 requires 140 units.\n*Hub H2 requires 157 units.\n*Hub H3 requires 83 units.\n*Hub H4 requires 66 units.\n*Hub H5 requires 44 units.\n*Hub H6 requires 88 units.\n*Hub H7 requires 93 units.\n*Hub H8 requires 116 units.\n\nThe per-unit freight charge for moving goods from any given warehouse to any specific hub is detailed in the following matrix:\n\n| Source / Destination | H1 | H2 | H3 | H4 | H5 | H6 | H7 | H8 |\n|---|---|---|---|---|---|---|---|---|\n| W1 | 6 | 14 | 18 | 16 | 2 | 12 | 13 | 17 |\n| W2 | 11 | 14 | 14 | 5 | 10 | 13 | 6 | 18 |\n| W3 | 16 | 8 | 8 | 10 | 5 | 15 | 2 | 18 |\n| W4 | 14 | 14 | 18 | 17 | 5 | 13 | 8 | 9 |\n| W5 | 7 | 11 | 3 | 15 | 12 | 3 | 18 | 7 |\n| W6 | 2 | 9 | 13 | 20 | 20 | 2 | 3 | 7 |\n| W7 | 19 | 18 | 7 | 16 | 7 | 11 | 10 | 1 |\n| W8 | 7 | 7 | 4 | 16 | 8 | 20 | 7 | 13 |\n\nDetermine the optimal allocation of shipments to minimize the total logistical expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

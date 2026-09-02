@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical fuel additive over a 13-week operational cycle.  \nThe starting stockpile at the cycle’s commencement is 20 barrels.  \nIn each week \\( t = 1,\\dots,13 \\), the vendor permits the firm to place a fuel order whose volume must fall between 13 and 49 barrels.  \nNevertheless, every order placed will experience a 2‑week shipping delay before it becomes available to meet consumption or rebuild reserves.  \nThe weekly consumption of the additive is as follows:  \n* Week 1: 50 barrels  \n* Week 2: 53 barrels  \n* Week 3: 35 barrels  \n* Week 4: 12 barrels  \n* Week 5: 24 barrels  \n* Week 6: 25 barrels  \n* Week 7: 50 barrels  \n* Week 8: 28 barrels  \n* Week 9: 31 barrels  \n* Week 10: 20 barrels  \n* Week 11: 25 barrels  \n* Week 12: 32 barrels  \n* Week 13: 24 barrels  \n\nSupply deficits are tolerated, but any unsatisfied consumption is simply lost and not carried forward.  \nThroughout the 13‑week cycle, additive quantities may be treated as continuous, and the total volume of fuel held in storage at any moment must not surpass the depot’s capacity of 39 barrels.  \nThe aggregate expense comprises three elements: the procurement cost, which is 5 per barrel ordered; the storage cost, which is 1 per barrel kept from one week to the next; and the shortage penalty, which is 12 per barrel of unmet weekly consumption.  \nThe objective is to identify the optimal order volume for each week and to monitor the consequent stockpile and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

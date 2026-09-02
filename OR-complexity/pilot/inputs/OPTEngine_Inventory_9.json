@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical fuel additive over a 9-week operational window.\nThe initial stock at the start of the planning interval is 45 barrels.\nIn each week t = 1, ..., 9, the vendor permits the firm to submit a procurement request whose volume must fall between 2 and 35 barrels.\nHowever, each requested shipment will undergo a 3-week transit delay before it becomes available to meet consumption needs or augment stock levels.\nThe weekly consumption of the additive is specified as follows:\n* Week 1: consumption 29 barrels\n* Week 2: consumption 45 barrels\n* Week 3: consumption 36 barrels\n* Week 4: consumption 57 barrels\n* Week 5: consumption 19 barrels\n* Week 6: consumption 47 barrels\n* Week 7: consumption 37 barrels\n* Week 8: consumption 29 barrels\n* Week 9: consumption 50 barrels\n\nStockouts are permissible, but any unsatisfied consumption is considered lost and will not be fulfilled later.\nThroughout the planning window, additive quantities may be treated as continuous, and the total volume of physical stock held at any moment must not exceed the storage facility's limit of 45 barrels.\nThe aggregate expense over the planning horizon comprises three elements: the procurement expense, which is 6 per barrel ordered; the storage expense, which is 2 per barrel kept in inventory from one week to the next; and the stockout penalty, which is 14 per barrel of unmet consumption. The objective is to ascertain the optimal procurement volume for each week and to monitor the consequent stock and deficit levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

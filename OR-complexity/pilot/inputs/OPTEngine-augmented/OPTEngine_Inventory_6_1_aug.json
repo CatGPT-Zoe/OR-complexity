@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail outlet must devise a procurement and stock management strategy for a seasonal product over a sales window of 6 weeks.\nThe initial stock at the start of the window is 45 items.\nIn each week t = 1, ..., 6, the distributor permits the outlet to place a shipment whose size must be between 12 and 73 items.\nHowever, each shipment placed will take 2 week(s) to be delivered before it can be used to meet sales or replenish stock.\nThe projected sales for the product in each week are as follows:\n* Week 1: sales 53 items\n* Week 2: sales 36 items\n* Week 3: sales 46 items\n* Week 4: sales 42 items\n* Week 5: sales 29 items\n* Week 6: sales 51 items\n\nStockouts are tolerated, but any unsatisfied sales will be lost and not carried forward.\nThroughout the sales window, product quantities are permitted to be fractional, and the total amount of physical stock on the premises at any moment must not exceed the storage limit of 49 items.\n\nIn week 1, the maximum shipment size is 33 items.\nBy week 6, the physical stock on hand must be no less than 2 items.\n\nThe total expense over the sales window comprises three elements: the procurement expense, which equals 2 per item shipped; the storage expense, which equals 3 per item of stock held from one week to the next; and the lost‑sales penalty, which equals 6 per item of unmet sales. Please determine the optimal shipment size for each week and monitor the resulting stock and stockout levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

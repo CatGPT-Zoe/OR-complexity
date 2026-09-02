@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_8_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate 8 delivery trucks to transport packages through 8 different distribution hubs.\n\nEach truck follows a predetermined route through the hubs, represented as pairs (Hub, Loading time), where each pair specifies the hub where packages are loaded and the time required for this process. The sequence of pairs indicates the mandatory order in which the hubs must be visited.\n\nTruck routes:\n* Truck 1 follows: (Hub8, 5) → (Hub2, 7) → (Hub1, 1) → (Hub6, 10) → (Hub4, 5) → (Hub3, 6) → (Hub7, 8) → (Hub5, 2)\n* Truck 2 follows: (Hub1, 7) → (Hub7, 2) → (Hub6, 7) → (Hub3, 1) → (Hub2, 1) → (Hub4, 2) → (Hub5, 6) → (Hub8, 1)\n* Truck 3 follows: (Hub5, 10) → (Hub3, 3) → (Hub1, 8) → (Hub6, 2) → (Hub8, 10) → (Hub7, 3) → (Hub4, 1) → (Hub2, 9)\n* Truck 4 follows: (Hub3, 2) → (Hub7, 8) → (Hub1, 7) → (Hub6, 2) → (Hub5, 2) → (Hub8, 8) → (Hub4, 8) → (Hub2, 9)\n* Truck 5 follows: (Hub3, 2) → (Hub5, 9) → (Hub1, 1) → (Hub2, 9) → (Hub8, 4) → (Hub4, 2) → (Hub7, 7) → (Hub6, 6)\n* Truck 6 follows: (Hub6, 3) → (Hub5, 10) → (Hub8, 7) → (Hub7, 6) → (Hub4, 5) → (Hub2, 6) → (Hub1, 9) → (Hub3, 6)\n* Truck 7 follows: (Hub1, 3) → (Hub8, 2) → (Hub7, 8) → (Hub2, 8) → (Hub3, 3) → (Hub4, 5) → (Hub6, 5) → (Hub5, 3)\n* Truck 8 follows: (Hub1, 3) → (Hub2, 5) → (Hub6, 6) → (Hub3, 4) → (Hub5, 2) → (Hub8, 10) → (Hub4, 4) → (Hub7, 6)\n\nEach loading operation must proceed without interruption once it begins, and each hub can only accommodate one truck at a time for loading. The objective is to schedule all loading operations at the hubs so that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

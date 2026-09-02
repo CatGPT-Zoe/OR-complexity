@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with selecting a collection of pallets to load onto a freight truck to maximize total revenue, while adhering to the vehicle's maximum cargo weight allowance.\n\nThe pallets available for shipment are:\n* Pallet A: weight 34kg, revenue 79 currency units\n* Pallet B: weight 3kg, revenue 51 currency units\n* Pallet C: weight 37kg, revenue 187 currency units\n* Pallet D: weight 24kg, revenue 12 currency units\n* Pallet E: weight 5kg, revenue 107 currency units\n* Pallet F: weight 46kg, revenue 66 currency units\n* Pallet G: weight 43kg, revenue 286 currency units\n* Pallet H: weight 31kg, revenue 32 currency units\n* Pallet I: weight 21kg, revenue 22 currency units\n* Pallet J: weight 21kg, revenue 211 currency units\n* Pallet K: weight 9kg, revenue 150 currency units\n* Pallet L: weight 27kg, revenue 82 currency units\n* Pallet M: weight 39kg, revenue 85 currency units\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Pallet A and Pallet B must be included in the shipment.\n\nShould Pallet C be selected, the truck's effective weight capacity is diminished by 10 kg.\nThe truck can safely transport a maximum of 237 kg. The coordinator must determine which pallets to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of shipments onto identical freight pallets. The shipments are as follows:\n* Shipment Alpha: mass 64 units\n* Shipment Beta: mass 69 units\n* Shipment Gamma: mass 44 units\n* Shipment Delta: mass 30 units\n* Shipment Epsilon: mass 51 units\n* Shipment Zeta: mass 50 units\n* Shipment Eta: mass 50 units\n* Shipment Theta: mass 32 units\n* Shipment Iota: mass 63 units\n* Shipment Kappa: mass 39 units\n* Shipment Lambda: mass 46 units\n* Shipment Mu: mass 68 units\n* Shipment Nu: mass 39 units\n\nEach pallet has a maximum load capacity of 100 mass units. The coordinator must assign every shipment to exactly one pallet, ensuring the combined mass on any pallet does not surpass its limit. The objective is to utilize the smallest possible number of pallets to accommodate all shipments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_37_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical cargo planes. The shipments are as follows:\n\n* Shipment Alpha: mass 70 tons\n* Shipment Beta: mass 64 tons\n* Shipment Gamma: mass 30 tons\n* Shipment Delta: mass 53 tons\n* Shipment Epsilon: mass 51 tons\n* Shipment Zeta: mass 66 tons\n* Shipment Eta: mass 58 tons\n* Shipment Theta: mass 43 tons\n* Shipment Iota: mass 59 tons\n* Shipment Kappa: mass 56 tons\n* Shipment Lambda: mass 66 tons\n* Shipment Mu: mass 66 tons\n* Shipment Nu: mass 50 tons\n* Shipment Xi: mass 57 tons\n* Shipment Omicron: mass 57 tons\n* Shipment Pi: mass 60 tons\n* Shipment Rho: mass 42 tons\n* Shipment Sigma: mass 40 tons\n* Shipment Tau: mass 60 tons\n* Shipment Upsilon: mass 33 tons\n* Shipment Phi: mass 42 tons\n* Shipment Chi: mass 32 tons\n* Shipment Psi: mass 61 tons\n* Shipment Omega: mass 30 tons\n* Shipment A1: mass 40 tons\n* Shipment B1: mass 36 tons\n* Shipment C1: mass 40 tons\n* Shipment D1: mass 63 tons\n* Shipment E1: mass 43 tons\n* Shipment F1: mass 37 tons\n* Shipment G1: mass 37 tons\n* Shipment H1: mass 57 tons\n* Shipment I1: mass 42 tons\n* Shipment J1: mass 63 tons\n* Shipment K1: mass 31 tons\n* Shipment L1: mass 40 tons\n* Shipment M1: mass 54 tons\n\nEach cargo plane can carry a maximum payload of 100 tons. The coordinator must assign every shipment to exactly one plane, ensuring the total mass on any plane does not surpass its capacity. The objective is to utilize the smallest possible number of planes to accommodate all shipments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

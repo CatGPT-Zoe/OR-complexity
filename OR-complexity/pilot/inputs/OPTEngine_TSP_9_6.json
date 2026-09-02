@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A courier service is tasked with delivering sensitive documents to eight distinct regional offices, in addition to the central hub, ensuring each location receives its package precisely once before returning to the origin point.\n\nThe travel times between any two locations, measured in minutes, are as follows:\n* Hub to Office 1: 168.8 min\n* Hub to Office 2: 105.8 min\n* Hub to Office 3: 136.8 min\n* Hub to Office 4: 143.4 min\n* Hub to Office 5: 173.6 min\n* Hub to Office 6: 142.9 min\n* Hub to Office 7: 50.2 min\n* Hub to Office 8: 53.7 min\n* Office 1 to Office 2: 168.1 min\n* Office 1 to Office 3: 142.1 min\n* Office 1 to Office 4: 71.7 min\n* Office 1 to Office 5: 24.1 min\n* Office 1 to Office 6: 167.0 min\n* Office 1 to Office 7: 137.8 min\n* Office 1 to Office 8: 116.7 min\n* Office 2 to Office 3: 47.4 min\n* Office 2 to Office 4: 104.2 min\n* Office 2 to Office 5: 157.9 min\n* Office 2 to Office 6: 40.1 min\n* Office 2 to Office 7: 135.6 min\n* Office 2 to Office 8: 91.3 min\n* Office 3 to Office 4: 71.2 min\n* Office 3 to Office 5: 126.7 min\n* Office 3 to Office 6: 25.1 min\n* Office 3 to Office 7: 152.9 min\n* Office 3 to Office 8: 103.7 min\n* Office 4 to Office 5: 55.6 min\n* Office 4 to Office 6: 96.3 min\n* Office 4 to Office 7: 134.5 min\n* Office 4 to Office 8: 91.9 min\n* Office 5 to Office 6: 151.7 min\n* Office 5 to Office 7: 148.7 min\n* Office 5 to Office 8: 120.1 min\n* Office 6 to Office 7: 166.1 min\n* Office 6 to Office 8: 118.1 min\n* Office 7 to Office 8: 49.2 min\n\nThe objective is to determine the optimal visitation sequence that minimizes the total travel duration, requiring a single stop at each office and concluding at the central hub.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate its fleet of nine available vessels to fulfill cargo assignments across nine distinct maritime routes, seeking to minimize overall fuel expenditure.\n\nThe cargo capacity for each vessel (designated V1 through V9) is fixed as follows:\n*V1's capacity is 100.\n*V2's capacity is 163.\n*V3's capacity is 82.\n*V4's capacity is 73.\n*V5's capacity is 134.\n*V6's capacity is 81.\n*V7's capacity is 60.\n*V8's capacity is 168.\n*V9's capacity is 62.\n\nThe mandatory cargo tonnage requirement for each maritime route (labeled R1 through R9) is precisely determined:\n*R1's requirement is 104.\n*R2's requirement is 149.\n*R3's requirement is 72.\n*R4's requirement is 6.\n*R5's requirement is 124.\n*R6's requirement is 32.\n*R7's requirement is 38.\n*R8's requirement is 33.\n*R9's requirement is 50.\n\nThe fuel consumption per ton of cargo for each vessel-route pairing is detailed in the matrix below:\n| Vessel / Route | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 |\n|--|-|-|-|-|-|-|-|-|\n| V1 | 5 | 2 | 20 | 20 | 20 | 8 | 10 | 16 | 14 |\n| V2 | 18 | 16 | 2 | 3 | 9 | 13 | 5 | 14 | 7 |\n| V3 | 17 | 8 | 18 | 1 | 13 | 12 | 16 | 18 | 16 |\n| V4 | 12 | 19 | 17 | 11 | 13 | 9 | 6 | 1 | 11 |\n| V5 | 20 | 8 | 1 | 9 | 2 | 16 | 17 | 12 | 19 |\n| V6 | 8 | 6 | 4 | 8 | 8 | 9 | 18 | 2 | 8 |\n| V7 | 19 | 13 | 12 | 6 | 6 | 8 | 19 | 11 | 12 |\n| V8 | 19 | 1 | 12 | 19 | 19 | 5 | 19 | 7 | 16 |\n| V9 | 18 | 10 | 6 | 16 | 2 | 3 | 2 | 8 | 20 |\n\nDetermine the optimal cargo allocation plan to achieve minimal total fuel consumption.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

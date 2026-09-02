@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage strategy for a critical blood type over a seven-day week. The initial stock in the refrigerated storage at the start of the week is 16 units. For each day t = 1, ..., 7, the central supplier permits the bank to request a shipment, where the volume ordered must be between 1 and 39 units. Any shipment requested is delivered instantly and is available to meet the day's needs. The projected daily usage for this blood type is as follows:\n* Day 1: usage 40 units\n* Day 2: usage 14 units\n* Day 3: usage 15 units\n* Day 4: usage 43 units\n* Day 5: usage 12 units\n* Day 6: usage 14 units\n* Day 7: usage 24 units\n\nSupply shortfalls are allowed, but any unfulfilled usage is lost and cannot be deferred to a later day. Throughout the planning week, blood volumes are treated as continuous quantities, and the total stock held in storage at the end of any day must not surpass the facility's capacity of 33 units. The aggregate cost for the week comprises three elements: the procurement cost, charged at 4 per unit ordered; the refrigeration cost, charged at 2 per unit kept in storage overnight; and a penalty for unmet clinical need, charged at 8 per unit of unfulfilled usage. The objective is to establish the optimal shipment volume for each day and monitor the consequent storage levels and shortages to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

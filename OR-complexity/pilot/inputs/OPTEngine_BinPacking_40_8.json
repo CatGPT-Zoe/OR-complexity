@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: size 47 units\n* Shipment Beta: size 38 units\n* Shipment Gamma: size 67 units\n* Shipment Delta: size 60 units\n* Shipment Epsilon: size 58 units\n* Shipment Zeta: size 35 units\n* Shipment Eta: size 52 units\n* Shipment Theta: size 56 units\n* Shipment Iota: size 64 units\n* Shipment Kappa: size 49 units\n* Shipment Lambda: size 61 units\n* Shipment Mu: size 60 units\n* Shipment Nu: size 58 units\n* Shipment Xi: size 50 units\n* Shipment Omicron: size 66 units\n* Shipment Pi: size 49 units\n* Shipment Rho: size 35 units\n* Shipment Sigma: size 37 units\n* Shipment Tau: size 36 units\n* Shipment Upsilon: size 34 units\n* Shipment Phi: size 45 units\n* Shipment Chi: size 57 units\n* Shipment Psi: size 58 units\n* Shipment Omega: size 34 units\n* Shipment Atlas: size 67 units\n* Shipment Boreas: size 59 units\n* Shipment Chronos: size 31 units\n* Shipment Demeter: size 64 units\n* Shipment Eos: size 41 units\n* Shipment Helios: size 39 units\n* Shipment Iris: size 56 units\n* Shipment Janus: size 65 units\n* Shipment Krios: size 51 units\n* Shipment Leto: size 40 units\n* Shipment Metis: size 51 units\n* Shipment Nyx: size 40 units\n* Shipment Ouranos: size 45 units\n* Shipment Pontus: size 60 units\n* Shipment Rhea: size 55 units\n* Shipment Selene: size 40 units\n\nEach cargo plane can carry up to 100 units. Assign all shipments using the fewest planes possible. Each shipment must be loaded onto exactly one plane, and the total size of shipments on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

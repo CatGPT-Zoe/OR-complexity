@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_17_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a critical shipment for a three-stage transport operation. They must select a combination of cargo units to maximize total utility points while adhering to the vehicle's total load limit.\n\nThe available cargo units are:\n* Unit A: load 48, utility 238\n* Unit B: load 35, utility 84\n* Unit C: load 36, utility 75\n* Unit D: load 42, utility 116\n* Unit E: load 38, utility 96\n* Unit F: load 6, utility 250\n* Unit G: load 19, utility 147\n* Unit H: load 17, utility 118\n* Unit I: load 26, utility 14\n* Unit J: load 41, utility 36\n* Unit K: load 34, utility 45\n* Unit L: load 1, utility 155\n* Unit M: load 10, utility 82\n* Unit N: load 49, utility 269\n* Unit O: load 9, utility 68\n* Unit P: load 22, utility 13\n* Unit Q: load 48, utility 175\n\nFurthermore, due to compatibility restrictions, exactly one of Unit A or Unit B must be included in the shipment.\n\nIf Unit C is selected, it necessitates special handling equipment that reduces the vehicle's effective load capacity by 10 units.\nThe vehicle can accommodate a maximum of 336 units of total load. The manager must determine the optimal set of units to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

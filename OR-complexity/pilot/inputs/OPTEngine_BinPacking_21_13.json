@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_21_13",
+  "annotation_mode": "semantic",
+  "problem_text": "In a bustling warehouse, a logistics coordinator must allocate a set of distinct parcels onto a fleet of identical delivery trucks. The parcels are as follows:\n* Parcel Alpha: mass 48kg\n* Parcel Bravo: mass 65kg\n* Parcel Charlie: mass 57kg\n* Parcel Delta: mass 32kg\n* Parcel Echo: mass 56kg\n* Parcel Foxtrot: mass 47kg\n* Parcel Golf: mass 54kg\n* Parcel Hotel: mass 43kg\n* Parcel India: mass 52kg\n* Parcel Juliet: mass 38kg\n* Parcel Kilo: mass 38kg\n* Parcel Lima: mass 37kg\n* Parcel Mike: mass 69kg\n* Parcel November: mass 52kg\n* Parcel Oscar: mass 40kg\n* Parcel Papa: mass 31kg\n* Parcel Quebec: mass 57kg\n* Parcel Romeo: mass 66kg\n* Parcel Sierra: mass 55kg\n* Parcel Tango: mass 59kg\n* Parcel Uniform: mass 34kg\n\nEach truck has a maximum cargo capacity of 100 kilograms. The coordinator must ensure every parcel is loaded onto exactly one truck, and the combined mass assigned to any given truck must not surpass its weight limit. The objective is to complete the shipment utilizing the smallest possible number of trucks.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

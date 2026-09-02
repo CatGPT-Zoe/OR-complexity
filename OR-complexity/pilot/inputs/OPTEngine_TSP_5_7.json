@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional wildlife conservation team must conduct ecological surveys at five distinct research stations.\n\nThe travel durations between stations are recorded in minutes:\n* Base to Outpost Alpha: 74.8 minutes\n* Base to Outpost Beta: 116.3 minutes\n* Base to Outpost Gamma: 125.6 minutes\n* Base to Outpost Delta: 132.9 minutes\n* Outpost Alpha to Outpost Beta: 115.3 minutes\n* Outpost Alpha to Outpost Gamma: 187.2 minutes\n* Outpost Alpha to Outpost Delta: 107.7 minutes\n* Outpost Beta to Outpost Gamma: 132.5 minutes\n* Outpost Beta to Outpost Delta: 39.1 minutes\n* Outpost Gamma to Outpost Delta: 170.8 minutes\n\nThe objective is to determine the most time-efficient inspection circuit that commences from the central base, visits every research station precisely one time, and concludes by returning to the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

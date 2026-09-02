@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport ship. The available containers are:\n* Container 1: volume 38 cubic meters, revenue $290\n* Container 2: volume 13 cubic meters, revenue $26\n* Container 3: volume 42 cubic meters, revenue $288\n* Container 4: volume 49 cubic meters, revenue $107\n* Container 5: volume 30 cubic meters, revenue $289\n* Container 6: volume 43 cubic meters, revenue $240\n* Container 7: volume 38 cubic meters, revenue $181\n* Container 8: volume 23 cubic meters, revenue $196\n* Container 9: volume 8 cubic meters, revenue $18\n* Container 10: volume 27 cubic meters, revenue $196\n* Container 11: volume 12 cubic meters, revenue $255\n* Container 12: volume 15 cubic meters, revenue $207\n* Container 13: volume 49 cubic meters, revenue $17\n* Container 14: volume 43 cubic meters, revenue $106\n* Container 15: volume 40 cubic meters, revenue $263\n* Container 16: volume 27 cubic meters, revenue $210\n* Container 17: volume 11 cubic meters, revenue $88\n* Container 18: volume 44 cubic meters, revenue $229\n* Container 19: volume 25 cubic meters, revenue $237\n* Container 20: volume 48 cubic meters, revenue $119\n\nThe ship's cargo hold has a maximum capacity of 437 cubic meters. Choose the combination of containers that maximizes total revenue without exceeding this volume limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

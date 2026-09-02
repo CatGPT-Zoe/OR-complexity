@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_10",
+  "annotation_mode": "semantic",
+  "problem_text": "An archivist is tasked with organizing a collection of rare manuscripts into identical archival boxes.  \nThe manuscripts vary in thickness, as follows:  \n* Manuscript Alpha: 68mm thick  \n* Manuscript Beta: 34mm thick  \n* Manuscript Gamma: 57mm thick  \n* Manuscript Delta: 43mm thick  \n* Manuscript Epsilon: 48mm thick  \n* Manuscript Zeta: 64mm thick  \n* Manuscript Eta: 68mm thick  \n* Manuscript Theta: 56mm thick  \n* Manuscript Iota: 60mm thick  \n* Manuscript Kappa: 54mm thick  \n* Manuscript Lambda: 68mm thick  \n* Manuscript Mu: 67mm thick  \n* Manuscript Nu: 44mm thick  \n* Manuscript Xi: 31mm thick  \n\nEach archival box can safely accommodate a total thickness of up to 100mm without risking damage to the contents.  \nThe archivist must place every manuscript into exactly one box, ensuring that the combined thickness in any box does not exceed the limit.  \nThe objective is to determine an arrangement that uses the smallest possible number of boxes to store the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

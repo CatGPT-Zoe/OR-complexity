@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is preparing a shipment to be dispatched via a cargo aircraft with a maximum payload capacity. They must select a combination of cargo containers to maximize total revenue while adhering to the aircraft's weight limit.\n\nThe available containers are:\n* Container A: weight 2 tonnes, revenue 31 thousand dollars\n* Container B: weight 7 tonnes, revenue 169 thousand dollars\n* Container C: weight 6 tonnes, revenue 210 thousand dollars\n* Container D: weight 46 tonnes, revenue 75 thousand dollars\n* Container E: weight 50 tonnes, revenue 281 thousand dollars\n* Container F: weight 13 tonnes, revenue 152 thousand dollars\n* Container G: weight 19 tonnes, revenue 91 thousand dollars\n* Container H: weight 12 tonnes, revenue 125 thousand dollars\n* Container I: weight 9 tonnes, revenue 76 thousand dollars\n* Container J: weight 15 tonnes, revenue 142 thousand dollars\n* Container K: weight 32 tonnes, revenue 165 thousand dollars\n* Container L: weight 10 tonnes, revenue 148 thousand dollars\n* Container M: weight 14 tonnes, revenue 50 thousand dollars\n* Container N: weight 9 tonnes, revenue 218 thousand dollars\n* Container O: weight 12 tonnes, revenue 111 thousand dollars\n* Container P: weight 38 tonnes, revenue 18 thousand dollars\n* Container Q: weight 23 tonnes, revenue 285 thousand dollars\n* Container R: weight 43 tonnes, revenue 255 thousand dollars\n\nFurthermore, due to contractual obligations, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, the effective payload capacity of the aircraft is diminished by 10 tonnes.\nThe aircraft can carry at most 251 tonnes. The firm must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

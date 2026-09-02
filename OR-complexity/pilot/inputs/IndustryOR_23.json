@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_23",
+  "annotation_mode": "semantic",
+  "problem_text": "Hongdou Clothing Factory uses three special equipment to produce shirts, short-sleeved shirts, and casual clothes respectively. It is known that the labor, material usage, selling price, and variable cost of each of the above products are as shown in Table 5-10.\n\nTable 5-10\n\n| Product Name | Labor per unit | Material per unit | Selling Price | Variable Cost |\n|--------------|----------------|------------------|---------------|---------------|\n| Shirt        | 3              | 4                | 120           | 60            |\n| Short-sleeve | 2              | 3                | 80            | 40            |\n| Casual Cloth | 6              | 6                | 180           | 80            |\n\nIt is known that the available labor per week is 1500 units, the available material is 1600 units, and the weekly fixed costs for the three special equipment for producing shirts, short-sleeved shirts, and casual clothes are 2000, 1500, and 1000 respectively. Design a weekly production plan for the factory to maximize its profit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

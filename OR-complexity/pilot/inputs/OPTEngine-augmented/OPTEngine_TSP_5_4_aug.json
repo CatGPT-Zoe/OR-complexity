@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is tasked with orchestrating a synchronized inspection tour across five regional warehouses, each situated at distinct geographical points:\nWarehouse Alpha: Positioned at grid reference (115,126)\nWarehouse Beta: Positioned at grid reference (169,164)\nWarehouse Gamma: Positioned at grid reference (179,91)\nWarehouse Delta: Positioned at grid reference (21,83)\nWarehouse Epsilon: Positioned at grid reference (156,29)\n\nThe travel distances between these facilities, measured along available transport corridors, are precisely known:\nAlpha to Gamma: 72.9 km\nAlpha to Delta: 103.4 km\nAlpha to Epsilon: 105.3 km\nBeta to Gamma: 73.7 km\nBeta to Delta: 168.7 km\nBeta to Epsilon: 135.6 km\nGamma to Delta: 158.2 km\nGamma to Epsilon: 66.1 km\nDelta to Epsilon: 145.4 km\n\nDue to infrastructural limitations, no direct corridor exists connecting Warehouse Alpha and Warehouse Beta.\nFurthermore, operational protocols mandate that the final route must incorporate exactly one of two critical, but mutually exclusive, supply links: either the corridor between Warehouse Beta and Warehouse Gamma, or the corridor between Warehouse Gamma and Warehouse Delta.\n\nThe objective is to determine the most efficient cyclical inspection circuit, commencing and concluding at the same warehouse, while ensuring each facility is visited precisely once.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

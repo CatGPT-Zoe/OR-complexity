@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_6_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers to ship on a freighter. Available containers are:\n* Container A: weight 13 tons, revenue $143,000\n* Container B: weight 23 tons, revenue $250,000\n* Container C: weight 37 tons, revenue $96,000\n* Container D: weight 45 tons, revenue $114,000\n* Container E: weight 50 tons, revenue $39,000\n* Container F: weight 44 tons, revenue $91,000\nThe vessel has a maximum cargo capacity of 148 tons. Choose the container combination that yields the highest total revenue without exceeding this weight limit. Each container is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

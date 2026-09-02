@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must design a procurement and storage strategy for a critical fuel additive across a 5-week operational window.\nThe initial stock at the start of the planning window is 11 gallons.\nIn each week t = 1, ..., 5, the vendor permits the company to issue a procurement request whose volume must fall between 2 and 40 gallons.\nHowever, each requested shipment will require 4 week(s) for transit before it becomes available to meet consumption or replenish stock.\nThe consumption of the additive in each week is specified as follows:\n* Week 1: consumption 24 gallons\n* Week 2: consumption 25 gallons\n* Week 3: consumption 19 gallons\n* Week 4: consumption 44 gallons\n* Week 5: consumption 38 gallons\n\nStockouts are permissible, but any unsatisfied consumption will be forfeited and not carried forward.\nThroughout the planning window, additive volumes may be treated as continuous quantities, and the total volume of physically stored additive at any moment must not exceed the storage tank capacity of 37 gallons.\nThe aggregate expenditure over the planning window comprises three elements: the procurement cost, which is 4 per gallon requested; the storage cost, which is 1 per gallon of stock held over from one week to the next; and the penalty for unmet consumption, which is 10 per gallon of unsatisfied demand. The objective is to ascertain the optimal procurement volume for each week and to monitor the consequent stock and shortfall levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

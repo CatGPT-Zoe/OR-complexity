@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_5_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner must allocate a fixed budget across 5 infrastructure projects to maximize the total projected community benefit.\nThe profile for each project is as follows:\n* Project 1: projected benefit is 0.165, disruption index is 0.170, allocation bounds [0.070, 0.440]\n* Project 2: projected benefit is 0.151, disruption index is 0.251, allocation bounds [0.005, 0.361]\n* Project 3: projected benefit is 0.117, disruption index is 0.189, allocation bounds [0.023, 0.467]\n* Project 4: projected benefit is 0.195, disruption index is 0.260, allocation bounds [0.029, 0.681]\n* Project 5: projected benefit is 0.088, disruption index is 0.177, allocation bounds [0.008, 0.519]\nEach project must receive a budget share within its specified bounds, and the sum of all budget shares must equal the total available budget. To ensure equitable development, the planner requires that the group of quick-impact projects, represented by the subset Q = {2, 5}, collectively receive at least 0.265 of the total budget. Furthermore, the overall disruption index for the portfolio must not exceed 0.318, and the total projected community benefit must be at least 0.111. Please determine the optimal budget allocation that maximizes the total projected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

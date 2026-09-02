@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment to maximize total utility while adhering to a vehicle's cargo weight limit.\n\nThe equipment units available are:\n* Unit A: weight 50kg, utility 289 credits\n* Unit B: weight 23kg, utility 86 credits\n* Unit C: weight 3kg, utility 14 credits\n* Unit D: weight 9kg, utility 207 credits\n* Unit E: weight 24kg, utility 24 credits\n* Unit F: weight 24kg, utility 181 credits\n* Unit G: weight 34kg, utility 214 credits\n* Unit H: weight 35kg, utility 66 credits\n* Unit I: weight 7kg, utility 293 credits\n* Unit J: weight 13kg, utility 118 credits\n* Unit K: weight 21kg, utility 294 credits\n* Unit L: weight 26kg, utility 83 credits\n* Unit M: weight 3kg, utility 52 credits\n* Unit N: weight 3kg, utility 191 credits\n* Unit O: weight 14kg, utility 220 credits\n* Unit P: weight 37kg, utility 69 credits\n* Unit Q: weight 27kg, utility 116 credits\n* Unit R: weight 22kg, utility 56 credits\n* Unit S: weight 7kg, utility 80 credits\n* Unit T: weight 18kg, utility 130 credits\n* Unit U: weight 43kg, utility 97 credits\n* Unit V: weight 14kg, utility 206 credits\n* Unit W: weight 28kg, utility 111 credits\n* Unit X: weight 14kg, utility 15 credits\n\nFurthermore, due to compatibility constraints, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is included, it requires special handling that reduces the effective cargo capacity of the vehicle by 10 kg.\nThe vehicle can transport at most 349 kg. The manager must determine which units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

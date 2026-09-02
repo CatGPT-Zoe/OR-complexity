@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select a set of cargo containers to load onto a delivery truck, aiming to maximize total profit while adhering to the truck's weight capacity.\n\nThe available containers are:\n* Container A: weight 21kg, profit 185 credits\n* Container B: weight 13kg, profit 231 credits\n* Container C: weight 10kg, profit 13 credits\n* Container D: weight 49kg, profit 271 credits\n* Container E: weight 10kg, profit 298 credits\n* Container F: weight 25kg, profit 194 credits\n* Container G: weight 30kg, profit 28 credits\n* Container H: weight 36kg, profit 220 credits\n* Container I: weight 41kg, profit 126 credits\n* Container J: weight 2kg, profit 195 credits\n* Container K: weight 34kg, profit 91 credits\n* Container L: weight 44kg, profit 109 credits\n* Container M: weight 41kg, profit 191 credits\n\nFurthermore, due to contractual obligations, exactly one of Container A or Container B must be included in the shipment.\n\nA special handling requirement applies to Container C: if it is loaded, the effective weight capacity of the truck is diminished by 10 kg.\nThe truck's maximum allowable load is 249 kg. The manager must determine the optimal selection of containers.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment for a critical three-stage transport route. They must select a combination of cargo units to maximize total profit while adhering to the vehicle's weight restriction.\n\nThe available cargo units are:\n* Cargo A: weight 28kg, profit 123 credits\n* Cargo B: weight 39kg, profit 213 credits\n* Cargo C: weight 36kg, profit 123 credits\n* Cargo D: weight 30kg, profit 108 credits\n* Cargo E: weight 22kg, profit 62 credits\n* Cargo F: weight 39kg, profit 53 credits\n* Cargo G: weight 21kg, profit 175 credits\n* Cargo H: weight 35kg, profit 243 credits\n* Cargo I: weight 21kg, profit 140 credits\n* Cargo J: weight 2kg, profit 277 credits\n* Cargo K: weight 3kg, profit 107 credits\n\nFurthermore, due to contractual obligations, precisely one of Cargo A or Cargo B must be included in the shipment.\n\nIf Cargo C is selected, the vehicle's effective load capacity is diminished by 10 kg.\nThe vehicle's maximum permissible load is 193 kg. The manager must determine the optimal set of cargo units to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage strategy for a critical medical supply over a 13‑week planning window.  \nThe initial stock at the start of the planning interval is 52 liters.  \nIn each week \\(t = 1,\\dots,13\\), the supplier permits the hospital to place a procurement request whose volume must be between 20 and 24 liters.  \nEvery order placed, however, requires a 2‑week lead time before it becomes available to meet patient needs or to replenish the storage.  \nWeekly patient demand for the plasma is as follows:  \n* Week 1: 50 liters  \n* Week 2: 17 liters  \n* Week 3: 18 liters  \n* Week 4: 30 liters  \n* Week 5: 11 liters  \n* Week 6: 21 liters  \n* Week 7: 56 liters  \n* Week 8: 18 liters  \n* Week 9: 11 liters  \n* Week 10: 31 liters  \n* Week 11: 48 liters  \n* Week 12: 22 liters  \n* Week 13: 12 liters  \n\nSupply shortfalls are tolerated, but any unsatisfied demand is lost and cannot be deferred to later weeks.  \nThroughout the planning horizon, plasma volumes may be treated as continuous quantities, and the total on‑hand inventory at any moment must not exceed the refrigerated storage capacity of 52 liters.  \nThe overall cost comprises three elements: the procurement cost, charged at 4 per liter ordered; the refrigeration cost, charged at 1 per liter carried from one week to the next; and a shortage penalty, levied at 15 per liter of unmet demand.  \nThe objective is to determine the optimal procurement quantity for each week and to monitor the resulting inventory and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

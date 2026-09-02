@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are as follows:\n* Package 1: 32 cubic feet\n* Package 2: 47 cubic feet\n* Package 3: 51 cubic feet\n* Package 4: 31 cubic feet\n* Package 5: 49 cubic feet\n* Package 6: 55 cubic feet\n* Package 7: 36 cubic feet\n* Package 8: 54 cubic feet\n* Package 9: 56 cubic feet\n* Package 10: 51 cubic feet\n* Package 11: 43 cubic feet\n* Package 12: 45 cubic feet\n* Package 13: 40 cubic feet\n* Package 14: 68 cubic feet\n* Package 15: 58 cubic feet\n* Package 16: 54 cubic feet\n* Package 17: 50 cubic feet\n* Package 18: 58 cubic feet\n* Package 19: 64 cubic feet\n* Package 20: 39 cubic feet\n* Package 21: 66 cubic feet\n* Package 22: 36 cubic feet\n* Package 23: 48 cubic feet\n* Package 24: 58 cubic feet\n* Package 25: 69 cubic feet\n* Package 26: 37 cubic feet\n* Package 27: 38 cubic feet\n* Package 28: 49 cubic feet\n* Package 29: 64 cubic feet\n* Package 30: 45 cubic feet\n* Package 31: 62 cubic feet\n* Package 32: 51 cubic feet\n* Package 33: 56 cubic feet\n* Package 34: 66 cubic feet\n* Package 35: 51 cubic feet\n* Package 36: 34 cubic feet\n* Package 37: 53 cubic feet\n* Package 38: 61 cubic feet\n* Package 39: 30 cubic feet\n\nEach truck has a maximum cargo capacity of 100 cubic feet. Assign all packages to trucks using the fewest number of trucks possible. Every package must be loaded onto exactly one truck, and the total volume of packages in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

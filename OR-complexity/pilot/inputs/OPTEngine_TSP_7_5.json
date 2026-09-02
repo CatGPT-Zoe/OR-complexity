@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional courier network must dispatch a vehicle to collect time-sensitive documents from seven distinct offices scattered across a metropolitan area.\n\nThe travel durations between offices, recorded in minutes, are as follows:\n* Office P to Q: 172.8 minutes\n* Office P to R: 169.9 minutes\n* Office P to S: 174.1 minutes\n* Office P to T: 110.6 minutes\n* Office P to U: 139.3 minutes\n* Office P to V: 193.5 minutes\n* Office Q to R: 31.4 minutes\n* Office Q to S: 9.5 minutes\n* Office Q to T: 62.5 minutes\n* Office Q to U: 90.7 minutes\n* Office Q to V: 117.7 minutes\n* Office R to S: 40.9 minutes\n* Office R to T: 62.2 minutes\n* Office R to U: 64.0 minutes\n* Office R to V: 86.4 minutes\n* Office S to T: 65.0 minutes\n* Office S to U: 99.0 minutes\n* Office S to V: 127.2 minutes\n* Office T to U: 68.3 minutes\n* Office T to V: 119.7 minutes\n* Office U to V: 56.4 minutes\n\nThe dispatcher must determine the sequence for the collection run that minimizes the total travel time, requiring the vehicle to visit each office precisely once before concluding its circuit back at the initial departure point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a cargo drone. The available packages are:\n\n* Package 1: weight 6kg, revenue 240 credits\n* Package 2: weight 19kg, revenue 169 credits\n* Package 3: weight 32kg, revenue 202 credits\n* Package 4: weight 18kg, revenue 123 credits\n* Package 5: weight 44kg, revenue 296 credits\n* Package 6: weight 24kg, revenue 281 credits\n* Package 7: weight 39kg, revenue 65 credits\n* Package 8: weight 41kg, revenue 176 credits\n* Package 9: weight 26kg, revenue 199 credits\n* Package 10: weight 8kg, revenue 283 credits\n* Package 11: weight 50kg, revenue 84 credits\n* Package 12: weight 40kg, revenue 253 credits\n* Package 13: weight 40kg, revenue 206 credits\n* Package 14: weight 34kg, revenue 189 credits\n* Package 15: weight 18kg, revenue 283 credits\n* Package 16: weight 10kg, revenue 79 credits\n* Package 17: weight 5kg, revenue 88 credits\n* Package 18: weight 6kg, revenue 141 credits\n* Package 19: weight 3kg, revenue 122 credits\n* Package 20: weight 42kg, revenue 268 credits\n* Package 21: weight 23kg, revenue 209 credits\n* Package 22: weight 36kg, revenue 188 credits\n* Package 23: weight 48kg, revenue 64 credits\n* Package 24: weight 45kg, revenue 267 credits\n* Package 25: weight 46kg, revenue 250 credits\n* Package 26: weight 2kg, revenue 113 credits\n\nThe drone has a maximum payload capacity of 493 kg. Determine the optimal combination of packages to maximize total revenue without exceeding this weight limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

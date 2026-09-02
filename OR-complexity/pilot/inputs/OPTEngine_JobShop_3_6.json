@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital has three patients who each need to undergo three different medical procedures.\n\nEach patient's treatment plan is a fixed sequence of procedures, represented as pairs (Treatment_Room, Duration),\nwhere each pair specifies the room where the procedure must be performed and the time required to complete it.\nThe order of the pairs indicates the strict sequence in which the procedures must be administered.\n\nPatient treatment plans:\n* Patient A requires: (Room1, 2) → (Room3, 4) → (Room2, 6)\n* Patient B requires: (Room1, 1) → (Room2, 2) → (Room3, 3)\n* Patient C requires: (Room3, 10) → (Room1, 9) → (Room2, 10)\n\nEach procedure must be performed without interruption once it begins, and each treatment room can only accommodate one patient at a time.\nThe objective is to schedule all procedures across the treatment rooms to minimize the total time until all patients have completed their treatments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a cargo shipment for a specialized delivery route. They must select a combination of cargo units to maximize total profit while adhering to the aircraft's payload limit.\n\nThe available cargo units are:\n* Unit A: weight 15kg, profit 229 credits\n* Unit B: weight 16kg, profit 139 credits\n* Unit C: weight 31kg, profit 253 credits\n* Unit D: weight 10kg, profit 126 credits\n* Unit E: weight 29kg, profit 155 credits\n* Unit F: weight 24kg, profit 258 credits\n* Unit G: weight 39kg, profit 86 credits\n* Unit H: weight 34kg, profit 54 credits\n* Unit I: weight 13kg, profit 163 credits\n* Unit J: weight 34kg, profit 72 credits\n* Unit K: weight 4kg, profit 89 credits\n* Unit L: weight 22kg, profit 28 credits\n* Unit M: weight 22kg, profit 92 credits\n* Unit N: weight 50kg, profit 249 credits\n* Unit O: weight 25kg, profit 106 credits\n\nFurthermore, due to compatibility requirements, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, it necessitates special handling equipment that reduces the effective payload capacity of the aircraft by 10 kg.\nThe maximum allowable total payload is 257 kg. The firm must determine which cargo units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

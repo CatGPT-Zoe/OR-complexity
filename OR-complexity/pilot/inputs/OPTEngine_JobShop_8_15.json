@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_8_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must coordinate 8 cargo vessels through 8 sequential port terminals.  \n\nEach vessel follows a predetermined route of port calls, represented as (Terminal, Handling time) pairs, where each pair specifies the terminal where the vessel must dock and the number of hours required to complete cargo operations. The sequence of pairs indicates the strict order in which the port calls must occur.  \n\nVessel itineraries:  \n* V1 follows: (T8, 5) → (T2, 7) → (T1, 1) → (T6, 10) → (T4, 5) → (T3, 6) → (T7, 8) → (T5, 2)  \n* V2 follows: (T1, 7) → (T7, 2) → (T6, 7) → (T3, 1) → (T2, 1) → (T4, 2) → (T5, 6) → (T8, 1)  \n* V3 follows: (T5, 10) → (T3, 3) → (T1, 8) → (T6, 2) → (T8, 10) → (T7, 3) → (T4, 1) → (T2, 9)  \n* V4 follows: (T3, 2) → (T7, 8) → (T1, 7) → (T6, 2) → (T5, 2) → (T8, 8) → (T4, 8) → (T2, 9)  \n* V5 follows: (T3, 2) → (T5, 9) → (T1, 1) → (T2, 9) → (T8, 4) → (T4, 2) → (T7, 7) → (T6, 6)  \n* V6 follows: (T6, 3) → (T5, 10) → (T8, 7) → (T7, 6) → (T4, 5) → (T2, 6) → (T1, 9) → (T3, 6)  \n* V7 follows: (T1, 3) → (T8, 2) → (T7, 8) → (T2, 8) → (T3, 3) → (T4, 5) → (T6, 5) → (T5, 3)  \n* V8 follows: (T1, 3) → (T2, 5) → (T6, 6) → (T3, 4) → (T5, 2) → (T8, 10) → (T4, 4) → (T7, 6)  \n\nEach vessel’s port call must proceed without interruption once it begins, and each terminal can only accommodate one vessel at a time. The goal is to schedule all port calls across the terminals so that the total time required to complete all vessel itineraries is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

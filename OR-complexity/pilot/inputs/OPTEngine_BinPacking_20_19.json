@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of distinct cargo parcels onto identical transport pallets. The parcels are as follows:\n* Parcel Alpha: mass 32 units\n* Parcel Bravo: mass 30 units\n* Parcel Charlie: mass 54 units\n* Parcel Delta: mass 51 units\n* Parcel Echo: mass 40 units\n* Parcel Foxtrot: mass 65 units\n* Parcel Golf: mass 39 units\n* Parcel Hotel: mass 40 units\n* Parcel India: mass 41 units\n* Parcel Juliet: mass 40 units\n* Parcel Kilo: mass 70 units\n* Parcel Lima: mass 45 units\n* Parcel Mike: mass 69 units\n* Parcel November: mass 51 units\n* Parcel Oscar: mass 31 units\n* Parcel Papa: mass 60 units\n* Parcel Quebec: mass 70 units\n* Parcel Romeo: mass 55 units\n* Parcel Sierra: mass 32 units\n* Parcel Tango: mass 44 units\n\nEach pallet has a maximum safe load capacity of 100 mass units. The coordinator must assign every parcel to exactly one pallet, ensuring the combined mass on any pallet does not surpass its load limit. The objective is to complete this allocation using the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

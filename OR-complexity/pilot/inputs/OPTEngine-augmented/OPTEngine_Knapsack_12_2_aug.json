@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment to maximize total utility score while staying within the truck's cargo weight allowance.\n\nThe equipment pieces available are:\n* Component A: weight 17kg, utility 80 points\n* Component B: weight 39kg, utility 215 points\n* Component C: weight 46kg, utility 107 points\n* Component D: weight 21kg, utility 159 points\n* Component E: weight 25kg, utility 40 points\n* Component F: weight 14kg, utility 29 points\n* Component G: weight 21kg, utility 137 points\n* Component H: weight 22kg, utility 235 points\n* Component I: weight 43kg, utility 125 points\n* Component J: weight 17kg, utility 186 points\n* Component K: weight 43kg, utility 93 points\n* Component L: weight 20kg, utility 18 points\n\nDue to compatibility protocols, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, it requires a special protective casing that reduces the effective cargo capacity of the truck by 10 kg.\nThe truck's maximum allowable cargo weight is 229 kg. The manager must determine which components to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

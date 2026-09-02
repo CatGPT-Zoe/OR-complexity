@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of shipments into identical cargo aircraft. The shipments are as follows:\n\n* Shipment Alpha: mass 63 metric tons\n* Shipment Beta: mass 67 metric tons\n* Shipment Gamma: mass 67 metric tons\n* Shipment Delta: mass 55 metric tons\n* Shipment Epsilon: mass 64 metric tons\n* Shipment Zeta: mass 37 metric tons\n* Shipment Eta: mass 36 metric tons\n* Shipment Theta: mass 69 metric tons\n* Shipment Iota: mass 65 metric tons\n* Shipment Kappa: mass 42 metric tons\n* Shipment Lambda: mass 43 metric tons\n* Shipment Mu: mass 50 metric tons\n* Shipment Nu: mass 65 metric tons\n* Shipment Xi: mass 55 metric tons\n* Shipment Omicron: mass 39 metric tons\n* Shipment Pi: mass 32 metric tons\n* Shipment Rho: mass 35 metric tons\n* Shipment Sigma: mass 32 metric tons\n* Shipment Tau: mass 70 metric tons\n* Shipment Upsilon: mass 52 metric tons\n* Shipment Phi: mass 43 metric tons\n* Shipment Chi: mass 56 metric tons\n* Shipment Psi: mass 66 metric tons\n* Shipment Omega: mass 37 metric tons\n* Shipment Aleph: mass 56 metric tons\n* Shipment Beth: mass 43 metric tons\n* Shipment Gimel: mass 51 metric tons\n* Shipment Daleth: mass 35 metric tons\n* Shipment He: mass 36 metric tons\n* Shipment Waw: mass 38 metric tons\n* Shipment Zayin: mass 47 metric tons\n* Shipment Heth: mass 45 metric tons\n* Shipment Teth: mass 40 metric tons\n* Shipment Yodh: mass 43 metric tons\n\nEach aircraft possesses a maximum payload capacity of 100 metric tons. The coordinator must assign all shipments using the smallest possible number of aircraft. Every shipment must be placed on exactly one aircraft, and the cumulative mass loaded onto any single aircraft must not surpass its designated limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

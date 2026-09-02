@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is tasked with allocating its fleet of three specialized vehicles to transport three distinct categories of cargo. The revenue generated per ton for each cargo type is specified:\n* For Cargo Alpha, revenue is 5.871 per ton.\n* For Cargo Beta, revenue is 15.143 per ton.\n* For Cargo Gamma, revenue is 17.681 per ton.\n\nThe fuel consumption, measured in ton-hours, required for each vehicle to move a ton of cargo is detailed below:\n* For Cargo Alpha, Vehicle 1 consumes 0.816 ton-hours, Vehicle 2 consumes 0.651 ton-hours, and Vehicle 3 consumes 1.274 ton-hours.\n* For Cargo Beta, Vehicle 1 consumes 0.996 ton-hours, Vehicle 2 consumes 0.515 ton-hours, and Vehicle 3 consumes 1.049 ton-hours.\n* For Cargo Gamma, Vehicle 1 consumes 0.938 ton-hours, Vehicle 2 consumes 1.224 ton-hours, and Vehicle 3 consumes 1.115 ton-hours.\n\nThe total operational hours available for each vehicle are strictly limited:\n* Vehicle 1's total operational hours cannot exceed 116.553.\n* Vehicle 2's total operational hours cannot exceed 65.351.\n* Vehicle 3's total operational hours cannot exceed 147.987.\n\nUnder the condition that the cumulative operational hours for Vehicle 1, Vehicle 2, and Vehicle 3 must each remain within their respective availability constraints, determine the optimal tonnage of each cargo type to transport in order to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

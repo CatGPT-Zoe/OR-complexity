@@ -1,0 +1,13 @@
+anchor_id,dataset,difficulty,contrast_role
+IndustryOR_Easy_092_bus_rental,IndustryOR,Easy,simple surface structure
+IndustryOR_Easy_077_machine_assignment,IndustryOR,Easy,multi-rule / multi-entity
+IndustryOR_Hard_026_shift_scheduling,IndustryOR,Hard,simple surface structure (cyclic coverage)
+IndustryOR_Hard_036_vrp,IndustryOR,Hard,multi-entity / high coupling
+NL4OPT_000_oil_spill_transport,NL4OPT,N/A,low coupling LP
+NL4OPT_013_radiation_beams,NL4OPT,N/A,higher coupling LP
+MIPLIB_NL_flugpl_fleet,MIPLIB-NL,N/A,smaller family-level structure
+MIPLIB_NL_graph20_20_cuts,MIPLIB-NL,N/A,"clearly more complex (multi-index, logical)"
+LEAN_TP8_transportation,LEAN-LLM-OPT,N/A,relatively sparse (transportation)
+LEAN_Mixture6_truck_scheduling,LEAN-LLM-OPT,N/A,multi-index / highly interacting
+OPTEngine_BinPacking,OPTEngine,N/A,controlled low coupling
+OPTEngine_JobShop,OPTEngine,N/A,controlled high coupling

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments of electronic components into standardized delivery boxes. Components:\n* Component Alpha: size 61 units\n* Component Beta: size 52 units\n* Component Gamma: size 35 units\n* Component Delta: size 50 units\n* Component Epsilon: size 69 units\n* Component Zeta: size 37 units\n* Component Eta: size 61 units\n* Component Theta: size 67 units\n* Component Iota: size 70 units\n* Component Kappa: size 51 units\n* Component Lambda: size 42 units\n\nEach box can accommodate components totaling up to 100 size units. Prepare all components for shipment using the minimum number of boxes. Every component must be placed in exactly one box, and the combined size of components in any box cannot surpass its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

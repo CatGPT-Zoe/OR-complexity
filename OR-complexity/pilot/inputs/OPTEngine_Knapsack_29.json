@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_29",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a freight truck. Available containers are:\n* Container 1: weight 28kg, value $140\n* Container 2: weight 50kg, value $195\n* Container 3: weight 17kg, value $224\n* Container 4: weight 27kg, value $274\n* Container 5: weight 20kg, value $257\n* Container 6: weight 28kg, value $131\n* Container 7: weight 46kg, value $101\n* Container 8: weight 43kg, value $242\n* Container 9: weight 19kg, value $78\n* Container 10: weight 7kg, value $298\n* Container 11: weight 12kg, value $76\n* Container 12: weight 17kg, value $154\n* Container 13: weight 18kg, value $64\n* Container 14: weight 21kg, value $67\n* Container 15: weight 1kg, value $110\n* Container 16: weight 5kg, value $172\n* Container 17: weight 34kg, value $33\n* Container 18: weight 18kg, value $258\n* Container 19: weight 28kg, value $71\n* Container 20: weight 11kg, value $141\n* Container 21: weight 44kg, value $109\n* Container 22: weight 15kg, value $170\n* Container 23: weight 12kg, value $29\n* Container 24: weight 4kg, value $10\n* Container 25: weight 13kg, value $58\n* Container 26: weight 47kg, value $35\n* Container 27: weight 32kg, value $56\n* Container 28: weight 20kg, value $110\n* Container 29: weight 33kg, value $192\n\nThe truck has a maximum weight capacity of 468 kg. Choose which containers to load to maximize the total value without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

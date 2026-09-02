@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate its fleet of delivery vehicles to fulfill regional distribution orders while minimizing total fuel expenditure.\n\nThe number of vehicles available at each dispatch hub (set H) is as follows:\n*H1 has 189 vehicles.\n*H2 has 147 vehicles.\n*H3 has 151 vehicles.\n*H4 has 138 vehicles.\n*H5 has 87 vehicles.\n*H6 has 124 vehicles.\n*H7 has 60 vehicles.\n*H8 has 123 vehicles.\n\nThe required number of vehicles to be delivered to each regional distribution center (set C) is as follows:\n*C1 requires 18 vehicles.\n*C2 requires 206 vehicles.\n*C3 requires 146 vehicles.\n*C4 requires 167 vehicles.\n*C5 requires 47 vehicles.\n*C6 requires 184 vehicles.\n*C7 requires 60 vehicles.\n*C8 requires 124 vehicles.\n\nThe fuel cost per vehicle dispatched from a hub to a center is provided in the table below:\n| From / To | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 |\n|--|-|-|-|-|-|-|-|\n| H1 | 9 | 5 | 4 | 20 | 19 | 8 | 8 | 2 |\n| H2 | 17 | 8 | 8 | 2 | 4 | 14 | 11 | 16 |\n| H3 | 4 | 5 | 1 | 18 | 6 | 14 | 16 | 16 |\n| H4 | 7 | 10 | 11 | 10 | 2 | 3 | 19 | 8 |\n| H5 | 18 | 2 | 6 | 14 | 6 | 2 | 13 | 16 |\n| H6 | 6 | 10 | 2 | 1 | 10 | 19 | 20 | 4 |\n| H7 | 11 | 10 | 15 | 18 | 17 | 16 | 5 | 17 |\n| H8 | 15 | 9 | 7 | 4 | 11 | 6 | 15 | 9 |\n\nDetermine the optimal vehicle dispatch plan to achieve the minimum total fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

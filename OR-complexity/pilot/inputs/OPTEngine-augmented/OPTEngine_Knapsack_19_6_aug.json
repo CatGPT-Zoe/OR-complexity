@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a specialized shipping container for a critical 3-day expedition to a remote site. They must select a combination of cargo units to maximize total utility points while adhering to a strict total mass constraint.\n\nThe available cargo units are:\n* Unit A: mass 16kg, utility 201 points\n* Unit B: mass 43kg, utility 246 points\n* Unit C: mass 17kg, utility 289 points\n* Unit D: mass 11kg, utility 240 points\n* Unit E: mass 26kg, utility 17 points\n* Unit F: mass 7kg, utility 12 points\n* Unit G: mass 7kg, utility 178 points\n* Unit H: mass 47kg, utility 116 points\n* Unit I: mass 20kg, utility 288 points\n* Unit J: mass 8kg, utility 266 points\n* Unit K: mass 50kg, utility 164 points\n* Unit L: mass 6kg, utility 62 points\n* Unit M: mass 35kg, utility 157 points\n* Unit N: mass 48kg, utility 41 points\n* Unit O: mass 16kg, utility 66 points\n* Unit P: mass 44kg, utility 94 points\n* Unit Q: mass 29kg, utility 94 points\n* Unit R: mass 11kg, utility 248 points\n* Unit S: mass 17kg, utility 95 points\n\nFurthermore, due to compatibility requirements, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, it necessitates special internal bracing that reduces the effective container capacity by 10 kg.\nThe maximum allowable gross mass for the container is 320 kg. The firm must determine the optimal selection of cargo units.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

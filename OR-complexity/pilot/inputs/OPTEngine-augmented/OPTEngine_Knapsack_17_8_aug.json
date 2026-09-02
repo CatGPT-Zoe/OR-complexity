@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_17_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is tasked with selecting a subset of specialized cargo containers to be transported on a limited-capacity cargo vessel, aiming to maximize the total utility score of the shipment while adhering to the vessel's total weight constraint.\n\nThe containers available are:\n* Container A: weight 10 tonnes, utility 179 credits\n* Container B: weight 38 tonnes, utility 42 credits\n* Container C: weight 6 tonnes, utility 200 credits\n* Container D: weight 14 tonnes, utility 139 credits\n* Container E: weight 29 tonnes, utility 179 credits\n* Container F: weight 44 tonnes, utility 258 credits\n* Container G: weight 31 tonnes, utility 284 credits\n* Container H: weight 34 tonnes, utility 53 credits\n* Container I: weight 6 tonnes, utility 171 credits\n* Container J: weight 29 tonnes, utility 206 credits\n* Container K: weight 50 tonnes, utility 216 credits\n* Container L: weight 35 tonnes, utility 255 credits\n* Container M: weight 36 tonnes, utility 228 credits\n* Container N: weight 34 tonnes, utility 47 credits\n* Container O: weight 15 tonnes, utility 83 credits\n* Container P: weight 42 tonnes, utility 214 credits\n* Container Q: weight 33 tonnes, utility 170 credits\n\nFurthermore, due to contractual obligations, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, it necessitates the inclusion of additional ballast, which effectively reduces the vessel's usable weight capacity by 10 tonnes.\nThe vessel's maximum gross weight allowance is 340 tonnes. The manager must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with allocating a series of critical shipments onto identical cargo aircraft. The shipments are as follows:\n* Shipment Alpha: mass 30 tonnes\n* Shipment Beta: mass 33 tonnes\n* Shipment Gamma: mass 42 tonnes\n* Shipment Delta: mass 51 tonnes\n* Shipment Epsilon: mass 57 tonnes\n* Shipment Zeta: mass 45 tonnes\n* Shipment Eta: mass 51 tonnes\n* Shipment Theta: mass 57 tonnes\n* Shipment Iota: mass 67 tonnes\n* Shipment Kappa: mass 37 tonnes\n* Shipment Lambda: mass 51 tonnes\n* Shipment Mu: mass 34 tonnes\n* Shipment Nu: mass 60 tonnes\n* Shipment Xi: mass 68 tonnes\n* Shipment Omicron: mass 61 tonnes\n* Shipment Pi: mass 49 tonnes\n* Shipment Rho: mass 45 tonnes\n* Shipment Sigma: mass 54 tonnes\n* Shipment Tau: mass 33 tonnes\n* Shipment Upsilon: mass 52 tonnes\n* Shipment Phi: mass 51 tonnes\n* Shipment Chi: mass 40 tonnes\n* Shipment Psi: mass 35 tonnes\n* Shipment Omega: mass 65 tonnes\n* Shipment A1: mass 47 tonnes\n* Shipment B1: mass 59 tonnes\n* Shipment C1: mass 30 tonnes\n* Shipment D1: mass 69 tonnes\n* Shipment E1: mass 70 tonnes\n* Shipment F1: mass 40 tonnes\n* Shipment G1: mass 39 tonnes\n\nEach aircraft possesses a maximum payload capacity of 100 tonnes. The coordinator must assign all shipments to aircraft, ensuring each shipment is placed on exactly one aircraft and the cumulative mass aboard any given aircraft does not surpass its payload limit. The objective is to determine an allocation scheme that minimizes the total number of aircraft required for the entire operation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

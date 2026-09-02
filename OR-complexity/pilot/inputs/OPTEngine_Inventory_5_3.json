@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must devise a replenishment and stock policy for a critical spare part over a 5-day operational window.\nThe initial stock level at the start of the window is 74 units.\nFor each operational day t = 1, ..., 5, the supplier permits the company to issue a replenishment request, the size of which must fall between 8 and 48 units.\nHowever, each requested shipment requires a lead time of 3 days before it becomes available for fulfilling requirements or augmenting the on-hand stock.\nThe daily requirement for the part is specified as follows:\n* Day 1: requirement 25 units\n* Day 2: requirement 23 units\n* Day 3: requirement 53 units\n* Day 4: requirement 47 units\n* Day 5: requirement 36 units\n\nStockouts are tolerated, but any unfulfilled requirement is considered lost and will not be carried forward.\nThroughout the planning window, part quantities may be treated as continuous, and the aggregate volume of physical stock held at any moment must not surpass the storage facility's limit of 74 units.\nThe aggregate expenditure over the operational window comprises three elements: the procurement cost, calculated at 6 per unit requested; the storage cost, levied at 3 per unit of stock retained from one day to the next; and the penalty for unmet requirements, assessed at 11 per unit of lost demand. The objective is to ascertain the optimal replenishment quantity for each day and to monitor the consequent stock and shortage levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

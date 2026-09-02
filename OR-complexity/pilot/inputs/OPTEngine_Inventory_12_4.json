@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A maritime logistics company must devise a fuel procurement and storage strategy for a vessel during a 12-day voyage.  \nThe initial fuel reserve in the ship’s tanks at the voyage start is 39 kiloliters.  \nOn each day \\( t = 1, \\dots, 12 \\), the company can arrange a fuel delivery from a support vessel; the amount delivered must be between 9 and 20 kiloliters.  \nHowever, each delivery requires a 3-day transit period before the fuel becomes available for consumption or for adding to the tanks.  \nThe vessel’s daily fuel consumption is forecast as follows:  \n* Day 1: 20 kiloliters  \n* Day 2: 47 kiloliters  \n* Day 3: 17 kiloliters  \n* Day 4: 42 kiloliters  \n* Day 5: 50 kiloliters  \n* Day 6: 60 kiloliters  \n* Day 7: 44 kiloliters  \n* Day 8: 48 kiloliters  \n* Day 9: 34 kiloliters  \n* Day 10: 58 kiloliters  \n* Day 11: 37 kiloliters  \n* Day 12: 27 kiloliters  \n\nFuel shortfalls are permissible, but any consumption not met from on‑hand reserves or incoming deliveries is simply lost and cannot be recovered later.  \nThroughout the voyage, fuel quantities may be treated as continuous; the total volume of fuel stored on board at any moment must not exceed the tank capacity of 49 kiloliters.  \nThe total voyage cost comprises three elements: the delivery cost, which is 6 per kiloliter ordered; the storage cost, which is 2 per kiloliter kept in the tanks from one day to the next; and a penalty for unmet consumption, which is 10 per kiloliter of shortfall.  \nDetermine the optimal delivery quantity for each day and monitor the resulting tank levels and consumption deficits so as to minimize the total voyage cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

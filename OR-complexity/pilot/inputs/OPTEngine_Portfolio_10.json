@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate budget across 10 infrastructure projects to maximize the total expected community benefit. The project characteristics are as follows:\n* Project A: expected benefit 0.073, implementation complexity 0.283, allocation range [0.055, 0.446]\n* Project B: expected benefit 0.064, implementation complexity 0.139, allocation range [0.060, 0.613]\n* Project C: expected benefit 0.033, implementation complexity 0.231, allocation range [0.078, 0.711]\n* Project D: expected benefit 0.068, implementation complexity 0.040, allocation range [0.086, 0.402]\n* Project E: expected benefit 0.088, implementation complexity 0.035, allocation range [0.001, 0.461]\n* Project F: expected benefit 0.161, implementation complexity 0.135, allocation range [0.041, 0.461]\n* Project G: expected benefit 0.048, implementation complexity 0.172, allocation range [0.078, 0.388]\n* Project H: expected benefit 0.090, implementation complexity 0.159, allocation range [0.072, 0.400]\n* Project I: expected benefit 0.085, implementation complexity 0.040, allocation range [0.056, 0.466]\n* Project J: expected benefit 0.036, implementation complexity 0.036, allocation range [0.099, 0.480]\n\nEach project must receive a budget allocation percentage that falls within its specified range, and all allocations must sum to 100% of the total budget. To ensure timely completion, the quick-implementation projects group Q = {B, D, E, F, H, I, J} must collectively receive at least 41.6% of the total budget. Additionally, the overall implementation complexity score must not exceed 0.185, and the total expected community benefit must be at least 0.056. Determine the optimal budget allocation that maximizes total expected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

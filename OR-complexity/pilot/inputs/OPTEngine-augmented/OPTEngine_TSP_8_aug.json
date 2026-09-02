@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to service eight specialized facilities across a region. The facilities are positioned at the following grid coordinates:\n\nFacility Alpha: (106,27)\nFacility Beta: (25,143)\nFacility Gamma: (123,121)\nFacility Delta: (86,87)\nFacility Epsilon: (31,122)\nFacility Zeta: (29,179)\nFacility Eta: (127,109)\nFacility Theta: (9,77)\n\nTravel distances between facilities, in kilometers, are predetermined as follows:\nAlpha to Gamma: 95.5 km\nAlpha to Delta: 63.2 km\nAlpha to Epsilon: 121.0 km\nAlpha to Zeta: 170.4 km\nAlpha to Eta: 84.6 km\nAlpha to Theta: 109.1 km\nBeta to Gamma: 100.4 km\nBeta to Delta: 82.8 km\nBeta to Epsilon: 21.8 km\nBeta to Zeta: 36.2 km\nBeta to Eta: 107.5 km\nBeta to Theta: 67.9 km\nGamma to Delta: 50.2 km\nGamma to Epsilon: 92.0 km\nGamma to Zeta: 110.5 km\nGamma to Eta: 12.6 km\nGamma to Theta: 122.2 km\nDelta to Epsilon: 65.2 km\nDelta to Zeta: 108.2 km\nDelta to Eta: 46.5 km\nDelta to Theta: 77.6 km\nEpsilon to Zeta: 57.0 km\nEpsilon to Eta: 96.9 km\nEpsilon to Theta: 50.1 km\nZeta to Eta: 120.4 km\nZeta to Theta: 103.9 km\nEta to Theta: 122.3 km\n\nDirect travel between Facility Alpha and Facility Beta is not possible due to a geographical barrier. Furthermore, due to contractual obligations with local authorities, the technician's route must incorporate exactly one of two specific critical links: either the connection between Beta and Gamma, or the connection between Gamma and Delta.\n\nThe objective is to determine the minimal total travel distance for a circuit that services each facility precisely once before returning to the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

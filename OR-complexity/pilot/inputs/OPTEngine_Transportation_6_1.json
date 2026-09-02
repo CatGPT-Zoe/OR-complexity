@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A company must allocate computational tasks across a network of distributed servers (group S) to processing nodes (group P) in order to minimize total latency.\n\nThe available processing capacity at each server (set S) is defined as:\n*Server S1 has 124 units of capacity.\n*Server S2 has 58 units.\n*Server S3 has 109 units.\n*Server S4 has 123 units.\n*Server S5 has 122 units.\n*Server S6 has 166 units.\n\nThe required computational load at each processing node (set P) is stipulated:\n*Node P1 must handle 36 units of load.\n*Node P2 must handle 41 units.\n*Node P3 must handle 120 units.\n*Node P4 must handle 89 units.\n*Node P5 must handle 122 units.\n*Node P6 must handle 30 units.\n\nThe latency per unit of load transferred from each server to each node is provided in the matrix:\n| Source / Target | P1 | P2 | P3 | P4 | P5 | P6 |\n|--|-|-|-|-|-|\n| S1 | 4 | 18 | 8 | 5 | 9 | 5 |\n| S2 | 3 | 2 | 6 | 10 | 20 | 19 |\n| S3 | 10 | 15 | 4 | 15 | 10 | 13 |\n| S4 | 9 | 17 | 18 | 16 | 15 | 3 |\n| S5 | 20 | 2 | 14 | 11 | 20 | 9 |\n| S6 | 1 | 3 | 8 | 19 | 19 | 1 |\n\nDetermine the optimal allocation of computational loads to minimize the aggregate network latency.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

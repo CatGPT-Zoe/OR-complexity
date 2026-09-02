@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are:\n* Package Alpha: size 55 units\n* Package Beta: size 52 units\n* Package Gamma: size 61 units\n* Package Delta: size 33 units\n* Package Epsilon: size 31 units\n* Package Zeta: size 47 units\n* Package Eta: size 32 units\n* Package Theta: size 46 units\n* Package Iota: size 67 units\n* Package Kappa: size 48 units\n* Package Lambda: size 43 units\n* Package Mu: size 63 units\n* Package Nu: size 63 units\n* Package Xi: size 51 units\n* Package Omicron: size 54 units\n* Package Pi: size 46 units\n* Package Rho: size 43 units\n* Package Sigma: size 37 units\n\nEach truck has a maximum capacity of 100 units. Assign all packages using the minimum number of trucks. Every package must be loaded onto exactly one truck, and the total size of packages in any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

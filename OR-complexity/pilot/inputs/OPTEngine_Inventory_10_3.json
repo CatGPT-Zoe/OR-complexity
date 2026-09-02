@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a crucial fuel additive over a 10-day operational window.  \nThe starting stock at the dawn of the planning interval is 6 units.  \nFor each day \\( t = 1, \\dots, 10 \\), the vendor permits the company to submit a fuel‑additive purchase whose volume must be between 12 and 22 units inclusive.  \nEvery purchase, however, requires a lead time of 1 day before it becomes available to meet requirements or augment stock.  \nThe daily requirement for the additive is specified as:  \n* Day 1: 41 units  \n* Day 2: 34 units  \n* Day 3: 56 units  \n* Day 4: 24 units  \n* Day 5: 60 units  \n* Day 6: 22 units  \n* Day 7: 38 units  \n* Day 8: 23 units  \n* Day 9: 47 units  \n* Day 10: 55 units  \n\nStock‑outs are tolerated, but any unsatisfied requirement is entirely lost and not carried forward.  \nThroughout the 10‑day span, additive quantities may be treated as continuous values, and the physical stock on hand at any moment must not surpass the storage‑tank limit of 43 units.  \nThe aggregate expenditure comprises three elements: the procurement cost, charged at 6 per unit purchased; the storage cost, levied at 1 per unit held overnight; and a deficiency penalty, assessed at 8 per unit of unfulfilled daily requirement.  \nThe objective is to ascertain the optimal purchase volume for each day and to monitor the ensuing stock and shortfall levels so as to minimize the total outlay.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

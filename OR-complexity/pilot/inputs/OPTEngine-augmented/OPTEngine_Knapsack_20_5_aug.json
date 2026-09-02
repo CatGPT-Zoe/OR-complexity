@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment for a critical three-stage transport operation. They need to select a combination of cargo containers to maximize total utility points while adhering to the vehicle's total load capacity.\n\nThe available containers are:\n* Container A: mass 42 units, utility 80 credits\n* Container B: mass 12 units, utility 69 credits\n* Container C: mass 32 units, utility 257 credits\n* Container D: mass 43 units, utility 74 credits\n* Container E: mass 18 units, utility 143 credits\n* Container F: mass 9 units, utility 30 credits\n* Container G: mass 12 units, utility 189 credits\n* Container H: mass 48 units, utility 175 credits\n* Container I: mass 13 units, utility 58 credits\n* Container J: mass 33 units, utility 263 credits\n* Container K: mass 10 units, utility 138 credits\n* Container L: mass 21 units, utility 107 credits\n* Container M: mass 41 units, utility 69 credits\n* Container N: mass 40 units, utility 134 credits\n* Container O: mass 23 units, utility 214 credits\n* Container P: mass 50 units, utility 62 credits\n* Container Q: mass 18 units, utility 208 credits\n* Container R: mass 36 units, utility 192 credits\n* Container S: mass 3 units, utility 179 credits\n* Container T: mass 15 units, utility 211 credits\n\nFurthermore, due to routing restrictions, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, the vehicle's effective load capacity is diminished by 10 units.\nThe vehicle's maximum allowable gross load is 363 units. The manager must determine the optimal set of containers to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

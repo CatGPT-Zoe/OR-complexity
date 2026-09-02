@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of fragile scientific instruments into identical protective crates for international shipping. The instruments are as follows:\n\n* Instrument Alpha: mass 42 kg  \n* Instrument Beta: mass 63 kg  \n* Instrument Gamma: mass 48 kg  \n* Instrument Delta: mass 57 kg  \n* Instrument Epsilon: mass 36 kg  \n* Instrument Zeta: mass 49 kg  \n* Instrument Eta: mass 47 kg  \n* Instrument Theta: mass 40 kg  \n* Instrument Iota: mass 39 kg  \n* Instrument Kappa: mass 43 kg  \n* Instrument Lambda: mass 49 kg  \n* Instrument Mu: mass 38 kg  \n* Instrument Nu: mass 40 kg  \n* Instrument Xi: mass 52 kg  \n* Instrument Omicron: mass 43 kg  \n* Instrument Pi: mass 66 kg  \n* Instrument Rho: mass 67 kg  \n* Instrument Sigma: mass 40 kg  \n* Instrument Tau: mass 33 kg  \n* Instrument Upsilon: mass 36 kg  \n* Instrument Phi: mass 38 kg  \n* Instrument Chi: mass 46 kg  \n* Instrument Psi: mass 66 kg  \n* Instrument Omega: mass 48 kg  \n* Instrument Digamma: mass 48 kg  \n* Instrument Stigma: mass 41 kg  \n* Instrument Heta: mass 33 kg  \n* Instrument San: mass 47 kg  \n* Instrument Koppa: mass 66 kg  \n* Instrument Sampi: mass 53 kg  \n* Instrument Sho: mass 36 kg  \n* Instrument Tsan: mass 56 kg  \n* Instrument Yot: mass 46 kg  \n* Instrument Waw: mass 51 kg  \n\nEach protective crate is certified to safely support a maximum load of 100 kg. The coordinator must assign every instrument to precisely one crate, ensuring the cumulative mass within any given crate does not surpass its load capacity. The objective is to utilize the smallest possible number of crates to secure the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate its fleet of delivery trucks from three distribution hubs to three retail warehouses, with the objective of minimizing overall fuel expenditure.\n\nThe truck capacity at each hub is fixed as follows:  \nHub X can dispatch up to 136 vehicles.  \nHub Y can dispatch up to 76 vehicles.  \nHub Z can dispatch up to 73 vehicles.\n\nThe required number of trucks to be received at each warehouse is predetermined:  \nWarehouse P requires exactly 78 trucks.  \nWarehouse Q requires exactly 74 trucks.  \nWarehouse R requires exactly 56 trucks.\n\nThe fuel cost per truck dispatched from each hub to each warehouse is detailed in the table below:\n\n| From / To | Warehouse P | Warehouse Q | Warehouse R |\n|-----------|-------------|-------------|-------------|\n| Hub X     | 2           | 15          | 18          |\n| Hub Y     | 4           | 13          | 3           |\n| Hub Z     | 18          | 10          | 20          |\n\nDetermine the optimal number of trucks to route from each hub to each warehouse so that total fuel cost is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 6 cargo shipments through 6 specialized port terminals.\n\nEach shipment consists of a fixed sequence of terminal operations represented as (Terminal, Hours), where each pair specifies the terminal where the operation must occur and the number of hours it requires. The order of pairs indicates the mandatory sequence in which the terminal operations must be completed.\n\nShipment details:\n* S1 requires the sequence: (T1, 10) → (T6, 5) → (T3, 4) → (T4, 9) → (T5, 9) → (T2, 6)\n* S2 requires the sequence: (T4, 10) → (T3, 9) → (T2, 6) → (T1, 3) → (T6, 3) → (T5, 6)\n* S3 requires the sequence: (T6, 6) → (T1, 5) → (T5, 5) → (T3, 6) → (T4, 8) → (T2, 7)\n* S4 requires the sequence: (T5, 8) → (T4, 3) → (T2, 6) → (T1, 1) → (T3, 8) → (T6, 5)\n* S5 requires the sequence: (T6, 3) → (T5, 9) → (T2, 3) → (T1, 2) → (T4, 3) → (T3, 10)\n* S6 requires the sequence: (T1, 5) → (T5, 1) → (T4, 7) → (T2, 5) → (T3, 5) → (T6, 9)\n\nEach terminal operation must run continuously once it begins and cannot be interrupted, and each terminal can only handle one operation at a time. The objective is to determine the processing sequence of all operations across the terminals so that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

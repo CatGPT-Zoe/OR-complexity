@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital pharmacy must devise a procurement and stock management strategy for a critical medication over a 10-week planning cycle.\nThe starting stock at the commencement of the planning window is 78 doses.\nIn each week t = 1, ..., 10, the pharmaceutical distributor permits the pharmacy to place a procurement request whose volume must fall between 19 and 22 doses.\nNevertheless, each request submitted will require a 2-week lead time before the shipment is received and available for patient needs or to replenish the pharmacy stock.\nThe anticipated patient need for the medication in each week is specified as follows:\n* Week 1: need 55 doses\n* Week 2: need 15 doses\n* Week 3: need 37 doses\n* Week 4: need 48 doses\n* Week 5: need 16 doses\n* Week 6: need 49 doses\n* Week 7: need 50 doses\n* Week 8: need 39 doses\n* Week 9: need 55 doses\n* Week 10: need 19 doses\n\nStockouts are permissible, but any unsatisfied patient need will be forfeited and not carried forward.\nThroughout the planning cycle, medication quantities may be fractional, and the total volume of physical stock held at any point must not exceed the pharmacy's cold storage capacity of 78 doses.\n\nIn the first week, the maximum procurement volume is 22 doses.\nIn the second week, the physical stock on hand must be no less than 45 doses.\n\nThe aggregate expense across the planning cycle comprises three elements: the procurement expense, which is 3 per dose ordered; the storage expense, which is 3 per dose kept in storage from one week to the next; and the shortage penalty, which is 12 per dose of unmet patient need. Ascertain the optimal procurement volume for each week and monitor the consequent stock and shortage levels to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of delicate laboratory samples to identical refrigerated transport units.  \nThe samples are as follows:  \n* Sample Alpha: requires 54 units of coolant  \n* Sample Beta: requires 56 units of coolant  \n* Sample Gamma: requires 32 units of coolant  \n* Sample Delta: requires 46 units of coolant  \n* Sample Epsilon: requires 62 units of coolant  \n* Sample Zeta: requires 61 units of coolant  \n* Sample Theta: requires 55 units of coolant  \n* Sample Iota: requires 49 units of coolant  \n* Sample Kappa: requires 60 units of coolant  \n* Sample Lambda: requires 52 units of coolant  \n\nEach transport unit has a maximum coolant capacity of 100 units.  \nAll samples must be shipped, with every sample placed into exactly one transport unit, and the total coolant demand of the samples assigned to any single unit cannot surpass its capacity.  \nThe objective is to utilize the smallest possible number of transport units to complete the shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

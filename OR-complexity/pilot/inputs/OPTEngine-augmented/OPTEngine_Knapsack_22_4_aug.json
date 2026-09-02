@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_22_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a shipment of specialized components to maximize total utility while adhering to a strict total mass allowance for a cargo aircraft.\n\nThe components under consideration are:\n* Component A: mass 35kg, utility 223 units\n* Component B: mass 17kg, utility 16 units\n* Component C: mass 49kg, utility 197 units\n* Component D: mass 9kg, utility 32 units\n* Component E: mass 33kg, utility 120 units\n* Component F: mass 46kg, utility 237 units\n* Component G: mass 43kg, utility 148 units\n* Component H: mass 50kg, utility 223 units\n* Component I: mass 50kg, utility 40 units\n* Component J: mass 49kg, utility 137 units\n* Component K: mass 38kg, utility 146 units\n* Component L: mass 13kg, utility 182 units\n* Component M: mass 43kg, utility 63 units\n* Component N: mass 45kg, utility 147 units\n* Component O: mass 32kg, utility 200 units\n* Component P: mass 19kg, utility 39 units\n* Component Q: mass 17kg, utility 65 units\n* Component R: mass 23kg, utility 155 units\n* Component S: mass 13kg, utility 184 units\n* Component T: mass 15kg, utility 133 units\n* Component U: mass 13kg, utility 106 units\n* Component V: mass 44kg, utility 203 units\n\nA critical compatibility requirement dictates that exactly one of Component A and Component B can be included in the shipment.\n\nFurthermore, if Component C is selected, it necessitates special hazardous material handling that effectively reduces the aircraft's usable payload capacity by 10 kg.\nThe aircraft's maximum allowable payload mass is 487 kg. The firm must determine the optimal selection of components to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

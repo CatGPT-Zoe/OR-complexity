@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment to maximize total utility points for an upcoming expedition, while adhering to a strict total weight allowance for the transport vehicle.\n\nThe equipment modules available are:\n* Module A: weight 3kg, utility 225 points\n* Module B: weight 35kg, utility 148 points\n* Module C: weight 50kg, utility 91 points\n* Module D: weight 17kg, utility 33 points\n* Module E: weight 48kg, utility 147 points\n* Module F: weight 47kg, utility 50 points\n* Module G: weight 22kg, utility 223 points\n* Module H: weight 1kg, utility 146 points\n* Module I: weight 15kg, utility 101 points\n* Module J: weight 17kg, utility 199 points\n* Module K: weight 34kg, utility 68 points\n* Module L: weight 11kg, utility 264 points\n* Module M: weight 13kg, utility 300 points\n* Module N: weight 40kg, utility 47 points\n* Module O: weight 27kg, utility 156 points\n* Module P: weight 45kg, utility 31 points\n* Module Q: weight 17kg, utility 12 points\n* Module R: weight 2kg, utility 91 points\n* Module S: weight 22kg, utility 98 points\n* Module T: weight 26kg, utility 129 points\n\nA critical compatibility rule dictates that exactly one of Module A and Module B must be included in the final shipment.\n\nFurthermore, if Module C is selected, it necessitates the inclusion of a bulky support frame, which effectively reduces the vehicle's usable weight capacity by 10 kg.\nThe vehicle's maximum gross weight capacity is 344 kg. The manager must determine the optimal combination of modules to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

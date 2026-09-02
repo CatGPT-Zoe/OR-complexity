@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_6_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vessel. The available containers are:\n* Container A: mass 38 tons, revenue 150 credits\n* Container B: mass 29 tons, revenue 262 credits\n* Container C: mass 43 tons, revenue 192 credits\n* Container D: mass 6 tons, revenue 176 credits\n* Container E: mass 40 tons, revenue 69 credits\n* Container F: mass 32 tons, revenue 181 credits\n\nThe vessel has a maximum cargo capacity of 131 tons. Determine which containers to load to maximize total revenue without exceeding this weight limit. Each container must be loaded in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

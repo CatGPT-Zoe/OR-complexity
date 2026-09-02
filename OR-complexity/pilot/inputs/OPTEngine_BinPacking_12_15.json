@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_15",
+  "annotation_mode": "semantic",
+  "problem_text": "An urban planner is tasked with allocating a series of public art installations to various city squares. Each sculpture has a specific footprint requirement:\n* Sculpture Alpha: 30 square meters\n* Sculpture Beta: 32 square meters\n* Sculpture Gamma: 61 square meters\n* Sculpture Delta: 50 square meters\n* Sculpture Epsilon: 49 square meters\n* Sculpture Zeta: 59 square meters\n* Sculpture Eta: 33 square meters\n* Sculpture Theta: 56 square meters\n* Sculpture Iota: 42 square meters\n* Sculpture Kappa: 65 square meters\n* Sculpture Lambda: 70 square meters\n* Sculpture Mu: 35 square meters\n\nEach designated square can accommodate a total footprint of up to 100 square meters. The planner must assign every sculpture to exactly one square, ensuring the combined footprint in any square does not surpass its capacity. The objective is to utilize the minimal number of squares for the complete allocation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,218 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_BinPacking",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "packages",
+      "name": "packages",
+      "description": "packages that must be assigned to delivery trucks",
+      "values": ["P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"],
+      "source_spans": ["The packages are as follows: Package P, Package Q, Package R, Package S, Package T, Package U, Package V, Package W, Package X, Package Y."]
+    },
+    {
+      "id": "trucks",
+      "name": "trucks",
+      "description": "indexing domain for identical delivery trucks that may be used",
+      "values": null,
+      "source_spans": ["A logistics coordinator needs to assign packages to identical delivery trucks.", "identical delivery trucks (count decided by model)"]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "package_weight",
+      "name": "package_weight",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "weight of each package",
+      "unit": "pounds",
+      "values": {
+        "P": 67,
+        "Q": 43,
+        "R": 62,
+        "S": 38,
+        "T": 48,
+        "U": 38,
+        "V": 36,
+        "W": 69,
+        "X": 46,
+        "Y": 64
+      },
+      "source_spans": [
+        "Package P: 67 pounds",
+        "Package Q: 43 pounds",
+        "Package R: 62 pounds",
+        "Package S: 38 pounds",
+        "Package T: 48 pounds",
+        "Package U: 38 pounds",
+        "Package V: 36 pounds",
+        "Package W: 69 pounds",
+        "Package X: 46 pounds",
+        "Package Y: 64 pounds"
+      ]
+    },
+    {
+      "id": "truck_capacity",
+      "name": "truck_capacity",
+      "indices": [],
+      "description": "maximum load that each identical truck can carry",
+      "unit": "pounds",
+      "values": 100,
+      "source_spans": ["Each truck can carry a maximum load of 100 pounds."]
+    }
+  ],
+  "entities": [
+    {
+      "id": "package_assignment",
+      "canonical_name": "package_assignment",
+      "semantic_type": "assignment",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        },
+        {
+          "role": "truck",
+          "set_id": "trucks"
+        }
+      ],
+      "description": "relation indicating which delivery truck receives each package",
+      "value_semantics": "binary assignment relation: true when the package is placed on the truck",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "A logistics coordinator needs to assign packages to identical delivery trucks.",
+        "Every package must be placed on exactly one truck."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "truck_use",
+      "canonical_name": "truck_use",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "truck",
+          "set_id": "trucks"
+        }
+      ],
+      "description": "whether each indexed delivery truck is used",
+      "value_semantics": "binary operational activation state: true when the truck is used",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": ["Assign all packages using the fewest number of trucks."],
+      "confidence": 0.96
+    }
+  ],
+  "objective": {
+    "direction": "minimize",
+    "canonical_name": "minimize_trucks_used",
+    "normalized_semantics": "minimize the number of delivery trucks used to carry the packages",
+    "entity_scope": ["truck_use"],
+    "parameter_refs": [],
+    "source_spans": ["Assign all packages using the fewest number of trucks."],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "assign_each_package_exactly_once",
+      "obligation_type": "assignment",
+      "normalized_semantics": "each package must be assigned to exactly one delivery truck",
+      "support_entity_ids": ["package_assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "package_assignment",
+          "role": "package_coverage",
+          "aggregation_axes": ["truck"],
+          "index_binding": {
+            "package": "p"
+          }
+        }
+      ],
+      "quantifiers": ["for all packages p"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["Every package must be placed on exactly one truck."],
+      "confidence": 1.0
+    },
+    {
+      "id": "o2",
+      "canonical_name": "truck_load_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the total weight of packages assigned to any truck must not exceed that truck's 100-pound capacity",
+      "support_entity_ids": ["package_assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "package_assignment",
+          "role": "weighted_truck_load",
+          "aggregation_axes": ["package"],
+          "index_binding": {
+            "truck": "k"
+          }
+        }
+      ],
+      "quantifiers": ["for all trucks k"],
+      "condition": null,
+      "parameter_refs": ["package_weight", "truck_capacity"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Each truck can carry a maximum load of 100 pounds.",
+        "the total weight loaded onto a truck cannot exceed its capacity."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o3",
+      "canonical_name": "assignment_requires_truck_use",
+      "obligation_type": "linking",
+      "normalized_semantics": "a package may be assigned to a truck only if that truck is used",
+      "support_entity_ids": ["package_assignment", "truck_use"],
+      "incidence_slots": [
+        {
+          "entity_id": "package_assignment",
+          "role": "assignment_to_truck",
+          "aggregation_axes": [],
+          "index_binding": {
+            "package": "p",
+            "truck": "k"
+          }
+        },
+        {
+          "entity_id": "truck_use",
+          "role": "required_truck_activation",
+          "aggregation_axes": [],
+          "index_binding": {
+            "truck": "k"
+          }
+        }
+      ],
+      "quantifiers": ["for all packages p and trucks k"],
+      "condition": "if package p is assigned to truck k",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "Assign all packages using the fewest number of trucks.",
+        "Every package must be placed on exactly one truck."
+      ],
+      "confidence": 0.96
+    }
+  ],
+  "unresolved_items": [
+    {
+      "item": "truck_indexing_domain",
+      "description": "The statement does not provide a finite set of candidate truck identifiers or an explicit upper bound on the number of trucks available. A finite indexing domain is therefore unspecified.",
+      "source_spans": ["identical delivery trucks (count decided by model)"]
+    }
+  ]
+}

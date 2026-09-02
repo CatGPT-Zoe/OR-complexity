@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional air freight network must schedule a circuit among 7 major terminals:\nTerminal Alpha: Positioned at grid reference (88,29)\nTerminal Beta: Positioned at grid reference (39,71)\nTerminal Gamma: Positioned at grid reference (4,10)\nTerminal Delta: Positioned at grid reference (10,52)\nTerminal Epsilon: Positioned at grid reference (174,66)\nTerminal Zeta: Positioned at grid reference (142,80)\nTerminal Eta: Positioned at grid reference (93,145)\n\nThe flight distances between terminals, measured in nautical miles, are predetermined:\nAlpha to Gamma: 86.1 nm\nAlpha to Delta: 81.3 nm\nAlpha to Epsilon: 93.6 nm\nAlpha to Zeta: 74.3 nm\nAlpha to Eta: 116.1 nm\nBeta to Gamma: 70.3 nm\nBeta to Delta: 34.7 nm\nBeta to Epsilon: 135.1 nm\nBeta to Zeta: 103.4 nm\nBeta to Eta: 91.6 nm\nGamma to Delta: 42.4 nm\nGamma to Epsilon: 179.0 nm\nGamma to Zeta: 154.7 nm\nGamma to Eta: 161.7 nm\nDelta to Epsilon: 164.6 nm\nDelta to Zeta: 134.9 nm\nDelta to Eta: 124.7 nm\nEpsilon to Zeta: 34.9 nm\nEpsilon to Eta: 113.1 nm\nZeta to Eta: 81.4 nm\n\nDue to airspace restrictions, a direct flight corridor between Terminal Alpha and Terminal Beta is unavailable.\nFurthermore, operational regulations mandate that exactly one of the following two flight segments must be incorporated into the circuit: the segment between Terminal Beta and Terminal Gamma, or the segment between Terminal Gamma and Terminal Delta.\n\nThe objective is to determine the most fuel-efficient closed routing, where each terminal is serviced precisely once before returning to the origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

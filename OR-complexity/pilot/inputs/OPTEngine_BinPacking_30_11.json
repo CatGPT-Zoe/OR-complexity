@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of freight shipments onto identical cargo aircraft. The shipments are as follows:\n\n* Shipment Alpha: 64 metric tons\n* Shipment Bravo: 67 metric tons\n* Shipment Charlie: 68 metric tons\n* Shipment Delta: 58 metric tons\n* Shipment Echo: 50 metric tons\n* Shipment Foxtrot: 41 metric tons\n* Shipment Golf: 35 metric tons\n* Shipment Hotel: 50 metric tons\n* Shipment India: 40 metric tons\n* Shipment Juliett: 47 metric tons\n* Shipment Kilo: 52 metric tons\n* Shipment Lima: 37 metric tons\n* Shipment Mike: 37 metric tons\n* Shipment November: 54 metric tons\n* Shipment Oscar: 50 metric tons\n* Shipment Papa: 50 metric tons\n* Shipment Quebec: 49 metric tons\n* Shipment Romeo: 51 metric tons\n* Shipment Sierra: 30 metric tons\n* Shipment Tango: 42 metric tons\n* Shipment Uniform: 49 metric tons\n* Shipment Victor: 70 metric tons\n* Shipment Whiskey: 41 metric tons\n* Shipment X-ray: 40 metric tons\n* Shipment Yankee: 65 metric tons\n* Shipment Zulu: 40 metric tons\n* Shipment [Bracket]: 60 metric tons\n* Shipment [Backslash]: 45 metric tons\n* Shipment [CloseBracket]: 35 metric tons\n* Shipment [Caret]: 63 metric tons\n\nEach aircraft has a maximum payload capacity of 100 metric tons. The coordinator must assign every shipment to exactly one aircraft, ensuring the combined weight on any aircraft does not surpass its limit. The objective is to utilize the minimal number of aircraft for the complete allocation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

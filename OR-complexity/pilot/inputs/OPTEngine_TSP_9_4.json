@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a fleet of autonomous drones to inspect nine critical communication towers across a region.  \n\nThe flight distances between towers, measured in kilometers, are as follows:  \n* Tower 1 to Tower 2: 60.2 km  \n* Tower 1 to Tower 3: 113.7 km  \n* Tower 1 to Tower 4: 108.7 km  \n* Tower 1 to Tower 5: 84.6 km  \n* Tower 1 to Tower 6: 54.9 km  \n* Tower 1 to Tower 7: 40.5 km  \n* Tower 1 to Tower 8: 91.3 km  \n* Tower 1 to Tower 9: 32.1 km  \n* Tower 2 to Tower 3: 173.9 km  \n* Tower 2 to Tower 4: 150.6 km  \n* Tower 2 to Tower 5: 109.4 km  \n* Tower 2 to Tower 6: 80.8 km  \n* Tower 2 to Tower 7: 85.6 km  \n* Tower 2 to Tower 8: 151.2 km  \n* Tower 2 to Tower 9: 87.9 km  \n* Tower 3 to Tower 4: 109.1 km  \n* Tower 3 to Tower 5: 136.3 km  \n* Tower 3 to Tower 6: 125.3 km  \n* Tower 3 to Tower 7: 104.9 km  \n* Tower 3 to Tower 8: 28.2 km  \n* Tower 3 to Tower 9: 91.3 km  \n* Tower 4 to Tower 5: 50.6 km  \n* Tower 4 to Tower 6: 157.9 km  \n* Tower 4 to Tower 7: 68.9 km  \n* Tower 4 to Tower 8: 84.5 km  \n* Tower 4 to Tower 9: 79.1 km  \n* Tower 5 to Tower 6: 139.4 km  \n* Tower 5 to Tower 7: 47.9 km  \n* Tower 5 to Tower 8: 108.2 km  \n* Tower 5 to Tower 9: 66.4 km  \n* Tower 6 to Tower 7: 93.4 km  \n* Tower 6 to Tower 8: 113.3 km  \n* Tower 6 to Tower 9: 79.0 km  \n* Tower 7 to Tower 8: 77.5 km  \n* Tower 7 to Tower 9: 19.1 km  \n* Tower 8 to Tower 9: 65.4 km  \n\nThe objective is to determine the most efficient inspection circuit, where each tower is visited precisely once before the drone returns to its origin, thereby minimizing the total flight distance.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_21_19",
+  "annotation_mode": "semantic",
+  "problem_text": "An administrator must allocate tasks across identical servers for processing. The tasks are as follows:\n* Task Alpha: requires 69 units of memory\n* Task Beta: requires 36 units of memory\n* Task Gamma: requires 47 units of memory\n* Task Delta: requires 62 units of memory\n* Task Epsilon: requires 61 units of memory\n* Task Zeta: requires 65 units of memory\n* Task Eta: requires 55 units of memory\n* Task Theta: requires 60 units of memory\n* Task Iota: requires 46 units of memory\n* Task Kappa: requires 41 units of memory\n* Task Lambda: requires 44 units of memory\n* Task Mu: requires 64 units of memory\n* Task Nu: requires 53 units of memory\n* Task Xi: requires 40 units of memory\n* Task Omicron: requires 49 units of memory\n* Task Pi: requires 68 units of memory\n* Task Rho: requires 39 units of memory\n* Task Sigma: requires 59 units of memory\n* Task Tau: requires 34 units of memory\n* Task Upsilon: requires 34 units of memory\n* Task Phi: requires 60 units of memory\n\nEach server possesses a memory capacity of 100 units. The objective is to assign all tasks to servers, ensuring each task is processed on exactly one server, and the aggregate memory consumption on any server does not surpass its limit. The goal is to accomplish this allocation utilizing the minimal possible number of servers.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

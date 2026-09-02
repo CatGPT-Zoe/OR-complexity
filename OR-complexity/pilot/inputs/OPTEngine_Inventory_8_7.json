@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A maritime logistics firm must devise a procurement and storage schedule for a critical fuel additive across an 8-week operational cycle.  \nThe initial stockpile at the cycle’s commencement is 19 kiloliters.  \nIn each week \\( t = 1, \\dots, 8 \\), the vendor permits the firm to request a shipment whose volume must fall between 0 and 70 kiloliters.  \nNevertheless, every shipment commissioned will require a 3-week transit delay before it becomes available to meet consumption needs or replenish reserves.  \nThe weekly consumption of the additive is specified as follows:  \n* Week 1: 37 kiloliters  \n* Week 2: 15 kiloliters  \n* Week 3: 16 kiloliters  \n* Week 4: 36 kiloliters  \n* Week 5: 14 kiloliters  \n* Week 6: 16 kiloliters  \n* Week 7: 36 kiloliters  \n* Week 8: 59 kiloliters  \n\nSupply deficits are tolerated, but any unsatisfied consumption is considered lost and will not be deferred to later weeks.  \nThroughout the planning cycle, additive quantities may be treated as continuous measures, and the total volume of physical stock held at any moment must not surpass the tank capacity of 23 kiloliters.  \nThe aggregate expenditure over the 8-week horizon comprises three elements: the procurement cost, amounting to 4 per kiloliter ordered; the storage cost, computed as 3 per kiloliter retained from one week to the next; and the deficit penalty, assessed at 12 per kiloliter of unfulfilled consumption.  \nDetermine the optimal shipment volume for each week and monitor the ensuing stockpile and shortfall levels so as to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

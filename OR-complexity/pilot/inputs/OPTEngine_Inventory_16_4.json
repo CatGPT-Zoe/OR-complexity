@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_16_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A pharmaceutical distributor must devise a procurement and storage strategy for a critical vaccine over a 16-week planning window.  \nThe initial stock at the start of the first week is 9 doses.  \nIn each week \\( t = 1,\\dots,16 \\), the manufacturer permits an order whose size must be between 18 and 28 doses inclusive.  \nHowever, every order placed is subject to a 3-week lead time before it becomes available to meet weekly requirements or replenish the stockpile.  \nWeekly demand for the vaccine is as follows:  \n* Week 1: 50 doses  \n* Week 2: 26 doses  \n* Week 3: 31 doses  \n* Week 4: 18 doses  \n* Week 5: 32 doses  \n* Week 6: 16 doses  \n* Week 7: 49 doses  \n* Week 8: 45 doses  \n* Week 9: 36 doses  \n* Week 10: 60 doses  \n* Week 11: 58 doses  \n* Week 12: 14 doses  \n* Week 13: 26 doses  \n* Week 14: 46 doses  \n* Week 15: 16 doses  \n* Week 16: 43 doses  \n\nStockouts are permissible, but any unsatisfied demand is lost and cannot be deferred to later weeks.  \nThroughout the planning horizon, vaccine quantities may be fractional, and the total on-hand inventory at any moment must not surpass the refrigerated storage capacity of 38 doses.  \nThe overall cost comprises three elements: a procurement cost of 1 per dose ordered; a refrigeration cost of 3 per dose held in storage from one week to the next; and a penalty cost of 9 per dose of unmet demand. The objective is to determine the optimal order quantity each week and monitor the resulting inventory and shortage levels so as to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

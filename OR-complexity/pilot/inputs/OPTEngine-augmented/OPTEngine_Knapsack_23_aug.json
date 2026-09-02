@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a shipment to maximize total revenue while staying within the maximum allowable cargo weight for a transport vessel.\n\nThe available cargo containers are:\n* Container 1: weight 43 tonnes, revenue 231 units\n* Container 2: weight 21 tonnes, revenue 156 units\n* Container 3: weight 2 tonnes, revenue 43 units\n* Container 4: weight 30 tonnes, revenue 150 units\n* Container 5: weight 41 tonnes, revenue 205 units\n* Container 6: weight 14 tonnes, revenue 92 units\n* Container 7: weight 47 tonnes, revenue 241 units\n* Container 8: weight 1 tonne, revenue 90 units\n* Container 9: weight 1 tonne, revenue 95 units\n* Container 10: weight 37 tonnes, revenue 35 units\n* Container 11: weight 6 tonnes, revenue 199 units\n* Container 12: weight 50 tonnes, revenue 37 units\n* Container 13: weight 43 tonnes, revenue 124 units\n* Container 14: weight 15 tonnes, revenue 264 units\n* Container 15: weight 17 tonnes, revenue 169 units\n* Container 16: weight 37 tonnes, revenue 201 units\n* Container 17: weight 48 tonnes, revenue 284 units\n* Container 18: weight 21 tonnes, revenue 264 units\n* Container 19: weight 40 tonnes, revenue 268 units\n* Container 20: weight 50 tonnes, revenue 35 units\n* Container 21: weight 16 tonnes, revenue 76 units\n* Container 22: weight 48 tonnes, revenue 119 units\n* Container 23: weight 15 tonnes, revenue 60 units\n\nFurthermore, due to contractual obligations, exactly one of Container 1 and Container 2 must be included in the shipment.\n\nShould Container 3 be selected, the vessel's effective weight capacity is diminished by 10 tonnes.\nThe vessel's maximum cargo weight is 450 tonnes. The firm must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

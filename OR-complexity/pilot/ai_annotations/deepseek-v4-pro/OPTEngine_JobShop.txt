@@ -1,0 +1,127 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_JobShop",
+  "layer": "semantic",
+  "sets": [
+    {
+      "name": "routes",
+      "description": "delivery routes",
+      "values": ["R1", "R2", "R3"]
+    },
+    {
+      "name": "hubs",
+      "description": "distribution hubs",
+      "values": ["A", "B", "C"]
+    },
+    {
+      "name": "operations",
+      "description": "handling procedures identified by route and step number",
+      "values": [
+        "R1_s1", "R1_s2", "R1_s3",
+        "R2_s1", "R2_s2", "R2_s3",
+        "R3_s1", "R3_s2", "R3_s3"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "operation_hub",
+      "indices": ["operation"],
+      "unit": null,
+      "values": {
+        "R1_s1": "B", "R1_s2": "A", "R1_s3": "C",
+        "R2_s1": "B", "R2_s2": "C", "R2_s3": "A",
+        "R3_s1": "C", "R3_s2": "A", "R3_s3": "B"
+      }
+    },
+    {
+      "name": "operation_duration",
+      "indices": ["operation"],
+      "unit": "time units",
+      "values": {
+        "R1_s1": 10, "R1_s2": 7, "R1_s3": 10,
+        "R2_s1": 6, "R2_s2": 2, "R2_s3": 6,
+        "R3_s1": 10, "R3_s2": 6, "R3_s3": 4
+      }
+    },
+    {
+      "name": "operation_route",
+      "indices": ["operation"],
+      "unit": null,
+      "values": {
+        "R1_s1": "R1", "R1_s2": "R1", "R1_s3": "R1",
+        "R2_s1": "R2", "R2_s2": "R2", "R2_s3": "R2",
+        "R3_s1": "R3", "R3_s2": "R3", "R3_s3": "R3"
+      }
+    },
+    {
+      "name": "operation_step_number",
+      "indices": ["operation"],
+      "unit": null,
+      "values": {
+        "R1_s1": 1, "R1_s2": 2, "R1_s3": 3,
+        "R2_s1": 1, "R2_s2": 2, "R2_s3": 3,
+        "R3_s1": 1, "R3_s2": 2, "R3_s3": 3
+      }
+    },
+    {
+      "name": "route_last_step_number",
+      "indices": ["route"],
+      "unit": null,
+      "values": {
+        "R1": 3, "R2": 3, "R3": 3
+      }
+    }
+  ],
+  "entities": [
+    {
+      "id": "start_time",
+      "canonical_name": "start_time",
+      "semantic_type": "time",
+      "indices": [{"role": "operation", "set_id": "operations"}],
+      "description": "start time of each handling procedure",
+      "value_semantics": "continuous non-negative real",
+      "unit": "time units",
+      "endogeneous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "determine the processing order of all procedures at the hubs",
+        "The objective is to determine the processing order ... so that the total completion time ... minimized"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "completion_time",
+      "canonical_name": "completion_time",
+      "semantic_type": "time",
+      "indices": [{"role": "route", "set_id": "routes"}],
+      "description": "time at which each delivery route finishes its last handling procedure",
+      "value_semantics": "continuous non-negative real",
+      "unit": "time units",
+      "endogeneous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "total completion time for all delivery routes is minimized",
+        "minimize the total completion time"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "description": "minimize the maximum completion time over all delivery routes (makespan)",
+    "sense": "minimize",
+    "support_entity_ids": ["completion_time"],
+    "excluded_from_feasibility_hypergraph": true,
+    "normalized_semantics": "minimize makespan: min_{r in routes} completion_time(r) (but actually minimize max over routes, so correct as max completion_time)"
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "route_procedure_precedence",
+      "obligation_type": "precedence",
+      "normalized_semantics": "For each route, each procedure (except the last) must finish before the next procedure starts.",
+      "support_entity_ids": ["start_time"],
+      "incidence_slots": [
+        {
+          "entity_id": "start_time",
+          "role": "earlier_

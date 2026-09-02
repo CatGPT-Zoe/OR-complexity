@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail chain must devise a procurement and storage strategy for a seasonal product over a 7-week sales window.\nThe initial stock at the start of the planning window is 19 items.\nIn each week t = 1, ..., 7, the distributor permits the retailer to submit a procurement request, where the requested quantity must be between 5 and 60 items.\nHowever, every procurement request submitted will experience a lead time of 4 week(s) before it becomes available for sales or restocking.\nThe projected sales volume for the product in each week is as follows:\n* Week 1: sales volume 41 items\n* Week 2: sales volume 37 items\n* Week 3: sales volume 12 items\n* Week 4: sales volume 29 items\n* Week 5: sales volume 31 items\n* Week 6: sales volume 57 items\n* Week 7: sales volume 53 items\n\nStockouts are tolerated, but any sales volume not met is permanently lost and will not be fulfilled later.\nThroughout the planning window, product quantities are treated as continuous values, and the total quantity of physical stock held at any point must not exceed the storage facility's limit of 31 items.\nThe aggregate expense over the planning window comprises three elements: the procurement expense, which is 4 per item requested; the storage expense, which is 3 per item of stock kept from one week to the next; and the stockout penalty, which is 7 per item of unmet sales volume. The objective is to establish the optimal procurement quantity for each week and monitor the consequent stock and stockout levels in order to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

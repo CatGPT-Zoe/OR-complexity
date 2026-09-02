@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A museum curator is tasked with arranging a tour that visits five distinct historical exhibits in a sprawling complex.  \n\nThe walking distances between exhibits are recorded as follows:  \n* Exhibit Alpha to Beta: 10.0 meters  \n* Exhibit Alpha to Gamma: 129.8 meters  \n* Exhibit Alpha to Delta: 40.3 meters  \n* Exhibit Alpha to Epsilon: 14.0 meters  \n* Exhibit Beta to Gamma: 137.3 meters  \n* Exhibit Beta to Delta: 50.0 meters  \n* Exhibit Beta to Epsilon: 18.0 meters  \n* Exhibit Gamma to Delta: 115.7 meters  \n* Exhibit Gamma to Epsilon: 138.8 meters  \n* Exhibit Delta to Epsilon: 37.1 meters  \n\nThe objective is to determine the minimal total walking path that allows the curator to stop at each exhibit precisely once and then return to the initial exhibit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

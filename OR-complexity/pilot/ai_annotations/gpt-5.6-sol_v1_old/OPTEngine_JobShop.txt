@@ -1,0 +1,429 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_JobShop",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "routes",
+      "name": "routes",
+      "description": "delivery routes whose handling procedures must be scheduled",
+      "values": [
+        "route_1",
+        "route_2",
+        "route_3"
+      ],
+      "source_status": "explicit",
+      "source_spans": [
+        "A logistics company needs to coordinate 3 delivery routes",
+        "Route 1",
+        "Route 2",
+        "Route 3"
+      ]
+    },
+    {
+      "id": "hubs",
+      "name": "hubs",
+      "description": "distribution hubs at which handling procedures are processed",
+      "values": [
+        "hub_A",
+        "hub_B",
+        "hub_C"
+      ],
+      "source_status": "explicit",
+      "source_spans": [
+        "through 3 distribution hubs",
+        "Hub A",
+        "Hub B",
+        "Hub C"
+      ]
+    },
+    {
+      "id": "procedure_positions",
+      "name": "procedure_positions",
+      "description": "ordered positions of handling procedures within each route",
+      "values": [
+        1,
+        2,
+        3
+      ],
+      "source_status": "implicit_required",
+      "source_spans": [
+        "Each route consists of a sequence of handling procedures",
+        "The order of pairs indicates the required sequence in which the procedures must be performed."
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "procedure_hub",
+      "name": "procedure_hub",
+      "description": "hub at which each route procedure must be performed",
+      "indices": [
+        {
+          "role": "route",
+          "set_id": "routes"
+        },
+        {
+          "role": "procedure_position",
+          "set_id": "procedure_positions"
+        }
+      ],
+      "value_set_id": "hubs",
+      "unit": null,
+      "values": {
+        "route_1,1": "hub_B",
+        "route_1,2": "hub_A",
+        "route_1,3": "hub_C",
+        "route_2,1": "hub_B",
+        "route_2,2": "hub_C",
+        "route_2,3": "hub_A",
+        "route_3,1": "hub_C",
+        "route_3,2": "hub_A",
+        "route_3,3": "hub_B"
+      },
+      "source_spans": [
+        "Route 1 requires the sequence: (Hub B, 10) → (Hub A, 7) → (Hub C, 10)",
+        "Route 2 requires the sequence: (Hub B, 6) → (Hub C, 2) → (Hub A, 6)",
+        "Route 3 requires the sequence: (Hub C, 10) → (Hub A, 6) → (Hub B, 4)"
+      ]
+    },
+    {
+      "id": "procedure_duration",
+      "name": "procedure_duration",
+      "description": "required uninterrupted processing duration of each route procedure",
+      "indices": [
+        {
+          "role": "route",
+          "set_id": "routes"
+        },
+        {
+          "role": "procedure_position",
+          "set_id": "procedure_positions"
+        }
+      ],
+      "unit": "time units",
+      "values": {
+        "route_1,1": 10,
+        "route_1,2": 7,
+        "route_1,3": 10,
+        "route_2,1": 6,
+        "route_2,2": 2,
+        "route_2,3": 6,
+        "route_3,1": 10,
+        "route_3,2": 6,
+        "route_3,3": 4
+      },
+      "source_spans": [
+        "each pair specifies the hub where the procedure must occur and the time required to complete it",
+        "Route 1 requires the sequence: (Hub B, 10) → (Hub A, 7) → (Hub C, 10)",
+        "Route 2 requires the sequence: (Hub B, 6) → (Hub C, 2) → (Hub A, 6)",
+        "Route 3 requires the sequence: (Hub C, 10) → (Hub A, 6) → (Hub B, 4)"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "procedure_start_time",
+      "canonical_name": "procedure_start_time",
+      "semantic_type": "time",
+      "indices": [
+        {
+          "role": "route",
+          "set_id": "routes"
+        },
+        {
+          "role": "procedure_position",
+          "set_id": "procedure_positions"
+        }
+      ],
+      "description": "time at which each handling procedure begins",
+      "value_semantics": "nonnegative start time",
+      "unit": "time units",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "Each handling procedure must run continuously once it begins",
+        "determine the processing order of all procedures at the hubs"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "hub_processing_order",
+      "canonical_name": "hub_processing_order",
+      "semantic_type": "sequence",
+      "indices": [
+        {
+          "role": "hub",
+          "set_id": "hubs"
+        }
+      ],
+      "description": "processing sequence of the procedures assigned to each hub",
+      "value_semantics": "a strict ordering of all procedures assigned to the hub",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "The objective is to determine the processing order of all procedures at the hubs"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "route_completion_time",
+      "canonical_name": "route_completion_time",
+      "semantic_type": "time",
+      "indices": [
+        {
+          "role": "route",
+          "set_id": "routes"
+        }
+      ],
+      "description": "time at which each delivery route completes its final handling procedure",
+      "value_semantics": "completion time of the route",
+      "unit": "time units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "the total completion time for all delivery routes"
+      ],
+      "confidence": 0.97
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "minimize_total_route_completion_time",
+    "normalized_semantics": "minimize the sum of the completion times of all delivery routes",
+    "entity_scope_ids": [
+      "route_completion_time"
+    ],
+    "aggregation": "sum over routes",
+    "parameter_refs": [],
+    "source_spans": [
+      "so that the total completion time for all delivery routes is minimized"
+    ],
+    "excluded_from_feasibility_hypergraph": true,
+    "confidence": 0.9
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "route_procedure_precedence",
+      "obligation_type": "precedence",
+      "normalized_semantics": "each procedure of a route must finish before the next procedure in that route begins",
+      "support_entity_ids": [
+        "procedure_start_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procedure_start_time",
+          "role": "predecessor_procedure_start",
+          "aggregation_axes": [],
+          "index_binding": {
+            "route": "r",
+            "procedure_position": "k"
+          }
+        },
+        {
+          "entity_id": "procedure_start_time",
+          "role": "successor_procedure_start",
+          "aggregation_axes": [],
+          "index_binding": {
+            "route": "r",
+            "procedure_position": "k+1"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all routes r",
+        "for each consecutive pair of procedure positions k and k+1"
+      ],
+      "condition": "k is not the final procedure position",
+      "parameter_refs": [
+        "procedure_duration"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The order of pairs indicates the required sequence in which the procedures must be performed."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o2",
+      "canonical_name": "nonpreemptive_procedure_processing",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "once a handling procedure begins, it must occupy its assigned hub continuously for its full required duration without interruption",
+      "support_entity_ids": [
+        "procedure_start_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procedure_start_time",
+          "role": "beginning_of_continuous_processing_interval",
+          "aggregation_axes": [],
+          "index_binding": {
+            "route": "r",
+            "procedure_position": "k"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all routes r",
+        "for all procedure positions k"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "procedure_hub",
+        "procedure_duration"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Each handling procedure must run continuously once it begins and cannot be interrupted"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o3",
+      "canonical_name": "hub_processing_order_consistency",
+      "obligation_type": "linking",
+      "normalized_semantics": "the selected processing order at each hub must agree with the temporal order of the procedures scheduled at that hub",
+      "support_entity_ids": [
+        "hub_processing_order",
+        "procedure_start_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "hub_processing_order",
+          "role": "selected_precedence_between_same_hub_procedures",
+          "aggregation_axes": [
+            "procedures_assigned_to_hub"
+          ],
+          "index_binding": {
+            "hub": "h"
+          }
+        },
+        {
+          "entity_id": "procedure_start_time",
+          "role": "timing_of_ordered_procedures",
+          "aggregation_axes": [
+            "route",
+            "procedure_position"
+          ],
+          "index_binding": {
+            "assigned_hub": "h"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all hubs h",
+        "for every ordered pair of distinct procedures assigned to h"
+      ],
+      "condition": "the first procedure precedes the second in hub_processing_order(h)",
+      "parameter_refs": [
+        "procedure_hub",
+        "procedure_duration"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "determine the processing order of all procedures at the hubs",
+        "each hub can only handle one procedure at a time"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "id": "o4",
+      "canonical_name": "hub_non_overlap",
+      "obligation_type": "non_overlap",
+      "normalized_semantics": "the processing intervals of any two distinct procedures assigned to the same hub must not overlap",
+      "support_entity_ids": [
+        "procedure_start_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procedure_start_time",
+          "role": "first_same_hub_processing_interval",
+          "aggregation_axes": [],
+          "index_binding": {
+            "procedure": "p"
+          }
+        },
+        {
+          "entity_id": "procedure_start_time",
+          "role": "second_same_hub_processing_interval",
+          "aggregation_axes": [],
+          "index_binding": {
+            "procedure": "q"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for every pair of distinct procedures p and q"
+      ],
+      "condition": "procedure_hub(p) equals procedure_hub(q)",
+      "parameter_refs": [
+        "procedure_hub",
+        "procedure_duration"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "each hub can only handle one procedure at a time"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o5",
+      "canonical_name": "route_completion_definition",
+      "obligation_type": "linking",
+      "normalized_semantics": "each route's completion time is the finishing time of its final handling procedure",
+      "support_entity_ids": [
+        "procedure_start_time",
+        "route_completion_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procedure_start_time",
+          "role": "final_procedure_start",
+          "aggregation_axes": [],
+          "index_binding": {
+            "route": "r",
+            "procedure_position": "final"
+          }
+        },
+        {
+          "entity_id": "route_completion_time",
+          "role": "route_finish_time",
+          "aggregation_axes": [],
+          "index_binding": {
+            "route": "r"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all routes r"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "procedure_duration"
+      ],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "the total completion time for all delivery routes"
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "u1",
+      "description": "The phrase 'total completion time for all delivery routes' is interpreted as the sum of route completion times, but it could alternatively mean the overall completion time or makespan.",
+      "source_spans": [
+        "the total completion time for all delivery routes is minimized"
+      ],
+      "impact": "objective aggregation semantics",
+      "confidence": 0.62
+    }
+  ]
+}

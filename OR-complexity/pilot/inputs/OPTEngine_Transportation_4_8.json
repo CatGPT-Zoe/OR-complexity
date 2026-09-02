@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate the dispatch of specialized technicians from regional training centers to field offices in order to minimize total travel expenses.\n\nThe number of available technicians at each training center (set C) is fixed as follows:  \n*Center Alpha has 68 technicians.  \n*Center Beta has 187 technicians.  \n*Center Gamma has 104 technicians.  \n*Center Delta has 179 technicians.\n\nThe required staffing level at each field office (set D) is predetermined:  \n*Office North requires 114 technicians.  \n*Office South requires 107 technicians.  \n*Office East requires 107 technicians.  \n*Office West requires 44 technicians.\n\nThe per‑technician travel cost from each training center to each field office is provided in the table:\n\n| From / To | North | South | East | West |\n|-----------|-------|-------|------|------|\n| Alpha     | 6     | 15    | 18   | 10   |\n| Beta      | 20    | 17    | 1    | 18   |\n| Gamma     | 10    | 4     | 5    | 9    |\n| Delta     | 4     | 4     | 18   | 5    |\n\nDetermine the optimal assignment of technicians to offices that satisfies all staffing requirements while minimizing the aggregate travel expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

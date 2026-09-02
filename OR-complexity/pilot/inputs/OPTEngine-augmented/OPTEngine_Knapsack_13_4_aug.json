@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assemble a shipment of specialized components to maximize total utility while adhering to a strict cargo weight limit.\n\nThe components under consideration are:\n* Component A: weight 2 units, utility 103 credits\n* Component B: weight 47 units, utility 74 credits\n* Component C: weight 2 units, utility 182 credits\n* Component D: weight 39 units, utility 108 credits\n* Component E: weight 3 units, utility 221 credits\n* Component F: weight 42 units, utility 41 credits\n* Component G: weight 45 units, utility 169 credits\n* Component H: weight 25 units, utility 36 credits\n* Component I: weight 39 units, utility 96 credits\n* Component J: weight 23 units, utility 49 credits\n* Component K: weight 27 units, utility 37 credits\n* Component L: weight 29 units, utility 191 credits\n* Component M: weight 39 units, utility 140 credits\n\nFurthermore, due to compatibility restrictions, exactly one of Component A and Component B must be included in the final shipment.\n\nShould Component C be selected, the effective cargo capacity of the transport vessel is diminished by 10 units.\nThe vessel’s maximum allowable cargo weight is 253 units. The coordinator must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

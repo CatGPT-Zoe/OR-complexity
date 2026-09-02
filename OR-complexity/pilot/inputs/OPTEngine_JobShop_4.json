@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 4 delivery routes through 4 distribution centers.\n\nEach route consists of a sequence of handling stages represented as (Center, Duration) pairs,\nwhere each pair specifies the distribution center where the stage must occur and the time required for processing.\nThe order of pairs indicates the mandatory sequence in which the stages must be completed.\n\nRoute details:\n* R1 follows the sequence: (C2, 3) → (C3, 5) → (C4, 1) → (C1, 1)\n* R2 follows the sequence: (C1, 6) → (C4, 10) → (C2, 1) → (C3, 10)\n* R3 follows the sequence: (C4, 6) → (C3, 9) → (C2, 3) → (C1, 4)\n* R4 follows the sequence: (C4, 3) → (C3, 3) → (C2, 5) → (C1, 6)\n\nEach handling stage must run continuously once initiated without interruption,\nand each distribution center can only accommodate one delivery stage at a time.\nThe objective is to determine the optimal scheduling sequence for all handling stages across the centers\nso that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

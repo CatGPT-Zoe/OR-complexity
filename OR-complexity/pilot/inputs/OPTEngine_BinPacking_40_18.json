@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign parcels to identical delivery trucks. Parcels:\n\n* Parcel Alpha: mass 54 lb\n* Parcel Bravo: mass 55 lb\n* Parcel Charlie: mass 51 lb\n* Parcel Delta: mass 59 lb\n* Parcel Echo: mass 36 lb\n* Parcel Foxtrot: mass 34 lb\n* Parcel Golf: mass 65 lb\n* Parcel Hotel: mass 45 lb\n* Parcel India: mass 40 lb\n* Parcel Juliet: mass 59 lb\n* Parcel Kilo: mass 42 lb\n* Parcel Lima: mass 67 lb\n* Parcel Mike: mass 53 lb\n* Parcel November: mass 47 lb\n* Parcel Oscar: mass 32 lb\n* Parcel Papa: mass 38 lb\n* Parcel Quebec: mass 30 lb\n* Parcel Romeo: mass 53 lb\n* Parcel Sierra: mass 58 lb\n* Parcel Tango: mass 48 lb\n* Parcel Uniform: mass 66 lb\n* Parcel Victor: mass 49 lb\n* Parcel Whiskey: mass 70 lb\n* Parcel X-ray: mass 51 lb\n* Parcel Yankee: mass 41 lb\n* Parcel Zulu: mass 30 lb\n* Parcel Bracket: mass 67 lb\n* Parcel Backslash: mass 48 lb\n* Parcel Brace: mass 40 lb\n* Parcel Caret: mass 31 lb\n* Parcel Underscore: mass 58 lb\n* Parcel Grave: mass 58 lb\n* Parcel a: mass 37 lb\n* Parcel b: mass 57 lb\n* Parcel c: mass 60 lb\n* Parcel d: mass 35 lb\n* Parcel e: mass 32 lb\n* Parcel f: mass 59 lb\n* Parcel g: mass 57 lb\n* Parcel h: mass 44 lb\n\nEach truck has a maximum payload capacity of 100 lb. All parcels must be allocated, each to precisely one truck, and the combined mass on any truck must not surpass its limit. Determine an allocation that minimizes the total number of trucks required.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood plasma storage strategy for a critical plasma type across a 5-week schedule.\nThe initial stock in the storage facility at the start of the schedule is 0 units.\nIn each week t = 1, ..., 5, the blood bank permits the hospital to submit a procurement request whose volume must be between 19 and 51 units.\nHowever, each requested shipment will require a 2-week lead time before it becomes available for medical procedures or to replenish reserves.\nThe clinical demand for the plasma in each week is given as follows:\n* Week 1: demand 35 units\n* Week 2: demand 55 units\n* Week 3: demand 60 units\n* Week 4: demand 52 units\n* Week 5: demand 50 units\n\nSupply deficits are tolerated, but any unsatisfied clinical demand is considered lost and will not be carried forward.\nThroughout the schedule, plasma volumes are treated as continuous quantities, and the total volume of plasma held in storage at any point must not exceed the facility's capacity of 68 units.\n\nIn the first week, the maximum procurement volume allowed is 31 units.\nBy the end of the fifth week, the on-hand plasma reserve must be at least 28 units.\n\nThe total expenditure over the schedule comprises three elements: the procurement cost, calculated at 2 per unit requested; the storage cost, calculated at 3 per unit of plasma held over from one week to the next; and the deficit penalty, calculated at 11 per unit of unmet clinical demand. Please ascertain the optimal procurement volume for each week and monitor the consequent reserve and deficit levels to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

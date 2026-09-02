@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks.  \nPackages:  \n* Package Alpha: size 58 cubic feet  \n* Package Beta: size 58 cubic feet  \n* Package Gamma: size 59 cubic feet  \n* Package Delta: size 44 cubic feet  \n* Package Epsilon: size 67 cubic feet  \n* Package Zeta: size 35 cubic feet  \n* Package Eta: size 62 cubic feet  \n* Package Theta: size 65 cubic feet  \n* Package Iota: size 41 cubic feet  \n* Package Kappa: size 37 cubic feet  \n* Package Lambda: size 51 cubic feet  \n* Package Mu: size 67 cubic feet  \n* Package Nu: size 41 cubic feet  \n* Package Xi: size 34 cubic feet  \n* Package Omicron: size 46 cubic feet  \n* Package Pi: size 57 cubic feet  \n* Package Rho: size 49 cubic feet  \n* Package Sigma: size 43 cubic feet  \n* Package Tau: size 38 cubic feet  \n* Package Upsilon: size 36 cubic feet  \n* Package Phi: size 45 cubic feet  \n* Package Chi: size 70 cubic feet  \n* Package Psi: size 43 cubic feet  \n* Package Omega: size 49 cubic feet  \n* Package A1: size 46 cubic feet  \n* Package B1: size 33 cubic feet  \n* Package C1: size 36 cubic feet  \n* Package D1: size 39 cubic feet  \n* Package E1: size 64 cubic feet  \n* Package F1: size 61 cubic feet  \n* Package G1: size 46 cubic feet  \n* Package H1: size 38 cubic feet  \n* Package I1: size 35 cubic feet  \n* Package J1: size 37 cubic feet  \n* Package K1: size 42 cubic feet  \n* Package L1: size 69 cubic feet  \n* Package M1: size 62 cubic feet  \n* Package N1: size 45 cubic feet  \n\nEach truck can carry up to 100 cubic feet of volume. Assign all packages using the fewest trucks. Every package must be placed in exactly one truck, and the total volume in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

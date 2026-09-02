@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a delivery truck. The available containers are:\n* Container A: size 35 cubic feet, revenue $85\n* Container B: size 20 cubic feet, revenue $60\n* Container C: size 47 cubic feet, revenue $47\n* Container D: size 44 cubic feet, revenue $179\n* Container E: size 31 cubic feet, revenue $296\nThe truck's cargo hold has a maximum capacity of 123 cubic feet. Choose the combination of containers that maximizes total revenue without exceeding this capacity. Each container must be loaded in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a comprehensive tour for a specialized technician to service six distinct manufacturing plants.\n\nThe travel times between plants are recorded in minutes:\n* Plant Alpha to Plant Beta: 209.8 minutes\n* Plant Alpha to Plant Gamma: 109.1 minutes\n* Plant Alpha to Plant Delta: 23.4 minutes\n* Plant Alpha to Plant Epsilon: 107.3 minutes\n* Plant Alpha to Plant Zeta: 97.2 minutes\n* Plant Beta to Plant Gamma: 198.4 minutes\n* Plant Beta to Plant Delta: 214.1 minutes\n* Plant Beta to Plant Epsilon: 118.8 minutes\n* Plant Beta to Plant Zeta: 216.8 minutes\n* Plant Gamma to Plant Delta: 89.3 minutes\n* Plant Gamma to Plant Epsilon: 155.6 minutes\n* Plant Gamma to Plant Zeta: 24.7 minutes\n* Plant Delta to Plant Epsilon: 120.9 minutes\n* Plant Delta to Plant Zeta: 75.1 minutes\n* Plant Epsilon to Plant Zeta: 161.3 minutes\n\nThe objective is to determine the minimal-duration circuit that allows the technician to perform an initial inspection at each facility precisely one time before concluding the tour back at the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

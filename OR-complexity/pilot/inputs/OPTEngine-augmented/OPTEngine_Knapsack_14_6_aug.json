@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_14_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized containers to maximize total revenue while adhering to a cargo plane's weight capacity.\n\nThe containers available are:\n* Container A: weight 25kg, revenue 294 units\n* Container B: weight 20kg, revenue 130 units\n* Container C: weight 25kg, revenue 187 units\n* Container D: weight 25kg, revenue 251 units\n* Container E: weight 33kg, revenue 166 units\n* Container F: weight 27kg, revenue 218 units\n* Container G: weight 7kg, revenue 88 units\n* Container H: weight 10kg, revenue 12 units\n* Container I: weight 38kg, revenue 274 units\n* Container J: weight 7kg, revenue 114 units\n* Container K: weight 39kg, revenue 272 units\n* Container L: weight 8kg, revenue 146 units\n* Container M: weight 45kg, revenue 96 units\n* Container N: weight 25kg, revenue 53 units\n\nDue to a contractual obligation, precisely one of Container A and Container B must be included in the shipment.\n\nIf Container C is selected, the effective payload capacity of the aircraft is diminished by 10 kg.\nThe aircraft can transport a maximum of 233 kg. The manager must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

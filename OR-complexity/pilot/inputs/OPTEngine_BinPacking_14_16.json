@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo packages onto identical transport pallets. The packages to be shipped are as follows:\n\n* Package Alpha: mass 68 kilograms\n* Package Bravo: mass 69 kilograms\n* Package Charlie: mass 38 kilograms\n* Package Delta: mass 70 kilograms\n* Package Echo: mass 50 kilograms\n* Package Foxtrot: mass 36 kilograms\n* Package Golf: mass 65 kilograms\n* Package Hotel: mass 52 kilograms\n* Package India: mass 42 kilograms\n* Package Juliet: mass 54 kilograms\n* Package Kilo: mass 61 kilograms\n* Package Lima: mass 37 kilograms\n* Package Mike: mass 33 kilograms\n* Package November: mass 69 kilograms\n\nEach pallet possesses a maximum safe load capacity of 100 kg. The coordinator must determine an arrangement that places every package onto exactly one pallet, ensuring the cumulative mass on any given pallet does not surpass its load limit. The overarching objective is to utilize the minimal possible number of pallets to complete the shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

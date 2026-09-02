@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 3 delivery routes through 3 distribution hubs.\n\nEach route consists of a sequence of handling procedures represented as (Hub, Duration) pairs,\nwhere each pair specifies the hub where the procedure must occur and the time required for handling.\nThe order of pairs indicates the mandatory sequence in which procedures must be completed.\n\nRoute details:\n* Route A requires the sequence: (Hub2, 5) → (Hub3, 9) → (Hub1, 8)\n* Route B requires the sequence: (Hub2, 6) → (Hub3, 10) → (Hub1, 4)\n* Route C requires the sequence: (Hub3, 3) → (Hub1, 2) → (Hub2, 10)\n\nEach handling procedure must run without interruption once it begins,\nand each hub can only handle one procedure at a time.\nThe objective is to determine the processing sequence of all procedures at the hubs\nso that the total completion time for all routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

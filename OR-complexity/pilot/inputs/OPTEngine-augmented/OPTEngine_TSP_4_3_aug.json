@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to service equipment at four regional facilities, positioned at the following map coordinates:\nFacility P: (52,141)\nFacility Q: (122,113)\nFacility R: (133,66)\nFacility S: (15,140)\n\nThe travel distances between facilities, in kilometers, are known to be:\nP to R: 110.4 km\nP to S: 37.0 km\nQ to R: 48.3 km\nQ to S: 110.4 km\nR to S: 139.3 km\n\nDirect travel between Facility P and Facility Q is not possible due to an impassable geographic barrier.\nFurthermore, operational restrictions dictate that precisely one of the following two connections must be part of the circuit: the link between Facility Q and Facility R, or the link between Facility R and Facility S.\n\nThe objective is to determine the minimal total travel distance for a round-trip itinerary that begins and ends at the same facility, visiting each of the four facilities exactly once.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

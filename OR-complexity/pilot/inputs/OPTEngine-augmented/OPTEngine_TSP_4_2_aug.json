@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate aerial inspections over four distinct geographic zones:\nZone Alpha: Positioned at grid reference (154,37)\nZone Beta: Positioned at grid reference (79,25)\nZone Gamma: Positioned at grid reference (186,18)\nZone Delta: Positioned at grid reference (175,84)\n\nThe flight distances between zones are measured in nautical miles:\nAlpha to Gamma: 37.2 nm\nAlpha to Delta: 51.5 nm\nBeta to Gamma: 107.2 nm\nBeta to Delta: 112.7 nm\nGamma to Delta: 66.9 nm\n\nDue to airspace restrictions, a direct flight corridor between Zone Alpha and Zone Beta is unavailable.\nFurthermore, operational protocols mandate that precisely one of the following two flight segments must be incorporated into the inspection circuit: the corridor between Zone Beta and Zone Gamma, or the corridor between Zone Gamma and Zone Delta.\n\nThe objective is to determine the minimal total flight distance for a closed circuit that visits each zone exactly once, commencing and concluding at the same point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

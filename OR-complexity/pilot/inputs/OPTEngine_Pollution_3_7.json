@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A municipal water authority aims to develop a treatment strategy to lower total dissolved solids (TDS) discharge from several industrial effluent outfalls. Initially, no treatment technologies have been deployed.\n\nThe discharge profile for each outfall is as follows:\n* For Outfall A, the discharge coefficient is 1.454, and the effluent flow rate is 292.77.\n* For Outfall B, the discharge coefficient is 2.99, and the effluent flow rate is 265.195.\n* For Outfall C, the discharge coefficient is 1.823, and the effluent flow rate is 52.87.\n\nTo abate the discharge, several treatment processes are available, each with a distinct removal efficacy:\n* Implementing Process X reduces the contaminant load by 32%.\n* Implementing Process Y reduces the contaminant load by 36%.\n* Implementing Process Z reduces the contaminant load by 47%.\n\nDeploying a treatment process at an outfall incurs an operational cost per unit of effluent flow. The cost matrix for all outfall–process pairings is provided below:\n\n| Outfall \\ Process | Process X | Process Y | Process Z |\n|-------------------|-----------|-----------|-----------|\n| Outfall A         | 60.697    | 131.783   | 31.195    |\n| Outfall B         | 92.605    | 96.208    | 191.225   |\n| Outfall C         | 176.412   | 60.044    | 105.111   |\n\nThe authority must decide which treatment processes to apply to each outfall (multiple processes may be applied concurrently to a single outfall), and an outfall may also be left partially untreated if required.\nThe objective is to guarantee that the aggregate TDS discharge is curtailed by at least a fraction P = 0.289 of the baseline discharge, while minimizing the total operational expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

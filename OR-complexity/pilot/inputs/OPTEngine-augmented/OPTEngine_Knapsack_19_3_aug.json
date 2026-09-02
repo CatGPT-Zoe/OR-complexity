@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a cargo shipment for a specialized airlift mission. They must select a combination of containers to maximize the total utility score while adhering to the aircraft's maximum payload allowance.\n\nThe available containers are:\n* Container A: mass 5 units, utility 64 credits\n* Container B: mass 18 units, utility 58 credits\n* Container C: mass 18 units, utility 249 credits\n* Container D: mass 37 units, utility 142 credits\n* Container E: mass 38 units, utility 224 credits\n* Container F: mass 3 units, utility 48 credits\n* Container G: mass 10 units, utility 241 credits\n* Container H: mass 4 units, utility 187 credits\n* Container I: mass 22 units, utility 140 credits\n* Container J: mass 41 units, utility 218 credits\n* Container K: mass 25 units, utility 21 credits\n* Container L: mass 19 units, utility 133 credits\n* Container M: mass 14 units, utility 55 credits\n* Container N: mass 38 units, utility 83 credits\n* Container O: mass 16 units, utility 277 credits\n* Container P: mass 14 units, utility 241 credits\n* Container Q: mass 21 units, utility 15 credits\n* Container R: mass 49 units, utility 138 credits\n* Container S: mass 27 units, utility 275 credits\n\nFurthermore, due to compatibility protocols, precisely one of Container A and Container B must be included in the final manifest.\n\nShould Container C be selected, the effective available payload capacity of the aircraft is diminished by 10 units.\nThe aircraft's structural limit for total mass is 293 units. The manager must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

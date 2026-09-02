@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_36_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a collection of distinct parcels to a fleet of uniform delivery vans. The parcels are as follows:\n\n* Parcel Alpha: mass 33kg\n* Parcel Beta: mass 36kg\n* Parcel Gamma: mass 54kg\n* Parcel Delta: mass 36kg\n* Parcel Epsilon: mass 56kg\n* Parcel Zeta: mass 38kg\n* Parcel Eta: mass 60kg\n* Parcel Theta: mass 66kg\n* Parcel Iota: mass 66kg\n* Parcel Kappa: mass 49kg\n* Parcel Lambda: mass 66kg\n* Parcel Mu: mass 54kg\n* Parcel Nu: mass 30kg\n* Parcel Xi: mass 64kg\n* Parcel Omicron: mass 32kg\n* Parcel Pi: mass 66kg\n* Parcel Rho: mass 43kg\n* Parcel Sigma: mass 40kg\n* Parcel Tau: mass 68kg\n* Parcel Upsilon: mass 41kg\n* Parcel Phi: mass 59kg\n* Parcel Chi: mass 41kg\n* Parcel Psi: mass 58kg\n* Parcel Omega: mass 42kg\n* Parcel Asterisk: mass 30kg\n* Parcel Ampersand: mass 62kg\n* Parcel BraceLeft: mass 32kg\n* Parcel BraceRight: mass 62kg\n* Parcel BracketLeft: mass 60kg\n* Parcel BracketRight: mass 61kg\n* Parcel Caret: mass 54kg\n* Parcel Underscore: mass 47kg\n* Parcel Grave: mass 59kg\n* Parcel Tilde: mass 51kg\n* Parcel Section: mass 69kg\n* Parcel Paragraph: mass 69kg\n\nEach van possesses a maximum permissible load of 100 kg. The coordinator must devise an allocation such that every parcel is placed onto exactly one van, the total mass assigned to any given van does not surpass its capacity, and the number of vans deployed is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

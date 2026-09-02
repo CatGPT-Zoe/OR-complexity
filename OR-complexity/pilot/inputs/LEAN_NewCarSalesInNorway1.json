@@ -1,0 +1,41 @@
+{
+  "instance_id": "LEAN_NewCarSalesInNorway1",
+  "annotation_mode": "semantic",
+  "problem_text": "In the context of New Car Sales in Norway, a car dealership is planning its inventory-replenishment strategy. For each vehicle type (e.g., sedans, SUVs, electric vehicles, etc.), the dealership has a “products.csv” file that records the benefit coefficient for that type. Each vehicle type has a daily inventory limit, provided in “capacity.csv.” The objective is to decide how many units of each vehicle type to order each day so as to maximize total benefit while ensuring that the sum of all ordered units does not exceed the total inventory capacity. The decision variable x_i represents the number of vehicles of type i to be ordered per day.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "VehicleID",
+        "VehicleType",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| VehicleID | VehicleType | Capacity |\n|---|---|---|\n| 1 | Sedans | 100 |\n| 2 | SUVs | 80 |\n| 3 | Electric Vehicles | 120 |\n| 4 | Hybrid Vehicles | 90 |\n| 5 | Trucks | 50 |\n| 6 | Sports Cars | 30 |\n| 7 | Compact Cars | 110 |\n| 8 | Luxury Sedans | 40 |\n| 9 | Vans | 60 |\n| 10 | Pickup Trucks | 35 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Sedans | 1200 | 20 |\n| SUVs | 1800 | 15 |\n| Electric Vehicles | 2500 | 25 |\n| Hybrid Vehicles | 2000 | 18 |\n| Trucks | 1500 | 10 |\n| Sports Cars | 3000 | 5 |\n| Compact Cars | 1000 | 22 |\n| Luxury Sedans | 3500 | 8 |\n| Vans | 1600 | 12 |\n| Pickup Trucks | 1700 | 7 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA4/NewCarSalesInNorway1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA4/NewCarSalesInNorway1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

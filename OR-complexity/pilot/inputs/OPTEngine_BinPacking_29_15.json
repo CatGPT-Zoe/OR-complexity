@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_29_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo parcels into identical transport pods.  \nParcels to be shipped:  \n* Cargo Alpha: mass 55 units  \n* Cargo Beta: mass 40 units  \n* Cargo Gamma: mass 39 units  \n* Cargo Delta: mass 57 units  \n* Cargo Epsilon: mass 54 units  \n* Cargo Zeta: mass 58 units  \n* Cargo Eta: mass 43 units  \n* Cargo Theta: mass 46 units  \n* Cargo Iota: mass 34 units  \n* Cargo Kappa: mass 40 units  \n* Cargo Lambda: mass 66 units  \n* Cargo Mu: mass 30 units  \n* Cargo Nu: mass 49 units  \n* Cargo Xi: mass 41 units  \n* Cargo Omicron: mass 36 units  \n* Cargo Pi: mass 39 units  \n* Cargo Rho: mass 46 units  \n* Cargo Sigma: mass 41 units  \n* Cargo Tau: mass 55 units  \n* Cargo Upsilon: mass 46 units  \n* Cargo Phi: mass 63 units  \n* Cargo Chi: mass 56 units  \n* Cargo Psi: mass 50 units  \n* Cargo Omega: mass 64 units  \n* Cargo Aleph: mass 57 units  \n* Cargo Beth: mass 61 units  \n* Cargo Gimel: mass 59 units  \n* Cargo Dalet: mass 37 units  \n* Cargo He: mass 46 units  \n\nEach transport pod can accommodate a maximum load of 100 mass units.  \nAll parcels must be assigned to exactly one pod, and the combined mass in any pod must not surpass its capacity.  \nDetermine an allocation that utilizes the smallest possible number of pods.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

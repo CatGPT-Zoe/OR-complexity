@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. Packages:\n* Package 1: size 43 units\n* Package 2: size 38 units\n* Package 3: size 59 units\n* Package 4: size 60 units\n* Package 5: size 40 units\n* Package 6: size 62 units\n* Package 7: size 44 units\n* Package 8: size 57 units\n* Package 9: size 54 units\n* Package 10: size 47 units\n* Package 11: size 43 units\n* Package 12: size 52 units\n* Package 13: size 49 units\n* Package 14: size 59 units\n* Package 15: size 38 units\n* Package 16: size 57 units\n* Package 17: size 54 units\n* Package 18: size 58 units\n* Package 19: size 56 units\n* Package 20: size 43 units\n* Package 21: size 69 units\n* Package 22: size 33 units\n* Package 23: size 46 units\n* Package 24: size 66 units\n* Package 25: size 63 units\n* Package 26: size 33 units\n* Package 27: size 60 units\n* Package 28: size 66 units\n* Package 29: size 33 units\n* Package 30: size 56 units\n* Package 31: size 69 units\n* Package 32: size 68 units\n* Package 33: size 41 units\n* Package 34: size 31 units\n* Package 35: size 30 units\n* Package 36: size 68 units\n* Package 37: size 46 units\n* Package 38: size 41 units\n* Package 39: size 34 units\n\nEach truck has a maximum capacity of 100 units. Assign all packages using the fewest trucks possible. Every package must be loaded onto exactly one truck, and the total size of packages in any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

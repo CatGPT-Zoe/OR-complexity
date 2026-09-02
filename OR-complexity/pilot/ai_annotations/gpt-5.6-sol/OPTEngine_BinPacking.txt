@@ -1,0 +1,234 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_BinPacking",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "set_packages",
+      "canonical_name": "packages",
+      "members": [
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y"
+      ],
+      "description": "Packages that must be assigned to delivery trucks.",
+      "source_grounding": "The packages are as follows: Package P ... Package Y."
+    },
+    {
+      "id": "set_trucks",
+      "canonical_name": "trucks",
+      "members": null,
+      "cardinality_status": "endogenous_usage_count_with_unspecified_candidate_indexing",
+      "description": "Identical delivery trucks to which packages may be assigned.",
+      "source_grounding": "A logistics coordinator needs to assign packages to identical delivery trucks."
+    }
+  ],
+  "parameters": [
+    {
+      "id": "param_package_weight",
+      "canonical_name": "package_weight",
+      "index_sets": [
+        "set_packages"
+      ],
+      "value_type": "numeric",
+      "unit": "pounds",
+      "values": {
+        "P": 67,
+        "Q": 43,
+        "R": 62,
+        "S": 38,
+        "T": 48,
+        "U": 38,
+        "V": 36,
+        "W": 69,
+        "X": 46,
+        "Y": 64
+      },
+      "source_grounding": "Package P: 67 pounds; Package Q: 43 pounds; Package R: 62 pounds; Package S: 38 pounds; Package T: 48 pounds; Package U: 38 pounds; Package V: 36 pounds; Package W: 69 pounds; Package X: 46 pounds; Package Y: 64 pounds."
+    },
+    {
+      "id": "param_truck_capacity",
+      "canonical_name": "truck_capacity",
+      "index_sets": [],
+      "value_type": "numeric",
+      "unit": "pounds",
+      "value": 100,
+      "source_grounding": "Each truck can carry a maximum load of 100 pounds."
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity_package_truck_assignment",
+      "canonical_family": "item_container_assignment",
+      "canonical_name": "package-to-truck assignment",
+      "entity_role": "decision",
+      "argument_roles": [
+        {
+          "role": "package",
+          "set_ref": "set_packages"
+        },
+        {
+          "role": "truck",
+          "set_ref": "set_trucks"
+        }
+      ],
+      "normalized_semantics": "The endogenous relation identifying the truck to which each package is placed.",
+      "domain_metadata": {
+        "selection_semantics": "A package-truck pair is either selected or not selected."
+      },
+      "source_grounding": "A logistics coordinator needs to assign packages to identical delivery trucks. Every package must be placed on exactly one truck.",
+      "source_spans": [
+        "assign packages to identical delivery trucks",
+        "Every package must be placed on exactly one truck"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "entity_truck_usage",
+      "canonical_family": "container_usage_outcome",
+      "canonical_name": "truck usage",
+      "entity_role": "service_outcome",
+      "argument_roles": [
+        {
+          "role": "truck",
+          "set_ref": "set_trucks"
+        }
+      ],
+      "normalized_semantics": "Whether a truck is used, meaning that it receives at least one package; the total number of such trucks is the objective outcome.",
+      "domain_metadata": {
+        "derivation": "Induced by package-to-truck assignments."
+      },
+      "source_grounding": "Assign all packages using the fewest number of trucks.",
+      "source_spans": [
+        "using the fewest number of trucks"
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "objective": {
+    "id": "objective_minimize_trucks_used",
+    "canonical_name": "minimize number of trucks used",
+    "sense": "MINIMIZE",
+    "normalized_semantics": "Minimize the cardinality of the trucks that receive one or more packages.",
+    "target_entity_ids": [
+      "entity_truck_usage"
+    ],
+    "parameter_refs": [],
+    "source_grounding": "Assign all packages using the fewest number of trucks.",
+    "source_spans": [
+      "using the fewest number of trucks"
+    ],
+    "confidence": 1.0
+  },
+  "obligations": [
+    {
+      "id": "obl_exactly_one_truck_per_package",
+      "canonical_family": "exactly_one_container_assignment",
+      "canonical_name": "exactly one truck assignment per package",
+      "structural_form": "ASSIGNMENT",
+      "business_role": "complete_and_unique_package_placement",
+      "normalized_semantics": "For every package, exactly one package-to-truck assignment involving that package must be selected.",
+      "support_entity_ids": [
+        "entity_package_truck_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_package_truck_assignment",
+          "slot_roles": {
+            "package": "quantified package",
+            "truck": "choice among trucks"
+          }
+        }
+      ],
+      "quantifier": "FOR_EACH package IN packages",
+      "scope_kind": "PER_PACKAGE",
+      "parameter_refs": [],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "Every package must be placed on exactly one truck.",
+      "source_spans": [
+        "Every package must be placed on exactly one truck"
+      ],
+      "normalization_rationale": "The requirement combines completeness and uniqueness into one primitive exactly-one assignment rule.",
+      "confidence": 1.0
+    },
+    {
+      "id": "obl_truck_weight_capacity",
+      "canonical_family": "container_weight_capacity_upper_bound",
+      "canonical_name": "truck load capacity",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "prevent_truck_overloading",
+      "normalized_semantics": "For every truck, the sum of the weights of all packages assigned to that truck must not exceed 100 pounds.",
+      "support_entity_ids": [
+        "entity_package_truck_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_package_truck_assignment",
+          "slot_roles": {
+            "package": "package contributing its weight",
+            "truck": "quantified common truck"
+          }
+        }
+      ],
+      "quantifier": "FOR_EACH truck IN trucks",
+      "scope_kind": "PER_TRUCK",
+      "parameter_refs": [
+        "param_package_weight",
+        "param_truck_capacity"
+      ],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "Each truck can carry a maximum load of 100 pounds. The total weight loaded onto a truck cannot exceed its capacity.",
+      "source_spans": [
+        "Each truck can carry a maximum load of 100 pounds",
+        "the total weight loaded onto a truck cannot exceed its capacity"
+      ],
+      "normalization_rationale": "The two source statements express the same per-truck aggregate upper-bound family; the first supplies the numeric capacity.",
+      "confidence": 1.0
+    }
+  ],
+  "derived_checks": [
+    {
+      "id": "derived_truck_usage_from_assignments",
+      "canonical_name": "truck usage induced by package placement",
+      "check_type": "DEFINITIONAL_EQUIVALENCE",
+      "normalized_semantics": "A truck is counted as used if and only if at least one package is assigned to it.",
+      "support_entity_ids": [
+        "entity_package_truck_assignment",
+        "entity_truck_usage"
+      ],
+      "source_grounding": "Assign all packages using the fewest number of trucks.",
+      "source_spans": [
+        "using the fewest number of trucks"
+      ],
+      "source_status": "definition_required_by_objective_semantics",
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "unresolved_truck_candidate_indexing",
+      "issue": "The text does not specify a finite candidate set or upper bound of truck identifiers.",
+      "impact": "A concrete formulation would need an indexing convention or a valid finite upper bound, but this does not alter the semantic assignment, capacity, or objective families.",
+      "source_grounding": "The trucks are described as identical and their used count is to be minimized."
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "warning_usage_is_derived",
+      "message": "Truck usage is represented as a service outcome induced by package assignments. No separate activation obligation is introduced because the meaning of a used truck is definitional rather than an independently stated feasibility rule."
+    },
+    {
+      "id": "warning_empty_coupling_hypergraph",
+      "message": "Both primary obligations have one CSDE family in their support, so neither belongs to H_c under the support_entity_ids length >= 2 rule, despite the capacity obligation aggregating multiple package-indexed instances."
+    }
+  ]
+}

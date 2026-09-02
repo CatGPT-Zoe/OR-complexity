@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing conglomerate aims to devise a strategic quality enhancement initiative to diminish total defect occurrences originating from several distinct production lines. Presently, no specialized corrective procedures have been implemented.\n\nThe operational metrics for each production line are detailed as follows:\n* For Line A, the defect rate coefficient is 2.099, and the output volume is 105.803.\n* For Line B, the defect rate coefficient is 0.563, and the output volume is 234.118.\n* For Line C, the defect rate coefficient is 1.188, and the output volume is 219.175.\n\nTo address these defects, a suite of advanced corrective protocols can be deployed, each associated with a specific defect reduction efficacy:\n* Implementation of Protocol Alpha reduces defects by 19%.\n* Implementation of Protocol Beta reduces defects by 83%.\n* Implementation of Protocol Gamma reduces defects by 56%.\n\nDeploying a protocol on a production line introduces an incremental cost per unit of output. The comprehensive cost matrix for all line-protocol pairings is provided below:\n\n| Line \\ Protocol | Protocol Alpha | Protocol Beta | Protocol Gamma |\n|---|---|---|---|\n| Line A | 15.661 | 51.541 | 106.018 |\n| Line B | 15.042 | 47.779 | 133.478 |\n| Line C | 113.539 | 51.884 | 121.96 |\n\nThe task is to determine the assignment of corrective protocols to each line (lines may employ multiple protocols concurrently), and it is permissible for a line to operate with only partial correction if required. The primary objective is to guarantee that the aggregate defect count is lowered by a minimum proportion of P = 0.605 relative to the baseline, while simultaneously minimizing the total incremental expenditure incurred.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

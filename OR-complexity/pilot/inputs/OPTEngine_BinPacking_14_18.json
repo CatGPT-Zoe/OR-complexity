@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo units onto identical transport vessels. The cargo units are as follows:\n\n* Unit Alpha: mass 66 tonnes\n* Unit Bravo: mass 66 tonnes\n* Unit Charlie: mass 43 tonnes\n* Unit Delta: mass 44 tonnes\n* Unit Echo: mass 35 tonnes\n* Unit Foxtrot: mass 70 tonnes\n* Unit Golf: mass 62 tonnes\n* Unit Hotel: mass 63 tonnes\n* Unit India: mass 56 tonnes\n* Unit Juliet: mass 62 tonnes\n* Unit Kilo: mass 49 tonnes\n* Unit Lima: mass 37 tonnes\n* Unit Mike: mass 39 tonnes\n* Unit November: mass 57 tonnes\n\nEach vessel possesses a maximum load capacity of 100 tonnes. The objective is to assign every cargo unit to a vessel, with each unit placed in precisely one vessel, such that the cumulative mass on any given vessel does not surpass its capacity limit. The aim is to accomplish this allocation utilizing the minimal possible number of vessels.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

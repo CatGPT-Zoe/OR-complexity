@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a specialized cargo shipment for a high-priority delivery. They must select a combination of cargo containers to maximize total utility points while adhering to a strict total mass limit for the transport vehicle.\n\nThe available containers are:\n* Container A: mass 47kg, utility 275 points\n* Container B: mass 45kg, utility 293 points\n* Container C: mass 26kg, utility 152 points\n* Container D: mass 14kg, utility 50 points\n* Container E: mass 28kg, utility 21 points\n* Container F: mass 35kg, utility 254 points\n* Container G: mass 46kg, utility 185 points\n* Container H: mass 48kg, utility 11 points\n* Container I: mass 13kg, utility 161 points\n* Container J: mass 49kg, utility 224 points\n* Container K: mass 29kg, utility 273 points\n* Container L: mass 45kg, utility 155 points\n* Container M: mass 5kg, utility 29 points\n* Container N: mass 6kg, utility 187 points\n* Container O: mass 25kg, utility 221 points\n* Container P: mass 25kg, utility 128 points\n* Container Q: mass 19kg, utility 258 points\n* Container R: mass 26kg, utility 293 points\n* Container S: mass 1kg, utility 232 points\n\nFurthermore, due to compatibility restrictions, precisely one of Container A or Container B must be included in the final shipment.\n\nIf Container C is included, it necessitates special handling equipment that reduces the effective transport capacity by 10 kg.\nThe vehicle's maximum allowable load is 372 kg. The firm must determine the optimal selection of containers.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

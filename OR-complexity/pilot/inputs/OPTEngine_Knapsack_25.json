@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n\n* Container 1: weight 34 units, revenue 42 credits\n* Container 2: weight 43 units, revenue 225 credits\n* Container 3: weight 43 units, revenue 66 credits\n* Container 4: weight 37 units, revenue 225 credits\n* Container 5: weight 30 units, revenue 47 credits\n* Container 6: weight 48 units, revenue 61 credits\n* Container 7: weight 47 units, revenue 243 credits\n* Container 8: weight 41 units, revenue 85 credits\n* Container 9: weight 25 units, revenue 104 credits\n* Container 10: weight 27 units, revenue 297 credits\n* Container 11: weight 3 units, revenue 186 credits\n* Container 12: weight 28 units, revenue 152 credits\n* Container 13: weight 19 units, revenue 82 credits\n* Container 14: weight 6 units, revenue 300 credits\n* Container 15: weight 29 units, revenue 289 credits\n* Container 16: weight 21 units, revenue 106 credits\n* Container 17: weight 36 units, revenue 32 credits\n* Container 18: weight 15 units, revenue 237 credits\n* Container 19: weight 48 units, revenue 269 credits\n* Container 20: weight 27 units, revenue 79 credits\n* Container 21: weight 36 units, revenue 286 credits\n* Container 22: weight 3 units, revenue 110 credits\n* Container 23: weight 19 units, revenue 294 credits\n* Container 24: weight 14 units, revenue 145 credits\n* Container 25: weight 4 units, revenue 272 credits\n\nThe vehicle has a maximum weight capacity of 478 units. Determine which containers to load to maximize total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

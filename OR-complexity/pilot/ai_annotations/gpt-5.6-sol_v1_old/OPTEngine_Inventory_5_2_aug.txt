@@ -1,0 +1,581 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Inventory_5_2_aug",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "days",
+      "description": "days in the 5-day operational planning window",
+      "values": [1, 2, 3, 4, 5]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "initial_stock",
+      "indices": [],
+      "description": "physical stock available at the start of the operational window",
+      "unit": "gallons",
+      "values": 10,
+      "data_ref": null
+    },
+    {
+      "id": "daily_requirement",
+      "indices": [
+        {
+          "role": "day",
+          "set_id": "days"
+        }
+      ],
+      "description": "fuel-additive consumption requirement on each day",
+      "unit": "gallons",
+      "values": {
+        "1": 25,
+        "2": 19,
+        "3": 44,
+        "4": 38,
+        "5": 15
+      },
+      "data_ref": null
+    },
+    {
+      "id": "procurement_lead_time",
+      "indices": [],
+      "description": "delay between submission of a procurement request and availability of the requested additive",
+      "unit": "days",
+      "values": 4,
+      "data_ref": null
+    },
+    {
+      "id": "minimum_procurement_volume",
+      "indices": [],
+      "description": "general minimum volume permitted for a daily procurement request",
+      "unit": "gallons",
+      "values": 10,
+      "data_ref": null
+    },
+    {
+      "id": "maximum_procurement_volume",
+      "indices": [],
+      "description": "general maximum volume permitted for a daily procurement request",
+      "unit": "gallons",
+      "values": 76,
+      "data_ref": null
+    },
+    {
+      "id": "day_1_maximum_procurement_volume",
+      "indices": [],
+      "description": "special maximum procurement volume applicable on day 1",
+      "unit": "gallons",
+      "values": 52,
+      "data_ref": null
+    },
+    {
+      "id": "tank_capacity",
+      "indices": [],
+      "description": "maximum aggregate volume that may be held in storage",
+      "unit": "gallons",
+      "values": 34,
+      "data_ref": null
+    },
+    {
+      "id": "terminal_minimum_stock",
+      "indices": [],
+      "description": "minimum physical stock required by the conclusion of day 5",
+      "unit": "gallons",
+      "values": 13,
+      "data_ref": null
+    },
+    {
+      "id": "procurement_cost",
+      "indices": [],
+      "description": "expense per gallon of additive requested",
+      "unit": "cost per gallon",
+      "values": 4,
+      "data_ref": null
+    },
+    {
+      "id": "storage_cost",
+      "indices": [],
+      "description": "expense per gallon of additive retained from one day to the next",
+      "unit": "cost per gallon",
+      "values": 1,
+      "data_ref": null
+    },
+    {
+      "id": "deficit_penalty",
+      "indices": [],
+      "description": "penalty per gallon of unmet daily requirement",
+      "unit": "cost per gallon",
+      "values": 10,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "procurement",
+      "canonical_name": "procurement",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "request_day",
+          "set_id": "days"
+        }
+      ],
+      "description": "volume of fuel additive requested from the supplier on each day",
+      "value_semantics": "continuous nonnegative volume",
+      "unit": "gallons",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "In each day t = 1, ..., 5, the supplier permits the company to submit a procurement request",
+        "The objective is to ascertain the optimal procurement volume for each day"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "inventory",
+      "canonical_name": "inventory",
+      "semantic_type": "state",
+      "indices": [
+        {
+          "role": "day",
+          "set_id": "days"
+        }
+      ],
+      "description": "physical stock of fuel additive on hand for each day of the operational window",
+      "value_semantics": "continuous nonnegative physical stock",
+      "unit": "gallons",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "the aggregate volume held in storage at any moment must not surpass the tank capacity of 34 gallons",
+        "monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "deficit",
+      "canonical_name": "deficit",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "requirement_day",
+          "set_id": "days"
+        }
+      ],
+      "description": "portion of each day's additive requirement that is not satisfied",
+      "value_semantics": "continuous nonnegative unmet volume",
+      "unit": "gallons",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Supply deficits are tolerated",
+        "the deficit penalty, levied at 10 per gallon of unmet requirement",
+        "monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "minimize_total_procurement_storage_and_deficit_expense",
+    "normalized_semantics": "minimize total procurement expense over requested volumes, storage expense over inventory retained from one day to the next, and penalties for unmet daily requirements",
+    "description": "Minimize aggregate procurement, storage, and deficit expense over the planning window.",
+    "entity_scope": [
+      "procurement",
+      "inventory",
+      "deficit"
+    ],
+    "parameter_refs": [
+      "procurement_cost",
+      "storage_cost",
+      "deficit_penalty"
+    ],
+    "source_spans": [
+      "The aggregate expense over the planning window comprises three elements: the procurement expense, calculated at 4 per gallon requested; the storage expense, calculated at 1 per gallon retained from one day to the next; and the deficit penalty, levied at 10 per gallon of unmet requirement.",
+      "The objective is to ascertain the optimal procurement volume for each day and monitor the consequent stock and deficit levels in order to minimize the total expense."
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "initial_stock_condition",
+      "obligation_type": "balance",
+      "normalized_semantics": "the inventory state immediately preceding day 1 is fixed at 10 gallons",
+      "support_entity_ids": [
+        "inventory"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory",
+          "role": "initial_state_anchor",
+          "aggregation_axes": [],
+          "index_binding": {
+            "day": "start of window before day 1"
+          }
+        }
+      ],
+      "quantifiers": [
+        "at the start of the operational window"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "initial_stock"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "The initial stock at the start of the window is 10 gallons."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o2",
+      "canonical_name": "daily_inventory_conservation",
+      "obligation_type": "conservation",
+      "normalized_semantics": "each day's stock must equal the preceding stock plus procurement becoming available that day, less the portion of that day's requirement that is satisfied; the satisfied portion is the daily requirement minus the same-day deficit",
+      "support_entity_ids": [
+        "procurement",
+        "inventory",
+        "deficit"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory",
+          "role": "current_day_stock",
+          "aggregation_axes": [],
+          "index_binding": {
+            "day": "t"
+          }
+        },
+        {
+          "entity_id": "inventory",
+          "role": "preceding_stock",
+          "aggregation_axes": [],
+          "index_binding": {
+            "day": "t-1, or initial_stock when t=1"
+          }
+        },
+        {
+          "entity_id": "procurement",
+          "role": "procurement_becoming_available",
+          "aggregation_axes": [],
+          "index_binding": {
+            "request_day": "t-procurement_lead_time"
+          }
+        },
+        {
+          "entity_id": "deficit",
+          "role": "same_day_unmet_requirement",
+          "aggregation_axes": [],
+          "index_binding": {
+            "requirement_day": "t"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all days t in days"
+      ],
+      "condition": "Only procurement whose 4-day lead time has elapsed can enter the available stock balance.",
+      "parameter_refs": [
+        "initial_stock",
+        "daily_requirement",
+        "procurement_lead_time"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The initial stock at the start of the window is 10 gallons.",
+        "every request submitted is subject to a 4-day lead time before the additive becomes available for consumption or to replenish reserves",
+        "The consumption requirement for the additive on each day is as follows",
+        "Supply deficits are tolerated"
+      ],
+      "confidence": 0.94
+    },
+    {
+      "id": "o3",
+      "canonical_name": "procurement_lead_time_availability",
+      "obligation_type": "precedence",
+      "normalized_semantics": "procurement requested on a day must remain unavailable for consumption or stock replenishment until four days after the request",
+      "support_entity_ids": [
+        "procurement",
+        "inventory"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procurement",
+          "role": "delayed_request",
+          "aggregation_axes": [],
+          "index_binding": {
+            "request_day": "s"
+          }
+        },
+        {
+          "entity_id": "inventory",
+          "role": "stock_state_that_may_receive_request",
+          "aggregation_axes": [],
+          "index_binding": {
+            "day": "s+4 when that day lies in the operational window"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all request days s in days"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "procurement_lead_time"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "every request submitted is subject to a 4-day lead time before the additive becomes available for consumption or to replenish reserves"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o4",
+      "canonical_name": "minimum_daily_procurement",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "each daily procurement request must contain at least 10 gallons",
+      "support_entity_ids": [
+        "procurement"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procurement",
+          "role": "lower_bounded_request_volume",
+          "aggregation_axes": [],
+          "index_binding": {
+            "request_day": "t"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all days t in days"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "minimum_procurement_volume"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "the supplier permits the company to submit a procurement request, with the volume required to fall between 10 and 76 gallons"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "o5",
+      "canonical_name": "maximum_daily_procurement",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "each daily procurement request must contain no more than 76 gallons",
+      "support_entity_ids": [
+        "procurement"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procurement",
+          "role": "upper_bounded_request_volume",
+          "aggregation_axes": [],
+          "index_binding": {
+            "request_day": "t"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all days t in days"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "maximum_procurement_volume"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "the supplier permits the company to submit a procurement request, with the volume required to fall between 10 and 76 gallons"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "id": "o6",
+      "canonical_name": "day_1_special_procurement_cap",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "the procurement volume requested on day 1 must not exceed 52 gallons",
+      "support_entity_ids": [
+        "procurement"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "procurement",
+          "role": "day_1_capped_request_volume",
+          "aggregation_axes": [],
+          "index_binding": {
+            "request_day": "1"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for day 1"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "day_1_maximum_procurement_volume"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "On the first day, the maximum allowable procurement volume is 52 gallons."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o7",
+      "canonical_name": "storage_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "physical stock held in storage must never exceed the tank capacity of 34 gallons",
+      "support_entity_ids": [
+        "inventory"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory",
+          "role": "stored_volume",
+          "aggregation_axes": [],
+          "index_binding": {
+            "day": "t"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all days t and all represented stock states in the operational window"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "tank_capacity"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "the aggregate volume held in storage at any moment must not surpass the tank capacity of 34 gallons"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "id": "o8",
+      "canonical_name": "deficit_cannot_exceed_requirement",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "the deficit recorded for a day must not exceed that day's consumption requirement",
+      "support_entity_ids": [
+        "deficit"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "deficit",
+          "role": "unmet_portion_of_requirement",
+          "aggregation_axes": [],
+          "index_binding": {
+            "requirement_day": "t"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all days t in days"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "daily_requirement"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Supply deficits are tolerated, but any unsatisfied requirement is entirely forfeited",
+        "the deficit penalty, levied at 10 per gallon of unmet requirement"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "o9",
+      "canonical_name": "no_deficit_carryover",
+      "obligation_type": "policy",
+      "normalized_semantics": "a deficit applies only to the requirement on the day when it occurs and must not be carried forward as demand or backlog on any later day",
+      "support_entity_ids": [
+        "deficit"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "deficit",
+          "role": "same_day_forfeited_shortfall",
+          "aggregation_axes": [],
+          "index_binding": {
+            "requirement_day": "t; not propagated to any later day"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all days t in days",
+        "for all later days t' greater than t"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "daily_requirement"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "any unsatisfied requirement is entirely forfeited and will not be carried forward"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o10",
+      "canonical_name": "terminal_minimum_inventory",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "physical stock on hand at the conclusion of day 5 must be at least 13 gallons",
+      "support_entity_ids": [
+        "inventory"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory",
+          "role": "terminal_stock",
+          "aggregation_axes": [],
+          "index_binding": {
+            "day": "5"
+          }
+        }
+      ],
+      "quantifiers": [
+        "at the conclusion of day 5"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "terminal_minimum_stock"
+      ],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "By the conclusion of day 5, the physical stock on hand must be no less than 13 gallons."
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": [
+    {
+      "description": "It is unclear whether submitting a procurement request is mandatory every day, in which case the 10-gallon minimum applies unconditionally, or optional, in which case a zero-volume no-request alternative may be permitted."
+    },
+    {
+      "description": "The intraday ordering of procurement arrivals, consumption, and inventory measurement is not specified, although tank capacity is required to hold 'at any moment.'"
+    },
+    {
+      "description": "The statement does not specify whether storage cost is charged on the stock remaining at the end of day 5 or only on inventory carried between consecutive days within the 5-day window."
+    },
+    {
+      "description": "No information is supplied about procurement requested before the planning window that might still be in transit and arrive during days 1 through 4."
+    },
+    {
+      "description": "Requests submitted on days 2 through 5 become available after the planning window, but no terminal treatment or valuation of those outstanding requests is specified."
+    }
+  ]
+}

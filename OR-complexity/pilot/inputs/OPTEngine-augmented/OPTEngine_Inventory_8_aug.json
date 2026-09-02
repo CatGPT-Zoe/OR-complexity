@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage strategy for a critical therapeutic agent over an 8‑week planning cycle.  \nThe initial stock at the start of the planning window is 92 liters.  \nIn each week \\(t = 1,\\dots,8\\), the supplier permits the hospital to request a shipment whose volume must be between 8 and 25 liters.  \nEvery shipment, however, requires a lead time of 2 weeks before it becomes available for patient treatment or to replenish the storage.  \nThe weekly consumption of the agent is as follows:  \n* Week 1: 60 liters  \n* Week 2: 38 liters  \n* Week 3: 37 liters  \n* Week 4: 53 liters  \n* Week 5: 36 liters  \n* Week 6: 11 liters  \n* Week 7: 41 liters  \n* Week 8: 30 liters  \n\nSupply shortfalls are tolerated, but any unsatisfied consumption is lost and cannot be deferred to later weeks.  \nThroughout the 8‑week horizon, agent quantities may be treated as continuous, and the total volume kept in the refrigerated storage at any moment must not exceed the capacity limit of 92 liters.  \n\nIn week 6, the maximum allowable shipment volume is restricted to 19 liters.  \nIn week 3, the on‑hand stock must be maintained at a level of at least 1 liter.  \n\nThe overall cost comprises three elements: the procurement cost, charged at 1 per liter ordered; the storage cost, charged at 1 per liter carried over from one week to the next; and a shortage penalty, levied at 11 per liter of unmet consumption.  \nThe objective is to decide the optimal shipment volume for each week and to monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

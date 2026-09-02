@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_11_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must devise a procurement and storage strategy for a critical vaccine supply over an 11-week campaign.  \nInitial stock at the campaign’s outset is zero doses.  \nIn each week \\( t = 1, \\dots, 11 \\), the manufacturer permits an order whose size must be between 16 and 28 doses inclusive.  \nEvery order placed is subject to a 4‑week lead time before it becomes available to meet requirements or to replenish the stock.  \nThe projected weekly requirement for doses is as follows:  \n* Week 1: 57 doses  \n* Week 2: 53 doses  \n* Week 3: 55 doses  \n* Week 4: 39 doses  \n* Week 5: 58 doses  \n* Week 6: 12 doses  \n* Week 7: 46 doses  \n* Week 8: 17 doses  \n* Week 9: 36 doses  \n* Week 10: 34 doses  \n* Week 11: 20 doses  \n\nShortfalls are tolerated, but any unsatisfied requirement is lost and cannot be recovered later.  \nThroughout the campaign, fractional doses are permissible, and the total stock physically held at any moment must not exceed the refrigerated storage capacity of 33 doses.  \nThe overall campaign expenditure comprises three elements: the procurement cost, amounting to 6 per dose ordered; the refrigeration cost, amounting to 3 per dose kept in storage from one week to the next; and a penalty for unmet need, set at 8 per dose of unsatisfied weekly requirement.  \nThe objective is to determine the optimal order quantity each week and to monitor the resulting stock and shortfall levels so as to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: mass 40 tonnes\n* Shipment Beta: mass 35 tonnes\n* Shipment Gamma: mass 56 tonnes\n* Shipment Delta: mass 62 tonnes\n* Shipment Epsilon: mass 58 tonnes\n* Shipment Zeta: mass 64 tonnes\n* Shipment Eta: mass 38 tonnes\n* Shipment Theta: mass 56 tonnes\n* Shipment Iota: mass 51 tonnes\n* Shipment Kappa: mass 38 tonnes\n* Shipment Lambda: mass 65 tonnes\n* Shipment Mu: mass 53 tonnes\n* Shipment Nu: mass 67 tonnes\n* Shipment Xi: mass 40 tonnes\n* Shipment Omicron: mass 35 tonnes\n* Shipment Pi: mass 35 tonnes\n* Shipment Rho: mass 45 tonnes\n* Shipment Sigma: mass 37 tonnes\n* Shipment Tau: mass 42 tonnes\n* Shipment Upsilon: mass 60 tonnes\n* Shipment Phi: mass 42 tonnes\n* Shipment Chi: mass 31 tonnes\n* Shipment Psi: mass 54 tonnes\n* Shipment Omega: mass 51 tonnes\n* Shipment Aster: mass 46 tonnes\n* Shipment Prime: mass 52 tonnes\n* Shipment Hash: mass 67 tonnes\n* Shipment Amper: mass 46 tonnes\n* Shipment Caret: mass 58 tonnes\n* Shipment Tilde: mass 63 tonnes\n* Shipment Underscore: mass 32 tonnes\n\nEach aircraft has a maximum payload capacity of 100 tonnes. Assign all shipments using the smallest possible number of planes. Every shipment must be loaded onto exactly one aircraft, and the combined mass on any aircraft must not surpass its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

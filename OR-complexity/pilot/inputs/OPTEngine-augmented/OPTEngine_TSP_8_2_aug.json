@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a circuit for a specialized courier to collect sensitive documents from eight corporate offices.  \nThe offices are situated at the following grid positions (in miles):  \n\nOffice P: (56,66)  \nOffice Q: (149,198)  \nOffice R: (42,110)  \nOffice S: (49,91)  \nOffice T: (29,16)  \nOffice U: (179,7)  \nOffice V: (134,115)  \nOffice W: (192,173)  \n\nTravel distances between offices (in miles) have been precomputed:  \n\nP to R: 46.2  \nP to S: 26.0  \nP to T: 56.8  \nP to U: 136.4  \nP to V: 92.1  \nP to W: 173.0  \nQ to R: 138.5  \nQ to S: 146.5  \nQ to T: 218.0  \nQ to U: 193.3  \nQ to V: 84.3  \nQ to W: 49.7  \nR to S: 20.2  \nR to T: 94.9  \nR to U: 171.4  \nR to V: 92.1  \nR to W: 162.7  \nS to T: 77.6  \nS to U: 154.8  \nS to V: 88.3  \nS to W: 164.8  \nT to U: 150.3  \nT to V: 144.3  \nT to W: 226.3  \nU to V: 117.0  \nU to W: 166.5  \nV to W: 82.0  \n\nDue to a regulatory restriction, there is no permitted direct route between Office P and Office Q.  \nMoreover, for security reasons, exactly one of two specified corridors must be part of the itinerary: either the link between Office Q and Office R, or the link between Office R and Office S.  \n\nThe objective is to determine the minimal total travel distance for a closed loop that visits each office precisely once and returns to the origin office.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

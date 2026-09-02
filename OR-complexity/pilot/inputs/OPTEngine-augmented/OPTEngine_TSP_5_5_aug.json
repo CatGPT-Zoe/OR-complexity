@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate a maintenance circuit for five specialized machinery units situated at distinct facilities.  \nThe geographical positions of these units are recorded as follows:  \nUnit Alpha: coordinates (74,180)  \nUnit Beta: coordinates (31,140)  \nUnit Gamma: coordinates (85,138)  \nUnit Delta: coordinates (52,154)  \nUnit Epsilon: coordinates (140,150)  \n\nTravel distances between units, measured in kilometers, are precisely known:  \nAlpha to Gamma: 43.4 km  \nAlpha to Delta: 34.1 km  \nAlpha to Epsilon: 72.5 km  \nBeta to Gamma: 54.0 km  \nBeta to Delta: 25.2 km  \nBeta to Epsilon: 109.5 km  \nGamma to Delta: 36.7 km  \nGamma to Epsilon: 56.3 km  \nDelta to Epsilon: 88.1 km  \n\nDue to access restrictions, no direct route exists between Unit Alpha and Unit Beta.  \nFurthermore, owing to scheduling and permit limitations, exactly one of the following two connections must be incorporated into the inspection circuit: the link between Unit Beta and Unit Gamma, or the link between Unit Gamma and Unit Delta.  \n\nThe objective is to determine the minimal total travel distance for a closed-loop inspection route that visits each unit exactly once and returns to the starting point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

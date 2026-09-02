@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of distinct parcels onto a fleet of identical delivery drones. The parcels are as follows:\n* Parcel Alpha: mass 46kg\n* Parcel Beta: mass 70kg\n* Parcel Gamma: mass 66kg\n* Parcel Delta: mass 65kg\n* Parcel Epsilon: mass 42kg\n* Parcel Zeta: mass 38kg\n* Parcel Eta: mass 54kg\n* Parcel Theta: mass 66kg\n* Parcel Iota: mass 60kg\n* Parcel Kappa: mass 53kg\n* Parcel Lambda: mass 60kg\n* Parcel Mu: mass 69kg\n* Parcel Nu: mass 38kg\n* Parcel Xi: mass 31kg\n* Parcel Omicron: mass 68kg\n* Parcel Pi: mass 55kg\n* Parcel Rho: mass 57kg\n* Parcel Sigma: mass 52kg\n* Parcel Tau: mass 49kg\n* Parcel Upsilon: mass 39kg\n* Parcel Phi: mass 48kg\n* Parcel Chi: mass 61kg\n* Parcel Psi: mass 46kg\n* Parcel Omega: mass 55kg\n* Parcel A1: mass 68kg\n* Parcel B1: mass 45kg\n* Parcel C1: mass 59kg\n* Parcel D1: mass 42kg\n* Parcel E1: mass 41kg\n* Parcel F1: mass 61kg\n* Parcel G1: mass 59kg\n* Parcel H1: mass 32kg\n* Parcel I1: mass 56kg\nEach drone has a maximum permissible lift capacity of 100 kg. The coordinator must assign every parcel to exactly one drone, ensuring the aggregate mass on any drone does not surpass its limit. The objective is to utilize the minimal number of drones to accomplish the complete allocation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

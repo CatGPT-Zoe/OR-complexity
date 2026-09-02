@@ -1,0 +1,27 @@
+{
+  "instance_id": "MIPLIB_NL_stein9inf",
+  "annotation_mode": "semantic",
+  "problem_text": "A smart city has designated a core security area that includes M key surveillance points (such as major crossroads, squares, subway entrances, etc.). To ensure the security of these areas, the security center has deployed N automated drone takeoff and landing hangars around the area, with each hangar either enabled or disabled (corresponding to an investment volume of 0 or 1). Due to physical limitations of geographical location and perspective, each key surveillance point can only be covered by drones from specific several hangars. For example, surveillance point A1 can only be covered by Hangars 03, 04, or 06. The coverage requirements for each surveillance point are shown in Table S1.csv. In addition, the total investment volume of all 9 hangars must be at least K1 (equivalent to having the computing/transport capacity of at least K1 fully operational hangars), and the total investment volume of all 9 hangars must not exceed K2. On the premise of satisfying the seamless surveillance of all N locations and meeting the system's total capacity limit (between K1 and K2), minimize the total investment degree of all hangars.If feasible, output the optimal value; if infeasible, output 'infeasible'.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "files_1",
+      "indices": [
+        "Location_ID",
+        "Hangar_1",
+        "Hangar_2",
+        "Hangar_3"
+      ],
+      "unit": "",
+      "values": "| Location_ID | Hangar_1 | Hangar_2 | Hangar_3 |\n|---|---|---|---|\n| A1 | zz02 | zz03 | zz04 |\n| A2 | zz01 | zz03 | zz05 |\n| A3 | zz01 | zz02 | zz06 |\n| A4 | zz05 | zz06 | zz07 |\n| A5 | zz04 | zz06 | zz08 |\n| A6 | zz04 | zz05 | zz09 |\n| A7 | zz01 | zz08 | zz09 |\n| A8 | zz02 | zz07 | zz09 |\n| A9 | zz03 | zz07 | zz08 |\n| A10 | zz01 | zz04 | zz07 |\n| A11 | zz02 | zz05 | zz08 |\n| A12 | zz03 | zz06 | zz09 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/stein9inf/data/S1.csv",
+      "role": "parameter_table",
+      "table": "files_1"
+    }
+  ],
+  "notes": ""
+}

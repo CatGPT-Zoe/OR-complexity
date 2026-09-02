@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales director must personally conduct quarterly performance reviews across nine branch offices.\n\nThe travel times between offices are recorded in minutes:\n* Office Alpha to Beta: 164.5 minutes\n* Office Alpha to Gamma: 217.7 minutes\n* Office Alpha to Delta: 74.7 minutes\n* Office Alpha to Epsilon: 110.3 minutes\n* Office Alpha to Zeta: 126.0 minutes\n* Office Alpha to Eta: 111.2 minutes\n* Office Alpha to Theta: 157.7 minutes\n* Office Alpha to Iota: 242.8 minutes\n* Office Beta to Gamma: 124.2 minutes\n* Office Beta to Delta: 172.0 minutes\n* Office Beta to Epsilon: 90.0 minutes\n* Office Beta to Zeta: 182.5 minutes\n* Office Beta to Eta: 94.4 minutes\n* Office Beta to Theta: 172.2 minutes\n* Office Beta to Iota: 123.6 minutes\n* Office Gamma to Delta: 177.2 minutes\n* Office Gamma to Epsilon: 107.8 minutes\n* Office Gamma to Zeta: 150.2 minutes\n* Office Gamma to Eta: 106.5 minutes\n* Office Gamma to Theta: 113.4 minutes\n* Office Gamma to Iota: 37.0 minutes\n* Office Delta to Epsilon: 87.1 minutes\n* Office Delta to Zeta: 52.5 minutes\n* Office Delta to Eta: 84.5 minutes\n* Office Delta to Theta: 89.9 minutes\n* Office Delta to Iota: 209.3 minutes\n* Office Epsilon to Zeta: 92.8 minutes\n* Office Epsilon to Eta: 5.0 minutes\n* Office Epsilon to Theta: 89.9 minutes\n* Office Epsilon to Iota: 132.8 minutes\n* Office Zeta to Eta: 88.2 minutes\n* Office Zeta to Theta: 43.2 minutes\n* Office Zeta to Iota: 185.9 minutes\n* Office Eta to Theta: 84.9 minutes\n* Office Eta to Iota: 132.6 minutes\n* Office Theta to Iota: 150.3 minutes\n\nThe objective is to determine the most time-efficient inspection circuit, whereby the director must visit each branch precisely once before concluding the tour back at the initial office.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

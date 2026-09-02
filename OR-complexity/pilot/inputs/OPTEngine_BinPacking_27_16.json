@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments to identical freight compartments.  \nCargo units:  \n* Cargo Alpha: mass 46kg  \n* Cargo Beta: mass 49kg  \n* Cargo Gamma: mass 35kg  \n* Cargo Delta: mass 53kg  \n* Cargo Epsilon: mass 39kg  \n* Cargo Zeta: mass 58kg  \n* Cargo Eta: mass 31kg  \n* Cargo Theta: mass 54kg  \n* Cargo Iota: mass 58kg  \n* Cargo Kappa: mass 33kg  \n* Cargo Lambda: mass 70kg  \n* Cargo Mu: mass 48kg  \n* Cargo Nu: mass 62kg  \n* Cargo Xi: mass 69kg  \n* Cargo Omicron: mass 57kg  \n* Cargo Pi: mass 59kg  \n* Cargo Rho: mass 69kg  \n* Cargo Sigma: mass 66kg  \n* Cargo Tau: mass 63kg  \n* Cargo Upsilon: mass 42kg  \n* Cargo Phi: mass 40kg  \n* Cargo Chi: mass 30kg  \n* Cargo Psi: mass 47kg  \n* Cargo Omega: mass 36kg  \n* Cargo Ares: mass 54kg  \n* Cargo Boreas: mass 46kg  \n* Cargo Chronos: mass 42kg  \n\nEach compartment has a maximum load capacity of 100 kg.  \nAll cargo units must be assigned to exactly one compartment, and the total mass in any compartment cannot surpass its limit.  \nDetermine an allocation that minimizes the total number of compartments used.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a cargo plane. The available containers are:\n\n* Container 1: weight 21 kg, revenue 185 credits\n* Container 2: weight 13 kg, revenue 231 credits\n* Container 3: weight 10 kg, revenue 13 credits\n* Container 4: weight 49 kg, revenue 271 credits\n* Container 5: weight 10 kg, revenue 298 credits\n* Container 6: weight 25 kg, revenue 194 credits\n* Container 7: weight 30 kg, revenue 28 credits\n* Container 8: weight 36 kg, revenue 220 credits\n* Container 9: weight 41 kg, revenue 126 credits\n* Container 10: weight 2 kg, revenue 195 credits\n* Container 11: weight 34 kg, revenue 91 credits\n* Container 12: weight 44 kg, revenue 109 credits\n* Container 13: weight 41 kg, revenue 191 credits\n\nThe plane's maximum cargo capacity is 249 kg. Choose the combination of containers that maximizes total revenue without exceeding this weight limit. Each container must be loaded entirely or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

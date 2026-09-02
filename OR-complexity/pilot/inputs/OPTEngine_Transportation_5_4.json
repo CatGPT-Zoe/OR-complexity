@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a fleet of autonomous delivery drones from several launch facilities to fulfill urgent orders at various distribution hubs. The objective is to minimize the total energy expenditure for the entire operation.\n\nThe maximum number of drones available for launch from each facility (set L) is as follows:\n*Facility L1 can deploy 163 drones.\n*Facility L2 can deploy 179 drones.\n*Facility L3 can deploy 159 drones.\n*Facility L4 can deploy 190 drones.\n*Facility L5 can deploy 164 drones.\n\nThe required number of drones to be received at each distribution hub (set H) is predetermined:\n*Hub H1 must receive 246 drones.\n*Hub H2 must receive 157 drones.\n*Hub H3 must receive 86 drones.\n*Hub H4 must receive 82 drones.\n*Hub H5 must receive 210 drones.\n\nThe energy cost, measured in standardized units, to route a single drone from each launch facility to each hub is detailed in the matrix:\n| From / To | H1 | H2 | H3 | H4 | H5 |\n|--|-|-|-|-|\n| L1 | 17 | 16 | 8 | 9 | 15 |\n| L2 | 3 | 10 | 8 | 9 | 11 |\n| L3 | 11 | 18 | 3 | 5 | 5 |\n| L4 | 8 | 13 | 5 | 7 | 3 |\n| L5 | 14 | 14 | 11 | 18 | 15 |\n\nDetermine the optimal number of drones to dispatch along each route to achieve the minimal total energy cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

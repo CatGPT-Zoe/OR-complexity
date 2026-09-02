@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_9_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 9 delivery trucks through 9 specialized distribution centers.\n\nEach truck must follow a predetermined route through the centers, represented as pairs (Distribution Center, Handling Duration), where each pair specifies the center where the truck must stop and the time required to handle its cargo. The sequence of pairs indicates the mandatory order of stops.\n\nTruck routes:\n* Truck 1 follows: (DC8, 6) → (DC3, 5) → (DC7, 4) → (DC2, 10) → (DC1, 1) → (DC5, 6) → (DC9, 5) → (DC4, 2) → (DC6, 10)\n* Truck 2 follows: (DC3, 1) → (DC2, 9) → (DC4, 3) → (DC1, 3) → (DC7, 7) → (DC9, 4) → (DC8, 5) → (DC5, 10) → (DC6, 9)\n* Truck 3 follows: (DC1, 5) → (DC9, 9) → (DC2, 6) → (DC8, 6) → (DC5, 3) → (DC3, 2) → (DC7, 8) → (DC4, 9) → (DC6, 2)\n* Truck 4 follows: (DC2, 6) → (DC3, 5) → (DC9, 9) → (DC8, 1) → (DC4, 9) → (DC7, 2) → (DC6, 7) → (DC5, 2) → (DC1, 10)\n* Truck 5 follows: (DC7, 3) → (DC8, 7) → (DC9, 9) → (DC1, 1) → (DC6, 6) → (DC4, 7) → (DC3, 5) → (DC5, 5) → (DC2, 3)\n* Truck 6 follows: (DC2, 8) → (DC8, 9) → (DC5, 7) → (DC3, 3) → (DC7, 9) → (DC9, 9) → (DC6, 1) → (DC1, 4) → (DC4, 5)\n* Truck 7 follows: (DC9, 3) → (DC4, 1) → (DC3, 4) → (DC1, 10) → (DC5, 5) → (DC7, 4) → (DC8, 8) → (DC2, 5) → (DC6, 1)\n* Truck 8 follows: (DC1, 7) → (DC7, 4) → (DC4, 5) → (DC5, 7) → (DC9, 9) → (DC2, 6) → (DC3, 10) → (DC6, 3) → (DC8, 2)\n* Truck 9 follows: (DC6, 9) → (DC4, 4) → (DC9, 10) → (DC1, 10) → (DC8, 10) → (DC5, 1) → (DC2, 8) → (DC3, 4) → (DC7, 4)\n\nOnce a truck begins being handled at a distribution center, the process cannot be interrupted, and each center can only handle one truck at a time. The objective is to schedule all truck handling operations across the distribution centers to minimize the total completion time for all trucks.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

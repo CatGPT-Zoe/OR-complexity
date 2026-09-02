@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_8_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute a fixed budget across 8 infrastructure projects to maximize the overall community benefit score.  \nThe characteristics of each project are:  \n* Project A: benefit score is 0.164, impact factor is 0.162, allocation limits [0.051, 0.418]  \n* Project B: benefit score is 0.131, impact factor is 0.125, allocation limits [0.091, 0.661]  \n* Project C: benefit score is 0.170, impact factor is 0.100, allocation limits [0.035, 0.756]  \n* Project D: benefit score is 0.186, impact factor is 0.108, allocation limits [0.073, 0.693]  \n* Project E: benefit score is 0.036, impact factor is 0.107, allocation limits [0.082, 0.406]  \n* Project F: benefit score is 0.172, impact factor is 0.059, allocation limits [0.082, 0.764]  \n* Project G: benefit score is 0.064, impact factor is 0.158, allocation limits [0.024, 0.596]  \n* Project H: benefit score is 0.126, impact factor is 0.043, allocation limits [0.015, 0.753]  \n\nEach project must receive a budget share within its specified limits, and the total allocation across all projects must equal the entire budget (sum to one).  \nTo ensure timely completion, the planner requires that the set of high-priority projects, L = {A, H}, together receive at least 0.388 of the total budget.  \nAdditionally, the overall impact factor of the portfolio must not exceed 0.167, and the total community benefit score must be at least 0.108.  \nDetermine the optimal budget allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

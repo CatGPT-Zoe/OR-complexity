@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a technician's inspection circuit across six distinct regional facilities:\nFacility Alpha: Positioned at grid reference (9,155)\nFacility Beta: Positioned at grid reference (5,49)\nFacility Gamma: Positioned at grid reference (47,183)\nFacility Delta: Positioned at grid reference (31,122)\nFacility Epsilon: Positioned at grid reference (53,186)\nFacility Zeta: Positioned at grid reference (15,173)\n\nTravel distances between facilities are predetermined in kilometers:\nAlpha to Gamma: 47.2 km\nAlpha to Delta: 39.7 km\nAlpha to Epsilon: 53.8 km\nAlpha to Zeta: 19.0 km\nBeta to Gamma: 140.4 km\nBeta to Delta: 77.5 km\nBeta to Epsilon: 145.2 km\nBeta to Zeta: 124.4 km\nGamma to Delta: 63.1 km\nGamma to Epsilon: 6.7 km\nGamma to Zeta: 33.5 km\nDelta to Epsilon: 67.7 km\nDelta to Zeta: 53.5 km\nEpsilon to Zeta: 40.2 km\n\nDue to regulatory restrictions, direct travel between Facility Alpha and Facility Beta is prohibited.\nFurthermore, the route must incorporate exactly one of two critical network links: either the connection between Beta and Gamma, or the connection between Gamma and Delta.\n\nThe objective is to determine the minimal total travel distance for a closed circuit that visits each facility precisely once, concluding at the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

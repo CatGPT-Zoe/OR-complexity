@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner is allocating funds for a municipal infrastructure upgrade across three fiscal years. They must select a portfolio of projects to maximize total community benefit while staying within the annual budget constraint.\n\nThe candidate projects are:\n* Project A: cost 35 million, benefit 61 units\n* Project B: cost 49 million, benefit 56 units\n* Project C: cost 26 million, benefit 15 units\n* Project D: cost 4 million, benefit 106 units\n* Project E: cost 22 million, benefit 232 units\n* Project F: cost 16 million, benefit 179 units\n* Project G: cost 28 million, benefit 73 units\n* Project H: cost 22 million, benefit 43 units\n* Project I: cost 31 million, benefit 262 units\n* Project J: cost 20 million, benefit 135 units\n* Project K: cost 25 million, benefit 40 units\n* Project L: cost 23 million, benefit 179 units\n* Project M: cost 11 million, benefit 55 units\n* Project N: cost 36 million, benefit 151 units\n* Project O: cost 30 million, benefit 13 units\n* Project P: cost 40 million, benefit 91 units\n* Project Q: cost 10 million, benefit 295 units\n* Project R: cost 37 million, benefit 182 units\n* Project S: cost 44 million, benefit 242 units\n* Project T: cost 45 million, benefit 44 units\n* Project U: cost 25 million, benefit 149 units\n\nFurthermore, due to mutually exclusive strategic considerations, exactly one of Project A and Project B must be approved.\n\nIf Project C is approved, it necessitates a separate, mandatory environmental mitigation fund, which reduces the effective available budget by 10 million.\nThe total budget allocation for the three-year period cannot exceed 405 million. The planner must determine the optimal set of projects to fund.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

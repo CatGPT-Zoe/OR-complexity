@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of distinct cargo boxes onto identical pallets for air freight. The cargo boxes are labeled as follows:\n\n* Box Alpha: mass 49 kg\n* Box Beta: mass 31 kg\n* Box Gamma: mass 52 kg\n* Box Delta: mass 66 kg\n* Box Epsilon: mass 64 kg\n* Box Zeta: mass 33 kg\n* Box Eta: mass 70 kg\n* Box Theta: mass 39 kg\n* Box Iota: mass 52 kg\n* Box Kappa: mass 31 kg\n* Box Lambda: mass 61 kg\n* Box Mu: mass 70 kg\n* Box Nu: mass 33 kg\n* Box Xi: mass 31 kg\n* Box Omicron: mass 45 kg\n* Box Pi: mass 32 kg\n* Box Rho: mass 30 kg\n* Box Sigma: mass 44 kg\n\nEach pallet has a maximum safe load capacity of 100 kg. The coordinator must assign every cargo box to exactly one pallet, ensuring the combined mass on any pallet does not surpass the capacity limit. The objective is to determine a feasible allocation that utilizes the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

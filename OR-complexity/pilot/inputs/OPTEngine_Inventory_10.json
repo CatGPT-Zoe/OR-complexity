@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must devise a procurement and storage schedule for a critical fuel additive over a 10-day voyage cycle.  \nThe starting stock of the additive at the voyage’s commencement is 40 gallons.  \nIn each day t = 1,…,10, the supplier permits the company to request a delivery whose volume must fall between 4 and 33 gallons.  \nHowever, any delivery requested will require 1 day to be transported to the vessel before it can be utilized to meet consumption or replenish the onboard reserve.  \nThe daily consumption of the additive is as follows:  \n* Day 1: 31 gallons  \n* Day 2: 36 gallons  \n* Day 3: 51 gallons  \n* Day 4: 53 gallons  \n* Day 5: 37 gallons  \n* Day 6: 19 gallons  \n* Day 7: 38 gallons  \n* Day 8: 55 gallons  \n* Day 9: 19 gallons  \n* Day 10: 43 gallons  \n\nUnder‑supply is tolerated, but any unsatisfied consumption is simply lost and not carried forward.  \nThroughout the voyage, additive quantities may be fractional, and the total volume held onboard at any moment must not exceed the tank capacity of 43 gallons.  \nThe total voyage expense comprises three elements: the procurement cost, which is 4 per gallon ordered; the storage cost, which is 2 per gallon kept from one day to the next; and the shortage penalty, which is 12 per gallon of unmet consumption.  \nThe objective is to decide the optimal delivery volume each day and monitor the consequent onboard stock and shortage levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

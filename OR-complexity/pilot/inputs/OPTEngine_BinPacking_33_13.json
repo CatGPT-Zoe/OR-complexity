@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of freight shipments onto identical cargo aircraft. The shipments are as follows:\n\n* Shipment Alpha: mass 67 tonnes\n* Shipment Beta: mass 51 tonnes\n* Shipment Gamma: mass 46 tonnes\n* Shipment Delta: mass 51 tonnes\n* Shipment Epsilon: mass 44 tonnes\n* Shipment Zeta: mass 33 tonnes\n* Shipment Eta: mass 63 tonnes\n* Shipment Theta: mass 45 tonnes\n* Shipment Iota: mass 58 tonnes\n* Shipment Kappa: mass 63 tonnes\n* Shipment Lambda: mass 31 tonnes\n* Shipment Mu: mass 54 tonnes\n* Shipment Nu: mass 50 tonnes\n* Shipment Xi: mass 32 tonnes\n* Shipment Omicron: mass 63 tonnes\n* Shipment Pi: mass 42 tonnes\n* Shipment Rho: mass 37 tonnes\n* Shipment Sigma: mass 65 tonnes\n* Shipment Tau: mass 45 tonnes\n* Shipment Upsilon: mass 31 tonnes\n* Shipment Phi: mass 64 tonnes\n* Shipment Chi: mass 50 tonnes\n* Shipment Psi: mass 39 tonnes\n* Shipment Omega: mass 45 tonnes\n* Shipment Ares: mass 66 tonnes\n* Shipment Boreas: mass 61 tonnes\n* Shipment Ceres: mass 64 tonnes\n* Shipment Demeter: mass 61 tonnes\n* Shipment Eos: mass 57 tonnes\n* Shipment Fortuna: mass 41 tonnes\n* Shipment Gaia: mass 58 tonnes\n* Shipment Helios: mass 46 tonnes\n* Shipment Iris: mass 41 tonnes\n\nEach aircraft has a maximum payload capacity of 100 tonnes. The coordinator must assign every shipment to exactly one aircraft, ensuring the combined mass on any aircraft does not surpass its limit. The objective is to utilize the smallest possible fleet of aircraft to accommodate all shipments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

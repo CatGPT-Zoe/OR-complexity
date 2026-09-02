@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is preparing shipments for international delivery. The packages to be sent include:\n* Package Alpha: 33kg\n* Package Bravo: 40kg\n* Package Charlie: 38kg\n* Package Delta: 45kg\n* Package Echo: 48kg\n* Package Foxtrot: 51kg\n* Package Golf: 33kg\n* Package Hotel: 32kg\n* Package India: 60kg\n* Package Juliet: 56kg\n* Package Kilo: 39kg\n* Package Lima: 61kg\n* Package Mike: 68kg\n* Package November: 35kg\n\nEach shipping pallet has a maximum load capacity of 100 kg. All packages must be assigned to pallets, with each package placed on exactly one pallet. The total weight on any pallet cannot exceed its capacity. Determine the pallet assignment that minimizes the total number of pallets used.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

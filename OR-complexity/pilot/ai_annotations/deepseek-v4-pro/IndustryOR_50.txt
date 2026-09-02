@@ -1,0 +1,167 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_50",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "months",
+      "description": "months from July to December",
+      "values": [7, 8, 9, 10, 11, 12]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "buy_price",
+      "indices": [{"role": "month", "set_id": "months"}],
+      "description": "purchase price per unit in each month",
+      "unit": "currency per unit",
+      "values": {"7": 28, "8": 24, "9": 25, "10": 27, "11": 23, "12": 23},
+      "data_ref": null
+    },
+    {
+      "id": "sell_price",
+      "indices": [{"role": "month", "set_id": "months"}],
+      "description": "selling price per unit in each month",
+      "unit": "currency per unit",
+      "values": {"7": 29, "8": 24, "9": 26, "10": 28, "11": 22, "12": 25},
+      "data_ref": null
+    },
+    {
+      "id": "warehouse_capacity",
+      "indices": [],
+      "description": "maximum warehouse capacity in units",
+      "unit": "units",
+      "values": 500,
+      "data_ref": null
+    },
+    {
+      "id": "initial_inventory",
+      "indices": [],
+      "description": "inventory at the end of June (start of July)",
+      "unit": "units",
+      "values": 200,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "purchase",
+      "canonical_name": "purchase",
+      "semantic_type": "quantity",
+      "indices": [{"role": "month", "set_id": "months"}],
+      "description": "amount purchased at the beginning of each month",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["How much should be purchased and sold each month"],
+      "confidence": 0.95
+    },
+    {
+      "id": "sales",
+      "canonical_name": "sales",
+      "semantic_type": "quantity",
+      "indices": [{"role": "month", "set_id": "months"}],
+      "description": "amount sold each month",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["How much should be purchased and sold each month"],
+      "confidence": 0.95
+    },
+    {
+      "id": "inventory",
+      "canonical_name": "inventory",
+      "semantic_type": "state",
+      "indices": [{"role": "month", "set_id": "months"}],
+      "description": "inventory level at the end of each month",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": ["warehouse capacity must not exceed 500 units, with 200 units in stock at the end of June"],
+      "confidence": 0.9
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_profit",
+    "normalized_semantics": "maximize total profit = sum over months (sell_price[month] * sales[month] - buy_price[month] * purchase[month])",
+    "description": "Maximize total profit (sales revenue minus purchase cost).",
+    "entity_scope": ["sales", "purchase"],
+    "parameter_refs": ["sell_price", "buy_price"],
+    "source_spans": ["maximize the total revenue"],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "inventory_balance",
+      "obligation_type": "balance",
+      "normalized_semantics": "For each month t, ending inventory equals previous inventory plus purchases minus sales, with initial inventory for July.",
+      "support_entity_ids": ["inventory", "purchase", "sales"],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory",
+          "role": "current_inventory",
+          "index_binding": {"month": "t"}
+        },
+        {
+          "entity_id": "inventory",
+          "role": "previous_inventory",
+          "index_binding": {"month": "t-1"}
+        },
+        {
+          "entity_id": "purchase",
+          "role": "purchase",
+          "index_binding": {"month": "t"}
+        },
+        {
+          "entity_id": "sales",
+          "role": "sales",
+          "index_binding": {"month": "t"}
+        }
+      ],
+      "quantifiers": ["for all months t from July to December"],
+      "condition": "if t is July, previous_inventory is initial_inventory (200)",
+      "parameter_refs": ["initial_inventory"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["with 200 units in stock at the end of June. Thereafter, purchases are made at the beginning of each month."],
+      "confidence": 0.98
+    },
+    {
+      "id": "o2",
+      "canonical_name": "warehouse_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "For each month, the inventory level must not exceed the warehouse capacity of 500 units.",
+      "support_entity_ids": ["inventory"],
+      "incidence_slots": [
+        {
+          "entity_id": "inventory",
+          "role": "inventory_level",
+          "index_binding": {"month": "t"}
+        }
+      ],
+      "quantifiers": ["for all months t"],
+      "condition": null,
+      "parameter_refs": ["warehouse_capacity"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": ["warehouse capacity must not exceed 500 units"],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": [
+    {
+      "description": "Interpretation of 'total revenue': assumed to be total profit (sales revenue minus purchase cost). If only sales revenue is intended, the objective would be sum(sell_price * sales) without purchase cost."
+    },
+    {
+      "description": "No demand or sales limits specified; model assumes unlimited demand, so sales are constrained only by inventory availability and capacity."
+    },
+    {
+      "description": "Assumes purchases made at the beginning of a month can be sold in the same month."
+    }
+  ]
+}

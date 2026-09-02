@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical cargo aircraft. Commodities:\n* Commodity Alpha: mass 69 tons\n* Commodity Beta: mass 31 tons\n* Commodity Gamma: mass 63 tons\n* Commodity Delta: mass 68 tons\n* Commodity Epsilon: mass 52 tons\n* Commodity Zeta: mass 61 tons\n* Commodity Eta: mass 59 tons\n* Commodity Theta: mass 49 tons\n* Commodity Iota: mass 30 tons\n* Commodity Kappa: mass 44 tons\n* Commodity Lambda: mass 65 tons\n* Commodity Mu: mass 40 tons\n* Commodity Nu: mass 61 tons\n* Commodity Xi: mass 60 tons\n* Commodity Omicron: mass 64 tons\n* Commodity Pi: mass 50 tons\n* Commodity Rho: mass 35 tons\n* Commodity Sigma: mass 46 tons\n\nEach aircraft can carry a maximum load of 100 tons. The coordinator must assign every commodity to exactly one aircraft, ensuring the total mass on any aircraft does not surpass its capacity, with the objective of employing the smallest possible fleet of aircraft.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

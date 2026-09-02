@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo parcels to identical freight pods for orbital transfer. The parcels are labeled as follows:\n\n* Parcel Alpha: mass 37 units\n* Parcel Beta: mass 51 units\n* Parcel Gamma: mass 30 units\n* Parcel Delta: mass 50 units\n* Parcel Epsilon: mass 39 units\n* Parcel Zeta: mass 51 units\n* Parcel Eta: mass 67 units\n* Parcel Theta: mass 34 units\n* Parcel Iota: mass 35 units\n* Parcel Kappa: mass 53 units\n* Parcel Lambda: mass 43 units\n* Parcel Mu: mass 46 units\n* Parcel Nu: mass 58 units\n* Parcel Xi: mass 51 units\n* Parcel Omicron: mass 61 units\n* Parcel Pi: mass 60 units\n* Parcel Rho: mass 64 units\n* Parcel Sigma: mass 63 units\n* Parcel Tau: mass 35 units\n* Parcel Upsilon: mass 35 units\n* Parcel Phi: mass 50 units\n* Parcel Chi: mass 58 units\n* Parcel Psi: mass 54 units\n* Parcel Omega: mass 55 units\n* Parcel Cygnus: mass 64 units\n\nEach pod has a strict mass capacity of 100 units. The coordinator must assign every parcel to exactly one pod, ensuring the combined mass within any pod does not surpass its limit. The objective is to complete the allocation utilizing the minimal possible number of pods.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

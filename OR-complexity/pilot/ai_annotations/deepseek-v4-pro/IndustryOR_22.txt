@@ -1,0 +1,241 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_22",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "products",
+      "description": "the three product types A1, A2, A3",
+      "values": ["A1", "A2", "A3"]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "max_demand",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "maximum demand for each product",
+      "unit": "100kg units",
+      "values": {"A1": 5300, "A2": 4500, "A3": 5400},
+      "data_ref": null
+    },
+    {
+      "id": "selling_price",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "selling price per 100kg of each product",
+      "unit": "$/100kg",
+      "values": {"A1": 124, "A2": 109, "A3": 115},
+      "data_ref": null
+    },
+    {
+      "id": "production_cost",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "production cost per 100kg of each product",
+      "unit": "$/100kg",
+      "values": {"A1": 73.30, "A2": 52.90, "A3": 65.40},
+      "data_ref": null
+    },
+    {
+      "id": "production_quota",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "maximum number of 100kg units that can be produced in one day if all lines are devoted to the product",
+      "unit": "100kg units/day",
+      "values": {"A1": 500, "A2": 450, "A3": 550},
+      "data_ref": null
+    },
+    {
+      "id": "activation_cost",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "fixed activation cost if any production of the product occurs",
+      "unit": "$",
+      "values": {"A1": 170000, "A2": 150000, "A3": 100000},
+      "data_ref": null
+    },
+    {
+      "id": "min_batch",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "minimum production quantity (100kg units) if the product is activated",
+      "unit": "100kg units",
+      "values": {"A1": 20, "A2": 20, "A3": 16},
+      "data_ref": null
+    },
+    {
+      "id": "total_days",
+      "indices": [],
+      "description": "total available production days in the month",
+      "unit": "days",
+      "values": 22,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "production_quantity",
+      "canonical_name": "production_quantity",
+      "semantic_type": "quantity",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "number of 100kg units produced of each product",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "100kg units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["determine a production plan"],
+      "confidence": 0.95
+    },
+    {
+      "id": "activation",
+      "canonical_name": "activation",
+      "semantic_type": "activation",
+      "indices": [{"role": "product", "set_id": "products"}],
+      "description": "binary indicator of whether production of the product is activated (fixed cost incurred)",
+      "value_semantics": "binary {0,1}",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["fixed activation cost of the production line"],
+      "confidence": 0.95
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_profit",
+    "normalized_semantics": "maximize total profit = sum over products (selling_price * production_quantity - production_cost * production_quantity - activation_cost * activation)",
+    "description": "Maximize total profit considering revenue, variable production costs, and fixed activation costs.",
+    "entity_scope": ["production_quantity", "activation"],
+    "parameter_refs": ["selling_price", "production_cost", "activation_cost"],
+    "source_spans": ["maximize total revenue while accommodating fixed activation costs and minimum production batch constraints"],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "demand_upper_bound",
+      "obligation_type": "capacity",
+      "normalized_semantics": "For each product, the production quantity must not exceed the maximum demand.",
+      "support_entity_ids": ["production_quantity"],
+      "incidence_slots": [
+        {
+          "entity_id": "production_quantity",
+          "role": "quantity",
+          "aggregation_axes": [],
+          "index_binding": {"product": "p"}
+        }
+      ],
+      "quantifiers": ["for each product p"],
+      "condition": null,
+      "parameter_refs": ["max_demand"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": ["Maximum Demand"],
+      "confidence": 0.98
+    },
+    {
+      "id": "o2",
+      "canonical_name": "total_production_time_limit",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "The total number of days required for production, computed as the sum over products of (production_quantity / production_quota), must not exceed the available 22 days.",
+      "support_entity_ids": ["production_quantity"],
+      "incidence_slots": [
+        {
+          "entity_id": "production_quantity",
+          "role": "time_consumed",
+          "aggregation_axes": ["product"],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["production_quota", "total_days"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["It can produce for 22 days in a month.", "production quota (the maximum number of 100kg units that can be produced in one day if all production lines are devoted to this product)"],
+      "confidence": 0.95
+    },
+    {
+      "id": "o3",
+      "canonical_name": "activation_required_for_production",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "If a product is produced (production_quantity > 0), then the activation must be active (activation = 1).",
+      "support_entity_ids": ["production_quantity", "activation"],
+      "incidence_slots": [
+        {
+          "entity_id": "production_quantity",
+          "role": "quantity",
+          "aggregation_axes": [],
+          "index_binding": {"product": "p"}
+        },
+        {
+          "entity_id": "activation",
+          "role": "activation_state",
+          "aggregation_axes": [],
+          "index_binding": {"product": "p"}
+        }
+      ],
+      "quantifiers": ["for each product p"],
+      "condition": "production_quantity[p] > 0",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["fixed activation cost of the production line"],
+      "confidence": 0.95
+    },
+    {
+      "id": "o4",
+      "canonical_name": "no_production_if_not_activated",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "If activation is off (activation = 0), then production quantity must be zero.",
+      "support_entity_ids": ["production_quantity", "activation"],
+      "incidence_slots": [
+        {
+          "entity_id": "activation",
+          "role": "activation_state",
+          "aggregation_axes": [],
+          "index_binding": {"product": "p"}
+        },
+        {
+          "entity_id": "production_quantity",
+          "role": "quantity",
+          "aggregation_axes": [],
+          "index_binding": {"product": "p"}
+        }
+      ],
+      "quantifiers": ["for each product p"],
+      "condition": "activation[p] = 0",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["fixed activation cost"],
+      "confidence": 0.95
+    },
+    {
+      "id": "o5",
+      "canonical_name": "minimum_batch_if_activated",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "If activation is active, then production quantity must be at least the minimum batch size.",
+      "support_entity_ids": ["production_quantity", "activation"],
+      "incidence_slots": [
+        {
+          "entity_id": "activation",
+          "role": "activation_state",
+          "aggregation_axes": [],
+          "index_binding": {"product": "p"}
+        },
+        {
+          "entity_id": "production_quantity",
+          "role": "quantity",
+          "aggregation_axes": [],
+          "index_binding": {"product": "p"}
+        }
+      ],
+      "quantifiers": ["for each product p"],
+      "condition": "activation[p] = 1",
+      "parameter_refs": ["min_batch"],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["Minimum production batch"],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": [
+    "The objective text says 'maximize total revenue' but then mentions accommodating fixed activation costs and production cost; likely profit maximization is intended. Further clarification on whether revenue or profit is to be maximized is needed.",
+    "The domain of production_quantity is not explicitly stated as integer or continuous; by default, treat as continuous."
+  ]
+}

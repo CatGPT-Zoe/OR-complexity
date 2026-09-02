@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage schedule for a critical reservoir over an 8-week planning cycle. The initial water volume stored at the start of the cycle is 33 million gallons. In each week t = 1, ..., 8, the utility may activate a pumping station to transfer water from a distant source; the volume pumped in any week must be between 4 and 21 million gallons. However, due to pipeline transit delays, any water pumped in a given week becomes available for use only in the subsequent week. The projected water consumption for each week is as follows:\n* Week 1: consumption 24 million gallons\n* Week 2: consumption 19 million gallons\n* Week 3: consumption 21 million gallons\n* Week 4: consumption 39 million gallons\n* Week 5: consumption 17 million gallons\n* Week 6: consumption 40 million gallons\n* Week 7: consumption 32 million gallons\n* Week 8: consumption 55 million gallons\n\nSupply deficits are permissible, but any unmet consumption is simply lost and cannot be recovered later. Throughout the planning cycle, water volumes are treated as continuous quantities, and the total volume held in the reservoir at any moment must not exceed its physical capacity of 48 million gallons. The total operational cost comprises three elements: the pumping cost, which is 3 per million gallons transferred; the storage cost, which is 2 per million gallons kept in the reservoir from one week to the next; and the shortage penalty, which is 13 per million gallons of unmet consumption. The objective is to determine the optimal pumping volume for each week and to monitor the resulting reservoir storage and deficit levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

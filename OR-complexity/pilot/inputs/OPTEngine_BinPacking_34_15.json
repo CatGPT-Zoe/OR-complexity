@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of cargo parcels to identical transport pallets for an upcoming airlift. The parcels are as follows:\n* Parcel Alpha: mass 50kg\n* Parcel Beta: mass 31kg\n* Parcel Gamma: mass 53kg\n* Parcel Delta: mass 32kg\n* Parcel Epsilon: mass 57kg\n* Parcel Zeta: mass 31kg\n* Parcel Eta: mass 66kg\n* Parcel Theta: mass 70kg\n* Parcel Iota: mass 65kg\n* Parcel Kappa: mass 31kg\n* Parcel Lambda: mass 33kg\n* Parcel Mu: mass 33kg\n* Parcel Nu: mass 56kg\n* Parcel Xi: mass 69kg\n* Parcel Omicron: mass 49kg\n* Parcel Pi: mass 58kg\n* Parcel Rho: mass 51kg\n* Parcel Sigma: mass 31kg\n* Parcel Tau: mass 65kg\n* Parcel Upsilon: mass 54kg\n* Parcel Phi: mass 36kg\n* Parcel Chi: mass 56kg\n* Parcel Psi: mass 47kg\n* Parcel Omega: mass 32kg\n* Parcel Ares: mass 51kg\n* Parcel Boreas: mass 32kg\n* Parcel Ceres: mass 33kg\n* Parcel Demeter: mass 52kg\n* Parcel Eos: mass 37kg\n* Parcel Fides: mass 69kg\n* Parcel Gaia: mass 30kg\n* Parcel Helios: mass 70kg\n* Parcel Iris: mass 63kg\n* Parcel Janus: mass 70kg\n\nEach pallet has a strict maximum load capacity of 100 kg. The coordinator must ensure every parcel is placed on exactly one pallet, and the combined mass on any given pallet must not surpass its limit. The objective is to utilize the smallest possible number of pallets to accommodate the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

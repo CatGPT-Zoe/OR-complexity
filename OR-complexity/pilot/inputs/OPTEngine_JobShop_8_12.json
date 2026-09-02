@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_8_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate 8 delivery trucks to transport packages through 8 specialized processing hubs.\n\nEach truck follows a predetermined route through the hubs, with each stop represented as (Hub, Processing duration), where the pair specifies the hub where the package must be processed and the time required for handling. The sequence of pairs indicates the mandatory order in which the hubs must be visited.\n\nTruck routes:\n* T1 follows: (H3, 3) → (H5, 3) → (H2, 8) → (H7, 9) → (H4, 7) → (H6, 3) → (H1, 1) → (H8, 5)\n* T2 follows: (H8, 9) → (H5, 1) → (H1, 1) → (H3, 10) → (H6, 2) → (H4, 8) → (H2, 5) → (H7, 10)\n* T3 follows: (H5, 8) → (H6, 4) → (H8, 1) → (H4, 4) → (H2, 3) → (H1, 10) → (H3, 3) → (H7, 3)\n* T4 follows: (H3, 10) → (H1, 7) → (H7, 1) → (H8, 2) → (H6, 3) → (H2, 8) → (H5, 1) → (H4, 6)\n* T5 follows: (H6, 4) → (H3, 2) → (H8, 10) → (H4, 3) → (H5, 4) → (H1, 9) → (H2, 4) → (H7, 8)\n* T6 follows: (H6, 10) → (H7, 9) → (H1, 7) → (H3, 4) → (H4, 5) → (H5, 2) → (H8, 8) → (H2, 5)\n* T7 follows: (H4, 8) → (H7, 1) → (H6, 7) → (H3, 8) → (H5, 1) → (H1, 5) → (H2, 9) → (H8, 10)\n* T8 follows: (H7, 2) → (H4, 7) → (H5, 5) → (H6, 4) → (H2, 8) → (H1, 8) → (H3, 5) → (H8, 9)\n\nOnce a package begins processing at a hub, the handling must continue uninterrupted until completion, and each hub can only process one package at any given time. The objective is to schedule the processing sequence of all packages at the hubs to minimize the total completion time for all delivery trucks.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

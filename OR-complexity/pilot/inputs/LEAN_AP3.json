@@ -1,0 +1,30 @@
+{
+  "instance_id": "LEAN_AP3",
+  "annotation_mode": "semantic",
+  "problem_text": "In the construction industry, a set of managers and a set of construction projects are given. Assigning manager i to project j incurs a cost that depends on the manager’s experience and expertise. These costs are provided in the CSV file \"manager_project_costs.csv\", where each row corresponds to a manager and each column corresponds to a project. The task is to determine a minimum-cost one-to-one assignment of managers to projects, such that each manager is assigned to exactly one project and each project is assigned to exactly one manager.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "manager_project_costs",
+      "indices": [
+        "row_label",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "unit": "",
+      "values": "| row_label | P1 | P2 | P3 | P4 | P5 | P6 |\n|---|---|---|---|---|---|---|\n| MA | 2216 | 1911 | 1661 | 2122 | 1442 | 1442 |\n| MB | 1100 | 1271 | 2764 | 2557 | 1036 | 1036 |\n| MC | 2827 | 2784 | 2206 | 2216 | 2677 | 2677 |\n| MD | 2627 | 1273 | 2610 | 1957 | 1594 | 1594 |\n| ME | 3359 | 1003 | 2554 | 1706 | 2065 | 2065 |\n| MF | 1579 | 2289 | 2368 | 1922 | 2740 | 2740 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/AP_testing/AP3/manager_project_costs.csv",
+      "role": "parameter_table",
+      "table": "manager_project_costs"
+    }
+  ],
+  "notes": ""
+}

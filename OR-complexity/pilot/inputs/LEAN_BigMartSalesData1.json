@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_BigMartSalesData1",
+  "annotation_mode": "semantic",
+  "problem_text": "In the context of BigMart Sales, the store needs to allocate various types of products into different display shelves. Specifically, the store has several shelves, each with a capacity limit provided in “capacity.csv.” The predefined value and weight of each product can be found in “products.csv.” The objective is to determine the optimal number of units of each product to place on each shelf to maximize the total value of the products across all shelves, while ensuring that the total weight of the products on each shelf does not exceed its capacity. The decision variables x_ij represent the number of units of product j to be placed on shelf i.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "ShelfID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| ShelfID | Capacity |\n|---|---|\n| 1 | 500 |\n| 2 | 700 |\n| 3 | 600 |\n| 4 | 800 |\n| 5 | 550 |\n| 6 | 900 |\n| 7 | 650 |\n| 8 | 750 |\n| 9 | 820 |\n| 10 | 570 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| 1 | 50 | 10 |\n| 2 | 70 | 20 |\n| 3 | 30 | 5 |\n| 4 | 60 | 15 |\n| 5 | 80 | 25 |\n| 6 | 90 | 30 |\n| 7 | 40 | 12 |\n| 8 | 100 | 35 |\n| 9 | 55 | 10 |\n| 10 | 75 | 20 |\n| 11 | 65 | 18 |\n| 12 | 95 | 28 |\n| 13 | 45 | 8 |\n| 14 | 85 | 22 |\n| 15 | 70 | 25 |\n| 16 | 110 | 40 |\n| 17 | 50 | 14 |\n| 18 | 60 | 16 |\n| 19 | 120 | 50 |\n| 20 | 100 | 30 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA19/BigMartSalesData1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA19/BigMartSalesData1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

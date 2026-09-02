@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks.  \nPackages:  \n* Package 1: 67 lb  \n* Package 2: 33 lb  \n* Package 3: 54 lb  \n* Package 4: 32 lb  \n* Package 5: 44 lb  \n* Package 6: 70 lb  \n* Package 7: 35 lb  \n* Package 8: 41 lb  \n* Package 9: 53 lb  \n* Package 10: 33 lb  \n* Package 11: 70 lb  \n* Package 12: 41 lb  \n* Package 13: 44 lb  \n* Package 14: 69 lb  \n* Package 15: 49 lb  \n* Package 16: 69 lb  \n\nEach truck can carry up to 100 lb. Assign all packages using the fewest trucks possible. Every package must be placed in exactly one truck, and the total weight in a truck must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical fuel additive over a 5-day operational window.\nThe initial stock at the start of the window is 10 gallons.\nIn each day t = 1, ..., 5, the supplier permits the company to submit a procurement request, with the volume required to fall between 10 and 76 gallons.\nNevertheless, every request submitted is subject to a 4-day lead time before the additive becomes available for consumption or to replenish reserves.\nThe consumption requirement for the additive on each day is as follows:\n* Day 1: requirement 25 gallons\n* Day 2: requirement 19 gallons\n* Day 3: requirement 44 gallons\n* Day 4: requirement 38 gallons\n* Day 5: requirement 15 gallons\n\nSupply deficits are tolerated, but any unsatisfied requirement is entirely forfeited and will not be carried forward.\nThroughout the operational window, additive volumes are treated as continuous quantities, and the aggregate volume held in storage at any moment must not surpass the tank capacity of 34 gallons.\n\nOn the first day, the maximum allowable procurement volume is 52 gallons.\nBy the conclusion of day 5, the physical stock on hand must be no less than 13 gallons.\n\nThe aggregate expense over the planning window comprises three elements: the procurement expense, calculated at 4 per gallon requested; the storage expense, calculated at 1 per gallon retained from one day to the next; and the deficit penalty, levied at 10 per gallon of unmet requirement. The objective is to ascertain the optimal procurement volume for each day and monitor the consequent stock and deficit levels in order to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: size 55 units\n* Shipment Beta: size 46 units\n* Shipment Gamma: size 38 units\n* Shipment Delta: size 66 units\n* Shipment Epsilon: size 35 units\n* Shipment Zeta: size 49 units\n* Shipment Eta: size 57 units\n* Shipment Theta: size 49 units\n* Shipment Iota: size 57 units\n* Shipment Kappa: size 69 units\n* Shipment Lambda: size 30 units\n* Shipment Mu: size 61 units\n* Shipment Nu: size 43 units\n* Shipment Xi: size 63 units\n* Shipment Omicron: size 48 units\n* Shipment Pi: size 42 units\n* Shipment Rho: size 30 units\n* Shipment Sigma: size 68 units\n* Shipment Tau: size 62 units\n* Shipment Upsilon: size 49 units\n* Shipment Phi: size 36 units\n* Shipment Chi: size 56 units\n* Shipment Psi: size 53 units\n* Shipment Omega: size 54 units\n* Shipment A1: size 53 units\n* Shipment B1: size 68 units\n* Shipment C1: size 54 units\n* Shipment D1: size 43 units\n* Shipment E1: size 50 units\n* Shipment F1: size 30 units\n* Shipment G1: size 33 units\n* Shipment H1: size 36 units\n* Shipment I1: size 69 units\n* Shipment J1: size 62 units\n* Shipment K1: size 70 units\n* Shipment L1: size 56 units\n* Shipment M1: size 37 units\n* Shipment N1: size 56 units\n* Shipment O1: size 51 units\n* Shipment P1: size 70 units\n\nEach cargo plane has a maximum capacity of 100 units. Assign all shipments using the fewest planes possible. Each shipment must be loaded onto exactly one plane, and the total size of shipments on any plane cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

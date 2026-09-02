@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n* Container 1: volume 16 m³, revenue 279 credits\n* Container 2: volume 4 m³, revenue 65 credits\n* Container 3: volume 25 m³, revenue 60 credits\n* Container 4: volume 27 m³, revenue 75 credits\n* Container 5: volume 31 m³, revenue 300 credits\n* Container 6: volume 20 m³, revenue 207 credits\n* Container 7: volume 1 m³, revenue 282 credits\n* Container 8: volume 3 m³, revenue 121 credits\n* Container 9: volume 11 m³, revenue 100 credits\n* Container 10: volume 30 m³, revenue 101 credits\n* Container 11: volume 29 m³, revenue 107 credits\n* Container 12: volume 1 m³, revenue 268 credits\n* Container 13: volume 50 m³, revenue 33 credits\n* Container 14: volume 33 m³, revenue 250 credits\n* Container 15: volume 32 m³, revenue 208 credits\n* Container 16: volume 18 m³, revenue 242 credits\n* Container 17: volume 22 m³, revenue 288 credits\n* Container 18: volume 42 m³, revenue 60 credits\n* Container 19: volume 49 m³, revenue 97 credits\n* Container 20: volume 37 m³, revenue 30 credits\n* Container 21: volume 29 m³, revenue 258 credits\n* Container 22: volume 31 m³, revenue 146 credits\n* Container 23: volume 28 m³, revenue 125 credits\n* Container 24: volume 49 m³, revenue 33 credits\n* Container 25: volume 3 m³, revenue 177 credits\n* Container 26: volume 25 m³, revenue 258 credits\n\nThe vehicle has a maximum cargo capacity of 452 m³. Choose the combination of containers that maximizes total revenue without exceeding this volume limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

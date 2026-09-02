@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company needs to coordinate 3 cargo vessels through 3 different port terminals.\n\nEach vessel must follow a predetermined route through the terminals, represented as pairs (Terminal, Handling time), where each pair specifies the terminal where the vessel must dock and the time required for loading/unloading operations. The sequence of pairs indicates the strict order in which the vessel must visit the terminals.\n\nVessel details:\n* Vessel Alpha follows the route: (Terminal A, 4 hours) → (Terminal C, 5 hours) → (Terminal B, 6 hours)\n* Vessel Beta follows the route: (Terminal C, 4 hours) → (Terminal B, 1 hour) → (Terminal A, 3 hours)\n* Vessel Bravo follows the route: (Terminal A, 2 hours) → (Terminal B, 10 hours) → (Terminal C, 8 hours)\n\nOnce a vessel begins handling operations at any terminal, the process must continue without interruption until completion. Each terminal can only accommodate one vessel at a time for handling operations. The goal is to schedule all vessel handling operations across the terminals to minimize the total time until all vessels complete their routes.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch emergency relief packages from distribution hubs C to affected regions D while minimizing total delivery expenses.\n\nThe available inventory of packages at each hub (set C) is as follows:  \n*C1 has 166 units ready.  \n*C2 has 50 units available.  \n*C3 holds 117 units in stock.\n\nThe required number of packages to be delivered to each region (set D) is specified below:  \n*D1 requires 174 units.  \n*D2 must receive 115 units.  \n*D3 needs 24 units.\n\nThe per-unit delivery cost from each hub to each region is provided in the following table:\n\n| From / To | D1 | D2 | D3 |\n|---|---|---|---|\n| C1 | 10 | 17 | 20 |\n| C2 | 7  | 5  | 12 |\n| C3 | 6  | 18 | 17 |\n\nDetermine the shipment quantities to minimize the overall expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

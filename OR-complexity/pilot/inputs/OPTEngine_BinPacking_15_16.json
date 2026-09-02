@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_15_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of fragile equipment modules to identical reinforced pallets for air shipment. The modules are as follows:\n\n* Module Alpha: mass 33kg\n* Module Beta: mass 54kg\n* Module Gamma: mass 56kg\n* Module Delta: mass 30kg\n* Module Epsilon: mass 56kg\n* Module Zeta: mass 50kg\n* Module Eta: mass 58kg\n* Module Theta: mass 43kg\n* Module Iota: mass 53kg\n* Module Kappa: mass 48kg\n* Module Lambda: mass 60kg\n* Module Mu: mass 35kg\n* Module Nu: mass 41kg\n* Module Xi: mass 36kg\n* Module Omicron: mass 47kg\n\nEach pallet has a certified maximum safe load capacity of 100 kg. The coordinator must devise a loading plan that places every module onto exactly one pallet, ensuring the cumulative mass on any given pallet does not surpass its load limit. The primary objective is to complete the assignment while utilizing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of cargo boxes to identical shipping pallets. The boxes are as follows:\n\n* Box Alpha: weight 58kg\n* Box Beta: weight 60kg\n* Box Gamma: weight 49kg\n* Box Delta: weight 51kg\n* Box Epsilon: weight 30kg\n* Box Zeta: weight 66kg\n* Box Eta: weight 68kg\n* Box Theta: weight 68kg\n* Box Iota: weight 48kg\n* Box Kappa: weight 36kg\n* Box Lambda: weight 51kg\n* Box Mu: weight 35kg\n* Box Nu: weight 39kg\n* Box Xi: weight 54kg\n* Box Omicron: weight 59kg\n* Box Pi: weight 46kg\n* Box Rho: weight 52kg\n* Box Sigma: weight 47kg\n* Box Tau: weight 69kg\n* Box Upsilon: weight 44kg\n* Box Phi: weight 41kg\n* Box Chi: weight 65kg\n* Box Psi: weight 59kg\n* Box Omega: weight 59kg\n* Box A1: weight 46kg\n* Box B1: weight 60kg\n* Box C1: weight 36kg\n* Box D1: weight 35kg\n* Box E1: weight 41kg\n* Box F1: weight 65kg\n* Box G1: weight 33kg\n* Box H1: weight 46kg\n* Box I1: weight 53kg\n\nEach pallet can support a maximum load of 100 kg. The coordinator must load all boxes onto pallets, aiming to minimize the total number of pallets used. Every box must be placed on exactly one pallet, and the combined weight on any single pallet must not surpass its load capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

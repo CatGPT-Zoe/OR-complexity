@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assembling a shipment of ten distinct cargo containers to maximize total profit while adhering to a strict weight allowance for a freighter.\n\nThe containers available are:\n* Container A: weight 35 tonnes, profit 217 monetary units\n* Container B: weight 18 tonnes, profit 21 monetary units\n* Container C: weight 8 tonnes, profit 148 monetary units\n* Container D: weight 43 tonnes, profit 30 monetary units\n* Container E: weight 1 tonne, profit 141 monetary units\n* Container F: weight 26 tonnes, profit 279 monetary units\n* Container G: weight 38 tonnes, profit 212 monetary units\n* Container H: weight 29 tonnes, profit 62 monetary units\n* Container I: weight 48 tonnes, profit 139 monetary units\n* Container J: weight 23 tonnes, profit 155 monetary units\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Container A and Container B must be included in the shipment.\n\nShould Container C be selected, the freighter's effective maximum load capacity is diminished by 10 tonnes.\nThe vessel can accommodate a total weight not exceeding 188 tonnes. The coordinator must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

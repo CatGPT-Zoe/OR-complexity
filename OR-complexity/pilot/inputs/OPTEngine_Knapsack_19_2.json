@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vessel. Available containers are:\n* Container 1: size 36 cubic meters, revenue $76\n* Container 2: size 46 cubic meters, revenue $179\n* Container 3: size 46 cubic meters, revenue $283\n* Container 4: size 25 cubic meters, revenue $112\n* Container 5: size 20 cubic meters, revenue $58\n* Container 6: size 29 cubic meters, revenue $148\n* Container 7: size 16 cubic meters, revenue $144\n* Container 8: size 50 cubic meters, revenue $166\n* Container 9: size 6 cubic meters, revenue $198\n* Container 10: size 10 cubic meters, revenue $240\n* Container 11: size 2 cubic meters, revenue $207\n* Container 12: size 42 cubic meters, revenue $239\n* Container 13: size 4 cubic meters, revenue $156\n* Container 14: size 33 cubic meters, revenue $227\n* Container 15: size 30 cubic meters, revenue $274\n* Container 16: size 13 cubic meters, revenue $92\n* Container 17: size 1 cubic meter, revenue $146\n* Container 18: size 7 cubic meters, revenue $207\n* Container 19: size 46 cubic meters, revenue $141\nThe vessel has a maximum capacity of 323 cubic meters. Choose the container combination that yields the highest total revenue without exceeding this capacity. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

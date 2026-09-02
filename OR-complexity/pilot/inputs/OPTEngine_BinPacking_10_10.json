@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of archival boxes into identical shipping crates for secure transport. The boxes have the following weights:\n\n* Box Alpha: 65 pounds\n* Box Beta: 51 pounds\n* Box Gamma: 64 pounds\n* Box Delta: 43 pounds\n* Box Epsilon: 68 pounds\n* Box Zeta: 65 pounds\n* Box Eta: 67 pounds\n* Box Theta: 48 pounds\n* Box Iota: 58 pounds\n* Box Kappa: 35 pounds\n\nEach shipping crate has a maximum load capacity of 100 pounds. The coordinator must place every box into a crate, with no box split across multiple crates, and the combined weight in any single crate cannot surpass the capacity limit. The objective is to determine an allocation that utilizes the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

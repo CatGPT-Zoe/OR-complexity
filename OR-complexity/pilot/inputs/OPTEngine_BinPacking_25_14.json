@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of fragile instruments into standardized protective crates for international shipment. The instruments are as follows:\n\n* Instrument Alpha: fragility rating 37\n* Instrument Beta: fragility rating 67\n* Instrument Gamma: fragility rating 37\n* Instrument Delta: fragility rating 41\n* Instrument Epsilon: fragility rating 60\n* Instrument Zeta: fragility rating 48\n* Instrument Eta: fragility rating 36\n* Instrument Theta: fragility rating 57\n* Instrument Iota: fragility rating 46\n* Instrument Kappa: fragility rating 47\n* Instrument Lambda: fragility rating 37\n* Instrument Mu: fragility rating 70\n* Instrument Nu: fragility rating 52\n* Instrument Xi: fragility rating 62\n* Instrument Omicron: fragility rating 64\n* Instrument Pi: fragility rating 34\n* Instrument Rho: fragility rating 30\n* Instrument Sigma: fragility rating 32\n* Instrument Tau: fragility rating 68\n* Instrument Upsilon: fragility rating 30\n* Instrument Phi: fragility rating 38\n* Instrument Chi: fragility rating 37\n* Instrument Psi: fragility rating 56\n* Instrument Omega: fragility rating 54\n* Instrument Digamma: fragility rating 60\n\nEach protective crate can safely absorb a maximum cumulative fragility shock of 100 units. The coordinator must place every instrument into exactly one crate, ensuring that the sum of fragility ratings within any given crate does not surpass its shock-absorption limit. The objective is to determine an allocation scheme that utilizes the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

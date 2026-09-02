@@ -1,0 +1,322 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_Easy_077_machine_assignment",
+  "layer": "semantic",
+  "sets": [
+    {
+      "name": "parts",
+      "description": "the 10 different parts",
+      "values": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    },
+    {
+      "name": "machines",
+      "description": "machines A, B, C",
+      "values": ["A", "B", "C"]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "unit_cost",
+      "indices": [
+        {"role": "part", "set_id": "parts"},
+        {"role": "machine", "set_id": "machines"}
+      ],
+      "unit": "yuan",
+      "description": "unit processing cost for part p on machine m",
+      "values": {
+        "1": {"A": 10, "B": 15, "C": 20},
+        "2": {"A": 20, "B": 25, "C": 30},
+        "3": {"A": 30, "B": 35, "C": 40},
+        "4": {"A": 40, "B": 45, "C": 50},
+        "5": {"A": 50, "B": 55, "C": 60},
+        "6": {"A": 60, "B": 65, "C": 70},
+        "7": {"A": 70, "B": 75, "C": 80},
+        "8": {"A": 80, "B": 85, "C": 90},
+        "9": {"A": 90, "B": 95, "C": 100},
+        "10": {"A": 100, "B": 105, "C": 110}
+      }
+    },
+    {
+      "name": "setup_cost",
+      "indices": [
+        {"role": "machine", "set_id": "machines"}
+      ],
+      "unit": "yuan",
+      "description": "one-time setup cost if machine m is used",
+      "values": {"A": 100, "B": 135, "C": 200}
+    },
+    {
+      "name": "max_parts_on_C",
+      "indices": [],
+      "unit": "parts",
+      "description": "maximum number of parts allowed on machine C",
+      "values": 3
+    }
+  ],
+  "entities": [
+    {
+      "id": "assignment",
+      "canonical_name": "assignment",
+      "semantic_type": "assignment",
+      "indices": [
+        {"role": "part", "set_id": "parts"},
+        {"role": "machine", "set_id": "machines"}
+      ],
+      "description": "binary indicator whether part p is processed on machine m",
+      "value_semantics": "binary",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "they can all be processed on machine A, machine B, or machine C",
+        "One piece of each of the aforementioned 10 types of parts needs to be processed"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "machine_used",
+      "canonical_name": "machine_used",
+      "semantic_type": "activation",
+      "indices": [
+        {"role": "machine", "set_id": "machines"}
+      ],
+      "description": "binary indicator whether machine m is used (at least one part assigned)",
+      "value_semantics": "binary",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "as long as any part is processed on the aforementioned machines, a one-time setup cost will be incurred"
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "objective": {
+    "description": "minimize total processing cost plus total setup cost",
+    "sense": "minimize",
+    "entity_scope": ["assignment", "machine_used"],
+    "excluded_from_feasibility_hypergraph": true,
+    "normalized_semantics": "minimize sum_{p in parts, m in machines} unit_cost(p,m) * assignment(p,m) + sum_{m in machines} setup_cost(m) * machine_used(m)",
+    "parameter_refs": ["unit_cost", "setup_cost"]
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "each_part_assigned_once",
+      "obligation_type": "coverage",
+      "normalized_semantics": "Each part must be assigned to exactly one machine.",
+      "support_entity_ids": ["assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "assignment",
+          "role": "assignment_count",
+          "aggregation_axes": ["machine"],
+          "index_binding": {"part": "p"}
+        }
+      ],
+      "quantifiers": ["for all parts p"],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "One piece of each of the aforementioned 10 types of parts needs to be processed"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o2",
+      "canonical_name": "machine_activation_forward",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "If any part is assigned to machine m, then machine m must be activated (machine_used(m)=1).",
+      "support_entity_ids": ["assignment", "machine_used"],
+      "incidence_slots": [
+        {
+          "entity_id": "assignment",
+          "role": "any_assignment",
+          "aggregation_axes": ["part"],
+          "index_binding": {"machine": "m"}
+        },
+        {
+          "entity_id": "machine_used",
+          "role": "activation",
+          "index_binding": {"machine": "m"}
+        }
+      ],
+      "quantifiers": ["for all machines m"],
+      "condition": "sum_{p in parts} assignment(p,m) >= 1",
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "as long as any part is processed on the aforementioned machines, a one-time setup cost will be incurred"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "o3",
+      "canonical_name": "machine_activation_backward",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "If machine m is used, then at least one part must be assigned to it.",
+      "support_entity_ids": ["machine_used", "assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "machine_used",
+          "role": "activation",
+          "index_binding": {"machine": "m"}
+        },
+        {
+          "entity_id": "assignment",
+          "role": "some_assignment",
+          "aggregation_axes": ["part"],
+          "index_binding": {"machine": "m"}
+        }
+      ],
+      "quantifiers": ["for all machines m"],
+      "condition": "machine_used(m) = 1",
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "as long as any part is processed on the aforementioned machines, a one-time setup cost will be incurred"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "o4",
+      "canonical_name": "part1_A_implies_part2_B_or_C",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "If part 1 is assigned to machine A, then part 2 must be assigned to machine B or C.",
+      "support_entity_ids": ["assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "assignment",
+          "role": "antecedent",
+          "index_binding": {"part": "1", "machine": "A"}
+        },
+        {
+          "entity_id": "assignment",
+          "role": "consequent_option",
+          "index_binding": {"part": "2", "machine": "B"}
+        },
+        {
+          "entity_id": "assignment",
+          "role": "consequent_option",
+          "index_binding": {"part": "2", "machine": "C"}
+        }
+      ],
+      "quantifiers": [],
+      "condition": "assignment(1, A) = 1",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "If the 1st part is processed on machine A, then the 2nd part must be processed on machine B or C"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o5",
+      "canonical_name": "part1_B_or_C_implies_part2_A",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "If part 1 is assigned to machine B or C, then part 2 must be assigned to machine A.",
+      "support_entity_ids": ["assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "assignment",
+          "role": "antecedent_option",
+          "index_binding": {"part": "1", "machine": "B"}
+        },
+        {
+          "entity_id": "assignment",
+          "role": "antecedent_option",
+          "index_binding": {"part": "1", "machine": "C"}
+        },
+        {
+          "entity_id": "assignment",
+          "role": "consequent",
+          "index_binding": {"part": "2", "machine": "A"}
+        }
+      ],
+      "quantifiers": [],
+      "condition": "assignment(1, B) = 1 or assignment(1, C) = 1",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "conversely, if the 1st part is processed on machine B or C, then the 2nd part must be processed on machine A"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o6",
+      "canonical_name": "part3_on_A",
+      "obligation_type": "assignment",
+      "normalized_semantics": "Part 3 must be processed on machine A.",
+      "support_entity_ids": ["assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "assignment",
+          "role": "fixed_assignment",
+          "index_binding": {"part": "3", "machine": "A"}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Parts 3, 4, and 5 must be processed on machines A, B, and C respectively"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o7",
+      "canonical_name": "part4_on_B",
+      "obligation_type": "assignment",
+      "normalized_semantics": "Part 4 must be processed on machine B.",
+      "support_entity_ids": ["assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "assignment",
+          "role": "fixed_assignment",
+          "index_binding": {"part": "4", "machine": "B"}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Parts 3, 4, and 5 must be processed on machines A, B, and C respectively"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o8",
+      "canonical_name": "part5_on_C",
+      "obligation_type": "assignment",
+      "normalized_semantics": "Part 5 must be processed on machine C.",
+      "support_entity_ids": ["assignment"],
+      "incidence_slots": [
+        {
+          "entity_id": "assignment",
+          "role": "fixed_assignment",
+          "index_binding": {"part": "5", "machine": "C"}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Parts 3, 4, and 5 must be processed on machines A, B, and C respectively"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "o9",
+      "

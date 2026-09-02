@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_17_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a cargo drone. The available packages are:\n\n* Package A: volume 10 cubic feet, revenue $179\n* Package B: volume 38 cubic feet, revenue $42\n* Package C: volume 6 cubic feet, revenue $200\n* Package D: volume 14 cubic feet, revenue $139\n* Package E: volume 29 cubic feet, revenue $179\n* Package F: volume 44 cubic feet, revenue $258\n* Package G: volume 31 cubic feet, revenue $284\n* Package H: volume 34 cubic feet, revenue $53\n* Package I: volume 6 cubic feet, revenue $171\n* Package J: volume 29 cubic feet, revenue $206\n* Package K: volume 50 cubic feet, revenue $216\n* Package L: volume 35 cubic feet, revenue $255\n* Package M: volume 36 cubic feet, revenue $228\n* Package N: volume 34 cubic feet, revenue $47\n* Package O: volume 15 cubic feet, revenue $83\n* Package P: volume 42 cubic feet, revenue $214\n* Package Q: volume 33 cubic feet, revenue $170\n\nThe drone's cargo hold has a maximum capacity of 340 cubic feet. Choose the set of packages that maximizes total revenue without exceeding this volume limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

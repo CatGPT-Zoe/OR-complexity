@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assigning packages to delivery trucks for a local distribution route. The packages are:\n\n* Package Alpha: weight 56kg\n* Package Beta: weight 35kg\n* Package Gamma: weight 34kg\n* Package Delta: weight 66kg\n* Package Epsilon: weight 45kg\n* Package Zeta: weight 64kg\n* Package Eta: weight 34kg\n* Package Theta: weight 43kg\n* Package Iota: weight 50kg\n* Package Kappa: weight 58kg\n* Package Lambda: weight 65kg\n* Package Mu: weight 68kg\n* Package Nu: weight 36kg\n* Package Xi: weight 40kg\n* Package Omicron: weight 40kg\n* Package Pi: weight 68kg\n* Package Rho: weight 67kg\n* Package Sigma: weight 68kg\n* Package Tau: weight 33kg\n* Package Upsilon: weight 58kg\n* Package Phi: weight 46kg\n* Package Chi: weight 43kg\n* Package Psi: weight 64kg\n* Package Omega: weight 33kg\n* Package Aster: weight 61kg\n* Package Bar: weight 34kg\n* Package Brace: weight 31kg\n* Package Bracket: weight 33kg\n* Package Caret: weight 68kg\n* Package Dash: weight 42kg\n* Package Underscore: weight 40kg\n\nEach delivery truck can carry a maximum load of 100 kg. The goal is to load all packages using the minimum number of trucks. Every package must be placed on exactly one truck, and the combined weight of packages on any truck must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

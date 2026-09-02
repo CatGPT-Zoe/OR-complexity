@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_20_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage schedule for a critical reservoir over the next 20 weeks.  \nThe initial water volume in the reservoir at the start of the planning window is 24 megaliters.  \nIn each week t = 1, …, 20, the utility may authorize a pumping run from a distant aquifer; the amount pumped must be between 6 and 38 megaliters.  \nEach pumping run, however, requires a 4‑week pipeline transit period before the water becomes available for distribution or for adding to reservoir stocks.  \nWeekly consumer demand for water (in megaliters) is forecasted as:  \nWeek 1: 36  \nWeek 2: 25  \nWeek 3: 11  \nWeek 4: 41  \nWeek 5: 28  \nWeek 6: 19  \nWeek 7: 43  \nWeek 8: 50  \nWeek 9: 33  \nWeek 10: 57  \nWeek 11: 53  \nWeek 12: 19  \nWeek 13: 17  \nWeek 14: 42  \nWeek 15: 30  \nWeek 16: 30  \nWeek 17: 53  \nWeek 18: 56  \nWeek 19: 14  \nWeek 20: 33  \n\nService shortfalls are tolerated, but any weekly demand not met is simply lost and cannot be deferred to a later week.  \nThroughout the 20‑week horizon, water volumes may be treated as continuous quantities, and the total volume stored in the reservoir at any moment must not surpass its safe capacity of 38 megaliters.  \nThe total operational cost comprises three elements: a pumping cost of 6 per megaliter extracted; a storage cost of 2 per megaliter held in the reservoir from one week to the next; and a shortage penalty of 12 per megaliter of unmet weekly demand.  \nThe utility seeks to determine the optimal pumping quantity for each week and to monitor the resulting reservoir volume and weekly deficit so as to minimize the aggregate cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

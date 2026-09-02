@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers for shipment. Available containers are:\n* Container A: weight 25 tons, value $225,000\n* Container B: weight 3 tons, value $142,000\n* Container C: weight 33 tons, value $258,000\n* Container D: weight 26 tons, value $165,000\n* Container E: weight 31 tons, value $193,000\nThe cargo vessel can carry at most 82 tons. Choose the container combination with the highest total value without exceeding this weight limit. Each container is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

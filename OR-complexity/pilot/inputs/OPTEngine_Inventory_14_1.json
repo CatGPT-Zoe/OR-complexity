@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water distribution utility must devise a pumping and storage schedule for a critical reservoir across a two-week operational cycle.  \nThe initial water volume stored at the cycle’s commencement is 82 megaliters.  \nIn each day \\( t = 1,\\dots,14 \\), the utility may activate a pumping station to transfer water from a remote source, with the pumped volume required to be between 2 and 69 megaliters.  \nAny pumping order, once initiated, experiences a conveyance delay of 3 days before the water becomes available in the reservoir for meeting demand or augmenting storage.  \nThe daily municipal and agricultural demand for water (in megaliters) is as follows:  \n\n* Day 1: 23  \n* Day 2: 32  \n* Day 3: 18  \n* Day 4: 18  \n* Day 5: 17  \n* Day 6: 49  \n* Day 7: 32  \n* Day 8: 20  \n* Day 9: 11  \n* Day 10: 37  \n* Day 11: 46  \n* Day 12: 35  \n* Day 13: 39  \n* Day 14: 14  \n\nSupply shortfalls are permissible, but any unmet daily demand is simply lost and not carried forward.  \nThroughout the planning horizon, water volumes are treated as continuous quantities, and the total stored volume in the reservoir at any moment must not exceed its capacity of 82 megaliters.  \nThe total operational cost over the two weeks comprises three elements: a pumping cost of 5 per megaliter transferred; a storage cost of 3 per megaliter held overnight from one day to the next; and a penalty of 14 per megaliter of unmet demand.  \nDetermine the optimal pumping quantity for each day and monitor the resulting reservoir storage and daily deficit so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

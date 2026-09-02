@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load parcels onto identical delivery trucks. Parcels:\n* Parcel Alpha: weight 39kg\n* Parcel Bravo: weight 44kg\n* Parcel Charlie: weight 32kg\n* Parcel Delta: weight 66kg\n* Parcel Echo: weight 70kg\n* Parcel Foxtrot: weight 64kg\n* Parcel Golf: weight 68kg\n* Parcel Hotel: weight 34kg\n* Parcel India: weight 31kg\n* Parcel Juliet: weight 37kg\n* Parcel Kilo: weight 70kg\n\nEach truck has a maximum load capacity of 100 kg. Load all parcels using the fewest trucks. Every parcel must be placed on exactly one truck, and the combined weight in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

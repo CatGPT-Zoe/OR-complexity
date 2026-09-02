@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must schedule the dispatch of specialized equipment from regional depots to construction sites in order to minimize total rental fees.\n\nThe available inventory of equipment at each regional depot (set R) is as follows:\n*R1's stock is 50.\n*R2's stock is 120.\n*R3's stock is 87.\n*R4's stock is 83.\n*R5's stock is 188.\n*R6's stock is 114.\n\nThe required number of units at each construction site (set S) is specified below:\n*S1's requirement is 22.\n*S2's requirement is 172.\n*S3's requirement is 27.\n*S4's requirement is 71.\n*S5's requirement is 156.\n*S6's requirement is 116.\n\nThe per-unit rental fee for transporting equipment from each depot to each site is provided in the matrix:\n| From / To | S1 | S2 | S3 | S4 | S5 | S6 |\n|--|-|-|-|-|-|\n| R1 | 1 | 6 | 9 | 2 | 5 | 14 |\n| R2 | 17 | 4 | 3 | 16 | 15 | 12 |\n| R3 | 17 | 19 | 4 | 15 | 17 | 8 |\n| R4 | 20 | 2 | 17 | 10 | 15 | 1 |\n| R5 | 2 | 16 | 13 | 14 | 4 | 16 |\n| R6 | 15 | 3 | 3 | 11 | 20 | 5 |\n\nDetermine the allocation of equipment that minimizes the aggregate rental expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

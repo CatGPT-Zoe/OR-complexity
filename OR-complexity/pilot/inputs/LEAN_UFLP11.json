@@ -1,0 +1,61 @@
+{
+  "instance_id": "LEAN_UFLP11",
+  "annotation_mode": "semantic",
+  "problem_text": "ElectroTech Manufacturing is undergoing a critical strategic network restructuring. The primary objective is to minimize the total system cost by optimizing the supply chain backbone. This requires a dual decision: 1) Determine which subset of 15 potential factory sites (A1-A15) to construct (considering fixed costs from facility_costs.csv). 2) Plan the most economical shipment routes from these selected factories to satisfy the fixed demand of 8 distribution centers (B1-B8) (demand from demand_requirements.csv; variable costs from shipping_costs.csv).The core task is to find the optimal balance between fixed investment and variable logistics costs while ensuring all market demand is met.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "demand_requirements",
+      "indices": [
+        "Destination",
+        "Demand"
+      ],
+      "unit": "",
+      "values": "| Destination | Demand |\n|---|---|\n| B1 | 30 |\n| B2 | 25 |\n| B3 | 20 |\n| B4 | 35 |\n| B5 | 25 |\n| B6 | 30 |\n| B7 | 25 |\n| B8 | 30 |"
+    },
+    {
+      "name": "facility_costs",
+      "indices": [
+        "Facility",
+        "FixedCost",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Facility | FixedCost | Capacity |\n|---|---|---|\n| A1 | 0 | 30 |\n| A2 | 175 | 10 |\n| A3 | 300 | 20 |\n| A4 | 375 | 30 |\n| A5 | 500 | 40 |\n| A6 | 200 | 20 |\n| A7 | 260 | 25 |\n| A8 | 220 | 30 |\n| A9 | 320 | 35 |\n| A10 | 280 | 20 |\n| A11 | 350 | 40 |\n| A12 | 420 | 25 |\n| A13 | 470 | 30 |\n| A14 | 520 | 50 |\n| A15 | 560 | 45 |"
+    },
+    {
+      "name": "shipping_costs",
+      "indices": [
+        "Origin",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8"
+      ],
+      "unit": "",
+      "values": "| Origin | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 |\n|---|---|---|---|---|---|---|---|---|\n| A1 | 8 | 4 | 3 | 6 | 7 | 5 | 9 | 8 |\n| A2 | 5 | 2 | 3 | 5 | 6 | 4 | 7 | 6 |\n| A3 | 4 | 3 | 4 | 6 | 5 | 5 | 6 | 7 |\n| A4 | 9 | 7 | 5 | 8 | 9 | 6 | 10 | 7 |\n| A5 | 10 | 4 | 2 | 6 | 8 | 5 | 7 | 3 |\n| A6 | 6 | 5 | 4 | 5 | 7 | 6 | 8 | 5 |\n| A7 | 7 | 6 | 5 | 4 | 6 | 7 | 9 | 6 |\n| A8 | 5 | 4 | 6 | 3 | 5 | 6 | 7 | 6 |\n| A9 | 8 | 7 | 6 | 7 | 9 | 8 | 10 | 7 |\n| A10 | 6 | 5 | 7 | 4 | 6 | 5 | 7 | 5 |\n| A11 | 9 | 6 | 4 | 6 | 8 | 7 | 9 | 6 |\n| A12 | 7 | 5 | 6 | 5 | 6 | 5 | 8 | 5 |\n| A13 | 8 | 6 | 5 | 6 | 7 | 6 | 8 | 7 |\n| A14 | 9 | 5 | 3 | 5 | 7 | 4 | 6 | 4 |\n| A15 | 10 | 6 | 4 | 5 | 8 | 5 | 7 | 5 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP11/demand_requirements.csv",
+      "role": "parameter_table",
+      "table": "demand_requirements"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP11/facility_costs.csv",
+      "role": "parameter_table",
+      "table": "facility_costs"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP11/shipping_costs.csv",
+      "role": "parameter_table",
+      "table": "shipping_costs"
+    }
+  ],
+  "notes": ""
+}

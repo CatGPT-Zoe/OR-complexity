@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage schedule for a critical component over a 12-day operational window.  \nThe starting stock at the beginning of the first day is 68 units.  \nOn each day \\( t = 1, \\dots, 12 \\), the vendor permits an order whose size must be between 11 and 30 units.  \nEvery order placed, however, requires 1 day for delivery before it becomes available to meet requirements or increase stock levels.  \nThe required usage of the component on each day is as follows:  \n* Day 1: requirement 43 units  \n* Day 2: requirement 31 units  \n* Day 3: requirement 34 units  \n* Day 4: requirement 26 units  \n* Day 5: requirement 23 units  \n* Day 6: requirement 17 units  \n* Day 7: requirement 46 units  \n* Day 8: requirement 31 units  \n* Day 9: requirement 25 units  \n* Day 10: requirement 47 units  \n* Day 11: requirement 53 units  \n* Day 12: requirement 56 units  \n\nStock‑outs are tolerated, but any unsatisfied requirement is lost and not carried forward.  \nThroughout the 12‑day period, component quantities may be treated as continuous values, and the total physical stock on hand at any moment must not exceed the storage‑facility capacity of 68 units.  \nThe aggregate expense comprises three elements: the procurement expense, charged at 3 per unit ordered; the storage expense, charged at 3 per unit kept overnight; and the shortage penalty, charged at 6 per unit of unmet requirement.  \nThe objective is to decide the optimal order quantity each day and monitor the resulting stock and shortage amounts so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

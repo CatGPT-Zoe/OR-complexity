@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment for a long-haul cargo drone. The drone can transport a selection of crates to maximize total profit, but the total mass must stay within the drone's lift capacity.\n\nThe available crates are:\n* Crate A: mass 14kg, profit 261 credits\n* Crate B: mass 6kg, profit 108 credits\n* Crate C: mass 7kg, profit 272 credits\n* Crate D: mass 9kg, profit 109 credits\n* Crate E: mass 36kg, profit 276 credits\n* Crate F: mass 41kg, profit 230 credits\n* Crate G: mass 39kg, profit 212 credits\n* Crate H: mass 42kg, profit 144 credits\n* Crate I: mass 44kg, profit 251 credits\n* Crate J: mass 41kg, profit 24 credits\n* Crate K: mass 23kg, profit 186 credits\n* Crate L: mass 50kg, profit 115 credits\n* Crate M: mass 45kg, profit 27 credits\n* Crate N: mass 13kg, profit 235 credits\n* Crate O: mass 14kg, profit 275 credits\n* Crate P: mass 44kg, profit 118 credits\n* Crate Q: mass 1kg, profit 83 credits\n* Crate R: mass 16kg, profit 242 credits\n\nFurthermore, due to a routing restriction, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, it requires special handling equipment that reduces the drone's effective lift capacity by 10 kg.\nThe drone's maximum allowable takeoff mass is 339 kg. The coordinator must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

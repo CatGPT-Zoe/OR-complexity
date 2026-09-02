@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of freight parcels onto a fleet of uniform delivery trucks. The parcels are as follows:\n\n* Parcel Alpha: mass 42 kg\n* Parcel Beta: mass 41 kg\n* Parcel Gamma: mass 37 kg\n* Parcel Delta: mass 60 kg\n* Parcel Epsilon: mass 43 kg\n* Parcel Zeta: mass 33 kg\n* Parcel Eta: mass 31 kg\n* Parcel Theta: mass 64 kg\n* Parcel Iota: mass 57 kg\n* Parcel Kappa: mass 69 kg\n* Parcel Lambda: mass 36 kg\n\nEach truck possesses a maximum payload capacity of 100 kg. The coordinator must ensure every parcel is assigned to exactly one truck, and the cumulative mass loaded onto any single truck must not surpass its payload limit. The objective is to complete the allocation utilizing the minimal possible number of trucks.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

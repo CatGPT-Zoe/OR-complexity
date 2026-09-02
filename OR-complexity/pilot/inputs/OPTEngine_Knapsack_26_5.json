@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting packages to load onto a cargo plane. Available packages are:\n* Package 1: weight 35kg, revenue $220\n* Package 2: weight 2kg, revenue $221\n* Package 3: weight 43kg, revenue $227\n* Package 4: weight 38kg, revenue $292\n* Package 5: weight 36kg, revenue $134\n* Package 6: weight 7kg, revenue $51\n* Package 7: weight 22kg, revenue $222\n* Package 8: weight 35kg, revenue $166\n* Package 9: weight 42kg, revenue $119\n* Package 10: weight 32kg, revenue $246\n* Package 11: weight 12kg, revenue $156\n* Package 12: weight 34kg, revenue $286\n* Package 13: weight 31kg, revenue $196\n* Package 14: weight 7kg, revenue $10\n* Package 15: weight 22kg, revenue $187\n* Package 16: weight 30kg, revenue $87\n* Package 17: weight 35kg, revenue $150\n* Package 18: weight 4kg, revenue $42\n* Package 19: weight 29kg, revenue $102\n* Package 20: weight 32kg, revenue $164\n* Package 21: weight 41kg, revenue $271\n* Package 22: weight 10kg, revenue $91\n* Package 23: weight 38kg, revenue $46\n* Package 24: weight 44kg, revenue $133\n* Package 25: weight 33kg, revenue $92\n* Package 26: weight 30kg, revenue $29\n\nThe aircraft has a maximum cargo capacity of 506 kg. Choose the package combination that maximizes total revenue without exceeding this weight limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

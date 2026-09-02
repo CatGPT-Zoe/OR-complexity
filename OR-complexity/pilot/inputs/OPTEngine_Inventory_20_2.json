@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_20_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage strategy for a critical reservoir over a 20-week planning window.  \nThe initial water volume in the reservoir at the start of the planning period is 33 million gallons.  \nIn each week \\( t = 1, \\dots, 20 \\), the utility may activate a pumping station to transfer water from a distant source; the amount pumped must be between 18 and 36 million gallons per activation.  \nHowever, due to pipeline transmission delays, each pumped volume takes 4 weeks to reach the reservoir and become available for meeting demand or replenishing storage.  \n\nThe weekly water demand (in million gallons) for the region is as follows:  \nWeek 1: 29  \nWeek 2: 58  \nWeek 3: 40  \nWeek 4: 46  \nWeek 5: 15  \nWeek 6: 53  \nWeek 7: 33  \nWeek 8: 51  \nWeek 9: 16  \nWeek 10: 16  \nWeek 11: 41  \nWeek 12: 25  \nWeek 13: 43  \nWeek 14: 12  \nWeek 15: 11  \nWeek 16: 55  \nWeek 17: 53  \nWeek 18: 47  \nWeek 19: 15  \nWeek 20: 39  \n\nShortfalls are allowed, but any unmet demand in a given week is lost and cannot be recovered later.  \nThroughout the 20 weeks, water quantities may be treated as continuous, and the total volume stored in the reservoir at any moment must not exceed its capacity of 45 million gallons.  \n\nThe total cost over the planning horizon comprises three elements: the pumping cost, which is 4 per million gallons pumped; the storage cost, which is 1 per million gallons held in the reservoir from one week to the next; and the shortage penalty, which is 9 per million gallons of unmet weekly demand.  \nDetermine the optimal pumping volume for each week and monitor the resulting reservoir storage and weekly shortfall so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

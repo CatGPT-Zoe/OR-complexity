@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate budget across 7 infrastructure projects to maximize the total community benefit score.  \nThe characteristics of each project are:  \n* Project Alpha: benefit score 0.148, environmental impact 0.180, allocation bounds [0.079, 0.833]  \n* Project Beta: benefit score 0.100, environmental impact 0.217, allocation bounds [0.011, 0.548]  \n* Project Gamma: benefit score 0.182, environmental impact 0.120, allocation bounds [0.065, 0.796]  \n* Project Delta: benefit score 0.078, environmental impact 0.183, allocation bounds [0.088, 0.539]  \n* Project Epsilon: benefit score 0.047, environmental impact 0.096, allocation bounds [0.055, 0.738]  \n* Project Zeta: benefit score 0.043, environmental impact 0.157, allocation bounds [0.087, 0.488]  \n* Project Eta: benefit score 0.132, environmental impact 0.135, allocation bounds [0.043, 0.488]  \n\nEach project must receive a budget share within its specified bounds, and the total allocation across all projects must sum to 1.  \nTo ensure equitable regional distribution, the set of high-priority projects L = {Alpha, Beta, Gamma, Epsilon, Zeta, Eta} must collectively receive at least 0.468 of the total budget.  \nAdditionally, the total environmental impact index of the portfolio must not exceed 0.232, and the overall benefit score must be at least 0.084.  \nDetermine the optimal budget allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

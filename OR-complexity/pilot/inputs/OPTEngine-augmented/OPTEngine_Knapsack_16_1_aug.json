@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment to be transported on a cargo drone. The manager must select a combination of equipment packages to maximize the total utility score while staying within the drone's payload capacity.\n\nThe available equipment packages are:\n* Package A: weight 4kg, utility 78 units\n* Package B: weight 16kg, utility 236 units\n* Package C: weight 44kg, utility 124 units\n* Package D: weight 43kg, utility 65 units\n* Package E: weight 49kg, utility 274 units\n* Package F: weight 28kg, utility 156 units\n* Package G: weight 44kg, utility 183 units\n* Package H: weight 32kg, utility 108 units\n* Package I: weight 11kg, utility 200 units\n* Package J: weight 36kg, utility 192 units\n* Package K: weight 46kg, utility 234 units\n* Package L: weight 26kg, utility 234 units\n* Package M: weight 43kg, utility 172 units\n* Package N: weight 30kg, utility 44 units\n* Package O: weight 10kg, utility 122 units\n* Package P: weight 49kg, utility 68 units\n\nDue to compatibility protocols, exactly one of Package A and Package B must be included in the shipment.\n\nIf Package C is selected, it necessitates the inclusion of a heavy mounting bracket, which reduces the drone's effective payload capacity by 10 kg.\nThe maximum allowable total payload for the drone is 357 kg. The manager must determine the optimal selection of packages.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,319 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_50",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "months",
+      "description": "ordered planning months from July through December",
+      "values": [
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "purchase_price",
+      "indices": [
+        {
+          "role": "month",
+          "set_id": "months"
+        }
+      ],
+      "description": "purchase price per unit in each month",
+      "unit": "currency units per product unit",
+      "values": {
+        "July": 28,
+        "August": 24,
+        "September": 25,
+        "October": 27,
+        "November": 23,
+        "December": 23
+      },
+      "data_ref": null
+    },
+    {
+      "id": "selling_price",
+      "indices": [
+        {
+          "role": "month",
+          "set_id": "months"
+        }
+      ],
+      "description": "selling price per unit in each month",
+      "unit": "currency units per product unit",
+      "values": {
+        "July": 29,
+        "August": 24,
+        "September": 26,
+        "October": 28,
+        "November": 22,
+        "December": 25
+      },
+      "data_ref": null
+    },
+    {
+      "id": "warehouse_capacity",
+      "indices": [],
+      "description": "maximum number of product units that the warehouse can hold",
+      "unit": "units",
+      "values": 500,
+      "data_ref": null
+    },
+    {
+      "id": "initial_inventory",
+      "indices": [],
+      "description": "inventory held at the end of June, immediately before the planning horizon",
+      "unit": "units",
+      "values": 200,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "purchase",
+      "canonical_name": "monthly_purchase_quantity",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "month",
+          "set_id": "months"
+        }
+      ],
+      "description": "quantity of the product purchased at the beginning of each month",
+      "value_semantics": "nonnegative quantity of product units",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Thereafter, purchases are made at the beginning of each month.",
+        "How much should be purchased and sold each month"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "sale",
+      "canonical_name": "monthly_sales_quantity",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "month",
+          "set_id": "months"
+        }
+      ],
+      "description": "quantity of the product sold in each month",
+      "value_semantics": "nonnegative quantity of product units",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "How much should be purchased and sold each month"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "inventory",
+      "canonical_name": "end_of_month_inventory",
+      "semantic_type": "state",
+      "indices": [
+        {
+          "role": "month",
+          "set_id": "months"
+        }
+      ],
+      "description": "quantity of the product remaining in stock at the end of each planning month",
+      "value_semantics": "nonnegative physical stock level",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "the warehouse capacity must not exceed 500 units, with 200 units in stock at the end of June",
+        "Thereafter, purchases are made at the beginning of each month."
+      ],
+      "confidence": 0.96
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_net_sales_revenue",
+    "normalized_semantics": "maximize total selling proceeds over July through December minus total purchase expenditures over those months",
+    "description": "Maximize total net revenue from monthly purchases and sales.",
+    "entity_scope": [
+      "purchase",
+      "sale"
+    ],
+    "parameter_refs": [
+      "purchase_price",
+      "selling_price"
+    ],
+    "source_spans": [
+      "Assume the purchase and selling prices of this product for each month are shown in Table 1-21.",
+      "How much should be purchased and sold each month to maximize the total revenue?"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "monthly_inventory_balance",
+      "obligation_type": "balance",
+      "normalized_semantics": "end-of-month inventory equals opening inventory plus the beginning-of-month purchase minus sales during that month; July opening inventory is the stated end-of-June stock, and each later month opens with the preceding month's ending inventory",
+      "support_entity_ids": [
+        "purchase",
+        "sale",
+        "inventory"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "purchase",
+          "role": "monthly_inventory_inflow",
+          "aggregation_axes": [],
+          "index_binding": {
+            "month": "t"
+          }
+        },
+        {
+          "entity_id": "sale",
+          "role": "monthly_inventory_outflow",
+          "aggregation_axes": [],
+          "index_binding": {
+            "month": "t"
+          }
+        },
+        {
+          "entity_id": "inventory",
+          "role": "opening_and_closing_stock",
+          "aggregation_axes": [],
+          "index_binding": {
+            "closing_month": "t",
+            "opening_month": "predecessor(t)"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all months t from July through December"
+      ],
+      "condition": "For July, opening stock is initial_inventory; for August through December, opening stock is inventory in the preceding month.",
+      "parameter_refs": [
+        "initial_inventory"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "with 200 units in stock at the end of June. Thereafter, purchases are made at the beginning of each month.",
+        "How much should be purchased and sold each month"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "id": "o2",
+      "canonical_name": "warehouse_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the stock held after the beginning-of-month purchase and before that month's sales must not exceed 500 units",
+      "support_entity_ids": [
+        "purchase",
+        "inventory"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "purchase",
+          "role": "beginning_of_month_stock_addition",
+          "aggregation_axes": [],
+          "index_binding": {
+            "month": "t"
+          }
+        },
+        {
+          "entity_id": "inventory",
+          "role": "opening_stock",
+          "aggregation_axes": [],
+          "index_binding": {
+            "month": "predecessor(t)"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all months t from July through December"
+      ],
+      "condition": "For July, opening stock is initial_inventory; for later months, opening stock is the preceding month's inventory.",
+      "parameter_refs": [
+        "warehouse_capacity",
+        "initial_inventory"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "the warehouse capacity must not exceed 500 units",
+        "Thereafter, purchases are made at the beginning of each month."
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "o3",
+      "canonical_name": "sales_limited_by_available_stock",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "sales in a month cannot exceed the stock available from opening inventory and that month's beginning-of-month purchase",
+      "support_entity_ids": [
+        "purchase",
+        "sale",
+        "inventory"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "purchase",
+          "role": "current_month_stock_supply",
+          "aggregation_axes": [],
+          "index_binding": {
+            "month": "t"
+          }
+        },
+        {
+          "entity_id": "sale",
+          "role": "stock_consumption",
+          "aggregation_axes": [],
+          "index_binding": {
+            "month": "t"
+          }
+        },
+        {
+          "entity_id": "inventory",
+          "role": "opening_stock",
+          "aggregation_axes": [],
+          "index_binding": {
+            "month": "predecessor(t)"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all months t from July through December"
+      ],
+      "condition": "For July, available opening stock is initial_inventory; for later months, it is the preceding month's inventory.",
+      "parameter_refs": [
+        "initial_inventory"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "with 200 units in stock at the end of June. Thereafter, purchases are made at the beginning of each month.",
+        "How much should be purchased and sold each month"
+      ],
+      "confidence": 0.93
+    }
+  ],
+  "unresolved_items": [
+    {
+      "description": "The phrase 'maximize the total revenue' does not explicitly state whether purchase expenditures are deducted. The use of both purchase and selling prices strongly suggests net revenue or profit, which is the interpretation used in the objective."
+    },
+    {
+      "description": "The statement does not explicitly identify whether the 500-unit warehouse capacity is checked immediately after each beginning-of-month purchase, at month end, or continuously. The annotation interprets it as applying to the post-purchase stock because purchases occur at the beginning of each month."
+    },
+    {
+      "description": "No required ending inventory level or terminal value for inventory remaining after December is stated."
+    }
+  ]
+}

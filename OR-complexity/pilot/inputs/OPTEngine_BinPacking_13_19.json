@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a series of shipments to identical freight trucks. The shipments are as follows:\n* Shipment Alpha: weight 48kg\n* Shipment Beta: weight 53kg\n* Shipment Gamma: weight 55kg\n* Shipment Delta: weight 65kg\n* Shipment Epsilon: weight 38kg\n* Shipment Zeta: weight 48kg\n* Shipment Eta: weight 37kg\n* Shipment Theta: weight 60kg\n* Shipment Iota: weight 45kg\n* Shipment Kappa: weight 33kg\n* Shipment Lambda: weight 49kg\n* Shipment Mu: weight 41kg\n* Shipment Nu: weight 63kg\n\nEach truck possesses a maximum cargo capacity of 100 kg. The objective is to allocate all shipments to trucks, ensuring each shipment is placed on exactly one truck, and the combined weight on any given truck does not surpass its capacity. The overarching aim is to minimize the total number of trucks required for this assignment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

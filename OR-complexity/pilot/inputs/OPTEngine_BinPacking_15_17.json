@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_15_17",
+  "annotation_mode": "semantic",
+  "problem_text": "An event planner must organize gift baskets for a corporate function, each containing a selection of gourmet items. The available items and their respective masses are as follows:\n* Artisanal coffee: 65 grams\n* Bottled honey: 56 grams\n* Chocolate truffles: 39 grams\n* Dried fruit assortment: 67 grams\n* Extra virgin olive oil: 57 grams\n* Flavored sea salt: 49 grams\n* Gourmet mustard: 70 grams\n* Herbal tea blend: 52 grams\n* Infused vinegar: 35 grams\n* Jam preserve: 45 grams\n* Kettle corn: 58 grams\n* Lemon curd: 70 grams\n* Maple syrup: 53 grams\n* Nut butter: 70 grams\n* Olive tapenade: 63 grams\n\nEach decorative gift basket can safely support a maximum total weight of 100 grams. The planner must allocate every listed item into baskets, with each item placed in precisely one basket, and the combined mass in any basket must not surpass its weight limit. The objective is to determine an arrangement that utilizes the smallest possible number of these baskets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

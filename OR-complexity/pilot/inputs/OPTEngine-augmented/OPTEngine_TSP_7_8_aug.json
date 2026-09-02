@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A telecommunications company is tasked with establishing a fiber-optic ring network connecting seven major data hubs. The geographic coordinates for each hub are as follows:\nHub Alpha: (199,158)\nHub Beta: (9,10)\nHub Gamma: (69,41)\nHub Delta: (38,149)\nHub Epsilon: (74,92)\nHub Zeta: (101,140)\nHub Eta: (33,75)\n\nThe required cable lengths, measured in kilometers, for potential direct links between hubs have been surveyed:\nAlpha to Gamma: 174.9 km\nAlpha to Delta: 161.3 km\nAlpha to Epsilon: 141.4 km\nAlpha to Zeta: 99.6 km\nAlpha to Eta: 185.6 km\nBeta to Gamma: 67.5 km\nBeta to Delta: 142.0 km\nBeta to Epsilon: 104.6 km\nBeta to Zeta: 159.3 km\nBeta to Eta: 69.3 km\nGamma to Delta: 112.4 km\nGamma to Epsilon: 51.2 km\nGamma to Zeta: 104.0 km\nGamma to Eta: 49.5 km\nDelta to Epsilon: 67.4 km\nDelta to Zeta: 63.6 km\nDelta to Eta: 74.2 km\nEpsilon to Zeta: 55.1 km\nEpsilon to Eta: 44.4 km\nZeta to Eta: 94.1 km\n\nDue to a regulatory restriction, a direct cable connection between Hub Alpha and Hub Beta is prohibited and cannot be constructed. Furthermore, the network design must incorporate exactly one of two specified critical links: either the connection between Hub Beta and Hub Gamma, or the connection between Hub Gamma and Hub Delta.\n\nThe objective is to determine the minimal total cable length required to create a continuous ring that interconnects each data hub precisely once and returns to the initial hub.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

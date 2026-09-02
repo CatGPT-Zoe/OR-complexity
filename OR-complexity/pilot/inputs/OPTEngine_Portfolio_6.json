@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate budget among 6 infrastructure projects to maximize the total community benefit score.  \nThe characteristics of each project are:  \n* Project A: benefit score 0.176, environmental impact 0.166, allocation bounds [0.027, 0.607]  \n* Project B: benefit score 0.194, environmental impact 0.282, allocation bounds [0.011, 0.531]  \n* Project C: benefit score 0.070, environmental impact 0.043, allocation bounds [0.043, 0.646]  \n* Project D: benefit score 0.135, environmental impact 0.291, allocation bounds [0.073, 0.453]  \n* Project E: benefit score 0.092, environmental impact 0.062, allocation bounds [0.031, 0.725]  \n* Project F: benefit score 0.197, environmental impact 0.289, allocation bounds [0.061, 0.301]  \n\nEach project must receive a budget share within its specified bounds, and the total allocation across all projects must sum to one.  \nTo ensure timely completion, the high-priority projects, represented by the subset L = {F}, must collectively receive at least 0.301 of the total budget.  \nAdditionally, the total environmental impact of all projects must not exceed 0.272, and the overall community benefit score must be at least 0.117.  \nDetermine the optimal budget shares that maximize the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

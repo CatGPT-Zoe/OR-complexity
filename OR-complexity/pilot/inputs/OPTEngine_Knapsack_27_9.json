@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting packages to load onto a cargo plane. Available packages are:\n* Package 1: size 33 cubic meters, revenue $109\n* Package 2: size 35 cubic meters, revenue $260\n* Package 3: size 24 cubic meters, revenue $99\n* Package 4: size 26 cubic meters, revenue $250\n* Package 5: size 32 cubic meters, revenue $114\n* Package 6: size 29 cubic meters, revenue $289\n* Package 7: size 25 cubic meters, revenue $164\n* Package 8: size 15 cubic meters, revenue $71\n* Package 9: size 34 cubic meters, revenue $246\n* Package 10: size 27 cubic meters, revenue $149\n* Package 11: size 21 cubic meters, revenue $54\n* Package 12: size 7 cubic meters, revenue $87\n* Package 13: size 42 cubic meters, revenue $125\n* Package 14: size 32 cubic meters, revenue $283\n* Package 15: size 12 cubic meters, revenue $40\n* Package 16: size 30 cubic meters, revenue $105\n* Package 17: size 34 cubic meters, revenue $256\n* Package 18: size 9 cubic meters, revenue $23\n* Package 19: size 16 cubic meters, revenue $105\n* Package 20: size 13 cubic meters, revenue $26\n* Package 21: size 22 cubic meters, revenue $188\n* Package 22: size 50 cubic meters, revenue $256\n* Package 23: size 20 cubic meters, revenue $178\n* Package 24: size 37 cubic meters, revenue $181\n* Package 25: size 21 cubic meters, revenue $53\n* Package 26: size 20 cubic meters, revenue $217\n* Package 27: size 5 cubic meters, revenue $260\n\nThe plane's cargo hold has a maximum capacity of 469 cubic meters. Select the package combination that maximizes total revenue without exceeding this capacity. Each package is either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

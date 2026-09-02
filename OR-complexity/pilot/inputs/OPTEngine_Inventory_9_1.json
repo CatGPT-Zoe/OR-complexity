@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and stock management strategy for a critical vaccine over a nine-week planning window.  \nThe initial stockpile at the outset of the planning interval is 74 doses.  \nIn each week t = 1, …, 9, the pharmaceutical supplier permits the hospital to place a supply request whose quantity must be between 9 and 30 doses.  \nEach requested supply, however, requires a lead time of 3 weeks before it is delivered and becomes available for use or for replenishing the stockpile.  \nThe weekly patient demand for the vaccine is as follows:  \n* Week 1: demand 28 doses  \n* Week 2: demand 45 doses  \n* Week 3: demand 50 doses  \n* Week 4: demand 30 doses  \n* Week 5: demand 21 doses  \n* Week 6: demand 47 doses  \n* Week 7: demand 15 doses  \n* Week 8: demand 16 doses  \n* Week 9: demand 44 doses  \n\nDose shortages are tolerated, but any unsatisfied demand in a given week is permanently lost and cannot be recovered later.  \nThroughout the nine-week horizon, vaccine quantities may be treated as continuous values, and the total on-hand stock at any moment must not surpass the refrigerated storage capacity of 74 doses.  \nThe aggregate cost comprises three elements: the procurement cost, amounting to 2 per dose ordered; the storage cost, amounting to 1 per dose kept in inventory from one week to the next; and the shortage penalty, amounting to 9 per dose of unmet weekly demand.  \nThe objective is to determine the optimal order quantity for each week and to monitor the resulting inventory and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

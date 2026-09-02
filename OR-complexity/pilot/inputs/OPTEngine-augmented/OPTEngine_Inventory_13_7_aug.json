@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail distribution center must devise a procurement and stock management strategy for a critical product line over a forthcoming 13-week season.  \nThe starting stock at the season’s commencement is 9 units.  \nIn each week t = 1, …, 13, the wholesaler permits an order to be placed, with the order size required to be between 18 and 28 units.  \nHowever, every order placed is subject to a 3‑week lead time before it becomes available to meet customer requirements or to replenish the on‑hand stock.  \nWeekly customer demand for the product is as follows:  \n* Week 1: 18 units  \n* Week 2: 32 units  \n* Week 3: 16 units  \n* Week 4: 49 units  \n* Week 5: 45 units  \n* Week 6: 36 units  \n* Week 7: 60 units  \n* Week 8: 58 units  \n* Week 9: 14 units  \n* Week 10: 26 units  \n* Week 11: 46 units  \n* Week 12: 16 units  \n* Week 13: 43 units  \n\nStock‑outs are tolerated, but any unsatisfied demand is permanently lost and cannot be recovered later.  \nThroughout the season, product quantities may be treated as continuous values, and the total physical stock held at any moment must not surpass the storage‑facility limit of 38 units.  \n\nSpecifically, in week 9 the maximum allowable order quantity is restricted to 21 units.  \nIn week 3, the on‑hand inventory must be maintained at a level no lower than 14 units.  \n\nThe total seasonal expense comprises three elements: the procurement cost, charged at 1 per unit ordered; the storage cost, charged at 3 per unit carried over from one week to the next; and the lost‑sales penalty, charged at 9 per unit of unmet demand.  \nThe objective is to decide the optimal order quantity each week and to monitor the resulting stock and lost‑sales levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

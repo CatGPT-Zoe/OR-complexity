@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_RetailSalesAnalysis",
+  "annotation_mode": "semantic",
+  "problem_text": "In retail, shops need to allocate various types of products to different displays. The capacity limit of each display is provided in \"capacity.csv\", and the value and weight of each product are provided in \"products.csv\". The objective is to determine the optimal number of each product to place on each display so as to maximize the total value of all products placed across the displays, while ensuring that the total weight of the products on each display does not exceed its capacity. In addition, the total quantity of the first product placed across all displays must be at least 5. The decision variable x_{ij} represents the number of units of product j placed on display i.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "ShelfID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| ShelfID | Capacity |\n|---|---|\n| 1 | 5.0 |\n| 2 | 7.0 |\n| 3 | 6.0 |\n| 4 | 8.0 |\n| 5 | 5.5 |\n| 6 | 9.0 |\n| 7 | 6.5 |\n| 8 | 7.5 |\n| 9 | 8.2 |\n| 10 | 5.7 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Smartphone | 200 | 1.0 |\n| Laptop | 1500 | 5.0 |\n| Headphones | 100 | 0.5 |\n| Camera | 800 | 2.0 |\n| Smartwatch | 250 | 0.3 |\n| Tablet | 600 | 1.5 |\n| Bluetooth Speaker | 150 | 1.0 |\n| Keyboard | 80 | 0.8 |\n| Mouse | 50 | 0.2 |\n| Monitor | 300 | 3.0 |\n| Printer | 400 | 4.0 |\n| External Hard Drive | 120 | 0.5 |\n| Router | 60 | 0.3 |\n| Power Bank | 40 | 0.4 |\n| Memory Card | 30 | 0.05 |\n| USB Flash Drive | 25 | 0.02 |\n| Smart Home Hub | 100 | 0.6 |\n| Gaming Console | 500 | 4.0 |\n| Fitness Tracker | 90 | 0.2 |\n| E-Reader | 180 | 0.5 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/Mixture_testing/Mixture1/RetailSalesAnalysis/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/Mixture_testing/Mixture1/RetailSalesAnalysis/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

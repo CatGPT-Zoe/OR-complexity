@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a collection of distinct cargo units onto a series of uniform transport modules. The cargo units are as follows:\n* Cargo Alpha: mass 41kg\n* Cargo Beta: mass 37kg\n* Cargo Gamma: mass 33kg\n* Cargo Delta: mass 59kg\n* Cargo Epsilon: mass 63kg\n* Cargo Zeta: mass 63kg\n* Cargo Eta: mass 65kg\n* Cargo Theta: mass 69kg\n* Cargo Iota: mass 66kg\n* Cargo Kappa: mass 64kg\n* Cargo Lambda: mass 54kg\n* Cargo Mu: mass 56kg\n* Cargo Nu: mass 50kg\n* Cargo Xi: mass 68kg\n* Cargo Omicron: mass 51kg\n* Cargo Pi: mass 44kg\n* Cargo Rho: mass 51kg\n* Cargo Sigma: mass 61kg\n* Cargo Tau: mass 39kg\n* Cargo Upsilon: mass 63kg\n* Cargo Phi: mass 31kg\n* Cargo Chi: mass 60kg\n* Cargo Psi: mass 38kg\n* Cargo Omega: mass 30kg\n* Cargo A1: mass 35kg\n* Cargo B1: mass 65kg\n* Cargo C1: mass 31kg\n* Cargo D1: mass 38kg\n* Cargo E1: mass 37kg\n* Cargo F1: mass 33kg\n\nEach transport module possesses a maximum load capacity of 100 kg. The objective is to allocate every cargo unit to a module such that the total number of modules employed is minimized. Every individual cargo unit must be placed into precisely one module, and the aggregate mass loaded into any single module must not surpass its designated capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical cargo vessels. Shipments:\n* Shipment Alpha: mass 67 tonnes\n* Shipment Beta: mass 48 tonnes\n* Shipment Gamma: mass 64 tonnes\n* Shipment Delta: mass 31 tonnes\n* Shipment Epsilon: mass 66 tonnes\n* Shipment Zeta: mass 33 tonnes\n* Shipment Eta: mass 55 tonnes\n* Shipment Theta: mass 56 tonnes\n* Shipment Iota: mass 63 tonnes\n* Shipment Kappa: mass 53 tonnes\n* Shipment Lambda: mass 44 tonnes\n* Shipment Mu: mass 45 tonnes\n* Shipment Nu: mass 40 tonnes\n* Shipment Xi: mass 36 tonnes\n* Shipment Omicron: mass 37 tonnes\n* Shipment Pi: mass 64 tonnes\n* Shipment Rho: mass 68 tonnes\n* Shipment Sigma: mass 39 tonnes\n* Shipment Tau: mass 48 tonnes\n* Shipment Upsilon: mass 52 tonnes\n* Shipment Phi: mass 61 tonnes\n* Shipment Chi: mass 62 tonnes\n* Shipment Psi: mass 45 tonnes\n* Shipment Omega: mass 57 tonnes\n* Shipment Asterisk: mass 39 tonnes\n* Shipment Ampersand: mass 68 tonnes\n* Shipment Brace: mass 68 tonnes\n* Shipment Slash: mass 41 tonnes\n* Shipment Bracket: mass 51 tonnes\n* Shipment Caret: mass 41 tonnes\n* Shipment Underscore: mass 31 tonnes\n* Shipment Grave: mass 51 tonnes\n\nEach vessel has a maximum cargo capacity of 100 tonnes. All shipments must be assigned, each to precisely one vessel, and the aggregate mass loaded onto any vessel must not surpass its capacity. The objective is to utilize the minimal possible number of vessels.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_28_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks.  \nPackages:  \n* Package Alpha: size 51 units  \n* Package Bravo: size 43 units  \n* Package Charlie: size 49 units  \n* Package Delta: size 64 units  \n* Package Echo: size 37 units  \n* Package Foxtrot: size 62 units  \n* Package Golf: size 49 units  \n* Package Hotel: size 35 units  \n* Package India: size 36 units  \n* Package Juliet: size 64 units  \n* Package Kilo: size 69 units  \n* Package Lima: size 48 units  \n* Package Mike: size 33 units  \n* Package November: size 45 units  \n* Package Oscar: size 37 units  \n* Package Papa: size 40 units  \n* Package Quebec: size 58 units  \n* Package Romeo: size 40 units  \n* Package Sierra: size 40 units  \n* Package Tango: size 59 units  \n* Package Uniform: size 46 units  \n* Package Victor: size 40 units  \n* Package Whiskey: size 58 units  \n* Package X-ray: size 66 units  \n* Package Yankee: size 31 units  \n* Package Zulu: size 65 units  \n* Package Aster: size 54 units  \n* Package Backslash: size 31 units  \n\nEach truck can carry up to 100 units. Assign all packages using the fewest trucks. Each package must be loaded onto exactly one truck, and the total size in a truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

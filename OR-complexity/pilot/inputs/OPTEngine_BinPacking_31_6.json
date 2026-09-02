@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Component A: size 32 cubic meters\n* Component B: size 30 cubic meters\n* Component C: size 68 cubic meters\n* Component D: size 55 cubic meters\n* Component E: size 30 cubic meters\n* Component F: size 57 cubic meters\n* Component G: size 44 cubic meters\n* Component H: size 57 cubic meters\n* Component I: size 66 cubic meters\n* Component J: size 59 cubic meters\n* Component K: size 48 cubic meters\n* Component L: size 30 cubic meters\n* Component M: size 41 cubic meters\n* Component N: size 66 cubic meters\n* Component O: size 59 cubic meters\n* Component P: size 64 cubic meters\n* Component Q: size 34 cubic meters\n* Component R: size 30 cubic meters\n* Component S: size 32 cubic meters\n* Component T: size 35 cubic meters\n* Component U: size 38 cubic meters\n* Component V: size 55 cubic meters\n* Component W: size 54 cubic meters\n* Component X: size 68 cubic meters\n* Component Y: size 41 cubic meters\n* Component Z: size 44 cubic meters\n* Component [: size 65 cubic meters\n* Component \\: size 36 cubic meters\n* Component ]: size 31 cubic meters\n* Component ^: size 32 cubic meters\n* Component _: size 55 cubic meters\n\nEach cargo plane has a maximum capacity of 100 cubic meters. Transport all components using the fewest planes possible. Each component must be loaded onto exactly one plane, and the total volume in any plane cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

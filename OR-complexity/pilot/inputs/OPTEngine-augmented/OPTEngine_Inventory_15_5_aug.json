@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_15_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage strategy for a critical type of plasma over a 15‑day emergency planning window.  \nThe initial stock at the start of the window is 40 units.  \nIn each day t = 1,…,15, the blood‑bank supplier permits the hospital to request a shipment whose volume must be between 2 and 43 units.  \nEvery shipment, however, requires a lead‑time of 1 day before it becomes available for meeting patient needs or replenishing the stock.  \nThe daily patient requirement for this plasma is as follows:  \n* Day 1: 36 units  \n* Day 2: 25 units  \n* Day 3: 11 units  \n* Day 4: 41 units  \n* Day 5: 28 units  \n* Day 6: 19 units  \n* Day 7: 43 units  \n* Day 8: 50 units  \n* Day 9: 33 units  \n* Day 10: 57 units  \n* Day 11: 53 units  \n* Day 12: 19 units  \n* Day 13: 17 units  \n* Day 14: 42 units  \n* Day 15: 30 units  \n\nShortfalls are allowed, but any unsatisfied demand is lost and cannot be deferred to later days.  \nThroughout the 15‑day period, plasma quantities may be fractional, and the total on‑hand stock at any moment must not exceed the refrigeration capacity of 45 units.  \n\nOn day 11, the maximum shipment volume permitted is 26 units.  \nOn day 7, the on‑hand stock must be no less than 2 units.  \n\nThe overall expense comprises three elements: the procurement cost, which is 2 per unit ordered; the storage cost, which is 2 per unit kept overnight; and the shortage penalty, which is 14 per unit of unmet patient requirement. The goal is to decide the optimal shipment volume for each day and to monitor the resulting stock and shortage levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

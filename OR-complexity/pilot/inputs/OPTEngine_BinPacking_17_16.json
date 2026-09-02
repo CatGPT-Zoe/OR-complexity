@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_17_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate various cargo parcels into standardized freight compartments. The parcels are categorized as follows:\n* Parcel Alpha: mass 36 units\n* Parcel Bravo: mass 39 units\n* Parcel Charlie: mass 56 units\n* Parcel Delta: mass 43 units\n* Parcel Echo: mass 58 units\n* Parcel Foxtrot: mass 69 units\n* Parcel Golf: mass 34 units\n* Parcel Hotel: mass 57 units\n* Parcel India: mass 65 units\n* Parcel Juliet: mass 55 units\n* Parcel Kilo: mass 32 units\n* Parcel Lima: mass 41 units\n* Parcel Mike: mass 45 units\n* Parcel November: mass 61 units\n* Parcel Oscar: mass 44 units\n* Parcel Papa: mass 38 units\n* Parcel Quebec: mass 47 units\n\nEach compartment possesses a maximum load capacity of 100 mass units. The objective is to assign every parcel to precisely one compartment, without exceeding the capacity of any given compartment, while minimizing the total number of compartments employed.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

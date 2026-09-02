@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment to maximize total profit while staying within the truck's weight limit.\n\nThe available cargo containers are:\n* Container 1: weight 40kg, profit 177 units\n* Container 2: weight 6kg, profit 167 units\n* Container 3: weight 2kg, profit 262 units\n* Container 4: weight 1kg, profit 138 units\n* Container 5: weight 13kg, profit 213 units\n* Container 6: weight 25kg, profit 233 units\n* Container 7: weight 50kg, profit 209 units\n* Container 8: weight 45kg, profit 29 units\n* Container 9: weight 38kg, profit 248 units\n* Container 10: weight 23kg, profit 74 units\n* Container 11: weight 37kg, profit 152 units\n* Container 12: weight 21kg, profit 22 units\n* Container 13: weight 26kg, profit 252 units\n\nFurthermore, due to a contractual obligation, exactly one of Container 1 and Container 2 must be included in the shipment.\n\nIf Container 3 is loaded, a special handling requirement reduces the truck's effective weight capacity by 10 kg.\nThe truck's maximum allowable load is 228 kg. The manager must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

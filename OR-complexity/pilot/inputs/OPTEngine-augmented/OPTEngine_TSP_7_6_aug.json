@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional airline must design a flight circuit connecting seven airports, each with distinct geographical coordinates:\n\nAirport Alpha: Position (53,96)\nAirport Bravo: Position (150,74)\nAirport Charlie: Position (2,35)\nAirport Delta: Position (38,69)\nAirport Echo: Position (85,86)\nAirport Foxtrot: Position (94,183)\nAirport Golf: Position (23,86)\n\nThe flight distances in nautical miles between these airports are predetermined:\nAlpha to Charlie: 79.5 nm\nAlpha to Delta: 30.9 nm\nAlpha to Echo: 33.5 nm\nAlpha to Foxtrot: 96.2 nm\nAlpha to Golf: 31.6 nm\nBravo to Charlie: 153.1 nm\nBravo to Delta: 112.1 nm\nBravo to Echo: 66.1 nm\nBravo to Foxtrot: 122.5 nm\nBravo to Golf: 127.6 nm\nCharlie to Delta: 49.5 nm\nCharlie to Echo: 97.4 nm\nCharlie to Foxtrot: 174.3 nm\nCharlie to Golf: 55.2 nm\nDelta to Echo: 50.0 nm\nDelta to Foxtrot: 127.0 nm\nDelta to Golf: 22.7 nm\nEcho to Foxtrot: 97.4 nm\nEcho to Golf: 62.0 nm\nFoxtrot to Golf: 120.2 nm\n\nDue to airspace restrictions, no direct flight is permitted between Airport Alpha and Airport Bravo.\nFurthermore, for operational reasons, the circuit must incorporate exactly one of two specific route segments: either the connection between Bravo and Charlie, or the connection between Charlie and Delta.\n\nThe objective is to determine the most efficient closed flight itinerary that visits every airport precisely once before returning to the point of origin, minimizing the total distance flown.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

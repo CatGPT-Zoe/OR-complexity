@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers to load onto a freight truck. Available containers are:\n\n* Container 1: weight 13 tons, value $258K\n* Container 2: weight 31 tons, value $145K\n* Container 3: weight 33 tons, value $216K\n* Container 4: weight 9 tons, value $264K\n* Container 5: weight 18 tons, value $98K\n* Container 6: weight 45 tons, value $17K\n* Container 7: weight 14 tons, value $183K\n* Container 8: weight 17 tons, value $65K\n* Container 9: weight 43 tons, value $25K\n* Container 10: weight 28 tons, value $168K\n* Container 11: weight 21 tons, value $108K\n* Container 12: weight 22 tons, value $220K\n* Container 13: weight 50 tons, value $75K\n* Container 14: weight 42 tons, value $73K\n* Container 15: weight 16 tons, value $193K\n* Container 16: weight 49 tons, value $251K\n* Container 17: weight 29 tons, value $98K\n* Container 18: weight 44 tons, value $191K\n* Container 19: weight 28 tons, value $233K\n\nThe truck has a maximum load capacity of 386 tons. Determine which containers to load to maximize the total value without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

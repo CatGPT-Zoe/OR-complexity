@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 4 cargo shipments through 4 different ports.\n\nEach shipment must pass through the ports in a specific sequence, represented as (Port, Handling time) pairs, where each pair indicates the port where the cargo must be processed and the number of hours required for handling. The order of pairs specifies the mandatory sequence of port visits for each shipment.\n\nShipment details:\n* S1 follows the route: (P4, 2) → (P2, 8) → (P3, 2) → (P1, 8)\n* S2 follows the route: (P4, 3) → (P1, 3) → (P2, 10) → (P3, 7)\n* S3 follows the route: (P1, 4) → (P4, 1) → (P3, 7) → (P2, 1)\n* S4 follows the route: (P1, 8) → (P2, 10) → (P3, 4) → (P4, 7)\n\nEach cargo handling operation must run continuously once it begins and cannot be interrupted, and each port can only process one shipment at a time. The objective is to determine the processing sequence of all shipments at the ports so that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

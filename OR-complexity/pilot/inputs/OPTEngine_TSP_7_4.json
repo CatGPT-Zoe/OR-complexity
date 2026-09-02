@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales manager must conduct in-person client visits across 7 key branch offices.\n\nThe travel times between offices are as follows:\n* Office Alpha to Office Beta: 89.9 minutes\n* Office Alpha to Office Gamma: 120.1 minutes\n* Office Alpha to Office Delta: 72.2 minutes\n* Office Alpha to Office Epsilon: 87.3 minutes\n* Office Alpha to Office Zeta: 56.0 minutes\n* Office Alpha to Office Eta: 78.2 minutes\n* Office Beta to Office Gamma: 162.9 minutes\n* Office Beta to Office Delta: 45.9 minutes\n* Office Beta to Office Epsilon: 96.0 minutes\n* Office Beta to Office Zeta: 113.2 minutes\n* Office Beta to Office Eta: 145.1 minutes\n* Office Gamma to Office Delta: 117.4 minutes\n* Office Gamma to Office Epsilon: 70.0 minutes\n* Office Gamma to Office Zeta: 173.8 minutes\n* Office Gamma to Office Eta: 186.9 minutes\n* Office Delta to Office Epsilon: 50.2 minutes\n* Office Delta to Office Zeta: 116.3 minutes\n* Office Delta to Office Eta: 145.2 minutes\n* Office Epsilon to Office Zeta: 142.1 minutes\n* Office Epsilon to Office Eta: 165.4 minutes\n* Office Zeta to Office Eta: 32.0 minutes\n\nThe objective is to determine the optimal itinerary that minimizes total transit duration, requiring a single visit to each branch before concluding the circuit back at the initial office.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

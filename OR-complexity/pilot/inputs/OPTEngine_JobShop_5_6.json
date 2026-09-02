@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 5 cargo shipments through 5 specialized port terminals.\n\nEach shipment must pass through a fixed sequence of terminal processing stages represented as (Terminal, Hours),\nwhere each pair specifies the terminal where processing occurs and the duration required.\nThe order of pairs indicates the mandatory sequence in which terminals must process the shipment.\n\nShipment details:\n* S1 follows the route: (T1, 1) → (T2, 3) → (T4, 2) → (T5, 7) → (T3, 4)\n* S2 follows the route: (T5, 4) → (T4, 6) → (T3, 10) → (T1, 2) → (T2, 10)\n* S3 follows the route: (T1, 5) → (T3, 1) → (T2, 9) → (T4, 1) → (T5, 4)\n* S4 follows the route: (T3, 4) → (T1, 5) → (T4, 5) → (T2, 5) → (T5, 9)\n* S5 follows the route: (T4, 1) → (T3, 5) → (T2, 9) → (T5, 2) → (T1, 1)\n\nEach terminal processing stage must run continuously once initiated and cannot be paused,\nand each terminal can only handle one shipment processing stage at a time.\nThe objective is to determine the processing sequence of all shipment stages across the terminals\nso that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

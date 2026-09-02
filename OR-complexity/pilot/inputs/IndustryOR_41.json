@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_41",
+  "annotation_mode": "semantic",
+  "problem_text": "You have an initial capital of 500,000 yuan at the beginning of Year 1. Over the next three years, you may allocate funds to the following investment projects. The goal is to choose an investment plan that maximizes the **total principal plus interest at the end of Year 3** (no borrowing allowed, and you may reallocate available cash at each decision time).\n\nProjects:\n(1) A 1-year product available at the **beginning of each year** (Years 1–3). If you invest I at the start of a year, you receive 1.20·I at that year’s end. Unlimited capacity.\n(2) A 2-year product available **only at the beginning of Year 1**; it matures at the **end of Year 2** and pays 1.50·I. Investment in this product is capped at 120,000 yuan.\n(3) A same-year product available **at the beginning of Year 2**, maturing at the **end of Year 2**, and paying 1.60·I. Investment is capped at 150,000 yuan.\n(4) A 1-year product available **at the beginning of Year 3**, maturing at the **end of Year 3**, and paying 1.40·I. Investment is capped at 100,000 yuan.\n\nDecisions are made at the beginnings of Years 1–3 using only currently available cash (initial capital and proceeds from matured investments). Find the investment plan that maximizes total wealth at the end of Year 3.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

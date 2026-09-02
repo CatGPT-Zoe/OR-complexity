@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n\n* Container A: weight 21 kg, profit contribution 139 units\n* Container B: weight 17 kg, profit contribution 274 units\n* Container C: weight 30 kg, profit contribution 89 units\n* Container D: weight 49 kg, profit contribution 239 units\n* Container E: weight 36 kg, profit contribution 88 units\n* Container F: weight 3 kg, profit contribution 100 units\n* Container G: weight 42 kg, profit contribution 272 units\n* Container H: weight 3 kg, profit contribution 171 units\n* Container I: weight 5 kg, profit contribution 108 units\n* Container J: weight 42 kg, profit contribution 243 units\n* Container K: weight 40 kg, profit contribution 132 units\n* Container L: weight 30 kg, profit contribution 277 units\n* Container M: weight 11 kg, profit contribution 180 units\n\nThe vehicle has a maximum load capacity of 230 kg. Determine which containers to load to achieve the highest total profit contribution without exceeding the weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

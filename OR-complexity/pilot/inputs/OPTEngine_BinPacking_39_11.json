@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto uniform cargo planes. The shipments are as follows:\n\n* Shipment Alpha: mass 51 tons\n* Shipment Bravo: mass 46 tons\n* Shipment Charlie: mass 68 tons\n* Shipment Delta: mass 38 tons\n* Shipment Echo: mass 49 tons\n* Shipment Foxtrot: mass 32 tons\n* Shipment Golf: mass 42 tons\n* Shipment Hotel: mass 63 tons\n* Shipment India: mass 48 tons\n* Shipment Juliet: mass 46 tons\n* Shipment Kilo: mass 45 tons\n* Shipment Lima: mass 35 tons\n* Shipment Mike: mass 59 tons\n* Shipment November: mass 37 tons\n* Shipment Oscar: mass 64 tons\n* Shipment Papa: mass 61 tons\n* Shipment Quebec: mass 50 tons\n* Shipment Romeo: mass 41 tons\n* Shipment Sierra: mass 49 tons\n* Shipment Tango: mass 62 tons\n* Shipment Uniform: mass 36 tons\n* Shipment Victor: mass 30 tons\n* Shipment Whiskey: mass 43 tons\n* Shipment X-ray: mass 44 tons\n* Shipment Yankee: mass 53 tons\n* Shipment Zulu: mass 64 tons\n* Shipment [Aster: mass 41 tons\n* Shipment [Backslash: mass 53 tons\n* Shipment [Bracket: mass 51 tons\n* Shipment [Caret: mass 44 tons\n* Shipment [Underscore: mass 49 tons\n* Shipment [Grave: mass 42 tons\n* Shipment alpha: mass 70 tons\n* Shipment beta: mass 62 tons\n* Shipment gamma: mass 33 tons\n* Shipment delta: mass 54 tons\n* Shipment epsilon: mass 46 tons\n* Shipment zeta: mass 48 tons\n* Shipment eta: mass 54 tons\n\nEach aircraft has a maximum payload capacity of 100 tons. The objective is to assign every shipment to exactly one aircraft, ensuring the combined mass on any given plane does not surpass its limit, while utilizing the smallest possible fleet of planes.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

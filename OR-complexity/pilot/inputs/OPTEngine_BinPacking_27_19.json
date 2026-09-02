@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of shipments into identical cargo aircraft.  \nShipments:  \n* Consignment Alpha: mass 43 metric tons  \n* Consignment Beta: mass 35 metric tons  \n* Consignment Gamma: mass 67 metric tons  \n* Consignment Delta: mass 39 metric tons  \n* Consignment Epsilon: mass 45 metric tons  \n* Consignment Zeta: mass 63 metric tons  \n* Consignment Eta: mass 43 metric tons  \n* Consignment Theta: mass 58 metric tons  \n* Consignment Iota: mass 50 metric tons  \n* Consignment Kappa: mass 30 metric tons  \n* Consignment Lambda: mass 46 metric tons  \n* Consignment Mu: mass 56 metric tons  \n* Consignment Nu: mass 67 metric tons  \n* Consignment Xi: mass 63 metric tons  \n* Consignment Omicron: mass 65 metric tons  \n* Consignment Pi: mass 38 metric tons  \n* Consignment Rho: mass 51 metric tons  \n* Consignment Sigma: mass 66 metric tons  \n* Consignment Tau: mass 64 metric tons  \n* Consignment Upsilon: mass 54 metric tons  \n* Consignment Phi: mass 42 metric tons  \n* Consignment Chi: mass 49 metric tons  \n* Consignment Psi: mass 36 metric tons  \n* Consignment Omega: mass 58 metric tons  \n* Consignment Digamma: mass 70 metric tons  \n* Consignment Stigma: mass 47 metric tons  \n* Consignment Koppa: mass 45 metric tons  \n\nEach aircraft has a maximum payload capacity of 100 metric tons.  \nAllocate every shipment using the smallest possible number of aircraft. Each shipment must be placed on exactly one aircraft, and the total mass loaded onto any aircraft cannot surpass its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

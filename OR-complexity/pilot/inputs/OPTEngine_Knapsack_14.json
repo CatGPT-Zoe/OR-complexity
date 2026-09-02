@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo to load onto a delivery truck. Available shipments are:\n\n* Shipment A: weight 37kg, revenue $16\n* Shipment B: weight 11kg, revenue $12\n* Shipment C: weight 44kg, revenue $209\n* Shipment D: weight 46kg, revenue $98\n* Shipment E: weight 10kg, revenue $19\n* Shipment F: weight 2kg, revenue $175\n* Shipment G: weight 33kg, revenue $11\n* Shipment H: weight 3kg, revenue $34\n* Shipment I: weight 50kg, revenue $67\n* Shipment J: weight 37kg, revenue $85\n* Shipment K: weight 50kg, revenue $88\n* Shipment L: weight 44kg, revenue $204\n* Shipment M: weight 2kg, revenue $224\n* Shipment N: weight 28kg, revenue $300\n\nThe truck has a maximum load capacity of 277 kg. Choose the combination of shipments that maximizes total revenue without exceeding this weight limit. Each shipment must be accepted in full or declined entirely.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

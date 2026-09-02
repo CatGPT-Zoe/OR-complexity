@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A telecommunications network must establish a low-latency fiber optic ring connecting six major data hubs.\n\nThe signal propagation delays between hubs are measured in milliseconds:\n* Hub Alpha to Hub Beta: 51.0 ms\n* Hub Alpha to Hub Gamma: 48.8 ms\n* Hub Alpha to Hub Delta: 157.4 ms\n* Hub Alpha to Hub Epsilon: 202.4 ms\n* Hub Alpha to Hub Zeta: 168.3 ms\n* Hub Beta to Hub Gamma: 83.8 ms\n* Hub Beta to Hub Delta: 106.6 ms\n* Hub Beta to Hub Epsilon: 151.4 ms\n* Hub Beta to Hub Zeta: 117.6 ms\n* Hub Gamma to Hub Delta: 180.3 ms\n* Hub Gamma to Hub Epsilon: 224.3 ms\n* Hub Gamma to Hub Zeta: 189.6 ms\n* Hub Delta to Hub Epsilon: 44.9 ms\n* Hub Delta to Hub Zeta: 12.0 ms\n* Hub Epsilon to Hub Zeta: 34.7 ms\n\nThe objective is to identify the minimal total propagation delay circuit that interconnects each hub precisely once before completing the cyclic path back to the initial hub.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is configuring a shipment for a fleet of autonomous delivery drones. They must select a combination of cargo packages to maximize total revenue while adhering to the drone's maximum payload capacity.\n\nThe available cargo packages are:\n* Package A: weight 41kg, revenue 59 credits\n* Package B: weight 40kg, revenue 94 credits\n* Package C: weight 23kg, revenue 140 credits\n* Package D: weight 30kg, revenue 144 credits\n* Package E: weight 29kg, revenue 104 credits\n* Package F: weight 26kg, revenue 224 credits\n* Package G: weight 24kg, revenue 59 credits\n* Package H: weight 21kg, revenue 86 credits\n* Package I: weight 17kg, revenue 101 credits\n* Package J: weight 22kg, revenue 239 credits\n* Package K: weight 50kg, revenue 51 credits\n* Package L: weight 24kg, revenue 201 credits\n* Package M: weight 18kg, revenue 190 credits\n* Package N: weight 10kg, revenue 221 credits\n* Package O: weight 14kg, revenue 112 credits\n* Package P: weight 11kg, revenue 245 credits\n* Package Q: weight 39kg, revenue 228 credits\n* Package R: weight 43kg, revenue 135 credits\n* Package S: weight 49kg, revenue 10 credits\n* Package T: weight 24kg, revenue 79 credits\n* Package U: weight 2kg, revenue 235 credits\n* Package V: weight 27kg, revenue 300 credits\n* Package W: weight 7kg, revenue 36 credits\n\nFurthermore, due to regulatory restrictions, exactly one of Package A and Package B must be included in the shipment.\n\nIf Package C is selected, the drone's effective payload capacity is diminished by 10 kg.\nThe maximum allowable total payload for the drone is 413 kg. The manager must determine the optimal set of packages to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

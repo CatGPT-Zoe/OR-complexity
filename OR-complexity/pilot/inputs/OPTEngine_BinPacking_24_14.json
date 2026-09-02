@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_24_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments into standardized cargo compartments.  \nCommodities to be transported:  \n* Commodity Alpha: mass 58 units  \n* Commodity Beta: mass 47 units  \n* Commodity Gamma: mass 56 units  \n* Commodity Delta: mass 52 units  \n* Commodity Epsilon: mass 55 units  \n* Commodity Zeta: mass 46 units  \n* Commodity Eta: mass 34 units  \n* Commodity Theta: mass 40 units  \n* Commodity Iota: mass 67 units  \n* Commodity Kappa: mass 45 units  \n* Commodity Lambda: mass 43 units  \n* Commodity Mu: mass 32 units  \n* Commodity Nu: mass 33 units  \n* Commodity Xi: mass 62 units  \n* Commodity Omicron: mass 34 units  \n* Commodity Pi: mass 58 units  \n* Commodity Rho: mass 45 units  \n* Commodity Sigma: mass 58 units  \n* Commodity Tau: mass 38 units  \n* Commodity Upsilon: mass 68 units  \n* Commodity Phi: mass 70 units  \n* Commodity Chi: mass 62 units  \n* Commodity Psi: mass 48 units  \n* Commodity Omega: mass 30 units  \n\nEach compartment can accommodate a maximum load of 100 mass units.  \nAll commodities must be assigned to exactly one compartment, and the cumulative mass in any compartment must not surpass its capacity.  \nDetermine an arrangement that minimizes the total number of compartments required.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

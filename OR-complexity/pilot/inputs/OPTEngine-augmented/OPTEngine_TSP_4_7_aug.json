@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a specialized courier to four distinct regional warehouses, each positioned at precise coordinates on a grid representing the operational map.\n\nWarehouse Alpha: Coordinates (3,23)\nWarehouse Beta: Coordinates (184,102)\nWarehouse Gamma: Coordinates (181,200)\nWarehouse Delta: Coordinates (171,160)\n\nThe travel distances between pairs of warehouses, measured in kilometers, are predetermined:\nAlpha to Gamma: 251.0 km\nAlpha to Delta: 216.8 km\nBeta to Gamma: 98.0 km\nBeta to Delta: 59.4 km\nGamma to Delta: 41.2 km\n\nDue to infrastructural limitations, no direct route exists connecting Warehouse Alpha and Warehouse Beta. Furthermore, the route plan must incorporate exactly one of two critical but mutually exclusive supply corridors: either the link between Beta and Gamma, or the link between Gamma and Delta.\n\nThe objective is to determine the most efficient closed-loop inspection circuit, wherein the courier visits each warehouse precisely once before returning to the origin, thereby minimizing the total travel distance.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of experimental engine components into standardized transport crates.  \nThe components are labeled as follows:  \n\n* Component Alpha: mass 38 units  \n* Component Beta: mass 33 units  \n* Component Gamma: mass 65 units  \n* Component Delta: mass 48 units  \n* Component Epsilon: mass 42 units  \n* Component Zeta: mass 53 units  \n* Component Eta: mass 45 units  \n* Component Theta: mass 66 units  \n* Component Iota: mass 35 units  \n* Component Kappa: mass 44 units  \n* Component Lambda: mass 57 units  \n* Component Mu: mass 50 units  \n* Component Nu: mass 70 units  \n* Component Xi: mass 70 units  \n* Component Omicron: mass 48 units  \n* Component Pi: mass 31 units  \n* Component Rho: mass 34 units  \n* Component Sigma: mass 59 units  \n* Component Tau: mass 47 units  \n* Component Upsilon: mass 70 units  \n* Component Phi: mass 54 units  \n* Component Chi: mass 43 units  \n* Component Psi: mass 40 units  \n* Component Omega: mass 58 units  \n* Component Aster: mass 30 units  \n* Component Prime: mass 40 units  \n* Component BrackL: mass 30 units  \n* Component BrackR: mass 40 units  \n* Component Circ: mass 66 units  \n* Component Tilde: mass 33 units  \n* Component Underscore: mass 35 units  \n* Component Grave: mass 53 units  \n\nEach transport crate can safely support a maximum load of 100 mass units.  \nThe coordinator must place every component into exactly one crate, ensuring that the total mass in any given crate does not surpass the allowable limit, while utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments to a fleet of uniform cargo aircraft.  \nThe shipments consist of twenty distinct consignments with the following tonnages:  \n\n* Consignment Alpha: 42 tons  \n* Consignment Beta: 59 tons  \n* Consignment Gamma: 69 tons  \n* Consignment Delta: 45 tons  \n* Consignment Epsilon: 59 tons  \n* Consignment Zeta: 63 tons  \n* Consignment Eta: 40 tons  \n* Consignment Theta: 51 tons  \n* Consignment Iota: 38 tons  \n* Consignment Kappa: 60 tons  \n* Consignment Lambda: 65 tons  \n* Consignment Mu: 33 tons  \n* Consignment Nu: 64 tons  \n* Consignment Xi: 35 tons  \n* Consignment Omicron: 63 tons  \n* Consignment Pi: 51 tons  \n* Consignment Rho: 30 tons  \n* Consignment Sigma: 35 tons  \n* Consignment Tau: 36 tons  \n* Consignment Upsilon: 57 tons  \n\nEvery aircraft has a maximum payload capacity of 100 tons.  \nThe coordinator must assign each consignment to exactly one aircraft, ensuring that the combined weight on any aircraft does not exceed its payload limit, while utilizing the smallest possible number of aircraft in the operation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

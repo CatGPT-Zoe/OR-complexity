@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must devise a procurement and storage strategy for a critical fuel additive over a 5-day operational window.  \nThe initial stock at the start of the planning window is 11 liters.  \nIn each day \\( t = 1, \\dots, 5 \\), the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters.  \nNevertheless, every procurement request requires a lead time of 1 day before it becomes available to meet consumption requirements or augment existing stock.  \nThe consumption of the additive on each day is specified as follows:  \n* Day 1: consumption 49 liters  \n* Day 2: consumption 52 liters  \n* Day 3: consumption 26 liters  \n* Day 4: consumption 40 liters  \n* Day 5: consumption 14 liters  \n\nStock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be deferred to a later day.  \nThroughout the planning interval, additive volumes may be treated as continuous quantities, and the total volume of physically held stock at any moment must not surpass the storage‑tank capacity of 48 liters.  \n\nOn the final day (day 5), the maximum allowable procurement volume is reduced to 39 liters.  \nAlso on day 5, the physically available stock must be no less than 15 liters.  \n\nThe aggregate expenditure over the planning window comprises three elements: the procurement cost, amounting to 1 per liter ordered; the storage cost, amounting to 1 per liter of stock transferred from one day to the next; and the shortage penalty, amounting to 14 per liter of unmet consumption.  \nDetermine the optimal procurement volume for each day and monitor the ensuing stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

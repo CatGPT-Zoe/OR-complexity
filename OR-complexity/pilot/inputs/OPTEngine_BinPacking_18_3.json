@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping coordinator must load boxes onto identical pallets for transport. The boxes are:\n* Box 1: weight 50kg\n* Box 2: weight 34kg\n* Box 3: weight 33kg\n* Box 4: weight 52kg\n* Box 5: weight 57kg\n* Box 6: weight 38kg\n* Box 7: weight 43kg\n* Box 8: weight 58kg\n* Box 9: weight 57kg\n* Box 10: weight 39kg\n* Box 11: weight 52kg\n* Box 12: weight 49kg\n* Box 13: weight 41kg\n* Box 14: weight 51kg\n* Box 15: weight 56kg\n* Box 16: weight 54kg\n* Box 17: weight 30kg\n* Box 18: weight 56kg\n\nEach pallet can support a maximum load of 100 kg. Load all boxes using the fewest pallets possible. Every box must be placed on exactly one pallet, and the total weight on a pallet must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

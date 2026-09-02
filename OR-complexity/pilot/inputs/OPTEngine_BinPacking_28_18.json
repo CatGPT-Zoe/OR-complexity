@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_28_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of archival boxes to identical storage vaults. The boxes contain the following historical documents, each with a specific mass:\n\n* Archive Alpha: mass 51kg\n* Archive Beta: mass 43kg\n* Archive Gamma: mass 49kg\n* Archive Delta: mass 64kg\n* Archive Epsilon: mass 37kg\n* Archive Zeta: mass 62kg\n* Archive Eta: mass 49kg\n* Archive Theta: mass 35kg\n* Archive Iota: mass 36kg\n* Archive Kappa: mass 64kg\n* Archive Lambda: mass 69kg\n* Archive Mu: mass 48kg\n* Archive Nu: mass 33kg\n* Archive Xi: mass 45kg\n* Archive Omicron: mass 37kg\n* Archive Pi: mass 40kg\n* Archive Rho: mass 58kg\n* Archive Sigma: mass 40kg\n* Archive Tau: mass 40kg\n* Archive Upsilon: mass 59kg\n* Archive Phi: mass 46kg\n* Archive Chi: mass 40kg\n* Archive Psi: mass 58kg\n* Archive Omega: mass 66kg\n* Archive Aleph: mass 31kg\n* Archive Beth: mass 65kg\n* Archive Gimel: mass 54kg\n* Archive Dalet: mass 31kg\n\nEach vault can safely support a maximum load of 100 kg. The coordinator must place every archival box into exactly one vault, ensuring the combined mass within any vault does not surpass its structural limit. The objective is to utilize the minimal possible number of vaults to secure the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

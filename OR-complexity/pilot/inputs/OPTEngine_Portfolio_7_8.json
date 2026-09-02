@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager needs to allocate warehouse space among 7 product categories to maximize total storage efficiency.  \nThe characteristics of each product category are as follows:  \n* Category P: efficiency score is 0.162, handling difficulty is 0.235, bounds [0.080, 0.309]  \n* Category Q: efficiency score is 0.057, handling difficulty is 0.239, bounds [0.011, 0.459]  \n* Category R: efficiency score is 0.169, handling difficulty is 0.183, bounds [0.087, 0.376]  \n* Category S: efficiency score is 0.120, handling difficulty is 0.090, bounds [0.013, 0.553]  \n* Category T: efficiency score is 0.126, handling difficulty is 0.295, bounds [0.036, 0.368]  \n* Category U: efficiency score is 0.166, handling difficulty is 0.296, bounds [0.079, 0.338]  \n* Category V: efficiency score is 0.062, handling difficulty is 0.167, bounds [0.059, 0.569]  \n\nEach category must receive a fraction of the total warehouse space within its individual bounds, and all fractions must sum to one.  \nTo ensure smooth operations, the manager requires that the group of fast-moving categories, represented by the set F = {P, Q, R, S, T, V}, together receive at least 0.539 of the total space.  \nAdditionally, the overall handling complexity of the warehouse, measured by a composite difficulty index, must not exceed 0.238, and the total efficiency score must be no less than 0.093.  \nDetermine the optimal space allocation that maximizes total storage efficiency while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

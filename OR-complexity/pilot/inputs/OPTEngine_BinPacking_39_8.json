@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A warehouse supervisor needs to assign packages to identical delivery trucks.  \nPackages:  \n* Package Alpha: weight 56kg  \n* Package Beta: weight 35kg  \n* Package Gamma: weight 53kg  \n* Package Delta: weight 67kg  \n* Package Epsilon: weight 35kg  \n* Package Zeta: weight 50kg  \n* Package Eta: weight 54kg  \n* Package Theta: weight 37kg  \n* Package Iota: weight 62kg  \n* Package Kappa: weight 50kg  \n* Package Lambda: weight 33kg  \n* Package Mu: weight 34kg  \n* Package Nu: weight 33kg  \n* Package Xi: weight 48kg  \n* Package Omicron: weight 49kg  \n* Package Pi: weight 32kg  \n* Package Rho: weight 40kg  \n* Package Sigma: weight 36kg  \n* Package Tau: weight 53kg  \n* Package Upsilon: weight 52kg  \n* Package Phi: weight 48kg  \n* Package Chi: weight 40kg  \n* Package Psi: weight 59kg  \n* Package Omega: weight 57kg  \n* Package A1: weight 42kg  \n* Package B1: weight 45kg  \n* Package C1: weight 35kg  \n* Package D1: weight 37kg  \n* Package E1: weight 56kg  \n* Package F1: weight 40kg  \n* Package G1: weight 61kg  \n* Package H1: weight 67kg  \n* Package I1: weight 63kg  \n* Package J1: weight 59kg  \n* Package K1: weight 64kg  \n* Package L1: weight 63kg  \n* Package M1: weight 41kg  \n* Package N1: weight 30kg  \n* Package O1: weight 36kg  \n\nEach truck can carry a maximum load of 100 kg. Assign all packages using the fewest trucks possible. Every package must be placed in exactly one truck, and the total weight in a truck must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

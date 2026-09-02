@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage schedule for a critical component over a 6‑week operational window.  \nThe starting stock at the opening of the planning interval is 90 units.  \nIn each week \\( t = 1, \\dots, 6 \\), the vendor permits the firm to submit a procurement request whose volume must be between 1 and 30 units.  \nNevertheless, every requested shipment requires a lead time of 3 weeks before it becomes available to meet requirements or replenish the stockpile.  \nThe weekly requirement for the component is specified as follows:  \n* Week 1: requirement 35 units  \n* Week 2: requirement 54 units  \n* Week 3: requirement 46 units  \n* Week 4: requirement 36 units  \n* Week 5: requirement 59 units  \n* Week 6: requirement 52 units  \n\nStock‑outs are tolerated, but any unsatisfied requirement is lost and will not be carried forward.  \nThroughout the planning window, component quantities may be treated as continuous values, and the aggregate quantity physically present in the warehouse at any moment must not surpass the storage limit of 90 units.  \n\nIn week 4, the maximum allowable procurement volume is 30 units.  \nIn week 5, the on‑hand stock must be no less than 77 units.  \n\nThe aggregate expenditure over the planning horizon comprises three elements: the procurement cost, amounting to 1 per unit requested; the storage cost, amounting to 2 per unit held over from one week to the next; and the penalty for unmet demand, amounting to 8 per unit of unsatisfied requirement.  \nDetermine the optimal procurement quantity for each week and monitor the consequent stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

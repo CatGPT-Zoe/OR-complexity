@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment for a remote research expedition. The manager must select a combination of components to maximize the total utility score while adhering to a strict total mass limit for the transport vehicle.\n\nThe components available are:\n* Component A: mass 10kg, utility 105 units\n* Component B: mass 36kg, utility 138 units\n* Component C: mass 35kg, utility 23 units\n* Component D: mass 12kg, utility 129 units\n* Component E: mass 47kg, utility 223 units\n* Component F: mass 46kg, utility 90 units\n* Component G: mass 16kg, utility 296 units\n* Component H: mass 9kg, utility 96 units\n* Component I: mass 48kg, utility 136 units\n* Component J: mass 34kg, utility 163 units\n* Component K: mass 46kg, utility 20 units\n* Component L: mass 47kg, utility 245 units\n* Component M: mass 13kg, utility 41 units\n* Component N: mass 27kg, utility 95 units\n* Component O: mass 25kg, utility 268 units\n* Component P: mass 25kg, utility 118 units\n\nFurthermore, due to compatibility requirements, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, it necessitates a bulky support frame that reduces the effective cargo capacity of the vehicle by 10 kg.\nThe vehicle can transport a maximum aggregate mass of 333 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

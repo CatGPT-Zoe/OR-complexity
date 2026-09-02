@@ -1,0 +1,57 @@
+{
+  "instance_id": "MIPLIB_NL_noswot",
+  "annotation_mode": "semantic",
+  "problem_text": "A constellation of 5 satellite edge computing nodes performs a multi-phase analysis pipeline involving 5 distinct algorithmic steps. Each node operates under a strict active duty cycle limit (refer to `machine_capacities`) determined by onboard battery specifications. Nodes positioned in high-radiation orbital zones (specifically those with indices divisible by 3) are equipped with enhanced lead shielding, increasing their physical mass by 12%, though their computational logic remains identical to standard nodes. When scheduling the processing pipeline, the handover latency between any two consecutive algorithmic steps must be strictly managed to prevent data feature decay; specifically, the idle time separating adjacent steps cannot exceed 21.0. Executing a specific algorithm on a node incurs a kernel boot-up overhead (see `fixed_cost` in `task_parameters`) followed by a computation duration strictly proportional to the data volume processed (see `unit_cost` in `task_parameters`). While the thermal regulation system requires a 500ms cool-down period after the daily operations cease completely, the optimization scope is confined to the active processing window. Individual algorithmic steps have a maximum single-batch throughput capacity (see `max_qty` in `task_parameters`), and the system processes discrete integer data units only. Furthermore, the aggregate data volume handled by each specific algorithm across the entire network is subject to regulatory bounds (see `stage_limits`), and the total system-wide processed output is capped at 43.0 due to ground station downlink bandwidth availability. The primary objective is to determine the operational schedule that yields the highest total volume of processed data units.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "stage_limits",
+      "indices": [
+        "stage",
+        "min_limit",
+        "max_limit"
+      ],
+      "unit": "",
+      "values": "| stage | min_limit | max_limit |\n|---|---|---|\n| 1 | 0.0 | 38.0 |\n| 2 | 5.0 | 9.0 |\n| 3 | 0.0 | 2.0 |\n| 4 | 0.0 | 1.0 |\n| 5 | 0.0 | 2.0 |"
+    },
+    {
+      "name": "task_parameters",
+      "indices": [
+        "machine",
+        "stage",
+        "fixed_cost",
+        "unit_cost",
+        "max_qty"
+      ],
+      "unit": "",
+      "values": "| machine | stage | fixed_cost | unit_cost | max_qty |\n|---|---|---|---|---|\n| 1 | 1 | 0.75 | 2.0833001 | 9.6000004 |\n| 2 | 1 | 0.75 | 2.0833001 | 9.6000004 |\n| 3 | 1 | 0.75 | 2.0833001 | 9.6000004 |\n| 4 | 1 | 0.75 | 2.0833001 | 9.6000004 |\n| 5 | 1 | 0.75 | 2.0833001 | 7.6799998 |\n| 1 | 2 | 0.6667 | 2.9762001 | 6.7199998 |\n| 2 | 2 | 0.6667 | 2.9762001 | 6.7199998 |\n| 3 | 2 | 0.6667 | 2.9762001 | 6.7199998 |\n| 4 | 2 | 0.6667 | 2.9762001 | 6.7199998 |\n| 5 | 2 | 0.6667 | 2.9762001 | 5.3759999 |\n| 1 | 3 | 0.75 | 3.4721999 | 5.7600002 |\n| 2 | 3 | 0.75 | 3.4721999 | 5.7600002 |\n| 3 | 3 | 0.75 | 3.4721999 | 5.7600002 |\n| 4 | 3 | 0.75 | 3.4721999 | 5.7600002 |\n| 5 | 3 | 0.75 | 3.4721999 | 4.6079998 |\n| 1 | 4 | 0.75 | 2.2400999 | 8.9280005 |\n| 2 | 4 | 0.75 | 2.2400999 | 8.9280005 |\n| 3 | 4 | 0.75 | 2.2400999 | 8.9280005 |\n| 4 | 4 | 0.75 | 2.2400999 | 8.9280005 |\n| 5 | 4 | 0.75 | 2.2400999 | 7.1423998 |\n| 1 | 5 | 0.75 | 2.0833001 | 9.6000004 |\n| 2 | 5 | 0.75 | 2.0833001 | 9.6000004 |\n| 3 | 5 | 0.75 | 2.0833001 | 9.6000004 |\n| 4 | 5 | 0.75 | 2.0833001 | 9.6000004 |\n| 5 | 5 | 0.75 | 2.0833001 | 7.6799998 |"
+    },
+    {
+      "name": "machine_capacities",
+      "indices": [
+        "machine",
+        "limit"
+      ],
+      "unit": "",
+      "values": "| machine | limit |\n|---|---|\n| 1 | 20.0 |\n| 2 | 20.0 |\n| 3 | 20.0 |\n| 4 | 20.0 |\n| 5 | 16.0 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/noswot/data/stage_limits.csv",
+      "role": "parameter_table",
+      "table": "stage_limits"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/noswot/data/task_parameters.csv",
+      "role": "parameter_table",
+      "table": "task_parameters"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/noswot/data/machine_capacities.csv",
+      "role": "parameter_table",
+      "table": "machine_capacities"
+    }
+  ],
+  "notes": ""
+}

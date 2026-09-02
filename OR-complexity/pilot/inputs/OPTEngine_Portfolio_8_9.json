@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_8_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to distribute its total shipping volume across 8 different regional hubs to maximize total expected delivery efficiency.  \nThe profile for each hub is as follows:  \n* Hub A: expected efficiency is 0.164, handling complexity is 0.202, allocation bounds [0.035, 0.781]  \n* Hub B: expected efficiency is 0.151, handling complexity is 0.099, allocation bounds [0.100, 0.708]  \n* Hub C: expected efficiency is 0.034, handling complexity is 0.185, allocation bounds [0.027, 0.872]  \n* Hub D: expected efficiency is 0.128, handling complexity is 0.134, allocation bounds [0.098, 0.386]  \n* Hub E: expected efficiency is 0.168, handling complexity is 0.210, allocation bounds [0.095, 0.665]  \n* Hub F: expected efficiency is 0.118, handling complexity is 0.112, allocation bounds [0.008, 0.769]  \n* Hub G: expected efficiency is 0.078, handling complexity is 0.022, allocation bounds [0.064, 0.321]  \n* Hub H: expected efficiency is 0.034, handling complexity is 0.262, allocation bounds [0.036, 0.340]  \n\nEach hub must be allocated a fraction of total shipping volume within its specified bounds, and the sum of all allocation fractions must equal one.  \nTo maintain operational flexibility, the set of high-capacity hubs L = {B, C, D, E, F, G, H} must together receive at least 0.460 of the total volume.  \nAdditionally, the overall system complexity, measured by a composite index, must not exceed 0.151, and the total expected delivery efficiency must be at least 0.082.  \nDetermine the optimal allocation of shipping volume across hubs that maximizes total expected efficiency while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

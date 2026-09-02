@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments into identical cargo trucks. The items to be transported are:\n* Component A: volume 61 cubic meters\n* Component B: volume 38 cubic meters\n* Component C: volume 51 cubic meters\n* Component D: volume 66 cubic meters\n* Component E: volume 63 cubic meters\n* Component F: volume 43 cubic meters\n* Component G: volume 68 cubic meters\n* Component H: volume 44 cubic meters\n* Component I: volume 68 cubic meters\n* Component J: volume 66 cubic meters\n* Component K: volume 58 cubic meters\n* Component L: volume 68 cubic meters\n* Component M: volume 48 cubic meters\n* Component N: volume 36 cubic meters\n* Component O: volume 38 cubic meters\n* Component P: volume 56 cubic meters\n* Component Q: volume 36 cubic meters\n* Component R: volume 42 cubic meters\n* Component S: volume 38 cubic meters\n* Component T: volume 41 cubic meters\n* Component U: volume 47 cubic meters\n* Component V: volume 47 cubic meters\n* Component W: volume 50 cubic meters\n* Component X: volume 40 cubic meters\n* Component Y: volume 58 cubic meters\n* Component Z: volume 51 cubic meters\n* Component [: volume 64 cubic meters\n* Component \\: volume 36 cubic meters\n* Component ]: volume 35 cubic meters\n* Component ^: volume 55 cubic meters\n\nEach truck has a maximum capacity of 100 cubic meters. All components must be loaded using the minimum number of trucks. Every component must be placed in exactly one truck, and the total volume in any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

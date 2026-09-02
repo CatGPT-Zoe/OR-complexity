@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate its fleet of delivery trucks from distribution centers to retail outlets in order to minimize total fuel expenditure.\n\nThe number of trucks available at each distribution center (set C) is fixed:\n*C1 has 154 trucks.\n*C2 has 133 trucks.\n*C3 has 153 trucks.\n*C4 has 125 trucks.\n*C5 has 191 trucks.\n\nThe required number of deliveries to be fulfilled at each retail outlet (set R) is predetermined:\n*R1 requires 58 deliveries.\n*R2 requires 129 deliveries.\n*R3 requires 93 deliveries.\n*R4 requires 123 deliveries.\n*R5 requires 84 deliveries.\n\nThe fuel cost per truck dispatched from a given center to a specific outlet is provided in the table:\n| From / To | R1 | R2 | R3 | R4 | R5 |\n|--|-|-|-|-|\n| C1 | 10 | 13 | 18 | 1 | 10 |\n| C2 | 10 | 7 | 14 | 19 | 20 |\n| C3 | 11 | 15 | 15 | 15 | 7 |\n| C4 | 17 | 16 | 6 | 3 | 10 |\n| C5 | 17 | 20 | 11 | 3 | 8 |\n\nDetermine the optimal assignment of trucks to routes so that the aggregate fuel cost is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

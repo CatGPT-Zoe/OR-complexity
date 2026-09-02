@@ -1,0 +1,27 @@
+{
+  "instance_id": "IndustryOR_Hard_026_shift_scheduling",
+  "annotation_mode": "semantic",
+  "problem_text": "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people. Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours. Determine the minimum number of salespeople needed to meet the requirements.",
+  "sets": [
+    {
+      "name": "time_periods",
+      "description": "six 4-hour windows over the 24h cycle"
+    },
+    {
+      "name": "shift_starts",
+      "description": "six 8-hour shift start times"
+    }
+  ],
+  "parameter_tables_inline": [
+    {
+      "name": "staff_requirements",
+      "indices": [
+        "time_period"
+      ],
+      "unit": "people",
+      "values": "| period | required_staff |\n|---|---|\n| 2-6 | 10 |\n| 6-10 | 15 |\n| 10-14 | 25 |\n| 14-18 | 20 |\n| 18-22 | 18 |\n| 22-2 | 12 |"
+    }
+  ],
+  "external_file_manifest": [],
+  "notes": "Single decision family (staff per shift start); cyclic 24h coverage obligations."
+}

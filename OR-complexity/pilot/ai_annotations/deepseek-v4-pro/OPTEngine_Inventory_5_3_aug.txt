@@ -1,0 +1,272 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Inventory_5_3_aug",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "days",
+      "description": "days in the planning horizon",
+      "values": [1, 2, 3, 4, 5]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "initial_stock",
+      "indices": [],
+      "description": "initial stock of additive at start of day 1",
+      "unit": "liters",
+      "values": 11,
+      "data_ref": null
+    },
+    {
+      "id": "procurement_min",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "minimum procurement volume allowed each day",
+      "unit": "liters",
+      "values": {"1": 4, "2": 4, "3": 4, "4": 4, "5": 4},
+      "data_ref": null
+    },
+    {
+      "id": "procurement_max",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "maximum procurement volume allowed each day",
+      "unit": "liters",
+      "values": {"1": 76, "2": 76, "3": 76, "4": 76, "5": 39},
+      "data_ref": null
+    },
+    {
+      "id": "consumption",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "consumption requirement of additive each day",
+      "unit": "liters",
+      "values": {"1": 49, "2": 52, "3": 26, "4": 40, "5": 14},
+      "data_ref": null
+    },
+    {
+      "id": "storage_capacity",
+      "indices": [],
+      "description": "maximum physically held stock at any moment",
+      "unit": "liters",
+      "values": 48,
+      "data_ref": null
+    },
+    {
+      "id": "final_stock_min",
+      "indices": [],
+      "description": "minimum physically available stock at end of day 5",
+      "unit": "liters",
+      "values": 15,
+      "data_ref": null
+    },
+    {
+      "id": "procurement_cost_rate",
+      "indices": [],
+      "description": "cost per liter procured",
+      "unit": "currency per liter",
+      "values": 1,
+      "data_ref": null
+    },
+    {
+      "id": "storage_cost_rate",
+      "indices": [],
+      "description": "cost per liter of stock held from one day to the next",
+      "unit": "currency per liter",
+      "values": 1,
+      "data_ref": null
+    },
+    {
+      "id": "shortage_penalty_rate",
+      "indices": [],
+      "description": "penalty cost per liter of unmet consumption",
+      "unit": "currency per liter",
+      "values": 14,
+      "data_ref": null
+    },
+    {
+      "id": "procurement_lead_time",
+      "indices": [],
+      "description": "lead time in days before a procurement becomes available",
+      "unit": "days",
+      "values": 1,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "procurement",
+      "canonical_name": "procurement",
+      "semantic_type": "quantity",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "volume of additive procured on each day",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "liters",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters"],
+      "confidence": 0.98
+    },
+    {
+      "id": "stock",
+      "canonical_name": "stock",
+      "semantic_type": "state",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "physically held stock of additive at the end of each day",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "liters",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": ["the total volume of physically held stock at any moment must not surpass the storage‑tank capacity of 48 liters"],
+      "confidence": 0.95
+    },
+    {
+      "id": "shortage",
+      "canonical_name": "shortage",
+      "semantic_type": "quantity",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "volume of unmet consumption on each day",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "liters",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": ["any unsatisfied consumption is lost and cannot be deferred to a later day"],
+      "confidence": 0.95
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "minimize_total_expenditure",
+    "normalized_semantics": "minimize the total expenditure comprising procurement cost, storage cost, and shortage penalty over the planning window",
+    "description": "Minimize total procurement, storage, and shortage costs.",
+    "entity_scope": ["procurement", "stock", "shortage"],
+    "parameter_refs": ["procurement_cost_rate", "storage_cost_rate", "shortage_penalty_rate"],
+    "source_spans": ["The aggregate expenditure over the planning window comprises three elements: the procurement cost, amounting to 1 per liter ordered; the storage cost, amounting to 1 per liter of stock transferred from one day to the next; and the shortage penalty, amounting to 14 per liter of unmet consumption. Determine the optimal procurement volume for each day and monitor the ensuing stock and shortage levels so as to minimize the total expenditure."],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "procurement_lower_bound",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "procurement volume each day must be at least the minimum allowed",
+      "support_entity_ids": ["procurement"],
+      "incidence_slots": [
+        {"entity_id": "procurement", "role": "procurement_volume", "aggregation_axes": [], "index_binding": {"day": "t"}}
+      ],
+      "quantifiers": ["for all days t"],
+      "condition": null,
+      "parameter_refs": ["procurement_min"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": ["the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters"],
+      "confidence": 0.98
+    },
+    {
+      "id": "o2",
+      "canonical_name": "procurement_upper_bound",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "procurement volume each day must not exceed the maximum allowed",
+      "support_entity_ids": ["procurement"],
+      "incidence_slots": [
+        {"entity_id": "procurement", "role": "procurement_volume", "aggregation_axes": [], "index_binding": {"day": "t"}}
+      ],
+      "quantifiers": ["for all days t"],
+      "condition": null,
+      "parameter_refs": ["procurement_max"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": ["the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters", "On the final day (day 5), the maximum allowable procurement volume is reduced to 39 liters"],
+      "confidence": 0.98
+    },
+    {
+      "id": "o3",
+      "canonical_name": "stock_balance",
+      "obligation_type": "balance",
+      "normalized_semantics": "stock at end of day t equals stock at end of previous day plus procurement arriving that day minus consumption met that day",
+      "support_entity_ids": ["stock", "procurement", "shortage"],
+      "incidence_slots": [
+        {"entity_id": "stock", "role": "current_stock", "aggregation_axes": [], "index_binding": {"day": "t"}},
+        {"entity_id": "stock", "role": "previous_stock", "aggregation_axes": [], "index_binding": {"day": "t-1"}},
+        {"entity_id": "procurement", "role": "arriving_procurement", "aggregation_axes": [], "index_binding": {"day": "t-1"}},
+        {"entity_id": "shortage", "role": "unmet_consumption", "aggregation_axes": [], "index_binding": {"day": "t"}}
+      ],
+      "quantifiers": ["for all days t >= 2"],
+      "condition": "t >= 2",
+      "parameter_refs": ["consumption", "procurement_lead_time", "initial_stock"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["every procurement request requires a lead time of 1 day before it becomes available to meet consumption requirements or augment existing stock", "any unsatisfied consumption is lost and cannot be deferred to a later day"],
+      "confidence": 0.95
+    },
+    {
+      "id": "o4",
+      "canonical_name": "initial_stock_balance",
+      "obligation_type": "balance",
+      "normalized_semantics": "stock at end of day 1 equals initial stock minus consumption met on day 1",
+      "support_entity_ids": ["stock", "shortage"],
+      "incidence_slots": [
+        {"entity_id": "stock", "role": "current_stock", "aggregation_axes": [], "index_binding": {"day": 1}},
+        {"entity_id": "shortage", "role": "unmet_consumption", "aggregation_axes": [], "index_binding": {"day": 1}}
+      ],
+      "quantifiers": ["for day 1"],
+      "condition": "t = 1",
+      "parameter_refs": ["initial_stock", "consumption"],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["The initial stock at the start of the planning window is 11 liters", "every procurement request requires a lead time of 1 day before it becomes available"],
+      "confidence": 0.95
+    },
+    {
+      "id": "o5",
+      "canonical_name": "consumption_fulfillment",
+      "obligation_type": "balance",
+      "normalized_semantics": "consumption each day equals stock used plus shortage",
+      "support_entity_ids": ["stock", "shortage"],
+      "incidence_slots": [
+        {"entity_id": "stock", "role": "stock_used", "aggregation_axes": [], "index_binding": {"day": "t"}},
+        {"entity_id": "shortage", "role": "unmet_consumption", "aggregation_axes": [], "index_binding": {"day": "t"}}
+      ],
+      "quantifiers": ["for all days t"],
+      "condition": null,
+      "parameter_refs": ["consumption"],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": ["any unsatisfied consumption is lost and cannot be deferred to a later day"],
+      "confidence": 0.95
+    },
+    {
+      "id": "o6",
+      "canonical_name": "storage_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "physically held stock at any moment must not exceed storage tank capacity",
+      "support_entity_ids": ["stock"],
+      "incidence_slots": [
+        {"entity_id": "stock", "role": "held_stock", "aggregation_axes": [], "index_binding": {"day": "t"}}
+      ],
+      "quantifiers": ["for all days t"],
+      "condition": null,
+      "parameter_refs": ["storage_capacity"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": ["the total volume of physically held stock at any moment must not surpass the storage‑tank capacity of 48 liters"],
+      "confidence": 0.98
+    },
+    {
+      "id": "o7",
+      "canonical_name": "final_stock_minimum",
+      "obligation_type": "policy",
+      "normalized_semantics": "physically available stock at end of day 5 must be at least the required minimum",
+      "support_entity_ids": ["stock"],
+      "incidence_slots": [
+        {"entity_id": "stock", "role": "held_stock", "aggregation_axes": [], "index_binding": {"day": 5}}
+      ],
+      "quantifiers": ["for day 5"],
+      "condition": "t = 5",
+      "parameter_refs": ["final_stock_min"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": ["on day 5, the physically available stock must be no less than 15 liters"],
+      "confidence": 0.98
+    }
+  ],
+  "unresolved_items": []
+}

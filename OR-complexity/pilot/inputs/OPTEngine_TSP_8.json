@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must plan a tour for a maintenance crew to service eight distinct facilities.\n\nThe travel durations between facilities are recorded in minutes:\n* Facility Alpha to Bravo: 141.5 minutes\n* Alpha to Charlie: 95.5 minutes\n* Alpha to Delta: 63.2 minutes\n* Alpha to Echo: 121.0 minutes\n* Alpha to Foxtrot: 170.4 minutes\n* Alpha to Golf: 84.6 minutes\n* Alpha to Hotel: 109.1 minutes\n* Bravo to Charlie: 100.4 minutes\n* Bravo to Delta: 82.8 minutes\n* Bravo to Echo: 21.8 minutes\n* Bravo to Foxtrot: 36.2 minutes\n* Bravo to Golf: 107.5 minutes\n* Bravo to Hotel: 67.9 minutes\n* Charlie to Delta: 50.2 minutes\n* Charlie to Echo: 92.0 minutes\n* Charlie to Foxtrot: 110.5 minutes\n* Charlie to Golf: 12.6 minutes\n* Charlie to Hotel: 122.2 minutes\n* Delta to Echo: 65.2 minutes\n* Delta to Foxtrot: 108.2 minutes\n* Delta to Golf: 46.5 minutes\n* Delta to Hotel: 77.6 minutes\n* Echo to Foxtrot: 57.0 minutes\n* Echo to Golf: 96.9 minutes\n* Echo to Hotel: 50.1 minutes\n* Foxtrot to Golf: 120.4 minutes\n* Foxtrot to Hotel: 103.9 minutes\n* Golf to Hotel: 122.3 minutes\n\nThe objective is to determine the most time-efficient circuit that allows the crew to perform a service call at each facility precisely once before concluding back at the initial facility.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

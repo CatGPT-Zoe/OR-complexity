@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A city aims to devise a wastewater purification strategy to lower total nitrogen discharge from several industrial effluent outfalls. Currently, no treatment procedures have been implemented.\n\nThe discharge profile for each outfall is as follows:\n* For Outfall A, the discharge coefficient is 2.782, and the flow rate is 209.737.\n* For Outfall B, the discharge coefficient is 2.676, and the flow rate is 202.243.\n* For Outfall C, the discharge coefficient is 1.246, and the flow rate is 88.21.\n\nTo abate the discharge, several purification technologies can be employed, each with a distinct removal efficacy:\n* Technology X achieves a 29% reduction in contaminant load.\n* Technology Y achieves a 47% reduction in contaminant load.\n* Technology Z achieves a 28% reduction in contaminant load.\n\nDeploying a technology at an outfall introduces an incremental cost per unit of flow. The cost matrix for all outfall–technology pairings is provided:\n\n| Outfall \\ Technology | Technology X | Technology Y | Technology Z |\n|---|---|---|---|\n| Outfall A | 110.767 | 10.109 | 71.59 |\n| Outfall B | 13.701 | 186.529 | 176.957 |\n| Outfall C | 168.016 | 68.428 | 21.006 |\n\nThe decision involves selecting which technologies to apply to each outfall (outfalls may implement multiple technologies concurrently), and an outfall may also retain a portion of its flow untreated if required.\nThe objective is to guarantee that the aggregate nitrogen discharge is diminished by at least a fraction P = 0.639 of the baseline load, while minimizing the aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

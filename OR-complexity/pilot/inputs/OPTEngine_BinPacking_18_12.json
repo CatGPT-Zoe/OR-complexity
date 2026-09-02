@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_18_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of delicate equipment modules to identical reinforced pallets for air freight. The modules are as follows:\n\n* Module Alpha: mass 38 units\n* Module Beta: mass 68 units\n* Module Gamma: mass 55 units\n* Module Delta: mass 42 units\n* Module Epsilon: mass 50 units\n* Module Zeta: mass 48 units\n* Module Eta: mass 54 units\n* Module Theta: mass 33 units\n* Module Iota: mass 43 units\n* Module Kappa: mass 32 units\n* Module Lambda: mass 50 units\n* Module Mu: mass 45 units\n* Module Nu: mass 51 units\n* Module Xi: mass 58 units\n* Module Omicron: mass 44 units\n* Module Pi: mass 46 units\n* Module Rho: mass 52 units\n* Module Sigma: mass 40 units\n\nEach pallet is certified for a maximum load of 100 mass units. The coordinator must allocate every module to precisely one pallet, ensuring the cumulative mass on any given pallet does not surpass its certified limit. The objective is to complete this allocation utilizing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

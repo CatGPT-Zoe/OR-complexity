@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_19_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of cargo parcels into identical shipping pods.  \nThe parcels are as follows:  \n* Cargo Alpha: mass 50 units  \n* Cargo Beta: mass 61 units  \n* Cargo Gamma: mass 55 units  \n* Cargo Delta: mass 68 units  \n* Cargo Epsilon: mass 57 units  \n* Cargo Zeta: mass 40 units  \n* Cargo Eta: mass 30 units  \n* Cargo Theta: mass 39 units  \n* Cargo Iota: mass 66 units  \n* Cargo Kappa: mass 32 units  \n* Cargo Lambda: mass 58 units  \n* Cargo Mu: mass 38 units  \n* Cargo Nu: mass 51 units  \n* Cargo Xi: mass 30 units  \n* Cargo Omicron: mass 60 units  \n* Cargo Pi: mass 46 units  \n* Cargo Rho: mass 69 units  \n* Cargo Sigma: mass 42 units  \n* Cargo Tau: mass 34 units  \n\nEach shipping pod can accommodate a maximum load of 100 mass units.  \nThe coordinator must assign every parcel to exactly one pod, ensuring that the cumulative mass within any pod does not surpass its capacity.  \nThe objective is to utilize the smallest possible number of pods to complete the allocation.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

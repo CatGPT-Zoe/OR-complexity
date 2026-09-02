@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute infrastructure funding across 7 different project types to maximize the overall efficiency score of the investment plan.\nThe characteristics of each project type are as follows:\n* Project Type A: efficiency score is 0.175, environmental impact is 0.030, allocation bounds [0.063, 0.476]\n* Project Type B: efficiency score is 0.088, environmental impact is 0.193, allocation bounds [0.087, 0.525]\n* Project Type C: efficiency score is 0.077, environmental impact is 0.277, allocation bounds [0.044, 0.387]\n* Project Type D: efficiency score is 0.149, environmental impact is 0.299, allocation bounds [0.069, 0.619]\n* Project Type E: efficiency score is 0.157, environmental impact is 0.227, allocation bounds [0.090, 0.640]\n* Project Type F: efficiency score is 0.177, environmental impact is 0.136, allocation bounds [0.005, 0.776]\n* Project Type G: efficiency score is 0.026, environmental impact is 0.039, allocation bounds [0.080, 0.402]\n\nEach project type must receive a proportion of the total budget that falls within its specified allocation bounds, and all budget proportions must sum to one. To ensure adequate coverage of essential services, the planner requires that the group of high-priority projects, represented by the subset H = {A, C, D}, collectively receive at least 0.560 of the total funding.\n\nAdditionally, the overall environmental impact of the investment plan must not exceed 0.169, and the total efficiency score of the portfolio must be no less than 0.094.\nDetermine the optimal budget allocation that maximizes the total efficiency score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must devise a procurement and storage strategy for a critical fuel additive over an upcoming 8-week voyage schedule.  \nThe starting stock of the additive at the voyage’s commencement is 73 barrels.  \nIn each week \\( t = 1, \\dots, 8 \\), the supplier permits the company to procure a shipment whose volume must be between 2 and 63 barrels.  \nNevertheless, every shipment arranged will require a 4‑week transit duration before it becomes available for consumption or to replenish the onboard reserves.  \nThe weekly consumption of the additive throughout the voyage is projected as follows:  \n\n* Week 1: 51 barrels  \n* Week 2: 39 barrels  \n* Week 3: 33 barrels  \n* Week 4: 42 barrels  \n* Week 5: 34 barrels  \n* Week 6: 43 barrels  \n* Week 7: 42 barrels  \n* Week 8: 12 barrels  \n\nDeficits are tolerated, yet any consumption that cannot be met from existing stock is simply lost and will not be deferred to later weeks.  \nThroughout the planning interval, additive quantities may be treated as continuous, and the total volume kept in the onboard storage tanks at any moment must not surpass the capacity limit of 73 barrels.  \nThe aggregate expenditure over the 8‑week horizon comprises three elements: the procurement expense, amounting to 5 per barrel ordered; the storage cost, calculated as 1 per barrel retained from one week to the next; and a penalty for shortfalls, assessed at 12 per barrel of unsatisfied weekly consumption.  \nThe objective is to establish the optimal shipment volume for each week and to monitor the consequent stock and deficit levels so as to minimize the total outlay.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

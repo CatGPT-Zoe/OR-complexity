@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of archival boxes onto identical pallets for secure transport. The boxes are labeled as follows:\n\n* Box Alpha: mass 43kg\n* Box Beta: mass 64kg\n* Box Gamma: mass 46kg\n* Box Delta: mass 52kg\n* Box Epsilon: mass 70kg\n* Box Zeta: mass 52kg\n* Box Eta: mass 46kg\n* Box Theta: mass 62kg\n* Box Iota: mass 30kg\n* Box Kappa: mass 63kg\n* Box Lambda: mass 34kg\n* Box Mu: mass 56kg\n* Box Nu: mass 37kg\n* Box Xi: mass 66kg\n* Box Omicron: mass 56kg\n* Box Pi: mass 59kg\n* Box Rho: mass 34kg\n* Box Sigma: mass 36kg\n* Box Tau: mass 59kg\n* Box Upsilon: mass 70kg\n* Box Phi: mass 39kg\n* Box Chi: mass 54kg\n* Box Psi: mass 41kg\n* Box Omega: mass 56kg\n* Box A1: mass 65kg\n* Box B1: mass 32kg\n* Box C1: mass 52kg\n* Box D1: mass 57kg\n* Box E1: mass 47kg\n* Box F1: mass 48kg\n* Box G1: mass 39kg\n* Box H1: mass 35kg\n* Box I1: mass 70kg\n* Box J1: mass 66kg\n* Box K1: mass 58kg\n\nEach pallet has a maximum safe load capacity of 100 kg. The coordinator must assign every box to exactly one pallet, ensuring the combined mass on any pallet does not surpass its load limit. The objective is to complete this allocation while utilizing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

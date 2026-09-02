@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load boxes onto identical delivery trucks. The boxes are as follows:\n* Box A: weight 44kg\n* Box B: weight 51kg\n* Box C: weight 51kg\n* Box D: weight 52kg\n* Box E: weight 53kg\n* Box F: weight 39kg\n* Box G: weight 50kg\n* Box H: weight 51kg\n* Box I: weight 35kg\n* Box J: weight 46kg\n* Box K: weight 51kg\n* Box L: weight 70kg\n* Box M: weight 47kg\n* Box N: weight 70kg\n* Box O: weight 48kg\n* Box P: weight 39kg\n* Box Q: weight 56kg\n* Box R: weight 67kg\n* Box S: weight 55kg\n* Box T: weight 44kg\n* Box U: weight 68kg\n* Box V: weight 36kg\n* Box W: weight 44kg\n* Box X: weight 47kg\n* Box Y: weight 58kg\n* Box Z: weight 70kg\n* Box [: weight 38kg\n* Box \\: weight 48kg\n* Box ]: weight 38kg\n* Box ^: weight 47kg\n* Box _: weight 33kg\n* Box `: weight 30kg\n* Box a: weight 45kg\n* Box b: weight 53kg\n* Box c: weight 51kg\n* Box d: weight 70kg\n* Box e: weight 37kg\n* Box f: weight 58kg\n* Box g: weight 70kg\n* Box h: weight 33kg\n\nEach truck has a maximum load capacity of 100 kg. Load all boxes using the fewest trucks possible. Every box must be placed on exactly one truck, and the total weight loaded onto any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

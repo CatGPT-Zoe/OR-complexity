@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: weight 46 tons\n* Shipment Beta: weight 42 tons\n* Shipment Gamma: weight 46 tons\n* Shipment Delta: weight 50 tons\n* Shipment Epsilon: weight 46 tons\n* Shipment Zeta: weight 46 tons\n* Shipment Eta: weight 63 tons\n* Shipment Theta: weight 59 tons\n* Shipment Iota: weight 39 tons\n* Shipment Kappa: weight 58 tons\n* Shipment Lambda: weight 65 tons\n* Shipment Mu: weight 39 tons\n* Shipment Nu: weight 32 tons\n* Shipment Xi: weight 70 tons\n* Shipment Omicron: weight 67 tons\n* Shipment Pi: weight 41 tons\n* Shipment Rho: weight 62 tons\n* Shipment Sigma: weight 32 tons\n* Shipment Tau: weight 50 tons\n* Shipment Upsilon: weight 34 tons\n\nEach cargo plane can carry up to 100 tons. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total weight on a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

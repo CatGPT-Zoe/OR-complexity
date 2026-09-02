@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_10_8",
+  "annotation_mode": "semantic",
+  "problem_text": "In a logistics network for distributing specialized components from manufacturing hubs to assembly plants, the objective is to minimize the total freight expense.\n\nThe available inventory at each manufacturing hub (set M) is as follows:\n*M1's inventory is 144.\n*M2's inventory is 109.\n*M3's inventory is 60.\n*M4's inventory is 62.\n*M5's inventory is 182.\n*M6's inventory is 142.\n*M7's inventory is 149.\n*M8's inventory is 170.\n*M9's inventory is 166.\n*M10's inventory is 61.\n\nThe required number of components at each assembly plant (set P) is specified below:\n*P1's requirement is 97.\n*P2's requirement is 16.\n*P3's requirement is 145.\n*P4's requirement is 95.\n*P5's requirement is 41.\n*P6's requirement is 111.\n*P7's requirement is 86.\n*P8's requirement is 85.\n*P9's requirement is 56.\n*P10's requirement is 56.\n\nThe per-unit freight cost from each hub to each plant is provided in the following matrix:\n\n| From / To | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | P9 | P10 |\n|--|-|-|-|-|-|-|-|-|-|\n| M1 | 19 | 3 | 17 | 9 | 13 | 8 | 17 | 13 | 12 | 12 |\n| M2 | 16 | 16 | 20 | 1 | 17 | 5 | 15 | 6 | 8 | 3 |\n| M3 | 17 | 9 | 7 | 5 | 6 | 6 | 12 | 20 | 4 | 8 |\n| M4 | 14 | 11 | 4 | 16 | 16 | 16 | 7 | 19 | 6 | 14 |\n| M5 | 1 | 8 | 2 | 5 | 19 | 19 | 6 | 5 | 17 | 2 |\n| M6 | 19 | 5 | 2 | 6 | 9 | 6 | 17 | 13 | 20 | 19 |\n| M7 | 1 | 10 | 3 | 7 | 15 | 20 | 16 | 16 | 6 | 8 |\n| M8 | 14 | 20 | 5 | 19 | 6 | 20 | 17 | 9 | 6 | 11 |\n| M9 | 15 | 20 | 19 | 3 | 8 | 13 | 13 | 5 | 4 | 1 |\n| M10 | 7 | 17 | 17 | 14 | 5 | 20 | 4 | 6 | 16 | 20 |\n\nDetermine the optimal shipment quantities to achieve the minimal total freight cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

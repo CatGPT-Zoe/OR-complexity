@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 7 cargo shipments through 7 different port terminals.\n\nEach shipment consists of a sequence of handling operations represented as (Terminal, Hours) pairs,\nwhere each pair specifies the terminal where the operation must occur and the number of hours required.\nThe order of pairs indicates the mandatory sequence in which the handling operations must be performed.\n\nShipment details:\n* S1 requires the sequence: (T7, 7) → (T4, 8) → (T1, 9) → (T2, 4) → (T5, 6) → (T3, 1) → (T6, 1)\n* S2 requires the sequence: (T4, 1) → (T2, 3) → (T1, 9) → (T7, 8) → (T3, 5) → (T6, 7) → (T5, 9)\n* S3 requires the sequence: (T5, 10) → (T1, 6) → (T6, 5) → (T4, 2) → (T7, 1) → (T3, 4) → (T2, 10)\n* S4 requires the sequence: (T7, 2) → (T1, 10) → (T5, 8) → (T3, 5) → (T6, 4) → (T2, 7) → (T4, 7)\n* S5 requires the sequence: (T6, 1) → (T5, 3) → (T3, 6) → (T2, 10) → (T7, 10) → (T4, 8) → (T1, 2)\n* S6 requires the sequence: (T5, 7) → (T4, 10) → (T6, 3) → (T3, 3) → (T2, 1) → (T1, 2) → (T7, 7)\n* S7 requires the sequence: (T2, 5) → (T1, 6) → (T3, 10) → (T5, 4) → (T7, 9) → (T6, 9) → (T4, 1)\n\nEach handling operation must run continuously once initiated and cannot be interrupted,\nand each terminal can only accommodate one operation at a time.\nThe objective is to determine the processing sequence of all operations across the terminals\nso that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

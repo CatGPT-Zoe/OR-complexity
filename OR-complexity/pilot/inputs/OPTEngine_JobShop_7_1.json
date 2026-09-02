@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing plant has 7 different components that must pass through 7 specialized workstations.\n\nEach component follows a specific processing route defined as (Workstation, Processing duration) pairs,\nwhere each pair indicates the workstation where the operation must occur and how long it will take.\nThe sequence of pairs shows the required order in which these processing steps must be completed.\n\nComponent processing sequences:\n* C1 follows: (W6, 7) → (W1, 1) → (W7, 10) → (W4, 1) → (W2, 7) → (W3, 2) → (W5, 5)\n* C2 follows: (W2, 1) → (W6, 4) → (W3, 1) → (W7, 1) → (W1, 7) → (W5, 9) → (W4, 1)\n* C3 follows: (W2, 1) → (W1, 9) → (W5, 10) → (W7, 7) → (W6, 2) → (W4, 9) → (W3, 3)\n* C4 follows: (W2, 4) → (W7, 7) → (W4, 1) → (W5, 10) → (W6, 5) → (W1, 1) → (W3, 10)\n* C5 follows: (W3, 10) → (W6, 9) → (W7, 2) → (W5, 5) → (W4, 2) → (W2, 2) → (W1, 5)\n* C6 follows: (W1, 4) → (W6, 7) → (W2, 9) → (W5, 9) → (W4, 2) → (W7, 9) → (W3, 2)\n* C7 follows: (W6, 9) → (W4, 6) → (W1, 3) → (W7, 7) → (W2, 5) → (W5, 7) → (W3, 2)\n\nEach processing operation must run without interruption once initiated,\nand each workstation can only handle one component operation at any given time.\nThe goal is to schedule all component operations across the workstations\nto minimize the total production time for completing all components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_15_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail distributor must design a procurement and stock management strategy for a seasonal product across a 15-week sales season.  \nThe starting stock at the season’s opening is 67 items.  \nIn each week \\( t = 1, \\dots, 15 \\), the supplier permits an order whose size must be between 2 and 25 items.  \nEvery order placed, however, requires a 2‑week lead time before it becomes available for sales or replenishes the stock.  \nWeekly customer demand for the product is as follows:  \n\n* Week 1: 19 items  \n* Week 2: 31 items  \n* Week 3: 47 items  \n* Week 4: 58 items  \n* Week 5: 14 items  \n* Week 6: 15 items  \n* Week 7: 33 items  \n* Week 8: 23 items  \n* Week 9: 26 items  \n* Week 10: 38 items  \n* Week 11: 31 items  \n* Week 12: 53 items  \n* Week 13: 41 items  \n* Week 14: 40 items  \n* Week 15: 44 items  \n\nStockouts are allowed, but any unsatisfied demand is lost and cannot be recovered later.  \nThroughout the season, product quantities may be treated as continuous, and the total physical stock held at any moment must not surpass the warehouse limit of 67 items.  \n\nIn week 9, the maximum order quantity is restricted to 15 items.  \nAlso in week 9, the on‑hand inventory must be no less than 9 items.  \n\nTotal cost over the season comprises three elements: the procurement cost, charged at 4 per item ordered; the storage cost, charged at 2 per item carried from one week to the next; and the shortage penalty, charged at 12 per item of lost sales. The goal is to decide the optimal order quantity each week and monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

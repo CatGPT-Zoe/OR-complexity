@@ -1,0 +1,44 @@
+{
+  "instance_id": "MIPLIB_NL_square31",
+  "annotation_mode": "semantic",
+  "problem_text": "An archaeological restoration project requires repaving the Great Courtyard of an ancient palace. Historical records indicate the courtyard measures exactly 31 by 31 royal cubits. The restoration must use square marble slabs, as was traditional.\n\nAncient craftsmen were known to use slabs of any whole-cubit size that could fit entirely within the courtyard walls. The slabs varied from small 1×1 cubit pieces to much larger pieces, limited only by the courtyard's dimensions - no slab could extend beyond the walls.\n\nThe restoration guidelines specify:\n- Complete floor coverage is mandatory - every point must have exactly one slab above it\n- Slabs must not overlap\n- All slab edges must be parallel to the courtyard walls\n- No cutting of slabs is permitted - only whole-cubit dimensions allowed\n\nThe project budget is calculated per slab placed, regardless of size, due to the equal labor required for positioning and leveling each piece. The restoration committee wishes to minimize the total project budget.\n\nThe contractor has provided an initial sampling of available slab types for inspection. Note that the quarry can supply any valid size upon request - the sample merely demonstrates quality options.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "slab_samples",
+      "indices": [
+        "sample_id",
+        "slab_edge_length",
+        "marble_type",
+        "polish_grade",
+        "inspection_status"
+      ],
+      "unit": "",
+      "values": "| sample_id | slab_edge_length | marble_type | polish_grade | inspection_status |\n|---|---|---|---|---|\n| S001 | 4 | C | 2 | PASS |\n| S002 | 9 | P | 3 | PASS |\n| S003 | 16 | T | 1 | PENDING |\n| S004 | 2 | C | 2 | PASS |\n| S005 | 21 | P | 2 | PASS |\n| S006 | 1 | T | 3 | PASS |\n| S007 | 12 | C | 1 | PASS |\n| S008 | 25 | P | 2 | PENDING |\n| S009 | 6 | T | 2 | PASS |\n| S010 | 18 | C | 3 | PASS |\n| S011 | 3 | P | 2 | PASS |\n| S012 | 28 | T | 1 | PASS |"
+    },
+    {
+      "name": "labor_rates",
+      "indices": [
+        "task_code",
+        "task_description",
+        "hourly_rate",
+        "avg_hours_per_slab"
+      ],
+      "unit": "",
+      "values": "| task_code | task_description | hourly_rate | avg_hours_per_slab |\n|---|---|---|---|\n| PREP | Site preparation and leveling | 45.00 | 0.5 |\n| LIFT | Slab lifting and positioning | 65.00 | 1.0 |\n| ALIGN | Precision alignment check | 55.00 | 0.25 |\n| SEAL | Joint sealing and finishing | 40.00 | 0.75 |\n| INSP | Quality inspection | 50.00 | 0.25 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/square31/data/slab_samples.csv",
+      "role": "parameter_table",
+      "table": "slab_samples"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/square31/data/labor_rates.csv",
+      "role": "parameter_table",
+      "table": "labor_rates"
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_19_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign parcels to identical delivery vans for transport. The parcels are as follows:\n* Parcel Alpha: mass 46kg\n* Parcel Beta: mass 57kg\n* Parcel Gamma: mass 52kg\n* Parcel Delta: mass 69kg\n* Parcel Epsilon: mass 50kg\n* Parcel Zeta: mass 35kg\n* Parcel Eta: mass 49kg\n* Parcel Theta: mass 31kg\n* Parcel Iota: mass 61kg\n* Parcel Kappa: mass 30kg\n* Parcel Lambda: mass 46kg\n* Parcel Mu: mass 42kg\n* Parcel Nu: mass 55kg\n* Parcel Xi: mass 54kg\n* Parcel Omicron: mass 57kg\n* Parcel Pi: mass 70kg\n* Parcel Rho: mass 70kg\n* Parcel Sigma: mass 54kg\n* Parcel Tau: mass 32kg\n\nEach van has a maximum payload capacity of 100 kg. The coordinator must load all parcels, using the minimum number of vans, ensuring each parcel is placed entirely into exactly one van and the combined mass in any van does not surpass its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

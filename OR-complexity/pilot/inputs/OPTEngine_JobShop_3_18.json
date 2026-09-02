@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A construction project has three specialized tasks that must be completed by three different crews.\n\nEach task is composed of a series of activities represented as pairs (Crew, Duration),\nwhere each pair specifies the crew required to perform the activity and the number of days it takes.\nThe sequence of pairs indicates the strict order in which the activities must be carried out.\n\nTask details:\n* Task A requires the sequence: (Crew 1, 9 days) → (Crew 3, 7 days) → (Crew 2, 10 days)\n* Task B requires the sequence: (Crew 1, 4 days) → (Crew 2, 2 days) → (Crew 3, 5 days)\n* Task C requires the sequence: (Crew 2, 1 day) → (Crew 3, 9 days) → (Crew 1, 8 days)\n\nOnce an activity begins, the assigned crew must work on it continuously without interruption,\nand each crew can only handle one activity at a time.\nThe goal is to schedule all activities across the crews\nso that the overall project duration is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical fuel additive over a six-day operational window.\nThe initial stockpile at the start of the planning window is 66 gallons.\nIn each operational day t = 1, ..., 6, the supplier permits the company to issue a procurement request, the volume of which must be between 20 and 62 gallons.\nHowever, each requested shipment will require a 2-day transit delay before it becomes available for consumption or to replenish the stockpile.\nThe consumption requirement for the additive on each day is as follows:\n* Day 1: requirement 38 gallons\n* Day 2: requirement 60 gallons\n* Day 3: requirement 17 gallons\n* Day 4: requirement 26 gallons\n* Day 5: requirement 18 gallons\n* Day 6: requirement 51 gallons\n\nStockouts are permissible, but any unsatisfied requirement is entirely forfeited and not carried forward.\nThroughout the planning window, additive quantities may be treated as continuous, and the total volume of physical stock held at any moment must not surpass the storage tank capacity of 66 gallons.\nThe aggregate expenditure over the planning horizon comprises three elements: the procurement cost, calculated at 1 per gallon ordered; the storage cost, calculated at 1 per gallon held overnight; and the stockout penalty, assessed at 10 per gallon of unmet requirement. The objective is to ascertain the optimal procurement volume for each day and to monitor the consequent stockpile and shortfall levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

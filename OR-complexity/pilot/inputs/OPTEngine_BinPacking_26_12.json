@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_26_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of freight boxes onto identical pallets for air shipment. The boxes are labeled as follows:\n* Box A: weight 38kg\n* Box B: weight 38kg\n* Box C: weight 44kg\n* Box D: weight 46kg\n* Box E: weight 61kg\n* Box F: weight 49kg\n* Box G: weight 39kg\n* Box H: weight 69kg\n* Box I: weight 47kg\n* Box J: weight 43kg\n* Box K: weight 35kg\n* Box L: weight 38kg\n* Box M: weight 56kg\n* Box N: weight 41kg\n* Box O: weight 42kg\n* Box P: weight 67kg\n* Box Q: weight 31kg\n* Box R: weight 52kg\n* Box S: weight 64kg\n* Box T: weight 60kg\n* Box U: weight 38kg\n* Box V: weight 47kg\n* Box W: weight 35kg\n* Box X: weight 69kg\n* Box Y: weight 47kg\n* Box Z: weight 68kg\n\nEach pallet has a maximum allowable load of 100 kg. The coordinator must assign every box to exactly one pallet, ensuring the cumulative weight on any pallet does not surpass its capacity. The objective is to determine an arrangement that utilizes the minimal possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of critical shipments onto identical transport drones. The shipments are as follows:\n\n* Shipment Alpha: mass 59 units\n* Shipment Beta: mass 35 units\n* Shipment Gamma: mass 51 units\n* Shipment Delta: mass 32 units\n* Shipment Epsilon: mass 64 units\n* Shipment Zeta: mass 47 units\n* Shipment Eta: mass 38 units\n* Shipment Theta: mass 45 units\n* Shipment Iota: mass 60 units\n* Shipment Kappa: mass 52 units\n* Shipment Lambda: mass 69 units\n* Shipment Mu: mass 48 units\n\nEach drone has a maximum lift capacity of 100 mass units. The objective is to assign all shipments to drones while utilizing the minimum possible number of drones. Every shipment must be assigned to exactly one drone, and the cumulative mass loaded onto any single drone must not surpass its lift limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

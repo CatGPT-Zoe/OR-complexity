@@ -1,0 +1,54 @@
+{
+  "instance_id": "MIPLIB_NL_pigeon-10",
+  "annotation_mode": "semantic",
+  "problem_text": "A cross-dock warehouse is preparing a single rectangular loading unit for a tight departure window. There are 10 candidate shipment boxes waiting at the gate. Each box carries a known business value, recorded in the data as `profit`: this is an additive benefit score (for example expected revenue, priority points, or avoided delay penalties) gained if and only if that box is successfully loaded. Boxes left behind contribute zero.\n\nIf a box is loaded, it must be placed fully inside the container and must not overlap any other loaded box. Placement is axis-aligned: a box is not tilted; its faces stay parallel to the container walls. Some boxes can be turned only in certain allowed axis-aligned ways (for example due to labeling, fragile contents, or stacking rules). The set of allowed orientation options for each box is listed explicitly in the data.\n\nThe decision is therefore a combined selection-and-placement plan: choose which boxes to load, pick one allowed orientation for each chosen box, and assign a 3D position so that all physical loading rules are satisfied in 3 perpendicular directions. The objective is to maximize the total loaded business value (the sum of `profit` over all loaded boxes).",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "container",
+      "indices": [],
+      "unit": "",
+      "values": "| container_id | length | width | height |\n|---|---|---|---|\n| 0 | 11 | 90 | 11 |"
+    },
+    {
+      "name": "items",
+      "indices": [
+        "item_id",
+        "item_name",
+        "profit"
+      ],
+      "unit": "",
+      "values": "| item_id | item_name | profit |\n|---|---|---|\n| 0 | Box000 | 1000 |\n| 1 | Box001 | 1000 |\n| 2 | Box002 | 1000 |\n| 3 | Box003 | 1000 |\n| 4 | Box004 | 1000 |\n| 5 | Box005 | 1000 |\n| 6 | Box006 | 1000 |\n| 7 | Box007 | 1000 |\n| 8 | Box008 | 1000 |\n| 9 | Box009 | 1000 |"
+    },
+    {
+      "name": "orientations",
+      "indices": [
+        "item_id",
+        "orientation_id",
+        "length",
+        "width",
+        "height"
+      ],
+      "unit": "",
+      "values": "| item_id | orientation_id | length | width | height |\n|---|---|---|---|---|\n| 0 | 0 | 10 | 10 | 10 |\n| 1 | 0 | 10 | 10 | 10 |\n| 2 | 0 | 10 | 10 | 10 |\n| 3 | 0 | 10 | 10 | 10 |\n| 4 | 0 | 10 | 10 | 10 |\n| 5 | 0 | 10 | 10 | 10 |\n| 6 | 0 | 10 | 10 | 10 |\n| 7 | 0 | 10 | 10 | 10 |\n| 8 | 0 | 10 | 10 | 10 |\n| 9 | 0 | 10 | 10 | 10 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/pigeon-10/data/container.csv",
+      "role": "parameter_table",
+      "table": "container"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/pigeon-10/data/items.csv",
+      "role": "parameter_table",
+      "table": "items"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/pigeon-10/data/orientations.csv",
+      "role": "parameter_table",
+      "table": "orientations"
+    }
+  ],
+  "notes": ""
+}

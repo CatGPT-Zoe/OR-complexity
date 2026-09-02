@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A librarian needs to shelve books into identical book carts. Books:\n* Title 1: thickness 55mm\n* Title 2: thickness 67mm\n* Title 3: thickness 50mm\n* Title 4: thickness 69mm\n* Title 5: thickness 59mm\n* Title 6: thickness 62mm\n* Title 7: thickness 52mm\n* Title 8: thickness 44mm\n* Title 9: thickness 62mm\n* Title 10: thickness 32mm\n* Title 11: thickness 54mm\n* Title 12: thickness 53mm\n* Title 13: thickness 51mm\n* Title 14: thickness 62mm\n* Title 15: thickness 30mm\n* Title 16: thickness 45mm\n* Title 17: thickness 66mm\n* Title 18: thickness 34mm\n* Title 19: thickness 60mm\n* Title 20: thickness 37mm\n* Title 21: thickness 53mm\n* Title 22: thickness 57mm\n* Title 23: thickness 69mm\n* Title 24: thickness 45mm\n* Title 25: thickness 64mm\n\nEach book cart can accommodate books up to a total thickness of 100mm. Shelve all books using the fewest book carts. Each book must be placed on exactly one cart, and the total thickness of books on any cart cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

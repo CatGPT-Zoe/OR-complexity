@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must devise a cargo procurement and storage schedule for a critical commodity across an 8-week voyage timeline.  \nThe initial stock available at the voyage’s commencement is 56 tons.  \nIn each week t = 1, …, 8, the supplier permits the company to arrange a shipment whose tonnage must fall between 3 and 67 tons.  \nNevertheless, every shipment arranged will require a 2-week transit delay before it becomes available for meeting consumption or replenishing stock.  \nThe required consumption of the commodity each week is as follows:  \n* Week 1: 12 tons  \n* Week 2: 10 tons  \n* Week 3: 26 tons  \n* Week 4: 35 tons  \n* Week 5: 43 tons  \n* Week 6: 47 tons  \n* Week 7: 55 tons  \n* Week 8: 35 tons  \n\nStockouts are tolerated, but any unsatisfied consumption will be permanently lost.  \nThroughout the voyage, commodity amounts may be fractional, and the total quantity of physical stock on hand at any moment must not surpass the vessel’s storage limit of 56 tons.  \n\nIn week 1, the maximum shipment tonnage allowed is 12 tons.  \nBy week 5, the physical stock on hand must be no less than 19 tons.  \n\nThe aggregate expense over the voyage comprises three elements: the procurement expense, amounting to 3 per ton shipped; the storage expense, amounting to 2 per ton of stock retained from one week to the next; and the shortage penalty, amounting to 9 per ton of unmet consumption. Determine the optimal shipment tonnage for each week and monitor the resulting stock and shortage levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

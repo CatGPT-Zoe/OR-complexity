@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional power grid operator must schedule electricity purchases from a dedicated generator over a five-day planning window. The initial stored energy in the grid's reserve batteries at the start of the period is 26 megawatt-hours. For each day t = 1, ..., 5, the operator may request a generation dispatch from the plant, where the dispatch amount must be between 19 and 55 megawatt-hours. However, due to operational and transmission constraints, any requested dispatch will require a lead time of 4 days before it becomes available to meet consumption or replenish reserves.\n\nThe projected energy consumption for each day is as follows:\n* Day 1: 55 MWh\n* Day 2: 17 MWh\n* Day 3: 45 MWh\n* Day 4: 31 MWh\n* Day 5: 44 MWh\n\nEnergy deficits are permissible, but any unmet consumption is simply lost and cannot be deferred. Throughout the schedule, energy quantities are treated as continuous values, and the total amount of energy stored in the reserve batteries at any moment must not exceed the storage capacity of 49 MWh. The total operational cost comprises three elements: the generation cost, which is 3 per MWh dispatched; the storage maintenance cost, which is 2 per MWh of energy held in the batteries from one day to the next; and a penalty for unmet consumption, assessed at 7 per MWh of deficit. The objective is to determine the optimal dispatch quantity for each day and to monitor the resulting reserve levels and deficits in order to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

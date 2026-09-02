@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments into identical cargo pods. The items to be shipped are:\n\n* Component A: mass 56kg\n* Component B: mass 47kg\n* Component C: mass 61kg\n* Component D: mass 57kg\n* Component E: mass 61kg\n* Component F: mass 54kg\n* Component G: mass 39kg\n* Component H: mass 57kg\n* Component I: mass 43kg\n* Component J: mass 57kg\n* Component K: mass 70kg\n* Component L: mass 42kg\n* Component M: mass 47kg\n* Component N: mass 34kg\n* Component O: mass 38kg\n* Component P: mass 59kg\n* Component Q: mass 50kg\n* Component R: mass 53kg\n* Component S: mass 48kg\n* Component T: mass 58kg\n* Component U: mass 51kg\n* Component V: mass 45kg\n* Component W: mass 40kg\n* Component X: mass 59kg\n* Component Y: mass 38kg\n* Component Z: mass 51kg\n* Component [: mass 44kg\n* Component \\: mass 61kg\n* Component ]: mass 39kg\n* Component ^: mass 36kg\n\nEach cargo pod has a maximum capacity of 100 kg. Load all components using the minimum number of pods. Every component must be placed in exactly one pod, and the total mass in any pod cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

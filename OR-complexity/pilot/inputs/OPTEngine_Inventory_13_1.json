@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage strategy for a critical blood type over a 13-week planning window.  \nThe initial stock at the start of the planning window is 54 units.  \nIn each week \\( t = 1, \\dots, 13 \\), the central supplier permits the blood bank to place a procurement request, the volume of which must be between 19 and 42 units.  \nHowever, each request placed will undergo a 4‑week testing and processing delay before it becomes available for transfusion or to replenish reserves.  \nThe projected transfusion need for this blood type in each week is as follows:  \n* Week 1: need 18 units  \n* Week 2: need 40 units  \n* Week 3: need 59 units  \n* Week 4: need 45 units  \n* Week 5: need 13 units  \n* Week 6: need 44 units  \n* Week 7: need 15 units  \n* Week 8: need 43 units  \n* Week 9: need 31 units  \n* Week 10: need 10 units  \n* Week 11: need 59 units  \n* Week 12: need 15 units  \n* Week 13: need 16 units  \n\nShortfalls are tolerated, but any unfulfilled need in a given week is permanently lost and cannot be carried forward.  \nThroughout the planning horizon, blood volumes may be treated as continuous quantities, and the total on‑hand stock at any moment must not exceed the refrigeration capacity of 54 units.  \nThe aggregate cost over the 13‑week horizon comprises three elements: the procurement cost, which is 4 per unit requested; the storage cost, which is 2 per unit kept in inventory from one week to the next; and the shortage penalty, which is 12 per unit of unmet transfusion need.  \nDetermine the optimal procurement volume for each week and monitor the resulting stock and shortage levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

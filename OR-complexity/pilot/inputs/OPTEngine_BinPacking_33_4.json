@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Component Alpha: weight 69 tons\n* Component Beta: weight 40 tons\n* Component Gamma: weight 52 tons\n* Component Delta: weight 46 tons\n* Component Epsilon: weight 59 tons\n* Component Zeta: weight 46 tons\n* Component Eta: weight 58 tons\n* Component Theta: weight 41 tons\n* Component Iota: weight 55 tons\n* Component Kappa: weight 56 tons\n* Component Lambda: weight 53 tons\n* Component Mu: weight 36 tons\n* Component Nu: weight 50 tons\n* Component Xi: weight 39 tons\n* Component Omicron: weight 46 tons\n* Component Pi: weight 41 tons\n* Component Rho: weight 51 tons\n* Component Sigma: weight 58 tons\n* Component Tau: weight 35 tons\n* Component Upsilon: weight 53 tons\n* Component Phi: weight 53 tons\n* Component Chi: weight 47 tons\n* Component Psi: weight 52 tons\n* Component Omega: weight 39 tons\n* Component Ares: weight 56 tons\n* Component Zeus: weight 43 tons\n* Component Hera: weight 42 tons\n* Component Poseidon: weight 40 tons\n* Component Apollo: weight 67 tons\n* Component Artemis: weight 59 tons\n* Component Athena: weight 68 tons\n* Component Hermes: weight 57 tons\n* Component Dionysus: weight 67 tons\n\nEach cargo plane can carry up to 100 tons. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total weight on a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

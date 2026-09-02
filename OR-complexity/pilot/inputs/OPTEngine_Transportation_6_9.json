@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm seeks to allocate a fleet of specialized delivery vehicles from six regional depots (labeled D1 through D6) to six major urban fulfillment centers (labeled C1 through C6) in order to minimize the total operational expenditure.\n\nThe number of vehicles ready for dispatch at each depot is fixed:  \nDepot D1 has 92 vehicles available.  \nDepot D2 has 115 vehicles available.  \nDepot D3 has 173 vehicles available.  \nDepot D4 has 125 vehicles available.  \nDepot D5 has 136 vehicles available.  \nDepot D6 has 79 vehicles available.\n\nThe fulfillment centers require precise numbers of vehicles to meet their daily distribution schedules:  \nCenter C1 must receive exactly 15 vehicles.  \nCenter C2 must receive exactly 148 vehicles.  \nCenter C3 must receive exactly 45 vehicles.  \nCenter C4 must receive exactly 133 vehicles.  \nCenter C5 must receive exactly 132 vehicles.  \nCenter C6 must receive exactly 77 vehicles.\n\nThe cost per vehicle dispatched from a given depot to a specific center, accounting for distance, tolls, and regional fees, is detailed in the table:\n\n| Depot / Center | C1 | C2 | C3 | C4 | C5 | C6 |\n|----------------|----|----|----|----|----|----|\n| D1             | 18 | 12 | 3  | 13 | 1  | 9  |\n| D2             | 18 | 4  | 15 | 12 | 9  | 19 |\n| D3             | 13 | 12 | 4  | 8  | 16 | 1  |\n| D4             | 20 | 18 | 11 | 20 | 8  | 3  |\n| D5             | 15 | 10 | 14 | 4  | 5  | 2  |\n| D6             | 2  | 10 | 16 | 4  | 4  | 8  |\n\nDetermine the optimal vehicle allocation plan that satisfies all dispatch availabilities and center requirements while incurring the lowest possible total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

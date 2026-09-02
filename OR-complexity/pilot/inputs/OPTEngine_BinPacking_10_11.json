@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_11",
+  "annotation_mode": "semantic",
+  "problem_text": "An architect is tasked with distributing a collection of precious stone blocks across a series of reinforced display plinths. The stones are as follows:\n* Stone Alpha: mass 68 units\n* Stone Beta: mass 39 units\n* Stone Gamma: mass 49 units\n* Stone Delta: mass 36 units\n* Stone Epsilon: mass 34 units\n* Stone Zeta: mass 51 units\n* Stone Eta: mass 60 units\n* Stone Theta: mass 65 units\n* Stone Iota: mass 36 units\n* Stone Kappa: mass 52 units\n\nEach plinth is engineered to support a maximum load of 100 mass units. The architect must allocate every stone block to exactly one plinth, ensuring the cumulative weight on any given plinth does not surpass its structural limit. The objective is to complete this arrangement while utilizing the smallest possible number of plinths.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

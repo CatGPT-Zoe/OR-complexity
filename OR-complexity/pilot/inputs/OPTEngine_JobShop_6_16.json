@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 6 cargo shipments through 6 different ports.\n\nEach shipment must follow a predetermined route through the ports, represented as pairs (Port, Handling time), where each pair specifies the port where the cargo must be processed and the time required for handling. The sequence of pairs indicates the mandatory order of port visits.\n\nShipment details:\n* S1 follows the route: (Port3, 3) → (Port5, 7) → (Port2, 10) → (Port6, 6) → (Port4, 2) → (Port1, 7)\n* S2 follows the route: (Port4, 4) → (Port2, 8) → (Port6, 7) → (Port5, 10) → (Port1, 2) → (Port3, 5)\n* S3 follows the route: (Port3, 4) → (Port5, 5) → (Port6, 1) → (Port4, 10) → (Port1, 6) → (Port2, 7)\n* S4 follows the route: (Port6, 7) → (Port1, 7) → (Port5, 7) → (Port4, 2) → (Port2, 8) → (Port3, 10)\n* S5 follows the route: (Port4, 3) → (Port2, 10) → (Port5, 5) → (Port6, 9) → (Port3, 2) → (Port1, 6)\n* S6 follows the route: (Port3, 5) → (Port2, 3) → (Port6, 10) → (Port5, 6) → (Port1, 5) → (Port4, 7)\n\nOnce cargo handling begins at a port, it must continue without interruption until completion, and each port can only handle one shipment at a time. The goal is to determine the processing sequence for all shipments at each port to minimize the total completion time for all shipments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

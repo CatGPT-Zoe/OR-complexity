@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_VideoGameSalesWithRatings1",
+  "annotation_mode": "semantic",
+  "problem_text": "A digital game store needs to decide which games to list on different platforms, considering that these games belong to various genres such as racing, sports, and others. Each platform has a limited memory capacity, with specific details provided in \"capacity.csv.\" The predefined value and memory requirement of each game are available in \"products.csv.\" The objective is to determine which genres and how many units of each game to list on each platform to maximize the total value of the games across all platforms, while ensuring that the total memory usage on each platform does not exceed its capacity. The decision variables  x_ij represent the number of units of game j to be listed on platform i.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "PlatformID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| PlatformID | Capacity |\n|---|---|\n| 1 | 995 |\n| 2 | 1143 |\n| 3 | 949 |\n| 4 | 969 |\n| 5 | 1649 |\n| 6 | 870 |\n| 7 | 1064 |\n| 8 | 536 |\n| 9 | 766 |\n| 10 | 532 |\n| 11 | 1703 |\n| 12 | 1633 |\n| 13 | 1203 |\n| 14 | 1979 |\n| 15 | 1797 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Racing | 59 | 776 |\n| Sports | 83 | 573 |\n| Action | 94 | 127 |\n| Adventure | 41 | 138 |\n| RPG | 96 | 385 |\n| Shooter | 12 | 263 |\n| Strategy | 83 | 473 |\n| Simulation | 36 | 387 |\n| Puzzle | 56 | 390 |\n| Fighting | 27 | 556 |\n| Platformer | 47 | 601 |\n| Survival | 24 | 441 |\n| Horror | 14 | 603 |\n| Sandbox | 22 | 411 |\n| MMO | 17 | 652 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA16/VideoGameSalesWithRatings1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA16/VideoGameSalesWithRatings1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

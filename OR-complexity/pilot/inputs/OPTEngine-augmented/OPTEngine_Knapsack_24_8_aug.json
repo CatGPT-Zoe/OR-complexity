@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of crates for a cargo plane with a strict total mass limitation. The objective is to maximize the total profit from the delivered crates without exceeding the aircraft's payload capacity.\n\nThe crates available for selection are:\n* Crate 1: mass 39kg, profit 225 credits\n* Crate 2: mass 22kg, profit 282 credits\n* Crate 3: mass 15kg, profit 42 credits\n* Crate 4: mass 20kg, profit 283 credits\n* Crate 5: mass 33kg, profit 131 credits\n* Crate 6: mass 22kg, profit 165 credits\n* Crate 7: mass 16kg, profit 271 credits\n* Crate 8: mass 28kg, profit 149 credits\n* Crate 9: mass 19kg, profit 204 credits\n* Crate 10: mass 21kg, profit 173 credits\n* Crate 11: mass 14kg, profit 58 credits\n* Crate 12: mass 20kg, profit 163 credits\n* Crate 13: mass 13kg, profit 62 credits\n* Crate 14: mass 16kg, profit 219 credits\n* Crate 15: mass 35kg, profit 93 credits\n* Crate 16: mass 21kg, profit 118 credits\n* Crate 17: mass 27kg, profit 247 credits\n* Crate 18: mass 16kg, profit 150 credits\n* Crate 19: mass 34kg, profit 196 credits\n* Crate 20: mass 26kg, profit 43 credits\n* Crate 21: mass 38kg, profit 253 credits\n* Crate 22: mass 29kg, profit 59 credits\n* Crate 23: mass 11kg, profit 71 credits\n* Crate 24: mass 34kg, profit 146 credits\n\nA contractual obligation stipulates that exactly one of Crate 1 and Crate 2 must be included in the shipment.\n\nFurthermore, if Crate 3 is selected, it requires special handling equipment that occupies space, effectively diminishing the usable payload capacity of the aircraft by 10 kg.\nThe maximum allowable total mass for the shipment is 398 kg. The manager must determine the optimal combination of crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a cargo plane. The available containers are:\n* Container 1: weight 11 kg, revenue $53\n* Container 2: weight 14 kg, revenue $276\n* Container 3: weight 50 kg, revenue $193\n* Container 4: weight 44 kg, revenue $243\n* Container 5: weight 43 kg, revenue $56\n* Container 6: weight 22 kg, revenue $274\n* Container 7: weight 28 kg, revenue $164\n* Container 8: weight 30 kg, revenue $38\n* Container 9: weight 9 kg, revenue $188\n* Container 10: weight 12 kg, revenue $265\n* Container 11: weight 15 kg, revenue $128\n* Container 12: weight 5 kg, revenue $74\n* Container 13: weight 49 kg, revenue $235\n* Container 14: weight 28 kg, revenue $60\n* Container 15: weight 24 kg, revenue $125\n* Container 16: weight 8 kg, revenue $175\n* Container 17: weight 9 kg, revenue $112\n* Container 18: weight 16 kg, revenue $290\n* Container 19: weight 21 kg, revenue $264\n* Container 20: weight 22 kg, revenue $256\n* Container 21: weight 33 kg, revenue $148\n\nThe plane has a maximum cargo capacity of 345 kg. Determine which containers to load to maximize total revenue without exceeding this weight limit. Each container must be loaded in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

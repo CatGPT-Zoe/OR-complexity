@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_22_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of archival boxes into identical shipping crates. The archival boxes are categorized as follows:\n\n* Category Alpha: bulk 66kg\n* Category Beta: bulk 50kg\n* Category Gamma: bulk 42kg\n* Category Delta: bulk 56kg\n* Category Epsilon: bulk 62kg\n* Category Zeta: bulk 62kg\n* Category Eta: bulk 37kg\n* Category Theta: bulk 65kg\n* Category Iota: bulk 36kg\n* Category Kappa: bulk 60kg\n* Category Lambda: bulk 37kg\n* Category Mu: bulk 62kg\n* Category Nu: bulk 58kg\n* Category Xi: bulk 60kg\n* Category Omicron: bulk 41kg\n* Category Pi: bulk 59kg\n* Category Rho: bulk 65kg\n* Category Sigma: bulk 51kg\n* Category Tau: bulk 38kg\n* Category Upsilon: bulk 56kg\n* Category Phi: bulk 46kg\n* Category Chi: bulk 54kg\n\nEach shipping crate possesses a maximum safe load capacity of 100 kg. The coordinator must ensure every archival box is placed into precisely one crate, with the aggregate weight within any single crate never surpassing its designated limit. The objective is to complete this allocation utilizing the minimal possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

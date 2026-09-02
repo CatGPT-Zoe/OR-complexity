@@ -1,0 +1,42 @@
+{
+  "instance_id": "LEAN_Mixture14",
+  "annotation_mode": "semantic",
+  "problem_text": "A precision manufacturing facility produces a broad portfolio of aerospace-grade widgets: Widget1 through Widget141. The product_resources.csv file details the essential production parameters for each widget, specifying the labor hours required per unit, the amounts of Material A and Material B consumed per unit, and the base profit generated per unit sold. During the manufacturing process, Widget3 generates CatalystX as a valuable byproduct at a rate of 5 kg per unit produced. This CatalystX has significant market value and can be sold to pharmaceutical partners at $300 per kilogram, though monthly sales are capped at 1500 kg due to market demand limitations. Any unsold CatalystX requires specialized hazardous-waste disposal costing $200 per kilogram to comply with environmental regulations. Critical production constraints are defined in the resource_limits.csv file: monthly labor hours cannot exceed 5,000 hours, Material A consumption is limited to 24,000 kg, and Material B usage is capped at 15,000 kg. The optimization challenge involves determining the ideal production quantities for each widget—together with the amount of CatalystX sold—to maximize total profits.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "product_resources",
+      "indices": [
+        "Product",
+        "LaborHours",
+        "MaterialA",
+        "MaterialB",
+        "Profit"
+      ],
+      "unit": "",
+      "values": "| Product | LaborHours | MaterialA | MaterialB | Profit |\n|---|---|---|---|---|\n| Widget1 | 1.6 | 24 | 14 | 525 |\n| Widget2 | 2 | 20 | 10 | 678 |\n| Widget3 | 2.5 | 12 | 18 | 812 |\n| Widget4 | 1.9  | 21 | 15 | 769 |\n| Widget5 | 0.0  | 15 | 26 | 952 |\n| Widget6 | 0.1  | 24 | 17 | 987 |\n| Widget7 | 1.2  | 15 | 30 | 644 |\n| Widget8 | 1.3  | 21 | 24 | 795 |\n| Widget9 | 0.4  | 20 | 30 | 829 |\n| Widget10 | 0.9  | 18 | 27 | 574 |\n| Widget11 | 0.2  | 24 | 21 | 723 |\n| Widget12 | 1.6  | 20 | 20 | 775 |\n| Widget13 | 0.1  | 20 | 22 | 992 |\n| Widget14 | 0.7  | 12 | 19 | 568 |\n| Widget15 | 1.1  | 11 | 28 | 895 |\n| Widget16 | 0.7  | 15 | 25 | 838 |\n| Widget17 | 1.0  | 14 | 27 | 883 |\n| Widget18 | 1.8  | 18 | 15 | 567 |\n| Widget19 | 0.5  | 23 | 25 | 829 |\n| Widget20 | 1.2  | 17 | 29 | 821 |\n| Widget21 | 0.2  | 20 | 17 | 893 |\n| Widget22 | 1.5  | 10 | 22 | 977 |\n| Widget23 | 1.1  | 12 | 21 | 536 |\n| Widget24 | 0.6  | 12 | 24 | 797 |\n| Widget25 | 1.8  | 10 | 25 | 793 |\n| Widget26 | 2.0  | 15 | 23 | 754 |\n| Widget27 | 1.4  | 17 | 21 | 819 |\n| Widget28 | 1.3  | 22 | 30 | 947 |\n| Widget29 | 1.2  | 11 | 17 | 857 |\n| Widget30 | 0.3  | 13 | 29 | 886 |\n| Widget31 | 1.6  | 17 | 15 | 609 |\n| Widget32 | 0.9  | 24 | 19 | 706 |\n| Widget33 | 0.1  | 10 | 26 | 545 |\n| Widget34 | 0.0  | 12 | 22 | 762 |\n| Widget35 | 1.8  | 12 | 21 | 719 |\n| Widget36 | 0.3  | 24 | 26 | 793 |\n| Widget37 | 0.6  | 20 | 27 | 865 |\n| Widget38 | 0.7  | 16 | 23 | 932 |\n| Widget39 | 0.6  | 17 | 18 | 962 |\n| Widget40 | 1.3  | 10 | 22 | 824 |\n| Widget41 | 0.8  | 15 | 19 | 992 |\n| Widget42 | 1.7  | 21 | 29 | 536 |\n| Widget43 | 1.5  | 17 | 25 | 896 |\n| Widget44 | 1.3  | 25 | 23 | 969 |\n| Widget45 | 1.8  | 21 | 26 | 558 |\n| Widget46 | 0.1  | 25 | 20 | 893 |\n| Widget47 | 1.0  | 11 | 30 | 777 |\n| Widget48 | 0.6  | 23 | 29 | 718 |\n| Widget49 | 0.2  | 25 | 16 | 811 |\n| Widget50 | 1.2  | 25 | 29 | 545 |\n| Widget51 | 0.7  | 17 | 25 | 961 |\n| Widget52 | 1.7  | 12 | 25 | 657 |\n| Widget53 | 0.8  | 12 | 23 | 658 |\n| Widget54 | 1.6  | 15 | 19 | 860 |\n| Widget55 | 0.5  | 22 | 20 | 625 |\n| Widget56 | 1.1  | 18 | 17 | 510 |\n| Widget57 | 0.0  | 17 | 24 | 1000 |\n| Widget58 | 0.2  | 22 | 17 | 544 |\n| Widget59 | 1.7  | 23 | 17 | 547 |\n| Widget60 | 0.5  | 18 | 27 | 961 |\n| Widget61 | 1.6  | 16 | 23 | 689 |\n| Widget62 | 1.1  | 12 | 16 | 545 |\n| Widget63 | 0.5  | 13 | 16 | 897 |\n| Widget64 | 0.1  | 13 | 29 | 881 |\n| Widget65 | 0.6  | 25 | 24 | 972 |\n| Widget66 | 1.9  | 18 | 17 | 860 |\n| Widget67 | 0.7  | 23 | 15 | 881 |\n| Widget68 | 1.3  | 25 | 15 | 892 |\n| Widget69 | 1.5  | 22 | 27 | 797 |\n| Widget70 | 0.4  | 14 | 21 | 767 |\n| Widget71 | 1.1  | 14 | 22 | 794 |\n| Widget72 | 0.3  | 15 | 30 | 899 |\n| Widget73 | 0.6  | 10 | 26 | 504 |\n| Widget74 | 1.5  | 10 | 26 | 731 |\n| Widget75 | 0.2  | 23 | 19 | 929 |\n| Widget76 | 0.3  | 22 | 19 | 872 |\n| Widget77 | 1.0  | 14 | 25 | 631 |\n| Widget78 | 1.3  | 14 | 21 | 681 |\n| Widget79 | 2.0  | 22 | 28 | 587 |\n| Widget80 | 1.8  | 22 | 21 | 829 |\n| Widget81 | 1.2  | 12 | 29 | 734 |\n| Widget82 | 1.1  | 12 | 19 | 648 |\n| Widget83 | 0.3  | 22 | 26 | 738 |\n| Widget84 | 1.4  | 23 | 19 | 648 |\n| Widget85 | 1.1  | 11 | 30 | 557 |\n| Widget86 | 1.6  | 23 | 28 | 960 |\n| Widget87 | 1.6  | 14 | 15 | 907 |\n| Widget88 | 1.5  | 17 | 24 | 531 |\n| Widget89 | 0.0  | 23 | 21 | 887 |\n| Widget90 | 0.6  | 13 | 21 | 675 |\n| Widget91 | 0.2  | 25 | 20 | 766 |\n| Widget92 | 0.5  | 15 | 18 | 861 |\n| Widget93 | 1.4  | 24 | 20 | 841 |\n| Widget94 | 1.6  | 17 | 28 | 618 |\n| Widget95 | 1.8  | 23 | 17 | 574 |\n| Widget96 | 0.5  | 13 | 18 | 748 |\n| Widget97 | 1.6  | 20 | 21 | 898 |\n| Widget98 | 1.4  | 16 | 18 | 520 |\n| Widget99 | 0.3  | 11 | 19 | 675 |\n| Widget100 | 1.3  | 22 | 26 | 868 |\n| Widget101 | 1.5  | 18 | 19 | 698 |\n| Widget102 | 0.7  | 12 | 17 | 988 |\n| Widget103 | 0.8  | 12 | 29 | 550 |\n| Widget104 | 1.8  | 10 | 27 | 508 |\n| Widget105 | 1.7  | 24 | 22 | 682 |\n| Widget106 | 0.8  | 21 | 20 | 995 |\n| Widget107 | 0.3  | 25 | 30 | 656 |\n| Widget108 | 1.3  | 25 | 22 | 569 |\n| Widget109 | 0.9  | 21 | 18 | 779 |\n| Widget110 | 1.6  | 23 | 26 | 965 |\n| Widget111 | 0.4  | 23 | 27 | 675 |\n| Widget112 | 1.7  | 21 | 30 | 638 |\n| Widget113 | 1.5  | 20 | 26 | 888 |\n| Widget114 | 2.0  | 15 | 26 | 875 |\n| Widget115 | 0.9  | 24 | 24 | 552 |\n| Widget116 | 0.9  | 12 | 23 | 705 |\n| Widget117 | 0.1  | 15 | 28 | 863 |\n| Widget118 | 0.1  | 14 | 18 | 706 |\n| Widget119 | 0.3  | 13 | 25 | 663 |\n| Widget120 | 0.1  | 13 | 20 | 859 |\n| Widget121 | 1.3  | 24 | 17 | 809 |\n| Widget122 | 1.5  | 12 | 17 | 830 |\n| Widget123 | 1.7  | 19 | 29 | 991 |\n| Widget124 | 0.7  | 10 | 16 | 791 |\n| Widget125 | 0.6  | 13 | 22 | 934 |\n| Widget126 | 0.8  | 22 | 15 | 732 |\n| Widget127 | 0.4  | 22 | 17 | 989 |\n| Widget128 | 1.4  | 21 | 21 | 573 |\n| Widget129 | 0.1  | 16 | 23 | 720 |\n| Widget130 | 0.5  | 19 | 27 | 834 |\n| Widget131 | 0.1  | 23 | 18 | 577 |\n| Widget132 | 0.9  | 17 | 20 | 951 |\n| Widget133 | 1.1  | 19 | 30 | 882 |\n| Widget134 | 1.7  | 17 | 17 | 859 |\n| Widget135 | 1.3  | 22 | 17 | 568 |\n| Widget136 | 0.8  | 17 | 26 | 861 |\n| Widget137 | 1.7  | 13 | 17 | 875 |\n| Widget138 | 1.7  | 12 | 18 | 834 |\n| Widget139 | 1.6  | 12 | 23 | 836 |\n| Widget140 | 1.6  | 17 | 24 | 938 |\n| Widget141 | 1.2  | 11 | 16 | 593 |"
+    },
+    {
+      "name": "resource_limits",
+      "indices": [
+        "Resource",
+        "MonthlyLimit"
+      ],
+      "unit": "",
+      "values": "| Resource | MonthlyLimit |\n|---|---|\n| LaborHours | 5000 |\n| MaterialA | 24000 |\n| MaterialB | 15000 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/Mixture_testing/Mixture14/product_resources.csv",
+      "role": "parameter_table",
+      "table": "product_resources"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/Mixture_testing/Mixture14/resource_limits.csv",
+      "role": "parameter_table",
+      "table": "resource_limits"
+    }
+  ],
+  "notes": ""
+}

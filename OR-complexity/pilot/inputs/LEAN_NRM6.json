@@ -1,0 +1,27 @@
+{
+  "instance_id": "LEAN_NRM6",
+  "annotation_mode": "semantic",
+  "problem_text": "A restaurant offers a variety of popular products, including fast food and beverages. The profit data for these products is provided in the ‘Revenue’ column. Each product has its own demand level. The restaurant aims to maximize total revenue by focusing on the initial inventory of products classified under ‘Aalop’, which are detailed in the ‘Initial Inventory’ column. During the sales period, restocking is not permitted, and there are no in-transit inventories. Demand for ‘Aalop’ products during the sales horizon is assumed to be deterministic and known in advance, with demand information specified in the ‘Demand’ column. The variables x_i represent the number of units of each ‘Aalop’ product i that the restaurant intends to fulfill.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "RestaurantSalesreport",
+      "indices": [
+        "Product Name",
+        "Revenue",
+        "Demand",
+        "Initial Inventory"
+      ],
+      "unit": "",
+      "values": "| Product Name | Revenue | Demand | Initial Inventory |\n|---|---|---|---|\n| Aalopuri | 20 | 1483 | 10440.0 |\n| Cold coffee | 40 | 1918 | 13610.0 |\n| Frankie | 50 | 1623 | 11500.0 |\n| Panipuri | 20 | 1720 | 12260.0 |\n| Sandwich | 60 | 1558 | 10970.0 |\n| Sugarcane juice | 25 | 1791 | 12780.0 |\n| Vadapav | 20 | 1426 | 10060.0 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/NRM_testing/NRM6/RestaurantSalesreport.csv",
+      "role": "parameter_table",
+      "table": "RestaurantSalesreport"
+    }
+  ],
+  "notes": ""
+}

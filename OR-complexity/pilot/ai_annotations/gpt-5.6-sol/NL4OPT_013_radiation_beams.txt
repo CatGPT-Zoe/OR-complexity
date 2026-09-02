@@ -1,0 +1,271 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "NL4OPT_013_radiation_beams",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "set_beams",
+      "canonical_name": "beams",
+      "members": [
+        "Beam 1",
+        "Beam 2"
+      ],
+      "source_grounding": "A patient is undergoing radiation treatment involving two beams, Beam 1 and Beam 2.",
+      "source_spans": [
+        "two beams, Beam 1 and Beam 2"
+      ]
+    },
+    {
+      "id": "set_body_regions",
+      "canonical_name": "body_regions",
+      "members": [
+        "pancreas",
+        "skin",
+        "tumor"
+      ],
+      "source_grounding": "The text specifies dose delivery to the pancreas, skin, and tumor.",
+      "source_spans": [
+        "the benign area of the pancreas",
+        "the benign area of the skin",
+        "the tumor"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "param_dose_rate",
+      "canonical_name": "beam_region_dose_rate",
+      "indices": [
+        "beam",
+        "region"
+      ],
+      "unit": "medicine units per minute",
+      "values": {
+        "Beam 1": {
+          "pancreas": 0.3,
+          "skin": 0.2,
+          "tumor": 0.6
+        },
+        "Beam 2": {
+          "pancreas": 0.2,
+          "skin": 0.1,
+          "tumor": 0.4
+        }
+      },
+      "source_grounding": "Per-minute dose rates are explicitly stated for each beam and body region.",
+      "source_spans": [
+        "Beam 1 delivers a dose of 0.3 units of medicine per minute to the benign area of the pancreas and 0.2 units of medicine per minute to the benign area of the skin.",
+        "Beam 2 delivers 0.2 units of medicine per minute to the benign area of the pancreas and 0.1 units of medicine per minute to the benign area of the skin.",
+        "beam 1 delivers 0.6 units of medicine per minute to the tumor and beam 2 delivers 0.4 units of medicine per minute to the tumor"
+      ]
+    },
+    {
+      "id": "param_skin_max_dose",
+      "canonical_name": "maximum_skin_dose",
+      "unit": "medicine units",
+      "value": 4,
+      "source_grounding": "At most 4 units of medicine should be received by the skin.",
+      "source_spans": [
+        "At most 4 units of medicine should be received by the skin"
+      ]
+    },
+    {
+      "id": "param_tumor_min_dose",
+      "canonical_name": "minimum_tumor_dose",
+      "unit": "medicine units",
+      "value": 3,
+      "source_grounding": "At least 3 units of medicine should be delivered to the tumor.",
+      "source_spans": [
+        "at least 3 units of medicine should be delivered to the tumor"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity_beam_1_usage_duration",
+      "canonical_family": "beam_usage_duration",
+      "canonical_name": "Beam 1 usage duration",
+      "entity_role": "decision",
+      "unit": "minutes",
+      "index_binding": {
+        "beam": "Beam 1"
+      },
+      "domain_metadata": {
+        "nonnegative": true,
+        "integrality": "not_specified"
+      },
+      "source_grounding": "The treatment must determine how many minutes Beam 1 should be used.",
+      "source_spans": [
+        "How many minutes of each beam should be used"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "entity_beam_2_usage_duration",
+      "canonical_family": "beam_usage_duration",
+      "canonical_name": "Beam 2 usage duration",
+      "entity_role": "decision",
+      "unit": "minutes",
+      "index_binding": {
+        "beam": "Beam 2"
+      },
+      "domain_metadata": {
+        "nonnegative": true,
+        "integrality": "not_specified"
+      },
+      "source_grounding": "The treatment must determine how many minutes Beam 2 should be used.",
+      "source_spans": [
+        "How many minutes of each beam should be used"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "objective": {
+    "id": "objective_minimize_pancreas_dose",
+    "direction": "minimize",
+    "canonical_name": "total radiation received by the pancreas",
+    "normalized_semantics": "Minimize the total pancreas dose contributed by Beam 1 and Beam 2, using each beam's pancreas dose rate multiplied by its usage duration.",
+    "support_entity_ids": [
+      "entity_beam_1_usage_duration",
+      "entity_beam_2_usage_duration"
+    ],
+    "parameter_refs": [
+      "param_dose_rate"
+    ],
+    "incidence_slots": [
+      {
+        "entity_id": "entity_beam_1_usage_duration",
+        "role": "pancreas_dose_contributor",
+        "parameter_binding": {
+          "beam": "Beam 1",
+          "region": "pancreas"
+        }
+      },
+      {
+        "entity_id": "entity_beam_2_usage_duration",
+        "role": "pancreas_dose_contributor",
+        "parameter_binding": {
+          "beam": "Beam 2",
+          "region": "pancreas"
+        }
+      }
+    ],
+    "source_grounding": "The stated objective is to minimize total radiation received by the pancreas.",
+    "source_spans": [
+      "to minimize the total radiation received by the pancreas"
+    ]
+  },
+  "obligations": [
+    {
+      "id": "obligation_skin_dose_upper_bound",
+      "canonical_family": "regional_total_dose_upper_bound",
+      "canonical_name": "maximum total skin dose",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "healthy-tissue dose safety limit",
+      "normalized_semantics": "The total skin dose contributed by all used beams must be at most the maximum permitted skin dose.",
+      "support_entity_ids": [
+        "entity_beam_1_usage_duration",
+        "entity_beam_2_usage_duration"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_beam_1_usage_duration",
+          "role": "skin_dose_contributor",
+          "parameter_binding": {
+            "beam": "Beam 1",
+            "region": "skin"
+          }
+        },
+        {
+          "entity_id": "entity_beam_2_usage_duration",
+          "role": "skin_dose_contributor",
+          "parameter_binding": {
+            "beam": "Beam 2",
+            "region": "skin"
+          }
+        }
+      ],
+      "quantifier": "single treatment plan",
+      "scope_kind": "aggregate_across_beams",
+      "parameter_refs": [
+        "param_dose_rate",
+        "param_skin_max_dose"
+      ],
+      "condition": {
+        "region": "skin"
+      },
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "The skin may receive no more than 4 units of medicine in total.",
+      "source_spans": [
+        "At most 4 units of medicine should be received by the skin"
+      ],
+      "normalization_rationale": "The per-minute skin dose from each beam accumulates over its usage duration; the stated limit applies to their aggregate.",
+      "confidence": "high"
+    },
+    {
+      "id": "obligation_tumor_dose_lower_bound",
+      "canonical_family": "regional_total_dose_lower_bound",
+      "canonical_name": "minimum total tumor dose",
+      "structural_form": "LOWER_BOUND",
+      "business_role": "minimum therapeutic tumor dose",
+      "normalized_semantics": "The total tumor dose contributed by all used beams must be at least the required minimum tumor dose.",
+      "support_entity_ids": [
+        "entity_beam_1_usage_duration",
+        "entity_beam_2_usage_duration"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_beam_1_usage_duration",
+          "role": "tumor_dose_contributor",
+          "parameter_binding": {
+            "beam": "Beam 1",
+            "region": "tumor"
+          }
+        },
+        {
+          "entity_id": "entity_beam_2_usage_duration",
+          "role": "tumor_dose_contributor",
+          "parameter_binding": {
+            "beam": "Beam 2",
+            "region": "tumor"
+          }
+        }
+      ],
+      "quantifier": "single treatment plan",
+      "scope_kind": "aggregate_across_beams",
+      "parameter_refs": [
+        "param_dose_rate",
+        "param_tumor_min_dose"
+      ],
+      "condition": {
+        "region": "tumor"
+      },
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "The tumor must receive at least 3 units of medicine in total.",
+      "source_spans": [
+        "at least 3 units of medicine should be delivered to the tumor"
+      ],
+      "normalization_rationale": "The per-minute tumor dose from each beam accumulates over its usage duration; the stated requirement applies to their aggregate.",
+      "confidence": "high"
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [
+    {
+      "id": "unresolved_treatment_time_granularity",
+      "issue": "The source does not state whether beam usage durations must be whole minutes or may be fractional.",
+      "source_spans": [
+        "How many minutes of each beam should be used"
+      ],
+      "impact": "Integrality or time discretization cannot be asserted from the source."
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "warning_no_separate_dose_entity",
+      "message": "Regional cumulative doses are represented as rate-weighted semantics of the objective and obligations rather than as separate endogenous entity families because the source asks only for beam usage durations and does not independently designate cumulative dose variables."
+    }
+  ]
+}

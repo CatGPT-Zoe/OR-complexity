@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of crates to maximize total profit while adhering to a vehicle's weight limit.\n\nThe crates available are:\n* Crate A: weight 33kg, profit 63 units\n* Crate B: weight 1kg, profit 114 units\n* Crate C: weight 15kg, profit 195 units\n* Crate D: weight 35kg, profit 101 units\n* Crate E: weight 24kg, profit 180 units\n* Crate F: weight 15kg, profit 168 units\n* Crate G: weight 13kg, profit 273 units\n* Crate H: weight 49kg, profit 38 units\n* Crate I: weight 44kg, profit 203 units\n* Crate J: weight 17kg, profit 158 units\n* Crate K: weight 25kg, profit 147 units\n* Crate L: weight 6kg, profit 39 units\n* Crate M: weight 1kg, profit 77 units\n* Crate N: weight 15kg, profit 296 units\n* Crate O: weight 1kg, profit 286 units\n* Crate P: weight 47kg, profit 75 units\n* Crate Q: weight 38kg, profit 157 units\n* Crate R: weight 43kg, profit 98 units\n* Crate S: weight 11kg, profit 259 units\n* Crate T: weight 3kg, profit 264 units\n* Crate U: weight 39kg, profit 169 units\n* Crate V: weight 36kg, profit 132 units\n* Crate W: weight 44kg, profit 193 units\n* Crate X: weight 8kg, profit 117 units\n* Crate Y: weight 15kg, profit 88 units\n* Crate Z: weight 10kg, profit 153 units\n* Crate AA: weight 34kg, profit 254 units\n\nFurthermore, due to contractual obligations, precisely one of Crate A and Crate B must be included.\n\nIf Crate C is selected, the vehicle's effective load capacity is diminished by 10 kg.\nThe vehicle's maximum allowable load is 435 kg. The manager must determine the optimal selection of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

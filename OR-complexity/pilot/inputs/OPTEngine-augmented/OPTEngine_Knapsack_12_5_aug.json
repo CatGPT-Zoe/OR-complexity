@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of components to maximize total profit while adhering to a vehicle's cargo weight limit.\n\nThe components available are:\n* Component A: weight 36kg, profit 250 units\n* Component B: weight 3kg, profit 282 units\n* Component C: weight 37kg, profit 292 units\n* Component D: weight 17kg, profit 29 units\n* Component E: weight 30kg, profit 212 units\n* Component F: weight 47kg, profit 71 units\n* Component G: weight 26kg, profit 187 units\n* Component H: weight 32kg, profit 36 units\n* Component I: weight 2kg, profit 149 units\n* Component J: weight 48kg, profit 27 units\n* Component K: weight 17kg, profit 158 units\n* Component L: weight 44kg, profit 116 units\n\nFurthermore, due to a contractual stipulation, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, a special handling requirement reduces the vehicle's effective cargo capacity by 10 kg.\nThe vehicle can transport a maximum of 237 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

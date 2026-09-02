@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage strategy for a critical reagent over a 10‑week planning window.  \nThe initial stock available at the start of the planning interval is 90 liters.  \nIn each week \\( t = 1,\\dots,10 \\), the supplier permits the hospital to submit a purchase request whose volume must be between 15 and 33 liters.  \nHowever, every order placed requires a lead time of 2 weeks before it becomes available for clinical use or to replenish the storage.  \nThe weekly consumption of the reagent is forecast as follows:  \n* Week 1: 43 liters  \n* Week 2: 52 liters  \n* Week 3: 51 liters  \n* Week 4: 45 liters  \n* Week 5: 57 liters  \n* Week 6: 37 liters  \n* Week 7: 47 liters  \n* Week 8: 39 liters  \n* Week 9: 41 liters  \n* Week 10: 26 liters  \n\nSupply shortfalls are tolerated, but any unsatisfied weekly need is permanently lost and cannot be recovered later.  \nThroughout the planning horizon, reagent quantities may be treated as continuous measures, and the total volume held in storage at any moment must not exceed the refrigerated‑capacity limit of 90 liters.  \nThe cumulative cost over the ten weeks comprises three elements: the procurement cost, amounting to 3 per liter ordered; the storage cost, amounting to 1 per liter kept from one week to the next; and the shortage penalty, amounting to 6 per liter of unmet weekly consumption.  \nThe objective is to decide the optimal purchase volume for each week and to monitor the resulting stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate its fleet of cargo aircraft to fulfill urgent deliveries across multiple regional hubs, minimizing total fuel expenditure.\n\nThe available cargo capacity on each aircraft (set Alpha) is listed as follows:\n*Alpha-1 can carry 155 tons.\n*Alpha-2 can carry 163 tons.\n*Alpha-3 can carry 105 tons.\n*Alpha-4 can carry 72 tons.\n*Alpha-5 can carry 75 tons.\n*Alpha-6 can carry 85 tons.\n*Alpha-7 can carry 81 tons.\n*Alpha-8 can carry 200 tons.\n*Alpha-9 can carry 148 tons.\n\nThe required tonnage to be delivered to each regional hub (set Beta) is precisely mandated:\n*Beta-1 must receive 69 tons.\n*Beta-2 must receive 127 tons.\n*Beta-3 must receive 40 tons.\n*Beta-4 must receive 103 tons.\n*Beta-5 must receive 39 tons.\n*Beta-6 must receive 95 tons.\n*Beta-7 must receive 115 tons.\n*Beta-8 must receive 45 tons.\n*Beta-9 must receive 150 tons.\n\nThe fuel consumption rate, in standardized units per ton transported, for each aircraft-hub pairing is detailed in the table:\n| Aircraft / Hub | Beta-1 | Beta-2 | Beta-3 | Beta-4 | Beta-5 | Beta-6 | Beta-7 | Beta-8 | Beta-9 |\n|--|-|-|-|-|-|-|-|-|\n| Alpha-1 | 1 | 10 | 7 | 17 | 20 | 17 | 7 | 13 | 10 |\n| Alpha-2 | 2 | 8 | 16 | 13 | 4 | 8 | 16 | 20 | 3 |\n| Alpha-3 | 17 | 1 | 12 | 11 | 5 | 13 | 19 | 14 | 12 |\n| Alpha-4 | 18 | 6 | 16 | 3 | 1 | 19 | 3 | 1 | 9 |\n| Alpha-5 | 7 | 2 | 2 | 13 | 17 | 10 | 17 | 14 | 14 |\n| Alpha-6 | 13 | 3 | 18 | 18 | 20 | 5 | 9 | 3 | 10 |\n| Alpha-7 | 3 | 17 | 7 | 5 | 18 | 11 | 13 | 19 | 3 |\n| Alpha-8 | 10 | 14 | 8 | 2 | 8 | 3 | 14 | 4 | 15 |\n| Alpha-9 | 20 | 20 | 2 | 10 | 6 | 4 | 1 | 5 | 1 |\n\nDetermine the optimal allocation of cargo to each route to achieve the minimal aggregate fuel consumption.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

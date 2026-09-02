@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_22_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment to maximize total profit while adhering to a strict weight constraint for a cargo plane.\n\nThe available crates are:\n* Crate A: weight 10kg, profit 102 monetary units\n* Crate B: weight 37kg, profit 222 monetary units\n* Crate C: weight 18kg, profit 38 monetary units\n* Crate D: weight 25kg, profit 66 monetary units\n* Crate E: weight 49kg, profit 264 monetary units\n* Crate F: weight 11kg, profit 204 monetary units\n* Crate G: weight 15kg, profit 219 monetary units\n* Crate H: weight 49kg, profit 208 monetary units\n* Crate I: weight 9kg, profit 296 monetary units\n* Crate J: weight 41kg, profit 236 monetary units\n* Crate K: weight 40kg, profit 195 monetary units\n* Crate L: weight 3kg, profit 278 monetary units\n* Crate M: weight 15kg, profit 120 monetary units\n* Crate N: weight 33kg, profit 214 monetary units\n* Crate O: weight 32kg, profit 124 monetary units\n* Crate P: weight 37kg, profit 50 monetary units\n* Crate Q: weight 35kg, profit 66 monetary units\n* Crate R: weight 10kg, profit 94 monetary units\n* Crate S: weight 20kg, profit 24 monetary units\n* Crate T: weight 21kg, profit 68 monetary units\n* Crate U: weight 9kg, profit 280 monetary units\n* Crate V: weight 40kg, profit 102 monetary units\n\nFurthermore, due to contractual obligations, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, it requires special handling equipment that occupies space, effectively reducing the plane's usable weight capacity by 10 kg.\nThe aircraft's maximum payload is 391 kg. The manager must determine the optimal selection of crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

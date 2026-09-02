@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_58",
+  "annotation_mode": "semantic",
+  "problem_text": "Vicky and David have just bought a farm in the Yarra Valley, and they are considering using it to grow apples, pears, oranges, and lemons. The profit for growing one acre of apples is $2000, for one acre of pears is $1800, for one acre of oranges is $2200, and for one acre of lemons is $3000. To achieve maximum profit, how many acres of land should they use to grow each type of fruit? Vicky and David have just bought a farm in the Yarra Valley with a total area of 120 acres.\n\nThe land used to grow apples should be at least twice the land used to grow pears.\n\nThe land used to grow apples should be at least three times the land used to grow lemons.\n\nThe land used to grow oranges must be twice the land used to grow lemons.\n\nVicky and David are unwilling to grow more than two types of fruit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

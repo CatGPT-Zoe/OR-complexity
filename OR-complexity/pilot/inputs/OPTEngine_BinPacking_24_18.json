@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_24_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical freight pallets. The cargo units to be dispatched are as follows:\n\n* Cargo Alpha: mass 38 units\n* Cargo Beta: mass 47 units\n* Cargo Gamma: mass 65 units\n* Cargo Delta: mass 30 units\n* Cargo Epsilon: mass 35 units\n* Cargo Zeta: mass 50 units\n* Cargo Eta: mass 49 units\n* Cargo Theta: mass 50 units\n* Cargo Iota: mass 32 units\n* Cargo Kappa: mass 35 units\n* Cargo Lambda: mass 69 units\n* Cargo Mu: mass 30 units\n* Cargo Nu: mass 48 units\n* Cargo Xi: mass 37 units\n* Cargo Omicron: mass 40 units\n* Cargo Pi: mass 47 units\n* Cargo Rho: mass 42 units\n* Cargo Sigma: mass 62 units\n* Cargo Tau: mass 65 units\n* Cargo Upsilon: mass 52 units\n* Cargo Phi: mass 58 units\n* Cargo Chi: mass 35 units\n* Cargo Psi: mass 56 units\n* Cargo Omega: mass 62 units\n\nEach pallet possesses a maximum load capacity of 100 mass units. The coordinator must assign every cargo unit to precisely one pallet, ensuring the cumulative mass on any pallet does not surpass its designated limit. The objective is to utilize the minimal possible number of pallets to accommodate the entire consignment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

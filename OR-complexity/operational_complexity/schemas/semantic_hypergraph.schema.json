@@ -1,0 +1,582 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SemanticObligationHypergraph (SOH-1.0/SOH-1.1)",
+  "description": "Output schema for semantic OR-problem annotations. SOH-1.1 adds structured obligation families (canonical_family, structural_form, scope_kind, parameter_overrides, boundary_variants, temporal incidence slots) and a derived_checks layer; metric-critical fields (entity ids, obligation support references, coupling_active boolean, objective excluded flag) remain enforced for both versions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "instance_id",
+    "layer",
+    "sets",
+    "parameters",
+    "entities",
+    "objective",
+    "obligations",
+    "unresolved_items"
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": ["SOH-1.0", "SOH-1.1"]
+    },
+    "instance_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset": {
+      "type": "string",
+      "description": "Optional benchmark/dataset tag for provenance (e.g. IndustryOR, NL4OPT)."
+    },
+    "layer": {
+      "const": "semantic"
+    },
+    "derived_checks": {
+      "type": "array",
+      "description": "SOH-1.1: statements implied by entity semantics or other obligations (e.g. unmet_demand[t] <= demand[t]). Never counted as primary obligations.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["predicate", "derived_from"],
+        "properties": {
+          "predicate": {"type": "string", "minLength": 1},
+          "derived_from": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1}
+          },
+          "status": {"type": "string"},
+          "source_spans": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "annotation_warnings": {
+      "type": "array",
+      "description": "SOH-1.1: ambiguity or unresolved interpretation notes.",
+      "items": {"type": "string"}
+    },
+    "sets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "anyOf": [
+          {"required": ["id"]},
+          {"required": ["name"]}
+        ],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "name": {"type": "string", "minLength": 1},
+          "description": {"type": "string", "minLength": 1},
+          "values": {
+            "description": "Explicit member values for small sets; null or absent for large sets.",
+            "type": ["array", "null"],
+            "items": {"type": ["string", "number"]}
+          },
+          "cardinality": {
+            "description": "Set size when explicit member values are not enumerated.",
+            "type": ["integer", "null"]
+          },
+          "elements": {
+            "type": "array",
+            "items": {"type": ["string", "number"]}
+          },
+          "source_status": {
+            "enum": ["explicit", "implicit_required"]
+          },
+          "source_spans": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "anyOf": [
+          {"required": ["id"]},
+          {"required": ["name"]}
+        ],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "name": {"type": "string", "minLength": 1},
+          "canonical_name": {"type": "string", "minLength": 1},
+          "indices": {
+            "description": "Index signature. Either a list of role strings, or a list of {role, set_id} objects.",
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {"type": "string", "minLength": 1},
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["role", "set_id"],
+                  "properties": {
+                    "role": {"type": "string", "minLength": 1},
+                    "set_id": {"type": "string", "minLength": 1}
+                  }
+                }
+              ]
+            }
+          },
+          "description": {"type": "string", "minLength": 1},
+          "unit": {"type": ["string", "null"]},
+          "data_ref": {"type": ["string", "null"]},
+          "values": {
+            "description": "Parameter values when provided inline.",
+            "type": ["object", "array", "number", "string", "null"]
+          },
+          "value": {
+            "type": ["number", "string", "null"]
+          },
+          "value_set_id": {"type": ["string", "null"]},
+          "values_status": {"type": ["string", "null"]},
+          "aliases": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "source": {"type": ["string", "null"]},
+          "source_status": {
+            "enum": ["explicit", "implicit_required"]
+          },
+          "source_spans": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "anyOf": [
+          {"required": ["endogenous"]},
+          {"required": ["endogeneous"]}
+        ],
+        "required": [
+          "id",
+          "canonical_name",
+          "semantic_type",
+          "indices",
+          "description",
+          "source_status"
+        ],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "canonical_name": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "semantic_type": {
+            "enum": [
+              "quantity",
+              "assignment",
+              "activation",
+              "flow",
+              "route",
+              "sequence",
+              "time",
+              "state",
+              "allocation",
+              "action",
+              "selection",
+              "schedule",
+              "service_outcome",
+              "other_endogenous",
+              "other"
+            ]
+          },
+          "entity_role": {
+            "description": "SOH-1.1 canonical role of the entity.",
+            "enum": [
+              "decision",
+              "state",
+              "derived_flow",
+              "service_outcome",
+              "auxiliary_semantic"
+            ]
+          },
+          "indices": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {"type": "string", "minLength": 1},
+                {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["role", "set_id"],
+                  "properties": {
+                    "role": {"type": "string", "minLength": 1},
+                    "set_id": {"type": "string", "minLength": 1}
+                  }
+                }
+              ]
+            }
+          },
+          "index_signature": {
+            "description": "SOH-1.1 index signature (role -> set_id bindings).",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["role", "set_id"],
+              "properties": {
+                "role": {"type": "string", "minLength": 1},
+                "set_id": {"type": "string", "minLength": 1}
+              }
+            }
+          },
+          "description": {"type": "string", "minLength": 1},
+          "value_semantics": {"type": ["string", "null"]},
+          "value_domain": {
+            "description": "SOH-1.1 value domain attribute (not a semantic obligation).",
+            "enum": [
+              "continuous",
+              "continuous_nonnegative",
+              "integer",
+              "integer_nonnegative",
+              "binary",
+              "other"
+            ]
+          },
+          "physical_dimension": {"type": ["string", "null"]},
+          "unit": {"type": ["string", "null"]},
+          "endogenous": {"const": true},
+          "endogeneous": {"const": true},
+          "source_status": {
+            "enum": ["explicit", "implicit_required"]
+          },
+          "source_spans": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "objective": {
+      "description": "Objective semantics. Not part of the feasibility hypergraph; only excluded_from_feasibility_hypergraph must be true. Sense may be given via sense/direction/min_or_max or inferred from normalized_semantics/semantics text.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "excluded_from_feasibility_hypergraph"
+      ],
+      "properties": {
+        "sense": {
+          "enum": ["minimize", "maximize", "satisfy", "unknown"]
+        },
+        "direction": {
+          "enum": ["minimize", "maximize", "satisfy", "unknown"]
+        },
+        "canonical_name": {"type": "string", "minLength": 1},
+        "id": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "normalized_semantics": {"type": "string", "minLength": 1},
+        "semantics": {"type": "string", "minLength": 1},
+        "expression": {"type": "string", "minLength": 1},
+        "expression_semantics": {"type": "string", "minLength": 1},
+        "entity_scope": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "entity_scope_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "scope_entity_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "objective_entity_scope": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "entity_id": {"type": "string", "minLength": 1},
+        "entity_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "support_entity_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "index_scope": {
+          "description": "Index binding for the objective. Models vary: an array of role strings, an array of index_scope objects, or a role->value map.",
+          "type": ["array", "object"],
+          "items": {
+            "anyOf": [
+              {"type": "string", "minLength": 1},
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["role", "set_id"],
+                "properties": {
+                  "role": {"type": "string", "minLength": 1},
+                  "set_id": {"type": "string", "minLength": 1}
+                }
+              }
+            ]
+          }
+        },
+        "aggregation": {"type": ["string", "null"]},
+        "aggregation_axes": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "min_or_max": {"type": ["string", "null"]},
+        "parameter_refs": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "excluded_from_feasibility_hypergraph": {
+          "const": true
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "source_spans": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "anyOf": [
+          {
+            "description": "SOH-1.0 style obligation.",
+            "required": [
+              "id",
+              "canonical_name",
+              "obligation_type",
+              "normalized_semantics",
+              "support_entity_ids",
+              "incidence_slots",
+              "parameter_refs",
+              "cross_instance",
+              "coupling_active",
+              "source_spans"
+            ]
+          },
+          {
+            "description": "SOH-1.1 style obligation.",
+            "required": [
+              "id",
+              "canonical_family",
+              "structural_form",
+              "normalized_semantics",
+              "support_entity_ids",
+              "incidence_slots",
+              "coupling_active",
+              "source_spans"
+            ]
+          }
+        ],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "canonical_name": {"type": "string", "minLength": 1},
+          "canonical_family": {
+            "description": "SOH-1.1 canonical predicate family name (e.g. replenishment_upper_bound, inventory_flow_balance).",
+            "type": "string",
+            "minLength": 1
+          },
+          "structural_form": {
+            "description": "SOH-1.1 structural predicate form.",
+            "enum": [
+              "LOWER_BOUND",
+              "UPPER_BOUND",
+              "BALANCE",
+              "EQUALITY",
+              "INEQUALITY",
+              "IMPLICATION",
+              "NO_CARRYOVER",
+              "ASSIGNMENT",
+              "COVERAGE",
+              "PRECEDENCE",
+              "CARDINALITY",
+              "ACTIVATION_LINK",
+              "AGGREGATE_LIMIT",
+              "OTHER_RELATION"
+            ]
+          },
+          "business_role": {"type": "string", "minLength": 1},
+          "obligation_type": {
+            "enum": [
+              "capacity",
+              "balance",
+              "conservation",
+              "coverage",
+              "assignment",
+              "linking",
+              "precedence",
+              "non_overlap",
+              "time_window",
+              "logical_implication",
+              "service_requirement",
+              "resource_limit",
+              "policy",
+              "other"
+            ]
+          },
+          "normalized_semantics": {"type": "string", "minLength": 1},
+          "support_entity_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "incidence_slots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["entity_id", "role", "aggregation_axes"],
+              "properties": {
+                "entity_id": {"type": "string", "minLength": 1},
+                "role": {"type": "string", "minLength": 1},
+                "semantic_role": {
+                  "description": "SOH-1.1 role of the entity inside the predicate (e.g. previous_state, usable_replenishment, resulting_state, unmet_demand).",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "index_binding": {"type": "object"},
+                "index_bindings": {
+                  "description": "SOH-1.1 index binding map (role -> value/expression).",
+                  "type": "object"
+                },
+                "aggregation_axes": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                },
+                "lag_or_offset": {"type": ["string", "null"]},
+                "temporal_offset": {
+                  "description": "SOH-1.1 relative time offset vs the obligation's reference index (0 = same period, -1 = previous period, +1 = next period).",
+                  "type": ["integer", "null"]
+                },
+                "coefficient": {"type": ["number", "string", "null"]}
+              }
+            }
+          },
+          "quantifiers": {
+            "description": "Quantifier expressions; a single string is tolerated (models vary).",
+            "type": ["array", "string"],
+            "items": {"type": "string"}
+          },
+          "quantifier": {
+            "description": "SOH-1.1 single quantifier expression.",
+            "type": "string",
+            "minLength": 1
+          },
+          "scope_kind": {
+            "description": "SOH-1.1 scope classification.",
+            "enum": ["universal", "subset", "boundary", "terminal", "conditional"]
+          },
+          "condition": {"type": ["string", "null"]},
+          "parameter_refs": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "parameter_overrides": {
+            "description": "SOH-1.1 period/condition-specific parameter modifications of the same family.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "scope": {"type": "string"},
+                "parameter_id": {"type": "string"},
+                "value": {},
+                "modifier": {"type": "string"}
+              }
+            }
+          },
+          "boundary_variants": {
+            "description": "SOH-1.1 boundary instantiations of the same family (e.g. first-period initial condition).",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "scope": {"type": "string"},
+                "description": {"type": "string"}
+              }
+            }
+          },
+          "cross_instance": {"type": "boolean"},
+          "coupling_active": {
+            "description": "True if this obligation participates in the coupling hypergraph (metric-relevant); false for fixed/non-coupling assignments.",
+            "type": "boolean"
+          },
+          "source_grounding": {
+            "description": "SOH-1.1 textual grounding class.",
+            "enum": ["explicit", "definitional_entailment"]
+          },
+          "normalization_rationale": {"type": "string", "minLength": 1},
+          "source_spans": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string"}
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "unresolved_items": {
+      "description": "Unresolved items. Models vary: a plain string, or an object with at least a description.",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {"type": "string", "minLength": 1},
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["description"],
+            "properties": {
+              "id": {"type": "string", "minLength": 1},
+              "type": {"type": "string", "minLength": 1},
+              "description": {"type": "string", "minLength": 1},
+              "item": {"type": ["string", "null"]},
+              "impact": {"type": ["string", "null"]},
+              "confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "affected_elements": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "affected_components": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "source_spans": {
+                "type": "array",
+                "items": {"type": "string"}
+              },
+              "source_evidence": {"type": ["string", "null"]}
+            }
+          }
+        ]
+      }
+    }
+  }
+}

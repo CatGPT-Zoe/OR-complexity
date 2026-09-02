@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery vehicles across a network of regional distribution hubs to minimize total fuel expenditure.  \n\nThe number of vehicles stationed at each dispatch center (set C) is as follows:  \n*C1 has 138 vehicles available.  \n*C2 has 135 vehicles available.  \n*C3 has 191 vehicles available.  \n*C4 has 189 vehicles available.  \n*C5 has 146 vehicles available.  \n*C6 has 166 vehicles available.  \n\nThe required number of vehicles to be deployed at each distribution hub (set D) is listed below:  \n*D1 requires 208 vehicles.  \n*D2 requires 235 vehicles.  \n*D3 requires 58 vehicles.  \n*D4 requires 91 vehicles.  \n*D5 requires 204 vehicles.  \n*D6 requires 98 vehicles.  \n\nThe fuel cost per vehicle dispatched from each center to each hub is provided in the table:  \n\n| From / To | D1 | D2 | D3 | D4 | D5 | D6 |  \n|--|-|-|-|-|-|-|  \n| C1 | 11 | 16 | 13 | 13 | 5 | 16 |  \n| C2 | 2 | 5 | 17 | 19 | 11 | 4 |  \n| C3 | 15 | 4 | 17 | 15 | 1 | 5 |  \n| C4 | 14 | 5 | 3 | 16 | 9 | 11 |  \n| C5 | 20 | 13 | 3 | 11 | 18 | 13 |  \n| C6 | 11 | 16 | 18 | 2 | 20 | 3 |  \n\nDetermine the optimal vehicle allocation to minimize the overall fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

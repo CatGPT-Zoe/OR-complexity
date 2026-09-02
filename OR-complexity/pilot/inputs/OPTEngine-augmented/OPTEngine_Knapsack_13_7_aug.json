@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment of specialized cargo containers for a transcontinental airlift mission. They must select a combination of containers to maximize total utility points while adhering to the aircraft's maximum payload capacity.\n\nThe containers available are:\n* Container A: mass 42 units, utility 79 credits\n* Container B: mass 31 units, utility 294 credits\n* Container C: mass 4 units, utility 288 credits\n* Container D: mass 6 units, utility 275 credits\n* Container E: mass 22 units, utility 11 credits\n* Container F: mass 50 units, utility 50 credits\n* Container G: mass 7 units, utility 228 credits\n* Container H: mass 39 units, utility 190 credits\n* Container I: mass 37 units, utility 241 credits\n* Container J: mass 22 units, utility 203 credits\n* Container K: mass 33 units, utility 195 credits\n* Container L: mass 41 units, utility 70 credits\n* Container M: mass 9 units, utility 172 credits\n\nFurthermore, due to compatibility protocols, exactly one of Container A and Container B must be included in the final manifest.\n\nIf Container C is selected, it necessitates the inclusion of a mandatory cooling apparatus, which effectively diminishes the available payload allowance by 10 units.\nThe aircraft's structural limits permit a total lifted mass not exceeding 240 units. The coordinator must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

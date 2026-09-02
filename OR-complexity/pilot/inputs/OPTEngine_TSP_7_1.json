@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales director must conduct in-person visits to seven branch offices spread across a state.\n\nThe travel times between offices, measured in minutes, are as follows:\n* Office 1 to Office 2: 64.0 minutes\n* Office 1 to Office 3: 182.3 minutes\n* Office 1 to Office 4: 181.1 minutes\n* Office 1 to Office 5: 44.8 minutes\n* Office 1 to Office 6: 106.7 minutes\n* Office 1 to Office 7: 78.2 minutes\n* Office 2 to Office 3: 210.4 minutes\n* Office 2 to Office 4: 173.9 minutes\n* Office 2 to Office 5: 103.0 minutes\n* Office 2 to Office 6: 145.4 minutes\n* Office 2 to Office 7: 66.4 minutes\n* Office 3 to Office 4: 106.2 minutes\n* Office 3 to Office 5: 147.6 minutes\n* Office 3 to Office 6: 77.6 minutes\n* Office 3 to Office 7: 148.7 minutes\n* Office 4 to Office 5: 169.9 minutes\n* Office 4 to Office 6: 122.8 minutes\n* Office 4 to Office 7: 110.0 minutes\n* Office 5 to Office 6: 70.0 minutes\n* Office 5 to Office 7: 88.2 minutes\n* Office 6 to Office 7: 95.5 minutes\n\nThe objective is to identify the most time-efficient itinerary that allows the director to hold a meeting at each branch exactly once, concluding the tour by returning to the initial office of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

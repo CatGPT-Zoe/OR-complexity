@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A corporate office must devise a procurement and storage strategy for an essential office supply over a workweek spanning 8 business days.  \nThe starting stock at the opening of the planning interval is 18 boxes.  \nIn each day \\( t = 1, \\dots, 8 \\), the vendor permits the office to submit a requisition whose size must be between 11 and 49 boxes.  \nNevertheless, every requisition submitted will take 0 day(s) for delivery before it becomes available to meet consumption or restock the supply closet.  \nThe consumption of the office supply on each day is listed below:  \n* Day 1: consumption 59 boxes  \n* Day 2: consumption 36 boxes  \n* Day 3: consumption 37 boxes  \n* Day 4: consumption 21 boxes  \n* Day 5: consumption 25 boxes  \n* Day 6: consumption 39 boxes  \n* Day 7: consumption 31 boxes  \n* Day 8: consumption 43 boxes  \n\nStock‑outs are tolerated, but any unsatisfied consumption will not be carried forward.  \nThroughout the 8‑day interval, supply quantities may be fractional, and the total volume of items physically present in the storage closet at any moment must not surpass the capacity limit of 29 boxes.\n\nOn the final day (day 8), the maximum requisition size is restricted to 40 boxes.  \nOn the first day, the physical stock on hand must be no less than 6 boxes.\n\nThe aggregate expense over the planning horizon comprises three elements: the procurement expense, which amounts to 4 per box requisitioned; the storage expense, which amounts to 1 per box kept overnight; and the shortage penalty, which amounts to 10 per box of unmet consumption. Determine the optimal requisition size for each day and monitor the resulting stock levels and shortage amounts in order to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

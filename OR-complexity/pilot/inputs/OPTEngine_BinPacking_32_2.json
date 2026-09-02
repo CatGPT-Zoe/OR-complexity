@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load shipments onto identical cargo planes. The shipments are as follows:\n* Crate Alpha: weight 36 tons\n* Crate Beta: weight 38 tons\n* Crate Gamma: weight 59 tons\n* Crate Delta: weight 70 tons\n* Crate Epsilon: weight 52 tons\n* Crate Zeta: weight 62 tons\n* Crate Eta: weight 38 tons\n* Crate Theta: weight 34 tons\n* Crate Iota: weight 59 tons\n* Crate Kappa: weight 55 tons\n* Crate Lambda: weight 60 tons\n* Crate Mu: weight 50 tons\n* Crate Nu: weight 69 tons\n* Crate Xi: weight 49 tons\n* Crate Omicron: weight 60 tons\n* Crate Pi: weight 39 tons\n* Crate Rho: weight 48 tons\n* Crate Sigma: weight 32 tons\n* Crate Tau: weight 56 tons\n* Crate Upsilon: weight 34 tons\n* Crate Phi: weight 59 tons\n* Crate Chi: weight 67 tons\n* Crate Psi: weight 41 tons\n* Crate Omega: weight 34 tons\n* Crate Atlas: weight 37 tons\n* Crate Boreas: weight 55 tons\n* Crate Ceres: weight 44 tons\n* Crate Draco: weight 48 tons\n* Crate Echo: weight 70 tons\n* Crate Fortuna: weight 36 tons\n* Crate Gaia: weight 57 tons\n* Crate Helios: weight 70 tons\n\nEach cargo plane can carry up to 100 tons. Load all shipments using the fewest planes possible. Each crate must be placed on exactly one plane, and the total weight on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

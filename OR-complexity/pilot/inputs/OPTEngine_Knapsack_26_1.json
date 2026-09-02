@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is allocating cargo containers for shipment. Available containers are:\n* Container 1: volume 16 m³, revenue $21\n* Container 2: volume 35 m³, revenue $112\n* Container 3: volume 37 m³, revenue $181\n* Container 4: volume 13 m³, revenue $89\n* Container 5: volume 19 m³, revenue $283\n* Container 6: volume 35 m³, revenue $103\n* Container 7: volume 28 m³, revenue $64\n* Container 8: volume 45 m³, revenue $141\n* Container 9: volume 25 m³, revenue $121\n* Container 10: volume 5 m³, revenue $199\n* Container 11: volume 26 m³, revenue $86\n* Container 12: volume 50 m³, revenue $220\n* Container 13: volume 35 m³, revenue $260\n* Container 14: volume 7 m³, revenue $145\n* Container 15: volume 28 m³, revenue $192\n* Container 16: volume 24 m³, revenue $214\n* Container 17: volume 23 m³, revenue $220\n* Container 18: volume 43 m³, revenue $143\n* Container 19: volume 1 m³, revenue $116\n* Container 20: volume 30 m³, revenue $197\n* Container 21: volume 14 m³, revenue $57\n* Container 22: volume 21 m³, revenue $16\n* Container 23: volume 25 m³, revenue $224\n* Container 24: volume 14 m³, revenue $227\n* Container 25: volume 16 m³, revenue $224\n* Container 26: volume 21 m³, revenue $69\nThe cargo vessel has a maximum capacity of 445 m³. Select the container combination that maximizes total revenue without exceeding this volume limit. Each container is either fully loaded or not loaded.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

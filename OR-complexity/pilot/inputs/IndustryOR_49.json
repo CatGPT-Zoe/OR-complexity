@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_49",
+  "annotation_mode": "semantic",
+  "problem_text": "A factory must rent warehouse space for the next 4 months. The required warehouse area (in ㎡) is given in Table 1-14:\n\nTable 1-14\n| Month | 1    | 2    | 3    | 4    |\n|-------|------|------|------|------|\n| Required area | 1500 | 1000 | 2000 | 1200 |\n\nThe factory can sign rental contracts of different lengths, with longer contracts offering discounted rates (Table 1-15). Each contract, once chosen, must cover consecutive months starting from the beginning of the period.\n\nTable 1-15\n| Contract length (months) | 1  | 2  | 3  | 4  |\n|--------------------------|----|----|----|----|\n| Rental fee per 100㎡ (yuan) | 4000 | 7500 | 10500 | 13000 |\n\nAdditional business rules:\n1. The company may rent **multiple warehouses** in parallel, and each warehouse contract must fully cover the selected months. The available capacity of each warehouse is unlimited (i.e., any contract can cover the full required area or part of it).\n2. For risk management, at least **two different contracts** (with different lengths) must be signed over the 4 months.\n3. If a 4-month contract is chosen, then no 1-month contract may be chosen (mutual exclusion).\n4. To simplify operations, the number of distinct warehouse contracts signed cannot exceed 3.\n5. The demand for each month must be fully satisfied without shortage or excess.\n\n**Decision variables:**\n- Integer variables to represent how many contracts of each type (1, 2, 3, 4 months) are signed.\n- Binary variables to encode logical conditions (e.g., exclusion between 1-month and 4-month contracts).\n\n**Objective:** Minimize the total rental cost over the 4 months.\n\nFormulate this as a Mixed Integer Linear Programming (MILP) model. What is the minimum total rental cost?",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

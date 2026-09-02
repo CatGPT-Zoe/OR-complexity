@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A company must allocate computing tasks across a distributed network of data centers to processing nodes, aiming to minimize total latency.  \n\nThe available computational capacity at each data center (set C) is:  \n*C1 can handle 130 units of workload.  \n*C2 can handle 80 units of workload.  \n*C3 can handle 187 units of workload.  \n*C4 can handle 97 units of workload.  \n*C5 can handle 99 units of workload.  \n\nThe required processing load at each node (set D) is:  \n*D1 requires 65 units.  \n*D2 requires 97 units.  \n*D3 requires 131 units.  \n*D4 requires 70 units.  \n*D5 requires 37 units.  \n\nThe latency per unit of workload transferred from each data center to each processing node is given below:  \n\n| From / To | D1 | D2 | D3 | D4 | D5 |  \n|--|-|-|-|-|-|  \n| C1 | 4 | 7 | 10 | 8 | 12 |  \n| C2 | 6 | 10 | 1 | 18 | 5 |  \n| C3 | 9 | 2 | 2 | 18 | 10 |  \n| C4 | 5 | 16 | 4 | 1 | 19 |  \n| C5 | 10 | 16 | 16 | 15 | 11 |  \n\nDetermine the workload distribution that minimizes the overall latency.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

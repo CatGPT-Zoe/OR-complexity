@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_18_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping terminal must devise a replenishment and storage strategy for a critical fuel additive over an operational window spanning 18 consecutive days.  \nThe initial stockpile at the dawn of the planning interval is 30 barrels.  \nFor each day \\( t = 1, \\dots, 18 \\), the terminal may request a delivery from its supplier; the volume of each such shipment must fall between 17 and 57 barrels.  \nEvery shipment, once dispatched, requires a lead time of 2 days before it becomes available for consumption or to augment the stockpile.  \nThe daily consumption of the additive is specified as:  \nDay 1: 30 barrels  \nDay 2: 47 barrels  \nDay 3: 30 barrels  \nDay 4: 37 barrels  \nDay 5: 46 barrels  \nDay 6: 59 barrels  \nDay 7: 50 barrels  \nDay 8: 19 barrels  \nDay 9: 42 barrels  \nDay 10: 37 barrels  \nDay 11: 35 barrels  \nDay 12: 25 barrels  \nDay 13: 33 barrels  \nDay 14: 34 barrels  \nDay 15: 28 barrels  \nDay 16: 25 barrels  \nDay 17: 23 barrels  \nDay 18: 26 barrels  \n\nDeficits are tolerated; any consumption that cannot be met from on-hand stock or incoming shipments is simply lost and not carried forward.  \nThroughout the 18-day horizon, additive quantities may be treated as continuous measures, and the total volume held in the terminal’s storage tanks at any moment must not surpass the capacity limit of 37 barrels.  \nThe aggregate expense comprises three elements: a procurement cost of 4 per barrel ordered; a storage cost of 1 per barrel kept overnight; and a penalty of 15 per barrel of unmet daily consumption.  \nThe objective is to decide the optimal shipment volume for each day and to monitor the ensuing stockpile and deficit levels, thereby minimizing the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

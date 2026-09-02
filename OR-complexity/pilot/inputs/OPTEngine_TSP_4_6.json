@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a technician's maintenance tour across four regional facilities.\n\nThe travel times between facilities, measured in minutes, are as follows:\n* Facility 1 to Facility 2: 108.8 minutes\n* Facility 1 to Facility 3: 63.6 minutes\n* Facility 1 to Facility 4: 41.2 minutes\n* Facility 2 to Facility 3: 86.6 minutes\n* Facility 2 to Facility 4: 150.0 minutes\n* Facility 3 to Facility 4: 94.4 minutes\n\nThe objective is to determine the most time-efficient circuit that allows the technician to perform a service call at each facility precisely once, concluding the tour back at the initial departure point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must devise a replenishment and storage schedule for a critical fuel reserve across a 5-week voyage.  \nThe initial fuel reserve at the start of the voyage is 26 thousand liters.  \nIn each week \\(t = 1, \\dots, 5\\), the supplier permits the company to request a fuel delivery whose volume must be between 17 and 50 thousand liters.  \nHowever, each delivery requested will require a 3‑week transit time before it becomes available for consumption or for adding to the reserves.  \nThe projected fuel consumption for each week is as follows:  \n* Week 1: 32 thousand liters  \n* Week 2: 37 thousand liters  \n* Week 3: 30 thousand liters  \n* Week 4: 49 thousand liters  \n* Week 5: 50 thousand liters  \n\nShortfalls are allowed, but any unsatisfied consumption is simply lost and will not be carried forward.  \nThroughout the voyage, fuel quantities may be treated as continuous, and the total volume of fuel held in reserve tanks at any moment must not exceed the tank capacity of 57 thousand liters.  \n\nIn week 5, the maximum delivery volume allowed is 17 thousand liters.  \nIn week 1, the on‑hand reserve must be at least 46 thousand liters.  \n\nThe total voyage cost comprises three elements: the delivery cost, which is 5 per thousand liters ordered; the storage cost, which is 2 per thousand liters kept from one week to the next; and the shortage penalty, which is 6 per thousand liters of unmet consumption. Determine the optimal delivery volume for each week and monitor the resulting reserve levels and shortfalls so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

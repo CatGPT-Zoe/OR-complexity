@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail distribution center must devise a procurement and storage strategy for a seasonal product across a 14-day promotional window.  \nInitial stock at the start of the window is 55 items.  \nIn each day t = 1, …, 14, the wholesaler permits an order whose size must be between 19 and 22 items.  \nEvery order placed experiences a lead time of 1 day before it becomes available to meet customer requirements or replenish stock.  \nDaily customer requirements for the product are as follows:  \n* Day 1: 60 items  \n* Day 2: 21 items  \n* Day 3: 41 items  \n* Day 4: 52 items  \n* Day 5: 19 items  \n* Day 6: 49 items  \n* Day 7: 47 items  \n* Day 8: 42 items  \n* Day 9: 36 items  \n* Day 10: 47 items  \n* Day 11: 50 items  \n* Day 12: 24 items  \n* Day 13: 10 items  \n* Day 14: 13 items  \n\nStockouts are allowed, but any unsatisfied demand is lost and cannot be recovered later.  \nThroughout the 14 days, product quantities may be fractional, and the total stock physically present in the warehouse at any moment must not surpass the storage limit of 55 items.  \n\nSpecifically, on day 11, the maximum allowable order size is 20 items.  \nOn day 12, the physical stock on hand must be no less than 3 items.  \n\nTotal cost comprises three elements: the procurement cost, equal to 5 per item ordered; the storage cost, equal to 1 per item held overnight; and the lost‑sales penalty, equal to 12 per item of unmet demand.  \nDetermine the optimal order size for each day and the corresponding stock and shortage amounts so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

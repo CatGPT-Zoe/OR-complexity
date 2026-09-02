@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assembling a shipment of components to maximize total utility points while staying within the cargo plane's weight allowance.\n\nThe components available are:\n* Component A: weight 20kg, utility 100 points\n* Component B: weight 42kg, utility 178 points\n* Component C: weight 47kg, utility 219 points\n* Component D: weight 25kg, utility 14 points\n* Component E: weight 27kg, utility 145 points\n* Component F: weight 35kg, utility 282 points\n* Component G: weight 48kg, utility 246 points\n* Component H: weight 49kg, utility 31 points\n* Component I: weight 37kg, utility 72 points\n* Component J: weight 27kg, utility 209 points\n* Component K: weight 11kg, utility 11 points\n* Component L: weight 33kg, utility 80 points\n\nFurthermore, due to compatibility requirements, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, the plane's effective payload capacity is diminished by 10 kg.\nThe aircraft can accommodate a maximum of 280 kg. The coordinator must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

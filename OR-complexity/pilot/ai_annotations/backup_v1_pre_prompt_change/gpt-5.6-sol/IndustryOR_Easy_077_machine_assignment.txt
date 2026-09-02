@@ -1,0 +1,451 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_Easy_077_machine_assignment",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "parts",
+      "name": "parts",
+      "description": "the 10 types of parts that must be processed",
+      "values": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    },
+    {
+      "id": "machines",
+      "name": "machines",
+      "description": "machines available for processing parts",
+      "values": ["A", "B", "C"]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "unit_processing_cost",
+      "name": "unit_processing_cost",
+      "description": "cost of processing one piece of a part on a machine",
+      "indices": [
+        {
+          "role": "machine",
+          "set_id": "machines"
+        },
+        {
+          "role": "part",
+          "set_id": "parts"
+        }
+      ],
+      "unit": "yuan",
+      "values": {
+        "A": {
+          "1": 10,
+          "2": 20,
+          "3": 30,
+          "4": 40,
+          "5": 50,
+          "6": 60,
+          "7": 70,
+          "8": 80,
+          "9": 90,
+          "10": 100
+        },
+        "B": {
+          "1": 15,
+          "2": 25,
+          "3": 35,
+          "4": 45,
+          "5": 55,
+          "6": 65,
+          "7": 75,
+          "8": 85,
+          "9": 95,
+          "10": 105
+        },
+        "C": {
+          "1": 20,
+          "2": 30,
+          "3": 40,
+          "4": 50,
+          "5": 60,
+          "6": 70,
+          "7": 80,
+          "8": 90,
+          "9": 100,
+          "10": 110
+        }
+      },
+      "source_spans": [
+        "The unit processing costs are shown in Table 5-6.",
+        "Table 5-6"
+      ]
+    },
+    {
+      "id": "machine_setup_cost",
+      "name": "machine_setup_cost",
+      "description": "one-time setup cost incurred when a machine processes any part",
+      "indices": [
+        {
+          "role": "machine",
+          "set_id": "machines"
+        }
+      ],
+      "unit": "yuan",
+      "values": {
+        "A": 100,
+        "B": 135,
+        "C": 200
+      },
+      "source_spans": [
+        "a one-time setup cost will be incurred regardless of whether one or multiple types of parts are processed, with the respective costs being d_A = 100, d_B = 135, and d_C = 200 yuan"
+      ]
+    },
+    {
+      "id": "machine_C_part_type_limit",
+      "name": "machine_C_part_type_limit",
+      "description": "maximum number of part types that may be processed on machine C",
+      "indices": [],
+      "unit": "part types",
+      "values": 3,
+      "source_spans": [
+        "The number of parts processed on machine C should not exceed 3 types."
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "part_machine_assignment",
+      "canonical_name": "part_machine_assignment",
+      "semantic_type": "assignment",
+      "indices": [
+        {
+          "role": "part",
+          "set_id": "parts"
+        },
+        {
+          "role": "machine",
+          "set_id": "machines"
+        }
+      ],
+      "description": "assignment of each part type to the machine on which its required piece is processed",
+      "value_semantics": "binary relation indicating whether the part is processed on the machine",
+      "unit": "assignment indicator",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "There are 10 different parts, and they can all be processed on machine A, machine B, or machine C.",
+        "One piece of each of the aforementioned 10 types of parts needs to be processed."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "machine_activation",
+      "canonical_name": "machine_activation",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "machine",
+          "set_id": "machines"
+        }
+      ],
+      "description": "whether a machine is set up for processing at least one assigned part",
+      "value_semantics": "binary activation state indicating that the machine's one-time setup is incurred",
+      "unit": "activation indicator",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "as long as any part is processed on the aforementioned machines, a one-time setup cost will be incurred regardless of whether one or multiple types of parts are processed"
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "total_processing_and_setup_cost",
+    "normalized_semantics": "minimize the sum of unit processing costs for all part-machine assignments and one-time setup costs for activated machines",
+    "entity_scope": [
+      "part_machine_assignment",
+      "machine_activation"
+    ],
+    "parameter_refs": [
+      "unit_processing_cost",
+      "machine_setup_cost"
+    ],
+    "source_spans": [
+      "with the objective of minimizing the total cost",
+      "The unit processing costs are shown in Table 5-6.",
+      "a one-time setup cost will be incurred regardless of whether one or multiple types of parts are processed"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "assign_each_part_to_exactly_one_machine",
+      "obligation_type": "assignment",
+      "normalized_semantics": "each part type must have its required piece processed on exactly one of machines A, B, and C",
+      "support_entity_ids": [
+        "part_machine_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "machine_choice_for_part",
+          "aggregation_axes": [
+            "machine"
+          ],
+          "index_binding": {
+            "part": "p"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all parts p in parts"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "One piece of each of the aforementioned 10 types of parts needs to be processed;",
+        "they can all be processed on machine A, machine B, or machine C"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o2",
+      "canonical_name": "assigned_processing_requires_machine_activation",
+      "obligation_type": "linking",
+      "normalized_semantics": "if any part is assigned to a machine, that machine must be activated and its one-time setup incurred",
+      "support_entity_ids": [
+        "part_machine_assignment",
+        "machine_activation"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "processing_that_triggers_setup",
+          "aggregation_axes": [],
+          "index_binding": {
+            "part": "p",
+            "machine": "m"
+          }
+        },
+        {
+          "entity_id": "machine_activation",
+          "role": "required_setup_activation",
+          "aggregation_axes": [],
+          "index_binding": {
+            "machine": "m"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all parts p in parts and machines m in machines"
+      ],
+      "condition": "part p is processed on machine m",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "as long as any part is processed on the aforementioned machines, a one-time setup cost will be incurred regardless of whether one or multiple types of parts are processed"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o3",
+      "canonical_name": "part_1_on_A_implies_part_2_not_on_A",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "if part 1 is processed on machine A, then part 2 must be processed on machine B or machine C",
+      "support_entity_ids": [
+        "part_machine_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "antecedent_assignment",
+          "aggregation_axes": [],
+          "index_binding": {
+            "part": "1",
+            "machine": "A"
+          }
+        },
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "consequent_machine_choice",
+          "aggregation_axes": [
+            "machine"
+          ],
+          "index_binding": {
+            "part": "2",
+            "machine": "{B,C}"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": "part 1 is processed on machine A",
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "If the 1st part is processed on machine A, then the 2nd part must be processed on machine B or C"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o4",
+      "canonical_name": "part_1_not_on_A_implies_part_2_on_A",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "if part 1 is processed on machine B or machine C, then part 2 must be processed on machine A",
+      "support_entity_ids": [
+        "part_machine_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "antecedent_machine_choice",
+          "aggregation_axes": [
+            "machine"
+          ],
+          "index_binding": {
+            "part": "1",
+            "machine": "{B,C}"
+          }
+        },
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "consequent_assignment",
+          "aggregation_axes": [],
+          "index_binding": {
+            "part": "2",
+            "machine": "A"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": "part 1 is processed on machine B or machine C",
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "conversely, if the 1st part is processed on machine B or C, then the 2nd part must be processed on machine A"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o5",
+      "canonical_name": "part_3_must_use_machine_A",
+      "obligation_type": "assignment",
+      "normalized_semantics": "part 3 must be processed on machine A",
+      "support_entity_ids": [
+        "part_machine_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "required_assignment",
+          "aggregation_axes": [],
+          "index_binding": {
+            "part": "3",
+            "machine": "A"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Parts 3, 4, and 5 must be processed on machines A, B, and C respectively"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o6",
+      "canonical_name": "part_4_must_use_machine_B",
+      "obligation_type": "assignment",
+      "normalized_semantics": "part 4 must be processed on machine B",
+      "support_entity_ids": [
+        "part_machine_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "required_assignment",
+          "aggregation_axes": [],
+          "index_binding": {
+            "part": "4",
+            "machine": "B"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Parts 3, 4, and 5 must be processed on machines A, B, and C respectively"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o7",
+      "canonical_name": "part_5_must_use_machine_C",
+      "obligation_type": "assignment",
+      "normalized_semantics": "part 5 must be processed on machine C",
+      "support_entity_ids": [
+        "part_machine_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "required_assignment",
+          "aggregation_axes": [],
+          "index_binding": {
+            "part": "5",
+            "machine": "C"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Parts 3, 4, and 5 must be processed on machines A, B, and C respectively"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o8",
+      "canonical_name": "machine_C_part_type_limit",
+      "obligation_type": "capacity",
+      "normalized_semantics": "machine C may process no more than three part types",
+      "support_entity_ids": [
+        "part_machine_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "part_machine_assignment",
+          "role": "part_types_assigned_to_machine_C",
+          "aggregation_axes": [
+            "part"
+          ],
+          "index_binding": {
+            "machine": "C"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [
+        "machine_C_part_type_limit"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The number of parts processed on machine C should not exceed 3 types."
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": []
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital pharmacy must devise a medication procurement and stock management strategy over a treatment cycle of 10 weeks.  \nThe initial stock of a critical medication at the start of the cycle is 5 vials.  \nIn each week t = 1, ..., 10, the supplier permits the pharmacy to place a procurement request whose volume must fall between 5 and 35 vials.  \nHowever, each requested shipment requires a lead time of 3 week(s) before it becomes available for patient administration or inventory replenishment.  \nThe weekly patient demand for the medication is as follows:  \n* Week 1: demand 19 vials  \n* Week 2: demand 36 vials  \n* Week 3: demand 23 vials  \n* Week 4: demand 38 vials  \n* Week 5: demand 49 vials  \n* Week 6: demand 14 vials  \n* Week 7: demand 37 vials  \n* Week 8: demand 45 vials  \n* Week 9: demand 58 vials  \n* Week 10: demand 35 vials  \n\nSupply shortfalls are tolerated, but any unsatisfied demand is considered lost and will not be carried forward.  \nThroughout the treatment cycle, medication volumes may be fractional, and the total quantity of vials stored on-site at any moment must not exceed the refrigerator capacity of 54 vials.  \nThe total expenditure over the cycle comprises three elements: the procurement cost, calculated at 2 per vial ordered; the storage cost, calculated at 1 per vial kept in stock from one week to the next; and the shortage penalty, assessed at 10 per vial of unmet patient demand.  \nPlease determine the optimal procurement quantity for each week and monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

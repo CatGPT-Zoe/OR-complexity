@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of crates onto identical pallets for shipment. The crates are labeled as follows:\n* Crate Alpha: mass 31kg\n* Crate Beta: mass 68kg\n* Crate Gamma: mass 40kg\n* Crate Delta: mass 49kg\n* Crate Epsilon: mass 45kg\n* Crate Zeta: mass 55kg\n* Crate Eta: mass 61kg\n* Crate Theta: mass 53kg\n* Crate Iota: mass 52kg\n* Crate Kappa: mass 35kg\n* Crate Lambda: mass 67kg\n* Crate Mu: mass 57kg\n* Crate Nu: mass 37kg\n* Crate Xi: mass 31kg\n* Crate Omicron: mass 41kg\n* Crate Pi: mass 30kg\n* Crate Rho: mass 68kg\n* Crate Sigma: mass 64kg\n* Crate Tau: mass 47kg\n* Crate Upsilon: mass 52kg\n* Crate Phi: mass 43kg\n* Crate Chi: mass 54kg\n* Crate Psi: mass 42kg\n* Crate Omega: mass 50kg\n* Crate Digamma: mass 41kg\n\nEvery pallet possesses a maximum safe load capacity of 100 kg. The objective is to load all crates utilizing the minimal number of pallets. Each crate must be placed on exactly one pallet, and the aggregate mass on any given pallet must not surpass its designated capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

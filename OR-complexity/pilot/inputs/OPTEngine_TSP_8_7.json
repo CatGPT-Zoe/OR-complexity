@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales representative must conduct a series of essential client visits across eight distinct corporate offices.\n\nThe travel times between offices are recorded in minutes:\n* Office Alpha to Office Beta: 30.9 minutes\n* Office Alpha to Office Gamma: 133.0 minutes\n* Office Alpha to Office Delta: 192.8 minutes\n* Office Alpha to Office Epsilon: 186.7 minutes\n* Office Alpha to Office Zeta: 207.5 minutes\n* Office Alpha to Office Theta: 66.6 minutes\n* Office Alpha to Office Iota: 150.4 minutes\n* Office Beta to Office Gamma: 111.0 minutes\n* Office Beta to Office Delta: 201.5 minutes\n* Office Beta to Office Epsilon: 179.8 minutes\n* Office Beta to Office Zeta: 208.7 minutes\n* Office Beta to Office Theta: 62.4 minutes\n* Office Beta to Office Iota: 146.2 minutes\n* Office Gamma to Office Delta: 176.3 minutes\n* Office Gamma to Office Epsilon: 103.5 minutes\n* Office Gamma to Office Zeta: 154.5 minutes\n* Office Gamma to Office Theta: 81.3 minutes\n* Office Gamma to Office Iota: 90.5 minutes\n* Office Delta to Office Epsilon: 97.7 minutes\n* Office Delta to Office Zeta: 51.9 minutes\n* Office Delta to Office Theta: 142.0 minutes\n* Office Delta to Office Iota: 87.0 minutes\n* Office Epsilon to Office Zeta: 57.0 minutes\n* Office Epsilon to Office Theta: 120.3 minutes\n* Office Epsilon to Office Iota: 38.1 minutes\n* Office Zeta to Office Theta: 146.2 minutes\n* Office Zeta to Office Iota: 67.2 minutes\n* Office Theta to Office Iota: 84.9 minutes\n\nThe objective is to determine the most time-efficient itinerary that allows the representative to visit every corporate office precisely one time, concluding the circuit by returning to the initial office of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

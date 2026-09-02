@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 5 cargo shipments through 5 different customs checkpoints.\n\nEach shipment must pass through checkpoints in a specific order, with each checkpoint requiring a fixed processing duration. The sequence of checkpoints and their respective processing times are defined as (Checkpoint, Duration) pairs, where the order of pairs indicates the mandatory processing sequence.\n\nShipment details:\n* S1 follows the route: (C5, 8) → (C4, 7) → (C1, 4) → (C2, 8) → (C3, 8)\n* S2 follows the route: (C5, 5) → (C3, 3) → (C2, 8) → (C1, 1) → (C4, 10)\n* S3 follows the route: (C2, 1) → (C1, 9) → (C5, 2) → (C3, 2) → (C4, 7)\n* S4 follows the route: (C1, 5) → (C3, 5) → (C5, 4) → (C4, 3) → (C2, 10)\n* S5 follows the route: (C3, 6) → (C2, 7) → (C1, 3) → (C4, 6) → (C5, 7)\n\nOnce a shipment begins processing at a checkpoint, it must continue uninterrupted until completion. Each checkpoint can only process one shipment at a time. The objective is to determine the processing sequence for all shipments at the checkpoints to minimize the total completion time for all shipments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

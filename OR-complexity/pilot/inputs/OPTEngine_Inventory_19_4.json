@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_19_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage strategy for a critical fuel additive over a 19-week operational cycle.  \nThe starting stock at the cycle’s outset is 2 barrels.  \nIn each week \\( t = 1, \\dots, 19 \\), the vendor permits the firm to submit a procurement request, the volume of which must fall between 11 and 54 barrels.  \nEvery such request, however, is subject to a 3‑week lead time before it becomes available for meeting requirements or replenishing stocks.  \nWeekly consumption of the additive is specified as:  \n* Week 1: 18 barrels  \n* Week 2: 18 barrels  \n* Week 3: 24 barrels  \n* Week 4: 26 barrels  \n* Week 5: 41 barrels  \n* Week 6: 60 barrels  \n* Week 7: 29 barrels  \n* Week 8: 19 barrels  \n* Week 9: 57 barrels  \n* Week 10: 49 barrels  \n* Week 11: 27 barrels  \n* Week 12: 23 barrels  \n* Week 13: 15 barrels  \n* Week 14: 18 barrels  \n* Week 15: 52 barrels  \n* Week 16: 36 barrels  \n* Week 17: 21 barrels  \n* Week 18: 22 barrels  \n* Week 19: 47 barrels  \n\nDeficits are tolerated, though any unsatisfied consumption is permanently lost.  \nThroughout the 19‑week cycle, additive quantities may be treated as continuous, and the total volume of physically stored material at any moment must remain within the depot’s maximum capacity of 27 barrels.  \nThe aggregate expenditure comprises three elements: a procurement cost of 6 per barrel ordered; a storage cost of 1 per barrel held over from one week to the next; and a deficit penalty of 10 per barrel of unmet consumption.  \nThe objective is to establish the optimal procurement volume for each week and to monitor the consequent stock and deficit positions, thereby minimizing the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

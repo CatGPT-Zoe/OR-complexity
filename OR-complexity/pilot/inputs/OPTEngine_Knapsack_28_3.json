@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_28_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting cargo containers to load onto a cargo plane. Available containers are:\n* Container 1: weight 7 tons, revenue $12,000\n* Container 2: weight 16 tons, revenue $68,000\n* Container 3: weight 5 tons, revenue $31,000\n* Container 4: weight 13 tons, revenue $136,000\n* Container 5: weight 10 tons, revenue $121,000\n* Container 6: weight 22 tons, revenue $218,000\n* Container 7: weight 34 tons, revenue $219,000\n* Container 8: weight 6 tons, revenue $199,000\n* Container 9: weight 38 tons, revenue $55,000\n* Container 10: weight 21 tons, revenue $208,000\n* Container 11: weight 8 tons, revenue $271,000\n* Container 12: weight 21 tons, revenue $36,000\n* Container 13: weight 5 tons, revenue $34,000\n* Container 14: weight 19 tons, revenue $162,000\n* Container 15: weight 46 tons, revenue $28,000\n* Container 16: weight 11 tons, revenue $65,000\n* Container 17: weight 24 tons, revenue $190,000\n* Container 18: weight 19 tons, revenue $97,000\n* Container 19: weight 30 tons, revenue $228,000\n* Container 20: weight 49 tons, revenue $107,000\n* Container 21: weight 42 tons, revenue $134,000\n* Container 22: weight 6 tons, revenue $72,000\n* Container 23: weight 27 tons, revenue $91,000\n* Container 24: weight 32 tons, revenue $274,000\n* Container 25: weight 30 tons, revenue $286,000\n* Container 26: weight 45 tons, revenue $278,000\n* Container 27: weight 12 tons, revenue $10,000\n* Container 28: weight 46 tons, revenue $58,000\n\nThe cargo plane has a maximum payload capacity of 450 tons. Select the combination of containers that maximizes total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,28 @@
+{
+  "instance_id": "MIPLIB_NL_ex9",
+  "annotation_mode": "semantic",
+  "problem_text": "We are engineering the layout for a 9*9 wafer-scale processor array. The system comprises square micro-processing modules, each featuring four connection ports labeled Top, Right, Bottom, and Left. The file `numbers` specifies the signal protocol ID for each port of every module. A protocol ID of 0 signifies a thermal exhaust port. To ensure proper heat dissipation, these exhaust ports must be positioned facing the external perimeter of the array chassis. Positive integer IDs represent high-speed data bus channels; for a valid connection, the touching ports of any two adjacent modules must share the identical bus channel ID. The modules are manufactured on a rigid substrate and cannot be flipped over, yet the assembly process requires determining the correct orientation for each module within its assigned slot. Based on the thermal design power (TDP) constraints, the inventory strictly contains 4 corner modules (two exhaust ports), 4*9-8 perimeter modules (one exhaust port), and (9-2)^2 core modules (no exhaust ports). Modules with Prime Number IDs are fabricated using a 7nm process, while composite IDs use a 14nm process; 7nm modules reduce the localized voltage requirement by 0.05V. The total power draw is calculated as the sum of all active bus channel IDs multiplied by the voltage coefficient. Find a valid array configuration. The objective is to maximize the number of modules successfully integrated into the chassis complying with all port compatibility and boundary thermal rules.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "numbers",
+      "indices": [
+        "piece_id",
+        "top_edge",
+        "right_edge",
+        "bottom_edge",
+        "left_edge"
+      ],
+      "unit": "",
+      "values": "| piece_id | top_edge | right_edge | bottom_edge | left_edge |\n|---|---|---|---|---|\n| 0 | 9 | 15 | 20 | 9 |\n| 1 | 19 | 16 | 0 | 28 |\n| 2 | 11 | 18 | 26 | 8 |\n| 3 | 10 | 20 | 17 | 0 |\n| 4 | 9 | 20 | 3 | 9 |\n| 5 | 21 | 13 | 14 | 0 |\n| 6 | 17 | 0 | 14 | 15 |\n| 7 | 9 | 13 | 15 | 19 |\n| 8 | 17 | 0 | 10 | 29 |\n| 9 | 15 | 29 | 12 | 15 |\n| 10 | 6 | 0 | 24 | 20 |\n| 11 | 18 | 21 | 0 | 4 |\n| 12 | 22 | 0 | 2 | 15 |\n| 13 | 3 | 5 | 20 | 30 |\n| 14 | 26 | 13 | 11 | 19 |\n| 15 | 19 | 20 | 19 | 20 |\n| 16 | 5 | 20 | 1 | 3 |\n| 17 | 1 | 8 | 15 | 15 |\n| 18 | 20 | 15 | 30 | 29 |\n| 19 | 0 | 21 | 20 | 22 |\n| 20 | 19 | 15 | 13 | 11 |\n| 21 | 10 | 0 | 0 | 25 |\n| 22 | 12 | 13 | 8 | 9 |\n| 23 | 25 | 0 | 10 | 26 |\n| 24 | 11 | 5 | 3 | 30 |\n| 25 | 29 | 13 | 3 | 13 |\n| 26 | 15 | 24 | 0 | 22 |\n| 27 | 7 | 18 | 11 | 11 |\n| 28 | 29 | 13 | 26 | 5 |\n| 29 | 1 | 8 | 26 | 30 |\n| 30 | 14 | 13 | 14 | 0 |\n| 31 | 20 | 15 | 19 | 13 |\n| 32 | 24 | 0 | 28 | 7 |\n| 33 | 18 | 15 | 1 | 20 |\n| 34 | 5 | 19 | 7 | 29 |\n| 35 | 30 | 5 | 20 | 18 |\n| 36 | 7 | 9 | 3 | 29 |\n| 37 | 30 | 20 | 20 | 15 |\n| 38 | 28 | 3 | 6 | 0 |\n| 39 | 1 | 8 | 30 | 12 |\n| 40 | 6 | 5 | 27 | 0 |\n| 41 | 0 | 6 | 10 | 0 |\n| 42 | 13 | 1 | 18 | 5 |\n| 43 | 13 | 23 | 0 | 22 |\n| 44 | 13 | 5 | 13 | 8 |\n| 45 | 5 | 13 | 5 | 7 |\n| 46 | 29 | 8 | 29 | 3 |\n| 47 | 18 | 10 | 0 | 14 |\n| 48 | 20 | 30 | 1 | 13 |\n| 49 | 9 | 20 | 7 | 7 |\n| 50 | 26 | 12 | 30 | 15 |\n| 51 | 23 | 19 | 28 | 0 |\n| 52 | 3 | 19 | 5 | 11 |\n| 53 | 24 | 1 | 10 | 0 |\n| 54 | 19 | 29 | 30 | 30 |\n| 55 | 13 | 30 | 8 | 30 |\n| 56 | 17 | 0 | 27 | 8 |\n| 57 | 0 | 0 | 17 | 28 |\n| 58 | 28 | 0 | 17 | 29 |\n| 59 | 7 | 5 | 29 | 7 |\n| 60 | 5 | 7 | 15 | 7 |\n| 61 | 7 | 26 | 30 | 7 |\n| 62 | 7 | 4 | 0 | 17 |\n| 63 | 26 | 18 | 9 | 19 |\n| 64 | 12 | 19 | 8 | 11 |\n| 65 | 18 | 5 | 12 | 15 |\n| 66 | 7 | 18 | 7 | 3 |\n| 67 | 7 | 11 | 20 | 13 |\n| 68 | 20 | 5 | 26 | 11 |\n| 69 | 0 | 14 | 1 | 2 |\n| 70 | 17 | 0 | 4 | 5 |\n| 71 | 9 | 11 | 15 | 12 |\n| 72 | 7 | 3 | 20 | 8 |\n| 73 | 5 | 1 | 9 | 15 |\n| 74 | 11 | 3 | 19 | 12 |\n| 75 | 0 | 17 | 14 | 0 |\n| 76 | 0 | 17 | 15 | 17 |\n| 77 | 26 | 15 | 15 | 18 |\n| 78 | 4 | 0 | 16 | 8 |\n| 79 | 17 | 9 | 14 | 0 |\n| 80 | 10 | 18 | 21 | 0 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/ex9/data/numbers.csv",
+      "role": "parameter_table",
+      "table": "numbers"
+    }
+  ],
+  "notes": ""
+}

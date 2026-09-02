@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a critical shipment of components to maximize total utility score while adhering to a strict cargo weight limit for a transport vessel.\n\nThe components available are:\n* Component A: weight 49kg, utility 17 points\n* Component B: weight 14kg, utility 224 points\n* Component C: weight 40kg, utility 194 points\n* Component D: weight 20kg, utility 52 points\n* Component E: weight 48kg, utility 21 points\n* Component F: weight 50kg, utility 132 points\n* Component G: weight 40kg, utility 24 points\n* Component H: weight 38kg, utility 272 points\n* Component I: weight 24kg, utility 88 points\n* Component J: weight 30kg, utility 142 points\n* Component K: weight 8kg, utility 238 points\n* Component L: weight 18kg, utility 122 points\n* Component M: weight 25kg, utility 206 points\n* Component N: weight 48kg, utility 269 points\n* Component O: weight 22kg, utility 126 points\n* Component P: weight 38kg, utility 145 points\n\nDue to compatibility protocols, exactly one of Component A and Component B must be included in the shipment.\n\nIf Component C is selected, the vessel's effective cargo capacity is diminished by 10 kg.\nThe vessel can accommodate a maximum of 358 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

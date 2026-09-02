@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and storage schedule for a critical drug over a treatment cycle of 5 weeks.  \nThe initial stock available at the start of the planning window is 9 vials.  \nIn each week \\( t = 1, \\dots, 5 \\), the pharmaceutical supplier permits the hospital to submit a request whose amount must be between 0 and 27 vials.  \nNevertheless, every order submitted requires a lead time of 1 week before it becomes available for patient administration or restocking the pharmacy.  \nThe projected patient need for the drug in each week is as follows:  \n* Week 1: need 46 vials  \n* Week 2: need 50 vials  \n* Week 3: need 44 vials  \n* Week 4: need 48 vials  \n* Week 5: need 53 vials  \n\nSupply shortfalls are tolerated, but any unsatisfied demand will not be carried forward.  \nThroughout the treatment cycle, drug quantities may be treated as continuous measures, and the total volume of medication physically stored at any moment must not surpass the pharmacy’s refrigeration capacity of 53 vials.\n\nSpecifically, in week 3, the maximum allowable order size is restricted to 26 vials.  \nIn week 1, the on‑hand medication stock must be maintained at a minimum of 2 vials.\n\nThe aggregate expense over the planning interval comprises three elements: the procurement cost, amounting to 5 per vial ordered; the storage cost, amounting to 3 per vial kept from one week to the next; and the shortage penalty, amounting to 7 per vial of unmet patient need. Determine the optimal order quantity for each week and monitor the resulting stock and shortage levels in order to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

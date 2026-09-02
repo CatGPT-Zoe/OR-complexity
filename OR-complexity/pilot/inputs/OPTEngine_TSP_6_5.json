@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to perform maintenance checks at six distinct facilities.\n\nThe travel times between facilities, measured in minutes, are as follows:\n* Facility Alpha to Bravo: 96.8 minutes\n* Facility Alpha to Charlie: 65.9 minutes\n* Facility Alpha to Delta: 109.9 minutes\n* Facility Alpha to Echo: 84.1 minutes\n* Facility Alpha to Foxtrot: 117.5 minutes\n* Facility Bravo to Charlie: 137.0 minutes\n* Facility Bravo to Delta: 108.3 minutes\n* Facility Bravo to Echo: 109.6 minutes\n* Facility Bravo to Foxtrot: 111.0 minutes\n* Facility Charlie to Delta: 84.9 minutes\n* Facility Charlie to Echo: 149.7 minutes\n* Facility Charlie to Foxtrot: 92.6 minutes\n* Facility Delta to Echo: 180.7 minutes\n* Facility Delta to Foxtrot: 8.1 minutes\n* Facility Echo to Foxtrot: 187.1 minutes\n\nThe objective is to determine the most time-efficient inspection circuit, wherein the technician must visit every facility precisely once before concluding the tour back at the initial point of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 6 delivery trucks to transport goods to 6 different warehouses.\n\nEach truck must follow a specific route represented as pairs (Warehouse, Loading time), where each pair indicates the warehouse where the truck must load and the time required for loading. The order of pairs specifies the required sequence of warehouse visits.\n\nTruck details:\n* Truck 1 follows the route: (W5, 3) → (W6, 1) → (W3, 9) → (W2, 3) → (W1, 10) → (W4, 7)\n* Truck 2 follows the route: (W3, 1) → (W4, 6) → (W1, 9) → (W6, 3) → (W2, 4) → (W5, 6)\n* Truck 3 follows the route: (W6, 5) → (W4, 3) → (W1, 7) → (W3, 2) → (W5, 10) → (W2, 8)\n* Truck 4 follows the route: (W2, 2) → (W4, 7) → (W1, 7) → (W5, 5) → (W3, 5) → (W6, 7)\n* Truck 5 follows the route: (W3, 8) → (W5, 1) → (W6, 5) → (W1, 4) → (W2, 7) → (W4, 7)\n* Truck 6 follows the route: (W4, 10) → (W6, 3) → (W1, 10) → (W3, 5) → (W2, 6) → (W5, 1)\n\nEach loading operation must be completed without interruption once it begins, and each warehouse loading dock can only accommodate one truck at a time. The objective is to schedule all truck loading operations at the warehouses so that the total completion time for all deliveries is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

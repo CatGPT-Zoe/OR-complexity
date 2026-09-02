@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_78",
+  "annotation_mode": "semantic",
+  "problem_text": "A shoe store employs 5 full-time sales clerks and 4 part-time sales clerks. Their working hours and wage conditions are shown in Table 3.3.\n\nTable 3.3\n\n|  | Monthly Working Hours | Sales Volume (Pairs/Hour) | Wage (Yuan/Hour) | Overtime Pay (Yuan/Hour) |\n| :---: | :---: | :---: | :---: | :---: |\n| Full-time | 160 | 5 | 1 | 1.5 |\n| Part-time | 80 | 2 | 0.6 | 0.7 |\n\nEach pair of shoes sold earns a profit of 0.3 yuan. The store has set the following goals:\n\n$p_{1}$: Achieve monthly sales of 5500 pairs;\n\n$p_{2}$: Ensure full employment of all sales clerks;\n\n$p_{3}$: Minimize overtime hours.\n\nTry to establish a model for this problem.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

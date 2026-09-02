@@ -1,0 +1,99 @@
+{
+  "instance_id": "MIPLIB_NL_neos-5192052-neckar",
+  "annotation_mode": "semantic",
+  "problem_text": "Assume you are the Operations Director of a chemical processing company. You manage a network that sources raw materials from N1 supply regions. Each region supplies N_Items distinct types of raw materials . You process them through specific production lines and fulfill contracts for N3 potential strategic partners.\n\nYour goal is to maximize total net profit (which is equivalent to minimizing the negative of profit).\n\nKey operations involve:\n1. **Sourcing:** Obtaining N_Items types of raw materials from N1 different supply groups. Each group has a total capacity limit for the sum of all its items.\n2. **Processing & Splitting:** Raw materials are processed. The logic corresponds to the N_Items types: some transfer 100% of the volume, while others chemically separate the input into 80% Main Product and 20% By-Product.\n3. **Production Line Decisions:** You have N2 binary production decisions (including lines and special batches). Activating a decision incurs a fixed setup cost/benefit. Most decisions are tied to the capacity of processing a specific Item Type (Big-M constraint).\n4. **Strategic Contracts:** There are major strategic contracts available. Accepting a contract brings a large fixed bonus but requires allocating significant production capacity. You are limited to selecting at most 4 out of these strategic contracts.\n5. **Distribution:** Processed goods are sent to distribution zones, which also have capacity limits.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "files_1",
+      "indices": [
+        "Supply_Group_ID",
+        "Max_Quantity"
+      ],
+      "unit": "",
+      "values": "| Supply_Group_ID | Max_Quantity |\n|---|---|\n| R0001 | 70000.0 |\n| R0002 | 80000.0 |\n| R0003 | 300000.0 |\n| R0004 | 250000.0 |\n| R0005 | 200000.0 |\n| R0006 | 300000.0 |"
+    },
+    {
+      "name": "files_2",
+      "indices": [
+        "Distribution_Zone_ID",
+        "Max_Volume"
+      ],
+      "unit": "",
+      "values": "| Distribution_Zone_ID | Max_Volume |\n|---|---|\n| R0007 | 1200000.0 |\n| R0008 | 960000.0 |\n| R0009 | 240000.0 |\n| R0010 | 1200000.0 |\n| R0011 | 960000.0 |\n| R0012 | 240000.0 |\n| R0013 | 1200000.0 |\n| R0014 | 960000.0 |\n| R0015 | 240000.0 |"
+    },
+    {
+      "name": "files_3",
+      "indices": [
+        "Line_ID",
+        "Big_M_Capacity",
+        "Fixed_Cost_Bonus"
+      ],
+      "unit": "",
+      "values": "| Line_ID | Big_M_Capacity | Fixed_Cost_Bonus |\n|---|---|---|\n| R0016 | 100000.0 | -50000.0 |\n| R0017 | 100000.0 | -40000.0 |\n| R0018 | 50000.0 | -80000.0 |\n| R0019 | 300000.0 | -50000.0 |\n| R0020 | 100000.0 | -60000.0 |\n| R0021 | 200000.0 | -60000.0 |\n| R0022 | 100000.0 | -70000.0 |\n| R0023 | 60000.0 | -80000.0 |\n| R0024 | 400000.0 | -50000.0 |\n| R0025 | 280000.0 | -60000.0 |\n| R0026 | 100000.0 | -80000.0 |\n| R0027 | 100000.0 | -60000.0 |\n| R0028 | 60000.0 | -70000.0 |\n| R0029 | 50000.0 | -80000.0 |\n| R0030 | 100000.0 | -60000.0 |\n| R0031 | 90000.0 | -70000.0 |\n| R0032 | 50000.0 | -80000.0 |"
+    },
+    {
+      "name": "files_4",
+      "indices": [
+        "Contract_ID",
+        "Capacity_Requirement",
+        "Fixed_Bonus"
+      ],
+      "unit": "",
+      "values": "| Contract_ID | Capacity_Requirement | Fixed_Bonus |\n|---|---|---|\n| R0033 | 250000.0 | -500000.0 |\n| R0034 | 500000.0 | -500000.0 |\n| R0035 | 360000.0 | -500000.0 |\n| R0036 | 780000.0 | -500000.0 |\n| R0037 | 210000.0 | -500000.0 |\n| R0038 | 240000.0 | -500000.0 |"
+    },
+    {
+      "name": "files_5",
+      "indices": [
+        "Input_Variable_ID",
+        "Output_Variable_ID",
+        "Yield_Ratio"
+      ],
+      "unit": "",
+      "values": "| Input_Variable_ID | Output_Variable_ID | Yield_Ratio |\n|---|---|---|\n| C0001 | C0103 | 1.0 |\n| C0001 | C0106 | 1.0 |\n| C0001 | C0109 | 1.0 |\n| C0018 | C0103 | 1.0 |\n| C0018 | C0106 | 1.0 |\n| C0018 | C0109 | 1.0 |\n| C0035 | C0103 | 1.0 |\n| C0035 | C0106 | 1.0 |\n| C0035 | C0109 | 1.0 |\n| C0052 | C0103 | 1.0 |\n| C0052 | C0106 | 1.0 |\n| C0052 | C0109 | 1.0 |\n| C0069 | C0103 | 1.0 |\n| C0069 | C0106 | 1.0 |\n| C0069 | C0109 | 1.0 |\n| C0086 | C0103 | 1.0 |\n| C0086 | C0106 | 1.0 |\n| C0086 | C0109 | 1.0 |\n| C0002 | C0104 | 0.8 |\n| C0002 | C0107 | 0.8 |\n| C0002 | C0110 | 0.8 |\n| C0019 | C0104 | 0.8 |\n| C0019 | C0107 | 0.8 |\n| C0019 | C0110 | 0.8 |\n| C0036 | C0104 | 0.8 |\n| C0036 | C0107 | 0.8 |\n| C0036 | C0110 | 0.8 |\n| C0053 | C0104 | 0.8 |\n| C0053 | C0107 | 0.8 |\n| C0053 | C0110 | 0.8 |\n| C0070 | C0104 | 0.8 |\n| C0070 | C0107 | 0.8 |\n| C0070 | C0110 | 0.8 |\n| C0087 | C0104 | 0.8 |\n| C0087 | C0107 | 0.8 |\n| C0087 | C0110 | 0.8 |\n| C0003 | C0105 | 0.2 |\n| C0003 | C0108 | 0.2 |\n| C0003 | C0111 | 0.2 |\n| C0020 | C0105 | 0.2 |\n| C0020 | C0108 | 0.2 |\n| C0020 | C0111 | 0.2 |\n| C0037 | C0105 | 0.2 |\n| C0037 | C0108 | 0.2 |\n| C0037 | C0111 | 0.2 |\n| C0054 | C0105 | 0.2 |\n| C0054 | C0108 | 0.2 |\n| C0054 | C0111 | 0.2 |\n| C0071 | C0105 | 0.2 |\n| C0071 | C0108 | 0.2 |\n| C0071 | C0111 | 0.2 |\n| C0088 | C0105 | 0.2 |\n| C0088 | C0108 | 0.2 |\n| C0088 | C0111 | 0.2 |\n| C0004 | C0112 | 1.0 |\n| C0004 | C0115 | 1.0 |\n| C0004 | C0118 | 1.0 |\n| C0021 | C0112 | 1.0 |\n| C0021 | C0115 | 1.0 |\n| C0021 | C0118 | 1.0 |\n| C0038 | C0112 | 1.0 |\n| C0038 | C0115 | 1.0 |\n| C0038 | C0118 | 1.0 |\n| C0055 | C0112 | 1.0 |\n| C0055 | C0115 | 1.0 |\n| C0055 | C0118 | 1.0 |\n| C0072 | C0112 | 1.0 |\n| C0072 | C0115 | 1.0 |\n| C0072 | C0118 | 1.0 |\n| C0089 | C0112 | 1.0 |\n| C0089 | C0115 | 1.0 |\n| C0089 | C0118 | 1.0 |\n| C0005 | C0113 | 0.8 |\n| C0005 | C0116 | 0.8 |\n| C0005 | C0119 | 0.8 |\n| C0022 | C0113 | 0.8 |\n| C0022 | C0116 | 0.8 |\n| C0022 | C0119 | 0.8 |\n| C0039 | C0113 | 0.8 |\n| C0039 | C0116 | 0.8 |\n| C0039 | C0119 | 0.8 |\n| C0056 | C0113 | 0.8 |\n| C0056 | C0116 | 0.8 |\n| C0056 | C0119 | 0.8 |\n| C0073 | C0113 | 0.8 |\n| C0073 | C0116 | 0.8 |\n| C0073 | C0119 | 0.8 |\n| C0090 | C0113 | 0.8 |\n| C0090 | C0116 | 0.8 |\n| C0090 | C0119 | 0.8 |\n| C0006 | C0121 | 1.0 |\n| C0006 | C0124 | 1.0 |\n| C0006 | C0127 | 1.0 |\n| C0023 | C0121 | 1.0 |\n| C0023 | C0124 | 1.0 |\n| C0023 | C0127 | 1.0 |\n| C0040 | C0121 | 1.0 |\n| C0040 | C0124 | 1.0 |\n| C0040 | C0127 | 1.0 |\n| C0057 | C0121 | 1.0 |\n| C0057 | C0124 | 1.0 |\n| C0057 | C0127 | 1.0 |\n| C0074 | C0121 | 1.0 |\n| C0074 | C0124 | 1.0 |\n| C0074 | C0127 | 1.0 |\n| C0091 | C0121 | 1.0 |\n| C0091 | C0124 | 1.0 |\n| C0091 | C0127 | 1.0 |\n| C0007 | C0122 | 0.8 |\n| C0007 | C0125 | 0.8 |\n| C0007 | C0128 | 0.8 |\n| C0024 | C0122 | 0.8 |\n| C0024 | C0125 | 0.8 |\n| C0024 | C0128 | 0.8 |\n| C0041 | C0122 | 0.8 |\n| C0041 | C0125 | 0.8 |\n| C0041 | C0128 | 0.8 |\n| C0058 | C0122 | 0.8 |\n| C0058 | C0125 | 0.8 |\n| C0058 | C0128 | 0.8 |\n| C0075 | C0122 | 0.8 |\n| C0075 | C0125 | 0.8 |\n| C0075 | C0128 | 0.8 |\n| C0092 | C0122 | 0.8 |\n| C0092 | C0125 | 0.8 |\n| C0092 | C0128 | 0.8 |\n| C0008 | C0123 | 0.2 |\n| C0008 | C0126 | 0.2 |\n| C0008 | C0129 | 0.2 |\n| C0025 | C0123 | 0.2 |\n| C0025 | C0126 | 0.2 |\n| C0025 | C0129 | 0.2 |\n| C0042 | C0123 | 0.2 |\n| C0042 | C0126 | 0.2 |\n| C0042 | C0129 | 0.2 |\n| C0059 | C0123 | 0.2 |\n| C0059 | C0126 | 0.2 |\n| C0059 | C0129 | 0.2 |\n| C0076 | C0123 | 0.2 |\n| C0076 | C0126 | 0.2 |\n| C0076 | C0129 | 0.2 |\n| C0093 | C0123 | 0.2 |\n| C0093 | C0126 | 0.2 |\n| C0093 | C0129 | 0.2 |\n| C0009 | C0130 | 1.0 |\n| C0009 | C0133 | 1.0 |\n| C0009 | C0136 | 1.0 |\n| C0026 | C0130 | 1.0 |\n| C0026 | C0133 | 1.0 |\n| C0026 | C0136 | 1.0 |\n| C0043 | C0130 | 1.0 |\n| C0043 | C0133 | 1.0 |\n| C0043 | C0136 | 1.0 |\n| C0060 | C0130 | 1.0 |\n| C0060 | C0133 | 1.0 |\n| C0060 | C0136 | 1.0 |\n| C0077 | C0130 | 1.0 |\n| C0077 | C0133 | 1.0 |\n| C0077 | C0136 | 1.0 |\n| C0094 | C0130 | 1.0 |\n| C0094 | C0133 | 1.0 |\n| C0094 | C0136 | 1.0 |\n| C0010 | C0131 | 0.8 |\n| C0010 | C0134 | 0.8 |\n| C0010 | C0137 | 0.8 |\n| C0027 | C0131 | 0.8 |\n| C0027 | C0134 | 0.8 |\n| C0027 | C0137 | 0.8 |\n| C0044 | C0131 | 0.8 |\n| C0044 | C0134 | 0.8 |\n| C0044 | C0137 | 0.8 |\n| C0061 | C0131 | 0.8 |\n| C0061 | C0134 | 0.8 |\n| C0061 | C0137 | 0.8 |\n| C0078 | C0131 | 0.8 |\n| C0078 | C0134 | 0.8 |\n| C0078 | C0137 | 0.8 |\n| C0095 | C0131 | 0.8 |\n| C0095 | C0134 | 0.8 |\n| C0095 | C0137 | 0.8 |\n| C0011 | C0132 | 0.2 |\n| C0011 | C0135 | 0.2 |\n| C0011 | C0138 | 0.2 |\n| C0028 | C0132 | 0.2 |\n| C0028 | C0135 | 0.2 |\n| C0028 | C0138 | 0.2 |\n| C0045 | C0132 | 0.2 |\n| C0045 | C0135 | 0.2 |\n| C0045 | C0138 | 0.2 |\n| C0062 | C0132 | 0.2 |\n| C0062 | C0135 | 0.2 |\n| C0062 | C0138 | 0.2 |\n| C0079 | C0132 | 0.2 |\n| C0079 | C0135 | 0.2 |\n| C0079 | C0138 | 0.2 |\n| C0096 | C0132 | 0.2 |\n| C0096 | C0135 | 0.2 |\n| C0096 | C0138 | 0.2 |\n| C0012 | C0139 | 1.0 |\n| C0012 | C0142 | 1.0 |\n| C0012 | C0145 | 1.0 |\n| C0029 | C0139 | 1.0 |\n| C0029 | C0142 | 1.0 |\n| C0029 | C0145 | 1.0 |\n| C0046 | C0139 | 1.0 |\n| C0046 | C0142 | 1.0 |\n| C0046 | C0145 | 1.0 |\n| C0063 | C0139 | 1.0 |\n| C0063 | C0142 | 1.0 |\n| C0063 | C0145 | 1.0 |\n| C0080 | C0139 | 1.0 |\n| C0080 | C0142 | 1.0 |\n| C0080 | C0145 | 1.0 |\n| C0097 | C0139 | 1.0 |\n| C0097 | C0142 | 1.0 |\n| C0097 | C0145 | 1.0 |\n| C0013 | C0140 | 0.8 |\n| C0013 | C0143 | 0.8 |\n| C0013 | C0146 | 0.8 |\n| C0030 | C0140 | 0.8 |\n| C0030 | C0143 | 0.8 |\n| C0030 | C0146 | 0.8 |\n| C0047 | C0140 | 0.8 |\n| C0047 | C0143 | 0.8 |\n| C0047 | C0146 | 0.8 |\n| C0064 | C0140 | 0.8 |\n| C0064 | C0143 | 0.8 |\n| C0064 | C0146 | 0.8 |\n| C0081 | C0140 | 0.8 |\n| C0081 | C0143 | 0.8 |\n| C0081 | C0146 | 0.8 |\n| C0098 | C0140 | 0.8 |\n| C0098 | C0143 | 0.8 |\n| C0098 | C0146 | 0.8 |\n| C0014 | C0141 | 0.2 |\n| C0014 | C0144 | 0.2 |\n| C0014 | C0147 | 0.2 |\n| C0031 | C0141 | 0.2 |\n| C0031 | C0144 | 0.2 |\n| C0031 | C0147 | 0.2 |\n| C0048 | C0141 | 0.2 |\n| C0048 | C0144 | 0.2 |\n| C0048 | C0147 | 0.2 |\n| C0065 | C0141 | 0.2 |\n| C0065 | C0144 | 0.2 |\n| C0065 | C0147 | 0.2 |\n| C0082 | C0141 | 0.2 |\n| C0082 | C0144 | 0.2 |\n| C0082 | C0147 | 0.2 |\n| C0099 | C0141 | 0.2 |\n| C0099 | C0144 | 0.2 |\n| C0099 | C0147 | 0.2 |\n| C0015 | C0148 | 1.0 |\n| C0015 | C0151 | 1.0 |\n| C0015 | C0154 | 1.0 |\n| C0032 | C0148 | 1.0 |\n| C0032 | C0151 | 1.0 |\n| C0032 | C0154 | 1.0 |\n| C0049 | C0148 | 1.0 |\n| C0049 | C0151 | 1.0 |\n| C0049 | C0154 | 1.0 |\n| C0066 | C0148 | 1.0 |\n| C0066 | C0151 | 1.0 |\n| C0066 | C0154 | 1.0 |\n| C0083 | C0148 | 1.0 |\n| C0083 | C0151 | 1.0 |\n| C0083 | C0154 | 1.0 |\n| C0100 | C0148 | 1.0 |\n| C0100 | C0151 | 1.0 |\n| C0100 | C0154 | 1.0 |\n| C0016 | C0149 | 0.8 |\n| C0016 | C0152 | 0.8 |\n| C0016 | C0155 | 0.8 |\n| C0033 | C0149 | 0.8 |\n| C0033 | C0152 | 0.8 |\n| C0033 | C0155 | 0.8 |\n| C0050 | C0149 | 0.8 |\n| C0050 | C0152 | 0.8 |\n| C0050 | C0155 | 0.8 |\n| C0067 | C0149 | 0.8 |\n| C0067 | C0152 | 0.8 |\n| C0067 | C0155 | 0.8 |\n| C0084 | C0149 | 0.8 |\n| C0084 | C0152 | 0.8 |\n| C0084 | C0155 | 0.8 |\n| C0101 | C0149 | 0.8 |\n| C0101 | C0152 | 0.8 |\n| C0101 | C0155 | 0.8 |\n| C0017 | C0150 | 0.2 |\n| C0017 | C0153 | 0.2 |\n| C0017 | C0156 | 0.2 |\n| C0034 | C0150 | 0.2 |\n| C0034 | C0153 | 0.2 |\n| C0034 | C0156 | 0.2 |\n| C0051 | C0150 | 0.2 |\n| C0051 | C0153 | 0.2 |\n| C0051 | C0156 | 0.2 |\n| C0068 | C0150 | 0.2 |\n| C0068 | C0153 | 0.2 |\n| C0068 | C0156 | 0.2 |\n| C0085 | C0150 | 0.2 |\n| C0085 | C0153 | 0.2 |\n| C0085 | C0156 | 0.2 |\n| C0102 | C0150 | 0.2 |\n| C0102 | C0153 | 0.2 |\n| C0102 | C0156 | 0.2 |"
+    },
+    {
+      "name": "files_6",
+      "indices": [
+        "Variable_ID",
+        "Unit_Cost_Revenue",
+        "Type"
+      ],
+      "unit": "",
+      "values": "| Variable_ID | Unit_Cost_Revenue | Type |\n|---|---|---|\n| C0001 | -50.0 | Continuous |\n| C0002 | -52.0 | Continuous |\n| C0003 | -54.0 | Continuous |\n| C0004 | -114.0 | Continuous |\n| C0005 | -119.0 | Continuous |\n| C0006 | -115.0 | Continuous |\n| C0007 | -121.0 | Continuous |\n| C0008 | -122.0 | Continuous |\n| C0009 | -114.0 | Continuous |\n| C0010 | -117.0 | Continuous |\n| C0011 | -118.0 | Continuous |\n| C0012 | -116.0 | Continuous |\n| C0013 | -119.0 | Continuous |\n| C0014 | -120.0 | Continuous |\n| C0015 | -116.0 | Continuous |\n| C0016 | -120.0 | Continuous |\n| C0017 | -121.0 | Continuous |\n| C0018 | -117.0 | Continuous |\n| C0019 | -119.0 | Continuous |\n| C0020 | -121.0 | Continuous |\n| C0021 | -65.0 | Continuous |\n| C0022 | -70.0 | Continuous |\n| C0023 | -66.0 | Continuous |\n| C0024 | -72.0 | Continuous |\n| C0025 | -73.0 | Continuous |\n| C0026 | -55.0 | Continuous |\n| C0027 | -58.0 | Continuous |\n| C0028 | -59.0 | Continuous |\n| C0029 | -58.0 | Continuous |\n| C0030 | -61.0 | Continuous |\n| C0031 | -62.0 | Continuous |\n| C0032 | -60.0 | Continuous |\n| C0033 | -64.0 | Continuous |\n| C0034 | -65.0 | Continuous |\n| C0035 | -117.0 | Continuous |\n| C0036 | -119.0 | Continuous |\n| C0037 | -121.0 | Continuous |\n| C0038 | -114.0 | Continuous |\n| C0039 | -119.0 | Continuous |\n| C0040 | -36.0 | Continuous |\n| C0041 | -42.0 | Continuous |\n| C0042 | -43.0 | Continuous |\n| C0043 | -37.0 | Continuous |\n| C0044 | -40.0 | Continuous |\n| C0045 | -41.0 | Continuous |\n| C0046 | -40.0 | Continuous |\n| C0047 | -43.0 | Continuous |\n| C0048 | -44.0 | Continuous |\n| C0049 | -42.0 | Continuous |\n| C0050 | -46.0 | Continuous |\n| C0051 | -47.0 | Continuous |\n| C0052 | -117.0 | Continuous |\n| C0053 | -119.0 | Continuous |\n| C0054 | -121.0 | Continuous |\n| C0055 | -77.0 | Continuous |\n| C0056 | -82.0 | Continuous |\n| C0057 | -58.0 | Continuous |\n| C0058 | -64.0 | Continuous |\n| C0059 | -65.0 | Continuous |\n| C0060 | -40.0 | Continuous |\n| C0061 | -43.0 | Continuous |\n| C0062 | -44.0 | Continuous |\n| C0063 | -44.0 | Continuous |\n| C0064 | -47.0 | Continuous |\n| C0065 | -48.0 | Continuous |\n| C0066 | -45.0 | Continuous |\n| C0067 | -49.0 | Continuous |\n| C0068 | -50.0 | Continuous |\n| C0069 | -117.0 | Continuous |\n| C0070 | -119.0 | Continuous |\n| C0071 | -121.0 | Continuous |\n| C0072 | -41.0 | Continuous |\n| C0073 | -46.0 | Continuous |\n| C0074 | -64.0 | Continuous |\n| C0075 | -70.0 | Continuous |\n| C0076 | -71.0 | Continuous |\n| C0077 | -61.0 | Continuous |\n| C0078 | -64.0 | Continuous |\n| C0079 | -65.0 | Continuous |\n| C0080 | -57.0 | Continuous |\n| C0081 | -60.0 | Continuous |\n| C0082 | -61.0 | Continuous |\n| C0083 | -58.0 | Continuous |\n| C0084 | -62.0 | Continuous |\n| C0085 | -63.0 | Continuous |\n| C0086 | -117.0 | Continuous |\n| C0087 | -119.0 | Continuous |\n| C0088 | -121.0 | Continuous |\n| C0089 | -43.0 | Continuous |\n| C0090 | -48.0 | Continuous |\n| C0091 | -36.0 | Continuous |\n| C0092 | -42.0 | Continuous |\n| C0093 | -43.0 | Continuous |\n| C0094 | -40.0 | Continuous |\n| C0095 | -43.0 | Continuous |\n| C0096 | -44.0 | Continuous |\n| C0097 | -42.0 | Continuous |\n| C0098 | -45.0 | Continuous |\n| C0099 | -46.0 | Continuous |\n| C0100 | -44.0 | Continuous |\n| C0101 | -48.0 | Continuous |\n| C0102 | -49.0 | Continuous |\n| C0103 | 255.0 | Continuous |\n| C0104 | 215.0 | Continuous |\n| C0105 | 315.0 | Continuous |\n| C0106 | 255.0 | Continuous |\n| C0107 | 215.0 | Continuous |\n| C0108 | 315.0 | Continuous |\n| C0109 | 250.0 | Continuous |\n| C0110 | 210.0 | Continuous |\n| C0111 | 310.0 | Continuous |\n| C0112 | 255.0 | Continuous |\n| C0113 | 215.0 | Continuous |\n| C0114 | 315.0 | Continuous |\n| C0115 | 255.0 | Continuous |\n| C0116 | 215.0 | Continuous |\n| C0117 | 315.0 | Continuous |\n| C0118 | 250.0 | Continuous |\n| C0119 | 210.0 | Continuous |\n| C0120 | 310.0 | Continuous |\n| C0121 | 250.0 | Continuous |\n| C0122 | 210.0 | Continuous |\n| C0123 | 310.0 | Continuous |\n| C0124 | 250.0 | Continuous |\n| C0125 | 210.0 | Continuous |\n| C0126 | 310.0 | Continuous |\n| C0127 | 245.0 | Continuous |\n| C0128 | 205.0 | Continuous |\n| C0129 | 305.0 | Continuous |\n| C0130 | 241.0 | Continuous |\n| C0131 | 201.0 | Continuous |\n| C0132 | 301.0 | Continuous |\n| C0133 | 241.0 | Continuous |\n| C0134 | 201.0 | Continuous |\n| C0135 | 301.0 | Continuous |\n| C0136 | 233.0 | Continuous |\n| C0137 | 193.0 | Continuous |\n| C0138 | 293.0 | Continuous |\n| C0139 | 241.0 | Continuous |\n| C0140 | 201.0 | Continuous |\n| C0141 | 301.0 | Continuous |\n| C0142 | 241.0 | Continuous |\n| C0143 | 201.0 | Continuous |\n| C0144 | 301.0 | Continuous |\n| C0145 | 233.0 | Continuous |\n| C0146 | 193.0 | Continuous |\n| C0147 | 293.0 | Continuous |\n| C0148 | 241.0 | Continuous |\n| C0149 | 201.0 | Continuous |\n| C0150 | 301.0 | Continuous |\n| C0151 | 241.0 | Continuous |\n| C0152 | 201.0 | Continuous |\n| C0153 | 301.0 | Continuous |\n| C0154 | 233.0 | Continuous |\n| C0155 | 193.0 | Continuous |\n| C0156 | 293.0 | Continuous |\n| C0157 | -500000.0 | Integer |\n| C0158 | -500000.0 | Integer |\n| C0159 | -500000.0 | Integer |\n| C0160 | -500000.0 | Integer |\n| C0161 | -500000.0 | Integer |\n| C0162 | -500000.0 | Integer |\n| C0163 | -50000.0 | Integer |\n| C0164 | -40000.0 | Integer |\n| C0165 | -80000.0 | Integer |\n| C0166 | -50000.0 | Integer |\n| C0167 | -60000.0 | Integer |\n| C0168 | -80000.0 | Integer |\n| C0169 | -60000.0 | Integer |\n| C0170 | -70000.0 | Integer |\n| C0171 | -80000.0 | Integer |\n| C0172 | -50000.0 | Integer |\n| C0173 | -60000.0 | Integer |\n| C0174 | -80000.0 | Integer |\n| C0175 | -60000.0 | Integer |\n| C0176 | -70000.0 | Integer |\n| C0177 | -80000.0 | Integer |\n| C0178 | -60000.0 | Integer |\n| C0179 | -70000.0 | Integer |\n| C0180 | -80000.0 | Integer |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-5192052-neckar/data/supply_caps.csv",
+      "role": "parameter_table",
+      "table": "files_1"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-5192052-neckar/data/distribution_caps.csv",
+      "role": "parameter_table",
+      "table": "files_2"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-5192052-neckar/data/production_lines.csv",
+      "role": "parameter_table",
+      "table": "files_3"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-5192052-neckar/data/strategic_contracts.csv",
+      "role": "parameter_table",
+      "table": "files_4"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-5192052-neckar/data/conversion_ratios.csv",
+      "role": "parameter_table",
+      "table": "files_5"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/neos-5192052-neckar/data/variable_costs.csv",
+      "role": "parameter_table",
+      "table": "files_6"
+    }
+  ],
+  "notes": ""
+}

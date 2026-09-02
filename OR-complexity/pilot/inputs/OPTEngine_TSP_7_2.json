@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a critical circuit inspection across seven regional facilities.\n\nThe travel durations between facilities are recorded in minutes:\n* Facility Alpha to Bravo: 111.2 minutes\n* Alpha to Charlie: 162.5 minutes\n* Alpha to Delta: 35.4 minutes\n* Alpha to Echo: 135.1 minutes\n* Alpha to Foxtrot: 109.0 minutes\n* Alpha to Golf: 167.3 minutes\n* Bravo to Charlie: 108.1 minutes\n* Bravo to Delta: 141.0 minutes\n* Bravo to Echo: 118.1 minutes\n* Bravo to Foxtrot: 173.3 minutes\n* Bravo to Golf: 110.0 minutes\n* Charlie to Delta: 173.0 minutes\n* Charlie to Echo: 47.0 minutes\n* Charlie to Foxtrot: 147.8 minutes\n* Charlie to Golf: 5.4 minutes\n* Delta to Echo: 137.6 minutes\n* Delta to Foxtrot: 84.6 minutes\n* Delta to Golf: 178.2 minutes\n* Echo to Foxtrot: 101.2 minutes\n* Echo to Golf: 52.2 minutes\n* Foxtrot to Golf: 153.1 minutes\n\nThe objective is to determine the most time-efficient inspection tour that visits every facility precisely once before concluding back at the initial facility.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of cargo units onto identical transport pallets. The units are as follows:\n* Unit Alpha: mass 35kg\n* Unit Beta: mass 32kg\n* Unit Gamma: mass 34kg\n* Unit Delta: mass 46kg\n* Unit Epsilon: mass 49kg\n* Unit Zeta: mass 64kg\n* Unit Eta: mass 51kg\n* Unit Theta: mass 37kg\n* Unit Iota: mass 63kg\n* Unit Kappa: mass 45kg\n* Unit Lambda: mass 40kg\n* Unit Mu: mass 34kg\n* Unit Nu: mass 56kg\n* Unit Xi: mass 48kg\n* Unit Omicron: mass 48kg\n* Unit Pi: mass 63kg\n\nEach pallet possesses a maximum safe load capacity of 100 kilograms. The coordinator must allocate every cargo unit, with each unit assigned to precisely one pallet, ensuring the cumulative mass on any given pallet does not surpass its designated limit. The primary objective is to accomplish this allocation while employing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

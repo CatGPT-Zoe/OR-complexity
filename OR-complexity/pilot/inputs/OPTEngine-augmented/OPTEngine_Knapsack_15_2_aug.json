@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assembling a shipment of specialized components to maximize total utility points while adhering to a vehicle's cargo weight limit.\n\nThe components available are:\n* Component A: weight 28kg, utility 152 points\n* Component B: weight 23kg, utility 215 points\n* Component C: weight 50kg, utility 154 points\n* Component D: weight 7kg, utility 255 points\n* Component E: weight 19kg, utility 71 points\n* Component F: weight 29kg, utility 88 points\n* Component G: weight 23kg, utility 134 points\n* Component H: weight 48kg, utility 105 points\n* Component I: weight 22kg, utility 265 points\n* Component J: weight 15kg, utility 66 points\n* Component K: weight 44kg, utility 206 points\n* Component L: weight 25kg, utility 247 points\n* Component M: weight 33kg, utility 246 points\n* Component N: weight 37kg, utility 122 points\n* Component O: weight 44kg, utility 214 points\n\nDue to compatibility protocols, exactly one of Component A and Component B must be included in the final shipment.\n\nIf Component C is selected, it requires special handling equipment that reduces the vehicle's effective cargo capacity by 10 kg.\nThe vehicle's maximum cargo capacity is 312 kg. The coordinator must determine the optimal selection of components to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

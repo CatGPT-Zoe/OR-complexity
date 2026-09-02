@@ -1,0 +1,9 @@
+{
+  "instance_id": "MIPLIB_NL_ex1010-pi",
+  "annotation_mode": "semantic",
+  "problem_text": "This is a set cover problem. We have N sets.The goal is to select the minimum number of sets such that each integer i from 1 to I is covered a number once. The sets available for selection are stored in sets S1 , and each set lists the integers it covers. Sets in S1 can only be selected 0 or 1 times. ",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

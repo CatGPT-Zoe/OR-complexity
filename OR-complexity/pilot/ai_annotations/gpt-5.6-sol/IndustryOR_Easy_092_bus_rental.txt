@@ -1,0 +1,310 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "IndustryOR_Easy_092_bus_rental",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "SET_BUS_TYPES",
+      "canonical_name": "vehicle_types",
+      "members": [
+        "bus",
+        "minibus"
+      ],
+      "description": "Types of passenger vehicles available for the trip.",
+      "source_grounding": "The transportation company has 10 buses with 50 seats each and 8 minibuses with 40 seats each",
+      "source_spans": [
+        "bus_types",
+        "bus and minibus types",
+        "10 buses with 50 seats each and 8 minibuses with 40 seats each"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "P_STUDENT_DEMAND",
+      "canonical_name": "students_requiring_transport",
+      "value": 400,
+      "unit": "students",
+      "source_grounding": "A school is preparing a trip for 400 students.",
+      "source_spans": [
+        "400 students",
+        "| students | available_drivers |\n|---|---|\n| 400 | 9 |"
+      ]
+    },
+    {
+      "id": "P_AVAILABLE_FLEET",
+      "canonical_name": "available_vehicle_count",
+      "index_set": "SET_BUS_TYPES",
+      "values": {
+        "bus": 10,
+        "minibus": 8
+      },
+      "unit": "vehicles",
+      "source_grounding": "The transportation company has 10 buses with 50 seats each and 8 minibuses with 40 seats each.",
+      "source_spans": [
+        "10 buses",
+        "8 minibuses"
+      ]
+    },
+    {
+      "id": "P_SEATS_PER_VEHICLE",
+      "canonical_name": "passenger_seat_capacity",
+      "index_set": "SET_BUS_TYPES",
+      "values": {
+        "bus": 50,
+        "minibus": 40
+      },
+      "unit": "seats per vehicle",
+      "source_grounding": "The transportation company has 10 buses with 50 seats each and 8 minibuses with 40 seats each.",
+      "source_spans": [
+        "50 seats each",
+        "40 seats each",
+        "| bus_type | seats | rental_cost | drivers_needed |\n|---|---|---|---|\n| bus | 50 | 800 | 1 |\n| minibus | 40 | 600 | 1 |"
+      ]
+    },
+    {
+      "id": "P_RENTAL_COST",
+      "canonical_name": "vehicle_rental_cost",
+      "index_set": "SET_BUS_TYPES",
+      "values": {
+        "bus": 800,
+        "minibus": 600
+      },
+      "unit": "GBP per rented vehicle",
+      "source_grounding": "The rental cost for a bus is £800, and the rental cost for a minibus is £600.",
+      "source_spans": [
+        "rental cost for a bus is £800",
+        "rental cost for a minibus is £600",
+        "| bus_type | seats | rental_cost | drivers_needed |\n|---|---|---|---|\n| bus | 50 | 800 | 1 |\n| minibus | 40 | 600 | 1 |"
+      ]
+    },
+    {
+      "id": "P_DRIVERS_NEEDED",
+      "canonical_name": "drivers_required_per_vehicle",
+      "index_set": "SET_BUS_TYPES",
+      "values": {
+        "bus": 1,
+        "minibus": 1
+      },
+      "unit": "drivers per vehicle",
+      "source_grounding": "The inline bus_params table states that each bus and each minibus needs one driver.",
+      "source_spans": [
+        "| bus_type | seats | rental_cost | drivers_needed |\n|---|---|---|---|\n| bus | 50 | 800 | 1 |\n| minibus | 40 | 600 | 1 |"
+      ]
+    },
+    {
+      "id": "P_AVAILABLE_DRIVERS",
+      "canonical_name": "available_driver_count",
+      "value": 9,
+      "unit": "drivers",
+      "source_grounding": "Only 9 drivers are available.",
+      "source_spans": [
+        "only 9 drivers are available",
+        "| students | available_drivers |\n|---|---|\n| 400 | 9 |"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "E_BUS_USE_COUNT",
+      "canonical_family": "full_size_bus_use",
+      "canonical_name": "number_of_buses_used",
+      "entity_role": "decision",
+      "semantic_description": "Count of full-size buses selected for use on the school trip.",
+      "value_semantics": {
+        "kind": "count",
+        "integrality": "integer",
+        "sign": "nonnegative"
+      },
+      "source_grounding": "Calculate how many of each type of bus should be used to achieve the lowest cost.",
+      "source_spans": [
+        "how many of each type of bus should be used",
+        "10 buses"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "E_MINIBUS_USE_COUNT",
+      "canonical_family": "minibus_use",
+      "canonical_name": "number_of_minibuses_used",
+      "entity_role": "decision",
+      "semantic_description": "Count of minibuses selected for use on the school trip.",
+      "value_semantics": {
+        "kind": "count",
+        "integrality": "integer",
+        "sign": "nonnegative"
+      },
+      "source_grounding": "Calculate how many of each type of bus should be used to achieve the lowest cost.",
+      "source_spans": [
+        "how many of each type of bus should be used",
+        "8 minibuses"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "id": "OBJ_MIN_RENTAL_COST",
+    "sense": "minimize",
+    "canonical_name": "total_vehicle_rental_cost",
+    "normalized_semantics": "Minimize the total rental cost of all buses and minibuses used.",
+    "support_entity_ids": [
+      "E_BUS_USE_COUNT",
+      "E_MINIBUS_USE_COUNT"
+    ],
+    "parameter_refs": [
+      "P_RENTAL_COST"
+    ],
+    "cost_terms": [
+      {
+        "entity_id": "E_BUS_USE_COUNT",
+        "coefficient_parameter": "P_RENTAL_COST",
+        "parameter_index": "bus"
+      },
+      {
+        "entity_id": "E_MINIBUS_USE_COUNT",
+        "coefficient_parameter": "P_RENTAL_COST",
+        "parameter_index": "minibus"
+      }
+    ],
+    "source_grounding": "Calculate how many of each type of bus should be used to achieve the lowest cost.",
+    "source_spans": [
+      "rental cost for a bus is £800",
+      "rental cost for a minibus is £600",
+      "achieve the lowest cost"
+    ],
+    "confidence": 1.0
+  },
+  "obligations": [
+    {
+      "id": "O_FLEET_AVAILABILITY",
+      "canonical_family": "vehicle_fleet_availability_upper_bound",
+      "canonical_name": "used_vehicle_count_cannot_exceed_available_fleet",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "fleet_availability",
+      "normalized_semantics": "For each vehicle type, the number used must not exceed the number available of that type.",
+      "support_entity_ids": [
+        "E_BUS_USE_COUNT",
+        "E_MINIBUS_USE_COUNT"
+      ],
+      "incidence_slots": [
+        {
+          "slot": "used_bus_count",
+          "entity_id": "E_BUS_USE_COUNT",
+          "parameter_index": "bus"
+        },
+        {
+          "slot": "used_minibus_count",
+          "entity_id": "E_MINIBUS_USE_COUNT",
+          "parameter_index": "minibus"
+        }
+      ],
+      "quantifier": {
+        "kind": "FOR_EACH",
+        "set_ref": "SET_BUS_TYPES"
+      },
+      "scope_kind": "type_indexed_componentwise",
+      "parameter_refs": [
+        "P_AVAILABLE_FLEET"
+      ],
+      "condition": "Applies separately to each available vehicle type.",
+      "coupling_active": false,
+      "source_status": "explicit",
+      "normalization_rationale": "The bus and minibus limits are clauses of the same fleet-availability rule schema and are componentwise rather than jointly coupling.",
+      "source_grounding": "The transportation company has 10 buses with 50 seats each and 8 minibuses with 40 seats each.",
+      "source_spans": [
+        "has 10 buses",
+        "8 minibuses"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "O_STUDENT_SEAT_COVERAGE",
+      "canonical_family": "passenger_seat_demand_coverage",
+      "canonical_name": "provide_enough_seats_for_all_students",
+      "structural_form": "COVERAGE",
+      "business_role": "transport_demand_satisfaction",
+      "normalized_semantics": "The total passenger seats supplied by the buses and minibuses used must cover all 400 students.",
+      "support_entity_ids": [
+        "E_BUS_USE_COUNT",
+        "E_MINIBUS_USE_COUNT"
+      ],
+      "incidence_slots": [
+        {
+          "slot": "bus_supplied_seats",
+          "entity_id": "E_BUS_USE_COUNT",
+          "coefficient_parameter": "P_SEATS_PER_VEHICLE",
+          "parameter_index": "bus"
+        },
+        {
+          "slot": "minibus_supplied_seats",
+          "entity_id": "E_MINIBUS_USE_COUNT",
+          "coefficient_parameter": "P_SEATS_PER_VEHICLE",
+          "parameter_index": "minibus"
+        }
+      ],
+      "quantifier": {
+        "kind": "SINGLE_INSTANCE"
+      },
+      "scope_kind": "aggregate_across_vehicle_types",
+      "parameter_refs": [
+        "P_SEATS_PER_VEHICLE",
+        "P_STUDENT_DEMAND"
+      ],
+      "coupling_active": true,
+      "source_status": "contextually_explicit",
+      "normalization_rationale": "Preparing transportation for 400 students requires the selected fleet to provide at least 400 passenger seats.",
+      "source_grounding": "A school is preparing a trip for 400 students. The vehicles have 50 and 40 seats respectively.",
+      "source_spans": [
+        "a trip for 400 students",
+        "50 seats each",
+        "40 seats each"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "O_DRIVER_AVAILABILITY",
+      "canonical_family": "driver_resource_availability_limit",
+      "canonical_name": "total_required_drivers_cannot_exceed_available_drivers",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "driver_resource_capacity",
+      "normalized_semantics": "The total number of drivers required by all buses and minibuses used must not exceed the 9 available drivers.",
+      "support_entity_ids": [
+        "E_BUS_USE_COUNT",
+        "E_MINIBUS_USE_COUNT"
+      ],
+      "incidence_slots": [
+        {
+          "slot": "drivers_for_buses",
+          "entity_id": "E_BUS_USE_COUNT",
+          "coefficient_parameter": "P_DRIVERS_NEEDED",
+          "parameter_index": "bus"
+        },
+        {
+          "slot": "drivers_for_minibuses",
+          "entity_id": "E_MINIBUS_USE_COUNT",
+          "coefficient_parameter": "P_DRIVERS_NEEDED",
+          "parameter_index": "minibus"
+        }
+      ],
+      "quantifier": {
+        "kind": "SINGLE_INSTANCE"
+      },
+      "scope_kind": "aggregate_across_vehicle_types",
+      "parameter_refs": [
+        "P_DRIVERS_NEEDED",
+        "P_AVAILABLE_DRIVERS"
+      ],
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "Only 9 drivers are available, and the inline parameter table states that each vehicle requires one driver.",
+      "source_spans": [
+        "only 9 drivers are available",
+        "| bus_type | seats | rental_cost | drivers_needed |\n|---|---|---|---|\n| bus | 50 | 800 | 1 |\n| minibus | 40 | 600 | 1 |"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [],
+  "annotation_warnings": []
+}

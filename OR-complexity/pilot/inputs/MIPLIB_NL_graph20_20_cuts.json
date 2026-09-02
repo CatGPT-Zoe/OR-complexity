@@ -1,0 +1,34 @@
+{
+  "instance_id": "MIPLIB_NL_graph20_20_cuts",
+  "annotation_mode": "semantic",
+  "problem_text": "The Emerald Valley ecosystem management project involves 20 observation outposts connected by 37 logistical trails defined in the network topology. To mitigate the risk of pathogen propagation, the administration intends to establish multiple layers of Ecological Isolation Barriers. Functionally, establishing one barrier layer necessitates a global binary partition of the entire set of outposts into two distinct, non-communicating operational zones. Once a partition is defined, every trail connecting an outpost in one zone to an outpost in the other is fitted with a specialized bio-scanner. Outposts with even indices are designated as High-Priority Data Hubs, responsible for aggregating sensor metrics, whereas odd-indexed outposts serve as transmission relays for the collected data. Due to the physical narrowness of the trails, a specific trail can accommodate hardware for at most one barrier layer. Additionally, the power grid supplying the trails provides 220V AC with a 15A limit, and each bio-scanner draws approximately 14.5A when active to ensure full sterilization efficacy. The project financing is structured such that the first three barriers deployed will receive a federal subsidy of 15 percent, amortized over a decade. The primary objective is to determine the upper bound on the count of distinct barrier layers that can be simultaneously active within the network topology, ensuring no single trail is overloaded with hardware from multiple layers.",
+  "sets": [
+    {
+      "name": "stations",
+      "description": "20 observation outposts (nodes)"
+    },
+    {
+      "name": "links",
+      "description": "37 candidate trails (edges)"
+    }
+  ],
+  "parameter_tables_inline": [
+    {
+      "name": "network_topology",
+      "indices": [
+        "id1",
+        "id2"
+      ],
+      "unit": "",
+      "values": "| id1 | id2 |\n|---|---|\n| 0 | 4 |\n| 0 | 6 |\n| 0 | 9 |\n| 0 | 14 |\n| 0 | 18 |\n| 1 | 12 |\n| 1 | 14 |\n| 2 | 3 |\n| 2 | 5 |\n| 3 | 11 |\n| 3 | 15 |\n| 3 | 17 |\n| 4 | 10 |\n| 4 | 13 |\n| 4 | 15 |\n| 5 | 8 |\n| 5 | 9 |\n| 5 | 10 |\n| 5 | 14 |\n| 5 | 19 |\n| 6 | 8 |\n| 6 | 14 |\n| 7 | 14 |\n| 8 | 12 |\n| 8 | 13 |\n| 9 | 16 |\n| 9 | 19 |\n| 10 | 13 |\n| 10 | 18 |\n| 10 | 19 |\n| 11 | 12 |\n| 11 | 16 |\n| 12 | 13 |\n| 13 | 15 |\n| 14 | 16 |\n| 14 | 17 |\n| 17 | 18 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/graph20-20-1rand/data/network_topology.csv",
+      "role": "parameter_table",
+      "table": "network_topology"
+    }
+  ],
+  "notes": "Maximum independent cuts: partition variables per cut, edge-disjointness, logical activation."
+}

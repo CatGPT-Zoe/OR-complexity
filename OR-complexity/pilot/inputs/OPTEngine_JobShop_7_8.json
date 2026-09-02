@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 7 delivery routes through 7 distribution centers.\n\nEach route consists of a sequence of handling stages represented as (Center, Duration) pairs, where each pair specifies the distribution center where the stage must occur and the time required for handling. The order of pairs indicates the mandatory sequence in which the stages must be completed.\n\nRoute details:\n* R1 follows the sequence: (DC1, 1) → (DC3, 10) → (DC4, 6) → (DC2, 1) → (DC6, 6) → (DC7, 3) → (DC5, 6)\n* R2 follows the sequence: (DC3, 6) → (DC4, 3) → (DC6, 1) → (DC5, 8) → (DC1, 9) → (DC7, 3) → (DC2, 7)\n* R3 follows the sequence: (DC6, 10) → (DC3, 10) → (DC5, 3) → (DC4, 10) → (DC1, 8) → (DC7, 6) → (DC2, 10)\n* R4 follows the sequence: (DC3, 4) → (DC4, 6) → (DC5, 7) → (DC2, 5) → (DC7, 4) → (DC6, 4) → (DC1, 5)\n* R5 follows the sequence: (DC2, 10) → (DC5, 3) → (DC6, 6) → (DC3, 4) → (DC7, 3) → (DC1, 5) → (DC4, 9)\n* R6 follows the sequence: (DC2, 3) → (DC5, 10) → (DC6, 6) → (DC1, 10) → (DC7, 4) → (DC3, 2) → (DC4, 9)\n* R7 follows the sequence: (DC4, 7) → (DC2, 6) → (DC3, 1) → (DC7, 1) → (DC6, 4) → (DC1, 4) → (DC5, 10)\n\nEach handling stage must run continuously once initiated without interruption, and each distribution center can only handle one stage at a time. The objective is to determine the processing sequence of all stages across the distribution centers so that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

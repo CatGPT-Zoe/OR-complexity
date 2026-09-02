@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a delivery truck. The available containers are:\n* Container 1: weight 28 kg, revenue $123\n* Container 2: weight 39 kg, revenue $213\n* Container 3: weight 36 kg, revenue $123\n* Container 4: weight 30 kg, revenue $108\n* Container 5: weight 22 kg, revenue $62\n* Container 6: weight 39 kg, revenue $53\n* Container 7: weight 21 kg, revenue $175\n* Container 8: weight 35 kg, revenue $243\n* Container 9: weight 21 kg, revenue $140\n* Container 10: weight 2 kg, revenue $277\n* Container 11: weight 3 kg, revenue $107\n\nThe truck has a maximum cargo capacity of 193 kg. Determine which combination of containers to load to maximize total revenue without exceeding the weight limit. Each container must be loaded in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

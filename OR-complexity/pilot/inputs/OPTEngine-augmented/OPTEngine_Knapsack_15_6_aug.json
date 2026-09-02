@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is organizing the cargo loading for a specialized transport aircraft. They need to select a combination of crates to maximize total revenue while adhering to the aircraft's maximum payload.\n\nThe crates available are:\n* Crate A: weight 46kg, revenue 198 units\n* Crate B: weight 22kg, revenue 242 units\n* Crate C: weight 42kg, revenue 78 units\n* Crate D: weight 39kg, revenue 274 units\n* Crate E: weight 6kg, revenue 138 units\n* Crate F: weight 7kg, revenue 62 units\n* Crate G: weight 18kg, revenue 22 units\n* Crate H: weight 45kg, revenue 82 units\n* Crate I: weight 40kg, revenue 79 units\n* Crate J: weight 25kg, revenue 116 units\n* Crate K: weight 37kg, revenue 173 units\n* Crate L: weight 13kg, revenue 225 units\n* Crate M: weight 33kg, revenue 266 units\n* Crate N: weight 8kg, revenue 296 units\n* Crate O: weight 7kg, revenue 253 units\n\nFurthermore, due to compatibility restrictions, exactly one of Crate A and Crate B must be included in the shipment.\n\nShould Crate C be loaded, it necessitates a mandatory 10 kg allocation for special securing equipment, effectively diminishing the usable payload capacity by that amount.\nThe aircraft's maximum allowable payload is 271 kg. The firm must determine the optimal set of crates to transport.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

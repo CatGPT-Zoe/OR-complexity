@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery vehicles from distribution hubs to retail outlets in order to minimize total fuel expenditure.\n\nThe number of vehicles stationed at each distribution hub (set H) is fixed as follows:\n* Hub Alpha has 74 vehicles available.\n* Hub Beta has 160 vehicles available.\n* Hub Gamma has 140 vehicles available.\n* Hub Delta has 158 vehicles available.\n\nThe required number of vehicles at each retail outlet (set R) is predetermined:\n* Outlet North requires 154 vehicles.\n* Outlet South requires 10 vehicles.\n* Outlet East requires 116 vehicles.\n* Outlet West requires 115 vehicles.\n\nThe fuel cost per vehicle dispatched from a given hub to a specific outlet is provided in the table below:\n| Hub / Outlet | North | South | East | West |\n|--------------|-------|-------|------|------|\n| Alpha        | 2     | 13    | 11   | 4    |\n| Beta         | 8     | 7     | 7    | 18   |\n| Gamma        | 15    | 5     | 14   | 6    |\n| Delta        | 9     | 15    | 8    | 3    |\n\nDetermine the optimal vehicle dispatch plan to achieve the minimal aggregate fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

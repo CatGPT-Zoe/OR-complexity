@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a set of fragile equipment modules to standardized protective crates for international shipment. The modules are as follows:\n* Module Alpha: fragility rating 33\n* Module Beta: fragility rating 40\n* Module Gamma: fragility rating 38\n* Module Delta: fragility rating 45\n* Module Epsilon: fragility rating 48\n* Module Zeta: fragility rating 51\n* Module Eta: fragility rating 33\n* Module Theta: fragility rating 32\n* Module Iota: fragility rating 60\n* Module Kappa: fragility rating 56\n* Module Lambda: fragility rating 39\n* Module Mu: fragility rating 61\n* Module Nu: fragility rating 68\n* Module Xi: fragility rating 35\n\nEach protective crate is certified to safely accommodate a cumulative fragility load not exceeding 100 units. The coordinator must ensure every module is placed into precisely one crate, with the aggregate fragility rating in any given crate respecting the certified limit. The objective is to complete the assignment utilizing the minimal possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

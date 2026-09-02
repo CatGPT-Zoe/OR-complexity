@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_17",
+  "annotation_mode": "semantic",
+  "problem_text": "An urban planner must allocate community garden plots to various botanical species for a seasonal planting initiative. The species are:\n* Species Alpha: requires 33 square feet\n* Species Beta: requires 40 square feet\n* Species Gamma: requires 40 square feet\n* Species Delta: requires 51 square feet\n* Species Epsilon: requires 63 square feet\n* Species Zeta: requires 46 square feet\n* Species Eta: requires 37 square feet\n* Species Theta: requires 68 square feet\n* Species Iota: requires 58 square feet\n* Species Kappa: requires 41 square feet\n* Species Lambda: requires 30 square feet\n\nEach designated garden plot can accommodate a total area of up to 100 square feet. The planner must assign every species to exactly one plot, ensuring the combined spatial requirement of the species in any given plot does not surpass the plot's capacity. The objective is to utilize the minimal number of these plots to accommodate all species.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

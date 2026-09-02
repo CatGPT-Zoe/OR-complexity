@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assemble a cargo manifest for a specialized freighter to maximize total revenue while adhering to strict mass constraints.\n\nThe available cargo containers are:\n* Container A: mass 38 tonnes, revenue 169 credits\n* Container B: mass 21 tonnes, revenue 49 credits\n* Container C: mass 46 tonnes, revenue 233 credits\n* Container D: mass 22 tonnes, revenue 13 credits\n* Container E: mass 7 tonnes, revenue 178 credits\n* Container F: mass 38 tonnes, revenue 63 credits\n* Container G: mass 36 tonnes, revenue 110 credits\n* Container H: mass 37 tonnes, revenue 12 credits\n* Container I: mass 2 tonnes, revenue 19 credits\n* Container J: mass 20 tonnes, revenue 246 credits\n* Container K: mass 8 tonnes, revenue 274 credits\n* Container L: mass 43 tonnes, revenue 20 credits\n* Container M: mass 32 tonnes, revenue 131 credits\n* Container N: mass 18 tonnes, revenue 273 credits\n* Container O: mass 20 tonnes, revenue 145 credits\n* Container P: mass 13 tonnes, revenue 215 credits\n* Container Q: mass 39 tonnes, revenue 238 credits\n* Container R: mass 31 tonnes, revenue 167 credits\n* Container S: mass 22 tonnes, revenue 17 credits\n* Container T: mass 49 tonnes, revenue 160 credits\n* Container U: mass 7 tonnes, revenue 184 credits\n* Container V: mass 45 tonnes, revenue 56 credits\n* Container W: mass 10 tonnes, revenue 207 credits\n\nFurthermore, due to contractual obligations, exactly one of Container A and Container B must be included.\n\nIf Container C is selected, the vessel's effective cargo capacity is diminished by 10 tonnes.\nThe vessel's maximum permissible load is 422 tonnes. The coordinator must determine the optimal selection of containers.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital has three patients who need to undergo a series of three different medical tests.\n\nEach patient's required tests are represented as pairs (Testing Device, Duration),\nwhere each pair specifies the device on which the test must be performed and the time required to complete it.\nThe order of pairs indicates the mandatory sequence in which the tests must be conducted.\n\nPatient details:\n* Patient A requires the sequence: (Device C, 2) → (Device A, 4) → (Device B, 10)\n* Patient B requires the sequence: (Device C, 2) → (Device A, 6) → (Device B, 2)\n* Patient C requires the sequence: (Device A, 3) → (Device C, 2) → (Device B, 8)\n\nEach test must run continuously once initiated and cannot be interrupted,\nand each testing device can only handle one patient at a time.\nThe objective is to determine the scheduling order of all tests on the devices\nso that the total completion time for all patients is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

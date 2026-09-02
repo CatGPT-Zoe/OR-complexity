@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is organizing a shipment of specialized equipment to a remote research station over a three-day transport window. They must select a combination of cargo units to maximize total utility points while adhering to the vehicle's weight restriction.\n\nThe available cargo units are:\n* Unit A: weight 49kg, utility 110 points\n* Unit B: weight 39kg, utility 53 points\n* Unit C: weight 3kg, utility 46 points\n* Unit D: weight 17kg, utility 166 points\n* Unit E: weight 35kg, utility 184 points\n* Unit F: weight 8kg, utility 281 points\n* Unit G: weight 16kg, utility 93 points\n* Unit H: weight 5kg, utility 222 points\n* Unit I: weight 19kg, utility 154 points\n* Unit J: weight 34kg, utility 78 points\n\nFurthermore, due to compatibility requirements, exactly one of Unit A or Unit B must be included in the shipment.\n\nIf Unit C is included, it necessitates additional support packaging that functionally reduces the vehicle's usable weight capacity by 10 kg.\nThe vehicle's maximum allowable load is 157 kg. The manager must determine the optimal selection of cargo units.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

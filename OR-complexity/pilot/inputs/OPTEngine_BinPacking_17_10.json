@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_17_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of experimental chemical samples into standardized transport capsules. The samples are as follows:\n\n* Sample Alpha: volume 35 liters\n* Sample Beta: volume 62 liters\n* Sample Gamma: volume 48 liters\n* Sample Delta: volume 52 liters\n* Sample Epsilon: volume 56 liters\n* Sample Zeta: volume 59 liters\n* Sample Eta: volume 33 liters\n* Sample Theta: volume 70 liters\n* Sample Iota: volume 63 liters\n* Sample Kappa: volume 65 liters\n* Sample Lambda: volume 57 liters\n* Sample Mu: volume 67 liters\n* Sample Nu: volume 59 liters\n* Sample Xi: volume 61 liters\n* Sample Omicron: volume 46 liters\n* Sample Pi: volume 60 liters\n* Sample Rho: volume 43 liters\n\nEach transport capsule has a maximum safe containment capacity of 100 liters. The coordinator must place every sample into exactly one capsule, ensuring the total volume in any given capsule does not surpass its limit. The objective is to complete this allocation utilizing the minimal possible number of capsules.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

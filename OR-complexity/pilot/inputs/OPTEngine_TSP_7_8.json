@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A courier must traverse a network of 7 regional distribution hubs to collect time-sensitive financial documents.\n\nThe travel times between hubs, measured in minutes, are precisely as follows:\n* Hub Alpha to Hub Beta: 169.4 minutes\n* Hub Alpha to Hub Gamma: 47.2 minutes\n* Hub Alpha to Hub Delta: 19.4 minutes\n* Hub Alpha to Hub Epsilon: 188.3 minutes\n* Hub Alpha to Hub Zeta: 51.6 minutes\n* Hub Alpha to Hub Eta: 71.7 minutes\n* Hub Beta to Hub Gamma: 175.8 minutes\n* Hub Beta to Hub Delta: 159.2 minutes\n* Hub Beta to Hub Epsilon: 43.0 minutes\n* Hub Beta to Hub Zeta: 117.7 minutes\n* Hub Beta to Hub Eta: 104.1 minutes\n* Hub Gamma to Hub Delta: 64.1 minutes\n* Hub Gamma to Hub Epsilon: 184.1 minutes\n* Hub Gamma to Hub Zeta: 69.6 minutes\n* Hub Gamma to Hub Eta: 72.0 minutes\n* Hub Delta to Hub Epsilon: 182.0 minutes\n* Hub Delta to Hub Zeta: 43.9 minutes\n* Hub Delta to Hub Eta: 69.1 minutes\n* Hub Epsilon to Hub Zeta: 138.2 minutes\n* Hub Epsilon to Hub Eta: 117.3 minutes\n* Hub Zeta to Hub Eta: 27.9 minutes\n\nThe objective is to ascertain the minimal-duration circuit that permits the courier to arrive at each hub exactly once before concluding the journey at the initial point of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

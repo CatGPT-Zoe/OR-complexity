@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_7_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to select packages to load onto a delivery truck. The available packages are:\n* Package A: size 22 cubic feet, revenue $33\n* Package B: size 35 cubic feet, revenue $153\n* Package C: size 9 cubic feet, revenue $132\n* Package D: size 49 cubic feet, revenue $256\n* Package E: size 23 cubic feet, revenue $157\n* Package F: size 44 cubic feet, revenue $193\n* Package G: size 38 cubic feet, revenue $77\n\nThe truck has a maximum capacity of 154 cubic feet. Choose the package combination that yields the highest total revenue without exceeding this capacity. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

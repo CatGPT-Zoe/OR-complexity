@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_21_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes into a series of standardized shipping pallets. The boxes are categorized as follows:\n\n* Archive Alpha: 58 pounds\n* Archive Beta: 55 pounds\n* Archive Gamma: 46 pounds\n* Archive Delta: 31 pounds\n* Archive Epsilon: 67 pounds\n* Archive Zeta: 38 pounds\n* Archive Eta: 54 pounds\n* Archive Theta: 40 pounds\n* Archive Iota: 58 pounds\n* Archive Kappa: 66 pounds\n* Archive Lambda: 33 pounds\n* Archive Mu: 54 pounds\n* Archive Nu: 35 pounds\n* Archive Xi: 67 pounds\n* Archive Omicron: 55 pounds\n* Archive Pi: 51 pounds\n* Archive Rho: 44 pounds\n* Archive Sigma: 62 pounds\n* Archive Tau: 59 pounds\n* Archive Upsilon: 32 pounds\n* Archive Phi: 60 pounds\n\nEach shipping pallet is certified for a maximum load of 100 pounds. The objective is to stow all archival boxes while utilizing the minimal number of pallets. Every box must be placed on exactly one pallet, and the aggregate weight assigned to any single pallet must remain within its certified capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

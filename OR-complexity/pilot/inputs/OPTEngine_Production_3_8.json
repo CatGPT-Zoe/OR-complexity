@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate cargo space for three distinct categories of shipments, each necessitating passage through three sequential handling stages for final dispatch. The revenue generated per metric ton for each shipment category is outlined as follows:\n* For Shipment Category Alpha, revenue is 16.364 per metric ton.\n* For Shipment Category Beta, revenue is 18.152 per metric ton.\n* For Shipment Category Gamma, revenue is 18.851 per metric ton.\n\nThe handling duration required per metric ton for each stage is detailed below:\n* For Shipment Category Alpha, Stage 1 consumes 1.716 (ton-hours), Stage 2 consumes 1.817 (ton-hours), Stage 3 consumes 1.862 (ton-hours).\n* For Shipment Category Beta, Stage 1 consumes 1.173 (ton-hours), Stage 2 consumes 0.904 (ton-hours), Stage 3 consumes 1.47 (ton-hours).\n* For Shipment Category Gamma, Stage 1 consumes 0.696 (ton-hours), Stage 2 consumes 1.661 (ton-hours), Stage 3 consumes 1.729 (ton-hours).\n\n* The cumulative handling duration for Stage 1 across all shipments is restricted to a maximum of 269.421 hours.\n* The cumulative handling duration for Stage 2 across all shipments is restricted to a maximum of 334.546 hours.\n* The cumulative handling duration for Stage 3 across all shipments is restricted to a maximum of 455.409 hours.\n\nUnder the condition that the total processing time for each individual stage—Stage 1, Stage 2, and Stage 3—must remain within its respective available capacity, determine the optimal allocation of metric tons for each shipment category to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

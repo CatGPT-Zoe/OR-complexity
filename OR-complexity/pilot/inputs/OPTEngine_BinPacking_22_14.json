@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_22_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of fragile equipment components into identical reinforced shipping crates. The components are as follows:\n\n* Component Alpha: mass 54 kg\n* Component Beta: mass 54 kg\n* Component Gamma: mass 59 kg\n* Component Delta: mass 62 kg\n* Component Epsilon: mass 59 kg\n* Component Zeta: mass 66 kg\n* Component Eta: mass 69 kg\n* Component Theta: mass 44 kg\n* Component Iota: mass 55 kg\n* Component Kappa: mass 62 kg\n* Component Lambda: mass 49 kg\n* Component Mu: mass 61 kg\n* Component Nu: mass 44 kg\n* Component Xi: mass 50 kg\n* Component Omicron: mass 63 kg\n* Component Pi: mass 30 kg\n* Component Rho: mass 35 kg\n* Component Sigma: mass 60 kg\n* Component Tau: mass 50 kg\n* Component Upsilon: mass 55 kg\n* Component Phi: mass 44 kg\n* Component Chi: mass 57 kg\n\nEach shipping crate has a certified maximum safe load capacity of 100 kg. The coordinator's objective is to assign every component to a single crate, ensuring the total mass in any given crate does not surpass its load limit, while minimizing the total number of crates required for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

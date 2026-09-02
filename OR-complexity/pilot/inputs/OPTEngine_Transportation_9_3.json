@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of specialized vehicles from maintenance depots to regional distribution hubs in order to minimize total dispatch expenses.\n\nThe number of available vehicles at each depot (set D) is as follows:\n* Depot D1 has 69 vehicles ready.\n* Depot D2 has 73 vehicles ready.\n* Depot D3 has 153 vehicles ready.\n* Depot D4 has 181 vehicles ready.\n* Depot D5 has 121 vehicles ready.\n* Depot D6 has 144 vehicles ready.\n* Depot D7 has 166 vehicles ready.\n* Depot D8 has 174 vehicles ready.\n* Depot D9 has 133 vehicles ready.\n\nThe required vehicle count at each distribution hub (set H) is specified below:\n* Hub H1 requires 138 vehicles.\n* Hub H2 requires 135 vehicles.\n* Hub H3 requires 15 vehicles.\n* Hub H4 requires 154 vehicles.\n* Hub H5 requires 101 vehicles.\n* Hub H6 requires 110 vehicles.\n* Hub H7 requires 134 vehicles.\n* Hub H8 requires 126 vehicles.\n* Hub H9 requires 62 vehicles.\n\nThe cost per vehicle dispatched from a given depot to a specific hub is detailed in the following table:\n| From / To | H1 | H2 | H3 | H4 | H5 | H6 | H7 | H8 | H9 |\n|--|-|-|-|-|-|-|-|-|\n| D1 | 14 | 7 | 16 | 9 | 11 | 10 | 11 | 18 | 19 |\n| D2 | 5 | 19 | 16 | 11 | 2 | 2 | 4 | 15 | 1 |\n| D3 | 4 | 6 | 15 | 15 | 1 | 14 | 7 | 5 | 10 |\n| D4 | 6 | 9 | 3 | 12 | 9 | 3 | 12 | 6 | 2 |\n| D5 | 13 | 10 | 8 | 14 | 3 | 4 | 1 | 7 | 16 |\n| D6 | 3 | 5 | 19 | 8 | 17 | 15 | 1 | 1 | 11 |\n| D7 | 4 | 14 | 5 | 16 | 3 | 8 | 13 | 3 | 4 |\n| D8 | 4 | 11 | 12 | 10 | 5 | 13 | 5 | 5 | 3 |\n| D9 | 17 | 19 | 1 | 20 | 6 | 15 | 12 | 7 | 5 |\n\nDetermine the optimal allocation of vehicles from depots to hubs to minimize the aggregate dispatch cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

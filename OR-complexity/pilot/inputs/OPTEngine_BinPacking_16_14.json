@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of palletized shipments onto identical freight trucks. The shipments are as follows:\n\n* Shipment Alpha: cargo mass 37 metric tons\n* Shipment Beta: cargo mass 47 metric tons\n* Shipment Gamma: cargo mass 32 metric tons\n* Shipment Delta: cargo mass 30 metric tons\n* Shipment Epsilon: cargo mass 46 metric tons\n* Shipment Zeta: cargo mass 55 metric tons\n* Shipment Eta: cargo mass 63 metric tons\n* Shipment Theta: cargo mass 67 metric tons\n* Shipment Iota: cargo mass 55 metric tons\n* Shipment Kappa: cargo mass 58 metric tons\n* Shipment Lambda: cargo mass 36 metric tons\n* Shipment Mu: cargo mass 46 metric tons\n* Shipment Nu: cargo mass 52 metric tons\n* Shipment Xi: cargo mass 48 metric tons\n* Shipment Omicron: cargo mass 42 metric tons\n* Shipment Pi: cargo mass 68 metric tons\n\nEach truck possesses a maximum load capacity of 100 metric tons. The objective is to assign all shipments to trucks, utilizing the smallest possible number of vehicles. Every shipment must be placed on exactly one truck, and the aggregate mass loaded onto any given truck must not surpass its designated capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

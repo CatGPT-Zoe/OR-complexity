@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A courier must complete a sequence of visits to six distinct regional offices.\n\nThe travel times between offices are recorded in minutes:\n* Office 1 to Office 2: 106.1 minutes\n* Office 1 to Office 3: 47.2 minutes\n* Office 1 to Office 4: 39.7 minutes\n* Office 1 to Office 5: 53.8 minutes\n* Office 1 to Office 6: 19.0 minutes\n* Office 2 to Office 3: 140.4 minutes\n* Office 2 to Office 4: 77.5 minutes\n* Office 2 to Office 5: 145.2 minutes\n* Office 2 to Office 6: 124.4 minutes\n* Office 3 to Office 4: 63.1 minutes\n* Office 3 to Office 5: 6.7 minutes\n* Office 3 to Office 6: 33.5 minutes\n* Office 4 to Office 5: 67.7 minutes\n* Office 4 to Office 6: 53.5 minutes\n* Office 5 to Office 6: 40.2 minutes\n\nThe objective is to determine the minimal-duration circuit that commences at a designated office, proceeds to each of the other offices precisely once, and finally concludes at the initial point of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

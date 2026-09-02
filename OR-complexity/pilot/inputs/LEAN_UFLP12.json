@@ -1,0 +1,55 @@
+{
+  "instance_id": "LEAN_UFLP12",
+  "annotation_mode": "semantic",
+  "problem_text": "There are 15 candidate plants F1–F15. Each plant can either be built (opened) or not. Building a plant incurs a fixed opening cost, and this cost is charged only once per plant, independent of how many customers the plant eventually serves. Once a plant is opened, it may supply products to any customers, subject to its own capacity.\n\n    There are 15 customers C1–C15 with fixed demands. If a plant is built, it incurs the fixed cost and can distribute to any number of customers. Shipping from plant i to customer j incurs a per-unit transport cost. The objective is to determine which plants should be built and how much to ship from each built plant to each customer in order to minimize the total cost, consisting of both fixed opening costs and variable transportation costs, while satisfying all customer demands and not exceeding the capacities of the opened plants.\n\n    The input data are given in two CSV files. cost.csv includes fixed_cost: opening cost of the plant (currency units; paid once if the plant is opened, regardless of the number of customers served). And capacity: plant capacity (maximum units the plant can supply). And also C1 … C15: per-unit transport cost from this plant to each customer. demand.csv includes demand of the customer (units) (C1-C15)",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "cost",
+      "indices": [
+        "plant",
+        "fixed_cost",
+        "capacity",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15"
+      ],
+      "unit": "",
+      "values": "| plant | fixed_cost | capacity | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | C11 | C12 | C13 | C14 | C15 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| F1 | 11250 | 101 | 7.8 | 7.6 | 6.7 | 7.9 | 8.1 | 8.3 | 7.3 | 8.2 | 8.1 | 8.2 | 7.3 | 7.7 | 6.7 | 7.1 | 7.9 |\n| F2 | 13480 | 124 | 5.3 | 6 | 5 | 6.4 | 5.9 | 6.2 | 5.6 | 6.1 | 6.3 | 6.1 | 5 | 5.6 | 5.3 | 4.9 | 6.3 |\n| F3 | 14870 | 139 | 7.2 | 8.1 | 7.4 | 8.8 | 8.5 | 8.7 | 7.7 | 8.7 | 8.9 | 8.5 | 7.2 | 7.7 | 7.1 | 7.6 | 8.4 |\n| F4 | 10290 | 86 | 7 | 7.1 | 6.5 | 7.9 | 7.4 | 7.7 | 6.7 | 7.9 | 7.8 | 7.3 | 6.8 | 7 | 6.5 | 6.7 | 7.6 |\n| F5 | 16740 | 157 | 3.5 | 3.8 | 2.9 | 4.3 | 3.6 | 3.9 | 3.2 | 4.3 | 4.5 | 4 | 3.2 | 4 | 2.9 | 3.4 | 3.9 |\n| F6 | 13960 | 133 | 8.2 | 8.6 | 7.9 | 9.5 | 8.5 | 9.3 | 8.5 | 9.4 | 9 | 9.2 | 8.1 | 8.7 | 7.9 | 8.5 | 9 |\n| F7 | 12680 | 118 | 6.9 | 7.6 | 6.8 | 8.4 | 8 | 8 | 7.6 | 8 | 8.1 | 7.8 | 6.9 | 7.1 | 7 | 6.9 | 7.5 |\n| F8 | 17890 | 162 | 6.9 | 7.8 | 7.1 | 8.7 | 8.6 | 8.2 | 7.2 | 7.9 | 8.4 | 7.9 | 7 | 7.4 | 6.8 | 7.3 | 8 |\n| F9 | 10950 | 92 | 3.5 | 3.8 | 2.8 | 4.4 | 4.2 | 4.8 | 3.8 | 5 | 4.5 | 4.1 | 3.2 | 3.7 | 3.7 | 3.2 | 4.5 |\n| F10 | 15320 | 144 | 5.2 | 6.1 | 5.1 | 6.3 | 6.1 | 6 | 5.6 | 6.5 | 6.2 | 5.9 | 5.3 | 6.1 | 5.1 | 5.2 | 6.2 |\n| F11 | 11830 | 107 | 5.2 | 5.5 | 4.5 | 6.2 | 5.7 | 6.1 | 5.1 | 5.8 | 5.7 | 6.2 | 5.2 | 5.2 | 4.5 | 5.1 | 5.4 |\n| F12 | 14110 | 129 | 7.8 | 8.7 | 7.6 | 9 | 8.6 | 9 | 8.5 | 9.3 | 9.3 | 8.4 | 7.9 | 8.2 | 7.4 | 7.6 | 8.7 |\n| F13 | 15970 | 151 | 6.7 | 6.6 | 6.1 | 7.3 | 7.1 | 7.5 | 6.7 | 8 | 7.6 | 7.2 | 6.3 | 6.9 | 6.2 | 6 | 7.2 |\n| F14 | 13140 | 113 | 7.5 | 8.6 | 7.6 | 8.2 | 8 | 7.9 | 7.5 | 8.7 | 8.8 | 8.1 | 7.2 | 7.3 | 7 | 7 | 8 |\n| F15 | 10580 | 85 | 5.1 | 5.8 | 4.6 | 5.9 | 6.5 | 5.9 | 5.2 | 7 | 7.1 | 5.9 | 5.1 | 5.8 | 5.4 | 4.9 | 6 |"
+    },
+    {
+      "name": "demand",
+      "indices": [
+        "customer",
+        "demand"
+      ],
+      "unit": "",
+      "values": "| customer | demand |\n|---|---|\n| C1 | 83 |\n| C2 | 76 |\n| C3 | 91 |\n| C4 | 68 |\n| C5 | 104 |\n| C6 | 97 |\n| C7 | 88 |\n| C8 | 73 |\n| C9 | 109 |\n| C10 | 95 |\n| C11 | 82 |\n| C12 | 67 |\n| C13 | 113 |\n| C14 | 79 |\n| C15 | 92 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP12/cost.csv",
+      "role": "parameter_table",
+      "table": "cost"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP12/demand.csv",
+      "role": "parameter_table",
+      "table": "demand"
+    }
+  ],
+  "notes": ""
+}

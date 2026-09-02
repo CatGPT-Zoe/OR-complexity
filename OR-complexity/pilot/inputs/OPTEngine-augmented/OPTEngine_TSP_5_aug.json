@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a maintenance crew to inspect five critical substations across a region.  \nThe substations are positioned at the following grid coordinates (in kilometers):  \nStation Alpha: (193, 33)  \nStation Beta: (38, 9)  \nStation Gamma: (20, 179)  \nStation Delta: (138, 174)  \nStation Epsilon: (100, 180)  \n\nTravel distances between substations are known precisely:  \nAlpha to Gamma: 226.4 km  \nAlpha to Delta: 151.3 km  \nAlpha to Epsilon: 173.9 km  \nBeta to Gamma: 171.0 km  \nBeta to Delta: 192.9 km  \nBeta to Epsilon: 181.9 km  \nGamma to Delta: 118.1 km  \nGamma to Epsilon: 80.0 km  \nDelta to Epsilon: 38.5 km  \n\nDue to terrain restrictions, there is no direct access route linking Alpha and Beta.  \nFurthermore, operational regulations mandate that exactly one of the following two connections must be part of the inspection circuit: the link between Beta and Gamma, or the link between Gamma and Delta.  \n\nThe objective is to determine the most efficient closed-loop itinerary that visits every substation exactly once and returns to the origin point, minimizing the total travel distance.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

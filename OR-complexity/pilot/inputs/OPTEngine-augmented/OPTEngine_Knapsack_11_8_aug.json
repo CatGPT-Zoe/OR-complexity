@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must allocate cargo for three consecutive shipments, selecting a subset of packages to maximize total revenue while adhering to a vehicle’s weight limit.\n\nThe available packages are:\n* Package A: weight 36kg, revenue 268 credits\n* Package B: weight 21kg, revenue 197 credits\n* Package C: weight 38kg, revenue 22 credits\n* Package D: weight 9kg, revenue 212 credits\n* Package E: weight 10kg, revenue 100 credits\n* Package F: weight 33kg, revenue 49 credits\n* Package G: weight 9kg, revenue 115 credits\n* Package H: weight 50kg, revenue 264 credits\n* Package I: weight 37kg, revenue 119 credits\n* Package J: weight 16kg, revenue 77 credits\n* Package K: weight 15kg, revenue 206 credits\n\nFurthermore, due to contractual obligations, exactly one of Package A and Package B must be included.\n\nIf Package C is selected, the vehicle’s effective load capacity is diminished by 10 kg.\nThe vehicle can transport a maximum of 191 kg. The manager must determine which packages to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

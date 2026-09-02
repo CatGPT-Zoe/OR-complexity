@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a collection of distinct parcels to uniform-capacity cargo vans. The parcels are as follows:\n\n* Parcel Alpha: mass 48 kilograms\n* Parcel Beta: mass 58 kilograms\n* Parcel Gamma: mass 61 kilograms\n* Parcel Delta: mass 67 kilograms\n* Parcel Epsilon: mass 43 kilograms\n* Parcel Zeta: mass 57 kilograms\n* Parcel Eta: mass 35 kilograms\n* Parcel Theta: mass 53 kilograms\n* Parcel Iota: mass 44 kilograms\n* Parcel Kappa: mass 46 kilograms\n* Parcel Lambda: mass 67 kilograms\n* Parcel Mu: mass 40 kilograms\n* Parcel Nu: mass 57 kilograms\n\nEach cargo van possesses a maximum load capacity of precisely 100 kilograms. The objective is to allocate every parcel to a van, ensuring no van's total mass surpasses its capacity, while utilizing the minimal possible number of vans. Each parcel must be placed into exactly one van.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

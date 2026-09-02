@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment A: volume 50 m³\n* Shipment B: volume 31 m³\n* Shipment C: volume 53 m³\n* Shipment D: volume 32 m³\n* Shipment E: volume 57 m³\n* Shipment F: volume 31 m³\n* Shipment G: volume 66 m³\n* Shipment H: volume 70 m³\n* Shipment I: volume 65 m³\n* Shipment J: volume 31 m³\n* Shipment K: volume 33 m³\n* Shipment L: volume 33 m³\n* Shipment M: volume 56 m³\n* Shipment N: volume 69 m³\n* Shipment O: volume 49 m³\n* Shipment P: volume 58 m³\n* Shipment Q: volume 51 m³\n* Shipment R: volume 31 m³\n* Shipment S: volume 65 m³\n* Shipment T: volume 54 m³\n* Shipment U: volume 36 m³\n* Shipment V: volume 56 m³\n* Shipment W: volume 47 m³\n* Shipment X: volume 32 m³\n* Shipment Y: volume 51 m³\n* Shipment Z: volume 32 m³\n* Shipment [: volume 33 m³\n* Shipment \\: volume 52 m³\n* Shipment ]: volume 37 m³\n* Shipment ^: volume 69 m³\n* Shipment _: volume 30 m³\n* Shipment `: volume 70 m³\n* Shipment a: volume 63 m³\n* Shipment b: volume 70 m³\n\nEach cargo plane can carry up to 100 m³ of cargo. Assign all shipments using the fewest planes possible. Each shipment must be loaded onto exactly one plane, and the total volume on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

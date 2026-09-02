@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage schedule for a critical reservoir over a seven-day operational cycle. The initial water volume in the reservoir at the start of the cycle is 15 million gallons. On any given day t = 1, ..., 7, the utility can activate a pumping station to transfer water from a distant source; each such transfer must involve a volume between 15 and 45 million gallons. Due to pipeline distance, however, water pumped on a given day will require 2 full days to reach the reservoir and become available for meeting demand or augmenting storage. The projected municipal and agricultural demand for water on each day is as follows:\n* Day 1: demand 54 million gallons\n* Day 2: demand 11 million gallons\n* Day 3: demand 43 million gallons\n* Day 4: demand 38 million gallons\n* Day 5: demand 58 million gallons\n* Day 6: demand 53 million gallons\n* Day 7: demand 22 million gallons\n\nSupply deficits are permissible, but any unmet daily demand is simply lost and cannot be recovered later. Throughout the planning cycle, water volumes are treated as continuous quantities, and the total volume held in the reservoir at any moment must not exceed its physical capacity of 63 million gallons. The total operational expenditure comprises three elements: the pumping cost, which is 2 monetary units per million gallons transferred; the storage cost, which is 3 monetary units per million gallons held overnight from one day to the next; and a deficit penalty, which is 6 monetary units per million gallons of unmet daily demand. The objective is to determine the optimal pumping volume for each day and to monitor the resulting reservoir storage and deficit levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

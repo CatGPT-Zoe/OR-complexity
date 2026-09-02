@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of delicate electronic components onto identical transport pallets. The components are as follows:\n* Component Alpha: mass 42 kilograms\n* Component Beta: mass 37 kilograms\n* Component Gamma: mass 68 kilograms\n* Component Delta: mass 42 kilograms\n* Component Epsilon: mass 49 kilograms\n* Component Zeta: mass 47 kilograms\n* Component Eta: mass 41 kilograms\n* Component Theta: mass 36 kilograms\n* Component Iota: mass 60 kilograms\n* Component Kappa: mass 55 kilograms\n* Component Lambda: mass 70 kilograms\n* Component Mu: mass 35 kilograms\n\nEach pallet possesses a safe load-bearing threshold of precisely 100 kg. The coordinator must ensure every component is placed onto exactly one pallet, and the cumulative mass on any given pallet must not surpass its designated limit. The objective is to determine an allocation scheme that minimizes the total number of pallets utilized for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

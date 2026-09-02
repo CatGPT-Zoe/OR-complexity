@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_11_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager needs to distribute a total shipment volume across 11 distribution hubs to maximize total delivery efficiency.  \nThe characteristics of each hub are as follows:  \n* Hub A: efficiency score 0.170, congestion factor 0.045, allowed share [0.022, 0.813]  \n* Hub B: efficiency score 0.079, congestion factor 0.114, allowed share [0.086, 0.634]  \n* Hub C: efficiency score 0.101, congestion factor 0.233, allowed share [0.015, 0.630]  \n* Hub D: efficiency score 0.062, congestion factor 0.141, allowed share [0.071, 0.357]  \n* Hub E: efficiency score 0.190, congestion factor 0.144, allowed share [0.097, 0.361]  \n* Hub F: efficiency score 0.045, congestion factor 0.257, allowed share [0.040, 0.776]  \n* Hub G: efficiency score 0.159, congestion factor 0.036, allowed share [0.005, 0.373]  \n* Hub H: efficiency score 0.040, congestion factor 0.244, allowed share [0.030, 0.337]  \n* Hub I: efficiency score 0.039, congestion factor 0.098, allowed share [0.082, 0.769]  \n* Hub J: efficiency score 0.101, congestion factor 0.214, allowed share [0.017, 0.433]  \n* Hub K: efficiency score 0.077, congestion factor 0.185, allowed share [0.095, 0.419]  \n\nEach hub must be assigned a share of the total shipment volume within its allowed range, and the sum of all shares must equal 1.  \nTo ensure operational flexibility, the manager requires that the group of high-priority hubs, represented by the set L = {B, F}, collectively handle at least 0.217 of the total volume.  \nAt the same time, the overall network congestion index must not exceed 0.183, and the total delivery efficiency must be at least 0.068.  \nDetermine the optimal shipment allocation across hubs that maximizes total delivery efficiency while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

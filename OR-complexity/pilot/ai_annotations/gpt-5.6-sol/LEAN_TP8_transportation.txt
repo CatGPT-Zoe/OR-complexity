@@ -1,0 +1,336 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "LEAN_TP8_transportation",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "SET_WAREHOUSES",
+      "canonical_name": "warehouses",
+      "aliases": [
+        "suppliers",
+        "Suppliers"
+      ],
+      "members": [
+        "Supplier1",
+        "Supplier2",
+        "Supplier3",
+        "Supplier4",
+        "Supplier5"
+      ],
+      "cardinality": 5,
+      "source_grounding": "The problem describes warehouses, while the supplied data and set declaration label them as suppliers.",
+      "source_spans": [
+        "operates several warehouses",
+        "\"name\": \"suppliers\"",
+        "\"description\": \"5 warehouses\""
+      ]
+    },
+    {
+      "id": "SET_STORES",
+      "canonical_name": "stores",
+      "aliases": [
+        "customers",
+        "Customers",
+        "retail locations"
+      ],
+      "members": [
+        "Customer1",
+        "Customer2",
+        "Customer3",
+        "Customer4",
+        "Customer5",
+        "Customer6"
+      ],
+      "cardinality": 6,
+      "source_grounding": "The problem describes retail stores, while the demand and cost tables label them as customers.",
+      "source_spans": [
+        "various retail locations",
+        "\"name\": \"stores\"",
+        "\"description\": \"6 retail stores\"",
+        "Customer1",
+        "Customer6"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "PAR_STORE_DEMAND",
+      "canonical_name": "store_demand",
+      "aliases": [
+        "customer_demand",
+        "demand"
+      ],
+      "index_sets": [
+        "SET_STORES"
+      ],
+      "unit": null,
+      "temporal_granularity": "daily",
+      "values": {
+        "Customer1": 70,
+        "Customer2": 80,
+        "Customer3": 60,
+        "Customer4": 90,
+        "Customer5": 85,
+        "Customer6": 95
+      },
+      "source_grounding": "Daily demand for each store is supplied by the customer_demand table.",
+      "source_spans": [
+        "The daily demand for each store is outlined in “customer_demand.csv”",
+        "| Customer1 | 70 |",
+        "| Customer2 | 80 |",
+        "| Customer3 | 60 |",
+        "| Customer4 | 90 |",
+        "| Customer5 | 85 |",
+        "| Customer6 | 95 |"
+      ]
+    },
+    {
+      "id": "PAR_WAREHOUSE_CAPACITY",
+      "canonical_name": "warehouse_supply_capacity",
+      "aliases": [
+        "supply_capacity"
+      ],
+      "index_sets": [
+        "SET_WAREHOUSES"
+      ],
+      "unit": null,
+      "temporal_granularity": "daily",
+      "values": {
+        "Supplier1": 200,
+        "Supplier2": 250,
+        "Supplier3": 230,
+        "Supplier4": 220,
+        "Supplier5": 210
+      },
+      "source_grounding": "Available supply capacity for each warehouse is supplied by the supply_capacity table.",
+      "source_spans": [
+        "the available supply capacity of each warehouse is provided in “supply_capacity.csv”",
+        "| Supplier1 | 200 |",
+        "| Supplier2 | 250 |",
+        "| Supplier3 | 230 |",
+        "| Supplier4 | 220 |",
+        "| Supplier5 | 210 |"
+      ]
+    },
+    {
+      "id": "PAR_ROUTE_TRANSPORT_COST",
+      "canonical_name": "unit_transportation_cost",
+      "aliases": [
+        "transportation_costs",
+        "transportation cost per unit"
+      ],
+      "index_sets": [
+        "SET_WAREHOUSES",
+        "SET_STORES"
+      ],
+      "unit": null,
+      "values": {
+        "Supplier1": {
+          "Customer1": 2,
+          "Customer2": 3,
+          "Customer3": 1,
+          "Customer4": 2,
+          "Customer5": 3,
+          "Customer6": 2
+        },
+        "Supplier2": {
+          "Customer1": 1,
+          "Customer2": 2,
+          "Customer3": 3,
+          "Customer4": 2,
+          "Customer5": 3,
+          "Customer6": 2
+        },
+        "Supplier3": {
+          "Customer1": 3,
+          "Customer2": 1,
+          "Customer3": 2,
+          "Customer4": 3,
+          "Customer5": 2,
+          "Customer6": 3
+        },
+        "Supplier4": {
+          "Customer1": 2,
+          "Customer2": 3,
+          "Customer3": 2,
+          "Customer4": 1,
+          "Customer5": 3,
+          "Customer6": 4
+        },
+        "Supplier5": {
+          "Customer1": 3,
+          "Customer2": 2,
+          "Customer3": 3,
+          "Customer4": 3,
+          "Customer5": 2,
+          "Customer6": 3
+        }
+      },
+      "source_grounding": "The route-specific transportation cost per unit is supplied by the transportation_costs table.",
+      "source_spans": [
+        "The transportation cost per unit of produce from each warehouse to each store is recorded in “transportation_costs.csv.”",
+        "| Supplier1 | 2 | 3 | 1 | 2 | 3 | 2 |",
+        "| Supplier2 | 1 | 2 | 3 | 2 | 3 | 2 |",
+        "| Supplier3 | 3 | 1 | 2 | 3 | 2 | 3 |",
+        "| Supplier4 | 2 | 3 | 2 | 1 | 3 | 4 |",
+        "| Supplier5 | 3 | 2 | 3 | 3 | 2 | 3 |"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT_WAREHOUSE_STORE_SHIPMENT",
+      "canonical_family": "warehouse_to_store_shipment",
+      "canonical_name": "produce quantity shipped from warehouse to store",
+      "entity_role": "derived_flow",
+      "index_sets": [
+        "SET_WAREHOUSES",
+        "SET_STORES"
+      ],
+      "argument_roles": [
+        {
+          "set_id": "SET_WAREHOUSES",
+          "role": "origin"
+        },
+        {
+          "set_id": "SET_STORES",
+          "role": "destination"
+        }
+      ],
+      "temporal_granularity": "daily",
+      "domain_metadata": {
+        "sign": "nonnegative",
+        "integrality": "unspecified"
+      },
+      "source_grounding": "The endogenous operational decision is the amount of produce shipped on each warehouse-to-store route.",
+      "source_spans": [
+        "determine the optimal amount of fresh produce to be shipped from each warehouse to each store"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "objective": {
+    "id": "OBJ_MIN_TOTAL_TRANSPORT_COST",
+    "sense": "minimize",
+    "canonical_name": "total transportation cost",
+    "normalized_semantics": "Minimize the sum, over all warehouse-to-store routes, of unit transportation cost multiplied by shipped quantity.",
+    "support_entity_ids": [
+      "ENT_WAREHOUSE_STORE_SHIPMENT"
+    ],
+    "parameter_refs": [
+      "PAR_ROUTE_TRANSPORT_COST"
+    ],
+    "source_grounding": "The stated goal is to minimize total transportation cost.",
+    "source_spans": [
+      "while minimizing the total transportation cost"
+    ],
+    "confidence": "high"
+  },
+  "obligations": [
+    {
+      "id": "OBL_STORE_DEMAND_COVERAGE",
+      "canonical_family": "store_demand_coverage",
+      "canonical_name": "store demand must be met",
+      "structural_form": "COVERAGE",
+      "business_role": "demand_satisfaction",
+      "normalized_semantics": "For every store, the aggregate quantity shipped to that store from all warehouses must be at least its daily demand.",
+      "support_entity_ids": [
+        "ENT_WAREHOUSE_STORE_SHIPMENT"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_WAREHOUSE_STORE_SHIPMENT",
+          "fixed_arguments": {
+            "destination": "store"
+          },
+          "aggregated_arguments": [
+            "origin"
+          ],
+          "temporal_relation": "same daily planning interval"
+        }
+      ],
+      "quantifier": "for every store in SET_STORES",
+      "scope_kind": "indexed",
+      "parameter_refs": [
+        "PAR_STORE_DEMAND"
+      ],
+      "condition": null,
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "normalization_rationale": "The literal requirement that all demand be met establishes coverage. Exact equality is not asserted because the text does not explicitly prohibit shipments above demand.",
+      "source_grounding": "The shipment plan must ensure that all store demands are met.",
+      "source_spans": [
+        "ensuring that all store demands are met"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "OBL_WAREHOUSE_CAPACITY_UPPER_BOUND",
+      "canonical_family": "warehouse_outbound_capacity",
+      "canonical_name": "warehouse shipments cannot exceed supply capacity",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "supply_capacity_enforcement",
+      "normalized_semantics": "For every warehouse, the aggregate quantity shipped from that warehouse to all stores must not exceed its available daily supply capacity.",
+      "support_entity_ids": [
+        "ENT_WAREHOUSE_STORE_SHIPMENT"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_WAREHOUSE_STORE_SHIPMENT",
+          "fixed_arguments": {
+            "origin": "warehouse"
+          },
+          "aggregated_arguments": [
+            "destination"
+          ],
+          "temporal_relation": "same daily planning interval"
+        }
+      ],
+      "quantifier": "for every warehouse in SET_WAREHOUSES",
+      "scope_kind": "indexed",
+      "parameter_refs": [
+        "PAR_WAREHOUSE_CAPACITY"
+      ],
+      "condition": null,
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "normalization_rationale": "This is an aggregate upper bound on outbound shipments from each warehouse.",
+      "source_grounding": "The shipment plan may not exceed any warehouse's available supply capacity.",
+      "source_spans": [
+        "without exceeding the warehouse capacities"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [
+    {
+      "id": "UNRES_DEMAND_EXACTNESS",
+      "issue": "The phrase \"all store demands are met\" does not explicitly state whether inbound shipments must equal demand exactly or may exceed demand.",
+      "treatment": "Annotated as a demand-coverage lower bound. No separate upper bound or equality requirement was invented.",
+      "source_spans": [
+        "ensuring that all store demands are met"
+      ]
+    },
+    {
+      "id": "UNRES_MEASUREMENT_UNITS",
+      "issue": "The units for demand, capacity, and transportation cost are not supplied in the inline tables.",
+      "treatment": "Parameter units are recorded as null.",
+      "source_spans": [
+        "\"unit\": \"\""
+      ]
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "WARN_SET_ALIASES",
+      "message": "The narrative uses warehouses and stores, whereas the tables use Suppliers and Customers. These labels were canonicalized as aliases based on their matching operational roles and cardinalities."
+    },
+    {
+      "id": "WARN_NO_MULTI_ENTITY_COUPLING",
+      "message": "Both feasibility obligation families have one CSDE family in their support. They belong to the full semantic inventory but are not active coupling hyperedges under the SOH support-family criterion."
+    }
+  ]
+}

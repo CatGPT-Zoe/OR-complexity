@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_16_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A city’s water utility must devise a pumping and reservoir management schedule across a 16‑day forecast window.  \nThe reservoir begins the planning interval with 68 thousand cubic meters of water.  \nOn each day \\( t = 1,\\dots,16 \\), the utility may pump an amount of water from its source, where the pumped volume on any given day must be between 12 and 79 thousand cubic meters.  \nEach pumping decision takes 1 day for the water to reach the reservoir and become available for meeting consumption or raising the storage level.  \nDaily water consumption (in thousand cubic meters) is projected as:  \nDay 1: 23, Day 2: 38, Day 3: 30, Day 4: 10, Day 5: 58, Day 6: 26, Day 7: 36, Day 8: 47, Day 9: 43, Day 10: 45, Day 11: 18, Day 12: 55, Day 13: 31, Day 14: 55, Day 15: 46, Day 16: 51.  \n\nTemporary shortfalls are allowed, but any consumption not satisfied on the day it occurs is lost and cannot be deferred.  \nWater volumes are treated as continuous quantities, and at no point may the total water stored in the reservoir exceed its capacity of 68 thousand cubic meters.  \n\nOn the ninth day, the maximum allowable pumping volume is restricted to 42 thousand cubic meters.  \nAlso on the ninth day, the amount of water actually held in the reservoir must be no less than 39 thousand cubic meters.  \n\nThe overall cost comprises three elements: a pumping cost of 3 per thousand cubic meters pumped; a storage cost of 1 per thousand cubic meters kept in the reservoir overnight; and a shortage penalty of 13 per thousand cubic meters of unmet daily consumption.  \nDetermine the optimal pumping volume for each day, together with the resulting reservoir storage and daily deficit, so as to minimize the total expenditure over the 16‑day horizon.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

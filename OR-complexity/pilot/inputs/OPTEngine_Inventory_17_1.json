@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_17_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must design a procurement and storage strategy for a critical fuel additive over a 17‑week operational window.  \nInitial stock at the start of the planning interval is 74 barrels.  \nIn each week t = 1, …, 17, the supplier permits the firm to request a delivery whose volume must fall between 5 and 67 barrels.  \nEvery delivery placed, however, requires a lead time of 1 week before it becomes available to meet consumption or replenish the stockpile.  \nWeekly consumption of the additive is projected as follows:  \n* Week 1: 60 barrels  \n* Week 2: 19 barrels  \n* Week 3: 21 barrels  \n* Week 4: 45 barrels  \n* Week 5: 26 barrels  \n* Week 6: 44 barrels  \n* Week 7: 11 barrels  \n* Week 8: 21 barrels  \n* Week 9: 24 barrels  \n* Week 10: 56 barrels  \n* Week 11: 36 barrels  \n* Week 12: 55 barrels  \n* Week 13: 20 barrels  \n* Week 14: 25 barrels  \n* Week 15: 58 barrels  \n* Week 16: 45 barrels  \n* Week 17: 18 barrels  \n\nStock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.  \nThroughout the 17‑week horizon, additive quantities may be treated as continuous measures, and the total physical stock held at any moment must not surpass the tank capacity of 74 barrels.  \nCumulative expenses comprise three elements: the procurement cost, charged at 5 per barrel ordered; the storage cost, assessed at 2 per barrel kept from one week to the next; and a deficit penalty, levied at 6 per barrel of unmet weekly consumption.  \nThe objective is to establish the optimal delivery volume for each week and to monitor the ensuing stockpile and deficit levels so as to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

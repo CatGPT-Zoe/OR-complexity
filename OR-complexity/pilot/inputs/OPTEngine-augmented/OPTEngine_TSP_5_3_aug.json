@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a specialized courier circuit connecting five regional distribution hubs:\n\nHub Alpha: Positioned at grid reference (73,113)\nHub Beta: Positioned at grid reference (23,152)\nHub Gamma: Positioned at grid reference (98,81)\nHub Delta: Positioned at grid reference (147,61)\nHub Epsilon: Positioned at grid reference (74,47)\n\nThe travel distances between hubs, measured in kilometers, are precisely known:\nAlpha to Gamma: 40.6 km\nAlpha to Delta: 90.4 km\nAlpha to Epsilon: 66.0 km\nBeta to Gamma: 103.3 km\nBeta to Delta: 153.8 km\nBeta to Epsilon: 116.7 km\nGamma to Delta: 52.9 km\nGamma to Epsilon: 41.6 km\nDelta to Epsilon: 74.3 km\n\nDue to geographical barriers, no direct transport link exists between Hub Alpha and Hub Beta.\nFurthermore, a specific routing protocol mandates that exactly one of the following two critical connections must be incorporated into the final circuit: the link between Hub Beta and Hub Gamma, or the link between Hub Gamma and Hub Delta.\n\nThe objective is to determine the minimal total travel distance for a closed loop that visits each hub exactly once before returning to the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

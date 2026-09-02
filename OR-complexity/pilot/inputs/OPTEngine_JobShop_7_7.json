@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing facility has 7 different customer orders that must be processed through 7 specialized workstations.\n\nEach order consists of a predetermined sequence of manufacturing steps represented as (Workstation, Duration) pairs, where each pair specifies the workstation where the step must be performed and the time required to complete it. The sequence of pairs indicates the strict order in which these manufacturing steps must be executed.\n\nOrder specifications:\n* Order A requires: (Station 6, 4) → (Station 2, 8) → (Station 1, 3) → (Station 5, 10) → (Station 3, 9) → (Station 4, 5) → (Station 7, 1)\n* Order B requires: (Station 5, 3) → (Station 2, 1) → (Station 3, 8) → (Station 7, 4) → (Station 6, 10) → (Station 4, 7) → (Station 1, 6)\n* Order C requires: (Station 4, 6) → (Station 3, 10) → (Station 7, 7) → (Station 2, 7) → (Station 5, 10) → (Station 6, 7) → (Station 1, 9)\n* Order D requires: (Station 3, 5) → (Station 6, 9) → (Station 5, 3) → (Station 2, 9) → (Station 1, 3) → (Station 4, 10) → (Station 7, 9)\n* Order E requires: (Station 7, 5) → (Station 5, 8) → (Station 6, 9) → (Station 4, 1) → (Station 2, 4) → (Station 3, 5) → (Station 1, 8)\n* Order F requires: (Station 6, 1) → (Station 1, 4) → (Station 7, 3) → (Station 2, 10) → (Station 3, 3) → (Station 5, 6) → (Station 4, 10)\n* Order G requires: (Station 7, 4) → (Station 3, 7) → (Station 1, 8) → (Station 5, 6) → (Station 4, 6) → (Station 6, 2) → (Station 2, 10)\n\nEach manufacturing step must run continuously without interruption once initiated, and each workstation can only handle one manufacturing step at any given time. The objective is to schedule all manufacturing steps across the workstations to minimize the total completion time for all customer orders.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

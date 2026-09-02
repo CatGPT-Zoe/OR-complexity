@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and storage schedule across a 13-day treatment cycle.  \nThe initial stock of a critical medication at the start of the cycle is 11 vials.  \nIn each day \\( t = 1, \\dots, 13 \\), the pharmacy permits the hospital to submit a procurement request for a quantity between 8 and 32 vials.  \nHowever, each requested shipment requires a 2-day lead time before it becomes available for patient administration or for replenishing the stock.  \nThe daily patient need for the medication is as follows:  \n* Day 1: 53 vials  \n* Day 2: 10 vials  \n* Day 3: 15 vials  \n* Day 4: 40 vials  \n* Day 5: 30 vials  \n* Day 6: 35 vials  \n* Day 7: 24 vials  \n* Day 8: 37 vials  \n* Day 9: 13 vials  \n* Day 10: 46 vials  \n* Day 11: 59 vials  \n* Day 12: 12 vials  \n* Day 13: 36 vials  \n\nPatient shortfalls are allowed, but any unfulfilled need is lost and not carried forward.  \nThroughout the cycle, medication quantities may be fractional, and the total on‑hand stock at any moment must not exceed the refrigerated storage capacity of 45 vials.  \n\nOn day 6, the maximum procurement quantity is restricted to 8 vials.  \nOn day 4, the on‑hand stock must be at least 2 vials.  \n\nThe total expenditure over the cycle comprises three elements: the procurement cost, at 2 per vial ordered; the refrigeration cost, at 1 per vial kept in storage from one day to the next; and the penalty for unmet patient need, at 8 per vial of shortfall. Determine the optimal procurement quantity for each day and monitor the resulting stock and shortfall levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of crates to identical cargo pallets for an upcoming shipment. The crates have the following masses:\n* Crate Alpha: 35 kilograms\n* Crate Beta: 35 kilograms\n* Crate Gamma: 50 kilograms\n* Crate Delta: 62 kilograms\n* Crate Epsilon: 61 kilograms\n* Crate Zeta: 36 kilograms\n* Crate Eta: 49 kilograms\n* Crate Theta: 65 kilograms\n* Crate Iota: 48 kilograms\n* Crate Kappa: 37 kilograms\n\nEach pallet has a maximum safe load capacity of 100 kg. The coordinator must load all crates onto the pallets, ensuring every crate is placed on exactly one pallet and the combined mass on any given pallet does not surpass its capacity. The objective is to determine the arrangement that minimizes the total number of pallets required for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

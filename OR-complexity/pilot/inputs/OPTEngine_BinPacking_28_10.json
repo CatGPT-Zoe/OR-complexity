@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_28_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of antique sculptures onto identical display platforms for an upcoming exhibition. The sculptures have the following individual masses:\n\n* Sculpture Alpha: mass 40kg  \n* Sculpture Beta: mass 49kg  \n* Sculpture Gamma: mass 47kg  \n* Sculpture Delta: mass 63kg  \n* Sculpture Epsilon: mass 37kg  \n* Sculpture Zeta: mass 65kg  \n* Sculpture Eta: mass 51kg  \n* Sculpture Theta: mass 30kg  \n* Sculpture Iota: mass 39kg  \n* Sculpture Kappa: mass 30kg  \n* Sculpture Lambda: mass 35kg  \n* Sculpture Mu: mass 51kg  \n* Sculpture Nu: mass 51kg  \n* Sculpture Xi: mass 58kg  \n* Sculpture Omicron: mass 42kg  \n* Sculpture Pi: mass 45kg  \n* Sculpture Rho: mass 53kg  \n* Sculpture Sigma: mass 66kg  \n* Sculpture Tau: mass 59kg  \n* Sculpture Upsilon: mass 46kg  \n* Sculpture Phi: mass 64kg  \n* Sculpture Chi: mass 40kg  \n* Sculpture Psi: mass 58kg  \n* Sculpture Omega: mass 55kg  \n* Sculpture Asteria: mass 30kg  \n* Sculpture Boreas: mass 36kg  \n* Sculpture Cybele: mass 30kg  \n* Sculpture Daphne: mass 36kg  \n\nEach display platform has a maximum load capacity of 100 kg. The coordinator must arrange all sculptures onto these platforms, ensuring every sculpture is placed on exactly one platform and the combined mass on any platform does not surpass its load limit. The objective is to utilize the smallest possible number of platforms.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

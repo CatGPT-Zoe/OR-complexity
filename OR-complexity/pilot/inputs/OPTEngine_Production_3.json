@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is tasked with distributing three distinct categories of commodities, each necessitating passage through three separate handling stages before completion.\nThe revenue generated per ton for each commodity is outlined below:\n* For Commodity Alpha, revenue is 18.65 per ton\n* For Commodity Beta, revenue is 13.013 per ton\n* For Commodity Gamma, revenue is 15.209 per ton\n\nHandling duration required per ton for each stage is as follows:\n* For Commodity Alpha, Stage 1 consumes 0.248 (ton-hours), Stage 2 consumes 1.343 (ton-hours), Stage 3 consumes 1.291 (ton-hours)\n* For Commodity Beta, Stage 1 consumes 1.237 (ton-hours), Stage 2 consumes 0.904 (ton-hours), Stage 3 consumes 0.866 (ton-hours)\n* For Commodity Gamma, Stage 1 consumes 1.965 (ton-hours), Stage 2 consumes 0.266 (ton-hours), Stage 3 consumes 0.239 (ton-hours)\n\n* The cumulative handling duration for Stage 1 must remain within 320.728 hours\n* The cumulative handling duration for Stage 2 must remain within 228.497 hours\n* The cumulative handling duration for Stage 3 must remain within 149.802 hours\n\nUnder the condition that the total processing time for Stage 1, Stage 2, and Stage 3 each does not surpass its respective available capacity, determine the optimal allocation of tonnage for each commodity to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

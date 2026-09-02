@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional courier network is tasked with servicing five distinct distribution hubs, each positioned at specific grid coordinates on a logistics map.  \nHub Alpha: coordinates (124,150)  \nHub Beta: coordinates (161,85)  \nHub Gamma: coordinates (48,62)  \nHub Delta: coordinates (4,187)  \nHub Epsilon: coordinates (69,29)  \n\nThe travel distances between hubs, measured in kilometers along available routes, are as follows:  \nAlpha to Gamma: 116.3 km  \nAlpha to Delta: 125.6 km  \nAlpha to Epsilon: 132.9 km  \nBeta to Gamma: 115.3 km  \nBeta to Delta: 187.2 km  \nBeta to Epsilon: 107.7 km  \nGamma to Delta: 132.5 km  \nGamma to Epsilon: 39.1 km  \nDelta to Epsilon: 170.8 km  \n\nDue to infrastructure limitations, no direct route exists between Hub Alpha and Hub Beta.  \nMoreover, due to scheduling and capacity constraints, the final route must incorporate exactly one of the following two critical links: either the connection between Hub Beta and Hub Gamma, or the connection between Hub Gamma and Hub Delta.\n\nThe objective is to determine the minimal total travel distance for a circuit that visits each hub precisely once and returns to the origin hub.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

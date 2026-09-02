@@ -1,0 +1,523 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "MIPLIB_NL_graph20_20_cuts",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "stations",
+      "name": "stations",
+      "description": "Observation outposts forming the nodes of the network",
+      "cardinality": 20,
+      "values": null,
+      "source_status": "explicit",
+      "source_spans": [
+        "20 observation outposts"
+      ]
+    },
+    {
+      "id": "links",
+      "name": "links",
+      "description": "Logistical trails forming the edges of the network",
+      "cardinality": 37,
+      "values": null,
+      "source_status": "explicit",
+      "source_spans": [
+        "connected by 37 logistical trails defined in the network topology"
+      ]
+    },
+    {
+      "id": "barrier_layers",
+      "name": "barrier_layers",
+      "description": "Candidate Ecological Isolation Barrier layers that may be activated",
+      "cardinality": null,
+      "values": null,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "establish multiple layers of Ecological Isolation Barriers",
+        "the count of distinct barrier layers that can be simultaneously active"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "network_topology",
+      "name": "network_topology",
+      "indices": [
+        {
+          "role": "endpoint_1",
+          "set_id": "stations"
+        },
+        {
+          "role": "endpoint_2",
+          "set_id": "stations"
+        }
+      ],
+      "description": "Given endpoint relation defining the 37 logistical trails",
+      "unit": null,
+      "values_status": "malformed_inline_data",
+      "source_spans": [
+        "37 logistical trails defined in the network topology"
+      ]
+    },
+    {
+      "id": "trail_hardware_capacity",
+      "name": "trail_hardware_capacity",
+      "indices": [
+        {
+          "role": "link",
+          "set_id": "links"
+        }
+      ],
+      "description": "Maximum number of barrier-layer scanner installations that a trail can accommodate",
+      "unit": "barrier-layer installations",
+      "values": 1,
+      "source_spans": [
+        "a specific trail can accommodate hardware for at most one barrier layer"
+      ]
+    },
+    {
+      "id": "supply_voltage",
+      "name": "supply_voltage",
+      "indices": [],
+      "description": "AC voltage supplied by the trail power grid",
+      "unit": "V AC",
+      "values": 220,
+      "source_spans": [
+        "the power grid supplying the trails provides 220V AC"
+      ]
+    },
+    {
+      "id": "power_current_limit",
+      "name": "power_current_limit",
+      "indices": [],
+      "description": "Stated current limit of the trail power grid; its allocation scope is not specified",
+      "unit": "A",
+      "values": 15,
+      "source_spans": [
+        "with a 15A limit"
+      ]
+    },
+    {
+      "id": "scanner_current_draw",
+      "name": "scanner_current_draw",
+      "indices": [],
+      "description": "Approximate current drawn by an active bio-scanner",
+      "unit": "A",
+      "values": 14.5,
+      "source_spans": [
+        "each bio-scanner draws approximately 14.5A when active"
+      ]
+    },
+    {
+      "id": "station_operational_role",
+      "name": "station_operational_role",
+      "indices": [
+        {
+          "role": "station",
+          "set_id": "stations"
+        }
+      ],
+      "description": "Exogenous station role determined by index parity: even-indexed stations are High-Priority Data Hubs and odd-indexed stations are transmission relays",
+      "unit": null,
+      "values": {
+        "even_index": "high_priority_data_hub",
+        "odd_index": "transmission_relay"
+      },
+      "source_spans": [
+        "Outposts with even indices are designated as High-Priority Data Hubs",
+        "odd-indexed outposts serve as transmission relays"
+      ]
+    },
+    {
+      "id": "subsidized_barrier_count",
+      "name": "subsidized_barrier_count",
+      "indices": [],
+      "description": "Number of initially deployed barriers eligible for the stated subsidy",
+      "unit": "barrier layers",
+      "values": 3,
+      "source_spans": [
+        "the first three barriers deployed will receive a federal subsidy"
+      ]
+    },
+    {
+      "id": "subsidy_rate",
+      "name": "subsidy_rate",
+      "indices": [],
+      "description": "Federal subsidy rate for the first three deployed barriers",
+      "unit": "fraction",
+      "values": 0.15,
+      "source_spans": [
+        "a federal subsidy of 15 percent"
+      ]
+    },
+    {
+      "id": "subsidy_amortization_period",
+      "name": "subsidy_amortization_period",
+      "indices": [],
+      "description": "Amortization period of the federal subsidy",
+      "unit": "years",
+      "values": 10,
+      "source_spans": [
+        "amortized over a decade"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "barrier_activation",
+      "canonical_name": "barrier_activation",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "barrier_layer",
+          "set_id": "barrier_layers"
+        }
+      ],
+      "description": "Whether each candidate Ecological Isolation Barrier layer is simultaneously active",
+      "value_semantics": "binary activation status",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "the count of distinct barrier layers that can be simultaneously active"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "zone_assignment",
+      "canonical_name": "zone_assignment",
+      "semantic_type": "assignment",
+      "indices": [
+        {
+          "role": "station",
+          "set_id": "stations"
+        },
+        {
+          "role": "barrier_layer",
+          "set_id": "barrier_layers"
+        }
+      ],
+      "description": "Assignment of each outpost to one of the two operational zones for each barrier layer",
+      "value_semantics": "binary zone label identifying one of two zones",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "establishing one barrier layer necessitates a global binary partition of the entire set of outposts into two distinct, non-communicating operational zones"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "scanner_installation",
+      "canonical_name": "scanner_installation",
+      "semantic_type": "allocation",
+      "indices": [
+        {
+          "role": "link",
+          "set_id": "links"
+        },
+        {
+          "role": "barrier_layer",
+          "set_id": "barrier_layers"
+        }
+      ],
+      "description": "Installation of a bio-scanner on a trail for a particular barrier layer",
+      "value_semantics": "binary installation status",
+      "unit": "scanner installations",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "every trail connecting an outpost in one zone to an outpost in the other is fitted with a specialized bio-scanner",
+        "a specific trail can accommodate hardware for at most one barrier layer"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "objective": {
+    "direction": "maximize",
+    "normalized_semantics": "maximize the number of distinct Ecological Isolation Barrier layers that are simultaneously active",
+    "objective_entity_scope": [
+      "barrier_activation"
+    ],
+    "parameter_refs": [],
+    "source_spans": [
+      "The primary objective is to determine the upper bound on the count of distinct barrier layers that can be simultaneously active within the network topology"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "active_layer_assigns_all_stations",
+      "obligation_type": "assignment",
+      "normalized_semantics": "for every active barrier layer, every station must be assigned a binary zone label",
+      "support_entity_ids": [
+        "barrier_activation",
+        "zone_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "barrier_activation",
+          "role": "layer_activation_condition",
+          "aggregation_axes": [],
+          "index_binding": {
+            "barrier_layer": "k"
+          }
+        },
+        {
+          "entity_id": "zone_assignment",
+          "role": "station_zone_membership",
+          "aggregation_axes": [],
+          "index_binding": {
+            "station": "s",
+            "barrier_layer": "k"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all barrier layers k",
+        "for all stations s"
+      ],
+      "condition": "barrier layer k is active",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "establishing one barrier layer necessitates a global binary partition of the entire set of outposts into two distinct, non-communicating operational zones"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "o2",
+      "canonical_name": "active_partition_has_two_nonempty_zones",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "each active barrier layer must place at least one station in each of its two distinct operational zones",
+      "support_entity_ids": [
+        "barrier_activation",
+        "zone_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "barrier_activation",
+          "role": "layer_activation_condition",
+          "aggregation_axes": [],
+          "index_binding": {
+            "barrier_layer": "k"
+          }
+        },
+        {
+          "entity_id": "zone_assignment",
+          "role": "zone_population",
+          "aggregation_axes": [
+            "station"
+          ],
+          "index_binding": {
+            "barrier_layer": "k"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all barrier layers k"
+      ],
+      "condition": "barrier layer k is active",
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "a global binary partition of the entire set of outposts into two distinct, non-communicating operational zones"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "o3",
+      "canonical_name": "cross_zone_trail_requires_scanner",
+      "obligation_type": "logical_implication",
+      "normalized_semantics": "for an active barrier layer, every trail whose two endpoint stations are assigned to different zones must receive a scanner for that layer",
+      "support_entity_ids": [
+        "barrier_activation",
+        "zone_assignment",
+        "scanner_installation"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "barrier_activation",
+          "role": "layer_activation_condition",
+          "aggregation_axes": [],
+          "index_binding": {
+            "barrier_layer": "k"
+          }
+        },
+        {
+          "entity_id": "zone_assignment",
+          "role": "endpoint_zone_comparison",
+          "aggregation_axes": [],
+          "index_binding": {
+            "station": "both endpoints of link e",
+            "barrier_layer": "k"
+          }
+        },
+        {
+          "entity_id": "scanner_installation",
+          "role": "required_crossing_trail_hardware",
+          "aggregation_axes": [],
+          "index_binding": {
+            "link": "e",
+            "barrier_layer": "k"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all barrier layers k",
+        "for all links e with endpoint stations u and v"
+      ],
+      "condition": "barrier layer k is active and u and v have different zone assignments for k",
+      "parameter_refs": [
+        "network_topology"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Once a partition is defined, every trail connecting an outpost in one zone to an outpost in the other is fitted with a specialized bio-scanner."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o4",
+      "canonical_name": "scanner_installation_requires_active_layer",
+      "obligation_type": "linking",
+      "normalized_semantics": "a scanner installation attributed to a barrier layer may occur only when that barrier layer is active",
+      "support_entity_ids": [
+        "barrier_activation",
+        "scanner_installation"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "barrier_activation",
+          "role": "required_layer_activation",
+          "aggregation_axes": [],
+          "index_binding": {
+            "barrier_layer": "k"
+          }
+        },
+        {
+          "entity_id": "scanner_installation",
+          "role": "layer_specific_hardware",
+          "aggregation_axes": [],
+          "index_binding": {
+            "link": "e",
+            "barrier_layer": "k"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all links e",
+        "for all barrier layers k"
+      ],
+      "condition": "a scanner is installed on link e for layer k",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "Once a partition is defined, every trail connecting an outpost in one zone to an outpost in the other is fitted with a specialized bio-scanner.",
+        "the count of distinct barrier layers that can be simultaneously active"
+      ],
+      "confidence": 0.93
+    },
+    {
+      "id": "o5",
+      "canonical_name": "trail_single_layer_hardware_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "each trail may carry scanner hardware for at most one barrier layer across all simultaneously active layers",
+      "support_entity_ids": [
+        "scanner_installation"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "scanner_installation",
+          "role": "trail_hardware_usage",
+          "aggregation_axes": [
+            "barrier_layer"
+          ],
+          "index_binding": {
+            "link": "e"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all links e"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "trail_hardware_capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Due to the physical narrowness of the trails, a specific trail can accommodate hardware for at most one barrier layer.",
+        "ensuring no single trail is overloaded with hardware from multiple layers"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "u1",
+      "description": "The candidate barrier-layer set and its cardinality are not specified. Without a finite candidate set or another explicit upper bound, the domain over which barrier activations are counted is unavailable.",
+      "affected_elements": [
+        "barrier_layers",
+        "barrier_activation",
+        "zone_assignment",
+        "scanner_installation",
+        "objective"
+      ],
+      "source_spans": [
+        "establish multiple layers of Ecological Isolation Barriers"
+      ]
+    },
+    {
+      "id": "u2",
+      "description": "The inline network_topology table contains repeated id1/id2 placeholders rather than the 37 actual endpoint pairs, so individual link endpoints cannot be recovered.",
+      "affected_elements": [
+        "network_topology",
+        "o3"
+      ],
+      "source_spans": [
+        "37 logistical trails defined in the network topology"
+      ]
+    },
+    {
+      "id": "u3",
+      "description": "The scope of the 15A electrical limit is ambiguous: the text does not establish whether it applies independently to each trail, to a shared circuit, or to the entire grid. No electrical resource-limit obligation is asserted without that scope.",
+      "affected_elements": [
+        "power_current_limit",
+        "scanner_current_draw"
+      ],
+      "source_spans": [
+        "the power grid supplying the trails provides 220V AC with a 15A limit, and each bio-scanner draws approximately 14.5A when active"
+      ]
+    },
+    {
+      "id": "u4",
+      "description": "No budget, financing limit, or cost-based objective is stated, so the subsidy terms do not induce a feasibility obligation or alter the stated objective.",
+      "affected_elements": [
+        "subsidized_barrier_count",
+        "subsidy_rate",
+        "subsidy_amortization_period"
+      ],
+      "source_spans": [
+        "the first three barriers deployed will receive a federal subsidy of 15 percent, amortized over a decade"
+      ]
+    },
+    {
+      "id": "u5",
+      "description": "The High-Priority Data Hub and transmission-relay classifications have no stated effect on partitioning, scanner installation, feasibility, or the objective.",
+      "affected_elements": [
+        "station_operational_role"
+      ],
+      "source_spans": [
+        "Outposts with even indices are designated as High-Priority Data Hubs",
+        "odd-indexed outposts serve as transmission relays"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional power grid operator must devise a procurement and storage schedule for a particular fuel resource across a 6-hour operational window.  \nThe initial fuel reserve at the start of the planning interval is 33 megawatt-hours.  \nIn each hour \\( t = 1, \\dots, 6 \\), the fuel supplier permits the operator to request a delivery whose volume must be between 5 and 48 megawatt-hours.  \nHowever, each procurement request is subject to a 4‑hour transmission delay before the fuel becomes available for consumption or addition to reserves.  \nThe projected consumption of the fuel in each hour is specified as follows:  \n* Hour 1: consumption 52 megawatt-hours  \n* Hour 2: consumption 55 megawatt-hours  \n* Hour 3: consumption 12 megawatt-hours  \n* Hour 4: consumption 20 megawatt-hours  \n* Hour 5: consumption 38 megawatt-hours  \n* Hour 6: consumption 14 megawatt-hours  \n\nSupply deficits are tolerated, but any unmet consumption is lost and cannot be deferred to later hours.  \nThroughout the operational window, fuel quantities may be treated as continuous, and the total volume of fuel held in storage at any instant must not exceed the facility’s capacity of 44 megawatt-hours.  \nThe aggregate cost over the planning horizon comprises three elements: the procurement cost, which is 4 per megawatt-hour ordered; the storage cost, which is 3 per megawatt-hour kept in reserve from one hour to the next; and the deficit penalty, which is 15 per megawatt-hour of unfulfilled consumption. The objective is to determine the optimal procurement quantity for each hour and to monitor the resulting reserve levels and deficits so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

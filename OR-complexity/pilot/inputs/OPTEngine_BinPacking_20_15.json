@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes onto standardized pallets for shipping. The boxes contain historical documents with the following masses:\n\n* Box Alpha: 41 pounds\n* Box Beta: 31 pounds\n* Box Gamma: 59 pounds\n* Box Delta: 46 pounds\n* Box Epsilon: 42 pounds\n* Box Zeta: 54 pounds\n* Box Eta: 34 pounds\n* Box Theta: 52 pounds\n* Box Iota: 36 pounds\n* Box Kappa: 37 pounds\n* Box Lambda: 31 pounds\n* Box Mu: 52 pounds\n* Box Nu: 31 pounds\n* Box Xi: 41 pounds\n* Box Omicron: 55 pounds\n* Box Pi: 69 pounds\n* Box Rho: 30 pounds\n* Box Sigma: 50 pounds\n* Box Tau: 59 pounds\n* Box Upsilon: 65 pounds\n\nEach pallet has a safe load capacity of 100 pounds. The coordinator must place every box onto a pallet, with no box split across multiple pallets, and the cumulative weight on any given pallet must not surpass its rated limit. The objective is to complete this allocation utilizing the minimal possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

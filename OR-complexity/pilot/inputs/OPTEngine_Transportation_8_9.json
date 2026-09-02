@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of specialized cargo vessels to fulfill delivery orders across a network of regional ports.  \n\nThe vessel capacity available at each departure hub (set H) is as follows:  \n*H1 can dispatch up to 111 units of cargo.  \n*H2 can dispatch up to 191 units.  \n*H3 can dispatch up to 132 units.  \n*H4 can dispatch up to 122 units.  \n*H5 can dispatch up to 147 units.  \n*H6 can dispatch up to 169 units.  \n*H7 can dispatch up to 186 units.  \n*H8 can dispatch up to 141 units.  \n\nThe required delivery volume at each receiving port (set P) is specified below:  \n*P1 must receive 68 units.  \n*P2 must receive 166 units.  \n*P3 must receive 88 units.  \n*P4 must receive 151 units.  \n*P5 must receive 135 units.  \n*P6 must receive 142 units.  \n*P7 must receive 60 units.  \n*P8 must receive 38 units.  \n\nThe per‑unit transport expense from each departure hub to each receiving port is given in the table:  \n\n| From / To | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 |\n|-----------|----|----|----|----|----|----|----|----|\n| H1 | 11 | 14 | 2  | 19 | 8  | 5  | 1  | 9  |\n| H2 | 18 | 19 | 19 | 14 | 10 | 5  | 7  | 11 |\n| H3 | 8  | 13 | 19 | 8  | 16 | 18 | 11 | 9  |\n| H4 | 16 | 16 | 15 | 6  | 12 | 6  | 5  | 18 |\n| H5 | 16 | 6  | 18 | 2  | 17 | 2  | 3  | 2  |\n| H6 | 1  | 14 | 5  | 8  | 3  | 5  | 1  | 7  |\n| H7 | 17 | 15 | 12 | 2  | 20 | 20 | 16 | 16 |\n| H8 | 1  | 1  | 18 | 18 | 14 | 1  | 1  | 17 |\n\nDetermine the optimal allocation of cargo units from hubs to ports so that the total operational expenditure is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

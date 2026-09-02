@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing conglomerate aims to devise a quality enhancement strategy to lower the overall defect rate across several production lines. Initially, no corrective procedures have been implemented.\n\nThe baseline characteristics for each production line are as follows:\n* For Line 1, the defect coefficient is 2.646, and the output volume is 126.298.\n* For Line 2, the defect coefficient is 1.056, and the output volume is 248.836.\n* For Line 3, the defect coefficient is 2.541, and the output volume is 106.899.\n* For Line 4, the defect coefficient is 1.651, and the output volume is 55.916.\n\nTo improve quality, multiple inspection and correction protocols are available, each with a specific defect reduction rate:\n* Protocol A reduces defects by 74%\n* Protocol B reduces defects by 64%\n* Protocol C reduces defects by 21%\n* Protocol D reduces defects by 13%\n\nImplementing a protocol on a production line introduces an additional cost per unit of output. The cost matrix for all line–protocol pairings is provided below:\n\n| Line \\ Protocol | Protocol A | Protocol B | Protocol C | Protocol D |\n|--|-|-|-|\n| Line 1 | 63.034 | 131.882 | 85.939 | 196.418 |\n| Line 2 | 111.881 | 188.455 | 31.915 | 194.376 |\n| Line 3 | 43.928 | 192.882 | 60.439 | 30.596 |\n| Line 4 | 92.567 | 148.424 | 69.599 | 125.18 |\n\nThe firm must decide which protocols to apply to each line (lines may adopt several protocols concurrently), and it is permissible for a line to remain partially uncorrected. The objective is to guarantee that the total defect count is lowered by at least a fraction P = 0.456 of the initial defect level, while minimizing the aggregate implementation cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must schedule 6 delivery trucks to unload at 6 different docks.  \n\nEach truck has a predetermined sequence of docks it must visit, along with the unloading time (in minutes) required at each dock. The order of the dock visits is fixed for each truck.  \n\nTruck details:  \n* Truck 1 visits in the order: Dock 1 (10 min) → Dock 6 (5 min) → Dock 3 (4 min) → Dock 4 (9 min) → Dock 5 (9 min) → Dock 2 (6 min)  \n* Truck 2 visits in the order: Dock 4 (10 min) → Dock 3 (9 min) → Dock 2 (6 min) → Dock 1 (3 min) → Dock 6 (3 min) → Dock 5 (6 min)  \n* Truck 3 visits in the order: Dock 6 (6 min) → Dock 1 (5 min) → Dock 5 (5 min) → Dock 3 (6 min) → Dock 4 (8 min) → Dock 2 (7 min)  \n* Truck 4 visits in the order: Dock 5 (8 min) → Dock 4 (3 min) → Dock 2 (6 min) → Dock 1 (1 min) → Dock 3 (8 min) → Dock 6 (5 min)  \n* Truck 5 visits in the order: Dock 6 (3 min) → Dock 5 (9 min) → Dock 2 (3 min) → Dock 1 (2 min) → Dock 4 (3 min) → Dock 3 (10 min)  \n* Truck 6 visits in the order: Dock 1 (5 min) → Dock 5 (1 min) → Dock 4 (7 min) → Dock 2 (5 min) → Dock 3 (5 min) → Dock 6 (9 min)  \n\nOnce a truck starts unloading at a dock, it must finish without interruption. Each dock can only serve one truck at a time.  \nThe goal is to arrange the unloading schedule of all trucks at the docks so that the total time to complete all deliveries is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

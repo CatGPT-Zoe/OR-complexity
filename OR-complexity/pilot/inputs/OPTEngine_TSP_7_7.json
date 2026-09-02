@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_7",
+  "annotation_mode": "semantic",
+  "problem_text": "An agricultural research team must deploy soil sensors across seven distinct experimental fields to monitor moisture levels.\n\nThe wireless transmission latencies between field stations, measured in milliseconds, are as follows:\n* Station P to Q: 240.8 ms\n* Station P to R: 174.9 ms\n* Station P to S: 161.3 ms\n* Station P to T: 141.4 ms\n* Station P to U: 99.6 ms\n* Station P to V: 185.6 ms\n* Station Q to R: 67.5 ms\n* Station Q to S: 142.0 ms\n* Station Q to T: 104.6 ms\n* Station Q to U: 159.3 ms\n* Station Q to V: 69.3 ms\n* Station R to S: 112.4 ms\n* Station R to T: 51.2 ms\n* Station R to U: 104.0 ms\n* Station R to V: 49.5 ms\n* Station S to T: 67.4 ms\n* Station S to U: 63.6 ms\n* Station S to V: 74.2 ms\n* Station T to U: 55.1 ms\n* Station T to V: 44.4 ms\n* Station U to V: 94.1 ms\n\nThe objective is to determine the most efficient sequence for the data-collection drone to visit each field station precisely once, initiating and concluding its circuit at the same station, such that the total communication latency is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

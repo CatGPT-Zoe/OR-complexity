@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate warehouse capacity to three distinct categories of goods, each requiring a sequence of three handling procedures for distribution. The revenue generated per cubic meter for each good is specified as follows:\n* For Good Alpha, revenue is 17.373 per cubic meter\n* For Good Beta, revenue is 15.022 per cubic meter\n* For Good Gamma, revenue is 5.017 per cubic meter\n\nHandling duration required per cubic meter for each procedure is as detailed:\n* For Good Alpha, Procedure 1 consumes 1.088 (meter-hours), Procedure 2 consumes 1.762 (meter-hours), Procedure 3 consumes 0.639 (meter-hours)\n* For Good Beta, Procedure 1 consumes 0.785 (meter-hours), Procedure 2 consumes 1.767 (meter-hours), Procedure 3 consumes 0.544 (meter-hours)\n* For Good Gamma, Procedure 1 consumes 1.222 (meter-hours), Procedure 2 consumes 0.63 (meter-hours), Procedure 3 consumes 1.942 (meter-hours)\n\n* The cumulative duration allocated to Procedure 1 must not surpass 237.254 hours\n* The cumulative duration allocated to Procedure 2 must not surpass 333.757 hours\n* The cumulative duration allocated to Procedure 3 must not surpass 201.705 hours\n\nUnder the condition that for each handling procedure—Procedure 1, Procedure 2, and Procedure 3—the total processing duration remains within its respective available time limit, determine the optimal allocation of cubic meters for each good to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

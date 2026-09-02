@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing district aims to formulate a resource conservation strategy to lower overall material waste from several production lines. Initially, no efficiency measures have been implemented.  \nThe operational parameters for each production line are as follows:  \n* For Line A, waste coefficient is 1.928, output volume is 251.874.  \n* For Line B, waste coefficient is 1.682, output volume is 97.602.  \n* For Line C, waste coefficient is 2.462, output volume is 74.233.  \n\nTo curtail waste, several efficiency enhancement techniques can be employed, each associated with a specific waste reduction rate:  \n* By adopting Technique X, material loss will be decreased by 55%  \n* By adopting Technique Y, material loss will be decreased by 56%  \n* By adopting Technique Z, material loss will be decreased by 53%  \n\nImplementing a technique on a line introduces an extra expense per unit of output. The cost matrix for all line–technique pairings is provided below:  \n\n| Line \\ Technique | Technique X | Technique Y | Technique Z |  \n|--|-|-|-|  \n| Line A | 148.524 | 137.939 | 196.991 |  \n| Line B | 28.699 | 86.498 | 74.467 |  \n| Line C | 173.718 | 57.245 | 46.14 |  \n\nDetermine how to assign enhancement techniques to each line (lines may employ multiple techniques concurrently), and observe that a line may also operate partially without enhancements if required.  \nThe objective is to guarantee that the total material waste is diminished by at least a fraction P = 0.424 of the baseline amount, while minimizing the aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

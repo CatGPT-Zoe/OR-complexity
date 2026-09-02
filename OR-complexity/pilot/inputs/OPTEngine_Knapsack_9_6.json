@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_9_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n\n* Container 1: weight 12 tons, profit 15 units\n* Container 2: weight 15 tons, profit 197 units\n* Container 3: weight 5 tons, profit 83 units\n* Container 4: weight 14 tons, profit 11 units\n* Container 5: weight 14 tons, profit 73 units\n* Container 6: weight 48 tons, profit 13 units\n* Container 7: weight 19 tons, profit 198 units\n* Container 8: weight 45 tons, profit 22 units\n* Container 9: weight 39 tons, profit 129 units\n\nThe vehicle has a maximum load capacity of 147 tons. Choose the set of containers that maximizes total profit without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

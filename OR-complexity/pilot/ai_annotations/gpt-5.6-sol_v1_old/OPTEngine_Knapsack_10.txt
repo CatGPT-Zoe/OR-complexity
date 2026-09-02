@@ -1,0 +1,157 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Knapsack_10",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "packages",
+      "description": "packages available for possible loading onto the cargo drone",
+      "values": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "package_size",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "cargo size occupied by each package",
+      "unit": "units",
+      "values": {
+        "A": 36,
+        "B": 45,
+        "C": 26,
+        "D": 50,
+        "E": 28,
+        "F": 16,
+        "G": 22,
+        "H": 10,
+        "I": 30,
+        "J": 31
+      },
+      "data_ref": null
+    },
+    {
+      "id": "package_revenue",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "revenue earned by loading each package",
+      "unit": "credits",
+      "values": {
+        "A": 88,
+        "B": 238,
+        "C": 104,
+        "D": 225,
+        "E": 99,
+        "F": 242,
+        "G": 277,
+        "H": 191,
+        "I": 54,
+        "J": 114
+      },
+      "data_ref": null
+    },
+    {
+      "id": "drone_cargo_capacity",
+      "indices": [],
+      "description": "maximum total package size that the cargo drone can carry",
+      "unit": "units",
+      "values": 205,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "package_selection",
+      "canonical_name": "package_selection",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "package",
+          "set_id": "packages"
+        }
+      ],
+      "description": "whether each available package is loaded onto the cargo drone",
+      "value_semantics": "binary selection status: fully loaded or left behind",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Choose the set of packages",
+        "Each package must be either fully loaded or left behind."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_revenue",
+    "normalized_semantics": "maximize the total revenue earned from all selected packages",
+    "description": "Maximize total revenue from packages loaded onto the cargo drone.",
+    "entity_scope": [
+      "package_selection"
+    ],
+    "parameter_refs": [
+      "package_revenue"
+    ],
+    "source_spans": [
+      "Choose the set of packages that maximizes total revenue without exceeding this capacity limit."
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "drone_cargo_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the total size of all selected packages must not exceed the drone cargo capacity",
+      "support_entity_ids": [
+        "package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "package_selection",
+          "role": "selected_package_size",
+          "aggregation_axes": [
+            "package"
+          ],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [
+        "over all packages"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "package_size",
+        "drone_cargo_capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The drone's cargo capacity is limited to 205 units.",
+        "without exceeding this capacity limit"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "unresolved_items": []
+}

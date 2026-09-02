@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized components for a critical industrial project. They must select a combination of components to maximize the total utility score while adhering to the cargo vehicle's total weight limit.\n\nThe components under consideration are:\n* Component A: weight 34kg, utility 124 units\n* Component B: weight 23kg, utility 59 units\n* Component C: weight 36kg, utility 121 units\n* Component D: weight 12kg, utility 127 units\n* Component E: weight 26kg, utility 113 units\n* Component F: weight 39kg, utility 234 units\n* Component G: weight 23kg, utility 90 units\n* Component H: weight 18kg, utility 188 units\n* Component I: weight 36kg, utility 112 units\n* Component J: weight 14kg, utility 248 units\n* Component K: weight 21kg, utility 75 units\n* Component L: weight 18kg, utility 297 units\n* Component M: weight 43kg, utility 10 units\n* Component N: weight 6kg, utility 177 units\n* Component O: weight 20kg, utility 175 units\n* Component P: weight 3kg, utility 53 units\n\nA specific compatibility rule dictates that exactly one of Component A and Component B must be included in the final shipment.\n\nFurthermore, if Component C is selected, it requires special hazardous material handling that effectively reduces the vehicle's usable cargo capacity by 10 kg.\nThe vehicle has a maximum gross weight allowance of 260 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

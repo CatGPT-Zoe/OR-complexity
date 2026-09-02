@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a circuit of six regional warehouses, each situated at precise geographical coordinates:\n\nWarehouse Alpha: (57,163)  \nWarehouse Beta: (114,96)  \nWarehouse Gamma: (181,172)  \nWarehouse Delta: (145,106)  \nWarehouse Epsilon: (8,102)  \nWarehouse Zeta: (179,145)\n\nTransportation distances between warehouses, measured in kilometers, are predetermined as follows:\n\nAlpha to Gamma: 124.3 km  \nAlpha to Delta: 104.8 km  \nAlpha to Epsilon: 78.2 km  \nAlpha to Zeta: 123.3 km  \nBeta to Gamma: 101.3 km  \nBeta to Delta: 32.6 km  \nBeta to Epsilon: 106.2 km  \nBeta to Zeta: 81.4 km  \nGamma to Delta: 75.2 km  \nGamma to Epsilon: 186.6 km  \nGamma to Zeta: 27.1 km  \nDelta to Epsilon: 137.1 km  \nDelta to Zeta: 51.7 km  \nEpsilon to Zeta: 176.3 km\n\nDue to infrastructure limitations, no direct transport link exists between Warehouse Alpha and Warehouse Beta.  \nFurthermore, the routing plan must incorporate exactly one of two critical corridors: either the link between Beta and Gamma, or the link between Gamma and Delta.\n\nThe objective is to determine the minimal total-distance closed circuit that visits each warehouse precisely once before returning to the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

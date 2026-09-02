@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional sales representative must conduct in-person visits to eight distinct corporate offices.\n\nThe travel times between offices are quantified in minutes:\n* Office Alpha to Office Beta: 177.3 minutes\n* Alpha to Gamma: 32.4 minutes\n* Alpha to Delta: 30.7 minutes\n* Alpha to Epsilon: 119.9 minutes\n* Alpha to Zeta: 141.7 minutes\n* Alpha to Eta: 158.8 minutes\n* Alpha to Theta: 108.7 minutes\n* Beta to Gamma: 150.7 minutes\n* Beta to Delta: 190.7 minutes\n* Beta to Epsilon: 83.4 minutes\n* Beta to Zeta: 184.9 minutes\n* Beta to Eta: 73.9 minutes\n* Beta to Theta: 184.9 minutes\n* Gamma to Delta: 40.5 minutes\n* Gamma to Epsilon: 87.9 minutes\n* Gamma to Zeta: 151.5 minutes\n* Gamma to Eta: 143.3 minutes\n* Gamma to Theta: 122.6 minutes\n* Delta to Epsilon: 122.4 minutes\n* Delta to Zeta: 172.4 minutes\n* Delta to Eta: 182.1 minutes\n* Delta to Theta: 139.1 minutes\n* Epsilon to Zeta: 191.6 minutes\n* Epsilon to Eta: 120.0 minutes\n* Epsilon to Theta: 175.7 minutes\n* Zeta to Eta: 116.5 minutes\n* Zeta to Theta: 36.0 minutes\n* Eta to Theta: 125.2 minutes\n\nThe objective is to determine the most time-efficient itinerary that requires a single visit to each office and concludes by returning to the initial departure point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

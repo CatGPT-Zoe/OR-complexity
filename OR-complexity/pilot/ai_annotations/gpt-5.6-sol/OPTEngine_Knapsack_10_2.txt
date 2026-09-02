@@ -1,0 +1,201 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_Knapsack_10_2",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "SET_PACKAGES",
+      "canonical_name": "packages",
+      "members": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "source_grounding": "The available packages are listed as Package 1 through Package 10.",
+      "source_spans": [
+        "The available packages are:",
+        "Package 1",
+        "Package 10"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "PARAM_PACKAGE_SIZE",
+      "canonical_name": "package_size",
+      "index_sets": ["SET_PACKAGES"],
+      "value_type": "numeric",
+      "unit": "cubic feet",
+      "values": {
+        "1": 29,
+        "2": 41,
+        "3": 4,
+        "4": 27,
+        "5": 27,
+        "6": 29,
+        "7": 24,
+        "8": 31,
+        "9": 12,
+        "10": 18
+      },
+      "source_grounding": "Each package listing specifies its size in cubic feet.",
+      "source_spans": [
+        "Package 1: size 29 cubic feet",
+        "Package 2: size 41 cubic feet",
+        "Package 3: size 4 cubic feet",
+        "Package 4: size 27 cubic feet",
+        "Package 5: size 27 cubic feet",
+        "Package 6: size 29 cubic feet",
+        "Package 7: size 24 cubic feet",
+        "Package 8: size 31 cubic feet",
+        "Package 9: size 12 cubic feet",
+        "Package 10: size 18 cubic feet"
+      ]
+    },
+    {
+      "id": "PARAM_PACKAGE_REVENUE",
+      "canonical_name": "package_revenue",
+      "index_sets": ["SET_PACKAGES"],
+      "value_type": "numeric",
+      "unit": "USD",
+      "values": {
+        "1": 199,
+        "2": 280,
+        "3": 202,
+        "4": 14,
+        "5": 174,
+        "6": 114,
+        "7": 160,
+        "8": 56,
+        "9": 65,
+        "10": 67
+      },
+      "source_grounding": "Each package listing specifies its revenue.",
+      "source_spans": [
+        "Package 1: size 29 cubic feet, revenue $199",
+        "Package 2: size 41 cubic feet, revenue $280",
+        "Package 3: size 4 cubic feet, revenue $202",
+        "Package 4: size 27 cubic feet, revenue $14",
+        "Package 5: size 27 cubic feet, revenue $174",
+        "Package 6: size 29 cubic feet, revenue $114",
+        "Package 7: size 24 cubic feet, revenue $160",
+        "Package 8: size 31 cubic feet, revenue $56",
+        "Package 9: size 12 cubic feet, revenue $65",
+        "Package 10: size 18 cubic feet, revenue $67"
+      ]
+    },
+    {
+      "id": "PARAM_CONTAINER_CAPACITY",
+      "canonical_name": "container_capacity",
+      "index_sets": [],
+      "value_type": "numeric",
+      "unit": "cubic feet",
+      "value": 169,
+      "source_grounding": "The cargo container has a maximum capacity of 169 cubic feet.",
+      "source_spans": [
+        "The cargo container has a maximum capacity of 169 cubic feet."
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT_PACKAGE_SELECTION",
+      "canonical_family": "package_shipment_selection",
+      "canonical_name": "package selected for shipment",
+      "entity_role": "decision",
+      "index_sets": ["SET_PACKAGES"],
+      "semantic_domain": {
+        "type": "discrete_selection",
+        "allowed_states": ["not_shipped", "shipped_entirely"]
+      },
+      "source_grounding": "The manager chooses a package combination, and each package is shipped entirely or not at all.",
+      "source_spans": [
+        "A logistics manager needs to select packages for a shipment.",
+        "Choose the package combination",
+        "Each package must be shipped entirely or not at all."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "total shipment revenue",
+    "normalized_semantics": "Maximize the sum of the revenues of packages selected for shipment.",
+    "support_entity_ids": ["ENT_PACKAGE_SELECTION"],
+    "parameter_refs": ["PARAM_PACKAGE_REVENUE"],
+    "source_grounding": "Choose the package combination that yields the highest total revenue.",
+    "source_spans": [
+      "Choose the package combination that yields the highest total revenue without exceeding this capacity."
+    ],
+    "confidence": 1.0
+  },
+  "obligations": [
+    {
+      "id": "OBL_CONTAINER_CAPACITY",
+      "canonical_family": "aggregate_container_capacity_limit",
+      "canonical_name": "shipment size cannot exceed container capacity",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "capacity_compliance",
+      "normalized_semantics": "The aggregate size of all packages selected for shipment must not exceed the cargo container capacity.",
+      "support_entity_ids": ["ENT_PACKAGE_SELECTION"],
+      "incidence_slots": [
+        {
+          "slot": "selected_packages",
+          "entity_id": "ENT_PACKAGE_SELECTION",
+          "index_role": "package",
+          "aggregation": "sum",
+          "weight_parameter_ref": "PARAM_PACKAGE_SIZE"
+        },
+        {
+          "slot": "capacity",
+          "parameter_ref": "PARAM_CONTAINER_CAPACITY",
+          "relation_role": "upper_limit"
+        }
+      ],
+      "quantifier": "For the single cargo container, over all packages.",
+      "scope_kind": "global_aggregate",
+      "parameter_refs": [
+        "PARAM_PACKAGE_SIZE",
+        "PARAM_CONTAINER_CAPACITY"
+      ],
+      "condition": null,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "The selected package combination must fit within the container's maximum capacity.",
+      "source_spans": [
+        "The cargo container has a maximum capacity of 169 cubic feet.",
+        "without exceeding this capacity"
+      ],
+      "normalization_rationale": "This is one aggregate upper-limit family; the numerical capacity is a parameter rather than part of family identity.",
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_PACKAGE_INDIVISIBILITY",
+      "canonical_family": "indivisible_package_selection",
+      "canonical_name": "each package is shipped entirely or not at all",
+      "structural_form": "OTHER_RELATION",
+      "business_role": "all_or_nothing_shipment_policy",
+      "normalized_semantics": "For every package, the shipment decision must be either to ship the entire package or not to ship it; partial shipment is prohibited.",
+      "support_entity_ids": ["ENT_PACKAGE_SELECTION"],
+      "incidence_slots": [
+        {
+          "slot": "package_selection",
+          "entity_id": "ENT_PACKAGE_SELECTION",
+          "index_role": "package",
+          "allowed_operational_states": ["not_shipped", "shipped_entirely"]
+        }
+      ],
+      "quantifier": "For every package.",
+      "scope_kind": "per_index",
+      "parameter_refs": [],
+      "condition": null,
+      "coupling_active": false,
+      "source_status": "explicit_business_rule",
+      "source_grounding": "Each package must be shipped entirely or not at all.",
+      "source_spans": [
+        "Each package must be shipped entirely or not at all."
+      ],
+      "normalization_rationale": "Although this induces a binary selection domain, the text explicitly states package indivisibility as an operational business rule.",
+      "confidence": 1.0
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [],
+  "annotation_warnings": []
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A company must allocate its server capacity from three data centers to three cloud service regions, aiming to minimize the total data transfer cost.\n\nThe available processing units at each data center (set C) are specified as:\n*C1 has 142 units available.\n*C2 has 197 units available.\n*C3 has 99 units available.\n\nThe required processing load that must be fulfilled at each service region (set R) is detailed below:\n*R1 requires 31 units.\n*R2 requires 149 units.\n*R3 requires 190 units.\n\nThe cost per unit for transferring data from each center to each region is provided in the following matrix:\n| Source / Destination | R1 | R2 | R3 |\n|--|-|-|\n| C1 | 3 | 8 | 4 |\n| C2 | 13 | 9 | 15 |\n| C3 | 12 | 6 | 12 |\n\nDetermine the optimal allocation of processing units to minimize the aggregate transfer expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

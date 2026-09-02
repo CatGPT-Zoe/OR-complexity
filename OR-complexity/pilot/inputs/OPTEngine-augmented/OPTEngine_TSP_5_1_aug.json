@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to service five critical industrial sites:\nFacility Alpha: Positioned at grid reference (48,47)\nFacility Beta: Positioned at grid reference (8,156)\nFacility Gamma: Positioned at grid reference (168,66)\nFacility Delta: Positioned at grid reference (121,17)\nFacility Epsilon: Positioned at grid reference (22,173)\n\nThe travel distances between sites, measured in kilometers, are pre-calculated as follows:\nAlpha to Gamma: 121.5 km\nAlpha to Delta: 78.9 km\nAlpha to Epsilon: 128.7 km\nBeta to Gamma: 183.6 km\nBeta to Delta: 179.1 km\nBeta to Epsilon: 22.0 km\nGamma to Delta: 67.9 km\nGamma to Epsilon: 181.0 km\nDelta to Epsilon: 184.8 km\n\nDirect transit between Facility Alpha and Facility Beta is impossible due to geographical barriers.\nFurthermore, due to scheduling and permit restrictions, the route must incorporate exactly one of two specific connections: either the link between Facility Beta and Facility Gamma, or the link between Facility Gamma and Facility Delta.\n\nThe objective is to determine the minimal total travel circuit that services each facility precisely once, commencing and concluding at the same initial site.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

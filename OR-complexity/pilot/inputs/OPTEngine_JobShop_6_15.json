@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 6 delivery trucks across 6 distribution centers.\n\nEach truck must follow a specific route represented as pairs (Center, Handling time),\nwhere each pair specifies the distribution center where the truck must stop and the time required to handle its cargo.\nThe order of pairs indicates the required sequence of stops that each truck must follow.\n\nTruck routes:\n* Truck 1 follows the route: (Center 4, 6) → (Center 6, 1) → (Center 2, 2) → (Center 1, 4) → (Center 3, 2) → (Center 5, 9)\n* Truck 2 follows the route: (Center 4, 3) → (Center 1, 5) → (Center 3, 7) → (Center 5, 3) → (Center 2, 10) → (Center 6, 3)\n* Truck 3 follows the route: (Center 4, 8) → (Center 3, 1) → (Center 1, 9) → (Center 6, 1) → (Center 5, 9) → (Center 2, 7)\n* Truck 4 follows the route: (Center 2, 4) → (Center 3, 5) → (Center 1, 6) → (Center 4, 5) → (Center 5, 5) → (Center 6, 9)\n* Truck 5 follows the route: (Center 4, 10) → (Center 2, 3) → (Center 6, 9) → (Center 3, 1) → (Center 1, 6) → (Center 5, 2)\n* Truck 6 follows the route: (Center 2, 3) → (Center 4, 8) → (Center 6, 9) → (Center 5, 1) → (Center 1, 9) → (Center 3, 2)\n\nEach truck's cargo handling must proceed continuously once it begins at a center and cannot be interrupted,\nand each distribution center can only handle one truck at a time.\nThe objective is to determine the handling sequence for all trucks at the distribution centers\nso that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

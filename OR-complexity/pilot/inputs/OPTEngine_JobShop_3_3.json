@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing facility needs to assemble three different electronic devices on three specialized workstations.\n\nEach device must undergo a specific sequence of assembly steps, where each step is defined by the workstation required and the duration it takes to complete. The sequence of steps must be followed in the exact order given.\n\nDevice specifications:\n* D1 requires the sequence: (WS1, 9) → (WS3, 7) → (WS2, 10)\n* D2 requires the sequence: (WS1, 4) → (WS2, 2) → (WS3, 5)\n* D3 requires the sequence: (WS2, 1) → (WS3, 9) → (WS1, 8)\n\nOnce an assembly step begins on a workstation, it must run to completion without interruption, and each workstation can only handle one assembly step at a time. The goal is to schedule all assembly steps across the workstations to minimize the total time needed to complete all three devices.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

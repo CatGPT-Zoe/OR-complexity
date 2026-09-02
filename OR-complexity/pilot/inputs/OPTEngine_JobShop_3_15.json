@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing plant has three production lines that must complete three different product batches.\n\nEach batch requires a specific sequence of processing stages represented as (Line, Duration) pairs, where each pair indicates the production line where the stage must occur and the time required to complete it. The sequence of pairs defines the mandatory order in which stages must be executed.\n\nBatch details:\n* Batch A follows the sequence: (Line 2, 3) → (Line 1, 4) → (Line 3, 3)\n* Batch B follows the sequence: (Line 1, 2) → (Line 2, 2) → (Line 3, 3)\n* Batch C follows the sequence: (Line 1, 9) → (Line 3, 7) → (Line 2, 9)\n\nEach processing stage must run without interruption once initiated, and each production line can only handle one stage at a time. The goal is to determine the optimal scheduling sequence for all stages across the production lines to minimize the total completion time for all batches.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

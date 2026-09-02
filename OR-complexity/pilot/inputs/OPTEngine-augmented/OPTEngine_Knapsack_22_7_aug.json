@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_22_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is assembling a shipment of specialized equipment to maximize total utility while adhering to a cargo weight restriction.  \n\nThe available equipment units are:  \n* Unit A: weight 19kg, utility 193 credits  \n* Unit B: weight 32kg, utility 271 credits  \n* Unit C: weight 16kg, utility 231 credits  \n* Unit D: weight 50kg, utility 86 credits  \n* Unit E: weight 39kg, utility 105 credits  \n* Unit F: weight 22kg, utility 102 credits  \n* Unit G: weight 49kg, utility 21 credits  \n* Unit H: weight 22kg, utility 86 credits  \n* Unit I: weight 7kg, utility 272 credits  \n* Unit J: weight 21kg, utility 136 credits  \n* Unit K: weight 7kg, utility 297 credits  \n* Unit L: weight 7kg, utility 254 credits  \n* Unit M: weight 34kg, utility 262 credits  \n* Unit N: weight 19kg, utility 181 credits  \n* Unit O: weight 40kg, utility 56 credits  \n* Unit P: weight 14kg, utility 31 credits  \n* Unit Q: weight 41kg, utility 216 credits  \n* Unit R: weight 17kg, utility 272 credits  \n* Unit S: weight 46kg, utility 184 credits  \n* Unit T: weight 15kg, utility 184 credits  \n* Unit U: weight 17kg, utility 43 credits  \n* Unit V: weight 29kg, utility 75 credits  \n\nFurthermore, the selection must include exactly one of Unit A or Unit B.  \n\nIf Unit C is included, the effective cargo capacity is diminished by 10 kg.  \nThe transport vehicle can accommodate a maximum load of 394 kg. The firm must determine which units to include in the shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

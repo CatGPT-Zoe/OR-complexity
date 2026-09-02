@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a cargo drone. The available packages are:\n\n* Package 1: volume 8 m³, revenue $270\n* Package 2: volume 29 m³, revenue $250\n* Package 3: volume 12 m³, revenue $242\n* Package 4: volume 36 m³, revenue $183\n* Package 5: volume 9 m³, revenue $223\n* Package 6: volume 17 m³, revenue $203\n* Package 7: volume 6 m³, revenue $299\n* Package 8: volume 33 m³, revenue $181\n* Package 9: volume 15 m³, revenue $242\n* Package 10: volume 16 m³, revenue $189\n* Package 11: volume 31 m³, revenue $220\n* Package 12: volume 2 m³, revenue $238\n* Package 13: volume 47 m³, revenue $13\n* Package 14: volume 36 m³, revenue $217\n* Package 15: volume 49 m³, revenue $238\n\nThe drone's cargo hold has a maximum capacity of 242 m³. Choose the set of packages that maximizes total revenue without exceeding this volume limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

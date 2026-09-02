@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A maritime shipping company must devise a procurement and storage strategy for a critical fuel additive over a voyage schedule spanning 12 consecutive days.  \nThe initial stock of the additive at the departure point is 80 barrels.  \nOn each day \\( t = 1, \\dots, 12 \\), the supplier permits the company to request a delivery, the volume of which must be between 15 and 21 barrels inclusive.  \nEach delivery, once requested, requires exactly 1 day for transit before it becomes available for consumption or for replenishing the onboard reserves.  \nThe daily consumption of the additive during the voyage is as follows:  \n\n* Day 1: 50 barrels  \n* Day 2: 49 barrels  \n* Day 3: 58 barrels  \n* Day 4: 24 barrels  \n* Day 5: 11 barrels  \n* Day 6: 33 barrels  \n* Day 7: 43 barrels  \n* Day 8: 20 barrels  \n* Day 9: 53 barrels  \n* Day 10: 22 barrels  \n* Day 11: 50 barrels  \n* Day 12: 32 barrels  \n\nConsumption shortfalls are tolerated, but any deficit is permanently lost and cannot be recovered later.  \nThroughout the voyage, additive quantities may be treated as continuous values, and the total volume stored onboard at any moment must not exceed the tank capacity of 80 barrels.  \nThe total expense comprises three elements: the procurement cost, charged at 5 per barrel ordered; the storage cost, assessed at 1 per barrel kept overnight; and a penalty for unmet consumption, levied at 10 per barrel of deficit.  \nThe objective is to determine the optimal delivery volume for each day and to monitor the resulting stock and shortage levels so as to minimize the aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

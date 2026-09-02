@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery vehicles from regional depots to fulfillment centers in order to minimize the total fuel expenditure.\n\nThe number of vehicles available for dispatch at each regional depot (set R) is fixed as follows:  \n*Depot R1 has 192 vehicles ready.  \n*Depot R2 has 174 vehicles ready.  \n*Depot R3 has 89 vehicles ready.  \n*Depot R4 has 98 vehicles ready.\n\nThe required number of vehicles to be stationed at each fulfillment center (set C) is predetermined:  \n*Center C1 must receive 133 vehicles.  \n*Center C2 must receive 80 vehicles.  \n*Center C3 must receive 74 vehicles.  \n*Center C4 must receive 102 vehicles.\n\nThe fuel cost per vehicle dispatched from a given depot to a specific center is detailed in the table:\n\n| From / To | C1 | C2 | C3 | C4 |\n|---|---|---|---|---|\n| R1 | 2 | 2 | 19 | 16 |\n| R2 | 17 | 17 | 6 | 2 |\n| R3 | 17 | 3 | 6 | 3 |\n| R4 | 20 | 3 | 8 | 13 |\n\nDetermine the optimal vehicle allocation plan that minimizes the aggregate fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

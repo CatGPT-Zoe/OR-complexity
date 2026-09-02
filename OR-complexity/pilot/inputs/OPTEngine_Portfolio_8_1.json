@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_8_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to distribute its total shipping volume across 8 regional hubs to maximize overall delivery efficiency.  \nThe performance metrics and capacity limits for each hub are as follows:  \n* Hub A: delivery efficiency is 0.035, handling difficulty is 0.138, capacity range [0.067, 0.453]  \n* Hub B: delivery efficiency is 0.029, handling difficulty is 0.089, capacity range [0.005, 0.497]  \n* Hub C: delivery efficiency is 0.048, handling difficulty is 0.229, capacity range [0.040, 0.305]  \n* Hub D: delivery efficiency is 0.131, handling difficulty is 0.043, capacity range [0.060, 0.748]  \n* Hub E: delivery efficiency is 0.141, handling difficulty is 0.135, capacity range [0.001, 0.405]  \n* Hub F: delivery efficiency is 0.069, handling difficulty is 0.092, capacity range [0.030, 0.528]  \n* Hub G: delivery efficiency is 0.139, handling difficulty is 0.207, capacity range [0.021, 0.722]  \n* Hub H: delivery efficiency is 0.107, handling difficulty is 0.151, capacity range [0.014, 0.600]  \n\nThe fraction of total shipping volume assigned to each hub must fall within its stated capacity range, and all fractions must sum to one.  \nTo maintain operational flexibility, the company requires that the group of high-availability hubs, denoted by the set L = {C, D, E, F, G}, together handle at least 0.246 of the total shipping volume.  \nAdditionally, the overall handling difficulty of the network must not exceed 0.150, and the total delivery efficiency must be at least 0.053.  \nDetermine the optimal distribution of shipping volume across hubs that maximizes total delivery efficiency while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

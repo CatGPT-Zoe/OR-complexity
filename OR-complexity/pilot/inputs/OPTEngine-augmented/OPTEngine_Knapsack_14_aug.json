@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_14_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment to be transported via a cargo drone. The manager must select a combination of components to maximize total utility points while adhering to the drone's maximum payload limit.\n\nThe components available are:\n* Component A: mass 11kg, utility 99 points\n* Component B: mass 50kg, utility 91 points\n* Component C: mass 41kg, utility 134 points\n* Component D: mass 40kg, utility 178 points\n* Component E: mass 2kg, utility 257 points\n* Component F: mass 41kg, utility 213 points\n* Component G: mass 3kg, utility 125 points\n* Component H: mass 16kg, utility 154 points\n* Component I: mass 22kg, utility 97 points\n* Component J: mass 16kg, utility 190 points\n* Component K: mass 15kg, utility 93 points\n* Component L: mass 27kg, utility 247 points\n* Component M: mass 24kg, utility 299 points\n* Component N: mass 9kg, utility 207 points\n\nFurthermore, due to compatibility constraints, exactly one of Component A and Component B must be included.\n\nIf Component C is included in the shipment, it necessitates the installation of a special cooling apparatus, which reduces the drone's effective payload capacity by 10 kg.\nThe drone's maximum allowable payload is 221 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

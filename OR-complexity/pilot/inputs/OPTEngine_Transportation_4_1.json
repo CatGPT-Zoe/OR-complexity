@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery trucks from four distribution centers to four retail warehouses, aiming to reduce the overall fuel expenditure for the journeys.\n\nThe number of trucks available at each distribution center (set C) is as follows:\n*C1 has 80 trucks.\n*C2 has 195 trucks.\n*C3 has 113 trucks.\n*C4 has 198 trucks.\n\nThe required number of trucks to be stationed at each retail warehouse (set D) is detailed below:\n*D1 requires 137 trucks.\n*D2 requires 93 trucks.\n*D3 requires 128 trucks.\n*D4 requires 115 trucks.\n\nThe fuel cost per truck for a trip from each distribution center to each warehouse is provided in the table:\n| From / To | D1 | D2 | D3 | D4 |\n|--|-|-|-|\n| C1 | 9 | 7 | 11 | 8 |\n| C2 | 9 | 13 | 5 | 10 |\n| C3 | 15 | 11 | 3 | 1 |\n| C4 | 15 | 20 | 19 | 4 |\n\nDetermine the optimal allocation of trucks to minimize the total fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

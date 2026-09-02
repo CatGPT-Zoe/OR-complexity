@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_14",
+  "annotation_mode": "semantic",
+  "problem_text": "Mary is planning tonight's dinner. She wants to choose a combination of protein and vegetables to maximize her protein intake for the meal. Her protein options are chicken, salmon, and tofu, which can be bought in any quantity.\n\n- Chicken: 23g protein, $3.00 cost, per 100g.\n- Salmon: 20g protein, $5.00 cost, per 100g.\n- Tofu: 8g protein, $1.50 cost, per 100g.\n\nShe also wants to choose from a list of five vegetables, sold in 100g packs. She must select at least three different types of vegetables.\n\n- Broccoli (100g pack): 2.8g protein, $1.20 cost.\n- Carrots (100g pack): 0.9g protein, $0.80 cost.\n- Spinach (100g pack): 2.9g protein, $1.50 cost.\n- Bell Pepper (100g pack): 1.0g protein, $1.00 cost.\n- Mushrooms (100g pack): 3.1g protein, $2.00 cost.\n\nMary has two main constraints:\n1. Her total budget is $20.\n2. The total weight of all food must not exceed 800 grams.\n\nHow should Mary choose her ingredients to get the maximum possible amount of protein?",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

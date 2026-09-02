@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of freight parcels onto identical transport vehicles. The parcels are as follows:\n* Parcel Alpha: mass 37kg\n* Parcel Bravo: mass 39kg\n* Parcel Charlie: mass 38kg\n* Parcel Delta: mass 46kg\n* Parcel Echo: mass 47kg\n* Parcel Foxtrot: mass 38kg\n* Parcel Golf: mass 45kg\n* Parcel Hotel: mass 40kg\n* Parcel India: mass 52kg\n* Parcel Juliet: mass 51kg\n* Parcel Kilo: mass 62kg\n* Parcel Lima: mass 44kg\n* Parcel Mike: mass 45kg\n* Parcel November: mass 67kg\n* Parcel Oscar: mass 32kg\n* Parcel Papa: mass 62kg\n* Parcel Quebec: mass 42kg\n* Parcel Romeo: mass 64kg\n* Parcel Sierra: mass 61kg\n* Parcel Tango: mass 53kg\n* Parcel Uniform: mass 41kg\n* Parcel Victor: mass 55kg\n* Parcel Whiskey: mass 60kg\n* Parcel X-ray: mass 61kg\n* Parcel Yankee: mass 43kg\n* Parcel Zulu: mass 58kg\n* Parcel [Bracket]: mass 64kg\n* Parcel [Backslash]: mass 54kg\n* Parcel [Brace]: mass 49kg\n* Parcel [Caret]: mass 44kg\n* Parcel [Underscore]: mass 37kg\n* Parcel [Accent]: mass 63kg\n* Parcel [Alpha-lower]: mass 59kg\n* Parcel [Bravo-lower]: mass 56kg\n* Parcel [Charlie-lower]: mass 69kg\n* Parcel [Delta-lower]: mass 47kg\n* Parcel [Echo-lower]: mass 50kg\n* Parcel [Foxtrot-lower]: mass 35kg\n* Parcel [Golf-lower]: mass 36kg\n\nEach transport vehicle has a maximum payload capacity of 100 kg. The coordinator must load all parcels using the smallest possible number of vehicles. Every parcel must be assigned to exactly one vehicle, and the combined mass of parcels in any vehicle must not surpass its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

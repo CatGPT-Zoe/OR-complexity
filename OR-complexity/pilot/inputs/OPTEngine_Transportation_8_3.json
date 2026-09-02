@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A company must allocate its computational workloads across a distributed network of data centers to minimize total processing latency.  \n\nThe available processing capacity at each source data center (set \\( S \\)) is as follows:  \n*S1 can handle 130 tasks.  \n*S2 can handle 98 tasks.  \n*S3 can handle 90 tasks.  \n*S4 can handle 177 tasks.  \n*S5 can handle 181 tasks.  \n*S6 can handle 169 tasks.  \n*S7 can handle 177 tasks.  \n*S8 can handle 128 tasks.  \n\nThe required number of tasks to be executed at each client cluster (set \\( C \\)) is given below:  \n*C1 requires 30 tasks.  \n*C2 requires 131 tasks.  \n*C3 requires 152 tasks.  \n*C4 requires 79 tasks.  \n*C5 requires 192 tasks.  \n*C6 requires 16 tasks.  \n*C7 requires 93 tasks.  \n*C8 requires 197 tasks.  \n\nThe latency per task (in milliseconds) from each source data center to each client cluster is shown in the table:  \n\n| From / To | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 |\n|-----------|----|----|----|----|----|----|----|----|\n| S1        | 16 | 10 | 18 | 1  | 4  | 14 | 5  | 9  |\n| S2        | 12 | 13 | 12 | 2  | 13 | 2  | 19 | 18 |\n| S3        | 7  | 12 | 18 | 10 | 3  | 13 | 17 | 15 |\n| S4        | 18 | 9  | 20 | 20 | 4  | 5  | 4  | 13 |\n| S5        | 12 | 11 | 18 | 12 | 5  | 7  | 20 | 17 |\n| S6        | 13 | 17 | 2  | 2  | 2  | 5  | 11 | 16 |\n| S7        | 17 | 15 | 5  | 20 | 17 | 5  | 11 | 20 |\n| S8        | 11 | 6  | 13 | 20 | 10 | 19 | 11 | 17 |\n\nDetermine the optimal distribution of tasks to minimize the overall processing latency.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

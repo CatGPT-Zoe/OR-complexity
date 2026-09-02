@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of distinct parcels into identical delivery trucks for shipment. The parcels are labeled as follows:\n\n* Parcel Alpha: weight 46kg\n* Parcel Beta: weight 42kg\n* Parcel Gamma: weight 46kg\n* Parcel Delta: weight 50kg\n* Parcel Epsilon: weight 46kg\n* Parcel Zeta: weight 46kg\n* Parcel Eta: weight 63kg\n* Parcel Theta: weight 59kg\n* Parcel Iota: weight 39kg\n* Parcel Kappa: weight 58kg\n* Parcel Lambda: weight 65kg\n* Parcel Mu: weight 39kg\n* Parcel Nu: weight 32kg\n* Parcel Xi: weight 70kg\n* Parcel Omicron: weight 67kg\n* Parcel Pi: weight 41kg\n* Parcel Rho: weight 62kg\n* Parcel Sigma: weight 32kg\n* Parcel Tau: weight 50kg\n* Parcel Upsilon: weight 34kg\n\nEach truck possesses a maximum load capacity of 100 kilograms. The objective is to assign every parcel to precisely one truck, ensuring that the cumulative weight within any given truck does not surpass its designated limit, while simultaneously minimizing the total number of trucks utilized for the entire consignment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

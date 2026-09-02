@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. Packages:\n\n* Package Alpha: size 34 cubic feet\n* Package Bravo: size 56 cubic feet\n* Package Charlie: size 42 cubic feet\n* Package Delta: size 41 cubic feet\n* Package Echo: size 43 cubic feet\n* Package Foxtrot: size 47 cubic feet\n* Package Golf: size 53 cubic feet\n* Package Hotel: size 63 cubic feet\n* Package India: size 58 cubic feet\n* Package Juliet: size 58 cubic feet\n* Package Kilo: size 69 cubic feet\n* Package Lima: size 56 cubic feet\n* Package Mike: size 43 cubic feet\n* Package November: size 64 cubic feet\n* Package Oscar: size 58 cubic feet\n* Package Papa: size 51 cubic feet\n* Package Quebec: size 36 cubic feet\n* Package Romeo: size 43 cubic feet\n* Package Sierra: size 69 cubic feet\n* Package Tango: size 60 cubic feet\n* Package Uniform: size 49 cubic feet\n* Package Victor: size 67 cubic feet\n* Package Whiskey: size 36 cubic feet\n* Package X-ray: size 31 cubic feet\n* Package Yankee: size 32 cubic feet\n* Package Zulu: size 34 cubic feet\n* Package Asterisk: size 44 cubic feet\n* Package Slash: size 65 cubic feet\n* Package Bracket: size 57 cubic feet\n* Package Caret: size 50 cubic feet\n* Package Underscore: size 62 cubic feet\n* Package Backtick: size 36 cubic feet\n* Package Alpha2: size 35 cubic feet\n* Package Bravo2: size 60 cubic feet\n* Package Charlie2: size 48 cubic feet\n* Package Delta2: size 61 cubic feet\n* Package Echo2: size 59 cubic feet\n* Package Foxtrot2: size 33 cubic feet\n\nEach truck can carry up to 100 cubic feet of total package volume. Assign all packages using the fewest trucks possible. Every package must be loaded onto exactly one truck, and the combined volume in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

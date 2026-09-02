@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_15_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood plasma storage strategy for a critical type of plasma over a 15-day planning window.  \nThe initial stock in the blood bank at the start of the period is 85 units.  \nOn each day t = 1,…,15, the supplier permits the hospital to submit a procurement request, where the requested amount must be between 2 and 53 units.  \nHowever, every procurement request is subject to a 2-day delivery lead time before it becomes available for meeting patient needs or replenishing the bank.  \nThe daily patient requirement for this plasma is as follows:  \n* Day 1: 24 units  \n* Day 2: 19 units  \n* Day 3: 51 units  \n* Day 4: 35 units  \n* Day 5: 42 units  \n* Day 6: 30 units  \n* Day 7: 19 units  \n* Day 8: 14 units  \n* Day 9: 19 units  \n* Day 10: 19 units  \n* Day 11: 12 units  \n* Day 12: 34 units  \n* Day 13: 51 units  \n* Day 14: 46 units  \n* Day 15: 17 units  \n\nShortfalls are allowed, but any unmet patient requirement is lost and cannot be deferred to later days.  \nThroughout the 15 days, plasma quantities may be treated as continuous values, and the total plasma held in storage at any moment must not exceed the bank’s capacity of 85 units.  \n\nOn day 14, the maximum quantity that can be procured is limited to 48 units.  \nOn day 8, the on-hand plasma stock must be no less than 51 units.  \n\nThe overall cost comprises three elements: the procurement cost, charged at 5 per unit ordered; the storage cost, charged at 2 per unit carried over to the next day; and the shortage penalty, charged at 11 per unit of unmet patient requirement. The objective is to decide the optimal procurement quantity each day and to monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

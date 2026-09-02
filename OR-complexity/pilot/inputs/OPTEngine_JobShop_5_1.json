@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 5 delivery routes through 5 specialized checkpoints.\n\nEach route consists of a sequence of checkpoint stops represented as pairs (Checkpoint, Processing duration),\nwhere each pair specifies the checkpoint where the stop must occur and the time required for processing.\nThe order of pairs indicates the mandatory sequence in which the stops must be completed.\n\nRoute details:\n* R1 requires the sequence: (C1, 5) → (C2, 5) → (C4, 9) → (C3, 6) → (C5, 3)\n* R2 requires the sequence: (C5, 7) → (C1, 3) → (C4, 3) → (C2, 4) → (C3, 6)\n* R3 requires the sequence: (C5, 6) → (C2, 7) → (C1, 1) → (C3, 3) → (C4, 10)\n* R4 requires the sequence: (C1, 7) → (C4, 5) → (C5, 9) → (C3, 7) → (C2, 3)\n* R5 requires the sequence: (C5, 4) → (C4, 8) → (C2, 6) → (C3, 9) → (C1, 1)\n\nEach checkpoint stop must be processed continuously once it begins and cannot be interrupted,\nand each checkpoint can only handle one delivery vehicle at a time.\nThe objective is to determine the processing sequence of all stops at the checkpoints\nso that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

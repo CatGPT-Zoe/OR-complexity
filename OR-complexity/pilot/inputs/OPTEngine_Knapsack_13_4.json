@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager needs to select cargo containers for shipment. Available containers are:\n* Container 1: volume 34 m³, revenue $79\n* Container 2: volume 3 m³, revenue $51\n* Container 3: volume 37 m³, revenue $187\n* Container 4: volume 24 m³, revenue $12\n* Container 5: volume 5 m³, revenue $107\n* Container 6: volume 46 m³, revenue $66\n* Container 7: volume 43 m³, revenue $286\n* Container 8: volume 31 m³, revenue $32\n* Container 9: volume 21 m³, revenue $22\n* Container 10: volume 21 m³, revenue $211\n* Container 11: volume 9 m³, revenue $150\n* Container 12: volume 27 m³, revenue $82\n* Container 13: volume 39 m³, revenue $85\nThe cargo plane has a maximum capacity of 237 m³. Choose the container combination that maximizes total revenue without exceeding this volume limit. Each container is either fully shipped or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A university library has 3 research projects that need to use 3 specialized workstations.\n\nEach project consists of a series of analysis sessions represented as (Workstation, Duration) pairs, where each pair specifies the workstation required for that session and the time needed to complete it. The sequence of pairs indicates the mandatory order in which the sessions must be conducted.\n\nProject details:\n* Project Alpha requires: (Workstation B, 10 hours) → (Workstation A, 7 hours) → (Workstation C, 10 hours)\n* Project Beta requires: (Workstation B, 6 hours) → (Workstation C, 2 hours) → (Workstation A, 6 hours)\n* Project Gamma requires: (Workstation C, 10 hours) → (Workstation A, 6 hours) → (Workstation B, 4 hours)\n\nEach analysis session must run continuously without interruption once initiated, and each workstation can only accommodate one session at a time. The objective is to schedule all analysis sessions across the workstations to minimize the total completion time for all research projects.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

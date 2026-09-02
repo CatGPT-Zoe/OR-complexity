@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes. Shipments:\n* Component A: volume 38 m³\n* Component B: volume 33 m³\n* Component C: volume 65 m³\n* Component D: volume 48 m³\n* Component E: volume 42 m³\n* Component F: volume 53 m³\n* Component G: volume 45 m³\n* Component H: volume 66 m³\n* Component I: volume 35 m³\n* Component J: volume 44 m³\n* Component K: volume 57 m³\n* Component L: volume 50 m³\n* Component M: volume 70 m³\n* Component N: volume 70 m³\n* Component O: volume 48 m³\n* Component P: volume 31 m³\n* Component Q: volume 34 m³\n* Component R: volume 59 m³\n* Component S: volume 47 m³\n* Component T: volume 70 m³\n* Component U: volume 54 m³\n* Component V: volume 43 m³\n* Component W: volume 40 m³\n* Component X: volume 58 m³\n* Component Y: volume 30 m³\n* Component Z: volume 40 m³\n* Component [: volume 30 m³\n* Component \\: volume 40 m³\n* Component ]: volume 66 m³\n* Component ^: volume 33 m³\n* Component _: volume 35 m³\n* Component `: volume 53 m³\n\nEach aircraft has a maximum cargo capacity of 100 m³. Transport all components using the fewest planes possible. Every component must be loaded onto exactly one aircraft, and the total volume in any aircraft cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

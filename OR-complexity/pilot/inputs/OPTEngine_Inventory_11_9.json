@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_11_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must devise a procurement and storage schedule for a critical fuel additive over an operational window of 11 consecutive days.  \nThe starting stockpile at the dawn of the planning interval is 34 gallons.  \nFor each day t = 1, …, 11, the vendor permits the company to submit a fuel additive purchase, the volume of which must be between 1 and 36 gallons.  \nNevertheless, every purchase request is subject to a delivery lag of 4 days before it becomes available for consumption or for replenishing the stockpile.  \nThe daily consumption requirement for the additive is detailed as follows:  \n* Day 1: 53 gallons  \n* Day 2: 12 gallons  \n* Day 3: 39 gallons  \n* Day 4: 35 gallons  \n* Day 5: 56 gallons  \n* Day 6: 17 gallons  \n* Day 7: 35 gallons  \n* Day 8: 32 gallons  \n* Day 9: 41 gallons  \n* Day 10: 13 gallons  \n* Day 11: 11 gallons  \n\nStockouts are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.  \nThroughout the 11-day horizon, additive quantities may be treated as continuous, and the total volume of physically stored additive at any instant must not surpass the tank capacity of 44 gallons.  \nThe aggregate expenditure comprises three elements: the procurement expense, charged at 6 per gallon purchased; the storage expense, levied at 2 per gallon held overnight; and the shortage penalty, assessed at 9 per gallon of unmet consumption.  \nThe objective is to identify the optimal purchase volume for each day and to monitor the consequent stockpile and shortage amounts, thereby minimizing the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

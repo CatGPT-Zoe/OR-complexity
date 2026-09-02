@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_10_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage strategy for a critical reservoir over a 10-day planning window.\nThe initial water volume in the reservoir at the start of the period is 49 megaliters.\nOn each day t = 1, ..., 10, the utility can initiate a pumping operation from a distant source, where the volume pumped must be between 8 and 50 megaliters.\nDue to pipeline transmission delays, each pumped volume will require 2 days to reach the reservoir before it becomes available for meeting demand or augmenting storage.\nThe daily water demand for the region is specified as follows:\n* Day 1: demand 32 megaliters\n* Day 2: demand 22 megaliters\n* Day 3: demand 22 megaliters\n* Day 4: demand 26 megaliters\n* Day 5: demand 53 megaliters\n* Day 6: demand 56 megaliters\n* Day 7: demand 57 megaliters\n* Day 8: demand 29 megaliters\n* Day 9: demand 29 megaliters\n* Day 10: demand 43 megaliters\n\nSupply shortfalls are permissible, but any unmet demand is simply lost and will not be recovered in later days.\nThroughout the planning horizon, water volumes are treated as continuous quantities, and the total volume stored in the reservoir at any moment must not exceed its capacity of 49 megaliters.\nThe aggregate cost over the planning horizon comprises three elements: the pumping cost, which is 6 per megaliter pumped; the storage cost, which is 1 per megaliter of water held overnight; and the shortage penalty, which is 6 per megaliter of unmet demand. The objective is to ascertain the optimal pumping volume for each day and to monitor the consequent storage and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

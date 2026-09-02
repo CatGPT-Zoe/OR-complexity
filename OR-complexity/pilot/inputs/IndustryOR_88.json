@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_88",
+  "annotation_mode": "semantic",
+  "problem_text": "A company operates two machines (Machine 1 and Machine 2) to produce two fertilizers: liquid and solid. Processing requirements are measured per standardized lot, and planning may use fractional lots when appropriate. Producing one lot of liquid requires 50 minutes on Machine 1 and 30 minutes on Machine 2. Producing one lot of solid requires 24 minutes on Machine 1 and 33 minutes on Machine 2. At the beginning of the week, on-hand inventories are 30 lots of liquid and 90 lots of solid. This week, Machine 1 has 40 available hours and Machine 2 has 35 available hours. Forecast demand for this week is 75 lots of liquid and 95 lots of solid. The company aims to maximize the total ending inventory of liquid and solid at the end of the week. Formulate a linear program.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

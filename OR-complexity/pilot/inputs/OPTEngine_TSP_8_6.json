@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A courier must deliver sensitive documents to eight distinct corporate headquarters.\n\nThe travel durations between headquarters are recorded in minutes:\n* Alpha to Beta: 43.6 minutes\n* Alpha to Gamma: 191.7 minutes\n* Alpha to Delta: 59.7 minutes\n* Alpha to Epsilon: 157.1 minutes\n* Alpha to Zeta: 119.5 minutes\n* Alpha to Eta: 129.6 minutes\n* Alpha to Theta: 156.0 minutes\n* Beta to Gamma: 162.0 minutes\n* Beta to Delta: 38.8 minutes\n* Beta to Epsilon: 168.3 minutes\n* Beta to Zeta: 100.7 minutes\n* Beta to Eta: 107.9 minutes\n* Beta to Theta: 138.2 minutes\n* Gamma to Delta: 132.0 minutes\n* Gamma to Epsilon: 164.8 minutes\n* Gamma to Zeta: 79.3 minutes\n* Gamma to Eta: 67.2 minutes\n* Gamma to Theta: 60.6 minutes\n* Delta to Epsilon: 134.1 minutes\n* Delta to Zeta: 63.3 minutes\n* Delta to Eta: 71.8 minutes\n* Delta to Theta: 100.8 minutes\n* Epsilon to Zeta: 106.9 minutes\n* Epsilon to Eta: 114.8 minutes\n* Epsilon to Theta: 104.5 minutes\n* Zeta to Eta: 12.2 minutes\n* Zeta to Theta: 37.6 minutes\n* Eta to Theta: 31.6 minutes\n\nThe objective is to determine the most time-efficient circuit that commences at one headquarters, visits every other headquarters precisely once, and concludes at the initial point of departure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

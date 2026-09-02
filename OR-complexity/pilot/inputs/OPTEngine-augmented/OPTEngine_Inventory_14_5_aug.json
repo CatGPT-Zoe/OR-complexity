@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood‑plasma storage schedule for a critical type of plasma over a 14‑day planning window.  \nAt the start of the planning interval, the refrigerated stock contains 22 units.  \nIn each day t = 1,…,14, the supplier permits the hospital to submit a procurement request, the volume of which must be between 11 and 59 units.  \nEvery request, however, requires a 2‑day delivery lead time before the plasma becomes available for patient use or for replenishing the refrigerated stock.  \nThe daily patient consumption of this plasma is forecasted as follows:  \n* Day 1: 26 units  \n* Day 2: 39 units  \n* Day 3: 54 units  \n* Day 4: 14 units  \n* Day 5: 11 units  \n* Day 6: 22 units  \n* Day 7: 48 units  \n* Day 8: 16 units  \n* Day 9: 26 units  \n* Day 10: 60 units  \n* Day 11: 10 units  \n* Day 12: 23 units  \n* Day 13: 21 units  \n* Day 14: 49 units  \n\nDeficits are allowed, but any unsatisfied demand is not carried forward to later days.  \nThroughout the 14‑day horizon, plasma volumes may be treated as continuous quantities, and the total refrigerated stock on hand at any moment must not exceed the storage‑cabinet capacity of 24 units.  \n\nOn day 3, the maximum procurement volume permitted is restricted to 30 units.  \nBy the end of day 14, the on‑hand refrigerated stock must be at least 7 units.  \n\nThe total cost comprises three elements: the procurement cost, charged at 1 per unit ordered; the refrigeration cost, charged at 3 per unit kept in storage from one day to the next; and the shortage penalty, charged at 6 per unit of unmet patient demand.  \nDetermine the optimal procurement volume for each day and monitor the resulting stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is preparing shipments for international delivery using standardized pallets. The items to be shipped include:\n* Component A: 70kg\n* Component B: 53kg\n* Component C: 39kg\n* Component D: 37kg\n* Component E: 62kg\n* Component F: 50kg\n* Component G: 50kg\n* Component H: 34kg\n* Component I: 53kg\n* Component J: 42kg\n* Component K: 42kg\n* Component L: 48kg\n* Component M: 63kg\n* Component N: 57kg\n* Component O: 54kg\n* Component P: 55kg\n* Component Q: 32kg\n* Component R: 39kg\n* Component S: 58kg\n* Component T: 34kg\n* Component U: 48kg\n* Component V: 70kg\n* Component W: 39kg\n* Component X: 63kg\n* Component Y: 42kg\n* Component Z: 68kg\n* Component [: 61kg\n\nEach pallet has a maximum weight capacity of 100 kg. The coordinator must load all components onto the fewest possible pallets. Every component must be placed on exactly one pallet, and the total weight on any pallet cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of fragile chemical shipments to identical reinforced pallets. The shipments are as follows:\n\n* Chemical Alpha: mass 61 units\n* Chemical Beta: mass 42 units\n* Chemical Gamma: mass 63 units\n* Chemical Delta: mass 48 units\n* Chemical Epsilon: mass 66 units\n* Chemical Zeta: mass 66 units\n* Chemical Eta: mass 35 units\n* Chemical Theta: mass 39 units\n* Chemical Iota: mass 53 units\n* Chemical Kappa: mass 64 units\n* Chemical Lambda: mass 30 units\n* Chemical Mu: mass 69 units\n* Chemical Nu: mass 51 units\n* Chemical Xi: mass 49 units\n* Chemical Omicron: mass 64 units\n* Chemical Pi: mass 44 units\n* Chemical Rho: mass 67 units\n* Chemical Sigma: mass 49 units\n* Chemical Tau: mass 30 units\n* Chemical Upsilon: mass 66 units\n* Chemical Phi: mass 56 units\n* Chemical Chi: mass 52 units\n* Chemical Psi: mass 34 units\n* Chemical Omega: mass 51 units\n* Compound A: mass 47 units\n* Compound B: mass 52 units\n* Compound C: mass 36 units\n* Compound D: mass 49 units\n* Compound E: mass 66 units\n* Compound F: mass 39 units\n* Compound G: mass 52 units\n\nEach pallet is rated to safely support a maximum load of 100 mass units. The coordinator must allocate every shipment to precisely one pallet, ensuring the cumulative mass on any pallet does not surpass its load rating. The objective is to utilize the smallest possible number of pallets for the entire set of shipments.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

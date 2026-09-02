@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load cargo boxes onto identical pallets.  \nCargo items:  \n* Box A: 51kg  \n* Box B: 45kg  \n* Box C: 38kg  \n* Box D: 53kg  \n* Box E: 62kg  \n* Box F: 43kg  \n* Box G: 64kg  \n* Box H: 55kg  \n* Box I: 34kg  \n* Box J: 38kg  \n* Box K: 56kg  \n* Box L: 66kg  \n* Box M: 52kg  \n* Box N: 36kg  \n* Box O: 57kg  \n* Box P: 57kg  \n* Box Q: 45kg  \n* Box R: 60kg  \n* Box S: 54kg  \n* Box T: 44kg  \n\nEach pallet has a maximum load capacity of 100kg.  \nLoad all boxes using the fewest pallets. Every box must be placed on exactly one pallet, and the total weight on a pallet must not exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

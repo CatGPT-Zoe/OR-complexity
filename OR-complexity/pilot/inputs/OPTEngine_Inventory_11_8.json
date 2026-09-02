@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_11_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A municipal water utility must devise a pumping and storage schedule for a critical reservoir over an 11-day forecast window.  \nThe initial water volume in the reservoir at the start of the planning interval is 63 megaliters.  \nOn each day \\( t = 1, \\dots, 11 \\), the utility may activate a pumping station to transfer water from a distant source; the pumped amount on any day must be between 2 and 42 megaliters.  \nHowever, due to transmission delays in the pipeline, water pumped on a given day will only become available in the reservoir after a lag of 2 days.  \nThe projected daily consumption (demand) for water, in megaliters, is as follows:  \n\n* Day 1: 49  \n* Day 2: 48  \n* Day 3: 12  \n* Day 4: 26  \n* Day 5: 31  \n* Day 6: 57  \n* Day 7: 56  \n* Day 8: 34  \n* Day 9: 11  \n* Day 10: 50  \n* Day 11: 12  \n\nTemporary shortfalls are permissible, but any consumption not met from available reservoir volume is lost and will not be deferred to later days.  \nThroughout the 11-day horizon, water volumes are treated as continuous quantities, and the total stored volume in the reservoir at any moment must not exceed its capacity of 63 megaliters.  \nThe total operational cost comprises three elements: the pumping cost, which is 6 per megaliter pumped; the storage cost, which is 1 per megaliter held overnight from one day to the next; and a penalty for unmet demand, assessed at 13 per megaliter of consumption not supplied.  \nDetermine the optimal daily pumping quantities and monitor the resulting reservoir levels and supply shortfalls so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

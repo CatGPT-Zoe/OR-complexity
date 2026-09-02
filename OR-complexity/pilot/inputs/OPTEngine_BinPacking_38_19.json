@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of archival boxes to a fleet of identical transport drones. Each box contains a fragile artifact with a specific mass:\n* Artifact Alpha: mass 49kg\n* Artifact Beta: mass 64kg\n* Artifact Gamma: mass 65kg\n* Artifact Delta: mass 60kg\n* Artifact Epsilon: mass 53kg\n* Artifact Zeta: mass 69kg\n* Artifact Eta: mass 60kg\n* Artifact Theta: mass 38kg\n* Artifact Iota: mass 64kg\n* Artifact Kappa: mass 44kg\n* Artifact Lambda: mass 70kg\n* Artifact Mu: mass 33kg\n* Artifact Nu: mass 58kg\n* Artifact Xi: mass 66kg\n* Artifact Omicron: mass 45kg\n* Artifact Pi: mass 45kg\n* Artifact Rho: mass 67kg\n* Artifact Sigma: mass 44kg\n* Artifact Tau: mass 32kg\n* Artifact Upsilon: mass 48kg\n* Artifact Phi: mass 37kg\n* Artifact Chi: mass 54kg\n* Artifact Psi: mass 51kg\n* Artifact Omega: mass 56kg\n* Artifact Aleph: mass 52kg\n* Artifact Beth: mass 39kg\n* Artifact Gimel: mass 67kg\n* Artifact Daleth: mass 54kg\n* Artifact He: mass 59kg\n* Artifact Waw: mass 38kg\n* Artifact Zayin: mass 56kg\n* Artifact Heth: mass 40kg\n* Artifact Teth: mass 44kg\n* Artifact Yodh: mass 32kg\n* Artifact Kaph: mass 53kg\n* Artifact Lamedh: mass 59kg\n* Artifact Mem: mass 59kg\n* Artifact Nun: mass 37kg\n\nEach transport drone has a maximum payload capacity of 100 kg. The coordinator must assign every archival box to exactly one drone, ensuring the combined mass on any drone does not surpass its payload limit. The objective is to utilize the smallest possible number of drones to complete the allocation of all artifacts.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

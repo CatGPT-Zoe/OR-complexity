@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment of specialized equipment for a remote research outpost. They must select a combination of crates to maximize total utility while adhering to the transport vehicle's strict weight allowance.\n\nThe available crates are:\n* Crate A: weight 10kg, utility 141 units\n* Crate B: weight 36kg, utility 98 units\n* Crate C: weight 35kg, utility 68 units\n* Crate D: weight 29kg, utility 255 units\n* Crate E: weight 14kg, utility 102 units\n* Crate F: weight 39kg, utility 193 units\n* Crate G: weight 39kg, utility 137 units\n* Crate H: weight 46kg, utility 55 units\n* Crate I: weight 35kg, utility 264 units\n* Crate J: weight 14kg, utility 160 units\n* Crate K: weight 25kg, utility 149 units\n* Crate L: weight 33kg, utility 113 units\n* Crate M: weight 23kg, utility 218 units\n* Crate N: weight 21kg, utility 20 units\n* Crate O: weight 3kg, utility 108 units\n* Crate P: weight 13kg, utility 93 units\n* Crate Q: weight 36kg, utility 244 units\n* Crate R: weight 6kg, utility 138 units\n\nFurthermore, due to compatibility restrictions, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, the effective load capacity of the vehicle is diminished by 10 kg.\nThe vehicle's maximum permissible load is 319 kg. The coordinator must determine the optimal set of crates to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

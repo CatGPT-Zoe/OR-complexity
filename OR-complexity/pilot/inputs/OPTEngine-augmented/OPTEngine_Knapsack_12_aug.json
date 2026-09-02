@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment to maximize total utility score while adhering to a cargo weight limit for a transport aircraft.\n\nThe equipment units available are:\n* Unit A: weight 23kg, utility 77 credits\n* Unit B: weight 41kg, utility 265 credits\n* Unit C: weight 7kg, utility 23 credits\n* Unit D: weight 34kg, utility 193 credits\n* Unit E: weight 32kg, utility 243 credits\n* Unit F: weight 20kg, utility 16 credits\n* Unit G: weight 15kg, utility 294 credits\n* Unit H: weight 42kg, utility 93 credits\n* Unit I: weight 43kg, utility 263 credits\n* Unit J: weight 48kg, utility 256 credits\n* Unit K: weight 35kg, utility 170 credits\n* Unit L: weight 46kg, utility 50 credits\n\nFurthermore, due to operational compatibility, exactly one of Unit A or Unit B must be included in the shipment.\n\nIf Unit C is selected, the effective cargo capacity of the aircraft is diminished by 10 kg.\nThe aircraft's maximum allowable cargo weight is 270 kg. The manager must determine which equipment units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

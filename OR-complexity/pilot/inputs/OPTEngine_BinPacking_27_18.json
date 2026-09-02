@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of cargo parcels to identical freight compartments.  \nThe parcels are labeled as follows:  \n* Parcel Alpha: mass 60 units  \n* Parcel Beta: mass 58 units  \n* Parcel Gamma: mass 41 units  \n* Parcel Delta: mass 52 units  \n* Parcel Epsilon: mass 57 units  \n* Parcel Zeta: mass 57 units  \n* Parcel Eta: mass 56 units  \n* Parcel Theta: mass 53 units  \n* Parcel Iota: mass 67 units  \n* Parcel Kappa: mass 36 units  \n* Parcel Lambda: mass 35 units  \n* Parcel Mu: mass 65 units  \n* Parcel Nu: mass 58 units  \n* Parcel Xi: mass 38 units  \n* Parcel Omicron: mass 36 units  \n* Parcel Pi: mass 30 units  \n* Parcel Rho: mass 63 units  \n* Parcel Sigma: mass 54 units  \n* Parcel Tau: mass 60 units  \n* Parcel Upsilon: mass 45 units  \n* Parcel Phi: mass 55 units  \n* Parcel Chi: mass 70 units  \n* Parcel Psi: mass 36 units  \n* Parcel Omega: mass 56 units  \n* Parcel Digamma: mass 33 units  \n* Parcel Stigma: mass 48 units  \n* Parcel Heta: mass 68 units  \n\nEvery compartment has a maximum capacity of 100 mass units.  \nThe coordinator must allocate all parcels into compartments, using the smallest possible number of compartments. Each parcel must be placed in exactly one compartment, and the total mass in any compartment must not exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

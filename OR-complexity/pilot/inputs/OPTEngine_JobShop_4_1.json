@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 4 cargo shipments through 4 different ports.\n\nEach shipment must pass through a fixed sequence of port inspections, represented as (Port, Hours required), where each pair specifies the port where inspection occurs and the duration needed. The order of pairs indicates the mandatory sequence of port visits.\n\nShipment details:\n* S1 requires the route: (Port B, 1) → (Port C, 7) → (Port A, 7) → (Port D, 6)\n* S2 requires the route: (Port A, 9) → (Port D, 10) → (Port C, 2) → (Port B, 4)\n* S3 requires the route: (Port A, 5) → (Port C, 3) → (Port D, 2) → (Port B, 8)\n* S4 requires the route: (Port D, 5) → (Port C, 8) → (Port A, 2) → (Port B, 5)\n\nEach inspection must run continuously once initiated, and each port can only handle one shipment inspection at a time. The objective is to determine the processing sequence of all shipment inspections at the ports so that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

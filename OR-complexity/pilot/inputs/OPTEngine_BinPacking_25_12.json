@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of cargo parcels into identical shipping crates. The parcels are as follows:\n* Parcel Alpha: mass 33 units\n* Parcel Bravo: mass 51 units\n* Parcel Charlie: mass 38 units\n* Parcel Delta: mass 50 units\n* Parcel Echo: mass 47 units\n* Parcel Foxtrot: mass 61 units\n* Parcel Golf: mass 60 units\n* Parcel Hotel: mass 68 units\n* Parcel India: mass 51 units\n* Parcel Juliett: mass 47 units\n* Parcel Kilo: mass 34 units\n* Parcel Lima: mass 59 units\n* Parcel Mike: mass 40 units\n* Parcel November: mass 36 units\n* Parcel Oscar: mass 62 units\n* Parcel Papa: mass 46 units\n* Parcel Quebec: mass 65 units\n* Parcel Romeo: mass 55 units\n* Parcel Sierra: mass 68 units\n* Parcel Tango: mass 58 units\n* Parcel Uniform: mass 56 units\n* Parcel Victor: mass 40 units\n* Parcel Whiskey: mass 68 units\n* Parcel X-ray: mass 56 units\n* Parcel Yankee: mass 38 units\n\nEach shipping crate possesses a maximum load capacity of 100 mass units. The coordinator is required to assign every parcel to precisely one crate, ensuring the aggregate mass within any given crate does not surpass its designated limit. The objective is to determine an allocation scheme that consumes the minimal possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

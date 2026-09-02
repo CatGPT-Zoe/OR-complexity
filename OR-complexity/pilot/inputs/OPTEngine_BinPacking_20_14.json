@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of antique books into identical shipping crates for an international exhibition. The volumes are as follows:\n\n* Tome Alpha: weight 61 pounds\n* Tome Beta: weight 60 pounds\n* Tome Gamma: weight 35 pounds\n* Tome Delta: weight 33 pounds\n* Tome Epsilon: weight 64 pounds\n* Tome Zeta: weight 55 pounds\n* Tome Eta: weight 46 pounds\n* Tome Theta: weight 31 pounds\n* Tome Iota: weight 63 pounds\n* Tome Kappa: weight 36 pounds\n* Tome Lambda: weight 35 pounds\n* Tome Mu: weight 51 pounds\n* Tome Nu: weight 52 pounds\n* Tome Xi: weight 36 pounds\n* Tome Omicron: weight 60 pounds\n* Tome Pi: weight 32 pounds\n* Tome Rho: weight 39 pounds\n* Tome Sigma: weight 63 pounds\n* Tome Tau: weight 70 pounds\n* Tome Upsilon: weight 48 pounds\n\nEach reinforced crate can safely support a maximum load of 100 pounds. The coordinator must ensure every precious tome is placed into exactly one crate, with the aggregate weight in any given crate not surpassing its capacity. The objective is to complete this allocation utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

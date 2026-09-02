@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_23_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of fragile equipment modules to identical transport pallets for an international air shipment. The modules are as follows:\n\n* Module Alpha: mass 68 kg\n* Module Bravo: mass 38 kg\n* Module Charlie: mass 39 kg\n* Module Delta: mass 31 kg\n* Module Echo: mass 37 kg\n* Module Foxtrot: mass 57 kg\n* Module Golf: mass 45 kg\n* Module Hotel: mass 32 kg\n* Module India: mass 70 kg\n* Module Juliett: mass 47 kg\n* Module Kilo: mass 46 kg\n* Module Lima: mass 54 kg\n* Module Mike: mass 37 kg\n* Module November: mass 52 kg\n* Module Oscar: mass 48 kg\n* Module Papa: mass 53 kg\n* Module Quebec: mass 69 kg\n* Module Romeo: mass 70 kg\n* Module Sierra: mass 42 kg\n* Module Tango: mass 64 kg\n* Module Uniform: mass 64 kg\n* Module Victor: mass 33 kg\n* Module Whiskey: mass 51 kg\n\nEach pallet is certified for a maximum safe load of 100 kg. The coordinator must ensure every module is placed on exactly one pallet, with the aggregate mass on any pallet not surpassing its certified limit. The primary objective is to utilize the smallest possible number of pallets to accommodate the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

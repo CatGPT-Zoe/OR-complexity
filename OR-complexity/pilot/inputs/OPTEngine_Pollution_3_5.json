@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A municipality aims to formulate a nutrient runoff mitigation strategy to decrease total nitrogen discharge from several agricultural drainage points. Initially, no intervention practices are in place.\n\nThe attributes of each drainage point are as follows:\n* For Field A, the leaching coefficient is 2.323, and the cultivated area is 297.381.\n* For Field B, the leaching coefficient is 0.909, and the cultivated area is 210.0.\n* For Field C, the leaching coefficient is 1.449, and the cultivated area is 189.237.\n\nTo reduce discharge, several best management practices (BMPs) can be implemented, each with a specific capture efficiency:\n* Implementing Practice X captures 35% of the nutrient load.\n* Implementing Practice Y captures 23% of the nutrient load.\n* Implementing Practice Z captures 28% of the nutrient load.\n\nAdopting a BMP for a drainage point entails an additional cost per unit of cultivated area. The cost matrix for all field–practice pairings is provided below:\n| Field \\ Practice | Practice X | Practice Y | Practice Z |\n|--|-|-|\n| Field A | 53.519 | 16.099 | 69.936 |\n| Field B | 60.871 | 50.087 | 189.153 |\n| Field C | 176.51 | 69.789 | 134.533 |\n\nDetermine how to assign BMPs to each drainage point (points may employ multiple practices concurrently), and note that a point may also be left partially untreated if required.\nThe objective is to guarantee that the aggregate nitrogen discharge is diminished by at least a fraction P = 0.398 of the baseline load, while minimizing the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

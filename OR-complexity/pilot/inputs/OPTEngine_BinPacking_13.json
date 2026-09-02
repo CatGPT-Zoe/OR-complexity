@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A librarian needs to shelve books into identical book carts. Books:\n* Novel X: thickness 47mm\n* Novel Y: thickness 51mm\n* Novel Z: thickness 51mm\n* Textbook Alpha: thickness 53mm\n* Textbook Beta: thickness 35mm\n* Textbook Gamma: thickness 51mm\n* Atlas Delta: thickness 69mm\n* Atlas Epsilon: thickness 32mm\n* Atlas Zeta: thickness 32mm\n* Reference A: thickness 47mm\n* Reference B: thickness 40mm\n* Reference C: thickness 39mm\n* Encyclopedia M: thickness 67mm\n\nEach cart can accommodate books with total thickness up to 100mm. Shelve all books using the fewest carts. Each book must be placed on exactly one cart, and the total thickness on any cart cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

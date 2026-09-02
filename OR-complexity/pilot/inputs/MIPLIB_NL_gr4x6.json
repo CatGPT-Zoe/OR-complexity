@@ -1,0 +1,77 @@
+{
+  "instance_id": "MIPLIB_NL_gr4x6",
+  "annotation_mode": "semantic",
+  "problem_text": "We are playing a script-based murder mystery game where I play the owner of a freight company with a total market value of W billion. I have been assigned a task: transport goods from N1 factories to N2 customers. We must select specific routes to open from N1*N2 possible options and determine the quantity of goods transported on each route (which does not have to be an integer). When selecting routes, I must communicate with at least N game DMs. Opening each route requires paying a fixed cost, as shown in Table C1. Additionally, transporting one unit of cargo on each route incurs a shipping fee, as shown in Table C2. The quantity of goods produced by each factory is fixed, as shown in Table C3; the quantity transported out of a factory must equal its production volume. The quantity of goods required by each customer is also fixed, as shown in Table C4; the quantity received by each customer must equal their demand. Our objective is to determine the minimum cost to be paid while satisfying all conditions.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "files_1",
+      "indices": [
+        "Factory_ID",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unit": "",
+      "values": "| Factory_ID | 0 | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|---|---|\n| 0 | 11.0 | 16.0 | 18.0 | 17.0 | 10.0 | 20.0 |\n| 1 | 14.0 | 17.0 | 17.0 | 13.0 | 15.0 | 13.0 |\n| 2 | 12.0 | 13.0 | 20.0 | 17.0 | 13.0 | 15.0 |\n| 3 | 16.0 | 19.0 | 15.0 | 11.0 | 15.0 | 12.0 |"
+    },
+    {
+      "name": "files_2",
+      "indices": [
+        "Factory_ID",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "unit": "",
+      "values": "| Factory_ID | 0 | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|---|---|\n| 0 | 0.69 | 0.64 | 0.71 | 0.79 | 1.7 | 2.83 |\n| 1 | 1.01 | 0.75 | 0.88 | 0.59 | 1.5 | 2.63 |\n| 2 | 1.05 | 1.06 | 1.08 | 0.64 | 1.22 | 2.37 |\n| 3 | 1.94 | 1.5 | 1.56 | 1.22 | 1.98 | 1.98 |"
+    },
+    {
+      "name": "files_3",
+      "indices": [
+        "Factory_ID",
+        "Supply"
+      ],
+      "unit": "",
+      "values": "| Factory_ID | Supply |\n|---|---|\n| 0 | 45.0 |\n| 1 | 35.0 |\n| 2 | 20.0 |\n| 3 | 15.0 |"
+    },
+    {
+      "name": "files_4",
+      "indices": [
+        "Customer_ID",
+        "Demand"
+      ],
+      "unit": "",
+      "values": "| Customer_ID | Demand |\n|---|---|\n| 0 | 35.0 |\n| 1 | 30.0 |\n| 2 | 25.0 |\n| 3 | 15.0 |\n| 4 | 5.0 |\n| 5 | 5.0 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/gr4x6/data/C1.csv",
+      "role": "parameter_table",
+      "table": "files_1"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/gr4x6/data/C2.csv",
+      "role": "parameter_table",
+      "table": "files_2"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/gr4x6/data/C3.csv",
+      "role": "parameter_table",
+      "table": "files_3"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/gr4x6/data/C4.csv",
+      "role": "parameter_table",
+      "table": "files_4"
+    }
+  ],
+  "notes": ""
+}

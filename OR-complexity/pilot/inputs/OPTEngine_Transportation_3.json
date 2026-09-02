@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3",
+  "annotation_mode": "semantic",
+  "problem_text": "In a supply chain network for distributing specialized medical supplies, the objective is to minimize the total delivery expense from regional distribution centers to critical healthcare facilities.\n\nThe inventory available at each distribution center (set C) is as follows:\n*Center Alpha's inventory is 50 units.\n*Center Beta's inventory is 132 units.\n*Center Gamma's inventory is 175 units.\n\nThe required fulfillment at each healthcare facility (set H) is specified below:\n*Hospital North requires 77 units.\n*Hospital East requires 71 units.\n*Hospital West requires 68 units.\n\nThe per-unit delivery cost from each distribution center to each facility is provided in the following matrix:\n\n| Origin / Destination | Hospital North | Hospital East | Hospital West |\n|---|---|---|---|\n| Center Alpha | 10 | 8 | 2 |\n| Center Beta | 8 | 19 | 3 |\n| Center Gamma | 3 | 16 | 3 |\n\nDetermine the optimal allocation of shipments to achieve the minimal aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_36_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load boxes onto identical pallets for shipping. The boxes are:\n\n* Box Alpha: weight 69kg\n* Box Beta: weight 69kg\n* Box Gamma: weight 43kg\n* Box Delta: weight 65kg\n* Box Epsilon: weight 62kg\n* Box Zeta: weight 49kg\n* Box Eta: weight 63kg\n* Box Theta: weight 45kg\n* Box Iota: weight 40kg\n* Box Kappa: weight 41kg\n* Box Lambda: weight 52kg\n* Box Mu: weight 34kg\n* Box Nu: weight 36kg\n* Box Xi: weight 48kg\n* Box Omicron: weight 56kg\n* Box Pi: weight 57kg\n* Box Rho: weight 62kg\n* Box Sigma: weight 46kg\n* Box Tau: weight 63kg\n* Box Upsilon: weight 39kg\n* Box Phi: weight 37kg\n* Box Chi: weight 53kg\n* Box Psi: weight 55kg\n* Box Omega: weight 37kg\n* Box A1: weight 41kg\n* Box B1: weight 33kg\n* Box C1: weight 56kg\n* Box D1: weight 65kg\n* Box E1: weight 31kg\n* Box F1: weight 66kg\n* Box G1: weight 47kg\n* Box H1: weight 66kg\n* Box I1: weight 50kg\n* Box J1: weight 45kg\n* Box K1: weight 31kg\n* Box L1: weight 33kg\n\nEach pallet can support a maximum load of 100 kg. Load all boxes using the fewest pallets possible. Every box must be placed on exactly one pallet, and the total weight on any pallet cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

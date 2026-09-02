@@ -1,0 +1,29 @@
+{
+  "instance_id": "NL4OPT_000_oil_spill_transport",
+  "annotation_mode": "semantic",
+  "problem_text": "There has been an oil spill in the ocean and ducks need to be taken to shore to be cleaned either by boat or by canoe. A boat can take 10 ducks per trip while a canoe can take 8 ducks per trip. Since the boats are motor powered, they take 20 minutes per trip while the canoes take 40 minutes per trip. In order to avoid further environmental damage, there can be at most 12 boat trips and at least 60% of the trips should be by canoe. If at least 300 ducks need to be taken to shore, how many of each transportation method should be used to minimize the total amount of time needed to transport the ducks?",
+  "sets": [
+    {
+      "name": "transport_methods",
+      "description": "boat and canoe"
+    }
+  ],
+  "parameter_tables_inline": [
+    {
+      "name": "method_params",
+      "indices": [
+        "method"
+      ],
+      "unit": "",
+      "values": "| method | ducks_per_trip | minutes_per_trip |\n|---|---|---|\n| boat | 10 | 20 |\n| canoe | 8 | 40 |"
+    },
+    {
+      "name": "context",
+      "indices": [],
+      "unit": "",
+      "values": "| min_ducks | max_boat_trips | min_canoe_fraction |\n|---|---|---|\n| 300 | 12 | 0.60 |"
+    }
+  ],
+  "external_file_manifest": [],
+  "notes": "Two decision families; trip-count ratio + capacity + demand obligations."
+}

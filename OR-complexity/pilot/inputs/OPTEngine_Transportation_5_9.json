@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must allocate the distribution of a certain commodity from a collection of manufacturing centers to a network of regional warehouses, with the objective of minimizing the aggregate expenditure on freight.\n\nThe inventory available for dispatch at each manufacturing center is precisely quantified as follows:  \n*Center Alpha maintains a stockpile of 167 units.  \n*Center Beta has 89 units on hand.  \n*Center Gamma possesses 161 units.  \n*Center Delta holds 95 units.  \n*Center Epsilon can provide 183 units.\n\nThe requisite intake at each regional warehouse, which must be satisfied in full, is delineated below:  \n*Warehouse X requires a delivery of 70 units.  \n*Warehouse Y must receive 208 units.  \n*Warehouse Z has a need for 138 units.  \n*Warehouse W is slated for 124 units.  \n*Warehouse V demands 111 units.\n\nThe freight cost per unit for each possible route linking a manufacturing center to a warehouse is provided in the accompanying table:\n\n| Origin / Destination | Warehouse X | Warehouse Y | Warehouse Z | Warehouse W | Warehouse V |\n|----------------------|-------------|-------------|-------------|-------------|-------------|\n| Center Alpha         | 19          | 9           | 11          | 8           | 3           |\n| Center Beta          | 9           | 15          | 8           | 15          | 19          |\n| Center Gamma         | 20          | 13          | 11          | 1           | 16          |\n| Center Delta         | 11          | 6           | 16          | 7           | 12          |\n| Center Epsilon       | 9           | 11          | 9           | 20          | 9           |\n\nDetermine the optimal shipment quantities to achieve the minimal total freight expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

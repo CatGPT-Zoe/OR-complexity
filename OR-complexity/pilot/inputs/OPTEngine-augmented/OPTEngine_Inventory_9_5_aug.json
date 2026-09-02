@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water reservoir must devise a pumping and storage schedule over a 9-day forecast window.  \nThe initial water volume at the start of the planning interval is 81 megaliters.  \nIn each day \\( t = 1, \\dots, 9 \\), the pumping station can extract from a nearby river an amount that must be between 8 and 37 megaliters.  \nHowever, each pumping action requires a 1-day delay before the water becomes available for meeting consumption or augmenting the reservoir.  \nThe daily consumption forecast is as follows:  \n* Day 1: 22 megaliters  \n* Day 2: 55 megaliters  \n* Day 3: 28 megaliters  \n* Day 4: 59 megaliters  \n* Day 5: 38 megaliters  \n* Day 6: 42 megaliters  \n* Day 7: 48 megaliters  \n* Day 8: 39 megaliters  \n* Day 9: 44 megaliters  \n\nWater deficits are allowed, but any unmet consumption is lost and cannot be recovered later.  \nThroughout the horizon, water quantities are treated as continuous, and the total stored volume at any moment must not exceed the reservoir capacity of 81 megaliters.\n\nOn day 2, the maximum pumping volume is limited to 13 megaliters.  \nOn day 7, the stored volume must be at least 31 megaliters.\n\nThe total operational cost comprises three parts: the pumping cost, which is 1 per megaliter extracted; the storage cost, which is 1 per megaliter kept overnight; and a penalty for water shortage, which is 15 per megaliter of unmet consumption. Determine the optimal pumping volume for each day and monitor the resulting storage and deficit levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

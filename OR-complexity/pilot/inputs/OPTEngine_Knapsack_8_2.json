@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_8_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a cargo drone. Available packages are:\n* Package A: weight 29kg, revenue $260\n* Package B: weight 38kg, revenue $121\n* Package C: weight 28kg, revenue $52\n* Package D: weight 24kg, revenue $122\n* Package E: weight 17kg, revenue $95\n* Package F: weight 28kg, revenue $108\n* Package G: weight 23kg, revenue $68\n* Package H: weight 5kg, revenue $24\n\nThe drone has a maximum payload capacity of 134 kg. Choose the package combination that maximizes total revenue without exceeding this weight limit. Each package must be loaded entirely or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

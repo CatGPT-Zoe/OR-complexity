@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_6_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n* Container 1: weight 10 tons, revenue $122\n* Container 2: weight 3 tons, revenue $283\n* Container 3: weight 39 tons, revenue $47\n* Container 4: weight 2 tons, revenue $73\n* Container 5: weight 41 tons, revenue $106\n* Container 6: weight 39 tons, revenue $71\nThe vehicle has a maximum load capacity of 93 tons. Determine which containers to load to maximize total revenue without exceeding the weight limit. Each container must be either taken in full or left behind entirely.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

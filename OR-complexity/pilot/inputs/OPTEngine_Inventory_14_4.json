@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A water utility must devise a procurement and storage strategy for a crucial chemical additive over a forthcoming 14-day operational cycle.  \nThe initial stock in the central storage tank at the cycle's commencement is 64 kiloliters.  \nFor each operational day \\( t = 1, \\dots, 14 \\), the supplier permits an order whose volume must be between 3 and 79 kiloliters.  \nNotably, every order placed is subject to a 2-day delivery lag before it becomes available for meeting daily requirements or replenishing reserves.  \nThe daily consumption of the additive is projected as follows:  \n* Day 1: 16 kiloliters  \n* Day 2: 55 kiloliters  \n* Day 3: 39 kiloliters  \n* Day 4: 48 kiloliters  \n* Day 5: 39 kiloliters  \n* Day 6: 20 kiloliters  \n* Day 7: 20 kiloliters  \n* Day 8: 31 kiloliters  \n* Day 9: 40 kiloliters  \n* Day 10: 36 kiloliters  \n* Day 11: 20 kiloliters  \n* Day 12: 47 kiloliters  \n* Day 13: 28 kiloliters  \n* Day 14: 58 kiloliters  \n\nSupply shortfalls are tolerated, but any unsatisfied daily consumption is entirely forfeited and not carried forward.  \nThroughout the planning interval, additive quantities may be treated as continuous measures, and the total volume held in the storage tank at any moment must not surpass the physical capacity limit of 64 kiloliters.  \nThe aggregate expenditure over the 14-day horizon comprises three elements: the procurement cost, charged at 3 per kiloliter ordered; the storage cost, assessed at 1 per kiloliter retained from one day to the next; and a penalty for inadequate supply, levied at 11 per kiloliter of unmet daily consumption. The objective is to ascertain the optimal order volume for each day and to monitor the consequent stock and deficit levels so as to minimize the total outlay.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

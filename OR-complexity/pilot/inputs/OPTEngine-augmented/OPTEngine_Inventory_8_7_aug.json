@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and reservoir management schedule across an 8-week operational cycle.  \nThe initial water volume stored in the main reservoir at the start of the cycle is 83 megaliters.  \nIn each week \\( t = 1,\\dots,8 \\), the utility may activate a pumping station to transfer water from a distant source; the pumped volume in any week must be between 1 and 48 megaliters.  \nHowever, due to pipeline transit time, water pumped in a given week becomes available only after a 2‑week delay.  \nWeekly consumer demand for water is projected as follows:  \n* Week 1: 36 megaliters  \n* Week 2: 23 megaliters  \n* Week 3: 40 megaliters  \n* Week 4: 41 megaliters  \n* Week 5: 54 megaliters  \n* Week 6: 42 megaliters  \n* Week 7: 30 megaliters  \n* Week 8: 41 megaliters  \n\nSupply deficits are tolerated, but any unmet weekly demand is lost and cannot be recovered later.  \nWater volumes are treated as continuous quantities, and the total volume stored in the reservoir at any moment must not exceed its capacity of 83 megaliters.\n\nIn week 4, the maximum allowable pumping volume is restricted to 2 megaliters.  \nIn week 6, the stored volume must be maintained at a minimum of 60 megaliters.\n\nThe total operational cost comprises three elements: the pumping cost, which is 2 per megaliter pumped; the storage cost, which is 3 per megaliter held from one week to the next; and a deficit penalty, which is 13 per megaliter of unmet weekly demand. Determine the optimal pumping volume for each week and the consequent reservoir storage and deficit levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_17_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A maritime logistics center must devise a procurement and storage schedule for a critical fuel additive over a voyage cycle spanning 17 consecutive days.  \nThe initial stock available at the commencement of the cycle is 93 barrels.  \nOn any given day t = 1, …, 17, the supplier permits the center to request a delivery, the volume of which must fall between 6 and 58 barrels inclusive.  \nEach such request, however, is subject to a supply delay of 3 full days before the delivered additive becomes available for consumption or for replenishing the on‑hand reserve.  \n\nThe daily consumption of the additive is forecasted as follows:  \nDay 1: 42 barrels  \nDay 2: 28 barrels  \nDay 3: 10 barrels  \nDay 4: 48 barrels  \nDay 5: 19 barrels  \nDay 6: 32 barrels  \nDay 7: 52 barrels  \nDay 8: 32 barrels  \nDay 9: 33 barrels  \nDay 10: 29 barrels  \nDay 11: 42 barrels  \nDay 12: 51 barrels  \nDay 13: 54 barrels  \nDay 14: 26 barrels  \nDay 15: 18 barrels  \nDay 16: 11 barrels  \nDay 17: 40 barrels  \n\nTemporary supply shortfalls are permissible, though any unsatisfied consumption is considered lost and will not be fulfilled later.  \nThroughout the planning interval, additive quantities may be treated as continuous values, and the total volume held in storage at any moment must not surpass the tank capacity of 93 barrels.  \n\nThe aggregate expense over the voyage cycle comprises three elements: a procurement cost of 3 per barrel ordered; a storage cost of 2 per barrel kept in inventory from one day to the next; and a shortage penalty of 10 per barrel of unmet consumption.  \nThe objective is to establish the optimal delivery volume for each day and to monitor the consequent stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

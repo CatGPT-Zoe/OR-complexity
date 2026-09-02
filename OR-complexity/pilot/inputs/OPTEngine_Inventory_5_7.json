@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional water utility must devise a pumping and storage schedule for a critical reservoir over a 5-week operational window.  \nThe initial water volume in the reservoir at the start of the planning window is 4 million gallons.  \nIn each week \\( t = 1, \\dots, 5 \\), the utility may activate a pumping station to transfer water from a distant source; the pumped volume in any week must be between 2 and 77 million gallons.  \nHowever, due to pipeline transit time, each pumped volume will take 4 weeks to arrive at the reservoir before it can be used to meet consumption or augment storage.  \nThe projected water consumption (in million gallons) for each week is as follows:  \n* Week 1: consumption 15  \n* Week 2: consumption 53  \n* Week 3: consumption 58  \n* Week 4: consumption 18  \n* Week 5: consumption 19  \n\nSupply shortfalls are tolerated, but any unmet consumption is simply lost and cannot be deferred to later weeks.  \nThroughout the 5-week horizon, water volumes are treated as continuous quantities, and the total volume stored in the reservoir at any moment must not exceed the maximum capacity of 33 million gallons.  \nThe total operational cost comprises three elements: the pumping cost, which is 6 per million gallons pumped; the storage cost, which is 2 per million gallons held in the reservoir from one week to the next; and the shortage penalty, which is 14 per million gallons of unmet consumption.  \nThe utility seeks to determine the optimal pumping volume for each week and to monitor the resulting reservoir storage and weekly shortfall so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

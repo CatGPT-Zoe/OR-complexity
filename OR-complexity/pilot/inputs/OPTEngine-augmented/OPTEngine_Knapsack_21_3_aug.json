@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment for a critical three-day airlift mission. They must select a combination of cargo units to maximize total utility points while adhering to a strict aircraft weight allowance.\n\nThe available cargo units are:\n* Cargo 1: weight 21kg, utility 195 points\n* Cargo 2: weight 19kg, utility 240 points\n* Cargo 3: weight 22kg, utility 135 points\n* Cargo 4: weight 11kg, utility 246 points\n* Cargo 5: weight 9kg, utility 184 points\n* Cargo 6: weight 15kg, utility 264 points\n* Cargo 7: weight 10kg, utility 59 points\n* Cargo 8: weight 35kg, utility 237 points\n* Cargo 9: weight 47kg, utility 172 points\n* Cargo 10: weight 12kg, utility 54 points\n* Cargo 11: weight 43kg, utility 171 points\n* Cargo 12: weight 11kg, utility 149 points\n* Cargo 13: weight 23kg, utility 69 points\n* Cargo 14: weight 8kg, utility 203 points\n* Cargo 15: weight 21kg, utility 177 points\n* Cargo 16: weight 20kg, utility 180 points\n* Cargo 17: weight 49kg, utility 10 points\n* Cargo 18: weight 13kg, utility 164 points\n* Cargo 19: weight 41kg, utility 105 points\n* Cargo 20: weight 11kg, utility 295 points\n* Cargo 21: weight 11kg, utility 253 points\n\nFurthermore, due to compatibility protocols, exactly one of Cargo 1 and Cargo 2 must be included in the shipment.\n\nIf Cargo 3 is selected, it necessitates special handling equipment that reduces the effective aircraft payload capacity by 10 kg.\nThe aircraft's maximum allowable payload is 316 kg. The coordinator must determine the optimal set of cargo units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

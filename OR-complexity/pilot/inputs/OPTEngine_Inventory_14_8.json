@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must devise a procurement and storage strategy for a critical fuel additive over a 14-day operational cycle.  \nThe starting stock at the cycle’s commencement is 13 barrels.  \nIn each day \\( t = 1, \\dots, 14 \\), the vendor permits the center to submit a fuel additive purchase, with the volume required to be between 15 and 77 barrels inclusive.  \nNevertheless, every purchase issued will experience a 2‑day transit delay before becoming available to meet consumption or augment stock.  \nThe daily consumption of the additive is specified as:  \n* Day 1: 24 barrels  \n* Day 2: 51 barrels  \n* Day 3: 55 barrels  \n* Day 4: 33 barrels  \n* Day 5: 50 barrels  \n* Day 6: 32 barrels  \n* Day 7: 37 barrels  \n* Day 8: 27 barrels  \n* Day 9: 32 barrels  \n* Day 10: 35 barrels  \n* Day 11: 59 barrels  \n* Day 12: 59 barrels  \n* Day 13: 55 barrels  \n* Day 14: 28 barrels  \n\nStock‑outs are tolerated, but any unsatisfied consumption is forfeited and not deferred to later days.  \nThroughout the 14‑day window, additive quantities may be treated as continuous, and the physical quantity of stored material at any moment must remain within the tank capacity of 44 barrels.  \nThe aggregate expenditure over the planning interval comprises three elements: the procurement cost, charged at 1 per barrel ordered; the storage cost, assessed at 2 per barrel held overnight; and a deficiency penalty, levied at 8 per barrel of unmet consumption.  \nThe objective is to identify the optimal purchase volume for each day and to monitor the consequent stock and shortfall levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

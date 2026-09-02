@@ -1,0 +1,267 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_Knapsack_10_3_aug",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "S_packages",
+      "canonical_name": "cargo_packages",
+      "members": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ],
+      "source_grounding": "The available cargo packages are Packages A through J.",
+      "source_spans": [
+        "The available cargo packages are:",
+        "Package A",
+        "Package B",
+        "Package C",
+        "Package D",
+        "Package E",
+        "Package F",
+        "Package G",
+        "Package H",
+        "Package I",
+        "Package J"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "P_package_weight",
+      "canonical_name": "package_weight",
+      "index_set_ids": [
+        "S_packages"
+      ],
+      "unit": "kg",
+      "values": {
+        "A": 36,
+        "B": 45,
+        "C": 26,
+        "D": 50,
+        "E": 28,
+        "F": 16,
+        "G": 22,
+        "H": 10,
+        "I": 30,
+        "J": 31
+      },
+      "source_grounding": "Each package is assigned the stated cargo weight.",
+      "source_spans": [
+        "Package A: weight 36kg",
+        "Package B: weight 45kg",
+        "Package C: weight 26kg",
+        "Package D: weight 50kg",
+        "Package E: weight 28kg",
+        "Package F: weight 16kg",
+        "Package G: weight 22kg",
+        "Package H: weight 10kg",
+        "Package I: weight 30kg",
+        "Package J: weight 31kg"
+      ]
+    },
+    {
+      "id": "P_package_profit",
+      "canonical_name": "package_profit_contribution",
+      "index_set_ids": [
+        "S_packages"
+      ],
+      "unit": "monetary units",
+      "values": {
+        "A": 88,
+        "B": 238,
+        "C": 104,
+        "D": 225,
+        "E": 99,
+        "F": 242,
+        "G": 277,
+        "H": 191,
+        "I": 54,
+        "J": 114
+      },
+      "source_grounding": "Each package is assigned the stated profit contribution.",
+      "source_spans": [
+        "Package A: weight 36kg, profit contribution 88 monetary units",
+        "Package B: weight 45kg, profit contribution 238 monetary units",
+        "Package C: weight 26kg, profit contribution 104 monetary units",
+        "Package D: weight 50kg, profit contribution 225 monetary units",
+        "Package E: weight 28kg, profit contribution 99 monetary units",
+        "Package F: weight 16kg, profit contribution 242 monetary units",
+        "Package G: weight 22kg, profit contribution 277 monetary units",
+        "Package H: weight 10kg, profit contribution 191 monetary units",
+        "Package I: weight 30kg, profit contribution 54 monetary units",
+        "Package J: weight 31kg, profit contribution 114 monetary units"
+      ]
+    },
+    {
+      "id": "P_vehicle_gross_weight_capacity",
+      "canonical_name": "vehicle_gross_weight_capacity",
+      "unit": "kg",
+      "value": 205,
+      "source_grounding": "The vehicle has a maximum gross weight capacity of 205 kg.",
+      "source_spans": [
+        "The vehicle's maximum gross weight capacity is 205 kg."
+      ]
+    },
+    {
+      "id": "P_package_C_capacity_reduction",
+      "canonical_name": "conditional_capacity_reduction",
+      "unit": "kg",
+      "value": 10,
+      "trigger_package": "C",
+      "source_grounding": "Selecting Package C reduces effective vehicle load capacity by 10 kg.",
+      "source_spans": [
+        "If Package C is selected, it requires special handling equipment that reduces the vehicle's effective load capacity by 10 kg."
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "E_package_selection",
+      "canonical_family": "cargo_package_selection",
+      "canonical_name": "package_selected",
+      "entity_role": "decision",
+      "index_set_ids": [
+        "S_packages"
+      ],
+      "semantic_domain": {
+        "type": "binary_selection",
+        "meaning": {
+          "selected": 1,
+          "not_selected": 0
+        }
+      },
+      "source_grounding": "The manager must select a combination of cargo packages and determine the set of packages to load.",
+      "source_spans": [
+        "They must select a combination of cargo packages",
+        "The manager must determine the optimal set of packages to load."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "objective": {
+    "id": "OBJ_total_profit",
+    "sense": "maximize",
+    "canonical_name": "total_profit_contribution",
+    "normalized_semantics": "Maximize the sum of the profit contributions of all selected cargo packages.",
+    "entity_refs": [
+      "E_package_selection"
+    ],
+    "parameter_refs": [
+      "P_package_profit"
+    ],
+    "source_grounding": "Package selection is performed to maximize total profit contribution.",
+    "source_spans": [
+      "They must select a combination of cargo packages to maximize total profit contribution",
+      "The manager must determine the optimal set of packages to load."
+    ],
+    "confidence": "high"
+  },
+  "obligations": [
+    {
+      "id": "O_vehicle_weight_allowance",
+      "canonical_family": "vehicle_load_capacity_limit",
+      "canonical_name": "conditional_vehicle_weight_allowance",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "capacity_compliance",
+      "normalized_semantics": "The aggregate weight of selected packages must not exceed 205 kg; when Package C is selected, the applicable effective capacity is reduced by 10 kg.",
+      "support_entity_ids": [
+        "E_package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "slot_id": "selected_package_load",
+          "entity_id": "E_package_selection",
+          "index_role": "package",
+          "index_domain": "S_packages",
+          "aggregation": "sum selected package weights"
+        },
+        {
+          "slot_id": "capacity_reduction_trigger",
+          "entity_id": "E_package_selection",
+          "fixed_index": "C",
+          "role": "triggers effective-capacity reduction"
+        }
+      ],
+      "quantifier": "for the assembled shipment",
+      "scope_kind": "aggregate_shipment",
+      "parameter_refs": [
+        "P_package_weight",
+        "P_vehicle_gross_weight_capacity",
+        "P_package_C_capacity_reduction"
+      ],
+      "parameter_overrides": [
+        {
+          "condition": "Package C is selected",
+          "base_value_parameter_ref": "P_vehicle_gross_weight_capacity",
+          "adjustment_parameter_ref": "P_package_C_capacity_reduction",
+          "effect": "reduce applicable effective capacity by the adjustment amount"
+        }
+      ],
+      "condition": "The 10 kg capacity reduction applies if and only if Package C is selected.",
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "normalization_rationale": "The base gross-weight allowance and the Package C conditional capacity reduction are clauses of one vehicle-capacity rule family rather than separate obligation families.",
+      "source_grounding": "The shipment must respect the vehicle's 205 kg gross capacity, with effective capacity reduced by 10 kg if Package C is selected.",
+      "source_spans": [
+        "while adhering to the vehicle's strict weight allowance",
+        "If Package C is selected, it requires special handling equipment that reduces the vehicle's effective load capacity by 10 kg.",
+        "The vehicle's maximum gross weight capacity is 205 kg."
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "O_exactly_one_A_or_B",
+      "canonical_family": "exclusive_subset_selection_cardinality",
+      "canonical_name": "select_exactly_one_of_packages_A_and_B",
+      "structural_form": "CARDINALITY",
+      "business_role": "contractual_selection_requirement",
+      "normalized_semantics": "Exactly one package from the subset consisting of Package A and Package B must be selected.",
+      "support_entity_ids": [
+        "E_package_selection"
+      ],
+      "incidence_slots": [
+        {
+          "slot_id": "candidate_A",
+          "entity_id": "E_package_selection",
+          "fixed_index": "A",
+          "role": "exclusive-choice candidate"
+        },
+        {
+          "slot_id": "candidate_B",
+          "entity_id": "E_package_selection",
+          "fixed_index": "B",
+          "role": "exclusive-choice candidate"
+        }
+      ],
+      "quantifier": "exactly one over the subset {A, B}",
+      "scope_kind": "designated_subset",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "The contract requires exactly one of Package A or Package B to be included.",
+      "source_spans": [
+        "Furthermore, due to contractual obligations, exactly one of Package A or Package B must be included in the shipment."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [],
+  "annotation_warnings": [
+    {
+      "id": "W_three_stage_context_only",
+      "message": "The route is described as three-stage, but no stage-specific decisions, parameters, transitions, or obligations are stated. No stage-indexed semantic structure is introduced."
+    }
+  ]
+}

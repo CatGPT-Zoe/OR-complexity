@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_BoatSales1",
+  "annotation_mode": "semantic",
+  "problem_text": "A boat dealership needs to allocate different types of boats into different display areas. Specifically, the dealership has several display areas, each with a capacity limit provided in “capacity.csv.” The predefined value and size of each boat type can be found in “products.csv.” The objective is to determine the optimal number of units of each boat type to place in each display area to maximize the total value of the boats across all areas, while ensuring that the total size of the boats in each area does not exceed its capacity. The decision variables x_{ij} represent the number of units of boat type j to be placed in display area i.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "DisplayID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| DisplayID | Capacity |\n|---|---|\n| 1 | 356 |\n| 2 | 478 |\n| 3 | 305 |\n| 4 | 291 |\n| 5 | 168 |\n| 6 | 449 |\n| 7 | 139 |\n| 8 | 383 |\n| 9 | 472 |\n| 10 | 288 |\n| 11 | 320 |\n| 12 | 250 |\n| 13 | 402 |\n| 14 | 293 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Speedboat | 69978 | 18 |\n| Fishing Boat | 54011 | 42 |\n| Catamaran | 36352 | 49 |\n| Yacht | 51521 | 42 |\n| Sailboat | 50415 | 41 |\n| Kayak | 76109 | 48 |\n| Canoe | 50462 | 22 |\n| Houseboat | 28989 | 29 |\n| Pontoon | 23318 | 45 |\n| Jet Ski | 26142 | 14 |\n| Rowboat | 42040 | 38 |\n| Hovercraft | 85961 | 47 |\n| Cabin Cruiser | 50142 | 45 |\n| Wakeboard Boat | 48478 | 28 |\n| Dinghy | 60953 | 24 |\n| Trawler | 95265 | 39 |\n| Paddle Boat | 22839 | 32 |\n| Submarine | 90957 | 36 |\n| RIB | 84652 | 14 |\n| Skiff | 78991 | 16 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA21/BoatSales1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA21/BoatSales1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

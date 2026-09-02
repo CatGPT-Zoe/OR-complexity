@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized components to maximize total utility points while staying within a freight weight allowance.\n\nThe components under consideration are:\n* Component A: weight 44kg, utility 74 points\n* Component B: weight 49kg, utility 148 points\n* Component C: weight 6kg, utility 152 points\n* Component D: weight 39kg, utility 122 points\n* Component E: weight 1kg, utility 83 points\n* Component F: weight 14kg, utility 11 points\n* Component G: weight 27kg, utility 75 points\n* Component H: weight 10kg, utility 258 points\n* Component I: weight 35kg, utility 31 points\n* Component J: weight 33kg, utility 173 points\n* Component K: weight 15kg, utility 99 points\n* Component L: weight 30kg, utility 172 points\n* Component M: weight 43kg, utility 236 points\n* Component N: weight 15kg, utility 150 points\n* Component O: weight 44kg, utility 106 points\n* Component P: weight 7kg, utility 189 points\n* Component Q: weight 32kg, utility 149 points\n* Component R: weight 23kg, utility 285 points\n\nDue to compatibility requirements, exactly one of Component A and Component B must be included.\n\nIf Component C is included, the effective freight capacity is diminished by 10 kg.\nThe total weight capacity of the transport vessel is 326 kg. The manager must determine the optimal selection of components.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

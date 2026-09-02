@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_28_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to select packages for a cargo shipment. Available packages are:\n* Package 1: size 48 cubic feet, revenue $202\n* Package 2: size 21 cubic feet, revenue $178\n* Package 3: size 19 cubic feet, revenue $232\n* Package 4: size 22 cubic feet, revenue $109\n* Package 5: size 41 cubic feet, revenue $18\n* Package 6: size 49 cubic feet, revenue $226\n* Package 7: size 10 cubic feet, revenue $171\n* Package 8: size 5 cubic feet, revenue $77\n* Package 9: size 15 cubic feet, revenue $280\n* Package 10: size 9 cubic feet, revenue $257\n* Package 11: size 20 cubic feet, revenue $33\n* Package 12: size 29 cubic feet, revenue $235\n* Package 13: size 35 cubic feet, revenue $85\n* Package 14: size 42 cubic feet, revenue $266\n* Package 15: size 25 cubic feet, revenue $53\n* Package 16: size 39 cubic feet, revenue $131\n* Package 17: size 30 cubic feet, revenue $223\n* Package 18: size 36 cubic feet, revenue $177\n* Package 19: size 36 cubic feet, revenue $124\n* Package 20: size 3 cubic feet, revenue $20\n* Package 21: size 18 cubic feet, revenue $215\n* Package 22: size 45 cubic feet, revenue $83\n* Package 23: size 15 cubic feet, revenue $127\n* Package 24: size 42 cubic feet, revenue $222\n* Package 25: size 39 cubic feet, revenue $267\n* Package 26: size 49 cubic feet, revenue $99\n* Package 27: size 10 cubic feet, revenue $35\n* Package 28: size 48 cubic feet, revenue $133\n\nThe cargo container has a maximum capacity of 560 cubic feet. Choose the package combination that maximizes total revenue without exceeding this capacity. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

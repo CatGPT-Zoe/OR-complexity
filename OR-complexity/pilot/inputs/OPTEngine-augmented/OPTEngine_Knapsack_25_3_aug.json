@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assembling a shipment of crates to maximize total profit while adhering to a vehicle's cargo capacity limit.\n\nThe crates available are:\n* Crate 1: mass 16kg, profit 115 units\n* Crate 2: mass 18kg, profit 92 units\n* Crate 3: mass 12kg, profit 241 units\n* Crate 4: mass 15kg, profit 32 units\n* Crate 5: mass 6kg, profit 128 units\n* Crate 6: mass 26kg, profit 213 units\n* Crate 7: mass 28kg, profit 24 units\n* Crate 8: mass 10kg, profit 157 units\n* Crate 9: mass 46kg, profit 167 units\n* Crate 10: mass 42kg, profit 32 units\n* Crate 11: mass 37kg, profit 114 units\n* Crate 12: mass 20kg, profit 258 units\n* Crate 13: mass 25kg, profit 67 units\n* Crate 14: mass 40kg, profit 188 units\n* Crate 15: mass 6kg, profit 244 units\n* Crate 16: mass 24kg, profit 124 units\n* Crate 17: mass 40kg, profit 32 units\n* Crate 18: mass 7kg, profit 193 units\n* Crate 19: mass 43kg, profit 246 units\n* Crate 20: mass 13kg, profit 168 units\n* Crate 21: mass 19kg, profit 60 units\n* Crate 22: mass 50kg, profit 11 units\n* Crate 23: mass 5kg, profit 232 units\n* Crate 24: mass 13kg, profit 263 units\n* Crate 25: mass 14kg, profit 260 units\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Crate 1 and Crate 2 must be included in the shipment.\n\nIf Crate 3 is selected, it requires special handling equipment that reduces the vehicle's usable capacity by 10 kg.\nThe vehicle can transport a maximum of 402 kg. The coordinator must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

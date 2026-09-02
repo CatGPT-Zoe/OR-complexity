@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of specialized equipment for a remote research expedition. The objective is to select a combination of equipment crates to maximize the total utility score, while ensuring the total cargo weight does not exceed the aircraft's payload allowance.\n\nThe available crates are:\n* Crate A: weight 15kg, utility 53 units\n* Crate B: weight 12kg, utility 196 units\n* Crate C: weight 4kg, utility 98 units\n* Crate D: weight 15kg, utility 162 units\n* Crate E: weight 40kg, utility 54 units\n* Crate F: weight 46kg, utility 272 units\n* Crate G: weight 49kg, utility 155 units\n* Crate H: weight 50kg, utility 190 units\n* Crate I: weight 27kg, utility 244 units\n* Crate J: weight 4kg, utility 274 units\n* Crate K: weight 43kg, utility 290 units\n\nA critical operational constraint stipulates that exactly one of Crate A or Crate B must be included in the shipment.\n\nFurthermore, if Crate C is selected, it necessitates the inclusion of a separate cooling apparatus, which reduces the effective available payload capacity by 10 kg.\nThe aircraft's maximum allowable cargo weight is 213 kg. The manager must determine the optimal set of crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

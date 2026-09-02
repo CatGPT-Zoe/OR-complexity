@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_11_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing a shipment of specialized equipment for a remote research outpost. They must select a combination of cargo units to maximize total utility points while adhering to the transport vessel's mass constraint.\n\nThe available cargo units are:\n* Unit Alpha: mass 49kg, utility 211 points\n* Unit Beta: mass 3kg, utility 102 points\n* Unit Gamma: mass 16kg, utility 260 points\n* Unit Delta: mass 15kg, utility 75 points\n* Unit Epsilon: mass 18kg, utility 190 points\n* Unit Zeta: mass 21kg, utility 232 points\n* Unit Eta: mass 7kg, utility 295 points\n* Unit Theta: mass 19kg, utility 287 points\n* Unit Iota: mass 13kg, utility 161 points\n* Unit Kappa: mass 50kg, utility 236 points\n* Unit Lambda: mass 33kg, utility 246 points\n\nFurthermore, due to compatibility protocols, precisely one of Unit Alpha and Unit Beta must be included in the shipment.\n\nIf Unit Gamma is selected, it necessitates auxiliary support systems that reduce the vessel's effective payload capacity by 10 kg.\nThe transport vessel has a maximum payload limit of 170 kg. The coordinator must determine the optimal selection of units.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate a supply chain inspection across seven regional warehouses:\nWarehouse Alpha: Positioned at grid reference (143,154)\nWarehouse Beta: Positioned at grid reference (193,0)\nWarehouse Gamma: Positioned at grid reference (9,126)\nWarehouse Delta: Positioned at grid reference (83,79)\nWarehouse Epsilon: Positioned at grid reference (119,12)\nWarehouse Zeta: Positioned at grid reference (106,48)\nWarehouse Eta: Positioned at grid reference (140,162)\n\nThe travel times between warehouses, measured in minutes, are as follows:\nAlpha to Gamma: 136.9 min\nAlpha to Delta: 96.0 min\nAlpha to Epsilon: 144.0 min\nAlpha to Zeta: 112.3 min\nAlpha to Eta: 8.5 min\nBeta to Gamma: 223.0 min\nBeta to Delta: 135.4 min\nBeta to Epsilon: 75.0 min\nBeta to Zeta: 99.4 min\nBeta to Eta: 170.4 min\nGamma to Delta: 87.7 min\nGamma to Epsilon: 158.4 min\nGamma to Zeta: 124.5 min\nGamma to Eta: 135.9 min\nDelta to Epsilon: 76.1 min\nDelta to Zeta: 38.6 min\nDelta to Eta: 100.7 min\nEpsilon to Zeta: 38.3 min\nEpsilon to Eta: 151.5 min\nZeta to Eta: 119.0 min\n\nNo direct transport link exists between Warehouse Alpha and Warehouse Beta.\nFurthermore, the inspection route must incorporate exactly one of two critical corridors: either the link between Warehouse Beta and Gamma, or the link between Warehouse Gamma and Delta.\n\nThe objective is to determine the minimal total travel time for a circuit that visits each warehouse precisely once before returning to the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,39 @@
+{
+  "instance_id": "LEAN_SupermarketSalesData2",
+  "annotation_mode": "semantic",
+  "problem_text": "A supermarket needs to replenish its stock, and the ‘products.csv’ provides the relevant income statement for each type of produce (e.g. leafy greens, mushrooms, etc.). The supermarket also has an overall stock capacity constraint detailed in ‘capacity.csv’.The objective is to decide which products to order each day and the quantities to be ordered in order to maximise the overall benefits while adhering to the overall stock capacity. The decision variable x_i represents the number of units of the ith product to be ordered each day.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Capacity |\n|---|\n| 875 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Weight",
+        "Value"
+      ],
+      "unit": "",
+      "values": "| ProductName | Weight | Value |\n|---|---|---|\n| Spinach | 230 | 64 |\n| Shiitake Mushrooms | 637 | 75 |\n| Apples | 773 | 68 |\n| Carrots | 653 | 11 |\n| Basil | 755 | 91 |\n| Potatoes | 670 | 31 |\n| Green Beans | 505 | 90 |\n| Blueberries | 821 | 56 |\n| Oranges | 83 | 10 |\n| Watermelons | 249 | 24 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA12/SupermarketSalesData2/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA12/SupermarketSalesData2/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

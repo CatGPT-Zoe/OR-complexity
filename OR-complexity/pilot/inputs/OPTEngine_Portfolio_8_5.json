@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_8_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate budget across 8 infrastructure projects to maximize total community benefit.  \nThe characteristics of each project are as follows:  \n* Project A: benefit score 0.197, environmental impact 0.223, allocation bounds [0.070, 0.420]  \n* Project B: benefit score 0.066, environmental impact 0.106, allocation bounds [0.063, 0.325]  \n* Project C: benefit score 0.023, environmental impact 0.023, allocation bounds [0.081, 0.860]  \n* Project D: benefit score 0.162, environmental impact 0.168, allocation bounds [0.006, 0.609]  \n* Project E: benefit score 0.082, environmental impact 0.246, allocation bounds [0.078, 0.893]  \n* Project F: benefit score 0.152, environmental impact 0.061, allocation bounds [0.046, 0.626]  \n* Project G: benefit score 0.133, environmental impact 0.236, allocation bounds [0.029, 0.452]  \n* Project H: benefit score 0.159, environmental impact 0.145, allocation bounds [0.004, 0.752]  \n\nEach project must receive a budget share within its specified bounds, and all shares must sum to 1. To ensure adequate coverage of essential services, the subset of projects L = {B, C, D, F, G, H} must collectively receive at least 0.399 of the total budget.  \nAdditionally, the total environmental impact of the portfolio must not exceed 0.179, and the total benefit score must be at least 0.103.  \nDetermine the optimal budget allocation that maximizes total benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

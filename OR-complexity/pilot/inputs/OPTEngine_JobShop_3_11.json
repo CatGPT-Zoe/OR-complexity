@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to route 3 delivery trucks through 3 different distribution centers.\n\nEach truck must follow a predetermined route through the centers, with each stop represented as (Center, Hours), indicating the distribution center and the hours required for unloading and reloading. The sequence of stops must be followed in the specified order.\n\nTruck routes:\n* Truck A follows: (DC1, 9) → (DC3, 8) → (DC2, 2)\n* Truck B follows: (DC2, 9) → (DC3, 6) → (DC1, 9)\n* Truck C follows: (DC1, 2) → (DC2, 10) → (DC3, 7)\n\nEach unloading/reloading operation must proceed without interruption once started, and each distribution center can only accommodate one truck at a time. The objective is to schedule all truck operations at the distribution centers so that the total completion time for all deliveries is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

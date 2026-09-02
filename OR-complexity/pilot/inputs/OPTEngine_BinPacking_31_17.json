@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of laboratory equipment modules to identical transport pallets for international shipping. The modules are as follows:\n\n* Module Alpha: mass 55kg\n* Module Beta: mass 48kg\n* Module Gamma: mass 40kg\n* Module Delta: mass 54kg\n* Module Epsilon: mass 31kg\n* Module Zeta: mass 50kg\n* Module Eta: mass 70kg\n* Module Theta: mass 56kg\n* Module Iota: mass 63kg\n* Module Kappa: mass 42kg\n* Module Lambda: mass 62kg\n* Module Mu: mass 52kg\n* Module Nu: mass 68kg\n* Module Xi: mass 45kg\n* Module Omicron: mass 32kg\n* Module Pi: mass 56kg\n* Module Rho: mass 61kg\n* Module Sigma: mass 62kg\n* Module Tau: mass 70kg\n* Module Upsilon: mass 33kg\n* Module Phi: mass 42kg\n* Module Chi: mass 51kg\n* Module Psi: mass 59kg\n* Module Omega: mass 41kg\n* Module Digamma: mass 66kg\n* Module Stigma: mass 42kg\n* Module Heta: mass 43kg\n* Module San: mass 32kg\n* Module Koppa: mass 42kg\n* Module Sampi: mass 37kg\n* Module Sho: mass 48kg\n\nEach pallet is certified for a maximum load of 100 kg. The coordinator must ensure every module is placed on exactly one pallet, and the aggregate mass on any given pallet must not surpass its certified limit. The objective is to utilize the smallest possible number of pallets to complete the shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

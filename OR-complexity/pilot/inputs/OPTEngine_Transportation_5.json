@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A distribution network must be established to route a certain commodity from five regional depots to five retail hubs, with the objective of minimizing the aggregate transfer expense.\n\nThe available inventory at each regional depot (set R) is precisely as follows:\n*R1 holds 187 units.\n*R2 holds 134 units.\n*R3 holds 57 units.\n*R4 holds 79 units.\n*R5 holds 116 units.\n\nThe required fulfillment at each retail hub (set H) is strictly mandated below:\n*H1 requires 146 units.\n*H2 requires 41 units.\n*H3 requires 17 units.\n*H4 requires 65 units.\n*H5 requires 110 units.\n\nThe per-unit transfer cost from each depot to each hub is detailed in the accompanying matrix:\n\n| From / To | H1 | H2 | H3 | H4 | H5 |\n|--|-|-|-|-|\n| R1 | 11 | 14 | 20 | 17 | 4 |\n| R2 | 13 | 19 | 7 | 9 | 2 |\n| R3 | 14 | 1 | 17 | 18 | 7 |\n| R4 | 12 | 14 | 3 | 11 | 20 |\n| R5 | 11 | 4 | 10 | 17 | 10 |\n\nDetermine the optimal allocation of commodity flows to achieve the minimal total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

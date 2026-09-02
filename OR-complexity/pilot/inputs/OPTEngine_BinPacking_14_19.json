@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a collection of distinct parcels to a fleet of uniform delivery vehicles. The parcels have the following masses:\n* Parcel Alpha: 54 kilograms\n* Parcel Bravo: 67 kilograms\n* Parcel Charlie: 48 kilograms\n* Parcel Delta: 60 kilograms\n* Parcel Echo: 34 kilograms\n* Parcel Foxtrot: 35 kilograms\n* Parcel Golf: 63 kilograms\n* Parcel Hotel: 32 kilograms\n* Parcel India: 34 kilograms\n* Parcel Juliet: 44 kilograms\n* Parcel Kilo: 38 kilograms\n* Parcel Lima: 32 kilograms\n* Parcel Mike: 49 kilograms\n* Parcel November: 30 kilograms\n\nEach vehicle possesses a maximum cargo capacity of 100 kg. The objective is to allocate every parcel to a vehicle, ensuring no vehicle's load surpasses its capacity, while minimizing the total number of vehicles required for the complete shipment. Every parcel must be placed on exactly one vehicle.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

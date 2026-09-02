@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional telecommunications company must dispatch a technician to inspect eight critical network nodes.  \n\nThe latencies between nodes, measured in milliseconds, are as follows:  \n* Node P to Q: 104.0 ms  \n* Node P to R: 26.9 ms  \n* Node P to S: 114.8 ms  \n* Node P to T: 129.1 ms  \n* Node P to U: 14.6 ms  \n* Node P to V: 87.0 ms  \n* Node P to W: 76.6 ms  \n* Node Q to R: 78.4 ms  \n* Node Q to S: 98.2 ms  \n* Node Q to T: 92.5 ms  \n* Node Q to U: 117.2 ms  \n* Node Q to V: 78.6 ms  \n* Node Q to W: 32.3",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

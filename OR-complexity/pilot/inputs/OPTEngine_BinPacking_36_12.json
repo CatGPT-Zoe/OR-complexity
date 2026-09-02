@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_36_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of experimental shipments onto identical transport pallets. The shipments are designated as follows:\n\n* Shipment Alpha: mass 32 units\n* Shipment Beta: mass 31 units\n* Shipment Gamma: mass 44 units\n* Shipment Delta: mass 50 units\n* Shipment Epsilon: mass 37 units\n* Shipment Zeta: mass 70 units\n* Shipment Eta: mass 35 units\n* Shipment Theta: mass 48 units\n* Shipment Iota: mass 46 units\n* Shipment Kappa: mass 59 units\n* Shipment Lambda: mass 33 units\n* Shipment Mu: mass 36 units\n* Shipment Nu: mass 57 units\n* Shipment Xi: mass 44 units\n* Shipment Omicron: mass 46 units\n* Shipment Pi: mass 47 units\n* Shipment Rho: mass 67 units\n* Shipment Sigma: mass 68 units\n* Shipment Tau: mass 37 units\n* Shipment Upsilon: mass 38 units\n* Shipment Phi: mass 64 units\n* Shipment Chi: mass 37 units\n* Shipment Psi: mass 53 units\n* Shipment Omega: mass 53 units\n* Shipment A1: mass 47 units\n* Shipment B1: mass 53 units\n* Shipment C1: mass 33 units\n* Shipment D1: mass 34 units\n* Shipment E1: mass 56 units\n* Shipment F1: mass 48 units\n* Shipment G1: mass 53 units\n* Shipment H1: mass 47 units\n* Shipment I1: mass 30 units\n* Shipment J1: mass 38 units\n* Shipment K1: mass 61 units\n* Shipment L1: mass 51 units\n\nEvery pallet possesses a maximum load capacity of 100 mass units. The coordinator is required to assign all shipments to pallets, with the primary objective of minimizing the total number of pallets utilized. Each individual shipment must be placed on exactly one pallet, and the aggregate mass loaded onto any given pallet must not surpass its designated capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

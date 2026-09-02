@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A maritime logistics firm must devise a procurement and storage schedule for a specialized fuel additive over a voyage spanning 9 consecutive legs. The initial stock in the vessel’s tanks at the voyage outset is 16 barrels. In each leg \\( t = 1, \\dots, 9 \\), the supplier permits the firm to requisition a shipment whose volume must be between 19 and 21 barrels. Each such shipment, however, requires a transit time of 3 legs before it becomes available for consumption or to augment onboard reserves.\n\nThe consumption of the additive on each leg is predetermined as follows:\n* Leg 1: 25 barrels\n* Leg 2: 25 barrels\n* Leg 3: 58 barrels\n* Leg 4: 21 barrels\n* Leg 5: 28 barrels\n* Leg 6: 33 barrels\n* Leg 7: 36 barrels\n* Leg 8: 52 barrels\n* Leg 9: 12 barrels\n\nDeficits are permissible, but any consumption not met from available stock is simply lost and not carried forward. Throughout the voyage, additive quantities may be treated as continuous measures, and the total volume held in the vessel’s storage tanks at any moment must not surpass the capacity limit of 29 barrels.\n\nThe aggregate voyage expenditure comprises three elements: the procurement cost, charged at 1 per barrel ordered; the storage cost, levied at 3 per barrel retained from one leg to the next; and a deficit penalty, assessed at 7 per barrel of unsatisfied consumption. The objective is to determine the optimal shipment volume for each leg and to monitor the consequent tank levels and deficits so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

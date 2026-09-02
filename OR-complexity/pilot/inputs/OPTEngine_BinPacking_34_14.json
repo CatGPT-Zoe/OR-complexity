@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes onto identical pallets for secure transport. The boxes are categorized as follows:\n\n* Archive Alpha: mass 54 units\n* Archive Beta: mass 57 units\n* Archive Gamma: mass 42 units\n* Archive Delta: mass 43 units\n* Archive Epsilon: mass 30 units\n* Archive Zeta: mass 63 units\n* Archive Eta: mass 47 units\n* Archive Theta: mass 56 units\n* Archive Iota: mass 43 units\n* Archive Kappa: mass 62 units\n* Archive Lambda: mass 36 units\n* Archive Mu: mass 69 units\n* Archive Nu: mass 53 units\n* Archive Xi: mass 70 units\n* Archive Omicron: mass 51 units\n* Archive Pi: mass 46 units\n* Archive Rho: mass 62 units\n* Archive Sigma: mass 44 units\n* Archive Tau: mass 61 units\n* Archive Upsilon: mass 67 units\n* Archive Phi: mass 43 units\n* Archive Chi: mass 66 units\n* Archive Psi: mass 33 units\n* Archive Omega: mass 66 units\n* Archive Aleph: mass 36 units\n* Archive Beth: mass 46 units\n* Archive Gimel: mass 57 units\n* Archive Dalet: mass 36 units\n* Archive He: mass 32 units\n* Archive Waw: mass 36 units\n* Archive Zayin: mass 50 units\n* Archive Het: mass 51 units\n* Archive Tet: mass 37 units\n* Archive Yod: mass 69 units\n\nEach pallet has a strict load-bearing capacity of 100 mass units. The coordinator must determine an allocation that places every box onto exactly one pallet, ensuring the cumulative mass on any pallet does not surpass its limit, while minimizing the total number of pallets required for the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

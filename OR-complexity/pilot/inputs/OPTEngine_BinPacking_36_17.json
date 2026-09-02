@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_36_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning shipments to identical transport vehicles. Shipments include:\n\n* Shipment Alpha: load 34 tons\n* Shipment Beta: load 45 tons\n* Shipment Gamma: load 34 tons\n* Shipment Delta: load 43 tons\n* Shipment Epsilon: load 43 tons\n* Shipment Zeta: load 68 tons\n* Shipment Eta: load 42 tons\n* Shipment Theta: load 52 tons\n* Shipment Iota: load 53 tons\n* Shipment Kappa: load 30 tons\n* Shipment Lambda: load 49 tons\n* Shipment Mu: load 47 tons\n* Shipment Nu: load 30 tons\n* Shipment Xi: load 51 tons\n* Shipment Omicron: load 69 tons\n* Shipment Pi: load 33 tons\n* Shipment Rho: load 52 tons\n* Shipment Sigma: load 40 tons\n* Shipment Tau: load 56 tons\n* Shipment Upsilon: load 35 tons\n* Shipment Phi: load 57 tons\n* Shipment Chi: load 65 tons\n* Shipment Psi: load 39 tons\n* Shipment Omega: load 59 tons\n* Shipment A1: load 60 tons\n* Shipment B1: load 64 tons\n* Shipment C1: load 50 tons\n* Shipment D1: load 30 tons\n* Shipment E1: load 53 tons\n* Shipment F1: load 31 tons\n* Shipment G1: load 35 tons\n* Shipment H1: load 59 tons\n* Shipment I1: load 61 tons\n* Shipment J1: load 30 tons\n* Shipment K1: load 45 tons\n* Shipment L1: load 63 tons\n\nEach vehicle has a maximum cargo capacity of 100 tons. All shipments must be allocated, with each assigned to exactly one vehicle, and the combined load on any vehicle cannot surpass its capacity. The objective is to utilize the minimum possible number of vehicles.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

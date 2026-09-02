@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select cargo containers for a shipment. Available containers are:\n* Container A: volume 22 cubic meters, revenue $134\n* Container B: volume 47 cubic meters, revenue $176\n* Container C: volume 46 cubic meters, revenue $42\n* Container D: volume 13 cubic meters, revenue $300\n* Container E: volume 15 cubic meters, revenue $132\nThe cargo plane has a maximum capacity of 100 cubic meters. Choose the container combination that maximizes total revenue without exceeding this volume limit. Each container is either fully shipped or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

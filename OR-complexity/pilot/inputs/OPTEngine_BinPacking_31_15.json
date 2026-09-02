@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign shipments to identical cargo planes for an urgent airlift operation. The shipments are as follows:\n\n* Shipment Alpha: mass 56 metric tons\n* Shipment Beta: mass 35 metric tons\n* Shipment Gamma: mass 34 metric tons\n* Shipment Delta: mass 66 metric tons\n* Shipment Epsilon: mass 45 metric tons\n* Shipment Zeta: mass 64 metric tons\n* Shipment Eta: mass 34 metric tons\n* Shipment Theta: mass 43 metric tons\n* Shipment Iota: mass 50 metric tons\n* Shipment Kappa: mass 58 metric tons\n* Shipment Lambda: mass 65 metric tons\n* Shipment Mu: mass 68 metric tons\n* Shipment Nu: mass 36 metric tons\n* Shipment Xi: mass 40 metric tons\n* Shipment Omicron: mass 40 metric tons\n* Shipment Pi: mass 68 metric tons\n* Shipment Rho: mass 67 metric tons\n* Shipment Sigma: mass 68 metric tons\n* Shipment Tau: mass 33 metric tons\n* Shipment Upsilon: mass 58 metric tons\n* Shipment Phi: mass 46 metric tons\n* Shipment Chi: mass 43 metric tons\n* Shipment Psi: mass 64 metric tons\n* Shipment Omega: mass 33 metric tons\n* Shipment Asterisk: mass 61 metric tons\n* Shipment Ampersand: mass 34 metric tons\n* Shipment BraceLeft: mass 31 metric tons\n* Shipment BraceRight: mass 33 metric tons\n* Shipment Caret: mass 68 metric tons\n* Shipment Underscore: mass 42 metric tons\n* Shipment Tilde: mass 40 metric tons\n\nEach cargo plane has a maximum payload capacity of 100 metric tons. The coordinator must load all shipments using the smallest possible fleet of planes. Every shipment must be placed on exactly one plane, and the combined mass on any plane cannot surpass its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

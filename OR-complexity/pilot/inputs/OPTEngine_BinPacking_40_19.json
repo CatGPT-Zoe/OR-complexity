@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_40_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of fragile equipment modules into standardized protective crates for international shipment. The modules are as follows:\n\n* Module Alpha: mass 47kg\n* Module Beta: mass 38kg\n* Module Gamma: mass 67kg\n* Module Delta: mass 60kg\n* Module Epsilon: mass 58kg\n* Module Zeta: mass 35kg\n* Module Eta: mass 52kg\n* Module Theta: mass 56kg\n* Module Iota: mass 64kg\n* Module Kappa: mass 49kg\n* Module Lambda: mass 61kg\n* Module Mu: mass 60kg\n* Module Nu: mass 58kg\n* Module Xi: mass 50kg\n* Module Omicron: mass 66kg\n* Module Pi: mass 49kg\n* Module Rho: mass 35kg\n* Module Sigma: mass 37kg\n* Module Tau: mass 36kg\n* Module Upsilon: mass 34kg\n* Module Phi: mass 45kg\n* Module Chi: mass 57kg\n* Module Psi: mass 58kg\n* Module Omega: mass 34kg\n* Module Aster: mass 67kg\n* Module Prime: mass 59kg\n* Module BraceL: mass 31kg\n* Module BraceR: mass 64kg\n* Module Caret: mass 41kg\n* Module Underscore: mass 39kg\n* Module Grave: mass 56kg\n* Module Tilde: mass 65kg\n* Module Digamma: mass 51kg\n* Module Stigma: mass 40kg\n* Module Heta: mass 51kg\n* Module San: mass 40kg\n* Module Koppa: mass 45kg\n* Module Sampi: mass 60kg\n* Module Sho: mass 55kg\n* Module Tsan: mass 40kg\n\nEach protective crate has a certified maximum safe load capacity of 100 kg. The coordinator must assign every module to precisely one crate, ensuring the aggregate mass within any given crate does not surpass its load limit. The objective is to complete this allocation utilizing the minimal possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

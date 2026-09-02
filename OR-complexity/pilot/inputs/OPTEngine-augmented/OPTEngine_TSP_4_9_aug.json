@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to perform maintenance at four critical substations within a regional power grid:\nSubstation Alpha: Grid reference (16,48)\nSubstation Beta: Grid reference (145,56)\nSubstation Gamma: Grid reference (61,36)\nSubstation Delta: Grid reference (139,114)\n\nThe fiber-optic communication links between substations, which dictate viable travel paths, have the following exact lengths in kilometers:\nAlpha to Gamma: 46.6 km\nAlpha to Delta: 139.6 km\nBeta to Gamma: 86.3 km\nBeta to Delta: 58.3 km\nGamma to Delta: 110.3 km\n\nDue to a permanent geographical obstruction, a direct link between Substation Alpha and Substation Beta cannot be utilized.\nFurthermore, network security protocols mandate that exactly one of the following two critical connections must be incorporated into the service circuit: the link between Substation Beta and Substation Gamma, or the link between Substation Gamma and Substation Delta.\n\nThe objective is to determine the most efficient closed-circuit route, measured in total kilometers traveled, that allows the technician to visit each substation precisely once before returning to the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

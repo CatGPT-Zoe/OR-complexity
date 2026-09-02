@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital needs to schedule 4 medical tests for 4 different patients using specialized diagnostic equipment.\n\nEach patient requires a specific sequence of tests represented as (Equipment, Duration) pairs, where each pair indicates the equipment needed and the time required for that test. The order of pairs shows the required sequence in which tests must be performed.\n\nPatient testing requirements:\n* Patient 1 needs: (Equipment B, 10) → (Equipment A, 9) → (Equipment D, 5) → (Equipment C, 6)\n* Patient 2 needs: (Equipment D, 9) → (Equipment C, 1) → (Equipment B, 8) → (Equipment A, 2)\n* Patient 3 needs: (Equipment C, 3) → (Equipment D, 4) → (Equipment A, 8) → (Equipment B, 6)\n* Patient 4 needs: (Equipment C, 5) → (Equipment D, 7) → (Equipment B, 7) → (Equipment A, 2)\n\nEach test must run continuously once it begins and cannot be interrupted, and each piece of equipment can only handle one test at a time. The objective is to determine the processing order of all tests on the equipment so that the total completion time for all patients is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

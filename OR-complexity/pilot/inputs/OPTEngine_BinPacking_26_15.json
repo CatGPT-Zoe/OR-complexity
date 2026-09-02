@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_26_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of archival boxes into a set of identical shipping crates. The items to be crated are as follows:\n\n* Archive Alpha: bulk 31kg\n* Archive Beta: bulk 67kg\n* Archive Gamma: bulk 62kg\n* Archive Delta: bulk 51kg\n* Archive Epsilon: bulk 68kg\n* Archive Zeta: bulk 36kg\n* Archive Eta: bulk 66kg\n* Archive Theta: bulk 45kg\n* Archive Iota: bulk 31kg\n* Archive Kappa: bulk 32kg\n* Archive Lambda: bulk 36kg\n* Archive Mu: bulk 49kg\n* Archive Nu: bulk 35kg\n* Archive Xi: bulk 67kg\n* Archive Omicron: bulk 55kg\n* Archive Pi: bulk 38kg\n* Archive Rho: bulk 66kg\n* Archive Sigma: bulk 69kg\n* Archive Tau: bulk 63kg\n* Archive Upsilon: bulk 42kg\n* Archive Phi: bulk 47kg\n* Archive Chi: bulk 48kg\n* Archive Psi: bulk 40kg\n* Archive Omega: bulk 41kg\n* Archive Digamma: bulk 67kg\n* Archive San: bulk 44kg\n\nEvery shipping crate possesses a maximum safe load capacity of 100 kg. The objective is to place all archival boxes into crates, utilizing the smallest possible number of crates. Each box must be assigned to precisely one crate, and the aggregate bulk weight within any given crate must remain within the prescribed load limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

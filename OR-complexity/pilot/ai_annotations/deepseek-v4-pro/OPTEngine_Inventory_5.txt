@@ -1,0 +1,131 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Inventory_5",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "days",
+      "description": "operational days in the planning window",
+      "values": [1, 2, 3, 4, 5]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "initial_stock",
+      "indices": [],
+      "description": "initial stock of additive at the start of day 1",
+      "unit": "gallons",
+      "values": 42,
+      "data_ref": null
+    },
+    {
+      "id": "consumption",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "predetermined daily consumption of additive",
+      "unit": "gallons",
+      "values": {"1": 49, "2": 17, "3": 41, "4": 47, "5": 50},
+      "data_ref": null
+    },
+    {
+      "id": "shipment_min",
+      "indices": [],
+      "description": "minimum shipment volume allowed per day",
+      "unit": "gallons",
+      "values": 6,
+      "data_ref": null
+    },
+    {
+      "id": "shipment_max",
+      "indices": [],
+      "description": "maximum shipment volume allowed per day",
+      "unit": "gallons",
+      "values": 35,
+      "data_ref": null
+    },
+    {
+      "id": "storage_capacity",
+      "indices": [],
+      "description": "storage tank capacity",
+      "unit": "gallons",
+      "values": 55,
+      "data_ref": null
+    },
+    {
+      "id": "procurement_cost",
+      "indices": [],
+      "description": "cost per gallon of additive ordered",
+      "unit": "dollars per gallon",
+      "values": 6,
+      "data_ref": null
+    },
+    {
+      "id": "storage_cost",
+      "indices": [],
+      "description": "cost per gallon kept overnight",
+      "unit": "dollars per gallon per day",
+      "values": 2,
+      "data_ref": null
+    },
+    {
+      "id": "shortage_cost",
+      "indices": [],
+      "description": "penalty per gallon of unmet daily consumption",
+      "unit": "dollars per gallon",
+      "values": 7,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "shipment",
+      "canonical_name": "shipment",
+      "semantic_type": "quantity",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "volume of additive ordered and delivered on a day",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "gallons",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "stock",
+      "canonical_name": "stock",
+      "semantic_type": "quantity",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "physical stock level at the end of a day",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "gallons",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "the total physical stock held at the end of any day must not exceed the storage‑tank capacity of 55 gallons"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "deficit",
+      "canonical_name": "deficit",
+      "semantic_type": "quantity",
+      "indices": [{"role": "day", "set_id": "days"}],
+      "description": "amount of unmet consumption on a day",
+      "value_semantics": "continuous nonnegative amount",
+      "unit": "gallons",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "any unsatisfied consumption is lost and cannot be recovered later"
+      ],
+      "confidence": 0.9
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "minimize_total_cost",
+    "normalized_semantics": "minimize the total cost comprising procurement, storage, and shortage costs over the five-day period",
+    "description": "Minimize total expenditure: 6 per gallon ordered, 2 per gallon kept overnight, 7 per gallon of unmet consumption.",
+    "entity_scope": ["shipment", "stock", "deficit"],
+    "parameter_refs

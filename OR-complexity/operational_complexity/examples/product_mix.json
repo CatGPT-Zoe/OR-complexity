@@ -1,0 +1,111 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "product_mix_001",
+  "dataset": "examples",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "products",
+      "description": "products A and B that the factory can produce"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "labor_usage",
+      "indices": ["products"],
+      "description": "labor consumed per unit of each product",
+      "unit": "hours"
+    },
+    {
+      "id": "material_usage",
+      "indices": ["products"],
+      "description": "material consumed per unit of each product",
+      "unit": "kg"
+    },
+    {
+      "id": "labor_capacity",
+      "indices": [],
+      "description": "total available labor",
+      "unit": "hours"
+    },
+    {
+      "id": "material_capacity",
+      "indices": [],
+      "description": "total available material",
+      "unit": "kg"
+    },
+    {
+      "id": "profit",
+      "indices": ["products"],
+      "description": "profit per unit of each product",
+      "unit": "currency"
+    }
+  ],
+  "entities": [
+    {
+      "id": "production",
+      "canonical_name": "production",
+      "semantic_type": "quantity",
+      "indices": [
+        {"role": "product", "set_id": "products"}
+      ],
+      "description": "amount of each product produced",
+      "value_semantics": "continuous nonnegative quantity",
+      "unit": "units",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": ["factory produces products A and B"]
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "description": "maximize total profit from production",
+    "entity_scope": ["production"],
+    "parameter_refs": ["profit"],
+    "excluded_from_feasibility_hypergraph": true,
+    "source_spans": ["maximize profit"]
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "labor_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "total labor consumed by all production must not exceed the labor capacity",
+      "support_entity_ids": ["production"],
+      "incidence_slots": [
+        {
+          "entity_id": "production",
+          "role": "labor_usage",
+          "aggregation_axes": ["product"]
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["labor_usage", "labor_capacity"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["total labor must not exceed the available labor"]
+    },
+    {
+      "id": "o2",
+      "canonical_name": "material_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "total material consumed by all production must not exceed the material capacity",
+      "support_entity_ids": ["production"],
+      "incidence_slots": [
+        {
+          "entity_id": "production",
+          "role": "material_usage",
+          "aggregation_axes": ["product"]
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["material_usage", "material_capacity"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": ["total material must not exceed the available material"]
+    }
+  ],
+  "unresolved_items": []
+}

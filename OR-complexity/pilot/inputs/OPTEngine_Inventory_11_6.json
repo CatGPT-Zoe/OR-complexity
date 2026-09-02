@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_11_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping terminal must devise a procurement and storage schedule for a critical fuel additive across an operational window of 11 consecutive days.\nThe initial stockpile at the start of the planning interval is 10 barrels.\nFor each operational day t = 1, ..., 11, the terminal may procure a shipment from its supplier, where the volume must be between 13 and 79 barrels inclusive.\nNotably, every shipment placed requires a lead time of 4 days for delivery before it becomes available to meet consumption requirements or augment stock.\nThe daily consumption of the additive is predetermined as follows:\n* Day 1: consumption 25 barrels\n* Day 2: consumption 21 barrels\n* Day 3: consumption 25 barrels\n* Day 4: consumption 11 barrels\n* Day 5: consumption 20 barrels\n* Day 6: consumption 57 barrels\n* Day 7: consumption 60 barrels\n* Day 8: consumption 53 barrels\n* Day 9: consumption 45 barrels\n* Day 10: consumption 20 barrels\n* Day 11: consumption 55 barrels\n\nStockouts are permissible, but any unsatisfied consumption is considered lost and will not be fulfilled later.\nThroughout the planning horizon, additive quantities may be treated as continuous, and the total volume of physical stock held at any given moment must not surpass the storage tank capacity of 48 barrels.\nThe aggregate expenditure over the operational window comprises three elements: the procurement cost, calculated at 1 per barrel ordered; the storage cost, levied at 3 per barrel transferred from one day to the next; and the stockout penalty, assessed at 13 per barrel of unmet consumption. The objective is to ascertain the optimal shipment volume for each day and to monitor the ensuing stockpile and deficit levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

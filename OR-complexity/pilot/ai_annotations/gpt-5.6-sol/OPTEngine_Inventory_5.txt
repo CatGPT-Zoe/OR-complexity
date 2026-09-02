@@ -1,0 +1,450 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_Inventory_5",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "SET_DAY",
+      "canonical_name": "operational_days",
+      "elements": [1, 2, 3, 4, 5],
+      "ordered": true,
+      "source_grounding": "over a five-day operational window; on each day t = 1, ..., 5",
+      "source_spans": [
+        "over a five-day operational window",
+        "On each day \\( t = 1, \\dots, 5 \\)"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "PAR_INITIAL_STOCK",
+      "canonical_name": "initial_stock",
+      "value": 42,
+      "unit": "gallon",
+      "indexing": "scalar",
+      "source_grounding": "The initial stock level at the start of the first day is 42 gallons.",
+      "source_spans": [
+        "The initial stock level at the start of the first day is 42 gallons."
+      ]
+    },
+    {
+      "id": "PAR_DAILY_CONSUMPTION",
+      "canonical_name": "daily_consumption_requirement",
+      "index_set_ids": ["SET_DAY"],
+      "values": {
+        "1": 49,
+        "2": 17,
+        "3": 41,
+        "4": 47,
+        "5": 50
+      },
+      "unit": "gallon/day",
+      "source_grounding": "The daily consumption of the additive is predetermined as: Day 1: 49 gallons; Day 2: 17 gallons; Day 3: 41 gallons; Day 4: 47 gallons; Day 5: 50 gallons.",
+      "source_spans": [
+        "The daily consumption of the additive is predetermined as:",
+        "Day 1: 49 gallons",
+        "Day 2: 17 gallons",
+        "Day 3: 41 gallons",
+        "Day 4: 47 gallons",
+        "Day 5: 50 gallons"
+      ]
+    },
+    {
+      "id": "PAR_SHIPMENT_MIN",
+      "canonical_name": "minimum_daily_shipment",
+      "value": 6,
+      "unit": "gallon/day",
+      "indexing": "scalar_applied_by_day",
+      "source_grounding": "the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons",
+      "source_spans": [
+        "whose volume must be between 6 and 35 gallons"
+      ]
+    },
+    {
+      "id": "PAR_SHIPMENT_MAX",
+      "canonical_name": "maximum_daily_shipment",
+      "value": 35,
+      "unit": "gallon/day",
+      "indexing": "scalar_applied_by_day",
+      "source_grounding": "the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons",
+      "source_spans": [
+        "whose volume must be between 6 and 35 gallons"
+      ]
+    },
+    {
+      "id": "PAR_STORAGE_CAPACITY",
+      "canonical_name": "end_of_day_storage_capacity",
+      "value": 55,
+      "unit": "gallon",
+      "indexing": "scalar_applied_by_day",
+      "source_grounding": "the total physical stock held at the end of any day must not exceed the storage-tank capacity of 55 gallons",
+      "source_spans": [
+        "the total physical stock held at the end of any day must not exceed the storage‑tank capacity of 55 gallons"
+      ]
+    },
+    {
+      "id": "PAR_DELIVERY_LAG",
+      "canonical_name": "shipment_delivery_lag",
+      "value": 0,
+      "unit": "day",
+      "indexing": "scalar",
+      "source_grounding": "Shipments are delivered instantly, becoming available immediately to meet consumption requirements.",
+      "source_spans": [
+        "Shipments are delivered instantly, becoming available immediately to meet consumption requirements."
+      ]
+    },
+    {
+      "id": "PAR_PROCUREMENT_COST",
+      "canonical_name": "unit_procurement_cost",
+      "value": 6,
+      "unit": "cost_unit/gallon",
+      "indexing": "scalar_applied_by_day",
+      "source_grounding": "a procurement cost of 6 per gallon ordered",
+      "source_spans": [
+        "a procurement cost of 6 per gallon ordered"
+      ]
+    },
+    {
+      "id": "PAR_STORAGE_COST",
+      "canonical_name": "unit_overnight_storage_cost",
+      "value": 2,
+      "unit": "cost_unit/gallon/night",
+      "indexing": "scalar_applied_to_eligible_overnight_stock",
+      "source_grounding": "a storage cost of 2 per gallon kept overnight",
+      "source_spans": [
+        "a storage cost of 2 per gallon kept overnight"
+      ]
+    },
+    {
+      "id": "PAR_SHORTAGE_PENALTY",
+      "canonical_name": "unit_unmet_consumption_penalty",
+      "value": 7,
+      "unit": "cost_unit/gallon",
+      "indexing": "scalar_applied_by_day",
+      "source_grounding": "a shortage penalty of 7 per gallon of unmet daily consumption",
+      "source_spans": [
+        "a shortage penalty of 7 per gallon of unmet daily consumption"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT_DAILY_SHIPMENT",
+      "canonical_family": "replenishment_shipment",
+      "canonical_name": "daily_shipment_volume",
+      "entity_role": "decision",
+      "index_set_ids": ["SET_DAY"],
+      "temporal_granularity": "day",
+      "unit": "gallon",
+      "domain_metadata": {
+        "value_type": "continuous"
+      },
+      "source_grounding": "On each day t = 1, ..., 5, the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons.",
+      "source_spans": [
+        "On each day \\( t = 1, \\dots, 5 \\), the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons.",
+        "Throughout the five‑day period, additive quantities are treated as continuous values."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "ENT_END_STOCK",
+      "canonical_family": "physical_inventory_state",
+      "canonical_name": "end_of_day_stock",
+      "entity_role": "state",
+      "index_set_ids": ["SET_DAY"],
+      "temporal_granularity": "end_of_day",
+      "unit": "gallon",
+      "domain_metadata": {
+        "value_type": "continuous",
+        "physical_quantity": true
+      },
+      "source_grounding": "the total physical stock held at the end of any day; monitor the consequent stock levels",
+      "source_spans": [
+        "the total physical stock held at the end of any day",
+        "to monitor the consequent stock and deficit levels",
+        "Throughout the five‑day period, additive quantities are treated as continuous values."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "ENT_UNMET_CONSUMPTION",
+      "canonical_family": "unmet_consumption",
+      "canonical_name": "daily_unmet_consumption",
+      "entity_role": "service_outcome",
+      "index_set_ids": ["SET_DAY"],
+      "temporal_granularity": "day",
+      "unit": "gallon",
+      "domain_metadata": {
+        "value_type": "continuous",
+        "lost_sales_or_consumption": true
+      },
+      "source_grounding": "Stock-outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.",
+      "source_spans": [
+        "Stock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.",
+        "a shortage penalty of 7 per gallon of unmet daily consumption",
+        "to monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "total_procurement_storage_and_shortage_cost",
+    "normalized_semantics": "Minimize aggregate procurement cost on daily shipment volume, overnight storage cost on stock carried overnight, and shortage penalty on daily unmet consumption.",
+    "terms": [
+      {
+        "entity_id": "ENT_DAILY_SHIPMENT",
+        "coefficient_parameter_id": "PAR_PROCUREMENT_COST",
+        "aggregation": "sum_over_days"
+      },
+      {
+        "entity_id": "ENT_END_STOCK",
+        "coefficient_parameter_id": "PAR_STORAGE_COST",
+        "aggregation": "sum_over_overnight_holding_incidence",
+        "incidence_note": "Application to terminal end-of-day stock is unresolved because the text says 'kept overnight' but does not specify post-horizon charging."
+      },
+      {
+        "entity_id": "ENT_UNMET_CONSUMPTION",
+        "coefficient_parameter_id": "PAR_SHORTAGE_PENALTY",
+        "aggregation": "sum_over_days"
+      }
+    ],
+    "source_grounding": "The aggregate cost comprises three elements: a procurement cost of 6 per gallon ordered; a storage cost of 2 per gallon kept overnight; and a shortage penalty of 7 per gallon of unmet daily consumption. The objective is ... to minimize the total expenditure.",
+    "source_spans": [
+      "The aggregate cost comprises three elements: a procurement cost of 6 per gallon ordered; a storage cost of 2 per gallon kept overnight; and a shortage penalty of 7 per gallon of unmet daily consumption.",
+      "The objective is to identify the optimal shipment volume each day and to monitor the consequent stock and deficit levels so as to minimize the total expenditure."
+    ]
+  },
+  "obligations": [
+    {
+      "id": "OBL_SHIPMENT_MIN",
+      "canonical_family": "shipment_volume_lower_bound",
+      "canonical_name": "minimum_daily_shipment",
+      "structural_form": "LOWER_BOUND",
+      "business_role": "supplier_shipment_policy",
+      "normalized_semantics": "Each day's requested shipment volume must be at least the supplier's minimum shipment volume.",
+      "support_entity_ids": ["ENT_DAILY_SHIPMENT"],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_DAILY_SHIPMENT",
+          "time_role": "current_day",
+          "index_expression": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "per_period",
+      "parameter_refs": ["PAR_SHIPMENT_MIN"],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "On each day t = 1, ..., 5, the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons.",
+      "source_spans": [
+        "On each day \\( t = 1, \\dots, 5 \\), the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_SHIPMENT_MAX",
+      "canonical_family": "shipment_volume_upper_bound",
+      "canonical_name": "maximum_daily_shipment",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "supplier_shipment_policy",
+      "normalized_semantics": "Each day's requested shipment volume must not exceed the supplier's maximum shipment volume.",
+      "support_entity_ids": ["ENT_DAILY_SHIPMENT"],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_DAILY_SHIPMENT",
+          "time_role": "current_day",
+          "index_expression": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "per_period",
+      "parameter_refs": ["PAR_SHIPMENT_MAX"],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "On each day t = 1, ..., 5, the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons.",
+      "source_spans": [
+        "On each day \\( t = 1, \\dots, 5 \\), the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons."
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_STOCK_FLOW_BALANCE",
+      "canonical_family": "inventory_flow_balance",
+      "canonical_name": "daily_stock_replenishment_consumption_balance",
+      "structural_form": "BALANCE",
+      "business_role": "physical_stock_conservation",
+      "normalized_semantics": "End-of-day stock equals stock available from the preceding boundary plus the shipment delivered on the current day, minus predetermined current-day consumption, plus the portion of that consumption recorded as unmet. Instant delivery gives the shipment same-day incidence.",
+      "support_entity_ids": [
+        "ENT_END_STOCK",
+        "ENT_DAILY_SHIPMENT",
+        "ENT_UNMET_CONSUMPTION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_END_STOCK",
+          "time_role": "current_end_of_day",
+          "index_expression": "t"
+        },
+        {
+          "entity_id": "ENT_END_STOCK",
+          "time_role": "preceding_end_of_day",
+          "index_expression": "t-1",
+          "condition": "t > 1"
+        },
+        {
+          "entity_id": "ENT_DAILY_SHIPMENT",
+          "time_role": "same_day_receipt",
+          "index_expression": "t",
+          "lag_parameter_ref": "PAR_DELIVERY_LAG"
+        },
+        {
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "time_role": "current_day_service_deficit",
+          "index_expression": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "temporal_recurrence",
+      "parameter_refs": [
+        "PAR_INITIAL_STOCK",
+        "PAR_DAILY_CONSUMPTION",
+        "PAR_DELIVERY_LAG"
+      ],
+      "boundary_variants": [
+        {
+          "condition": "t = 1",
+          "normalized_semantics": "The preceding stock boundary is the initial stock of 42 gallons rather than an endogenous prior-day stock state.",
+          "parameter_refs": ["PAR_INITIAL_STOCK"]
+        },
+        {
+          "condition": "t > 1",
+          "normalized_semantics": "The preceding stock boundary is the prior day's end-of-day stock."
+        }
+      ],
+      "coupling_active": true,
+      "source_status": "explicit_accounting_semantics",
+      "normalization_rationale": "The initial condition and subsequent carryover are boundary clauses of one stock-balance family. Instantaneous delivery modifies the shipment's temporal incidence rather than creating a receipt entity.",
+      "source_grounding": "The initial stock level at the start of the first day is 42 gallons. Shipments are delivered instantly, becoming available immediately to meet consumption requirements. Daily consumption is predetermined, and unsatisfied consumption is monitored as a deficit.",
+      "source_spans": [
+        "The initial stock level at the start of the first day is 42 gallons.",
+        "Shipments are delivered instantly, becoming available immediately to meet consumption requirements.",
+        "The daily consumption of the additive is predetermined as:",
+        "Stock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.",
+        "to monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "OBL_STORAGE_CAPACITY",
+      "canonical_family": "end_of_period_inventory_capacity",
+      "canonical_name": "end_of_day_tank_capacity",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "physical_storage_limit",
+      "normalized_semantics": "Physical stock held at the end of each day must not exceed the storage-tank capacity.",
+      "support_entity_ids": ["ENT_END_STOCK"],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_END_STOCK",
+          "time_role": "current_end_of_day",
+          "index_expression": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "per_period",
+      "parameter_refs": ["PAR_STORAGE_CAPACITY"],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "the total physical stock held at the end of any day must not exceed the storage-tank capacity of 55 gallons",
+      "source_spans": [
+        "the total physical stock held at the end of any day must not exceed the storage‑tank capacity of 55 gallons"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "OBL_UNMET_NO_CARRYOVER",
+      "canonical_family": "unmet_consumption_no_carryover",
+      "canonical_name": "lost_unsatisfied_consumption",
+      "structural_form": "NO_CARRYOVER",
+      "business_role": "lost_consumption_policy",
+      "normalized_semantics": "Consumption left unsatisfied on a day is lost and cannot become recoverable demand or backlog in a later day.",
+      "support_entity_ids": ["ENT_UNMET_CONSUMPTION"],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "time_role": "current_day_lost_deficit",
+          "index_expression": "t"
+        }
+      ],
+      "quantifier": "for every t in SET_DAY",
+      "scope_kind": "interperiod_policy",
+      "parameter_refs": [],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "Stock-outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.",
+      "source_spans": [
+        "Stock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "derived_checks": [
+    {
+      "id": "CHK_UNMET_NOT_ABOVE_CONSUMPTION",
+      "canonical_name": "unmet_consumption_within_daily_requirement",
+      "normalized_semantics": "For each day, unmet consumption cannot exceed that day's predetermined consumption requirement.",
+      "support_entity_ids": ["ENT_UNMET_CONSUMPTION"],
+      "parameter_refs": ["PAR_DAILY_CONSUMPTION"],
+      "quantifier": "for every t in SET_DAY",
+      "derivation_type": "definitional_consequence",
+      "source_grounding": "The deficit is described as unsatisfied consumption from the predetermined daily consumption amount.",
+      "source_spans": [
+        "The daily consumption of the additive is predetermined as:",
+        "any unsatisfied consumption is lost",
+        "a shortage penalty of 7 per gallon of unmet daily consumption"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "CHK_NO_LEFTOVER_WITH_SAME_DAY_UNMET",
+      "canonical_name": "stockout_consistency",
+      "normalized_semantics": "A positive daily unmet-consumption outcome denotes a stock-out and therefore should not coexist with positive usable end-of-day stock for that same day.",
+      "support_entity_ids": [
+        "ENT_END_STOCK",
+        "ENT_UNMET_CONSUMPTION"
+      ],
+      "parameter_refs": [],
+      "quantifier": "for every t in SET_DAY",
+      "derivation_type": "definitional_service_consistency",
+      "source_grounding": "The text identifies unsatisfied consumption with tolerated stock-outs while separately identifying consequent stock and deficit levels.",
+      "source_spans": [
+        "Stock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.",
+        "to monitor the consequent stock and deficit levels"
+      ],
+      "confidence": 0.95
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "UNRESOLVED_TERMINAL_STORAGE_COST",
+      "topic": "objective_terminal_incidence",
+      "description": "The storage charge applies to gallons 'kept overnight.' The text does not state whether stock remaining at the end of day 5 incurs a storage charge for the night after the five-day operational window.",
+      "affected_parameter_ids": ["PAR_STORAGE_COST"],
+      "affected_entity_ids": ["ENT_END_STOCK"],
+      "source_spans": [
+        "a storage cost of 2 per gallon kept overnight",
+        "over a five-day operational window"
+      ]
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "WARN_BALANCE_SEMANTIC_NORMALIZATION",
+      "message": "The stock-flow balance is normalized from the stated initial stock, immediate delivery, predetermined consumption, stock levels, and deficits; the source does not provide an explicit algebraic equation."
+    },
+    {
+      "id": "WARN_CAPACITY_TIMING",
+      "message": "The 55-gallon capacity is grounded only as an end-of-day stock limit. No separate pre-consumption or instantaneous post-delivery tank-capacity rule was added."
+    }
+  ]
+}

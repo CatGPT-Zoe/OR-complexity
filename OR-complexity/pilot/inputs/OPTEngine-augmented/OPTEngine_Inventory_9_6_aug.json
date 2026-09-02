@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and storage schedule for a critical drug across a nine‑week planning window.  \nThe initial stock at the start of the planning interval is 62 doses.  \nIn each week \\( t = 1, \\dots, 9 \\), the pharmaceutical supplier permits the hospital to submit a purchase whose size must fall between 7 and 28 doses.  \nEvery purchase, however, requires a lead time of 2 weeks before the medication becomes available for patient administration or restocking the pharmacy.  \nPatient consumption of the drug in each week is forecast as follows:  \n* Week 1: consumption 49 doses  \n* Week 2: consumption 14 doses  \n* Week 3: consumption 37 doses  \n* Week 4: consumption 45 doses  \n* Week 5: consumption 58 doses  \n* Week 6: consumption 35 doses  \n* Week 7: consumption 12 doses  \n* Week 8: consumption 21 doses  \n* Week 9: consumption 25 doses  \n\nStock‑outs are tolerated, but any unsatisfied consumption is not carried forward to later weeks.  \nThroughout the nine‑week horizon, drug quantities may be treated as continuous, and the total on‑hand stock at any moment must not surpass the pharmacy’s refrigerated capacity of 62 doses.  \n\nIn week 5, the maximum purchase quantity allowed is 26 doses.  \nBy the end of week 9, the on‑hand inventory must be no less than 50 doses.  \n\nThe aggregate cost over the planning window comprises three elements: the procurement cost, charged at 3 per dose ordered; the storage cost, charged at 2 per dose kept from one week to the next; and the shortage penalty, charged at 12 per dose of unmet consumption. Determine the optimal purchase quantity for each week and monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

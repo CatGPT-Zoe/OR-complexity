@@ -1,0 +1,85 @@
+{
+  "instance_id": "MIPLIB_NL_graphdraw-gemcutter",
+  "annotation_mode": "semantic",
+  "problem_text": "A team maintains a grid-based architecture diagram with 8 entities and 11 relationships between some entity pairs. Each entity must be placed at an integer (row, column) location within its own allowed window. The layout should remain readable: no two entities may overlap, directly related entities should stay close to reduce visual clutter, and the diagram should not drift too far from a given anchor position for each entity.\n\nFor every unordered pair of entities, the layout must choose exactly one of four non-overlap options: separate them on the row axis (with one order), separate them on the row axis (with the opposite order), separate them on the column axis (with one order), or separate them on the column axis (with the opposite order). Each option has its own required minimum separation, provided in the data. To avoid contradictory “before/after” decisions along the same axis, these choices must be globally consistent across all triples of entities on each axis.\n\nFor each relationship edge, the model measures row and column separations with auxiliary nonnegative distance values linked to the endpoint coordinates by linear inequalities. The objective minimizes 64 times the total edge separation plus 1 times the total deviation from anchors. The instance also enforces a required minimum total anchor deviation of 22.\n\nAll CSV files live in the `data/` folder next to this JSON. Use numeric IDs for joins; labels are for readability only.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "entities",
+      "indices": [
+        "entity_id",
+        "label",
+        "row_min",
+        "row_max",
+        "col_min",
+        "col_max",
+        "anchor_row",
+        "anchor_col"
+      ],
+      "unit": "",
+      "values": "| entity_id | label | row_min | row_max | col_min | col_max | anchor_row | anchor_col |\n|---|---|---|---|---|---|---|---|\n| 0 | Dependency | 1 | 27 | 1 | 22 | 14.0 | 11.5 |\n| 1 | Linkset | 1 | 25 | 1 | 25 | 13.0 | 13.0 |\n| 2 | Ownership | 1 | 27 | 1 | 23 | 14.0 | 12.0 |\n| 3 | Rubygem | 1 | 27 | 1 | 23 | 14.0 | 12.0 |\n| 4 | Subscription | 1 | 28 | 1 | 24 | 14.5 | 12.5 |\n| 5 | User | 1 | 23 | 1 | 18 | 12.0 | 9.5 |\n| 6 | Version | 1 | 23 | 1 | 20 | 12.0 | 10.5 |\n| 7 | WebHook | 1 | 27 | 1 | 21 | 14.0 | 11.0 |"
+    },
+    {
+      "name": "edges",
+      "indices": [
+        "edge_id",
+        "u_id",
+        "v_id",
+        "weight",
+        "manhattan_lb"
+      ],
+      "unit": "",
+      "values": "| edge_id | u_id | v_id | weight | manhattan_lb |\n|---|---|---|---|---|\n| 0 | 3 | 0 | 64 | 5.0 |\n| 1 | 3 | 1 | 64 | 6.0 |\n| 2 | 3 | 2 | 64 | 5.0 |\n| 3 | 3 | 4 | 64 | 4.5 |\n| 4 | 3 | 5 | 64 | 7.0 |\n| 5 | 3 | 6 | 64 | 7.0 |\n| 6 | 3 | 7 | 64 | 5.0 |\n| 7 | 5 | 2 | 64 | 7.0 |\n| 8 | 5 | 4 | 64 | 6.5 |\n| 9 | 5 | 7 | 64 | 7.0 |\n| 10 | 6 | 0 | 64 | 7.0 |"
+    },
+    {
+      "name": "pairs",
+      "indices": [
+        "pair_id",
+        "i_id",
+        "j_id",
+        "row_gap_i_before_j",
+        "row_gap_j_before_i",
+        "col_gap_i_before_j",
+        "col_gap_j_before_i"
+      ],
+      "unit": "",
+      "values": "| pair_id | i_id | j_id | row_gap_i_before_j | row_gap_j_before_i | col_gap_i_before_j | col_gap_j_before_i |\n|---|---|---|---|---|---|---|\n| 0 | 0 | 1 | 5.0 | 7.0 | 10.0 | 7.0 |\n| 1 | 0 | 2 | 5.0 | 5.0 | 10.0 | 9.0 |\n| 2 | 0 | 3 | 5.0 | 5.0 | 10.0 | 9.0 |\n| 3 | 0 | 4 | 5.0 | 4.0 | 10.0 | 8.0 |\n| 4 | 0 | 5 | 5.0 | 9.0 | 10.0 | 14.0 |\n| 5 | 0 | 6 | 5.0 | 9.0 | 10.0 | 12.0 |\n| 6 | 0 | 7 | 5.0 | 5.0 | 10.0 | 11.0 |\n| 7 | 1 | 2 | 7.0 | 5.0 | 7.0 | 9.0 |\n| 8 | 1 | 3 | 7.0 | 5.0 | 7.0 | 9.0 |\n| 9 | 1 | 4 | 7.0 | 4.0 | 7.0 | 8.0 |\n| 10 | 1 | 5 | 7.0 | 9.0 | 7.0 | 14.0 |\n| 11 | 1 | 6 | 7.0 | 9.0 | 7.0 | 12.0 |\n| 12 | 1 | 7 | 7.0 | 5.0 | 7.0 | 11.0 |\n| 13 | 2 | 3 | 5.0 | 5.0 | 9.0 | 9.0 |\n| 14 | 2 | 4 | 5.0 | 4.0 | 9.0 | 8.0 |\n| 15 | 2 | 5 | 5.0 | 9.0 | 9.0 | 14.0 |\n| 16 | 2 | 6 | 5.0 | 9.0 | 9.0 | 12.0 |\n| 17 | 2 | 7 | 5.0 | 5.0 | 9.0 | 11.0 |\n| 18 | 3 | 4 | 5.0 | 4.0 | 9.0 | 8.0 |\n| 19 | 3 | 5 | 5.0 | 9.0 | 9.0 | 14.0 |\n| 20 | 3 | 6 | 5.0 | 9.0 | 9.0 | 12.0 |\n| 21 | 3 | 7 | 5.0 | 5.0 | 9.0 | 11.0 |\n| 22 | 4 | 5 | 4.0 | 9.0 | 8.0 | 14.0 |\n| 23 | 4 | 6 | 4.0 | 9.0 | 8.0 | 12.0 |\n| 24 | 4 | 7 | 4.0 | 5.0 | 8.0 | 11.0 |\n| 25 | 5 | 6 | 9.0 | 9.0 | 14.0 | 12.0 |\n| 26 | 5 | 7 | 9.0 | 5.0 | 14.0 | 11.0 |\n| 27 | 6 | 7 | 9.0 | 5.0 | 12.0 | 11.0 |"
+    },
+    {
+      "name": "edge_distance_params",
+      "indices": [
+        "edge_id",
+        "axis",
+        "rhs_for_v_minus_u",
+        "rhs_for_u_minus_v",
+        "min_axis_distance_if_axis_chosen",
+        "distance_ub"
+      ],
+      "unit": "",
+      "values": "| edge_id | axis | rhs_for_v_minus_u | rhs_for_u_minus_v | min_axis_distance_if_axis_chosen | distance_ub |\n|---|---|---|---|---|---|\n| 0 | col | -0.5 | 0.5 | 9.5 | 31.5 |\n| 0 | row | 0.0 | 0.0 | 5.0 | 31.0 |\n| 1 | col | 1.0 | -1.0 | 8.0 | 32.0 |\n| 1 | row | -1.0 | 1.0 | 6.0 | 32.0 |\n| 2 | col | 0.0 | 0.0 | 9.0 | 31.0 |\n| 2 | row | 0.0 | 0.0 | 5.0 | 31.0 |\n| 3 | col | 0.5 | -0.5 | 8.5 | 31.5 |\n| 3 | row | 0.5 | -0.5 | 4.5 | 31.5 |\n| 4 | col | -2.5 | 2.5 | 11.5 | 33.5 |\n| 4 | row | -2.0 | 2.0 | 7.0 | 33.0 |\n| 5 | col | -1.5 | 1.5 | 10.5 | 32.5 |\n| 5 | row | -2.0 | 2.0 | 7.0 | 33.0 |\n| 6 | col | -1.0 | 1.0 | 10.0 | 32.0 |\n| 6 | row | 0.0 | 0.0 | 5.0 | 31.0 |\n| 7 | col | 2.5 | -2.5 | 11.5 | 33.5 |\n| 7 | row | 2.0 | -2.0 | 7.0 | 33.0 |\n| 8 | col | 3.0 | -3.0 | 11.0 | 34.0 |\n| 8 | row | 2.5 | -2.5 | 6.5 | 33.5 |\n| 9 | col | 1.5 | -1.5 | 12.5 | 32.5 |\n| 9 | row | 2.0 | -2.0 | 7.0 | 33.0 |\n| 10 | col | 1.0 | -1.0 | 11.0 | 32.0 |\n| 10 | row | 2.0 | -2.0 | 7.0 | 33.0 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/graphdraw-gemcutter/data/entities.csv",
+      "role": "parameter_table",
+      "table": "entities"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/graphdraw-gemcutter/data/edges.csv",
+      "role": "parameter_table",
+      "table": "edges"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/graphdraw-gemcutter/data/pairs.csv",
+      "role": "parameter_table",
+      "table": "pairs"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/graphdraw-gemcutter/data/edge_distance_params.csv",
+      "role": "parameter_table",
+      "table": "edge_distance_params"
+    }
+  ],
+  "notes": ""
+}

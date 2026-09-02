@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage strategy for a critical blood type over a six-week planning window.  \nThe initial stock at the start of the planning window is 12 units.  \nIn each week t = 1, …, 6, the central supplier permits the blood bank to place a procurement request whose volume must be between 4 and 74 units.  \nHowever, every procurement request requires a lead time of 1 week before the units become available for meeting patient needs or replenishing the stock.  \nThe projected patient need for this blood type each week is as follows:  \n* Week 1: need 33 units  \n* Week 2: need 60 units  \n* Week 3: need 20 units  \n* Week 4: need 31 units  \n* Week 5: need 37 units  \n* Week 6: need 13 units  \n\nShortfalls are permissible, but any unsatisfied need is considered lost and cannot be deferred to a later week.  \nThroughout the six-week horizon, blood volumes may be treated as continuous quantities, and the total quantity of blood held in storage at any moment must not exceed the refrigeration capacity of 41 units.  \nThe total cost over the planning horizon comprises three elements: the procurement cost, which is 1 per unit obtained; the storage cost, which is 3 per unit kept in inventory from one week to the next; and the shortage penalty, which is 14 per unit of unmet need.  \nThe objective is to determine the optimal procurement quantity each week and to monitor the resulting stock and shortage levels so as to minimize the aggregate cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

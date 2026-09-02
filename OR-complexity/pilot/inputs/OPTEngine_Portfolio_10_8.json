@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_10_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager needs to allocate warehouse space among 10 product categories to maximize total storage efficiency.  \nThe characteristics of each product category are as follows:  \n* Product A: storage efficiency is 0.189, handling difficulty is 0.240, bounds [0.039, 0.429]  \n* Product B: storage efficiency is 0.025, handling difficulty is 0.079, bounds [0.084, 0.854]  \n* Product C: storage efficiency is 0.172, handling difficulty is 0.122, bounds [0.042, 0.869]  \n* Product D: storage efficiency is 0.178, handling difficulty is 0.080, bounds [0.055, 0.539]  \n* Product E: storage efficiency is 0.057, handling difficulty is 0.195, bounds [0.017, 0.472]  \n* Product F: storage efficiency is 0.129, handling difficulty is 0.031, bounds [0.047, 0.728]  \n* Product G: storage efficiency is 0.054, handling difficulty is 0.268, bounds [0.099, 0.760]  \n* Product H: storage efficiency is 0.091, handling difficulty is 0.013, bounds [0.007, 0.554]  \n* Product I: storage efficiency is 0.136, handling difficulty is 0.115, bounds [0.059, 0.541]  \n* Product J: storage efficiency is 0.161, handling difficulty is 0.102, bounds [0.001, 0.684]  \n\nEach product category must receive a fraction of total warehouse space within its specified bounds, and all fractions must sum to one.  \nTo ensure fast access, the manager requires that the group of high-turnover products, represented by the subset L = {E, G}, together receive at least 0.492 of the total warehouse space.  \nAdditionally, the overall handling difficulty of the storage plan must not exceed 0.160, and the total storage efficiency must be at least 0.085.  \nDetermine the optimal space allocation that maximizes total storage efficiency while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

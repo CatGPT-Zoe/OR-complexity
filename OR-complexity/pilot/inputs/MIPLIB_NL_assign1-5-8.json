@@ -1,0 +1,91 @@
+{
+  "instance_id": "MIPLIB_NL_assign1-5-8",
+  "annotation_mode": "semantic",
+  "problem_text": "Service organizations must coordinate the allocation of incoming requests across multiple processing units with heterogeneous capabilities and limited resources. The complexity arises from the interplay between varying task demands, agent-specific efficiency profiles, and capacity constraints that govern feasible assignments. The operational objective centers on achieving cost-efficient resource utilization while ensuring comprehensive service coverage, requiring careful balance between workload distribution and resource expenditure. Assignment strategies must account for the dynamic relationship between task characteristics and agent capabilities, where the effective resource consumption depends on the specific pairing of requests with processing units. The fundamental challenge lies in determining an allocation configuration that satisfies all service obligations without violating the inherent capacity limitations of available resources.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "parameter",
+      "indices": [
+        "num_tasks",
+        "26"
+      ],
+      "unit": "",
+      "values": "| num_tasks | 26 |\n|---|---|\n| num_agents | 5 |\n| max_capacity | 20 |\n| max_cost | 37 |\n| max_resource | 6 |"
+    },
+    {
+      "name": "tasks",
+      "indices": [
+        "task_id",
+        "demand",
+        "priority"
+      ],
+      "unit": "",
+      "values": "| task_id | demand | priority |\n|---|---|---|\n| T001 | 1 | 1 |\n| T002 | 2 | 2 |\n| T003 | 3 | 3 |\n| T004 | 4 | 4 |\n| T005 | 5 | 5 |\n| T006 | 6 | 1 |\n| T007 | 1 | 2 |\n| T008 | 2 | 3 |\n| T009 | 3 | 4 |\n| T010 | 4 | 5 |\n| T011 | 5 | 1 |\n| T012 | 6 | 2 |\n| T013 | 1 | 3 |\n| T014 | 2 | 4 |\n| T015 | 3 | 5 |\n| T016 | 4 | 1 |\n| T017 | 5 | 2 |\n| T018 | 6 | 3 |\n| T019 | 1 | 4 |\n| T020 | 2 | 5 |\n| T021 | 3 | 1 |\n| T022 | 4 | 2 |\n| T023 | 5 | 3 |\n| T024 | 6 | 4 |\n| T025 | 1 | 5 |\n| T026 | 2 | 1 |"
+    },
+    {
+      "name": "agents",
+      "indices": [
+        "agent_id",
+        "capacity",
+        "efficiency"
+      ],
+      "unit": "",
+      "values": "| agent_id | capacity | efficiency |\n|---|---|---|\n| A001 | 20 | 0.90 |\n| A002 | 18 | 0.95 |\n| A003 | 17 | 1.00 |\n| A004 | 19 | 1.05 |\n| A005 | 18 | 1.10 |"
+    },
+    {
+      "name": "cost",
+      "indices": [
+        "task_id",
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005"
+      ],
+      "unit": "",
+      "values": "| task_id | A001 | A002 | A003 | A004 | A005 |\n|---|---|---|---|---|---|\n| T001 | 2 | 1 | 1 | 1 | 1 |\n| T002 | 3 | 4 | 2 | 3 | 2 |\n| T003 | 9 | 11 | 7 | 9 | 7 |\n| T004 | 17 | 19 | 13 | 17 | 14 |\n| T005 | 26 | 31 | 20 | 29 | 23 |\n| T006 | 6 | 7 | 5 | 6 | 4 |\n| T007 | 1 | 2 | 1 | 2 | 1 |\n| T008 | 6 | 7 | 4 | 7 | 6 |\n| T009 | 12 | 15 | 11 | 15 | 12 |\n| T010 | 20 | 26 | 18 | 26 | 22 |\n| T011 | 4 | 6 | 4 | 6 | 4 |\n| T012 | 12 | 15 | 11 | 17 | 9 |\n| T013 | 2 | 3 | 2 | 3 | 2 |\n| T014 | 8 | 11 | 7 | 11 | 7 |\n| T015 | 15 | 20 | 14 | 14 | 13 |\n| T016 | 3 | 5 | 3 | 3 | 3 |\n| T017 | 9 | 14 | 9 | 11 | 9 |\n| T018 | 19 | 26 | 19 | 20 | 18 |\n| T019 | 3 | 4 | 3 | 3 | 3 |\n| T020 | 9 | 14 | 11 | 12 | 11 |\n| T021 | 2 | 3 | 1 | 3 | 1 |\n| T022 | 8 | 12 | 6 | 9 | 6 |\n| T023 | 15 | 23 | 12 | 19 | 12 |\n| T024 | 25 | 37 | 19 | 33 | 22 |\n| T025 | 4 | 7 | 3 | 6 | 3 |\n| T026 | 1 | 2 | 1 | 2 | 1 |"
+    },
+    {
+      "name": "resource",
+      "indices": [
+        "task_id",
+        "A001",
+        "A002",
+        "A003",
+        "A004",
+        "A005"
+      ],
+      "unit": "",
+      "values": "| task_id | A001 | A002 | A003 | A004 | A005 |\n|---|---|---|---|---|---|\n| T001 | 1 | 1 | 1 | 1 | 1 |\n| T002 | 2 | 2 | 2 | 1 | 1 |\n| T003 | 3 | 3 | 3 | 2 | 2 |\n| T004 | 4 | 4 | 4 | 3 | 3 |\n| T005 | 5 | 5 | 5 | 4 | 4 |\n| T006 | 6 | 6 | 6 | 5 | 5 |\n| T007 | 1 | 1 | 1 | 1 | 1 |\n| T008 | 2 | 2 | 2 | 1 | 1 |\n| T009 | 3 | 3 | 3 | 2 | 2 |\n| T010 | 4 | 4 | 4 | 3 | 3 |\n| T011 | 5 | 5 | 5 | 4 | 4 |\n| T012 | 6 | 6 | 6 | 5 | 5 |\n| T013 | 1 | 1 | 1 | 1 | 1 |\n| T014 | 2 | 2 | 2 | 1 | 1 |\n| T015 | 3 | 3 | 3 | 2 | 2 |\n| T016 | 4 | 4 | 4 | 3 | 3 |\n| T017 | 5 | 5 | 5 | 4 | 4 |\n| T018 | 6 | 6 | 6 | 5 | 5 |\n| T019 | 1 | 1 | 1 | 1 | 1 |\n| T020 | 2 | 2 | 2 | 1 | 1 |\n| T021 | 3 | 3 | 3 | 2 | 2 |\n| T022 | 4 | 4 | 4 | 3 | 3 |\n| T023 | 5 | 5 | 5 | 4 | 4 |\n| T024 | 6 | 6 | 6 | 5 | 5 |\n| T025 | 1 | 1 | 1 | 1 | 1 |\n| T026 | 2 | 2 | 2 | 1 | 1 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/assign1-5-8/data/parameter.csv",
+      "role": "parameter_table",
+      "table": "parameter"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/assign1-5-8/data/tasks.csv",
+      "role": "parameter_table",
+      "table": "tasks"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/assign1-5-8/data/agents.csv",
+      "role": "parameter_table",
+      "table": "agents"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/assign1-5-8/data/cost.csv",
+      "role": "parameter_table",
+      "table": "cost"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/assign1-5-8/data/resource.csv",
+      "role": "parameter_table",
+      "table": "resource"
+    }
+  ],
+  "notes": ""
+}

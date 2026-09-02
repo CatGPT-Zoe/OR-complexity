@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_29_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments of various packages using identical cargo pallets. The packages are as follows:\n* Package 1: weight 55kg\n* Package 2: weight 40kg\n* Package 3: weight 39kg\n* Package 4: weight 57kg\n* Package 5: weight 54kg\n* Package 6: weight 58kg\n* Package 7: weight 43kg\n* Package 8: weight 46kg\n* Package 9: weight 34kg\n* Package 10: weight 40kg\n* Package 11: weight 66kg\n* Package 12: weight 30kg\n* Package 13: weight 49kg\n* Package 14: weight 41kg\n* Package 15: weight 36kg\n* Package 16: weight 39kg\n* Package 17: weight 46kg\n* Package 18: weight 41kg\n* Package 19: weight 55kg\n* Package 20: weight 46kg\n* Package 21: weight 63kg\n* Package 22: weight 56kg\n* Package 23: weight 50kg\n* Package 24: weight 64kg\n* Package 25: weight 57kg\n* Package 26: weight 61kg\n* Package 27: weight 59kg\n* Package 28: weight 37kg\n* Package 29: weight 46kg\n\nEach pallet can support a maximum load of 100 kg. The coordinator must load all packages using the minimum number of pallets. Every package must be placed on exactly one pallet, and the total weight on any pallet cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

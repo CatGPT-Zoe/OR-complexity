@@ -1,0 +1,168 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_Knapsack_10_1",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "S_CONTAINER",
+      "canonical_name": "cargo_containers",
+      "members": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "source_grounding": "Available containers are: Container 1 through Container 10.",
+      "source_spans": [
+        "Available containers are:",
+        "Container 1: volume 27 m³, revenue $33",
+        "Container 10: volume 6 m³, revenue $137"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "P_VOLUME",
+      "canonical_name": "container_volume",
+      "indexed_by": ["S_CONTAINER"],
+      "unit": "m³",
+      "values": {
+        "1": 27,
+        "2": 9,
+        "3": 26,
+        "4": 45,
+        "5": 9,
+        "6": 20,
+        "7": 27,
+        "8": 38,
+        "9": 20,
+        "10": 6
+      },
+      "source_grounding": "The listed volume of each available container.",
+      "source_spans": [
+        "Container 1: volume 27 m³",
+        "Container 2: volume 9 m³",
+        "Container 3: volume 26 m³",
+        "Container 4: volume 45 m³",
+        "Container 5: volume 9 m³",
+        "Container 6: volume 20 m³",
+        "Container 7: volume 27 m³",
+        "Container 8: volume 38 m³",
+        "Container 9: volume 20 m³",
+        "Container 10: volume 6 m³"
+      ]
+    },
+    {
+      "id": "P_REVENUE",
+      "canonical_name": "container_revenue",
+      "indexed_by": ["S_CONTAINER"],
+      "unit": "USD",
+      "values": {
+        "1": 33,
+        "2": 20,
+        "3": 49,
+        "4": 47,
+        "5": 225,
+        "6": 291,
+        "7": 82,
+        "8": 226,
+        "9": 191,
+        "10": 137
+      },
+      "source_grounding": "The listed revenue of each available container.",
+      "source_spans": [
+        "Container 1: volume 27 m³, revenue $33",
+        "Container 2: volume 9 m³, revenue $20",
+        "Container 3: volume 26 m³, revenue $49",
+        "Container 4: volume 45 m³, revenue $47",
+        "Container 5: volume 9 m³, revenue $225",
+        "Container 6: volume 20 m³, revenue $291",
+        "Container 7: volume 27 m³, revenue $82",
+        "Container 8: volume 38 m³, revenue $226",
+        "Container 9: volume 20 m³, revenue $191",
+        "Container 10: volume 6 m³, revenue $137"
+      ]
+    },
+    {
+      "id": "P_VEHICLE_CAPACITY",
+      "canonical_name": "transport_vehicle_volume_capacity",
+      "indexed_by": [],
+      "unit": "m³",
+      "value": 158,
+      "source_grounding": "The transport vehicle has a maximum capacity of 158 m³.",
+      "source_spans": [
+        "The transport vehicle has a maximum capacity of 158 m³."
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "E_CONTAINER_SELECTION",
+      "canonical_family": "cargo_container_selection",
+      "canonical_name": "container_selected_for_shipment",
+      "entity_role": "decision",
+      "indexed_by": ["S_CONTAINER"],
+      "semantic_domain": {
+        "type": "binary_choice",
+        "meaning": {
+          "selected": "container is fully shipped",
+          "not_selected": "container is not shipped"
+        }
+      },
+      "source_grounding": "The manager chooses which containers to ship, and each container is either fully shipped or not shipped.",
+      "source_spans": [
+        "A logistics manager must select cargo containers for a shipment.",
+        "Choose the container combination",
+        "Each container is either fully shipped or not shipped."
+      ],
+      "confidence": 1.0
+    }
+  ],
+  "objective": {
+    "id": "OBJ_TOTAL_REVENUE",
+    "sense": "maximize",
+    "canonical_name": "total_revenue_of_selected_containers",
+    "normalized_semantics": "Maximize the sum of the revenues associated with containers selected for shipment.",
+    "entity_refs": ["E_CONTAINER_SELECTION"],
+    "parameter_refs": ["P_REVENUE"],
+    "aggregation_scope": {
+      "over": "S_CONTAINER"
+    },
+    "source_grounding": "Choose the container combination that maximizes total revenue.",
+    "source_spans": [
+      "Choose the container combination that maximizes total revenue without exceeding this volume limit."
+    ],
+    "confidence": 1.0
+  },
+  "obligations": [
+    {
+      "id": "O_VEHICLE_VOLUME_CAPACITY",
+      "canonical_family": "aggregate_selected_volume_upper_bound",
+      "canonical_name": "transport_vehicle_volume_capacity_limit",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "capacity_compliance",
+      "normalized_semantics": "The aggregate volume of all selected containers must not exceed the transport vehicle's volume capacity.",
+      "support_entity_ids": ["E_CONTAINER_SELECTION"],
+      "incidence_slots": [
+        {
+          "entity_id": "E_CONTAINER_SELECTION",
+          "argument_roles": {
+            "container": "i"
+          },
+          "aggregation": "sum over all containers"
+        }
+      ],
+      "quantifier": "For the single shipment, across all containers i in S_CONTAINER.",
+      "scope_kind": "global_aggregate",
+      "parameter_refs": ["P_VOLUME", "P_VEHICLE_CAPACITY"],
+      "condition": null,
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "The selected container combination may use at most 158 m³ of vehicle volume.",
+      "source_spans": [
+        "The transport vehicle has a maximum capacity of 158 m³.",
+        "Choose the container combination that maximizes total revenue without exceeding this volume limit."
+      ],
+      "normalization_rationale": "This is one aggregate upper-bound family over the container-selection decision family. It is unary at the CSDE-family level despite aggregating multiple container instances.",
+      "confidence": 1.0
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [],
+  "annotation_warnings": []
+}

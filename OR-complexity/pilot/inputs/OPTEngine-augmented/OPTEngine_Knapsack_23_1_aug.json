@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is assembling a shipment of specialty crates to maximize total profit while staying within the truck's weight allowance.\n\nThe available crates are:\n* Crate A: weight 9kg, profit 64 units\n* Crate B: weight 3kg, profit 296 units\n* Crate C: weight 6kg, profit 232 units\n* Crate D: weight 30kg, profit 240 units\n* Crate E: weight 26kg, profit 17 units\n* Crate F: weight 48kg, profit 278 units\n* Crate G: weight 41kg, profit 173 units\n* Crate H: weight 46kg, profit 277 units\n* Crate I: weight 14kg, profit 74 units\n* Crate J: weight 40kg, profit 163 units\n* Crate K: weight 36kg, profit 160 units\n* Crate L: weight 44kg, profit 215 units\n* Crate M: weight 39kg, profit 277 units\n* Crate N: weight 49kg, profit 35 units\n* Crate O: weight 30kg, profit 300 units\n* Crate P: weight 16kg, profit 211 units\n* Crate Q: weight 17kg, profit 295 units\n* Crate R: weight 43kg, profit 167 units\n* Crate S: weight 48kg, profit 71 units\n* Crate T: weight 21kg, profit 140 units\n* Crate U: weight 45kg, profit 273 units\n* Crate V: weight 18kg, profit 241 units\n* Crate W: weight 29kg, profit 62 units\n\nFurthermore, due to a contractual stipulation, exactly one of Crate A and Crate B must be included in the shipment.\n\nIf Crate C is selected, the truck's effective load capacity is diminished by 10 kg.\nThe truck's maximum allowable gross weight is 488 kg. The coordinator must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

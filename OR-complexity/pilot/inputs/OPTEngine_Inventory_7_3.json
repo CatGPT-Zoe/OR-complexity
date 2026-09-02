@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage schedule for a critical blood type over a seven-day planning window.\nThe initial stock in the cold storage at the start of the period is 46 units.\nFor each day t = 1, ..., 7, the central supplier permits the blood bank to request a shipment whose volume must be between 17 and 72 units.\nHowever, each shipment requested requires a lead time of 1 day(s) before it becomes available for fulfilling needs or replenishing reserves.\nThe projected daily need for this blood type is as follows:\n* Day 1: need 23 units\n* Day 2: need 49 units\n* Day 3: need 19 units\n* Day 4: need 16 units\n* Day 5: need 22 units\n* Day 6: need 39 units\n* Day 7: need 34 units\n\nStockouts are tolerated, but any unfulfilled need is lost and cannot be deferred to a later date.\nThroughout the planning window, blood volumes are treated as continuous quantities, and the total quantity of on-hand stock at any moment must not exceed the refrigeration capacity of 46 units.\nThe aggregate cost over the planning horizon comprises three elements: the procurement cost, which is 1 per unit requested; the storage cost, which is 3 per unit of stock held over from one day to the next; and the shortage penalty, which is 13 per unit of unmet need. The objective is to determine the optimal shipment volume for each day and to monitor the resulting stock and shortage levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

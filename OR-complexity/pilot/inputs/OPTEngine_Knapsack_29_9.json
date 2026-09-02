@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_29_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting packages to load onto a cargo drone. Available packages are:\n* Package 1: size 26 units, revenue 188 credits\n* Package 2: size 1 unit, revenue 251 credits\n* Package 3: size 37 units, revenue 189 credits\n* Package 4: size 12 units, revenue 135 credits\n* Package 5: size 50 units, revenue 104 credits\n* Package 6: size 33 units, revenue 94 credits\n* Package 7: size 18 units, revenue 234 credits\n* Package 8: size 30 units, revenue 80 credits\n* Package 9: size 14 units, revenue 148 credits\n* Package 10: size 12 units, revenue 73 credits\n* Package 11: size 43 units, revenue 123 credits\n* Package 12: size 9 units, revenue 52 credits\n* Package 13: size 18 units, revenue 240 credits\n* Package 14: size 31 units, revenue 186 credits\n* Package 15: size 42 units, revenue 14 credits\n* Package 16: size 10 units, revenue 110 credits\n* Package 17: size 23 units, revenue 136 credits\n* Package 18: size 3 units, revenue 19 credits\n* Package 19: size 17 units, revenue 105 credits\n* Package 20: size 37 units, revenue 28 credits\n* Package 21: size 29 units, revenue 143 credits\n* Package 22: size 23 units, revenue 64 credits\n* Package 23: size 41 units, revenue 202 credits\n* Package 24: size 18 units, revenue 175 credits\n* Package 25: size 26 units, revenue 184 credits\n* Package 26: size 25 units, revenue 190 credits\n* Package 27: size 21 units, revenue 108 credits\n* Package 28: size 34 units, revenue 165 credits\n* Package 29: size 43 units, revenue 260 credits\n\nThe drone's cargo capacity is limited to 508 units. Choose the package combination that yields the maximum total revenue without exceeding this capacity limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

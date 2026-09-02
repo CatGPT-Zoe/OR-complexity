@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a circuit of maintenance checks across seven critical regional facilities:\n\nFacility Alpha: Positioned at grid reference (10,191)  \nFacility Beta: Positioned at grid reference (179,155)  \nFacility Gamma: Positioned at grid reference (167,126)  \nFacility Delta: Positioned at grid reference (182,164)  \nFacility Epsilon: Positioned at grid reference (117,163)  \nFacility Zeta: Positioned at grid reference (111,95)  \nFacility Eta: Positioned at grid reference (137,45)  \n\nTravel distances between facilities are predefined in kilometers:  \nAlpha to Gamma: 169.9 km  \nAlpha to Delta: 174.1 km  \nAlpha to Epsilon: 110.6 km  \nAlpha to Zeta: 139.3 km  \nAlpha to Eta: 193.5 km  \nBeta to Gamma: 31.4 km  \nBeta to Delta: 9.5 km  \nBeta to Epsilon: 62.5 km  \nBeta to Zeta: 90.7 km  \nBeta to Eta: 117.7 km  \nGamma to Delta: 40.9 km  \nGamma to Epsilon: 62.2 km  \nGamma to Zeta: 64.0 km  \nGamma to Eta: 86.4 km  \nDelta to Epsilon: 65.0 km  \nDelta to Zeta: 99.0 km  \nDelta to Eta: 127.2 km  \nEpsilon to Zeta: 68.3 km  \nEpsilon to Eta: 119.7 km  \nZeta to Eta: 56.4 km  \n\nDue to infrastructural constraints, no direct route exists between Facility Alpha and Facility Beta.  \nFurthermore, the routing plan must incorporate exactly one of two specified critical links: either the connection between Beta and Gamma, or the connection between Gamma and Delta.\n\nThe objective is to determine the minimal total travel distance for a closed loop that visits every facility precisely once, concluding at the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

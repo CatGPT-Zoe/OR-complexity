@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a delivery truck. The available packages are:\n* Package 1: size 30 cubic feet, revenue $95\n* Package 2: size 3 cubic feet, revenue $95\n* Package 3: size 42 cubic feet, revenue $14\n* Package 4: size 34 cubic feet, revenue $214\n* Package 5: size 23 cubic feet, revenue $56\n* Package 6: size 21 cubic feet, revenue $23\n* Package 7: size 44 cubic feet, revenue $246\n* Package 8: size 47 cubic feet, revenue $270\n* Package 9: size 15 cubic feet, revenue $142\n* Package 10: size 25 cubic feet, revenue $40\n* Package 11: size 28 cubic feet, revenue $240\n* Package 12: size 32 cubic feet, revenue $94\n* Package 13: size 14 cubic feet, revenue $66\n* Package 14: size 35 cubic feet, revenue $274\n* Package 15: size 7 cubic feet, revenue $278\n* Package 16: size 14 cubic feet, revenue $296\n* Package 17: size 26 cubic feet, revenue $174\n* Package 18: size 18 cubic feet, revenue $128\n* Package 19: size 48 cubic feet, revenue $40\n* Package 20: size 21 cubic feet, revenue $152\n* Package 21: size 6 cubic feet, revenue $104\n* Package 22: size 7 cubic feet, revenue $245\n* Package 23: size 50 cubic feet, revenue $21\n* Package 24: size 31 cubic feet, revenue $191\n\nThe truck has a maximum cargo capacity of 434 cubic feet. Choose the combination of packages that maximizes total revenue without exceeding this capacity limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

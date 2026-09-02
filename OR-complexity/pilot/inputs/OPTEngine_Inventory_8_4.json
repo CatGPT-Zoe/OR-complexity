@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage schedule for a critical fuel additive over an upcoming 8-week operational window.\nThe starting stock at the beginning of the planning interval is 14 barrels.\nIn each week t = 1, ..., 8, the supplier permits the company to submit a procurement request whose volume must be between 1 and 59 barrels.\nNevertheless, every request submitted will incur a 3-week lead time before the additive becomes available for consumption or to replenish the stockpile.\nThe consumption requirement for the additive in each week is specified as follows:\n* Week 1: requirement 51 barrels\n* Week 2: requirement 32 barrels\n* Week 3: requirement 22 barrels\n* Week 4: requirement 34 barrels\n* Week 5: requirement 60 barrels\n* Week 6: requirement 59 barrels\n* Week 7: requirement 59 barrels\n* Week 8: requirement 41 barrels\n\nStockouts are allowed, but any unsatisfied requirement will be permanently lost and cannot be recovered later.\nThroughout the planning window, additive quantities may be treated as continuous, and the total volume of physical stock held at any moment must not surpass the storage facility's capacity of 59 barrels.\nThe aggregate expenditure over the planning horizon comprises three elements: the procurement cost, which is 5 per barrel ordered; the storage cost, which is 3 per barrel of stock maintained from one week to the next; and the shortage penalty, which is 11 per barrel of unmet requirement. The objective is to ascertain the optimal procurement volume for each week and to monitor the consequent stockpile and shortage levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

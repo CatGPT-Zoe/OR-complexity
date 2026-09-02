@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_14_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport aircraft. The available containers are:\n\n* Container A: weight 35 tons, revenue $293K\n* Container B: weight 9 tons, revenue $96K\n* Container C: weight 10 tons, revenue $116K\n* Container D: weight 11 tons, revenue $126K\n* Container E: weight 2 tons, revenue $278K\n* Container F: weight 9 tons, revenue $262K\n* Container G: weight 23 tons, revenue $157K\n* Container H: weight 46 tons, revenue $181K\n* Container I: weight 44 tons, revenue $70K\n* Container J: weight 27 tons, revenue $144K\n* Container K: weight 11 tons, revenue $185K\n* Container L: weight 41 tons, revenue $266K\n* Container M: weight 22 tons, revenue $282K\n* Container N: weight 45 tons, revenue $84K\n\nThe aircraft has a maximum payload capacity of 234 tons. Determine which containers to load to maximize total revenue without exceeding the weight limit. Each container must be taken in full or left behind entirely.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

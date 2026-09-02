@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport ship. Available containers are:\n\n* Container 1: weight 20 tons, value 115 units\n* Container 2: weight 9 tons, value 65 units\n* Container 3: weight 44 tons, value 134 units\n* Container 4: weight 41 tons, value 117 units\n* Container 5: weight 20 tons, value 139 units\n* Container 6: weight 4 tons, value 64 units\n* Container 7: weight 10 tons, value 288 units\n* Container 8: weight 32 tons, value 144 units\n* Container 9: weight 46 tons, value 78 units\n* Container 10: weight 6 tons, value 67 units\n* Container 11: weight 49 tons, value 112 units\n* Container 12: weight 40 tons, value 268 units\n* Container 13: weight 16 tons, value 123 units\n* Container 14: weight 9 tons, value 241 units\n* Container 15: weight 13 tons, value 264 units\n* Container 16: weight 40 tons, value 263 units\n* Container 17: weight 7 tons, value 195 units\n* Container 18: weight 28 tons, value 288 units\n* Container 19: weight 12 tons, value 10 units\n* Container 20: weight 27 tons, value 75 units\n* Container 21: weight 38 tons, value 77 units\n* Container 22: weight 45 tons, value 209 units\n* Container 23: weight 24 tons, value 281 units\n* Container 24: weight 35 tons, value 111 units\n* Container 25: weight 46 tons, value 114 units\n* Container 26: weight 23 tons, value 125 units\n* Container 27: weight 40 tons, value 265 units\n\nThe ship's maximum cargo capacity is 506 tons. Determine which containers to load to maximize total value without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

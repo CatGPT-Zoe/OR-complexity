@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_21_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a fleet of cargo drones for a critical delivery mission spanning three distinct operational zones. The manager must select a combination of cargo modules to maximize total utility points while adhering to the total payload mass constraint.\n\nThe available cargo modules are:\n* Module A: mass 50kg, utility 161 points\n* Module B: mass 2kg, utility 102 points\n* Module C: mass 18kg, utility 110 points\n* Module D: mass 33kg, utility 290 points\n* Module E: mass 46kg, utility 66 points\n* Module F: mass 20kg, utility 235 points\n* Module G: mass 12kg, utility 66 points\n* Module H: mass 4kg, utility 243 points\n* Module I: mass 34kg, utility 280 points\n* Module J: mass 36kg, utility 298 points\n* Module K: mass 35kg, utility 202 points\n* Module L: mass 27kg, utility 172 points\n* Module M: mass 39kg, utility 182 points\n* Module N: mass 15kg, utility 179 points\n* Module O: mass 32kg, utility 84 points\n* Module P: mass 34kg, utility 23 points\n* Module Q: mass 48kg, utility 256 points\n* Module R: mass 9kg, utility 10 points\n* Module S: mass 6kg, utility 297 points\n* Module T: mass 2kg, utility 80 points\n* Module U: mass 49kg, utility 66 points\n\nFurthermore, due to compatibility protocols, exactly one of Module A and Module B must be included in the final configuration.\n\nIf Module C is selected, its specialized support systems impose a 10 kg reduction on the effective total payload capacity.\nThe aggregate payload mass for the drone fleet cannot exceed 385 kg. The manager must determine the optimal selection of modules.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

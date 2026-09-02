@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A city's water utility must devise a pumping and reservoir management strategy over a 5-day forecast window.\nThe initial water volume in the main reservoir at the start of the planning interval is 15 megaliters.\nIn each day t = 1, ..., 5, the pumping station can be activated to extract water from a deep aquifer, with the extraction volume required to be between 15 and 33 megaliters.\nHowever, any water pumped requires 0 day(s) of transit before it is available for distribution or storage.\nThe projected municipal water consumption for each day is as follows:\n* Day 1: consumption 48 megaliters\n* Day 2: consumption 11 megaliters\n* Day 3: consumption 22 megaliters\n* Day 4: consumption 21 megaliters\n* Day 5: consumption 55 megaliters\n\nSupply deficits are tolerated, but any consumption not met is simply lost and not carried forward.\nThroughout the 5-day horizon, water volumes are treated as continuous quantities, and the total volume held in the reservoir at any moment must not exceed its safe operational capacity of 35 megaliters.\n\nOn the first day, the maximum allowable extraction from the aquifer is 23 megaliters.\nAlso on the first day, the reservoir's on-hand volume must be maintained at a minimum of 14 megaliters.\n\nThe total operational expenditure over the planning horizon comprises three elements: the pumping cost, calculated at 6 per megaliter extracted; the storage cost, calculated at 1 per megaliter of water held overnight; and a service penalty, assessed at 14 per megaliter of unmet daily consumption. The objective is to determine the optimal extraction volume for each day and to monitor the consequent reservoir levels and service shortfalls so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

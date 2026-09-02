@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate computational resources from a set of server clusters (Group Alpha) to a collection of distributed data processing jobs (Group Beta) in order to minimize the total latency cost of data transmission.\n\nThe available processing capacity at each server cluster (Group Alpha) is specified as follows:\n*Cluster Alpha-1's capacity is 110 units.\n*Cluster Alpha-2's capacity is 123 units.\n*Cluster Alpha-3's capacity is 108 units.\n*Cluster Alpha-4's capacity is 73 units.\n*Cluster Alpha-5's capacity is 161 units.\n*Cluster Alpha-6's capacity is 75 units.\n\nThe required computational load that must be assigned to each processing job (Group Beta) is detailed below:\n*Job Beta-1's load requirement is 244 units.\n*Job Beta-2's load requirement is 35 units.\n*Job Beta-3's load requirement is 58 units.\n*Job Beta-4's load requirement is 103 units.\n*Job Beta-5's load requirement is 10 units.\n*Job Beta-6's load requirement is 112 units.\n\nThe unit latency cost for transmitting a unit of computational load from each server cluster to each processing job is provided in the following matrix:\n\n| Source / Destination | Beta-1 | Beta-2 | Beta-3 | Beta-4 | Beta-5 | Beta-6 |\n|---|---|---|---|---|---|---|\n| Alpha-1 | 2 | 10 | 12 | 12 | 14 | 5 |\n| Alpha-2 | 8 | 17 | 14 | 19 | 6 | 6 |\n| Alpha-3 | 6 | 3 | 20 | 13 | 20 | 8 |\n| Alpha-4 | 16 | 19 | 5 | 8 | 15 | 9 |\n| Alpha-5 | 15 | 9 | 1 | 15 | 10 | 18 |\n| Alpha-6 | 6 | 3 | 15 | 12 | 19 | 10 |\n\nDetermine the optimal allocation of computational loads to minimize the aggregate latency cost for the entire network.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

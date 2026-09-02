@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_30_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of scientific equipment modules into identical transport capsules. The modules are as follows:\n* Module Alpha: mass 51 units\n* Module Beta: mass 70 units\n* Module Gamma: mass 41 units\n* Module Delta: mass 55 units\n* Module Epsilon: mass 46 units\n* Module Zeta: mass 41 units\n* Module Eta: mass 40 units\n* Module Theta: mass 35 units\n* Module Iota: mass 43 units\n* Module Kappa: mass 70 units\n* Module Lambda: mass 63 units\n* Module Mu: mass 52 units\n* Module Nu: mass 59 units\n* Module Xi: mass 35 units\n* Module Omicron: mass 51 units\n* Module Pi: mass 63 units\n* Module Rho: mass 57 units\n* Module Sigma: mass 49 units\n* Module Tau: mass 59 units\n* Module Upsilon: mass 33 units\n* Module Phi: mass 38 units\n* Module Chi: mass 52 units\n* Module Psi: mass 41 units\n* Module Omega: mass 61 units\n* Module Asterisk: mass 44 units\n* Module Caret: mass 44 units\n* Module Brace_L: mass 34 units\n* Module Brace_R: mass 38 units\n* Module Bracket: mass 58 units\n* Module Circumflex: mass 57 units\n\nEach capsule has a maximum safe load capacity of 100 mass units. The objective is to assign all modules to capsules while utilizing the smallest possible number of them. Every module must be placed into exactly one capsule, and the aggregate mass within any given capsule must not surpass its designated limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

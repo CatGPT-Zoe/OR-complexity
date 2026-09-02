@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 5 delivery trucks across 5 distribution centers.\n\nEach truck follows a predetermined route represented as (Distribution Center, Unloading time) pairs,\nwhere each pair specifies the distribution center where unloading must occur and the time required for unloading.\nThe sequence of pairs indicates the mandatory order in which the distribution centers must be visited.\n\nTruck routes:\n* Truck 1 follows: (DC1, 1) → (DC2, 3) → (DC4, 2) → (DC5, 7) → (DC3, 4)\n* Truck 2 follows: (DC5, 4) → (DC4, 6) → (DC3, 10) → (DC1, 2) → (DC2, 10)\n* Truck 3 follows: (DC1, 5) → (DC3, 1) → (DC2, 9) → (DC4, 1) → (DC5, 4)\n* Truck 4 follows: (DC3, 4) → (DC1, 5) → (DC4, 5) → (DC2, 5) → (DC5, 9)\n* Truck 5 follows: (DC4, 1) → (DC3, 5) → (DC2, 9) → (DC5, 2) → (DC1, 1)\n\nEach unloading operation must proceed without interruption once initiated,\nand each distribution center can only accommodate one truck at a time for unloading.\nThe objective is to schedule all unloading operations at the distribution centers\nso that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

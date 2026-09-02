@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must assemble a shipment to maximize total revenue while staying within a truck's weight allowance.\n\nThe available cargo containers are:\n* Container 1: weight 30kg, revenue 144 units\n* Container 2: weight 23kg, revenue 152 units\n* Container 3: weight 40kg, revenue 123 units\n* Container 4: weight 46kg, revenue 103 units\n* Container 5: weight 36kg, revenue 242 units\n* Container 6: weight 30kg, revenue 142 units\n* Container 7: weight 31kg, revenue 58 units\n* Container 8: weight 6kg, revenue 98 units\n* Container 9: weight 36kg, revenue 36 units\n* Container 10: weight 50kg, revenue 138 units\n* Container 11: weight 24kg, revenue 180 units\n* Container 12: weight 24kg, revenue 39 units\n* Container 13: weight 25kg, revenue 184 units\n* Container 14: weight 12kg, revenue 155 units\n* Container 15: weight 31kg, revenue 32 units\n* Container 16: weight 35kg, revenue 268 units\n* Container 17: weight 20kg, revenue 173 units\n* Container 18: weight 18kg, revenue 173 units\n* Container 19: weight 5kg, revenue 188 units\n* Container 20: weight 2kg, revenue 239 units\n* Container 21: weight 40kg, revenue 98 units\n* Container 22: weight 23kg, revenue 160 units\n* Container 23: weight 45kg, revenue 145 units\n\nFurthermore, due to contractual obligations, exactly one of Container 1 and Container 2 must be included in the shipment.\n\nIf Container 3 is selected, the truck's effective weight capacity is diminished by 10 kg.\nThe truck's maximum permissible load is 442 kg. The firm must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

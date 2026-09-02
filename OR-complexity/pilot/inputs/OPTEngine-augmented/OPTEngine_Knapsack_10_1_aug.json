@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is preparing a shipment for a three-day international air freight operation. They must select a combination of cargo containers to maximize total revenue while adhering to the aircraft's maximum payload constraint.\n\nThe available containers are:\n* Container A: weight 19kg, revenue $10\n* Container B: weight 45kg, revenue $239\n* Container C: weight 40kg, revenue $246\n* Container D: weight 1kg, revenue $121\n* Container E: weight 20kg, revenue $68\n* Container F: weight 50kg, revenue $164\n* Container G: weight 35kg, revenue $89\n* Container H: weight 28kg, revenue $251\n* Container I: weight 6kg, revenue $264\n* Container J: weight 49kg, revenue $128\n\nDue to routing regulations, exactly one of Container A and Container B must be included in the shipment.\n\nIf Container C is loaded, a mandatory safety kit reduces the available payload allowance by 10 kg.\nThe aircraft's maximum takeoff payload capacity is 205 kg. The manager must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

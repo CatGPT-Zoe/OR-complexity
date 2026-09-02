@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company needs to select packages for a cargo shipment. Available packages are:\n* Package 1: volume 25 cubic meters, revenue $218\n* Package 2: volume 48 cubic meters, revenue $179\n* Package 3: volume 49 cubic meters, revenue $115\n* Package 4: volume 45 cubic meters, revenue $137\n* Package 5: volume 11 cubic meters, revenue $237\n* Package 6: volume 25 cubic meters, revenue $170\n* Package 7: volume 29 cubic meters, revenue $283\n* Package 8: volume 48 cubic meters, revenue $85\n* Package 9: volume 37 cubic meters, revenue $59\n* Package 10: volume 48 cubic meters, revenue $154\n* Package 11: volume 29 cubic meters, revenue $69\n* Package 12: volume 9 cubic meters, revenue $165\n* Package 13: volume 35 cubic meters, revenue $137\n* Package 14: volume 42 cubic meters, revenue $266\n* Package 15: volume 22 cubic meters, revenue $220\n* Package 16: volume 37 cubic meters, revenue $181\n* Package 17: volume 50 cubic meters, revenue $44\n* Package 18: volume 24 cubic meters, revenue $262\n* Package 19: volume 1 cubic meter, revenue $67\n* Package 20: volume 10 cubic meters, revenue $79\n* Package 21: volume 43 cubic meters, revenue $141\n* Package 22: volume 18 cubic meters, revenue $75\n* Package 23: volume 16 cubic meters, revenue $92\n* Package 24: volume 23 cubic meters, revenue $184\n* Package 25: volume 44 cubic meters, revenue $266\n* Package 26: volume 15 cubic meters, revenue $130\n* Package 27: volume 38 cubic meters, revenue $33\n\nThe cargo container has a maximum capacity of 574 cubic meters. Choose the package combination that maximizes total revenue without exceeding this volume limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

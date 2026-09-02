@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must devise a procurement and storage strategy for a critical vaccine supply over an upcoming 8-week campaign.\nThe initial stockpile at the campaign's commencement is 4 thousand doses.\nIn each week t = 1, ..., 8, the manufacturer permits an order whose volume must be between 19 and 59 thousand doses.\nCrucially, each shipment requires a lead time of 1 week before it becomes available for distribution or to replenish the stockpile.\nThe projected weekly consumption of vaccines is as follows:\n* Week 1: 34 thousand doses\n* Week 2: 39 thousand doses\n* Week 3: 13 thousand doses\n* Week 4: 16 thousand doses\n* Week 5: 40 thousand doses\n* Week 6: 59 thousand doses\n* Week 7: 19 thousand doses\n* Week 8: 11 thousand doses\n\nSupply shortfalls are permissible, but any immediate unmet consumption is considered lost and will not be fulfilled later.\nThroughout the campaign, vaccine quantities can be treated as continuous, and the total volume of physical stock held at any point must not exceed the cold storage capacity of 39 thousand doses.\nThe total operational expenditure comprises three elements: the procurement cost, amounting to 6 per thousand doses ordered; the refrigeration cost, amounting to 2 per thousand doses kept in storage from one week to the next; and a penalty for missed coverage, amounting to 7 per thousand doses of unfulfilled consumption. The objective is to delineate the optimal shipment quantity for each week and to monitor the consequent stockpile and deficit levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

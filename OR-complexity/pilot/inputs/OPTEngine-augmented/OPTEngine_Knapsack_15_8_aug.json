@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a cargo shipment for a specialized three-stage transport route. They must select a combination of containers to maximize total profit contribution while adhering to the vessel's total weight allowance.\n\nThe available containers are:\n* Container A: weight 27 tonnes, profit 264 units\n* Container B: weight 13 tonnes, profit 95 units\n* Container C: weight 26 tonnes, profit 34 units\n* Container D: weight 50 tonnes, profit 183 units\n* Container E: weight 49 tonnes, profit 276 units\n* Container F: weight 13 tonnes, profit 177 units\n* Container G: weight 12 tonnes, profit 275 units\n* Container H: weight 35 tonnes, profit 232 units\n* Container I: weight 10 tonnes, profit 262 units\n* Container J: weight 43 tonnes, profit 119 units\n* Container K: weight 39 tonnes, profit 235 units\n* Container L: weight 3 tonnes, profit 134 units\n* Container M: weight 32 tonnes, profit 172 units\n* Container N: weight 36 tonnes, profit 110 units\n* Container O: weight 1 tonne, profit 32 units\n\nFurthermore, due to compatibility restrictions, precisely one of Container A and Container B must be included in the shipment.\n\nShould Container C be selected, it imposes a mandatory 10-tonne deduction from the vessel's effective weight capacity.\nThe vessel's maximum permissible gross weight is 272 tonnes. The manager must determine the optimal set of containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

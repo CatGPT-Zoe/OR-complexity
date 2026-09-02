@@ -1,0 +1,27 @@
+{
+  "instance_id": "LEAN_NRM22",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail enterprise sells multiple dairy products. The company aims to maximize total revenue by optimizing order fulfillment under initial inventory limits provided in the ‘Initial Inventory’ column. Demand quantities are specified in the ‘Demand’ column and are assumed to be deterministic and known in advance. Decision variables x_i represent the number of units of each product i that will be fulfilled.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "DairyGoodsSalesDataset",
+      "indices": [
+        "Full_Product_Name",
+        "Revenue",
+        "Demand",
+        "Initial Inventory"
+      ],
+      "unit": "",
+      "values": "| Full_Product_Name | Revenue | Demand | Initial Inventory |\n|---|---|---|---|\n| Butter_Amul | 96.86 | 34102 | 29862 |\n| Butter_Mother Dairy | 48.01 | 36579 | 29898 |\n| Butter_Parag Milk Foods | 8.83 | 36086 | 25208 |\n| Butter_Warana | 92.96 | 41254 | 30816 |\n| Buttermilk_Amul | 40.75 | 29876 | 19925 |\n| Buttermilk_Mother Dairy | 83.07 | 41229 | 26482 |\n| Buttermilk_Raj | 15.64 | 35354 | 30865 |\n| Buttermilk_Sudha | 56.57 | 29649 | 33517 |\n| Cheese_Amul | 100.74 | 38558 | 30929 |\n| Cheese_Britannia Industries | 28.92 | 28603 | 21405 |\n| Cheese_Dynamix Dairies | 32.66 | 35962 | 25953 |\n| Cheese_Passion Cheese | 58.09 | 36961 | 23825 |\n| Curd_Amul | 30.27 | 39436 | 31687 |\n| Curd_Mother Dairy | 84.57 | 43522 | 33377 |\n| Curd_Raj | 84.75 | 38128 | 34914 |\n| Curd_Sudha | 76.37 | 42341 | 33547 |\n| Ghee_Amul | 41.49 | 30345 | 23120 |\n| Ghee_Mother Dairy | 52.79 | 35420 | 24667 |\n| Ghee_Raj | 48.13 | 34100 | 25395 |\n| Ghee_Sudha | 95.09 | 33007 | 24676 |\n| Ice Cream_Amul | 54.41 | 37894 | 26707 |\n| Ice Cream_Dodla Dairy | 82.24 | 29840 | 26722 |\n| Ice Cream_Mother Dairy | 94.32 | 38762 | 25809 |\n| Ice Cream_Palle2patnam | 83.73 | 34674 | 24391 |\n| Lassi_Amul | 74.45 | 42972 | 30728 |\n| Lassi_Mother Dairy | 49.4 | 33894 | 28628 |\n| Lassi_Raj | 93.93 | 45762 | 30568 |\n| Lassi_Sudha | 88.05 | 29503 | 23461 |\n| Milk_Amul | 39.24 | 34761 | 21398 |\n| Milk_Mother Dairy | 8.69 | 40548 | 33619 |\n| Milk_Raj | 65.53 | 43012 | 26355 |\n| Milk_Sudha | 42.34 | 29180 | 23815 |\n| Paneer_Amul | 81.76 | 33498 | 20787 |\n| Paneer_Mother Dairy | 29.09 | 34848 | 29342 |\n| Paneer_Raj | 87.3 | 40347 | 23556 |\n| Paneer_Sudha | 66.7 | 37188 | 28753 |\n| Yogurt_Amul | 89.32 | 34347 | 24404 |\n| Yogurt_Dodla Dairy | 33.81 | 37181 | 26829 |\n| Yogurt_Mother Dairy | 25.29 | 36644 | 25562 |\n| Yogurt_Palle2patnam | 84.9 | 34303 | 28695 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/NRM_testing/NRM22/DairyGoodsSalesDataset.csv",
+      "role": "parameter_table",
+      "table": "DairyGoodsSalesDataset"
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a series of crates to identical freight pallets for air transport. The cargo manifests are as follows:\n\n* Manifest Alpha: mass 44 kilograms\n* Manifest Beta: mass 39 kilograms\n* Manifest Gamma: mass 66 kilograms\n* Manifest Delta: mass 48 kilograms\n* Manifest Epsilon: mass 42 kilograms\n* Manifest Zeta: mass 36 kilograms\n* Manifest Eta: mass 57 kilograms\n* Manifest Theta: mass 59 kilograms\n* Manifest Iota: mass 51 kilograms\n* Manifest Kappa: mass 54 kilograms\n* Manifest Lambda: mass 40 kilograms\n* Manifest Mu: mass 51 kilograms\n* Manifest Nu: mass 56 kilograms\n* Manifest Xi: mass 57 kilograms\n* Manifest Omicron: mass 39 kilograms\n* Manifest Pi: mass 58 kilograms\n\nEach pallet possesses a certified maximum load capacity of 100 kilograms. The coordinator must ensure every manifest is allocated to precisely one pallet, with the aggregate mass on any given pallet never surpassing its rated limit. The overarching objective is to complete this allocation while minimizing the total number of pallets utilized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

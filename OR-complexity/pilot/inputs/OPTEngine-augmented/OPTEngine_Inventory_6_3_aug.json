@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must devise a procurement and storage strategy for a critical fuel additive over a six-week operational cycle.  \nThe starting stock at the cycle’s commencement is 42 gallons.  \nIn each week \\(t = 1, \\dots, 6\\), the supplier permits the center to place a purchase whose volume must be between 5 and 35 gallons.  \nNevertheless, every purchase requires a lead time of 1 week before it becomes available to meet consumption needs or to replenish the on‑hand stock.  \nThe weekly consumption of the additive is as follows:  \n* Week 1: 51 gallons  \n* Week 2: 15 gallons  \n* Week 3: 10 gallons  \n* Week 4: 48 gallons  \n* Week 5: 22 gallons  \n* Week 6: 54 gallons  \n\nStock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be deferred to later weeks.  \nThroughout the six‑week cycle, additive quantities may be treated as continuous, and the total physical inventory held at the end of any week must not exceed the storage‑tank capacity of 45 gallons.\n\nIn week 6, the maximum allowable purchase volume is 23 gallons.  \nIn week 4, the on‑hand inventory must be no less than 2 gallons.\n\nThe aggregate expense over the planning cycle comprises three elements: the procurement cost, which is 6 per gallon purchased; the storage cost, which is 2 per gallon kept from one week to the next; and the shortage penalty, which is 12 per gallon of unmet consumption.  \nDetermine the optimal purchase volume for each week and monitor the consequent inventory and shortage levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

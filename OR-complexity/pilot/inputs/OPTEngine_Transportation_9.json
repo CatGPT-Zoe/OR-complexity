@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate resources from nine distribution centers to nine retail outlets, with the objective of minimizing total transfer expenses.\n\nThe resource availability at each distribution center (set D) is as follows:\n*D1 has 76 units.\n*D2 has 125 units.\n*D3 has 156 units.\n*D4 has 71 units.\n*D5 has 79 units.\n*D6 has 86 units.\n*D7 has 139 units.\n*D8 has 129 units.\n*D9 has 137 units.\n\nThe required resource fulfillment at each retail outlet (set R) is specified as:\n*R1 requires 41 units.\n*R2 requires 96 units.\n*R3 requires 94 units.\n*R4 requires 87 units.\n*R5 requires 137 units.\n*R6 requires 62 units.\n*R7 requires 59 units.\n*R8 requires 159 units.\n*R9 requires 22 units.\n\nThe per-unit transfer cost from each distribution center to each retail outlet is provided in the matrix:\n\n| From / To | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9 |\n|--|-|-|-|-|-|-|-|-|\n| D1 | 11 | 4 | 6 | 8 | 17 | 6 | 18 | 6 | 11 |\n| D2 | 18 | 14 | 15 | 8 | 13 | 6 | 6 | 14 | 13 |\n| D3 | 1 | 20 | 7 | 15 | 19 | 14 | 13 | 1 | 7 |\n| D4 | 7 | 9 | 3 | 19 | 4 | 18 | 6 | 12 | 11 |\n| D5 | 7 | 15 | 4 | 9 | 16 | 17 | 11 | 20 | 13 |\n| D6 | 20 | 13 | 19 | 4 | 12 | 12 | 15 | 20 | 6 |\n| D7 | 10 | 20 | 19 | 3 | 5 | 11 | 4 | 8 | 10 |\n| D8 | 4 | 6 | 12 | 5 | 17 | 13 | 14 | 20 | 5 |\n| D9 | 19 | 13 | 14 | 6 | 16 | 18 | 6 | 18 | 6 |\n\nDetermine the optimal allocation of resources to minimize the aggregate transfer expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

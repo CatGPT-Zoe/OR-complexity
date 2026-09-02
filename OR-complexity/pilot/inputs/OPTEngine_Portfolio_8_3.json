@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_8_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute budget across 8 infrastructure projects to maximize the total projected community benefit.  \nThe characteristics of each project are as follows:  \n* Project A: projected benefit is 0.173, environmental impact is 0.200, allocation bounds [0.013, 0.311]  \n* Project B: projected benefit is 0.194, environmental impact is 0.202, allocation bounds [0.070, 0.485]  \n* Project C: projected benefit is 0.128, environmental impact is 0.047, allocation bounds [0.095, 0.871]  \n* Project D: projected benefit is 0.047, environmental impact is 0.216, allocation bounds [0.100, 0.505]  \n* Project E: projected benefit is 0.035, environmental impact is 0.035, allocation bounds [0.091, 0.760]  \n* Project F: projected benefit is 0.139, environmental impact is 0.172, allocation bounds [0.009, 0.415]  \n* Project G: projected benefit is 0.185, environmental impact is 0.197, allocation bounds [0.067, 0.900]  \n* Project H: projected benefit is 0.076, environmental impact is 0.105, allocation bounds [0.051, 0.393]  \n\nEach project must receive a fraction of the total budget within its specified bounds, and the sum of all budget fractions must equal one. To ensure timely completion, the group of quick-delivery projects, represented by the subset Q = {B, C, D, E, G}, must collectively receive at least 0.423 of the total budget. At the same time, the total environmental impact of the portfolio must not exceed 0.180, and the total projected benefit must be at least 0.095. Determine the optimal budget allocation that maximizes total projected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

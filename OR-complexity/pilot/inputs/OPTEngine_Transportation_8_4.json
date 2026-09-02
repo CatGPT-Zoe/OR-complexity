@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a fleet of delivery vehicles from multiple distribution centers to various retail outlets, ensuring that all inventory is moved while minimizing the total operational expense.\n\nThe available inventory at each distribution center (set DC) is as follows:\n*DC1's inventory is 97.\n*DC2's inventory is 53.\n*DC3's inventory is 136.\n*DC4's inventory is 125.\n*DC5's inventory is 195.\n*DC6's inventory is 99.\n*DC7's inventory is 94.\n*DC8's inventory is 153.\n\nThe required stock level at each retail outlet (set RO) is specified below:\n*RO1's requirement is 180.\n*RO2's requirement is 31.\n*RO3's requirement is 234.\n*RO4's requirement is 65.\n*RO5's requirement is 48.\n*RO6's requirement is 112.\n*RO7's requirement is 86.\n*RO8's requirement is 90.\n\nThe per-unit transfer cost from each distribution center to each retail outlet is provided in the matrix:\n\n| From / To | RO1 | RO2 | RO3 | RO4 | RO5 | RO6 | RO7 | RO8 |\n|--|-|-|-|-|-|-|-|\n| DC1 | 8 | 15 | 9 | 11 | 10 | 19 | 19 | 1 |\n| DC2 | 9 | 12 | 8 | 2 | 4 | 15 | 10 | 6 |\n| DC3 | 13 | 17 | 10 | 4 | 10 | 12 | 20 | 8 |\n| DC4 | 8 | 5 | 16 | 5 | 15 | 20 | 12 | 14 |\n| DC5 | 18 | 16 | 18 | 7 | 8 | 20 | 3 | 17 |\n| DC6 | 15 | 17 | 12 | 3 | 19 | 4 | 2 | 18 |\n| DC7 | 17 | 7 | 19 | 18 | 5 | 6 | 11 | 17 |\n| DC8 | 15 | 4 | 7 | 19 | 16 | 3 | 17 | 15 |\n\nDetermine the optimal allocation of inventory transfers to achieve the lowest possible total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

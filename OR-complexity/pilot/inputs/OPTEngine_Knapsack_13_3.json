@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_13_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n* Container 1: weight 40 tons, value 177 units\n* Container 2: weight 6 tons, value 167 units\n* Container 3: weight 2 tons, value 262 units\n* Container 4: weight 1 ton, value 138 units\n* Container 5: weight 13 tons, value 213 units\n* Container 6: weight 25 tons, value 233 units\n* Container 7: weight 50 tons, value 209 units\n* Container 8: weight 45 tons, value 29 units\n* Container 9: weight 38 tons, value 248 units\n* Container 10: weight 23 tons, value 74 units\n* Container 11: weight 37 tons, value 152 units\n* Container 12: weight 21 tons, value 22 units\n* Container 13: weight 26 tons, value 252 units\n\nThe vehicle has a maximum load capacity of 228 tons. Determine which combination of containers to load to achieve the highest total value without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

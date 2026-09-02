@@ -1,0 +1,59 @@
+{
+  "instance_id": "LEAN_UFLP7",
+  "annotation_mode": "semantic",
+  "problem_text": "On the Bandcamp sales platform, independent musicians and bands require inventory replenishment through warehouses. Multiple distribution warehouses, located in different cities, can provide the necessary inventory. Each warehouse incurs a fixed cost when starting operations, and the fixed cost data is provided in the “fixed_cost.csv” file. Each musician or band needs to source a certain quantity of goods from these warehouses. For each musician or band, the transportation cost per unit of goods from each warehouse is recorded in the “transportation_costs.csv” file. Demand information can be gained in 'demand.csv'. The objective is to determine which warehouses should be activated so that the demand of all musicians and bands is met while minimizing the total cost. The decision variables y_i are binary, indicating whether a warehouse is operational. The decision variables x_{ij} represent the quantity of goods that musician or band S_j sources from warehouse F_i. For each musician or band, x_{ij} represents the proportion of the total supply obtained from different warehouses.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "demand",
+      "indices": [
+        "customer",
+        "demand"
+      ],
+      "unit": "",
+      "values": "| customer | demand |\n|---|---|\n| C1 | 1083 |\n| C2 | 776 |\n| C3 | 16214 |\n| C4 | 553 |\n| C5 | 17106 |\n| C6 | 594 |\n| C7 | 732 |"
+    },
+    {
+      "name": "fixed_cost",
+      "indices": [
+        "row_label",
+        "fixed_costs"
+      ],
+      "unit": "",
+      "values": "| row_label | fixed_costs |\n|---|---|\n| S1 | 102.33 |\n| S2 | 94.92 |\n| S3 | 91.83 |\n| S4 | 98.70999999999999 |\n| S5 | 95.73 |\n| S6 | 99.95999999999999 |\n| S7 | 98.16 |"
+    },
+    {
+      "name": "transportation_costs",
+      "indices": [
+        "row_label",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "unit": "",
+      "values": "| row_label | C1 | C2 | C3 | C4 | C5 | C6 | C7 |\n|---|---|---|---|---|---|---|---|\n| S1 | 1506.22 | 70.90000000000001 | 8.44 | 260.27 | 197.47 | 71.70999999999999 | 61.19 |\n| S2 | 1732.65 | 1780.72 | 567.4400000000001 | 448.68 | 29 | 1484.91 | 963.92 |\n| S3 | 115.66 | 100.76 | 64.68000000000001 | 1324.53 | 64.98999999999999 | 134.88 | 2102.83 |\n| S4 | 1254.78 | 1115.63 | 52.31 | 1036.16 | 892.63 | 1464.04 | 1383.41 |\n| S5 | 42.9 | 891.01 | 1013.94 | 1128.72 | 58.91 | 42.89 | 1570.31 |\n| S6 | 0.7 | 139.46 | 70.03 | 79.15000000000001 | 1482 | 0.91 | 110.46 |\n| S7 | 1732.3 | 1780.44 | 486.5 | 523.74 | 522.08 | 82.48 | 826.41 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP7/demand.csv",
+      "role": "parameter_table",
+      "table": "demand"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP7/fixed_cost.csv",
+      "role": "parameter_table",
+      "table": "fixed_cost"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP7/transportation_costs.csv",
+      "role": "parameter_table",
+      "table": "transportation_costs"
+    }
+  ],
+  "notes": ""
+}

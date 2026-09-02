@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_23_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Crate 1: size 54 cubic meters\n* Crate 2: size 62 cubic meters\n* Crate 3: size 51 cubic meters\n* Crate 4: size 44 cubic meters\n* Crate 5: size 67 cubic meters\n* Crate 6: size 46 cubic meters\n* Crate 7: size 35 cubic meters\n* Crate 8: size 32 cubic meters\n* Crate 9: size 39 cubic meters\n* Crate 10: size 50 cubic meters\n* Crate 11: size 70 cubic meters\n* Crate 12: size 67 cubic meters\n* Crate 13: size 66 cubic meters\n* Crate 14: size 61 cubic meters\n* Crate 15: size 34 cubic meters\n* Crate 16: size 63 cubic meters\n* Crate 17: size 60 cubic meters\n* Crate 18: size 57 cubic meters\n* Crate 19: size 50 cubic meters\n* Crate 20: size 54 cubic meters\n* Crate 21: size 31 cubic meters\n* Crate 22: size 37 cubic meters\n* Crate 23: size 57 cubic meters\n\nEach cargo plane can carry up to 100 cubic meters of freight. Assign all shipments using the fewest planes possible. Every crate must be loaded onto exactly one plane, and the total volume in any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

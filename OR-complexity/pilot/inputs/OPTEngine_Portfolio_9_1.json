@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_9_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate budget across 9 infrastructure projects to maximize the overall public benefit score.  \nThe characteristics of each project are:  \n* Project A: benefit score 0.159, impact index 0.250, allocation limits [0.023, 0.395]  \n* Project B: benefit score 0.046, impact index 0.089, allocation limits [0.023, 0.692]  \n* Project C: benefit score 0.028, impact index 0.173, allocation limits [0.010, 0.828]  \n* Project D: benefit score 0.192, impact index 0.089, allocation limits [0.033, 0.585]  \n* Project E: benefit score 0.034, impact index 0.042, allocation limits [0.047, 0.690]  \n* Project F: benefit score 0.186, impact index 0.225, allocation limits [0.068, 0.754]  \n* Project G: benefit score 0.138, impact index 0.079, allocation limits [0.014, 0.472]  \n* Project H: benefit score 0.155, impact index 0.025, allocation limits [0.096, 0.471]  \n* Project I: benefit score 0.059, impact index 0.273, allocation limits [0.098, 0.335]  \n\nEach project must receive a budget share within its specified limits, and the total allocation across all projects must equal the entire budget (sum to one).  \nTo prioritize essential services, the subset of high-priority projects L = {G} must collectively receive at least 0.472 of the total budget.  \nAdditionally, the overall impact index of the portfolio must not exceed 0.167, and the total benefit score must be at least 0.082.  \nDetermine the optimal budget allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

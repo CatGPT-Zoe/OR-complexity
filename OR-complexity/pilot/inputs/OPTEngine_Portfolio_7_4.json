@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute infrastructure funding across 7 different project types to maximize the total community benefit score.  \nThe characteristics of each project type are as follows:  \n* Project Alpha: benefit score is 0.110, disruption index is 0.151, funding share range [0.041, 0.860]  \n* Project Beta: benefit score is 0.100, disruption index is 0.018, funding share range [0.022, 0.475]  \n* Project Gamma: benefit score is 0.029, disruption index is 0.193, funding share range [0.084, 0.723]  \n* Project Delta: benefit score is 0.068, disruption index is 0.242, funding share range [0.011, 0.549]  \n* Project Epsilon: benefit score is 0.044, disruption index is 0.216, funding share range [0.095, 0.589]  \n* Project Zeta: benefit score is 0.072, disruption index is 0.100, funding share range [0.065, 0.583]  \n* Project Eta: benefit score is 0.179, disruption index is 0.014, funding share range [0.015, 0.574]  \n\nEach project type must receive a proportion of the total budget that falls within its specified share range, and all proportions must sum to one.  \nTo ensure equitable geographic coverage, the planner requires that the subset of projects in high-priority zones, represented by L = {Alpha, Gamma, Epsilon, Eta}, collectively receive at least 0.313 of the total funding.  \nAdditionally, the overall disruption index for the portfolio must not exceed 0.188, and the total community benefit score must be at least 0.060.  \nDetermine the optimal funding allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

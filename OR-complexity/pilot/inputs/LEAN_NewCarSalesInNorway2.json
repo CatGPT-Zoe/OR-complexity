@@ -1,0 +1,40 @@
+{
+  "instance_id": "LEAN_NewCarSalesInNorway2",
+  "annotation_mode": "semantic",
+  "problem_text": "In the context of New Car Sales in Norway, a car dealership is planning its inventory-replenishment strategy.For each vehicle type, the dealership has a “products.csv” file that records the benefit coefficient for that type, in other word, the value for each car.There are some warehouse that can store these cars.Each warehosue has a capacity limit, provided in “capacity.csv.”The objective is to decide how many units of each vehicle type to store in the warehouse so as to maximize total value while ensuring that each warehouse won't exceed capacity limit.The decision variable x_i represents the number of vehicles of type i to be ordered per day. The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "Warehouse ID",
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Warehouse ID | Capacity |\n|---|---|\n| Warehouse 1 | 100 |\n| Warehouse 2 | 80 |\n| Warehouse 3 | 120 |\n| Warehouse 4 | 90 |\n| Warehouse 5 | 50 |\n| Warehouse 6 | 30 |\n| Warehouse 7 | 110 |\n| Warehouse 8 | 40 |\n| Warehouse 9 | 60 |\n| Warehouse 10 | 35 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| Sedans | 1200 | 20 |\n| SUVs | 1800 | 15 |\n| Electric Vehicles | 2500 | 25 |\n| Hybrid Vehicles | 2000 | 18 |\n| Trucks | 1500 | 10 |\n| Sports Cars | 3000 | 5 |\n| Compact Cars | 1000 | 22 |\n| Luxury Sedans | 3500 | 8 |\n| Vans | 1600 | 12 |\n| Pickup Trucks | 1700 | 7 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA5/NewCarSalesInNorway2/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA5/NewCarSalesInNorway2/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

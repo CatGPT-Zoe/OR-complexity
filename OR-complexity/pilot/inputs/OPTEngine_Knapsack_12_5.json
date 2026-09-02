@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_12_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a cargo plane. The available containers are:\n\n* Container 1: weight 23 tons, revenue $77,000\n* Container 2: weight 41 tons, revenue $265,000\n* Container 3: weight 7 tons, revenue $23,000\n* Container 4: weight 34 tons, revenue $193,000\n* Container 5: weight 32 tons, revenue $243,000\n* Container 6: weight 20 tons, revenue $16,000\n* Container 7: weight 15 tons, revenue $294,000\n* Container 8: weight 42 tons, revenue $93,000\n* Container 9: weight 43 tons, revenue $263,000\n* Container 10: weight 48 tons, revenue $256,000\n* Container 11: weight 35 tons, revenue $170,000\n* Container 12: weight 46 tons, revenue $50,000\n\nThe aircraft has a maximum payload capacity of 270 tons. Determine which containers to load to maximize total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

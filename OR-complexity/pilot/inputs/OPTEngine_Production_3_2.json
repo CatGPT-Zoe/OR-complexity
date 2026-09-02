@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is tasked with transporting three distinct categories of freight, where each category must undergo three sequential handling procedures before dispatch. The revenue generated per ton for each freight category is detailed below:\n* For Freight Alpha, revenue is 17.666 per ton\n* For Freight Beta, revenue is 16.369 per ton\n* For Freight Gamma, revenue is 11.309 per ton\n\nThe handling duration required per ton for each procedure is as follows:\n* For Freight Alpha, Procedure 1 consumes 0.666 (ton-hours), Procedure 2 consumes 1.12 (ton-hours), Procedure 3 consumes 0.929 (ton-hours)\n* For Freight Beta, Procedure 1 consumes 1.611 (ton-hours), Procedure 2 consumes 0.746 (ton-hours), Procedure 3 consumes 1.058 (ton-hours)\n* For Freight Gamma, Procedure 1 consumes 1.25 (ton-hours), Procedure 2 consumes 1.835 (ton-hours), Procedure 3 consumes 1.108 (ton-hours)\n\n* The cumulative allocated time for Procedure 1 cannot surpass 149.799 hours\n* The cumulative allocated time for Procedure 2 cannot surpass 149.677 hours\n* The cumulative allocated time for Procedure 3 cannot surpass 130.387 hours\n\nUnder the condition that the total processing time for each individual procedure—Procedure 1, Procedure 2, and Procedure 3—must remain within its respective available time limit, determine the optimal allocation of tonnage for each freight category to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

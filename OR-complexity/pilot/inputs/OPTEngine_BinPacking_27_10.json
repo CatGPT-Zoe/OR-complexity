@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_27_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical cargo planes. Shipments:\n* Component Alpha: mass 70 tons\n* Component Beta: mass 53 tons\n* Component Gamma: mass 39 tons\n* Component Delta: mass 37 tons\n* Component Epsilon: mass 62 tons\n* Component Zeta: mass 50 tons\n* Component Eta: mass 50 tons\n* Component Theta: mass 34 tons\n* Component Iota: mass 53 tons\n* Component Kappa: mass 42 tons\n* Component Lambda: mass 42 tons\n* Component Mu: mass 48 tons\n* Component Nu: mass 63 tons\n* Component Xi: mass 57 tons\n* Component Omicron: mass 54 tons\n* Component Pi: mass 55 tons\n* Component Rho: mass 32 tons\n* Component Sigma: mass 39 tons\n* Component Tau: mass 58 tons\n* Component Upsilon: mass 34 tons\n* Component Phi: mass 48 tons\n* Component Chi: mass 70 tons\n* Component Psi: mass 39 tons\n* Component Omega: mass 63 tons\n* Component Digamma: mass 42 tons\n* Component Stigma: mass 68 tons\n* Component Heta: mass 61 tons\n\nEach aircraft has a maximum payload capacity of 100 tons. Assign all shipments using the minimum number of planes. Every component must be placed on exactly one aircraft, and the cumulative mass loaded onto any given aircraft must not surpass its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

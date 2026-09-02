@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_9_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and storage schedule for a critical drug over a nine-day treatment cycle.\nThe initial stock in the pharmacy at the start of the cycle is 60 vials.\nIn each day t = 1, ..., 9, the pharmaceutical supplier permits the hospital to submit a requisition, with the number of vials requested required to be between 2 and 80.\nHowever, each requisition submitted will experience a lag of 1 day(s) before the vials are delivered and available for patient administration or to replenish the pharmacy stock.\nThe projected patient need for the drug on each day is specified as follows:\n* Day 1: need 36 vials\n* Day 2: need 10 vials\n* Day 3: need 36 vials\n* Day 4: need 56 vials\n* Day 5: need 30 vials\n* Day 6: need 38 vials\n* Day 7: need 23 vials\n* Day 8: need 33 vials\n* Day 9: need 28 vials\n\nStock-outs are permissible, but any unfulfilled patient need is considered lost and will not be carried forward.\nThroughout the treatment cycle, drug quantities are treated as continuous measures, and the total volume of vials physically stored in the pharmacy at any moment must not surpass the refrigerated capacity of 60 vials.\nThe aggregate expenditure over the cycle comprises three elements: the procurement cost, amounting to 1 per vial requisitioned; the storage cost, amounting to 2 per vial kept in inventory from one day to the next; and the penalty for unmet need, amounting to 7 per vial of unfulfilled patient demand. Please ascertain the optimal requisition quantity for each day and monitor the consequent pharmacy stock and shortfall levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

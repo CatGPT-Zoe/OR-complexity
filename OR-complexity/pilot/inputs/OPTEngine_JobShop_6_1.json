@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing plant has 6 different products that must be processed through 6 specialized workstations.\n\nEach product requires a specific sequence of processing steps, where each step is defined by the workstation it uses and the duration it occupies that station.\nThe order of steps must be followed exactly as specified.\n\nProduct processing sequences:\n* P1 requires: (Station5, 7) → (Station4, 3) → (Station1, 1) → (Station3, 9) → (Station6, 3) → (Station2, 10)\n* P2 requires: (Station6, 3) → (Station5, 4) → (Station2, 1) → (Station1, 3) → (Station4, 9) → (Station3, 3)\n* P3 requires: (Station6, 3) → (Station1, 10) → (Station4, 10) → (Station3, 1) → (Station5, 5) → (Station2, 6)\n* P4 requires: (Station6, 2) → (Station4, 6) → (Station1, 5) → (Station3, 3) → (Station5, 8) → (Station2, 4)\n* P5 requires: (Station5, 5) → (Station3, 8) → (Station2, 7) → (Station6, 1) → (Station4, 5) → (Station1, 9)\n* P6 requires: (Station3, 8) → (Station5, 7) → (Station4, 2) → (Station1, 7) → (Station2, 6) → (Station6, 8)\n\nOnce a processing step begins on a workstation, it must run to completion without interruption, and each workstation can only handle one processing step at a time.\nThe goal is to schedule all processing steps across the workstations to minimize the total production time for all products.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

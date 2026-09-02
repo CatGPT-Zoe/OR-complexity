@@ -1,0 +1,286 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "IndustryOR_Hard_026_shift_scheduling",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "SET_TIME_PERIODS",
+      "name": "time_periods",
+      "description": "Six consecutive 4-hour coverage periods forming a cyclic 24-hour day.",
+      "members": [
+        "2:00-6:00",
+        "6:00-10:00",
+        "10:00-14:00",
+        "14:00-18:00",
+        "18:00-22:00",
+        "22:00-2:00"
+      ],
+      "source_grounding": "The stated staffing requirements are indexed by six time periods over a 24-hour convenience-store day.",
+      "source_spans": [
+        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people."
+      ]
+    },
+    {
+      "id": "SET_SHIFT_STARTS",
+      "name": "shift_starts",
+      "description": "Permitted start times for fixed 8-hour salesperson shifts.",
+      "members": [
+        "2:00",
+        "6:00",
+        "10:00",
+        "14:00",
+        "18:00",
+        "22:00"
+      ],
+      "source_grounding": "The problem explicitly lists all permissible shift start times.",
+      "source_spans": [
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours."
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "PARAM_STAFF_REQUIREMENT",
+      "name": "staff_requirement",
+      "description": "Minimum number of salespeople required during each time period.",
+      "indices": [
+        "time_periods"
+      ],
+      "unit": "people",
+      "values": {
+        "2:00-6:00": 10,
+        "6:00-10:00": 15,
+        "10:00-14:00": 25,
+        "14:00-18:00": 20,
+        "18:00-22:00": 18,
+        "22:00-2:00": 12
+      },
+      "source_grounding": "Period-specific staffing requirements are explicitly stated.",
+      "source_spans": [
+        "2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people."
+      ]
+    },
+    {
+      "id": "PARAM_SHIFT_DURATION",
+      "name": "shift_duration",
+      "description": "Continuous duration of every salesperson shift.",
+      "unit": "hours",
+      "value": 8,
+      "source_grounding": "Every shift is stated to last continuously for 8 hours.",
+      "source_spans": [
+        "working continuously for 8 hours."
+      ]
+    },
+    {
+      "id": "PARAM_SHIFT_PERIOD_COVERAGE",
+      "name": "shift_period_coverage",
+      "description": "Cyclic incidence relation identifying the two consecutive 4-hour periods covered by each 8-hour shift.",
+      "indices": [
+        "shift_starts",
+        "time_periods"
+      ],
+      "value_semantics": "True exactly when a shift beginning at the indexed start time is active throughout the indexed coverage period.",
+      "active_pairs": [
+        [
+          "2:00",
+          "2:00-6:00"
+        ],
+        [
+          "2:00",
+          "6:00-10:00"
+        ],
+        [
+          "6:00",
+          "6:00-10:00"
+        ],
+        [
+          "6:00",
+          "10:00-14:00"
+        ],
+        [
+          "10:00",
+          "10:00-14:00"
+        ],
+        [
+          "10:00",
+          "14:00-18:00"
+        ],
+        [
+          "14:00",
+          "14:00-18:00"
+        ],
+        [
+          "14:00",
+          "18:00-22:00"
+        ],
+        [
+          "18:00",
+          "18:00-22:00"
+        ],
+        [
+          "18:00",
+          "22:00-2:00"
+        ],
+        [
+          "22:00",
+          "22:00-2:00"
+        ],
+        [
+          "22:00",
+          "2:00-6:00"
+        ]
+      ],
+      "source_grounding": "The incidence relation follows from the listed 4-hour periods, listed shift starts, the continuous 8-hour shift duration, and the 24-hour cyclic day.",
+      "source_spans": [
+        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows",
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours."
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "ENT_SHIFT_STAFF",
+      "canonical_family": "shift_start_staffing",
+      "canonical_name": "salespeople assigned to shift starts",
+      "entity_role": "decision",
+      "description": "Number of salespeople whose fixed 8-hour shift begins at each permitted shift start time.",
+      "index_sets": [
+        "shift_starts"
+      ],
+      "unit": "people",
+      "domain_metadata": {
+        "nonnegative": true,
+        "integral": true
+      },
+      "source_grounding": "The endogenous choice is how many salespeople begin work at each listed shift start.",
+      "source_spans": [
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours.",
+        "Determine the minimum number of salespeople needed to meet the requirements."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "minimize total shift-start staffing",
+    "normalized_semantics": "Minimize the aggregate number of salespeople assigned across all permitted shift starts.",
+    "support_entity_ids": [
+      "ENT_SHIFT_STAFF"
+    ],
+    "aggregation_scope": "all shift_starts",
+    "source_grounding": "The requested outcome is the minimum number of salespeople that satisfies all period staffing requirements.",
+    "source_spans": [
+      "Determine the minimum number of salespeople needed to meet the requirements."
+    ],
+    "confidence": "high"
+  },
+  "obligations": [
+    {
+      "id": "OBL_PERIOD_STAFF_COVERAGE",
+      "canonical_family": "period_minimum_staff_coverage",
+      "canonical_name": "minimum staffing coverage by active shifts",
+      "structural_form": "COVERAGE",
+      "business_role": "Ensure that every time period has at least its required number of active salespeople.",
+      "normalized_semantics": "For each time period, the sum of salespeople assigned to shift starts whose continuous 8-hour shifts cover that period must be at least the period-specific staff requirement.",
+      "support_entity_ids": [
+        "ENT_SHIFT_STAFF"
+      ],
+      "incidence_slots": [
+        {
+          "slot": "coverage_period",
+          "set_ref": "SET_TIME_PERIODS",
+          "temporal_role": "period being staffed"
+        },
+        {
+          "slot": "covering_shift_start",
+          "set_ref": "SET_SHIFT_STARTS",
+          "temporal_role": "shift start active during the coverage period",
+          "relation_ref": "PARAM_SHIFT_PERIOD_COVERAGE"
+        }
+      ],
+      "quantifier": "for every time_period in time_periods",
+      "scope_kind": "periodwise",
+      "parameter_refs": [
+        "PARAM_STAFF_REQUIREMENT",
+        "PARAM_SHIFT_DURATION",
+        "PARAM_SHIFT_PERIOD_COVERAGE"
+      ],
+      "clauses": [
+        {
+          "time_period": "2:00-6:00",
+          "covering_shift_starts": [
+            "22:00",
+            "2:00"
+          ],
+          "minimum_required": 10
+        },
+        {
+          "time_period": "6:00-10:00",
+          "covering_shift_starts": [
+            "2:00",
+            "6:00"
+          ],
+          "minimum_required": 15
+        },
+        {
+          "time_period": "10:00-14:00",
+          "covering_shift_starts": [
+            "6:00",
+            "10:00"
+          ],
+          "minimum_required": 25
+        },
+        {
+          "time_period": "14:00-18:00",
+          "covering_shift_starts": [
+            "10:00",
+            "14:00"
+          ],
+          "minimum_required": 20
+        },
+        {
+          "time_period": "18:00-22:00",
+          "covering_shift_starts": [
+            "14:00",
+            "18:00"
+          ],
+          "minimum_required": 18
+        },
+        {
+          "time_period": "22:00-2:00",
+          "covering_shift_starts": [
+            "18:00",
+            "22:00"
+          ],
+          "minimum_required": 12
+        }
+      ],
+      "boundary_variants": [
+        {
+          "name": "cyclic_midnight_wraparound",
+          "description": "The shift beginning at 22:00 continues across midnight and covers the 2:00-6:00 period after covering 22:00-2:00."
+        }
+      ],
+      "condition": "A shift contributes coverage only to periods during which its fixed continuous 8-hour duration is active.",
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_status": "explicit rule with temporally derived incidence",
+      "normalization_rationale": "All six period requirements are clauses of one universal minimum-coverage rule. The midnight wraparound changes temporal incidence but does not create a separate obligation family.",
+      "source_grounding": "The problem supplies minimum staffing requirements for every period, states that shifts last continuously for 8 hours from the listed starts, and requires those staffing requirements to be met.",
+      "source_spans": [
+        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people.",
+        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours.",
+        "Determine the minimum number of salespeople needed to meet the requirements."
+      ],
+      "confidence": "high"
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [],
+  "annotation_warnings": [
+    {
+      "id": "WARN_HEADCOUNT_INTERPRETATION",
+      "message": "The objective is interpreted as minimizing total shift assignments, consistent with the supplied note identifying staff per shift start as the single decision family. The text does not separately describe individual employees, multiple shifts per employee, or reuse of the same employee across shift starts."
+    }
+  ]
+}

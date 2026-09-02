@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_6_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 6 delivery trucks to unload at 6 different warehouse docks.\n\nEach truck has a specific unloading sequence represented as pairs (Dock, Unloading time),\nwhere each pair indicates the dock where the unloading must occur and the time required to complete it.\nThe order of pairs specifies the strict sequence in which the unloading operations must be performed.\n\nTruck details:\n* T1 requires the sequence: (D5, 10) → (D3, 6) → (D1, 10) → (D4, 8) → (D6, 6) → (D2, 7)\n* T2 requires the sequence: (D5, 3) → (D3, 3) → (D1, 1) → (D4, 6) → (D2, 10) → (D6, 4)\n* T3 requires the sequence: (D1, 1) → (D4, 10) → (D6, 3) → (D3, 6) → (D2, 2) → (D5, 7)\n* T4 requires the sequence: (D1, 10) → (D4, 8) → (D3, 7) → (D5, 3) → (D2, 1) → (D6, 8)\n* T5 requires the sequence: (D3, 2) → (D2, 1) → (D4, 6) → (D1, 1) → (D5, 3) → (D6, 7)\n* T6 requires the sequence: (D5, 2) → (D1, 1) → (D3, 9) → (D2, 7) → (D4, 5) → (D6, 1)\n\nEach unloading operation must proceed continuously once it begins and cannot be interrupted,\nand each dock can only accommodate one truck at a time.\nThe objective is to determine the optimal sequence for all unloading operations at the docks\nso that the total completion time for all trucks is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

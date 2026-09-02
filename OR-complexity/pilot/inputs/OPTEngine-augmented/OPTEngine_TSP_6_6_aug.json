@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a technician to perform maintenance at six critical facilities across a region.  \nThe facilities are positioned at the following grid coordinates:  \n\nFacility Alpha: (3,117)  \nFacility Beta: (189,20)  \nFacility Gamma: (85,189)  \nFacility Delta: (11,139)  \nFacility Epsilon: (71,34)  \nFacility Zeta: (61,195)  \n\nTravel distances between facilities, measured in kilometers, are known:  \nAlpha to Gamma: 109.1 km  \nAlpha to Delta: 23.4 km  \nAlpha to Epsilon: 107.3 km  \nAlpha to Zeta: 97.2 km  \nBeta to Gamma: 198.4 km  \nBeta to Delta: 214.1 km  \nBeta to Epsilon: 118.8 km  \nBeta to Zeta: 216.8 km  \nGamma to Delta: 89.3 km  \nGamma to Epsilon: 155.6 km  \nGamma to Zeta: 24.7 km  \nDelta to Epsilon: 120.9 km  \nDelta to Zeta: 75.1 km  \nEpsilon to Zeta: 161.3 km  \n\nDue to infrastructure limitations, no direct connection exists between Facility Alpha and Facility Beta.  \nAdditionally, operational restrictions require that exactly one of the following two links must be part of the circuit: the connection between Beta and Gamma, or the connection between Gamma and Delta.  \n\nThe objective is to determine the minimal total travel distance for a round‑trip route that visits each facility precisely once and returns to the origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

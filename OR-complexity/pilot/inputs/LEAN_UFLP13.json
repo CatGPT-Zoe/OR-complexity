@@ -1,0 +1,48 @@
+{
+  "instance_id": "LEAN_UFLP13",
+  "annotation_mode": "semantic",
+  "problem_text": "Service centres need to be opened at ten candidate locations SC1–SC10 to serve fifteen customers C1–C15. Each centre has a fixed opening cost, and the cost of serving a customer depends on which centre is chosen. The goal is to minimise the sum of all fixed opening costs and customer–centre service costs while ensuring that every customer is served.\n    service_centers_fixed_costs.csv gives the fixed opening cost for each centre SC1–SC10. expanded_customer_service_costs.csv gives the per-customer service cost from each centre. Row “Customer” is C1–C15; each SC column contains the cost to serve that customer from that centre.\n    Requirements is that, every customer must be assigned to exactly one service centre. A customer may be assigned only to a centre that is opened. And each opened centre may serve at most 4 customers. Your decision is to choose open or not open each centre and assign each customer to exactly one opened centre, so that to minimise total cost = sum of fixed opening costs for all opened centres + sum of service costs for all customer–centre assignments using the costs in the two CSV files named above.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "expanded_customer_service_costs",
+      "indices": [
+        "Customer",
+        "SC1",
+        "SC2",
+        "SC3",
+        "SC4",
+        "SC5",
+        "SC6",
+        "SC7",
+        "SC8",
+        "SC9",
+        "SC10"
+      ],
+      "unit": "",
+      "values": "| Customer | SC1 | SC2 | SC3 | SC4 | SC5 | SC6 | SC7 | SC8 | SC9 | SC10 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| C1 | 15.1 | 21.2 | 14.9 | 18.8 | 22.9 | 16.8 | 16.5 | 9.4 | 16.1 | 17.3 |\n| C2 | 13.4 | 16.3 | 20.2 | 19.6 | 20.9 | 22.1 | 16.9 | 9.4 | 13.8 | 11.7 |\n| C3 | 15.2 | 18.8 | 14.7 | 21.7 | 18.1 | 18.6 | 12.3 | 11.2 | 11.9 | 20.4 |\n| C4 | 16.8 | 19.1 | 18.3 | 18.8 | 23.1 | 15.7 | 13.1 | 8.6 | 15.6 | 22.2 |\n| C5 | 13.4 | 18.6 | 20.8 | 19.8 | 22.1 | 18.1 | 16.7 | 12.1 | 11.4 | 18.2 |\n| C6 | 12.5 | 22.5 | 15.5 | 14.9 | 21.6 | 21.3 | 16.1 | 10.7 | 11.9 | 14.6 |\n| C7 | 12.1 | 17.1 | 19.8 | 18.6 | 22.1 | 20.7 | 20.5 | 12.2 | 15.4 | 18.7 |\n| C8 | 12.3 | 15.7 | 17.9 | 21.3 | 22.7 | 15.3 | 16.6 | 11.4 | 14.1 | 20.1 |\n| C9 | 16.3 | 21.3 | 17.6 | 20.8 | 21.8 | 17.2 | 15.5 | 12.6 | 19.9 | 19.1 |\n| C10 | 12.1 | 18.7 | 14.4 | 20.1 | 22.7 | 14.1 | 18.1 | 11.4 | 18.1 | 17.4 |\n| C11 | 16.7 | 18.7 | 15.7 | 19.9 | 24.2 | 18.7 | 14.2 | 13.1 | 14.7 | 16.1 |\n| C12 | 11.3 | 23.8 | 15.5 | 17.3 | 23.2 | 17.7 | 16.8 | 14.5 | 15.8 | 17.8 |\n| C13 | 15.1 | 20.5 | 15.1 | 18.4 | 20.6 | 17.9 | 14.5 | 8.5 | 14.9 | 13.9 |\n| C14 | 8.3 | 20.7 | 14.7 | 20.4 | 20.6 | 14.8 | 14.2 | 11.5 | 14.1 | 15.1 |\n| C15 | 12.1 | 16.3 | 16.4 | 15.1 | 21.3 | 19.1 | 19.5 | 16.7 | 11.1 | 18.7 |"
+    },
+    {
+      "name": "service_centers_fixed_costs",
+      "indices": [
+        "Service Center",
+        "Fixed Opening Cost"
+      ],
+      "unit": "",
+      "values": "| Service Center | Fixed Opening Cost |\n|---|---|\n| SC1 | 385.1 |\n| SC2 | 546.3 |\n| SC3 | 485.2 |\n| SC4 | 448.1 |\n| SC5 | 324.1 |\n| SC6 | 323.9 |\n| SC7 | 296.5 |\n| SC8 | 522.7 |\n| SC9 | 448.7 |\n| SC10 | 478.7 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP13/expanded_customer_service_costs.csv",
+      "role": "parameter_table",
+      "table": "expanded_customer_service_costs"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/UFLP_testing/UFLP13/service_centers_fixed_costs.csv",
+      "role": "parameter_table",
+      "table": "service_centers_fixed_costs"
+    }
+  ],
+  "notes": ""
+}

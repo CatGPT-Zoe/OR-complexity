@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_19_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport ship. The available containers are:\n\n* Container 1: weight 29 tons, revenue 23 thousand dollars\n* Container 2: weight 36 tons, revenue 203 thousand dollars\n* Container 3: weight 2 tons, revenue 72 thousand dollars\n* Container 4: weight 7 tons, revenue 168 thousand dollars\n* Container 5: weight 6 tons, revenue 205 thousand dollars\n* Container 6: weight 14 tons, revenue 141 thousand dollars\n* Container 7: weight 47 tons, revenue 206 thousand dollars\n* Container 8: weight 15 tons, revenue 247 thousand dollars\n* Container 9: weight 42 tons, revenue 268 thousand dollars\n* Container 10: weight 36 tons, revenue 198 thousand dollars\n* Container 11: weight 12 tons, revenue 227 thousand dollars\n* Container 12: weight 41 tons, revenue 14 thousand dollars\n* Container 13: weight 38 tons, revenue 225 thousand dollars\n* Container 14: weight 39 tons, revenue 129 thousand dollars\n* Container 15: weight 19 tons, revenue 187 thousand dollars\n* Container 16: weight 33 tons, revenue 170 thousand dollars\n* Container 17: weight 31 tons, revenue 249 thousand dollars\n* Container 18: weight 48 tons, revenue 139 thousand dollars\n* Container 19: weight 23 tons, revenue 149 thousand dollars\n\nThe ship has a maximum cargo capacity of 362 tons. Choose the combination of containers that maximizes total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

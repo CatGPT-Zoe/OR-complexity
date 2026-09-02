@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is tasked with allocating cargo space to three distinct categories of shipments, each of which necessitates sequential handling across three separate logistical stages. The revenue generated per ton for each shipment category is detailed below:\n* For Shipment Alpha, revenue is 18.754 per ton\n* For Shipment Beta, revenue is 16.9 per ton\n* For Shipment Gamma, revenue is 6.236 per ton\n\nThe handling duration required per ton at each logistical stage is as follows:\n* For Shipment Alpha, Stage 1 consumes 1.303 (ton-hours), Stage 2 consumes 1.076 (ton-hours), Stage 3 consumes 1.334 (ton-hours)\n* For Shipment Beta, Stage 1 consumes 1.721 (ton-hours), Stage 2 consumes 0.637 (ton-hours), Stage 3 consumes 1.517 (ton-hours)\n* For Shipment Gamma, Stage 1 consumes 0.411 (ton-hours), Stage 2 consumes 0.597 (ton-hours), Stage 3 consumes 1.63 (ton-hours)\n\n* The cumulative handling time allocated to Stage 1 cannot surpass 164.344 hours\n* The cumulative handling time allocated to Stage 2 cannot surpass 98.957 hours\n* The cumulative handling time allocated to Stage 3 cannot surpass 178.944 hours\n\nUnder the condition that the total processing time for each individual stage—Stage 1, Stage 2, and Stage 3—must remain within its respective available capacity, determine the optimal tonnage allocation for each shipment category to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

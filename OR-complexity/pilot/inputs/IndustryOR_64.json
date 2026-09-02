@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_64",
+  "annotation_mode": "semantic",
+  "problem_text": "A company needs to decide whether to hire some of the five candidates to join their R&D team. The salary requirements for candidates F, G, H, I, and J are $12,000, $15,000, $18,000, $5,000, and $10,000 respectively. The company wants to minimize the total amount paid to candidates without exceeding the budget.\n\nThe company's budget is $40,000 and they wish to hire a maximum of 4 new employees.\n\nThe skill levels of the candidates are as follows:\nCandidate F: Level 2\nCandidate G: Level 3\nCandidate H: Level 4\nCandidate I: Level 1\nCandidate J: Level 2\n\nThe company needs to ensure that the total skill level of the hired employees is at least 8.\n\nThe project management experience years of each candidate are as follows:\nCandidate F: 1 year\nCandidate G: 2 years\nCandidate H: 2 years\nCandidate I: 5 years\nCandidate J: 4 years\n\nThey hope the total project management experience of the team is at least 8 years.\n\nDue to the similar technical background of candidates G and J, the company can choose at most one of them.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

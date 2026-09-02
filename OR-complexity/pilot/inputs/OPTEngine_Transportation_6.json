@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery vehicles from distribution hubs C to retail outlets D in order to minimize total fuel expenditure.\n\nThe number of vehicles available at each distribution hub (set C) is as follows:\n*C1 has 97 vehicles.\n*C2 has 63 vehicles.\n*C3 has 114 vehicles.\n*C4 has 172 vehicles.\n*C5 has 79 vehicles.\n*C6 has 66 vehicles.\n\nThe required number of vehicle deliveries to be received at each retail outlet (set D) is specified below:\n*D1 requires 19 vehicles.\n*D2 requires 156 vehicles.\n*D3 requires 14 vehicles.\n*D4 requires 36 vehicles.\n*D5 requires 138 vehicles.\n*D6 requires 74 vehicles.\n\nThe fuel cost per vehicle dispatched from each hub to each outlet is provided in the following table:\n| From / To | D1 | D2 | D3 | D4 | D5 | D6 |\n|--|-|-|-|-|-|\n| C1 | 8 | 4 | 18 | 14 | 20 | 20 |\n| C2 | 20 | 8 | 17 | 13 | 15 | 15 |\n| C3 | 10 | 19 | 14 | 10 | 19 | 20 |\n| C4 | 2 | 20 | 4 | 7 | 7 | 9 |\n| C5 | 3 | 6 | 8 | 6 | 18 | 3 |\n| C6 | 6 | 1 | 14 | 15 | 20 | 16 |\n\nDetermine the optimal vehicle dispatch plan to minimize the aggregate fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

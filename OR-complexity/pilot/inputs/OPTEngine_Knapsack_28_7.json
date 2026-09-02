@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_28_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a cargo plane. The available containers are:\n\n* Container 1: weight 27 kg, revenue $196\n* Container 2: weight 38 kg, revenue $288\n* Container 3: weight 12 kg, revenue $56\n* Container 4: weight 50 kg, revenue $70\n* Container 5: weight 9 kg, revenue $216\n* Container 6: weight 18 kg, revenue $53\n* Container 7: weight 35 kg, revenue $158\n* Container 8: weight 34 kg, revenue $95\n* Container 9: weight 46 kg, revenue $252\n* Container 10: weight 27 kg, revenue $135\n* Container 11: weight 24 kg, revenue $150\n* Container 12: weight 18 kg, revenue $178\n* Container 13: weight 12 kg, revenue $142\n* Container 14: weight 14 kg, revenue $60\n* Container 15: weight 19 kg, revenue $207\n* Container 16: weight 26 kg, revenue $183\n* Container 17: weight 30 kg, revenue $58\n* Container 18: weight 43 kg, revenue $45\n* Container 19: weight 36 kg, revenue $134\n* Container 20: weight 11 kg, revenue $244\n* Container 21: weight 13 kg, revenue $194\n* Container 22: weight 49 kg, revenue $146\n* Container 23: weight 3 kg, revenue $79\n* Container 24: weight 1 kg, revenue $198\n* Container 25: weight 29 kg, revenue $156\n* Container 26: weight 43 kg, revenue $299\n* Container 27: weight 20 kg, revenue $178\n* Container 28: weight 12 kg, revenue $17\n\nThe cargo plane has a maximum payload capacity of 489 kg. Select the combination of containers that maximizes total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

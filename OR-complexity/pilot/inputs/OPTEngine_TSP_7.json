@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a specialized inspection tour across seven regional facilities.\n\nThe travel durations between facilities are recorded in minutes:\n* Base to Branch 1: 161.9 min\n* Base to Branch 2: 136.9 min\n* Base to Branch 3: 96.0 min\n* Base to Branch 4: 144.0 min\n* Base to Branch 5: 112.3 min\n* Base to Hub: 8.5 min\n* Branch 1 to Branch 2: 223.0 min\n* Branch 1 to Branch 3: 135.4 min\n* Branch 1 to Branch 4: 75.0 min\n* Branch 1 to Branch 5: 99.4 min\n* Branch 1 to Hub: 170.4 min\n* Branch 2 to Branch 3: 87.7 min\n* Branch 2 to Branch 4: 158.4 min\n* Branch 2 to Branch 5: 124.5 min\n* Branch 2 to Hub: 135.9 min\n* Branch 3 to Branch 4: 76.1 min\n* Branch 3 to Branch 5: 38.6 min\n* Branch 3 to Hub: 100.7 min\n* Branch 4 to Branch 5: 38.3 min\n* Branch 4 to Hub: 151.5 min\n* Branch 5 to Hub: 119.0 min\n\nThe objective is to determine the minimal total duration circuit that performs a single inspection at every facility and concludes back at the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

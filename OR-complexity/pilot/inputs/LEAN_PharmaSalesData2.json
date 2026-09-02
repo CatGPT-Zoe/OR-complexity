@@ -1,0 +1,39 @@
+{
+  "instance_id": "LEAN_PharmaSalesData2",
+  "annotation_mode": "semantic",
+  "problem_text": "A pharmacy chain needs to replenish its drug inventory. The ‘products.csv’ file provides a table of benefits associated with each drug product. There are overall stock capacity limits for pharmacy chains detailed in the ‘capacity.csv’ file.Our objective is to decide which drugs to order each day and in what quantities to maximise the overall benefit while adhering to the overall stock capacity. The decision variable x_i represents the number of units of the ith drug to be ordered each day.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Capacity |\n|---|\n| 520 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| NSAIDs | 250 | 913 |\n| Antirheumatic Drugs | 178 | 754 |\n| Acetic Acid Derivatives | 313 | 428 |\n| Antibiotics | 301 | 711 |\n| Antiviral Drugs | 425 | 350 |\n| Antifungal Agents | 260 | 159 |\n| Antidepressants | 848 | 353 |\n| Antipsychotics | 934 | 291 |\n| Antihistamines | 114 | 302 |\n| Corticosteroids | 1357 | 50 |\n| Beta Blockers | 156 | 250 |\n| Calcium Channel Blockers | 1780 | 178 |\n| ACE Inhibitors | 695 | 313 |\n| Angiotensin II Receptor Blockers | 405 | 378 |\n| Diuretics | 320 | 94 |\n| Statins | 320 | 97 |\n| Insulin | 1357 | 470 |\n| Anticoagulants | 1357 | 341 |\n| Antiepileptic Drugs | 405 | 121 |\n| Antiemetics | 998 | 61 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA9/PharmaSalesData2/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA9/PharmaSalesData2/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

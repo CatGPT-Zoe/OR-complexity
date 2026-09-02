@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a procurement and blood plasma storage strategy for a critical treatment over a seven-day schedule.  \nThe initial stock of plasma at the start of the schedule is 32 units.  \nOn each day \\( t = 1, \\dots, 7 \\), the supplier permits the hospital to request a shipment whose volume must fall between 19 and 70 units.  \nHowever, each requested shipment requires a lead time of 1 day before it becomes available for treatments or to replenish the stock.  \nThe daily consumption of plasma for treatments is forecasted as follows:  \n* Day 1: 55 units  \n* Day 2: 57 units  \n* Day 3: 30 units  \n* Day 4: 30 units  \n* Day 5: 12 units  \n* Day 6: 43 units  \n* Day 7: 19 units  \n\nTreatment shortfalls are tolerated, but any unmet consumption is not carried forward to subsequent days.  \nThroughout the schedule, plasma quantities may be fractional, and the total amount of plasma kept in storage at any moment must not exceed the refrigeration capacity of 48 units.  \nThe total expense over the seven days comprises three elements: the procurement cost, which is 4 per unit ordered; the refrigeration cost, which is 3 per unit of plasma kept from one day to the next; and the penalty for treatment shortfall, which is 10 per unit of unmet consumption. The objective is to decide the optimal shipment volume for each day and monitor the resulting stock and shortfall levels so as to minimize the total expense.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

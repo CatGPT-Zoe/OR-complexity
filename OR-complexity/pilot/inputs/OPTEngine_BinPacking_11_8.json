@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load packages onto identical delivery trucks. The packages are as follows:\n* Package Alpha: weight 33kg\n* Package Beta: weight 40kg\n* Package Gamma: weight 40kg\n* Package Delta: weight 51kg\n* Package Epsilon: weight 63kg\n* Package Zeta: weight 46kg\n* Package Eta: weight 37kg\n* Package Theta: weight 68kg\n* Package Iota: weight 58kg\n* Package Kappa: weight 41kg\n* Package Lambda: weight 30kg\n\nEach truck has a maximum load capacity of 100 kg. Load all packages using the fewest trucks possible. Every package must be placed on exactly one truck, and the total weight loaded onto any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

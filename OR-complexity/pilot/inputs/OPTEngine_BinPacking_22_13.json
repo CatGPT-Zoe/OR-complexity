@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_22_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of fragile laboratory samples into identical reinforced shipping boxes. The specimens are as follows:\n\n* Specimen Alpha: mass 44 units\n* Specimen Beta: mass 53 units\n* Specimen Gamma: mass 70 units\n* Specimen Delta: mass 52 units\n* Specimen Epsilon: mass 57 units\n* Specimen Zeta: mass 47 units\n* Specimen Eta: mass 52 units\n* Specimen Theta: mass 55 units\n* Specimen Iota: mass 48 units\n* Specimen Kappa: mass 36 units\n* Specimen Lambda: mass 60 units\n* Specimen Mu: mass 48 units\n* Specimen Nu: mass 37 units\n* Specimen Xi: mass 58 units\n* Specimen Omicron: mass 39 units\n* Specimen Pi: mass 52 units\n* Specimen Rho: mass 45 units\n* Specimen Sigma: mass 41 units\n* Specimen Tau: mass 51 units\n* Specimen Upsilon: mass 61 units\n* Specimen Phi: mass 44 units\n* Specimen Chi: mass 37 units\n\nEach shipping box is certified to support a maximum load of 100 mass units. The coordinator must arrange all specimens into these boxes, aiming to minimize the total number of boxes utilized. Every specimen must be placed into precisely one box, and the cumulative mass within any given box must not surpass its certified capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

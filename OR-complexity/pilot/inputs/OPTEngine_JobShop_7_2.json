@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 7 delivery trucks to transport 7 different shipments across a network of 7 distribution hubs.\n\nEach shipment consists of a fixed route represented as pairs (Hub, Handling time),\nwhere each pair specifies the hub where the shipment must be processed and the amount of time required for handling.\nThe order of pairs indicates the required sequence in which the hubs must be visited.\n\nShipment details:\n* S1 follows the route: (H5, 8) → (H7, 7) → (H3, 1) → (H2, 8) → (H4, 1) → (H1, 9) → (H6, 7)\n* S2 follows the route: (H7, 8) → (H4, 3) → (H2, 4) → (H6, 8) → (H1, 5) → (H5, 6) → (H3, 8)\n* S3 follows the route: (H5, 1) → (H2, 3) → (H7, 6) → (H1, 1) → (H4, 6) → (H6, 10) → (H3, 3)\n* S4 follows the route: (H7, 3) → (H4, 7) → (H6, 1) → (H2, 6) → (H5, 9) → (H3, 4) → (H1, 6)\n* S5 follows the route: (H2, 10) → (H5, 8) → (H6, 1) → (H4, 4) → (H1, 8) → (H7, 10) → (H3, 6)\n* S6 follows the route: (H5, 4) → (H6, 8) → (H2, 10) → (H1, 4) → (H4, 2) → (H3, 9) → (H7, 7)\n* S7 follows the route: (H6, 6) → (H7, 9) → (H3, 6) → (H5, 8) → (H2, 7) → (H1, 8) → (H4, 6)\n\nEach shipment must be processed continuously once it starts at a hub and cannot be interrupted,\nand each hub can only handle one shipment at a time.\nThe objective is to determine the processing schedule for all shipments at the hubs\nso that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

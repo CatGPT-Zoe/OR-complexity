@@ -1,0 +1,27 @@
+{
+  "instance_id": "LEAN_NRM5",
+  "annotation_mode": "semantic",
+  "problem_text": "A restaurant is planning to sell a variety of pizzas, with the revenue details for each type provided in the ‘Revenue’ column of the dataset. Each pizza type has its own demand level. The objective is to maximize the total revenue based on the available initial inventory of all kinds of pizzas, as detailed in the ‘Initial Inventory’ column. During the sales horizon, demand for each pizza type is assumed to be deterministic and known in advance, with demand information specified in the ‘Demand’ column. The decision variables, denoted as x_i, represent the number of units of each pizza type to be fulfilled, where each decision variable is a non-negative integer.\n\nBecause the fulfillment quantity for each pizza type cannot exceed either the available initial inventory or the corresponding demand, the decision variables must satisfy both inventory and demand constraints. The resulting problem can therefore be formulated as a deterministic integer optimization model that determines the optimal fulfillment quantities in order to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "PizzaSalesDataset",
+      "indices": [
+        "Product Name",
+        "Revenue",
+        "Demand",
+        "Initial Inventory"
+      ],
+      "unit": "",
+      "values": "| Product Name | Revenue | Demand | Initial Inventory |\n|---|---|---|---|\n| bbq_ckn_l | 20.75 | 1960 | 9920 |\n| bbq_ckn_m | 16.75 | 1884 | 9560 |\n| bbq_ckn_s | 12.75 | 963 | 4840 |\n| big_meat_s | 12 | 3729 | 19140 |\n| brie_carre_s | 23.65 | 970 | 4900 |\n| calabrese_l | 20.25 | 550 | 2760 |\n| calabrese_m | 16.25 | 1116 | 5620 |\n| calabrese_s | 12.25 | 198 | 990 |\n| cali_ckn_l | 20.75 | 1823 | 9270 |\n| cali_ckn_m | 16.75 | 1858 | 9440 |\n| cali_ckn_s | 12.75 | 992 | 4990 |\n| ckn_alfredo_l | 20.75 | 375 | 1880 |\n| ckn_alfredo_m | 16.75 | 1400 | 7030 |\n| ckn_alfredo_s | 12.75 | 192 | 960 |\n| ckn_pesto_l | 20.75 | 791 | 3990 |\n| ckn_pesto_m | 16.75 | 550 | 2760 |\n| ckn_pesto_s | 12.75 | 593 | 2980 |\n| classic_dlx_l | 20.5 | 944 | 4730 |\n| classic_dlx_m | 16 | 2340 | 11810 |\n| classic_dlx_s | 12 | 1586 | 7990 |\n| five_cheese_l | 18.5 | 2769 | 14090 |\n| four_cheese_l | 17.95 | 2589 | 13160 |\n| four_cheese_m | 14.75 | 1163 | 5860 |\n| green_garden_l | 20.25 | 189 | 950 |\n| green_garden_m | 16 | 602 | 3020 |\n| green_garden_s | 12 | 1193 | 6000 |\n| hawaiian_l | 16.5 | 1815 | 9190 |\n| hawaiian_m | 13.25 | 956 | 4830 |\n| hawaiian_s | 10.5 | 2021 | 10200 |\n| ital_cpcllo_l | 20.5 | 1447 | 7320 |\n| ital_cpcllo_m | 16 | 803 | 4040 |\n| ital_cpcllo_s | 12 | 602 | 3020 |\n| ital_supr_l | 20.75 | 1482 | 7470 |\n| ital_supr_m | 16.5 | 1861 | 9410 |\n| ital_supr_s | 12.5 | 390 | 1960 |\n| ital_veggie_l | 21 | 380 | 1900 |\n| ital_veggie_m | 16.75 | 969 | 4860 |\n| ital_veggie_s | 12.75 | 607 | 3050 |\n| mediterraneo_l | 20.25 | 734 | 3700 |\n| mediterraneo_m | 16 | 546 | 2750 |\n| mediterraneo_s | 12 | 577 | 2890 |\n| mexicana_l | 20.25 | 1711 | 8670 |\n| mexicana_m | 16 | 907 | 4550 |\n| mexicana_s | 12 | 322 | 1620 |\n| napolitana_l | 20.5 | 1123 | 5660 |\n| napolitana_m | 16 | 853 | 4270 |\n| napolitana_s | 12 | 939 | 4710 |\n| pep_msh_pep_l | 17.5 | 765 | 3840 |\n| pep_msh_pep_m | 14.5 | 788 | 3970 |\n| pep_msh_pep_s | 11 | 1148 | 5780 |\n| pepperoni_l | 15.25 | 1440 | 7280 |\n| pepperoni_m | 12.5 | 1857 | 9390 |\n| pepperoni_s | 9.75 | 1490 | 7510 |\n| peppr_salami_l | 20.75 | 1376 | 6960 |\n| peppr_salami_m | 16.5 | 852 | 4280 |\n| peppr_salami_s | 12.5 | 640 | 3220 |\n| prsc_argla_l | 20.75 | 858 | 4350 |\n| prsc_argla_m | 16.5 | 1183 | 5980 |\n| prsc_argla_s | 12.5 | 844 | 4240 |\n| sicilian_l | 20.25 | 1209 | 6130 |\n| sicilian_m | 16.25 | 1135 | 5740 |\n| sicilian_s | 12.25 | 1482 | 7510 |\n| soppressata_l | 20.75 | 806 | 4050 |\n| soppressata_m | 16.5 | 536 | 2680 |\n| soppressata_s | 12.5 | 576 | 2880 |\n| southw_ckn_l | 20.75 | 2009 | 10160 |\n| southw_ckn_m | 16.75 | 1060 | 5340 |\n| southw_ckn_s | 12.75 | 733 | 3670 |\n| spicy_ital_l | 20.75 | 2198 | 11090 |\n| spicy_ital_m | 16.5 | 808 | 4080 |\n| spicy_ital_s | 12.5 | 807 | 4070 |\n| spin_pesto_l | 20.75 | 563 | 2840 |\n| spin_pesto_m | 16.5 | 563 | 2820 |\n| spin_pesto_s | 12.5 | 801 | 4040 |\n| spinach_fet_l | 20.25 | 882 | 4450 |\n| spinach_fet_m | 16 | 1120 | 5620 |\n| spinach_fet_s | 12 | 876 | 4390 |\n| spinach_supr_l | 20.75 | 563 | 2830 |\n| spinach_supr_m | 16.5 | 533 | 2670 |\n| spinach_supr_s | 12.5 | 794 | 4000 |\n| thai_ckn_l | 20.75 | 2776 | 14100 |\n| thai_ckn_m | 16.75 | 955 | 4810 |\n| thai_ckn_s | 12.75 | 956 | 4800 |\n| the_greek_l | 20.5 | 510 | 2550 |\n| the_greek_m | 16 | 560 | 2810 |\n| the_greek_s | 12 | 604 | 3040 |\n| the_greek_xl | 25.5 | 1096 | 5520 |\n| the_greek_xxl | 35.95 | 56 | 280 |\n| veggie_veg_l | 20.25 | 850 | 4270 |\n| veggie_veg_m | 16 | 1265 | 6350 |\n| veggie_veg_s | 12 | 921 | 4640 |\n| fried_duck_l | 16.5 | 733 | 2830 |\n| fried_duck_m | 12.5 | 2198 | 2670 |\n| fried_duck_s | 21 | 808 | 4000 |\n| mapo_Tofu_l | 16.75 | 563 | 2680 |\n| mapo_Tofu_m | 12.75 | 801 | 2880 |\n| mapo_Tofu_s | 20.25 | 882 | 10160 |\n| sea_food_l | 16 | 1120 | 2820 |\n| sea_food_m | 20.75 | 794 | 4040 |\n| sea_food_s | 16.5 | 2776 | 4450 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/NRM_testing/NRM5/PizzaSalesDataset.csv",
+      "role": "parameter_table",
+      "table": "PizzaSalesDataset"
+    }
+  ],
+  "notes": ""
+}

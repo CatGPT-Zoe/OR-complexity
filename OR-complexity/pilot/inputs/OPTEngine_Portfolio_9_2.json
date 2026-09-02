@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_9_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute budget resources across 9 infrastructure projects to maximize the overall efficiency score of the allocation plan.  \nThe characteristics of each project are as follows:  \n* Project A: efficiency score 0.192, complexity 0.069, allocation bounds [0.056, 0.449]  \n* Project B: efficiency score 0.107, complexity 0.186, allocation bounds [0.032, 0.819]  \n* Project C: efficiency score 0.165, complexity 0.101, allocation bounds [0.047, 0.396]  \n* Project D: efficiency score 0.143, complexity 0.218, allocation bounds [0.027, 0.496]  \n* Project E: efficiency score 0.074, complexity 0.223, allocation bounds [0.025, 0.647]  \n* Project F: efficiency score 0.033, complexity 0.260, allocation bounds [0.010, 0.488]  \n* Project G: efficiency score 0.031, complexity 0.293, allocation bounds [0.029, 0.758]  \n* Project H: efficiency score 0.099, complexity 0.048, allocation bounds [0.038, 0.599]  \n* Project I: efficiency score 0.107, complexity 0.117, allocation bounds [0.062, 0.609]  \n\nEach project must receive a fraction of the total budget within its specified bounds, and the sum of all fractions must equal one.  \nTo ensure timely completion, the set of high-priority projects L = {A, B, D, E, F, G, H, I} must together receive at least 0.491 of the total budget.  \nAdditionally, the overall complexity index of the portfolio must not exceed 0.209, and the total efficiency score must be at least 0.092.  \nDetermine the optimal budget allocation across all projects that maximizes the total efficiency score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

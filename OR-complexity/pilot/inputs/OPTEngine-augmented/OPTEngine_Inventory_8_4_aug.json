@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must devise a procurement and stock management strategy for a critical fuel additive over an operational window of 8 consecutive weeks.  \nThe starting stockpile at the outset of the planning interval is 75 liters.  \nIn each week \\( t = 1, \\dots, 8 \\), the supplier permits the center to issue a purchase request, the volume of which must be between 13 and 39 liters.  \nNevertheless, every order placed is subject to a 2‑week lead time before it becomes available for consumption or to rebuild reserves.  \nThe weekly consumption requirement for the additive is as follows:  \n* Week 1: 14 liters  \n* Week 2: 18 liters  \n* Week 3: 36 liters  \n* Week 4: 29 liters  \n* Week 5: 45 liters  \n* Week 6: 36 liters  \n* Week 7: 57 liters  \n* Week 8: 19 liters  \n\nStock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be deferred.  \nThroughout the planning horizon, additive quantities may be treated as continuous, and the total volume of physically stored material at any moment must not surpass the storage‑tank capacity of 75 liters.  \n\nIn the first week, the maximum allowable purchase volume is 25 liters.  \nBy week 7, the on‑site stockpile must be no less than 1 liter.  \n\nThe aggregate expense over the eight‑week span comprises three elements: the procurement cost, charged at 1 per liter ordered; the storage cost, levied at 1 per liter held over from one week to the next; and a deficit penalty, assessed at 13 per liter of unmet consumption.  \nIdentify the optimal purchase volume for each week and monitor the consequent stockpile and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

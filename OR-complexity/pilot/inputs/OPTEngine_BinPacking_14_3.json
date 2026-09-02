@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is preparing shipments for a fleet of delivery drones. Each drone can carry a maximum payload of 100 kg. The packages to be delivered are as follows:\n\n* Package Alpha: weight 58kg\n* Package Beta: weight 51kg\n* Package Charlie: weight 40kg\n* Package Delta: weight 39kg\n* Package Echo: weight 59kg\n* Package Foxtrot: weight 53kg\n* Package Golf: weight 62kg\n* Package Hotel: weight 54kg\n* Package India: weight 63kg\n* Package Juliet: weight 62kg\n* Package Kilo: weight 32kg\n* Package Lima: weight 66kg\n* Package Mike: weight 35kg\n* Package November: weight 63kg\n\nAll packages must be assigned to drones for delivery, with each package going to exactly one drone. The total weight of packages assigned to any drone must not exceed its payload capacity. The goal is to complete the deliveries using the fewest number of drones possible.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

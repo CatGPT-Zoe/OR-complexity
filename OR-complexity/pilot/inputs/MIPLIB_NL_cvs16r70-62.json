@@ -1,0 +1,25 @@
+{
+  "instance_id": "MIPLIB_NL_cvs16r70-62",
+  "annotation_mode": "semantic",
+  "problem_text": "The 'Horizon-IX' deep-space outpost is currently managed by 70 specialists who are organized into 62 distinct functional mission clusters. The specific roster showing which specialist belongs to which cluster is provided in the file `project_teams` (note that cross-trained specialists may belong to multiple clusters). The outpost is equipped with 16 High-Security Habitation Modules (HSHMs). Due to the limitations of the CO2 scrubbing systems and emergency escape pod capacity, each HSHM can safely sustain a maximum of 5 specialists. The HSHMs are arranged in a ring structure surrounding the central core, with a travel time of approximately 45 seconds between adjacent modules, a factor often considered for emergency evacuation protocols. To optimize the station's operational security, the administration aims to accommodate the maximum possible number of specialists within these secure HSHMs. Specialists who cannot be accommodated in an HSHM must reside in the 'General Assembly Area', where water recycling efficiency is 15% lower than in the secure modules, leading to higher resource consumption per capita. A critical bio-security regulation known as the 'Unit Cohesion Protocol' dictates the assignment logic: for any given mission cluster, the subset of its members selected for HSHM residency must be consolidated within a single, identical HSHM to maintain quarantine integrity. It is strictly prohibited to fragment the HSHM-assigned members of a single cluster across two or more different HSHMs. Members of a cluster can be split between their designated HSHM and the General Assembly Area. Determine the maximum number of specialists that can be assigned to the HSHMs subject to these capacity and cohesion constraints.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "project_teams",
+      "indices": [
+        "team_id",
+        "researcher_id"
+      ],
+      "unit": "",
+      "values": "| team_id | researcher_id |\n|---|---|\n| 0 | 12 |\n| 0 | 47 |\n| 0 | 50 |\n| 0 | 62 |\n| 1 | 16 |\n| 1 | 59 |\n| 2 | 15 |\n| 2 | 65 |\n| 3 | 3 |\n| 3 | 46 |\n| 3 | 50 |\n| 3 | 60 |\n| 4 | 9 |\n| 4 | 30 |\n| 4 | 44 |\n| 4 | 57 |\n| 5 | 10 |\n| 5 | 18 |\n| 6 | 23 |\n| 6 | 41 |\n| 6 | 69 |\n| 7 | 32 |\n| 7 | 53 |\n| 7 | 61 |\n| 7 | 66 |\n| 8 | 25 |\n| 8 | 28 |\n| 8 | 61 |\n| 9 | 1 |\n| 9 | 11 |\n| 9 | 31 |\n| 9 | 49 |\n| 10 | 7 |\n| 10 | 38 |\n| 10 | 48 |\n| 11 | 9 |\n| 11 | 25 |\n| 11 | 29 |\n| 12 | 2 |\n| 12 | 20 |\n| 12 | 50 |\n| 12 | 59 |\n| 13 | 45 |\n| 13 | 66 |\n| 14 | 29 |\n| 14 | 39 |\n| 14 | 56 |\n| 14 | 60 |\n| 15 | 19 |\n| 15 | 41 |\n| 16 | 30 |\n| 16 | 35 |\n| 16 | 36 |\n| 17 | 3 |\n| 17 | 12 |\n| 17 | 56 |\n| 17 | 62 |\n| 18 | 19 |\n| 18 | 25 |\n| 18 | 69 |\n| 19 | 46 |\n| 19 | 58 |\n| 20 | 33 |\n| 20 | 35 |\n| 20 | 44 |\n| 20 | 66 |\n| 21 | 6 |\n| 21 | 18 |\n| 21 | 38 |\n| 21 | 58 |\n| 22 | 2 |\n| 22 | 10 |\n| 22 | 34 |\n| 22 | 59 |\n| 23 | 11 |\n| 23 | 30 |\n| 24 | 22 |\n| 24 | 27 |\n| 24 | 39 |\n| 24 | 51 |\n| 25 | 33 |\n| 25 | 34 |\n| 25 | 42 |\n| 25 | 58 |\n| 26 | 3 |\n| 26 | 37 |\n| 26 | 50 |\n| 26 | 63 |\n| 27 | 21 |\n| 27 | 44 |\n| 27 | 59 |\n| 28 | 7 |\n| 28 | 22 |\n| 28 | 32 |\n| 28 | 54 |\n| 29 | 1 |\n| 29 | 23 |\n| 29 | 46 |\n| 29 | 55 |\n| 30 | 37 |\n| 30 | 44 |\n| 30 | 64 |\n| 31 | 8 |\n| 31 | 25 |\n| 31 | 46 |\n| 32 | 28 |\n| 32 | 50 |\n| 33 | 32 |\n| 33 | 61 |\n| 33 | 68 |\n| 34 | 13 |\n| 34 | 42 |\n| 34 | 45 |\n| 34 | 50 |\n| 35 | 32 |\n| 35 | 44 |\n| 35 | 61 |\n| 36 | 15 |\n| 36 | 53 |\n| 36 | 62 |\n| 37 | 17 |\n| 37 | 58 |\n| 37 | 67 |\n| 38 | 22 |\n| 38 | 24 |\n| 38 | 48 |\n| 38 | 51 |\n| 39 | 46 |\n| 39 | 61 |\n| 40 | 53 |\n| 40 | 57 |\n| 40 | 64 |\n| 40 | 67 |\n| 41 | 0 |\n| 41 | 20 |\n| 41 | 34 |\n| 41 | 52 |\n| 42 | 0 |\n| 42 | 17 |\n| 42 | 69 |\n| 43 | 5 |\n| 43 | 25 |\n| 43 | 52 |\n| 43 | 65 |\n| 44 | 57 |\n| 44 | 69 |\n| 45 | 39 |\n| 45 | 47 |\n| 45 | 54 |\n| 45 | 60 |\n| 46 | 14 |\n| 46 | 64 |\n| 47 | 12 |\n| 47 | 26 |\n| 48 | 3 |\n| 48 | 25 |\n| 48 | 59 |\n| 48 | 69 |\n| 49 | 1 |\n| 49 | 20 |\n| 49 | 33 |\n| 49 | 69 |\n| 50 | 1 |\n| 50 | 41 |\n| 50 | 55 |\n| 51 | 26 |\n| 51 | 40 |\n| 51 | 60 |\n| 52 | 6 |\n| 52 | 22 |\n| 52 | 29 |\n| 53 | 34 |\n| 53 | 45 |\n| 53 | 52 |\n| 54 | 5 |\n| 54 | 17 |\n| 54 | 25 |\n| 55 | 31 |\n| 55 | 52 |\n| 56 | 17 |\n| 56 | 42 |\n| 56 | 43 |\n| 56 | 47 |\n| 57 | 5 |\n| 57 | 9 |\n| 57 | 53 |\n| 57 | 56 |\n| 58 | 2 |\n| 58 | 4 |\n| 58 | 27 |\n| 58 | 65 |\n| 59 | 7 |\n| 59 | 14 |\n| 59 | 15 |\n| 59 | 34 |\n| 60 | 8 |\n| 60 | 25 |\n| 60 | 54 |\n| 61 | 18 |\n| 61 | 19 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/cvs16r70-62/data/project_teams.csv",
+      "role": "parameter_table",
+      "table": "project_teams"
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_24",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Package 1: weight 38 tons\n* Package 2: weight 47 tons\n* Package 3: weight 65 tons\n* Package 4: weight 30 tons\n* Package 5: weight 35 tons\n* Package 6: weight 50 tons\n* Package 7: weight 49 tons\n* Package 8: weight 50 tons\n* Package 9: weight 32 tons\n* Package 10: weight 35 tons\n* Package 11: weight 69 tons\n* Package 12: weight 30 tons\n* Package 13: weight 48 tons\n* Package 14: weight 37 tons\n* Package 15: weight 40 tons\n* Package 16: weight 47 tons\n* Package 17: weight 42 tons\n* Package 18: weight 62 tons\n* Package 19: weight 65 tons\n* Package 20: weight 52 tons\n* Package 21: weight 58 tons\n* Package 22: weight 35 tons\n* Package 23: weight 56 tons\n* Package 24: weight 62 tons\n\nEach cargo plane can carry up to 100 tons. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total weight on a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_37_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of archival boxes onto identical pallets for secure transport. The boxes have the following masses:\n\n* Box A: mass 31kg\n* Box B: mass 43kg\n* Box C: mass 70kg\n* Box D: mass 49kg\n* Box E: mass 34kg\n* Box F: mass 43kg\n* Box G: mass 49kg\n* Box H: mass 35kg\n* Box I: mass 43kg\n* Box J: mass 40kg\n* Box K: mass 45kg\n* Box L: mass 66kg\n* Box M: mass 57kg\n* Box N: mass 70kg\n* Box O: mass 50kg\n* Box P: mass 48kg\n* Box Q: mass 40kg\n* Box R: mass 45kg\n* Box S: mass 63kg\n* Box T: mass 61kg\n* Box U: mass 30kg\n* Box V: mass 38kg\n* Box W: mass 61kg\n* Box X: mass 69kg\n* Box Y: mass 34kg\n* Box Z: mass 30kg\n* Box [: mass 49kg\n* Box \\: mass 58kg\n* Box ]: mass 47kg\n* Box ^: mass 42kg\n* Box _: mass 62kg\n* Box `: mass 64kg\n* Box a: mass 38kg\n* Box b: mass 70kg\n* Box c: mass 51kg\n* Box d: mass 49kg\n* Box e: mass 38kg\n\nEach pallet has a maximum safe load capacity of 100 kg. The coordinator must assign every box to exactly one pallet, ensuring the combined mass on any pallet does not surpass its load limit. The objective is to complete this allocation while utilizing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

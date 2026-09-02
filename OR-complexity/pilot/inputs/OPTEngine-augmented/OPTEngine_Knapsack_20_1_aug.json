@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a cargo shipment for a specialized transport mission across three distinct zones. They must select a combination of cargo units to maximize total utility points while adhering to the vehicle's total load limit.\n\nThe available cargo units are:\n* Unit A: load 1 ton, utility 276 credits\n* Unit B: load 44 tons, utility 233 credits\n* Unit C: load 44 tons, utility 230 credits\n* Unit D: load 12 tons, utility 158 credits\n* Unit E: load 26 tons, utility 235 credits\n* Unit F: load 20 tons, utility 282 credits\n* Unit G: load 3 tons, utility 91 credits\n* Unit H: load 31 tons, utility 90 credits\n* Unit I: load 7 tons, utility 69 credits\n* Unit J: load 31 tons, utility 154 credits\n* Unit K: load 47 tons, utility 166 credits\n* Unit L: load 20 tons, utility 210 credits\n* Unit M: load 3 tons, utility 146 credits\n* Unit N: load 22 tons, utility 246 credits\n* Unit O: load 5 tons, utility 40 credits\n* Unit P: load 49 tons, utility 160 credits\n* Unit Q: load 15 tons, utility 242 credits\n* Unit R: load 41 tons, utility 168 credits\n* Unit S: load 36 tons, utility 115 credits\n* Unit T: load 25 tons, utility 44 credits\n\nFurthermore, due to compatibility protocols, exactly one of Unit A and Unit B must be included in the shipment.\n\nIf Unit C is selected, it necessitates special handling equipment that reduces the vehicle's effective load capacity by 10 tons.\nThe vehicle's maximum permissible gross load is 337 tons. The manager must determine the optimal set of units to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

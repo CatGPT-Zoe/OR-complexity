@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a cargo plane. Available packages are:\n* Package 1: weight 24kg, revenue 232 credits\n* Package 2: weight 50kg, revenue 134 credits\n* Package 3: weight 35kg, revenue 22 credits\n* Package 4: weight 34kg, revenue 269 credits\n* Package 5: weight 8kg, revenue 30 credits\n* Package 6: weight 37kg, revenue 193 credits\n* Package 7: weight 3kg, revenue 197 credits\n* Package 8: weight 12kg, revenue 184 credits\n* Package 9: weight 18kg, revenue 258 credits\n* Package 10: weight 31kg, revenue 224 credits\n* Package 11: weight 1kg, revenue 130 credits\n* Package 12: weight 42kg, revenue 254 credits\n* Package 13: weight 48kg, revenue 186 credits\n* Package 14: weight 44kg, revenue 92 credits\n* Package 15: weight 3kg, revenue 255 credits\n* Package 16: weight 34kg, revenue 94 credits\n* Package 17: weight 25kg, revenue 157 credits\n* Package 18: weight 44kg, revenue 257 credits\n\nThe aircraft has a maximum cargo capacity of 345 kg. Choose the package combination that maximizes total revenue without exceeding this weight limit. Each package is either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

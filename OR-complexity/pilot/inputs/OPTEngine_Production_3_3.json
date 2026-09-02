@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is tasked with distributing three distinct categories of cargo via a network of three specialized transportation hubs. The revenue generated per ton of each cargo category is as follows:\n* For Cargo Alpha, revenue is 13.269 per ton\n* For Cargo Beta, revenue is 15.598 per ton\n* For Cargo Gamma, revenue is 13.212 per ton\n\nThe handling duration required per ton at each hub is detailed below:\n* For Cargo Alpha, Hub 1 requires 1.666 (ton-hours), Hub 2 requires 1.173 (ton-hours), Hub 3 requires 1.935 (ton-hours)\n* For Cargo Beta, Hub 1 requires 1.286 (ton-hours), Hub 2 requires 1.258 (ton-hours), Hub 3 requires 1.001 (ton-hours)\n* For Cargo Gamma, Hub 1 requires 1.273 (ton-hours), Hub 2 requires 0.893 (ton-hours), Hub 3 requires 1.236 (ton-hours)\n\n* The cumulative operational window for Hub 1 cannot surpass 167.804 hours.\n* The cumulative operational window for Hub 2 cannot surpass 117.614 hours.\n* The cumulative operational window for Hub 3 cannot surpass 129.579 hours.\n\nUnder the stipulation that the aggregate processing time for each respective hub must remain within its allocated temporal capacity, determine the optimal tonnage allocation for each cargo category to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

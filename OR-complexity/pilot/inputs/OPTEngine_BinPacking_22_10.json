@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_22_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of research equipment components into identical transport crates for an expedition. The components are as follows:\n\n* Component Alpha: mass 55 units\n* Component Beta: mass 66 units\n* Component Gamma: mass 56 units\n* Component Delta: mass 65 units\n* Component Epsilon: mass 35 units\n* Component Zeta: mass 46 units\n* Component Eta: mass 60 units\n* Component Theta: mass 44 units\n* Component Iota: mass 37 units\n* Component Kappa: mass 48 units\n* Component Lambda: mass 39 units\n* Component Mu: mass 53 units\n* Component Nu: mass 36 units\n* Component Xi: mass 38 units\n* Component Omicron: mass 33 units\n* Component Pi: mass 38 units\n* Component Rho: mass 67 units\n* Component Sigma: mass 65 units\n* Component Tau: mass 42 units\n* Component Upsilon: mass 30 units\n* Component Phi: mass 32 units\n* Component Chi: mass 55 units\n\nEach transport crate has a maximum safe load capacity of 100 mass units. The coordinator must place every component into precisely one crate, ensuring the aggregate mass within any given crate does not surpass the capacity limit. The objective is to complete this allocation utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

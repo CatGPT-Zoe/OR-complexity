@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_6_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a circuit of maintenance checks across six regional depots, positioned at the following grid points:\nDepot Alpha: (104,145)\nDepot Beta: (130,79)\nDepot Gamma: (166,91)\nDepot Delta: (99,168)\nDepot Epsilon: (64,39)\nDepot Zeta: (143,176)\n\nThe travel distances between depots, in kilometers, are predetermined:\nAlpha to Gamma: 82.2 km\nAlpha to Delta: 23.5 km\nAlpha to Epsilon: 113.3 km\nAlpha to Zeta: 49.8 km\nBeta to Gamma: 37.9 km\nBeta to Delta: 94.2 km\nBeta to Epsilon: 77.2 km\nBeta to Zeta: 97.9 km\nGamma to Delta: 102.1 km\nGamma to Epsilon: 114.5 km\nGamma to Zeta: 88.1 km\nDelta to Epsilon: 133.7 km\nDelta to Zeta: 44.7 km\nEpsilon to Zeta: 158.1 km\n\nDirect travel between Depot Alpha and Depot Beta is not permitted due to a permanent route closure. Furthermore, the final routing plan is required to incorporate exactly one—but not both—of the following two critical connections: the link between Depot Beta and Depot Gamma, or the link between Depot Gamma and Depot Delta.\n\nThe objective is to determine the minimal total travel distance for a closed loop that visits each depot precisely one time before returning to the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

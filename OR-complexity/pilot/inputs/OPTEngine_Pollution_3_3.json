@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A municipal water authority aims to devise a nutrient runoff mitigation strategy to lower total phosphorus discharge from several agricultural drainage points. Currently, no intervention practices are in place.\n\nThe baseline characteristics for each drainage outlet are as follows:\n* For Field A, the runoff coefficient is 1.595, and the land area is 106.174.\n* For Field B, the runoff coefficient is 1.794, and the land area is 134.521.\n* For Field C, the runoff coefficient is 0.803, and the land area is 197.077.\n\nTo abate discharges, a suite of best management practices (BMPs) can be implemented, each associated with a specific capture efficiency:\n* Implementing Practice X captures 72% of the nutrient load.\n* Implementing Practice Y captures 72% of the nutrient load.\n* Implementing Practice Z captures 84% of the nutrient load.\n\nAdopting a practice for a given field incurs an additional cost per unit area. The cost matrix for all field–practice pairings is detailed below:\n\n| Field \\ Practice | Practice X | Practice Y | Practice Z |\n|---|---|---|---|\n| Field A | 129.91 | 53.499 | 182.03 |\n| Field B | 173.331 | 23.463 | 55.221 |\n| Field C | 137.106 | 50.705 | 35.139 |\n\nThe authority must decide which practices to apply to each field (fields may adopt multiple practices concurrently), and it is permissible for a field to have a portion of its area remain untreated. The objective is to guarantee that the aggregate phosphorus discharge is diminished by at least a fraction P = 0.284 of the baseline load, while minimizing the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

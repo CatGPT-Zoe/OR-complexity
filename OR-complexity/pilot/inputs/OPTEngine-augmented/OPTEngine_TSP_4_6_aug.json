@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate drone inspections at four remote monitoring stations with the following GPS coordinates:  \nStation Alpha: (200, 77)  \nStation Beta: (122, 91)  \nStation Gamma: (149, 55)  \nStation Delta: (129, 35)  \n\nThe flight distances between stations (in kilometers) are predetermined:  \nAlpha to Gamma: 55.5 km  \nAlpha to Delta: 82.5 km  \nBeta to Gamma: 45.0 km  \nBeta to Delta: 56.4 km  \nGamma to Delta: 28.3 km  \n\nDue to airspace restrictions, a direct flight between Station Alpha and Station Beta is prohibited.  \nMoreover, the flight plan must incorporate exactly one of the following two mandatory segments: either the route from Beta to Gamma, or the route from Gamma to Delta.  \n\nThe objective is to determine the minimal total flight path that visits every station precisely once and returns to the origin station, while adhering to the stipulated routing constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

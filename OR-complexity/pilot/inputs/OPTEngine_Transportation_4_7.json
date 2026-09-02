@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing firm must allocate its production of a specialized component across four distinct assembly lines, ensuring that the total distribution expense is minimized.\n\nThe component inventory available at each fabrication facility (set F) is as follows:\n*Facility F1 has 69 units in stock.\n*Facility F2 has 88 units.\n*Facility F3 holds 189 units.\n*Facility F4 maintains 59 units.\n\nThe requisite number of components for each assembly line (set L) is detailed below:\n*Line L1 requires 181 units.\n*Line L2 requires 46 units.\n*Line L3 requires 39 units.\n*Line L4 requires 95 units.\n\nThe per-unit handling and transit cost from each fabrication facility to each assembly line is provided in the accompanying matrix:\n\n| From / To | L1 | L2 | L3 | L4 |\n|-----------|----|----|----|----|\n| F1        | 2  | 12 | 7  | 8  |\n| F2        | 4  | 12 | 18 | 14 |\n| F3        | 20 | 5  | 8  | 6  |\n| F4        | 6  | 14 | 1  | 6  |\n\nDetermine the optimal shipment quantities to achieve the lowest possible aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_5_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing plant needs to schedule 5 different product batches through 5 specialized workstations.\n\nEach product batch must follow a predetermined routing sequence through the workstations, represented as (Workstation, Processing duration) pairs, where each pair specifies the workstation required and the time needed for that processing step. The sequence of pairs indicates the mandatory order in which the processing steps must be completed.\n\nBatch processing requirements:\n* Batch P1 follows the route: (WS1, 5) → (WS2, 5) → (WS4, 9) → (WS3, 6) → (WS5, 3)\n* Batch P2 follows the route: (WS5, 7) → (WS1, 3) → (WS4, 3) → (WS2, 4) → (WS3, 6)\n* Batch P3 follows the route: (WS5, 6) → (WS2, 7) → (WS1, 1) → (WS3, 3) → (WS4, 10)\n* Batch P4 follows the route: (WS1, 7) → (WS4, 5) → (WS5, 9) → (WS3, 7) → (WS2, 3)\n* Batch P5 follows the route: (WS5, 4) → (WS4, 8) → (WS2, 6) → (WS3, 9) → (WS1, 1)\n\nEach processing step must run continuously without interruption once initiated, and each workstation can only handle one processing step at any given time. The objective is to determine the optimal processing sequence for all operations across the workstations to minimize the total production completion time for all batches.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

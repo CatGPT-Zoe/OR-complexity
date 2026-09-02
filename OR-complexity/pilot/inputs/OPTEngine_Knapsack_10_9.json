@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a cargo plane. The available containers are:\n\n* Container 1: weight 40 kg, revenue 11 dollars\n* Container 2: weight 18 kg, revenue 159 dollars\n* Container 3: weight 47 kg, revenue 126 dollars\n* Container 4: weight 10 kg, revenue 157 dollars\n* Container 5: weight 13 kg, revenue 63 dollars\n* Container 6: weight 28 kg, revenue 245 dollars\n* Container 7: weight 46 kg, revenue 179 dollars\n* Container 8: weight 25 kg, revenue 96 dollars\n* Container 9: weight 22 kg, revenue 225 dollars\n* Container 10: weight 42 kg, revenue 232 dollars\n\nThe plane has a maximum cargo capacity of 203 kg. Choose the set of containers that maximizes total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

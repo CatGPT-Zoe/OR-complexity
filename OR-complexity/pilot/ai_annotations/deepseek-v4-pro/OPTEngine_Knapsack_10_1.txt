@@ -1,0 +1,184 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_Knapsack_10_1",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "containers",
+      "description": "available cargo containers for shipment",
+      "values": [
+        "Container1",
+        "Container2",
+        "Container3",
+        "Container4",
+        "Container5",
+        "Container6",
+        "Container7",
+        "Container8",
+        "Container9",
+        "Container10"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "container_volume",
+      "indices": [
+        {
+          "role": "container",
+          "set_id": "containers"
+        }
+      ],
+      "description": "volume occupied by each container",
+      "unit": "m³",
+      "values": {
+        "Container1": 27,
+        "Container2": 9,
+        "Container3": 26,
+        "Container4": 45,
+        "Container5": 9,
+        "Container6": 20,
+        "Container7": 27,
+        "Container8": 38,
+        "Container9": 20,
+        "Container10": 6
+      },
+      "data_ref": null
+    },
+    {
+      "id": "container_revenue",
+      "indices": [
+        {
+          "role": "container",
+          "set_id": "containers"
+        }
+      ],
+      "description": "revenue obtained if the container is shipped",
+      "unit": "$",
+      "values": {
+        "Container1": 33,
+        "Container2": 20,
+        "Container3": 49,
+        "Container4": 47,
+        "Container5": 225,
+        "Container6": 291,
+        "Container7": 82,
+        "Container8": 226,
+        "Container9": 191,
+        "Container10": 137
+      },
+      "data_ref": null
+    },
+    {
+      "id": "vehicle_capacity",
+      "indices": [],
+      "description": "maximum volume capacity of the transport vehicle",
+      "unit": "m³",
+      "values": 158,
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "container_activation",
+      "canonical_name": "container_activation",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "container",
+          "set_id": "containers"
+        }
+      ],
+      "description": "binary decision indicating whether each container is selected for shipment",
+      "value_semantics": "binary (0 = not shipped, 1 = shipped)",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Choose the container combination",
+        "Each container is either fully shipped or not shipped"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "objective": {
+    "sense": "maximize",
+    "canonical_name": "maximize_total_revenue",
+    "normalized_semantics": "maximize total revenue over all shipped containers",
+    "description": "Maximize the total revenue from selected containers.",
+    "entity_scope": [
+      "container_activation"
+    ],
+    "parameter_refs": [
+      "container_revenue"
+    ],
+    "source_spans": [
+      "Choose the container combination that maximizes total revenue"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "vehicle_volume_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "total volume of shipped containers must not exceed the vehicle capacity",
+      "support_entity_ids": [
+        "container_activation"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "container_activation",
+          "role": "volume_consumer",
+          "aggregation_axes": [
+            "container"
+          ],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": [
+        "container_volume",
+        "vehicle_capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The transport vehicle has a maximum capacity of 158 m³. Choose the container combination that maximizes total revenue without exceeding this volume limit."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o2",
+      "canonical_name": "binary_activation_per_container",
+      "obligation_type": "policy",
+      "normalized_semantics": "each container is either fully shipped or not shipped",
+      "support_entity_ids": [
+        "container_activation"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "container_activation",
+          "role": "binary_state",
+          "aggregation_axes": [],
+          "index_binding": {
+            "container": "c"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for each container c"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "Each container is either fully shipped or not shipped."
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": []
+}

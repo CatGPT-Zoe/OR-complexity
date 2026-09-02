@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:\n* Shipment Alpha: size 39 cubic meters\n* Shipment Beta: size 36 cubic meters\n* Shipment Gamma: size 62 cubic meters\n* Shipment Delta: size 50 cubic meters\n* Shipment Epsilon: size 68 cubic meters\n* Shipment Zeta: size 45 cubic meters\n* Shipment Eta: size 36 cubic meters\n* Shipment Theta: size 65 cubic meters\n* Shipment Iota: size 36 cubic meters\n* Shipment Kappa: size 60 cubic meters\n* Shipment Lambda: size 63 cubic meters\n* Shipment Mu: size 69 cubic meters\n* Shipment Nu: size 61 cubic meters\n* Shipment Xi: size 48 cubic meters\n* Shipment Omicron: size 51 cubic meters\n* Shipment Pi: size 69 cubic meters\n* Shipment Rho: size 35 cubic meters\n* Shipment Sigma: size 43 cubic meters\n* Shipment Tau: size 32 cubic meters\n* Shipment Upsilon: size 70 cubic meters\n* Shipment Phi: size 55 cubic meters\n* Shipment Chi: size 46 cubic meters\n* Shipment Psi: size 62 cubic meters\n* Shipment Omega: size 51 cubic meters\n* Shipment Aster: size 44 cubic meters\n* Shipment Prime: size 67 cubic meters\n* Shipment Union: size 51 cubic meters\n* Shipment Inter: size 46 cubic meters\n* Shipment Sect: size 34 cubic meters\n* Shipment Caret: size 58 cubic meters\n* Shipment Line: size 38 cubic meters\n* Shipment Grave: size 32 cubic meters\n\nEach cargo plane has a maximum capacity of 100 cubic meters. Assign all shipments using the fewest planes. Each shipment must be loaded onto exactly one plane, and the total volume in a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

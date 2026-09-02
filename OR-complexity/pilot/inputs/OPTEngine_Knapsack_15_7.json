@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_15_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager must select packages to load onto a cargo drone. The available packages are:\n* Package 1: weight 46 kg, revenue 198 credits\n* Package 2: weight 22 kg, revenue 242 credits\n* Package 3: weight 42 kg, revenue 78 credits\n* Package 4: weight 39 kg, revenue 274 credits\n* Package 5: weight 6 kg, revenue 138 credits\n* Package 6: weight 7 kg, revenue 62 credits\n* Package 7: weight 18 kg, revenue 22 credits\n* Package 8: weight 45 kg, revenue 82 credits\n* Package 9: weight 40 kg, revenue 79 credits\n* Package 10: weight 25 kg, revenue 116 credits\n* Package 11: weight 37 kg, revenue 173 credits\n* Package 12: weight 13 kg, revenue 225 credits\n* Package 13: weight 33 kg, revenue 266 credits\n* Package 14: weight 8 kg, revenue 296 credits\n* Package 15: weight 7 kg, revenue 253 credits\n\nThe drone has a maximum payload capacity of 271 kg. Choose the set of packages that maximizes total revenue without exceeding this weight limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

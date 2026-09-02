@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics hub must devise a procurement and storage strategy for a critical fuel additive over an 11-day operational cycle.  \nThe starting stock at the commencement of the cycle is precisely 1 unit.  \nIn each operational interval \\( t = 1, \\dots, 11 \\), the supplier permits the hub to procure a shipment whose volume must fall within the range of 17 to 52 units.  \nNevertheless, every shipment initiated will require a 2‑day transit period before it becomes available for consumption or to replenish reserves.  \nThe consumption of the additive in each interval is specified as follows:  \n\n* Interval 1: 29 units  \n* Interval 2: 53 units  \n* Interval 3: 30 units  \n* Interval 4: 24 units  \n* Interval 5: 33 units  \n* Interval 6: 50 units  \n* Interval 7: 40 units  \n* Interval 8: 28 units  \n* Interval 9: 47 units  \n* Interval 10: 20 units  \n* Interval 11: 18 units  \n\nStock‑outs are permissible, yet any unsatisfied consumption is considered lost and will not be recovered later.  \nThroughout the planning cycle, additive quantities may be treated as continuous, and the total volume of physically stored additive at any moment must not surpass the tank capacity of 49 units.  \nThe aggregate expenditure over the cycle comprises three elements: the procurement cost, amounting to 3 per unit shipped; the storage cost, equaling 3 per unit held over from one interval to the next; and the shortage penalty, set at 6 per unit of unmet consumption.  \nDetermine the optimal shipment volume for each interval and monitor the consequent stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

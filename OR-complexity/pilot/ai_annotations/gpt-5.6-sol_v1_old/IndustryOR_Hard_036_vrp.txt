@@ -1,0 +1,1034 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "IndustryOR_Hard_036_vrp",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "customers",
+      "name": "customers",
+      "description": "customer locations requiring delivery service",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": "depots",
+      "name": "depots",
+      "description": "central distribution depot",
+      "values": [
+        0
+      ]
+    },
+    {
+      "id": "locations",
+      "name": "locations",
+      "description": "depot and customer locations",
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": "vehicles",
+      "name": "vehicles",
+      "description": "candidate trucks available for dispatch",
+      "values": [
+        "truck_1",
+        "truck_2",
+        "truck_3",
+        "truck_4",
+        "truck_5"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "coordinates",
+      "name": "coordinates",
+      "indices": [
+        {
+          "role": "location",
+          "set_id": "locations"
+        }
+      ],
+      "unit": "unspecified coordinate units",
+      "description": "Cartesian coordinate pair of each depot or customer location",
+      "values": {
+        "0": [
+          40,
+          50
+        ],
+        "1": [
+          45,
+          68
+        ],
+        "2": [
+          45,
+          70
+        ],
+        "3": [
+          42,
+          66
+        ],
+        "4": [
+          42,
+          68
+        ],
+        "5": [
+          42,
+          65
+        ],
+        "6": [
+          40,
+          69
+        ],
+        "7": [
+          40,
+          66
+        ],
+        "8": [
+          38,
+          68
+        ],
+        "9": [
+          38,
+          70
+        ],
+        "10": [
+          35,
+          66
+        ],
+        "11": [
+          35,
+          69
+        ],
+        "12": [
+          25,
+          85
+        ],
+        "13": [
+          22,
+          75
+        ],
+        "14": [
+          22,
+          85
+        ],
+        "15": [
+          20,
+          80
+        ],
+        "16": [
+          20,
+          85
+        ],
+        "17": [
+          18,
+          75
+        ],
+        "18": [
+          15,
+          75
+        ],
+        "19": [
+          15,
+          80
+        ],
+        "20": [
+          30,
+          50
+        ]
+      },
+      "source_spans": [
+        "Central Depot (Depot 0): Coordinates: (40, 50)",
+        "The coordinates, demand, service time window, and service duration for each customer are shown in the table below."
+      ]
+    },
+    {
+      "id": "customer_demand",
+      "name": "customer_demand",
+      "indices": [
+        {
+          "role": "customer",
+          "set_id": "customers"
+        }
+      ],
+      "unit": "units",
+      "description": "goods demanded by each customer",
+      "values": {
+        "1": 10,
+        "2": 30,
+        "3": 10,
+        "4": 10,
+        "5": 10,
+        "6": 20,
+        "7": 20,
+        "8": 20,
+        "9": 10,
+        "10": 10,
+        "11": 10,
+        "12": 20,
+        "13": 30,
+        "14": 10,
+        "15": 40,
+        "16": 40,
+        "17": 20,
+        "18": 20,
+        "19": 10,
+        "20": 10
+      },
+      "source_spans": [
+        "The coordinates, demand, service time window, and service duration for each customer are shown in the table below."
+      ]
+    },
+    {
+      "id": "time_window_open",
+      "name": "time_window_open",
+      "indices": [
+        {
+          "role": "location",
+          "set_id": "locations"
+        }
+      ],
+      "unit": "minutes",
+      "description": "opening time of the hard service or depot operating window",
+      "values": {
+        "0": 0,
+        "1": 912,
+        "2": 825,
+        "3": 65,
+        "4": 727,
+        "5": 15,
+        "6": 621,
+        "7": 170,
+        "8": 255,
+        "9": 534,
+        "10": 357,
+        "11": 448,
+        "12": 652,
+        "13": 30,
+        "14": 567,
+        "15": 384,
+        "16": 475,
+        "17": 99,
+        "18": 179,
+        "19": 278,
+        "20": 10
+      },
+      "source_spans": [
+        "Central Depot (Depot 0): Operating Time Window: [0, 1236] (minutes)",
+        "Each customer has a strict 'hard time window.'"
+      ]
+    },
+    {
+      "id": "time_window_close",
+      "name": "time_window_close",
+      "indices": [
+        {
+          "role": "location",
+          "set_id": "locations"
+        }
+      ],
+      "unit": "minutes",
+      "description": "closing time of the hard service or depot operating window",
+      "values": {
+        "0": 1236,
+        "1": 967,
+        "2": 870,
+        "3": 146,
+        "4": 782,
+        "5": 67,
+        "6": 702,
+        "7": 225,
+        "8": 324,
+        "9": 605,
+        "10": 410,
+        "11": 505,
+        "12": 721,
+        "13": 92,
+        "14": 620,
+        "15": 429,
+        "16": 528,
+        "17": 148,
+        "18": 254,
+        "19": 345,
+        "20": 73
+      },
+      "source_spans": [
+        "Central Depot (Depot 0): Operating Time Window: [0, 1236] (minutes)",
+        "Service must begin within this specified time window."
+      ]
+    },
+    {
+      "id": "service_duration",
+      "name": "service_duration",
+      "indices": [
+        {
+          "role": "customer",
+          "set_id": "customers"
+        }
+      ],
+      "unit": "minutes",
+      "description": "fixed unloading, handover, and paperwork duration at each customer",
+      "values": {
+        "1": 90,
+        "2": 90,
+        "3": 90,
+        "4": 90,
+        "5": 90,
+        "6": 90,
+        "7": 90,
+        "8": 90,
+        "9": 90,
+        "10": 90,
+        "11": 90,
+        "12": 90,
+        "13": 90,
+        "14": 90,
+        "15": 90,
+        "16": 90,
+        "17": 90,
+        "18": 90,
+        "19": 90,
+        "20": 90
+      },
+      "source_spans": [
+        "a fixed service time of 90 minutes is required for unloading, handover, and paperwork at each customer location"
+      ]
+    },
+    {
+      "id": "vehicle_capacity",
+      "name": "vehicle_capacity",
+      "indices": [],
+      "unit": "units",
+      "description": "maximum demand that one truck route may carry",
+      "values": 200,
+      "source_spans": [
+        "the capacity of each truck is 200 units"
+      ]
+    },
+    {
+      "id": "maximum_vehicles",
+      "name": "maximum_vehicles",
+      "indices": [],
+      "unit": "trucks",
+      "description": "maximum number of trucks that may be used",
+      "values": 5,
+      "source_spans": [
+        "The company can use at most 5 trucks"
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "route_arc",
+      "canonical_name": "route_arc",
+      "semantic_type": "route",
+      "indices": [
+        {
+          "role": "vehicle",
+          "set_id": "vehicles"
+        },
+        {
+          "role": "origin",
+          "set_id": "locations"
+        },
+        {
+          "role": "destination",
+          "set_id": "locations"
+        }
+      ],
+      "description": "direct movement of a vehicle from one distinct location to another as part of its delivery route",
+      "value_semantics": "selected or not selected",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "The distribution center needs to dispatch a fleet of vehicles and design appropriate delivery routes",
+        "Vehicles must start from the depot and return to the depot, following continuous paths."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "vehicle_use",
+      "canonical_name": "vehicle_use",
+      "semantic_type": "activation",
+      "indices": [
+        {
+          "role": "vehicle",
+          "set_id": "vehicles"
+        }
+      ],
+      "description": "whether a candidate truck is dispatched for a delivery route",
+      "value_semantics": "used or not used",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "The distribution center needs to dispatch a fleet of vehicles",
+        "The company can use at most 5 trucks"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "customer_assignment",
+      "canonical_name": "customer_assignment",
+      "semantic_type": "assignment",
+      "indices": [
+        {
+          "role": "customer",
+          "set_id": "customers"
+        },
+        {
+          "role": "vehicle",
+          "set_id": "vehicles"
+        }
+      ],
+      "description": "assignment of each customer to the single vehicle that serves it",
+      "value_semantics": "assigned or not assigned",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Each customer must be served by exactly one vehicle"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "customer_arrival_time",
+      "canonical_name": "customer_arrival_time",
+      "semantic_type": "time",
+      "indices": [
+        {
+          "role": "customer",
+          "set_id": "customers"
+        }
+      ],
+      "description": "time at which the serving vehicle arrives at each customer",
+      "value_semantics": "continuous elapsed time",
+      "unit": "minutes",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "A vehicle can arrive at a customer location early and wait for the time window to open, or it can arrive within the time window to provide service."
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "service_start_time",
+      "canonical_name": "service_start_time",
+      "semantic_type": "time",
+      "indices": [
+        {
+          "role": "customer",
+          "set_id": "customers"
+        }
+      ],
+      "description": "time at which service begins at each customer",
+      "value_semantics": "continuous elapsed time",
+      "unit": "minutes",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Service can only begin within the time window"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "vehicle_departure_time",
+      "canonical_name": "vehicle_departure_time",
+      "semantic_type": "time",
+      "indices": [
+        {
+          "role": "vehicle",
+          "set_id": "vehicles"
+        }
+      ],
+      "description": "time at which a used vehicle departs from the central depot",
+      "value_semantics": "continuous elapsed time for each used vehicle",
+      "unit": "minutes",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "Vehicles must start from the depot"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "id": "vehicle_return_time",
+      "canonical_name": "vehicle_return_time",
+      "semantic_type": "time",
+      "indices": [
+        {
+          "role": "vehicle",
+          "set_id": "vehicles"
+        }
+      ],
+      "description": "time at which a used vehicle returns to the central depot",
+      "value_semantics": "continuous elapsed time for each used vehicle",
+      "unit": "minutes",
+      "endogenous": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "Vehicles must start from the depot and return to the depot"
+      ],
+      "confidence": 0.91
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "total_travel_distance",
+    "normalized_semantics": "minimize the sum of the distances traveled on all selected vehicle route movements",
+    "entity_scope_ids": [
+      "route_arc"
+    ],
+    "parameter_refs": [
+      "coordinates"
+    ],
+    "source_spans": [
+      "minimize the total distance traveled by all vehicles"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "serve_each_customer_exactly_once",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "each customer must be assigned to exactly one vehicle for delivery service",
+      "support_entity_ids": [
+        "customer_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_assignment",
+          "role": "unique_serving_vehicle",
+          "aggregation_axes": [
+            "vehicle"
+          ],
+          "index_binding": {
+            "customer": "c"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all customers c"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "customer_demand"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Each customer must be served by exactly one vehicle",
+        "the demands of all customers must be met"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o2",
+      "canonical_name": "assignment_requires_used_vehicle",
+      "obligation_type": "linking",
+      "normalized_semantics": "a customer may be assigned only to a vehicle that is dispatched",
+      "support_entity_ids": [
+        "customer_assignment",
+        "vehicle_use"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_assignment",
+          "role": "customer_service_assignment",
+          "aggregation_axes": [],
+          "index_binding": {
+            "customer": "c",
+            "vehicle": "v"
+          }
+        },
+        {
+          "entity_id": "vehicle_use",
+          "role": "required_vehicle_activation",
+          "aggregation_axes": [],
+          "index_binding": {
+            "vehicle": "v"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all customers c and vehicles v"
+      ],
+      "condition": "customer c is assigned to vehicle v",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "The distribution center needs to dispatch a fleet of vehicles and design appropriate delivery routes to fulfill the demands of all customers."
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "o3",
+      "canonical_name": "assigned_customer_has_incoming_route_leg",
+      "obligation_type": "linking",
+      "normalized_semantics": "a customer assigned to a vehicle must be entered exactly once by that vehicle's route, and an entry by that vehicle denotes assignment to it",
+      "support_entity_ids": [
+        "customer_assignment",
+        "route_arc"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_assignment",
+          "role": "served_by_vehicle",
+          "aggregation_axes": [],
+          "index_binding": {
+            "customer": "c",
+            "vehicle": "v"
+          }
+        },
+        {
+          "entity_id": "route_arc",
+          "role": "incoming_route_leg",
+          "aggregation_axes": [
+            "origin"
+          ],
+          "index_binding": {
+            "vehicle": "v",
+            "destination": "c"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all customers c and vehicles v"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Each customer must be served by exactly one vehicle",
+        "following continuous paths"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "o4",
+      "canonical_name": "assigned_customer_has_outgoing_route_leg",
+      "obligation_type": "linking",
+      "normalized_semantics": "a customer assigned to a vehicle must be departed exactly once by that vehicle's route, and a departure by that vehicle denotes assignment to it",
+      "support_entity_ids": [
+        "customer_assignment",
+        "route_arc"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_assignment",
+          "role": "served_by_vehicle",
+          "aggregation_axes": [],
+          "index_binding": {
+            "customer": "c",
+            "vehicle": "v"
+          }
+        },
+        {
+          "entity_id": "route_arc",
+          "role": "outgoing_route_leg",
+          "aggregation_axes": [
+            "destination"
+          ],
+          "index_binding": {
+            "vehicle": "v",
+            "origin": "c"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all customers c and vehicles v"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Each customer must be served by exactly one vehicle",
+        "following continuous paths"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "o5",
+      "canonical_name": "used_vehicle_starts_at_depot",
+      "obligation_type": "linking",
+      "normalized_semantics": "each dispatched vehicle must leave the central depot exactly once, while an unused vehicle must not leave it",
+      "support_entity_ids": [
+        "route_arc",
+        "vehicle_use"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "depot_departure_leg",
+          "aggregation_axes": [
+            "destination"
+          ],
+          "index_binding": {
+            "vehicle": "v",
+            "origin": "0"
+          }
+        },
+        {
+          "entity_id": "vehicle_use",
+          "role": "dispatched_vehicle",
+          "aggregation_axes": [],
+          "index_binding": {
+            "vehicle": "v"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all vehicles v"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Vehicles must start from the depot"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o6",
+      "canonical_name": "used_vehicle_returns_to_depot",
+      "obligation_type": "linking",
+      "normalized_semantics": "each dispatched vehicle must enter the central depot exactly once at the end of its route, while an unused vehicle must not return as an active route",
+      "support_entity_ids": [
+        "route_arc",
+        "vehicle_use"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "depot_return_leg",
+          "aggregation_axes": [
+            "origin"
+          ],
+          "index_binding": {
+            "vehicle": "v",
+            "destination": "0"
+          }
+        },
+        {
+          "entity_id": "vehicle_use",
+          "role": "dispatched_vehicle",
+          "aggregation_axes": [],
+          "index_binding": {
+            "vehicle": "v"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all vehicles v"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Vehicles must start from the depot and return to the depot"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o7",
+      "canonical_name": "route_flow_continuity",
+      "obligation_type": "conservation",
+      "normalized_semantics": "for each vehicle and customer, entry to the customer on the route must be matched by departure from that customer",
+      "support_entity_ids": [
+        "route_arc"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "incoming_and_outgoing_customer_legs",
+          "aggregation_axes": [
+            "origin",
+            "destination"
+          ],
+          "index_binding": {
+            "vehicle": "v",
+            "customer": "c"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all vehicles v and customers c"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "following continuous paths"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o8",
+      "canonical_name": "routes_connected_to_depot",
+      "obligation_type": "other",
+      "normalized_semantics": "every route leg used by a vehicle must belong to that vehicle's continuous depot-originating and depot-returning path; disconnected customer cycles are not permitted",
+      "support_entity_ids": [
+        "route_arc"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "depot_connected_path_structure",
+          "aggregation_axes": [
+            "origin",
+            "destination"
+          ],
+          "index_binding": {
+            "vehicle": "v"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all vehicles v"
+      ],
+      "condition": "vehicle v uses one or more route legs",
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "Vehicles must start from the depot and return to the depot, following continuous paths."
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "o9",
+      "canonical_name": "maximum_vehicle_count",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "the number of dispatched trucks must not exceed five",
+      "support_entity_ids": [
+        "vehicle_use"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "vehicle_use",
+          "role": "counted_dispatched_vehicle",
+          "aggregation_axes": [
+            "vehicle"
+          ],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [
+        "over all candidate vehicles"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "maximum_vehicles"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The company can use at most 5 trucks"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o10",
+      "canonical_name": "vehicle_route_capacity",
+      "obligation_type": "capacity",
+      "normalized_semantics": "the total demand of customers assigned to any one vehicle route must not exceed that truck's capacity",
+      "support_entity_ids": [
+        "customer_assignment"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_assignment",
+          "role": "demand_loaded_on_vehicle",
+          "aggregation_axes": [
+            "customer"
+          ],
+          "index_binding": {
+            "vehicle": "v"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all vehicles v"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "customer_demand",
+        "vehicle_capacity"
+      ],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "The total demand of all customers on a single route must not exceed the truck's maximum capacity (200 units)."
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o11",
+      "canonical_name": "customer_service_hard_time_window",
+      "obligation_type": "time_window",
+      "normalized_semantics": "service at each customer must begin no earlier than its window opening and no later than its window closing",
+      "support_entity_ids": [
+        "service_start_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "service_start_time",
+          "role": "window_constrained_service_start",
+          "aggregation_axes": [],
+          "index_binding": {
+            "customer": "c"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all customers c"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "time_window_open",
+        "time_window_close"
+      ],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "Service must begin within this specified time window.",
+        "Service can only begin within the time window"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o12",
+      "canonical_name": "service_not_before_arrival",
+      "obligation_type": "precedence",
+      "normalized_semantics": "service at a customer cannot begin before the serving vehicle arrives; an early-arriving vehicle waits until service may begin",
+      "support_entity_ids": [
+        "customer_arrival_time",
+        "service_start_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "customer_arrival_time",
+          "role": "arrival_predecessor",
+          "aggregation_axes": [],
+          "index_binding": {
+            "customer": "c"
+          }
+        },
+        {
+          "entity_id": "service_start_time",
+          "role": "service_successor",
+          "aggregation_axes": [],
+          "index_binding": {
+            "customer": "c"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all customers c"
+      ],
+      "condition": null,
+      "parameter_refs": [
+        "time_window_open"
+      ],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [
+        "Early arrivals must wait",
+        "A vehicle can arrive at a customer location early and wait for the time window to open"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o13",
+      "canonical_name": "depot_to_first_customer_timing",
+      "obligation_type": "precedence",
+      "normalized_semantics": "if a vehicle travels directly from the depot to a customer, its arrival at that customer must allow for travel after the vehicle's depot departure",
+      "support_entity_ids": [
+        "route_arc",
+        "vehicle_departure_time",
+        "customer_arrival_time"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "route_arc",
+          "role": "selected_depot_to_customer_leg",
+          "aggregation_axes": [],
+          "index_binding": {
+            "vehicle": "v",
+            "origin": "0",
+            "destination": "j"
+          }
+        },
+        {
+          "entity_id": "vehicle_departure_time",
+          "role": "temporal_predecessor",
+          "aggregation_axes": [],
+          "index_binding": {
+            "vehicle": "v"
+          }
+        },
+        {
+          "entity_id": "customer_arrival_time",
+          "role": "temporal_successor",
+          "aggregation_axes": [],
+          "index_binding": {
+            "customer": "j"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for all vehicles v and customers j"
+      ],
+      "condition": "vehicle v travels directly from depot 0 to customer j",
+      "parameter_refs": [],
+      "cross_instance": false,
+      "coupling_active": true,
+      "source_spans": [

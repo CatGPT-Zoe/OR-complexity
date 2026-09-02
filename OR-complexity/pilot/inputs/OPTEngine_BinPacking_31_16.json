@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_31_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of antique books into identical shipping crates. The volumes of the books are as follows:\n\n* Tome Alpha: volume 32 cubic inches\n* Tome Beta: volume 30 cubic inches\n* Tome Gamma: volume 68 cubic inches\n* Tome Delta: volume 55 cubic inches\n* Tome Epsilon: volume 30 cubic inches\n* Tome Zeta: volume 57 cubic inches\n* Tome Eta: volume 44 cubic inches\n* Tome Theta: volume 57 cubic inches\n* Tome Iota: volume 66 cubic inches\n* Tome Kappa: volume 59 cubic inches\n* Tome Lambda: volume 48 cubic inches\n* Tome Mu: volume 30 cubic inches\n* Tome Nu: volume 41 cubic inches\n* Tome Xi: volume 66 cubic inches\n* Tome Omicron: volume 59 cubic inches\n* Tome Pi: volume 64 cubic inches\n* Tome Rho: volume 34 cubic inches\n* Tome Sigma: volume 30 cubic inches\n* Tome Tau: volume 32 cubic inches\n* Tome Upsilon: volume 35 cubic inches\n* Tome Phi: volume 38 cubic inches\n* Tome Chi: volume 55 cubic inches\n* Tome Psi: volume 54 cubic inches\n* Tome Omega: volume 68 cubic inches\n* Tome Asteria: volume 41 cubic inches\n* Tome Boreas: volume 44 cubic inches\n* Tome Celestia: volume 65 cubic inches\n* Tome Draco: volume 36 cubic inches\n* Tome Elysium: volume 31 cubic inches\n* Tome Firma: volume 32 cubic inches\n* Tome Glacia: volume 55 cubic inches\n\nEach shipping crate can accommodate a maximum total volume of 100 cubic inches. The coordinator must place every book into exactly one crate, ensuring the aggregate volume within any given crate does not surpass its capacity. The objective is to utilize the minimal possible number of crates for the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

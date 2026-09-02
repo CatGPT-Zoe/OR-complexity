@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_3_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 3 cargo shipments through 3 different distribution hubs.\n\nEach shipment follows a specific route represented as pairs (Hub, Handling duration),\nwhere each pair specifies the hub where the cargo must be processed and the time required for handling.\nThe order of pairs indicates the mandatory sequence in which the cargo must pass through the hubs.\n\nShipment details:\n* S1 follows the route: (H2, 2) → (H1, 2) → (H3, 6)\n* S2 follows the route: (H2, 7) → (H1, 6) → (H3, 10)\n* S3 follows the route: (H3, 8) → (H1, 9) → (H2, 5)\n\nEach cargo handling operation must run continuously once it begins and cannot be interrupted,\nand each hub can only process one cargo shipment at a time.\nThe objective is to determine the processing sequence of all cargo shipments at the hubs\nso that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

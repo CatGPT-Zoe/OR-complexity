@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_10_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is organizing shipments into standard pallets. The cargo items are:\n* Component Alpha: size 57 cubic feet\n* Component Beta: size 50 cubic feet\n* Component Gamma: size 69 cubic feet\n* Component Delta: size 70 cubic feet\n* Component Epsilon: size 43 cubic feet\n* Component Zeta: size 65 cubic feet\n* Component Eta: size 60 cubic feet\n* Component Theta: size 58 cubic feet\n* Component Iota: size 63 cubic feet\n* Component Kappa: size 46 cubic feet\n\nEach pallet has a maximum capacity of 100 cubic feet. Load all components using the minimum number of pallets. Every component must be placed on exactly one pallet, and the total volume on any pallet cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

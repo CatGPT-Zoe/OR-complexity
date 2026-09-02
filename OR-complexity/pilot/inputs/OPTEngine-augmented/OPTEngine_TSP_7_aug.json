@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate a circuit of maintenance checks at seven key facilities across a region.  \nThe facilities are positioned at the following grid coordinates:  \n\nFacility Alpha: (107,197)  \nFacility Beta: (169,181)  \nFacility Gamma: (11,42)  \nFacility Delta: (114,16)  \nFacility Epsilon: (66,179)  \nFacility Zeta: (40,114)  \nFacility Theta: (135,124)  \n\nTravel distances between facilities, expressed in kilometers, are predetermined:  \n\nAlpha to Gamma: 182.3 km  \nAlpha to Delta: 181.1 km  \nAlpha to Epsilon: 44.8 km  \nAlpha to Zeta: 106.7 km  \nAlpha to Theta: 78.2 km  \nBeta to Gamma: 210.4 km  \nBeta to Delta: 173.9 km  \nBeta to Epsilon: 103.0 km  \nBeta to Zeta: 145.4 km  \nBeta to Theta: 66.4 km  \nGamma to Delta: 106.2 km  \nGamma to Epsilon: 147.6 km  \nGamma to Zeta: 77.6 km  \nGamma to Theta: 148.7 km  \nDelta to Epsilon: 169.9 km  \nDelta to Zeta: 122.8 km  \nDelta to Theta: 110.0 km  \nEpsilon to Zeta: 70.0 km  \nEpsilon to Theta: 88.2 km  \nZeta to Theta: 95.5 km  \n\nDue to infrastructure limitations, no direct route exists between Facility Alpha and Facility Beta.  \nMoreover, owing to scheduling restrictions, exactly one of the two following connections must be part of the inspection circuit: the route between Beta and Gamma, or the route between Gamma and Delta.  \n\nThe objective is to determine the minimal total travel distance for a closed tour that visits each facility precisely once and returns to the origin facility.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

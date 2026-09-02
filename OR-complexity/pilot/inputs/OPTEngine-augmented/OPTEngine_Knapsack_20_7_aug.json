@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_20_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must select a set of cargo containers to maximize total profit while staying within the truck's total load limit.\n\nThe containers available are:\n* Container 1: weight 47 tons, profit 218 credits\n* Container 2: weight 47 tons, profit 28 credits\n* Container 3: weight 2 tons, profit 222 credits\n* Container 4: weight 36 tons, profit 53 credits\n* Container 5: weight 18 tons, profit 23 credits\n* Container 6: weight 2 tons, profit 262 credits\n* Container 7: weight 44 tons, profit 209 credits\n* Container 8: weight 35 tons, profit 189 credits\n* Container 9: weight 36 tons, profit 251 credits\n* Container 10: weight 34 tons, profit 237 credits\n* Container 11: weight 36 tons, profit 253 credits\n* Container 12: weight 38 tons, profit 104 credits\n* Container 13: weight 38 tons, profit 22 credits\n* Container 14: weight 39 tons, profit 192 credits\n* Container 15: weight 14 tons, profit 167 credits\n* Container 16: weight 28 tons, profit 44 credits\n* Container 17: weight 15 tons, profit 59 credits\n* Container 18: weight 11 tons, profit 242 credits\n* Container 19: weight 41 tons, profit 75 credits\n* Container 20: weight 32 tons, profit 171 credits\n\nFurthermore, due to a contractual exclusivity clause, exactly one of Container 1 and Container 2 must be chosen.\n\nIf Container 3 is selected, it requires special handling equipment that reduces the truck's effective load capacity by 10 tons.\nThe truck's maximum permissible gross weight is 415 tons. The coordinator must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

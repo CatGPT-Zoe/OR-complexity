@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional courier network must dispatch a single vehicle to service seven distinct distribution hubs, each positioned at specific geographical points on a grid:\nHub Alpha: Coordinates (121,101)\nHub Beta: Coordinates (160,20)\nHub Gamma: Coordinates (5,70)\nHub Delta: Coordinates (115,29)\nHub Epsilon: Coordinates (65,34)\nHub Zeta: Coordinates (167,133)\nHub Eta: Coordinates (166,165)\n\nThe travel distances, in kilometers, along available direct corridors are as follows:\nAlpha to Gamma: 120.1 km\nAlpha to Delta: 72.2 km\nAlpha to Epsilon: 87.3 km\nAlpha to Zeta: 56.0 km\nAlpha to Eta: 78.2 km\nBeta to Gamma: 162.9 km\nBeta to Delta: 45.9 km\nBeta to Epsilon: 96.0 km\nBeta to Zeta: 113.2 km\nBeta to Eta: 145.1 km\nGamma to Delta: 117.4 km\nGamma to Epsilon: 70.0 km\nGamma to Zeta: 173.8 km\nGamma to Eta: 186.9 km\nDelta to Epsilon: 50.2 km\nDelta to Zeta: 116.3 km\nDelta to Eta: 145.2 km\nEpsilon to Zeta: 142.1 km\nEpsilon to Eta: 165.4 km\nZeta to Eta: 32.0 km\n\nDue to regulatory restrictions, a direct connection between Hub Alpha and Hub Beta is prohibited. Furthermore, the route planning must incorporate a mandatory selection rule: exactly one of the two critical links—either the corridor connecting Beta and Gamma or the corridor connecting Gamma and Delta—must be part of the final circuit.\n\nThe objective is to determine the minimal total travel distance for a closed loop that visits every hub precisely once before returning to the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

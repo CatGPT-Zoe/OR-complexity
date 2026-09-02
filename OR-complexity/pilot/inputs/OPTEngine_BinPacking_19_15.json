@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_19_15",
+  "annotation_mode": "semantic",
+  "problem_text": "An organizer must allocate a collection of rare books into identical archival boxes for secure transport. The volumes are as follows:\n\n* Tome Alpha: mass 45 units\n* Tome Beta: mass 47 units\n* Tome Gamma: mass 41 units\n* Tome Delta: mass 56 units\n* Tome Epsilon: mass 34 units\n* Tome Zeta: mass 66 units\n* Tome Eta: mass 58 units\n* Tome Theta: mass 45 units\n* Tome Iota: mass 58 units\n* Tome Kappa: mass 62 units\n* Tome Lambda: mass 36 units\n* Tome Mu: mass 42 units\n* Tome Nu: mass 40 units\n* Tome Xi: mass 58 units\n* Tome Omicron: mass 34 units\n* Tome Pi: mass 57 units\n* Tome Rho: mass 70 units\n* Tome Sigma: mass 55 units\n* Tome Tau: mass 47 units\n\nEach archival box can safely support a maximum load of 100 units. The objective is to place every volume into a box, ensuring no box exceeds its load capacity, while minimizing the total number of boxes employed. Each book must be assigned to precisely one box.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

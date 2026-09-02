@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A textile factory produces two types of fabrics: one for clothing and the other for curtains. The factory operates two shifts, with a weekly production time set at 110 hours. Both types of fabrics are produced at a rate of 1000 meters per hour. Assuming that at least 70,000 meters of curtain fabric can be sold per week, with a profit of 2.5 yuan per meter, and at least 45,000 meters of clothing fabric can be sold per week, with a profit of 1.5 yuan per meter, the factory has the following objectives in formulating its production plan:\n\n$p_{1}$ : The weekly production time must fully utilize 110 hours;\n\n$p_{2}$ : Overtime should not exceed 10 hours per week;\n\n$p_{3}$ : At least 70,000 meters of curtain fabric and 45,000 meters of clothing fabric must be sold per week;\n\n$p_{4}$ : Minimize overtime as much as possible.\n\nFormulate a model for this problem.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

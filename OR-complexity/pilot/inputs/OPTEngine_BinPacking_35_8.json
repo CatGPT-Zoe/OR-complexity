@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. Shipments:  \n* Component Alpha: size 49 cubic meters  \n* Component Beta: size 48 cubic meters  \n* Component Gamma: size 36 cubic meters  \n* Component Delta: size 30 cubic meters  \n* Component Epsilon: size 34 cubic meters  \n* Component Zeta: size 68 cubic meters  \n* Component Eta: size 57 cubic meters  \n* Component Theta: size 42 cubic meters  \n* Component Iota: size 61 cubic meters  \n* Component Kappa: size 43 cubic meters  \n* Component Lambda: size 61 cubic meters  \n* Component Mu: size 65 cubic meters  \n* Component Nu: size 55 cubic meters  \n* Component Xi: size 63 cubic meters  \n* Component Omicron: size 60 cubic meters  \n* Component Pi: size 40 cubic meters  \n* Component Rho: size 39 cubic meters  \n* Component Sigma: size 30 cubic meters  \n* Component Tau: size 63 cubic meters  \n* Component Upsilon: size 59 cubic meters  \n* Component Phi: size 34 cubic meters  \n* Component Chi: size 56 cubic meters  \n* Component Psi: size 70 cubic meters  \n* Component Omega: size 50 cubic meters  \n* Component A1: size 41 cubic meters  \n* Component B1: size 35 cubic meters  \n* Component C1: size 66 cubic meters  \n* Component D1: size 69 cubic meters  \n* Component E1: size 51 cubic meters  \n* Component F1: size 59 cubic meters  \n* Component G1: size 69 cubic meters  \n* Component H1: size 42 cubic meters  \n* Component I1: size 61 cubic meters  \n* Component J1: size 56 cubic meters  \n* Component K1: size 33 cubic meters  \n\nEach cargo plane can carry up to 100 cubic meters of freight. Assign all shipments using the fewest planes possible. Each shipment must be placed on exactly one plane, and the total volume on a plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

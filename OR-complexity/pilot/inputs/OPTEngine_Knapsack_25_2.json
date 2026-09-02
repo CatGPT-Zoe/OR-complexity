@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting packages to load onto a cargo drone. Available packages are:\n* Package 1: volume 16 cubic feet, revenue $115\n* Package 2: volume 18 cubic feet, revenue $92\n* Package 3: volume 12 cubic feet, revenue $241\n* Package 4: volume 15 cubic feet, revenue $32\n* Package 5: volume 6 cubic feet, revenue $128\n* Package 6: volume 26 cubic feet, revenue $213\n* Package 7: volume 28 cubic feet, revenue $24\n* Package 8: volume 10 cubic feet, revenue $157\n* Package 9: volume 46 cubic feet, revenue $167\n* Package 10: volume 42 cubic feet, revenue $32\n* Package 11: volume 37 cubic feet, revenue $114\n* Package 12: volume 20 cubic feet, revenue $258\n* Package 13: volume 25 cubic feet, revenue $67\n* Package 14: volume 40 cubic feet, revenue $188\n* Package 15: volume 6 cubic feet, revenue $244\n* Package 16: volume 24 cubic feet, revenue $124\n* Package 17: volume 40 cubic feet, revenue $32\n* Package 18: volume 7 cubic feet, revenue $193\n* Package 19: volume 43 cubic feet, revenue $246\n* Package 20: volume 13 cubic feet, revenue $168\n* Package 21: volume 19 cubic feet, revenue $60\n* Package 22: volume 50 cubic feet, revenue $11\n* Package 23: volume 5 cubic feet, revenue $232\n* Package 24: volume 13 cubic feet, revenue $263\n* Package 25: volume 14 cubic feet, revenue $260\n\nThe drone's cargo hold has a maximum capacity of 402 cubic feet. Choose the package combination that yields the highest total revenue without exceeding this volume limit. Each package must be either fully accepted or rejected.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

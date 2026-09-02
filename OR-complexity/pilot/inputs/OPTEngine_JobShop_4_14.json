@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_4_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 4 cargo shipments through 4 different customs checkpoints.\n\nEach shipment must pass through checkpoints in a predetermined sequence, represented as pairs (Checkpoint, Processing time), where each pair specifies the required checkpoint and the time needed for inspection. The order of pairs indicates the mandatory sequence for completing inspections.\n\nShipment details:\n* S1 requires the sequence: (C2, 1) → (C3, 7) → (C1, 7) → (C4, 6)\n* S2 requires the sequence: (C1, 9) → (C4, 10) → (C3, 2) → (C2, 4)\n* S3 requires the sequence: (C1, 5) → (C3, 3) → (C4, 2) → (C2, 8)\n* S4 requires the sequence: (C4, 5) → (C3, 8) → (C1, 2) → (C2, 5)\n\nOnce a customs inspection begins for any shipment, it must run continuously without interruption, and each checkpoint can only handle one shipment inspection at a time. The objective is to determine the optimal scheduling of all shipment inspections at the checkpoints so that the total completion time for all shipments is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

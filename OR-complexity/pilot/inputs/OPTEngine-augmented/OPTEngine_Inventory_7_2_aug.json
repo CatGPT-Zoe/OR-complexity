@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics hub must devise a procurement and storage schedule for a critical fuel additive over a 7-day operational cycle.  \nThe initial stockpile at the cycle’s commencement is 86 gallons.  \nIn each day \\( t = 1, \\dots, 7 \\), the supplier permits the hub to submit a procurement request, where the requested volume must be between 6 and 27 gallons.  \nNevertheless, every request issued will undergo a 3‑day transit delay before it becomes available to meet consumption needs or replenish the stockpile.  \nThe daily consumption of the additive is forecast as follows:  \n* Day 1: 17 gallons  \n* Day 2: 14 gallons  \n* Day 3: 54 gallons  \n* Day 4: 11 gallons  \n* Day 5: 43 gallons  \n* Day 6: 38 gallons  \n* Day 7: 58 gallons  \n\nSupply deficits are tolerated, but any unsatisfied consumption is simply lost and not deferred to later days.  \nThroughout the planning window, additive quantities may be treated as continuous values, and the total volume of physically stored additive at any instant must not surpass the storage‑tank capacity of 86 gallons.  \n\nOn the seventh day, the maximum allowable procurement volume is restricted to 12 gallons.  \nOn the fifth day, the physically available stockpile must be no less than 18 gallons.  \n\nThe aggregate expense over the 7‑day cycle comprises three elements: the procurement cost, charged at 4 per gallon ordered; the storage cost, levied at 2 per gallon retained from one day to the next; and the deficit penalty, assessed at 9 per gallon of unmet consumption. Determine the optimal procurement volume for each day and monitor the ensuing stockpile and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

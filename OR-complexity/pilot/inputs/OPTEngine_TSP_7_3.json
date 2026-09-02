@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a specialized courier to transport high-value artifacts between 7 distinct regional museums.\n\nThe travel durations between museums are precisely recorded in minutes:\n* Museum Alpha to Museum Beta: 182.4 minutes\n* Museum Alpha to Museum Gamma: 81.9 minutes\n* Museum Alpha to Museum Delta: 135.1 minutes\n* Museum Alpha to Museum Epsilon: 132.7 minutes\n* Museum Alpha to Museum Zeta: 18.1 minutes\n* Museum Alpha to Museum Eta: 252.6 minutes\n* Museum Beta to Museum Gamma: 183.5 minutes\n* Museum Beta to Museum Delta: 106.1 minutes\n* Museum Beta to Museum Epsilon: 60.7 minutes\n* Museum Beta to Museum Zeta: 182.5 minutes\n* Museum Beta to Museum Eta: 160.0 minutes\n* Museum Gamma to Museum Delta: 93.1 minutes\n* Museum Gamma to Museum Epsilon: 156.7 minutes\n* Museum Gamma to Museum Zeta: 99.5 minutes\n* Museum Gamma to Museum Eta: 195.5 minutes\n* Museum Delta to Museum Epsilon: 109.1 minutes\n* Museum Delta to Museum Zeta: 145.7 minutes\n* Museum Delta to Museum Eta: 118.2 minutes\n* Museum Epsilon to Museum Zeta: 129.0 minutes\n* Museum Epsilon to Museum Eta: 200.4 minutes\n* Museum Zeta to Museum Eta: 263.8 minutes\n\nThe objective is to determine the minimal total duration circuit that permits the courier to arrive at each museum precisely once before concluding the circuit at the initial departure point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

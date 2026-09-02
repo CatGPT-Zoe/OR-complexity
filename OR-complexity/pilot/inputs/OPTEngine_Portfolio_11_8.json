@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_11_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner must distribute a fixed budget across 11 infrastructure projects to maximize overall community benefit.  \nThe profile for each project is as follows:  \n* Project A: benefit score 0.160, impact factor 0.117, allocation limits [0.034, 0.435]  \n* Project B: benefit score 0.114, impact factor 0.145, allocation limits [0.084, 0.424]  \n* Project C: benefit score 0.122, impact factor 0.125, allocation limits [0.026, 0.691]  \n* Project D: benefit score 0.051, impact factor 0.278, allocation limits [0.083, 0.608]  \n* Project E: benefit score 0.178, impact factor 0.208, allocation limits [0.009, 0.819]  \n* Project F: benefit score 0.056, impact factor 0.080, allocation limits [0.003, 0.880]  \n* Project G: benefit score 0.030, impact factor 0.152, allocation limits [0.005, 0.709]  \n* Project H: benefit score 0.026, impact factor 0.139, allocation limits [0.085, 0.584]  \n* Project I: benefit score 0.029, impact factor 0.289, allocation limits [0.078, 0.379]  \n* Project J: benefit score 0.085, impact factor 0.148, allocation limits [0.021, 0.404]  \n* Project K: benefit score 0.056, impact factor 0.170, allocation limits [0.022, 0.781]  \n\nEach project must receive a budget share within its specified limits, and the sum of all budget shares must equal the total available budget (normalized to 1).  \nTo ensure timely completion, the set of high-priority projects L = {A, B, C, E, F, G, I, J, K} must together receive at least 0.474 of the total budget.  \nAdditionally, the total community disruption, measured by an overall impact index, must not exceed 0.212, and the total benefit score must be at least 0.058.  \nDetermine the optimal budget allocation that maximizes total benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

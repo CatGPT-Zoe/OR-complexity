@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are as follows:\n\n* Package 1: volume 42 cubic feet\n* Package 2: volume 63 cubic feet\n* Package 3: volume 48 cubic feet\n* Package 4: volume 57 cubic feet\n* Package 5: volume 36 cubic feet\n* Package 6: volume 49 cubic feet\n* Package 7: volume 47 cubic feet\n* Package 8: volume 40 cubic feet\n* Package 9: volume 39 cubic feet\n* Package 10: volume 43 cubic feet\n* Package 11: volume 49 cubic feet\n* Package 12: volume 38 cubic feet\n* Package 13: volume 40 cubic feet\n* Package 14: volume 52 cubic feet\n* Package 15: volume 43 cubic feet\n* Package 16: volume 66 cubic feet\n* Package 17: volume 67 cubic feet\n* Package 18: volume 40 cubic feet\n* Package 19: volume 33 cubic feet\n* Package 20: volume 36 cubic feet\n* Package 21: volume 38 cubic feet\n* Package 22: volume 46 cubic feet\n* Package 23: volume 66 cubic feet\n* Package 24: volume 48 cubic feet\n* Package 25: volume 48 cubic feet\n* Package 26: volume 41 cubic feet\n* Package 27: volume 33 cubic feet\n* Package 28: volume 47 cubic feet\n* Package 29: volume 66 cubic feet\n* Package 30: volume 53 cubic feet\n* Package 31: volume 36 cubic feet\n* Package 32: volume 56 cubic feet\n* Package 33: volume 46 cubic feet\n* Package 34: volume 51 cubic feet\n\nEach truck has a maximum capacity of 100 cubic feet. Assign all packages using the fewest number of trucks. Every package must be loaded onto exactly one truck, and the total volume in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

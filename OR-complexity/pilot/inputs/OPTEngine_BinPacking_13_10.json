@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_13_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo parcels onto identical freight pallets. The parcels are as follows:\n* Parcel Alpha: mass 47 units\n* Parcel Beta: mass 51 units\n* Parcel Gamma: mass 51 units\n* Parcel Delta: mass 53 units\n* Parcel Epsilon: mass 35 units\n* Parcel Zeta: mass 51 units\n* Parcel Eta: mass 69 units\n* Parcel Theta: mass 32 units\n* Parcel Iota: mass 32 units\n* Parcel Kappa: mass 47 units\n* Parcel Lambda: mass 40 units\n* Parcel Mu: mass 39 units\n* Parcel Nu: mass 67 units\n\nEach pallet possesses a maximum load capacity of 100 units. The objective is to assign every parcel to a pallet, ensuring that the aggregate mass on any given pallet does not surpass its designated limit, while minimizing the total number of pallets utilized. Each parcel must be placed on exactly one pallet.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

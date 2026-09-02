@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is preparing shipments for a fleet of delivery drones. Each drone can carry a maximum payload of 100 kg. The following packages must be delivered:\n* Package Alpha: weight 64kg\n* Package Bravo: weight 57kg\n* Package Charlie: weight 37kg\n* Package Delta: weight 46kg\n* Package Echo: weight 42kg\n* Package Foxtrot: weight 62kg\n* Package Golf: weight 49kg\n* Package Hotel: weight 35kg\n* Package India: weight 36kg\n* Package Juliet: weight 62kg\n* Package Kilo: weight 57kg\n* Package Lima: weight 65kg\n* Package Mike: weight 52kg\n* Package November: weight 41kg\n* Package Oscar: weight 39kg\n* Package Papa: weight 37kg\n* Package Quebec: weight 48kg\n* Package Romeo: weight 48kg\n* Package Sierra: weight 41kg\n* Package Tango: weight 61kg\n* Package Uniform: weight 48kg\n* Package Victor: weight 45kg\n* Package Whiskey: weight 64kg\n* Package X-ray: weight 67kg\n* Package Yankee: weight 45kg\n* Package Zulu: weight 34kg\n* Package Asterisk: weight 60kg\n* Package Dash: weight 42kg\n* Package Plus: weight 52kg\n* Package Ampersand: weight 57kg\n* Package Percent: weight 47kg\n* Package Dollar: weight 50kg\n\nAll packages must be assigned to drones for delivery, with each package loaded onto exactly one drone. The total weight of packages on any drone cannot exceed its 100 kg payload limit. Determine the optimal loading plan that uses the minimum number of drones.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "NL4OPT_000_oil_spill_transport",
+  "layer": "semantic",
+  "sets": [
+    {
+      "name": "transport_methods",
+      "description": "available transportation methods: boat and canoe",
+      "values": ["boat", "canoe"]
+    }
+  ],
+  "parameters": [
+    {
+      "name": "ducks_per_trip",
+      "indices": ["method"],
+      "unit": "ducks/trip",
+      "description": "number of ducks that can be transported per trip by each method",
+      "values": {
+        "boat": 10,
+        "canoe": 8
+      }
+    },
+    {
+      "name": "minutes_per_trip",
+      "indices": ["method"],
+      "unit": "minutes/trip",
+      "description": "time taken per trip by each method",
+      "values": {
+        "boat": 20,
+        "canoe": 40
+      }
+    },
+    {
+      "name": "min_ducks",
+      "indices": [],
+      "unit": "ducks",
+      "description": "minimum number of ducks that must be transported",
+      "values": 300
+    },
+    {
+      "name": "max_boat_trips",
+      "indices": [],
+      "unit": "trips",
+      "description": "maximum allowed number of boat trips",
+      "values": 12
+    },
+    {
+      "name": "min_canoe_fraction",
+      "indices": [],
+      "unit": "dimensionless",
+      "description": "minimum fraction of total trips that must be by canoe",
+      "values": 0.60
+    }
+  ],
+  "entities": [
+    {
+      "id": "trips",
+      "canonical_name": "trips",
+      "semantic_type": "quantity",
+      "indices": [
+        {
+          "role": "method",
+          "set_id": "transport_methods"
+        }
+      ],
+      "description": "number of trips made by each transportation method",
+      "value_semantics": "nonnegative integer",
+      "unit": "trips",
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "how many of each transportation method should be used"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "objective": {
+    "id": "minimize_total_time",
+    "canonical_name": "minimize_total_time",
+    "description": "minimize total time needed to transport the ducks",
+    "sense": "minimize",
+    "entity_scope_ids": ["trips"],
+    "expression_semantics": "sum_{method} trips[method] * minutes_per_trip[method]",
+    "excluded_from_feasibility_hypergraph": true,
+    "source_spans": [
+      "minimize the total amount of time needed to transport the ducks"
+    ],
+    "confidence": 0.99
+  },
+  "obligations": [
+    {
+      "id": "duck_transport_requirement",
+      "canonical_name": "duck_transport_requirement",
+      "obligation_type": "coverage",
+      "normalized_semantics": "total ducks transported must be at least min_ducks",
+      "support_entity_ids": ["trips"],
+      "incidence_slots": [
+        {
+          "entity_id": "trips",
+          "role": "ducks_transported",
+          "aggregation_axes": ["method"],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["ducks_per_trip", "min_ducks"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "A boat can take 10 ducks per trip while a canoe can take 8 ducks per trip.",
+        "If at least 300 ducks need to be taken to shore"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "id": "max_boat_trips",
+      "canonical_name": "max_boat_trips",
+      "obligation_type": "resource_limit",
+      "normalized_semantics": "number of boat trips must not exceed max_boat_trips",
+      "support_entity_ids": ["trips"],
+      "incidence_slots": [
+        {
+          "entity_id": "trips",
+          "role": "trips",
+          "aggregation_axes": [],
+          "index_binding": {
+            "method": "boat"
+          }
+        }
+      ],
+      "quantifiers": [],
+      "condition": "method == 'boat'",
+      "parameter_refs": ["max_boat_trips"],
+      "cross_instance": false,
+      "coupling_active": false,
+      "source_spans": [
+        "there can be at most 12 boat trips"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "min_canoe_fraction",
+      "canonical_name": "min_canoe_fraction",
+      "obligation_type": "policy",
+      "normalized_semantics": "canoe trips must be at least min_canoe_fraction of total trips",
+      "support_entity_ids": ["trips"],
+      "incidence_slots": [
+        {
+          "entity_id": "trips",
+          "role": "canoe_trips",
+          "aggregation_axes": [],
+          "index_binding": {
+            "method": "canoe"
+          }
+        },
+        {
+          "entity_id": "trips",
+          "role": "total_trips",
+          "aggregation_axes": ["method"],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [],
+      "condition": null,
+      "parameter_refs": ["min_canoe_fraction"],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "at least 60% of the trips should be by canoe"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": []
+}

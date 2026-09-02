@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_12_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign packages to identical delivery trucks. Packages:\n* Parcel 1: size 32 cubic feet\n* Parcel 2: size 32 cubic feet\n* Parcel 3: size 43 cubic feet\n* Parcel 4: size 46 cubic feet\n* Parcel 5: size 65 cubic feet\n* Parcel 6: size 50 cubic feet\n* Parcel 7: size 53 cubic feet\n* Parcel 8: size 66 cubic feet\n* Parcel 9: size 32 cubic feet\n* Parcel 10: size 68 cubic feet\n* Parcel 11: size 61 cubic feet\n* Parcel 12: size 59 cubic feet\n\nEach truck has a maximum capacity of 100 cubic feet. Load all packages using the fewest trucks possible. Every package must be placed on exactly one truck, and the total volume in any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

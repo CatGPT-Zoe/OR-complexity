@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical fuel additive over a 14-day operational cycle. The starting stock at the dawn of the planning window is 42 gallons. In each day t = 1, ..., 14, the vendor permits the company to submit a purchase request, the volume of which must be between 3 and 71 gallons. Nevertheless, every requested shipment requires a 3-day lead time before it becomes available to meet consumption or to replenish reserves. The daily consumption of the additive is specified as follows:  \n* Day 1: 19 gallons  \n* Day 2: 23 gallons  \n* Day 3: 20 gallons  \n* Day 4: 24 gallons  \n* Day 5: 11 gallons  \n* Day 6: 43 gallons  \n* Day 7: 18 gallons  \n* Day 8: 41 gallons  \n* Day 9: 32 gallons  \n* Day 10: 49 gallons  \n* Day 11: 57 gallons  \n* Day 12: 28 gallons  \n* Day 13: 55 gallons  \n* Day 14: 60 gallons  \n\nStockouts are tolerated, but any unsatisfied consumption is entirely lost and not deferred to a later date. Throughout the 14-day span, additive quantities may be treated as continuous, and the total volume of physical stock held at any moment must not surpass the tank capacity of 44 gallons. The aggregate expenditure comprises three elements: the procurement cost, amounting to 3 per gallon ordered; the storage cost, amounting to 1 per gallon retained overnight; and the shortage penalty, amounting to 11 per gallon of unmet consumption. The objective is to ascertain the optimal purchase volume for each day and to monitor the ensuing stock and deficit levels in order to minimize total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

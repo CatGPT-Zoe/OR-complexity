@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_13_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A renewable energy grid operator must schedule power purchases from a reserve generator over a forecast horizon of 13 consecutive hours.  \nThe initial stored energy in the grid's buffer system at the start of the horizon is 39 megawatt-hours.  \nIn each hour \\( t = 1, \\dots, 13 \\), the operator may request a reserve injection whose magnitude must fall between 18 and 74 megawatt-hours.  \nHowever, due to activation and synchronization delays, each requested reserve batch requires 3 hours to become available for meeting load or replenishing the buffer.  \n\nThe projected load that must be served in each hour is as follows:  \n* Hour 1: load 55 MWh  \n* Hour 2: load 20 MWh  \n* Hour 3: load 32 MWh  \n* Hour 4: load 14 MWh  \n* Hour 5: load 36 MWh  \n* Hour 6: load 13 MWh  \n* Hour 7: load 38 MWh  \n* Hour 8: load 32 MWh  \n* Hour 9: load 48 MWh  \n* Hour 10: load 49 MWh  \n* Hour 11: load 58 MWh  \n* Hour 12: load 26 MWh  \n* Hour 13: load 53 MWh  \n\nLoad shedding is permissible, but any energy deficit in a given hour is lost and cannot be recovered later.  \nThroughout the scheduling window, energy quantities are treated as continuous, and the total amount of energy stored in the buffer at any instant must not exceed its capacity of 42 megawatt-hours.  \n\nThe total operational expenditure comprises three elements: the activation cost, which is 4 per megawatt-hour of reserve requested; the storage cost, which is 1 per megawatt-hour of energy held in the buffer from one hour to the next; and the reliability penalty, which is 6 per megawatt-hour of unmet load.  \nThe operator must determine the optimal reserve request for each hour and monitor the resulting buffer levels and load shortfalls so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

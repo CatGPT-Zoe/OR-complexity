@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_19",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a collection of antique stone sculptures to identical reinforced crates for international shipment. The sculptures are cataloged as follows:\n\n* Artifact Alpha: mass 36 kg\n* Artifact Beta: mass 67 kg\n* Artifact Gamma: mass 49 kg\n* Artifact Delta: mass 50 kg\n* Artifact Epsilon: mass 34 kg\n* Artifact Zeta: mass 57 kg\n* Artifact Eta: mass 51 kg\n* Artifact Theta: mass 30 kg\n* Artifact Iota: mass 36 kg\n* Artifact Kappa: mass 51 kg\n* Artifact Lambda: mass 67 kg\n* Artifact Mu: mass 36 kg\n* Artifact Nu: mass 65 kg\n* Artifact Xi: mass 42 kg\n* Artifact Omicron: mass 66 kg\n* Artifact Pi: mass 30 kg\n* Artifact Rho: mass 31 kg\n* Artifact Sigma: mass 31 kg\n* Artifact Tau: mass 49 kg\n* Artifact Upsilon: mass 59 kg\n* Artifact Phi: mass 37 kg\n* Artifact Chi: mass 63 kg\n* Artifact Psi: mass 31 kg\n* Artifact Omega: mass 61 kg\n* Artifact Aleph: mass 45 kg\n* Artifact Beth: mass 47 kg\n* Artifact Gimel: mass 62 kg\n* Artifact Dalet: mass 49 kg\n* Artifact He: mass 46 kg\n* Artifact Waw: mass 42 kg\n* Artifact Zayin: mass 55 kg\n* Artifact Het: mass 68 kg\n\nEach reinforced crate has a maximum safe load capacity of 100 kg. The coordinator must ensure every sculpture is placed into exactly one crate, with the aggregate mass in any given crate not surpassing its load limit. The objective is to complete the allocation utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

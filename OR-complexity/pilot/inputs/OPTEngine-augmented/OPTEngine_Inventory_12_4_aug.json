@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_12_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and stock management strategy for a critical drug over a 12-day treatment cycle.  \nThe initial stock at the start of the cycle is 82 vials.  \nOn each day \\( t = 1, \\dots, 12 \\), the pharmacy can request a shipment whose size must be between 12 and 50 vials.  \nEach shipment, however, requires a 2-day lead time before it becomes available for patient administration or to replenish the pharmacy’s stock.  \nDaily patient needs for the drug are as follows:  \n* Day 1: 31 vials  \n* Day 2: 24 vials  \n* Day 3: 42 vials  \n* Day 4: 39 vials  \n* Day 5: 12 vials  \n* Day 6: 40 vials  \n* Day 7: 49 vials  \n* Day 8: 16 vials  \n* Day 9: 27 vials  \n* Day 10: 42 vials  \n* Day 11: 41 vials  \n* Day 12: 45 vials  \n\nStock‑outs are tolerated, but any unsatisfied demand is considered lost and will not be carried forward.  \nThroughout the 12‑day cycle, vial quantities may be treated as continuous, and the total physical stock held at any moment must not exceed the pharmacy’s refrigeration capacity of 82 vials.  \n\nOn the fifth day, the maximum allowable shipment size is 50 vials.  \nOn the third day, the on‑hand inventory must be no less than 58 vials.  \n\nTotal cost comprises three elements: the procurement cost, charged at 2 per vial ordered; the storage cost, charged at 1 per vial kept overnight; and a shortage penalty, levied at 14 per vial of unmet patient need. The objective is to determine the optimal shipment size for each day and to monitor the resulting stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

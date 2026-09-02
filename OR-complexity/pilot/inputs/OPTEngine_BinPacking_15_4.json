@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_15_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are:\n* Package 1: weight 41kg\n* Package 2: weight 67kg\n* Package 3: weight 35kg\n* Package 4: weight 36kg\n* Package 5: weight 64kg\n* Package 6: weight 67kg\n* Package 7: weight 49kg\n* Package 8: weight 40kg\n* Package 9: weight 54kg\n* Package 10: weight 39kg\n* Package 11: weight 38kg\n* Package 12: weight 44kg\n* Package 13: weight 50kg\n* Package 14: weight 62kg\n* Package 15: weight 45kg\n\nEach truck can carry a maximum load of 100 kg. Assign all packages using the minimum number of trucks. Every package must be loaded onto exactly one truck, and the total weight in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_5_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute a fixed budget across 5 public infrastructure projects to maximize the total projected benefit score.\nThe profile for each project is as follows:\n* Project 1: benefit score 0.071, complexity index 0.157, allocation bounds [0.083, 0.397]\n* Project 2: benefit score 0.058, complexity index 0.083, allocation bounds [0.004, 0.565]\n* Project 3: benefit score 0.082, complexity index 0.273, allocation bounds [0.033, 0.723]\n* Project 4: benefit score 0.144, complexity index 0.025, allocation bounds [0.013, 0.637]\n* Project 5: benefit score 0.174, complexity index 0.194, allocation bounds [0.098, 0.367]\nEach project must receive a budget share within its specified minimum and maximum bounds, and the sum of all budget shares must equal the total available budget. To ensure timely completion, the set of quick-delivery projects, Q = {2, 4}, must collectively receive at least 0.217 of the total budget. Furthermore, the overall portfolio complexity, measured by a composite complexity metric, must not exceed 0.223, and the total projected benefit score must be at least 0.068. Determine the optimal budget allocation that maximizes the total benefit score while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

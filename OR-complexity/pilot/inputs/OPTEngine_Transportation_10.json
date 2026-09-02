@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A manufacturing company must allocate the distribution of its specialized components from regional fabrication centers to assembly plants across the country, aiming to minimize the total logistics expense.\n\nThe available component inventory at each fabrication center (set F) is as follows:\n*F1's inventory is 175.\n*F2's inventory is 164.\n*F3's inventory is 95.\n*F4's inventory is 171.\n*F5's inventory is 200.\n*F6's inventory is 191.\n*F7's inventory is 139.\n*F8's inventory is 138.\n*F9's inventory is 91.\n*F10's inventory is 116.\n\nThe required component allocation that must be fulfilled at each assembly plant (set P) is specified below:\n*P1's requirement is 160.\n*P2's requirement is 66.\n*P3's requirement is 90.\n*P4's requirement is 38.\n*P5's requirement is 133.\n*P6's requirement is 223.\n*P7's requirement is 198.\n*P8's requirement is 149.\n*P9's requirement is 156.\n*P10's requirement is 62.\n\nThe per-unit handling and freight cost from each fabrication center to each assembly plant is detailed in the following matrix:\n| From / To | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | P9 | P10 |\n|--|-|-|-|-|-|-|-|-|-|\n| F1 | 14 | 17 | 1 | 1 | 16 | 5 | 6 | 20 | 1 | 8 |\n| F2 | 9 | 20 | 10 | 9 | 14 | 13 | 12 | 15 | 9 | 7 |\n| F3 | 15 | 10 | 17 | 20 | 13 | 19 | 4 | 1 | 17 | 12 |\n| F4 | 18 | 20 | 20 | 10 | 10 | 4 | 16 | 3 | 11 | 9 |\n| F5 | 11 | 9 | 9 | 10 | 7 | 5 | 17 | 8 | 2 | 20 |\n| F6 | 13 | 11 | 5 | 1 | 16 | 10 | 9 | 14 | 13 | 13 |\n| F7 | 2 | 19 | 19 | 7 | 11 | 8 | 18 | 16 | 12 | 17 |\n| F8 | 10 | 6 | 18 | 6 | 10 | 4 | 16 | 5 | 9 | 18 |\n| F9 | 6 | 11 | 3 | 8 | 12 | 8 | 10 | 14 | 11 | 12 |\n| F10 | 9 | 19 | 10 | 15 | 4 | 16 | 2 | 19 | 19 | 20 |\n\nDetermine the optimal allocation schedule to minimize the aggregate distribution cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_16_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A shipping company must select packages to load onto a cargo plane. Available packages are:\n* Package 1: weight 25kg, revenue $25\n* Package 2: weight 16kg, revenue $51\n* Package 3: weight 20kg, revenue $60\n* Package 4: weight 12kg, revenue $75\n* Package 5: weight 29kg, revenue $17\n* Package 6: weight 49kg, revenue $195\n* Package 7: weight 34kg, revenue $221\n* Package 8: weight 8kg, revenue $279\n* Package 9: weight 16kg, revenue $265\n* Package 10: weight 19kg, revenue $147\n* Package 11: weight 26kg, revenue $230\n* Package 12: weight 31kg, revenue $39\n* Package 13: weight 11kg, revenue $278\n* Package 14: weight 23kg, revenue $113\n* Package 15: weight 16kg, revenue $87\n* Package 16: weight 15kg, revenue $164\nThe aircraft has a maximum payload capacity of 244 kg. Choose the set of packages that maximizes total revenue without exceeding this weight limit. Each package must be shipped in its entirety or not at all.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

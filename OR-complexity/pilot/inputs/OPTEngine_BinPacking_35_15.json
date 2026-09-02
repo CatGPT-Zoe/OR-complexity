@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of cargo parcels onto identical freight pallets for an upcoming air shipment. The parcels are as follows:\n\n* Parcel Alpha: mass 49kg\n* Parcel Bravo: mass 48kg\n* Parcel Charlie: mass 36kg\n* Parcel Delta: mass 30kg\n* Parcel Echo: mass 34kg\n* Parcel Foxtrot: mass 68kg\n* Parcel Golf: mass 57kg\n* Parcel Hotel: mass 42kg\n* Parcel India: mass 61kg\n* Parcel Juliett: mass 43kg\n* Parcel Kilo: mass 61kg\n* Parcel Lima: mass 65kg\n* Parcel Mike: mass 55kg\n* Parcel November: mass 63kg\n* Parcel Oscar: mass 60kg\n* Parcel Papa: mass 40kg\n* Parcel Quebec: mass 39kg\n* Parcel Romeo: mass 30kg\n* Parcel Sierra: mass 63kg\n* Parcel Tango: mass 59kg\n* Parcel Uniform: mass 34kg\n* Parcel Victor: mass 56kg\n* Parcel Whiskey: mass 70kg\n* Parcel X-ray: mass 50kg\n* Parcel Yankee: mass 41kg\n* Parcel Zulu: mass 35kg\n* Parcel [Asterisk]: mass 66kg\n* Parcel [Backslash]: mass 69kg\n* Parcel [Bracket]: mass 51kg\n* Parcel [Caret]: mass 59kg\n* Parcel [Underscore]: mass 69kg\n* Parcel [Grave]: mass 42kg\n* Parcel a: mass 61kg\n* Parcel b: mass 56kg\n* Parcel c: mass 33kg\n\nEach pallet possesses a certified maximum load capacity of 100 kg. The coordinator must assign every parcel to precisely one pallet, ensuring the aggregate mass on any given pallet does not surpass its limit. The primary objective is to utilize the smallest possible number of pallets to accommodate the entire shipment.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

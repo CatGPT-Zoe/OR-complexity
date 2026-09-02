@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_19_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional blood bank must devise a procurement and storage schedule for a critical blood type over a 19-day planning window.  \nThe initial stock in the bank’s refrigerated storage at the start of the period is 4 units.  \nOn each day \\( t = 1, \\dots, 19 \\), the central supplier permits the bank to request a shipment whose volume must be between 6 and 48 units.  \nEvery shipment placed, however, requires a lead time of 1 day before it becomes available for meeting transfusion needs or replenishing the bank’s reserves.  \nThe projected daily transfusion demand for this blood type is as follows:  \n* Day 1: 37 units  \n* Day 2: 48 units  \n* Day 3: 35 units  \n* Day 4: 51 units  \n* Day 5: 26 units  \n* Day 6: 53 units  \n* Day 7: 40 units  \n* Day 8: 50 units  \n* Day 9: 50 units  \n* Day 10: 48 units  \n* Day 11: 60 units  \n* Day 12: 11 units  \n* Day 13: 32 units  \n* Day 14: 32 units  \n* Day 15: 59 units  \n* Day 16: 60 units  \n* Day 17: 23 units  \n* Day 18: 54 units  \n* Day 19: 51 units  \n\nShortfalls are allowed, but any unmet demand on a given day is lost and cannot be deferred to later days.  \nThroughout the 19-day horizon, blood volumes may be treated as continuous quantities, and the total on‑hand stock at any moment must not exceed the storage capacity of 63 units.  \nThe overall cost comprises three elements: the procurement cost, which is 5 per unit ordered; the refrigeration cost, which is 3 per unit held overnight; and the shortage penalty, which is 9 per unit of demand that could not be met.  \nThe objective is to determine the optimal shipment quantity for each day and to monitor the resulting stock and shortage levels so as to minimize the total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

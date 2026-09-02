@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must devise a procurement and storage strategy for a critical component across an 18-day operational window.  \nThe initial stockpile at the start of the planning interval is 71 units.  \nFor each day \\( t = 1, \\dots, 18 \\), the vendor permits the company to issue a procurement request, with the quantity required to fall between 4 and 61 units.  \nEach such request, however, incurs a lead time of 1 day before the units become available for fulfilling requirements or augmenting the stock.  \nThe daily requirement for the component is specified as:  \nDay 1: 11 units  \nDay 2: 13 units  \nDay 3: 48 units  \nDay 4: 60 units  \nDay 5: 35 units  \nDay 6: 18 units  \nDay 7: 45 units  \nDay 8: 56 units  \nDay 9: 55 units  \nDay 10: 29 units  \nDay 11: 36 units  \nDay 12: 35 units  \nDay 13: 44 units  \nDay 14: 13 units  \nDay 15: 57 units  \nDay 16: 38 units  \nDay 17: 44 units  \nDay 18: 19 units  \n\nDeficits are permissible, but any unsatisfied requirement is simply lost and not carried forward.  \nThroughout the 18-day horizon, component quantities may be treated as continuous values, and the total physical stock held at any moment must not surpass the storage facility’s limit of 71 units.  \nThe aggregate expense comprises three elements: a procurement cost of 5 per unit acquired; a storage cost of 1 per unit held overnight; and a deficit penalty of 7 per unit of unmet daily requirement.  \nThe objective is to establish the optimal acquisition quantity for each day and to monitor the ensuing stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

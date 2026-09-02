@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate the dispatch of specialized technicians from regional training centers to client project sites, aiming to minimize total travel expenses.\n\nThe number of technicians available at each training center (set C) is fixed as follows:\n*Center C1 has 186 technicians ready for assignment.\n*Center C2 has 82 technicians available.\n*Center C3 can dispatch 82 technicians.\n*Center C4 has 171 technicians on standby.\n\nThe required staffing at each client project site (set D) is non-negotiable and detailed below:\n*Project D1 requires 36 technicians.\n*Project D2 requires 114 technicians.\n*Project D3 requires 129 technicians.\n*Project D4 requires 206 technicians.\n\nThe travel cost per technician from each training center to each project site is provided in the table:\n| From / To | D1 | D2 | D3 | D4 |\n|--|-|-|-|\n| C1 | 18 | 7 | 10 | 13 |\n| C2 | 12 | 15 | 17 | 15 |\n| C3 | 4 | 8 | 8 | 3 |\n| C4 | 11 | 1 | 19 | 18 |\n\nDetermine the optimal assignment of technicians to projects to achieve the lowest possible total travel expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_18",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 7 delivery trucks across 7 distribution centers.\n\nEach truck must follow a predetermined route through the centers, with each stop represented as (Center, Unloading time),\nwhere the pair specifies the distribution center where unloading occurs and the time required to complete it.\nThe sequence of pairs indicates the mandatory order in which the centers must be visited.\n\nTruck routes:\n* Truck 1 follows: (DC1, 1) → (DC3, 10) → (DC4, 6) → (DC2, 1) → (DC6, 6) → (DC7, 3) → (DC5, 6)\n* Truck 2 follows: (DC3, 6) → (DC4, 3) → (DC6, 1) → (DC5, 8) → (DC1, 9) → (DC7, 3) → (DC2, 7)\n* Truck 3 follows: (DC6, 10) → (DC3, 10) → (DC5, 3) → (DC4, 10) → (DC1, 8) → (DC7, 6) → (DC2, 10)\n* Truck 4 follows: (DC3, 4) → (DC4, 6) → (DC5, 7) → (DC2, 5) → (DC7, 4) → (DC6, 4) → (DC1, 5)\n* Truck 5 follows: (DC2, 10) → (DC5, 3) → (DC6, 6) → (DC3, 4) → (DC7, 3) → (DC1, 5) → (DC4, 9)\n* Truck 6 follows: (DC2, 3) → (DC5, 10) → (DC6, 6) → (DC1, 10) → (DC7, 4) → (DC3, 2) → (DC4, 9)\n* Truck 7 follows: (DC4, 7) → (DC2, 6) → (DC3, 1) → (DC7, 1) → (DC6, 4) → (DC1, 4) → (DC5, 10)\n\nEach unloading operation must proceed without interruption once initiated,\nand each distribution center can only accommodate one truck at a time for unloading.\nThe objective is to schedule all unloading operations at the distribution centers\nso that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a specialized drone to inspect four remote monitoring stations positioned at the following coordinates on a grid:\n\nStation Alpha: (0, 156)\nStation Beta: (126, 85)\nStation Gamma: (62, 186)\nStation Delta: (83, 180)\n\nThe flight distances between stations, measured in kilometers, are precisely known:\nAlpha to Gamma: 68.9 km\nAlpha to Delta: 86.4 km\nBeta to Gamma: 119.6 km\nBeta to Delta: 104.3 km\nGamma to Delta: 21.8 km\n\nDue to restricted airspace, a direct flight corridor between Station Alpha and Station Beta is unavailable.\nFurthermore, a specific operational protocol mandates that the inspection tour must incorporate exactly one of the following two critical flight segments: either the route between Station Beta and Station Gamma, or the route between Station Gamma and Station Delta.\n\nThe objective is to determine the most efficient closed-loop flight path that visits each monitoring station exactly once and returns to the origin, minimizing the total distance traversed.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

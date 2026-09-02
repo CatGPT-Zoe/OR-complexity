@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_84",
+  "annotation_mode": "semantic",
+  "problem_text": "A company hopes to recruit new employees for its team. The salary requirements for candidates A, B, C, D, and E are $8100, $20000, $21000, $3000, and $8000 respectively. They need to decide whether to hire each candidate. The team wants to minimize the total amount paid to the candidates.\n\nThey hope to hire a maximum of 3 new employees.\n\nThe team has a limited budget of $35,000. They need to ensure that the total payment to the selected candidates does not exceed the budget.\n\nThe qualifications of the five candidates are as follows:\nCandidate A: Bachelor's degree;\nCandidate B: Master's degree;\nCandidate C: Doctoral degree;\nCandidate D: No degree;\nCandidate E: No degree.\nThey will select at least one candidate with a Master's or Doctoral degree.\n\nThe work experience of the five candidates is as follows:\nCandidate A: 3 years of work experience;\nCandidate B: 10 years of work experience;\nCandidate C: 4 years of work experience;\nCandidate D: 3 years of work experience;\nCandidate E: 7 years of work experience.\nThey hope the total work experience of the selected candidates is no less than 12 years.\n\nDue to the equivalent professional skills of candidates A and E, the company will choose at most one from the two.\n\nThey will hire at least 2 new employees.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

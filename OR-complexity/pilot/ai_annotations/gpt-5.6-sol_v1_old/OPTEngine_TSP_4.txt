@@ -1,0 +1,185 @@
+{
+  "schema_version": "SOH-1.0",
+  "instance_id": "OPTEngine_TSP_4",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "stations",
+      "description": "distinct research stations that the agricultural inspection team must evaluate",
+      "values": [
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "travel_duration",
+      "indices": [
+        {
+          "role": "station_1",
+          "set_id": "stations"
+        },
+        {
+          "role": "station_2",
+          "set_id": "stations"
+        }
+      ],
+      "description": "travel duration between each listed unordered pair of distinct research stations",
+      "unit": "minutes",
+      "values": {
+        "Alpha,Beta": 79.2,
+        "Alpha,Gamma": 55.5,
+        "Alpha,Delta": 82.5,
+        "Beta,Gamma": 45.0,
+        "Beta,Delta": 56.4,
+        "Gamma,Delta": 28.3
+      },
+      "data_ref": null
+    }
+  ],
+  "entities": [
+    {
+      "id": "inspection_route_leg",
+      "canonical_name": "inspection_route_leg",
+      "semantic_type": "route",
+      "indices": [
+        {
+          "role": "origin_station",
+          "set_id": "stations"
+        },
+        {
+          "role": "destination_station",
+          "set_id": "stations"
+        }
+      ],
+      "description": "direct travel legs between distinct research stations that constitute the inspection circuit",
+      "value_semantics": "binary route relation indicating whether the inspection circuit travels directly from the origin station to the destination station",
+      "unit": null,
+      "endogenous": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "determine the inspection circuit"
+      ],
+      "confidence": 0.98
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "minimize_total_inspection_circuit_duration",
+    "normalized_semantics": "minimize the sum of travel durations for all consecutive travel legs in the inspection circuit, including the return to its initial station",
+    "description": "Determine an inspection circuit of minimal total travel duration.",
+    "entity_scope": [
+      "inspection_route_leg"
+    ],
+    "parameter_refs": [
+      "travel_duration"
+    ],
+    "source_spans": [
+      "The objective is to determine the inspection circuit of minimal total duration"
+    ],
+    "excluded_from_feasibility_hypergraph": true
+  },
+  "obligations": [
+    {
+      "id": "o1",
+      "canonical_name": "visit_each_station_exactly_once",
+      "obligation_type": "coverage",
+      "normalized_semantics": "the inspection circuit must visit every research station precisely once",
+      "support_entity_ids": [
+        "inspection_route_leg"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inspection_route_leg",
+          "role": "station_visit_incidence",
+          "aggregation_axes": [
+            "origin_station",
+            "destination_station"
+          ],
+          "index_binding": {
+            "station": "s"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for every station s in stations"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "visits every research station precisely once"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "o2",
+      "canonical_name": "form_single_inspection_circuit",
+      "obligation_type": "conservation",
+      "normalized_semantics": "the selected travel legs must connect into one continuous inspection circuit rather than multiple disconnected tours",
+      "support_entity_ids": [
+        "inspection_route_leg"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inspection_route_leg",
+          "role": "global_circuit_connectivity",
+          "aggregation_axes": [
+            "origin_station",
+            "destination_station"
+          ],
+          "index_binding": {}
+        }
+      ],
+      "quantifiers": [
+        "over all selected travel legs and all stations"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "determine the inspection circuit"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "o3",
+      "canonical_name": "return_to_initial_station",
+      "obligation_type": "service_requirement",
+      "normalized_semantics": "after visiting the research stations, the inspection route must conclude at the same station where it began",
+      "support_entity_ids": [
+        "inspection_route_leg"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "inspection_route_leg",
+          "role": "route_closure",
+          "aggregation_axes": [
+            "origin_station",
+            "destination_station"
+          ],
+          "index_binding": {
+            "terminal_station": "initial_station"
+          }
+        }
+      ],
+      "quantifiers": [
+        "for the initial station selected by the circuit"
+      ],
+      "condition": null,
+      "parameter_refs": [],
+      "cross_instance": true,
+      "coupling_active": true,
+      "source_spans": [
+        "concludes at the initial station"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "unresolved_items": []
+}

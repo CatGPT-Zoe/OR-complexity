@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_17_15",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is tasked with assigning a collection of fragile scientific instruments to identical shock-absorbent transport crates. The instruments are as follows:\n* Device Alpha: shock rating 52\n* Device Beta: shock rating 50\n* Device Gamma: shock rating 57\n* Device Delta: shock rating 36\n* Device Epsilon: shock rating 65\n* Device Zeta: shock rating 48\n* Device Eta: shock rating 69\n* Device Theta: shock rating 64\n* Device Iota: shock rating 42\n* Device Kappa: shock rating 48\n* Device Lambda: shock rating 58\n* Device Mu: shock rating 62\n* Device Nu: shock rating 68\n* Device Xi: shock rating 59\n* Device Omicron: shock rating 64\n* Device Pi: shock rating 70\n* Device Rho: shock rating 46\n\nEach crate is engineered to safely accommodate a cumulative shock rating not exceeding 100 units. The coordinator must ensure every instrument is placed into precisely one crate, with the aggregate rating within any given crate respecting the engineering limit. The objective is to complete this assignment while utilizing the minimal possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Production_3_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate cargo space on three distinct shipping routes for three categories of freight, each of which demands capacity across three separate handling stages. The revenue generated per ton for each freight category is as follows:\n* For Freight X, revenue is 10.039 per ton\n* For Freight Y, revenue is 5.685 per ton\n* For Freight Z, revenue is 9.213 per ton\n\nHandling capacity required per ton for each stage is detailed below:\n* For Freight X, Stage 1 consumes 0.632 (ton-hours), Stage 2 consumes 1.916 (ton-hours), Stage 3 consumes 0.834 (ton-hours)\n* For Freight Y, Stage 1 consumes 0.718 (ton-hours), Stage 2 consumes 0.847 (ton-hours), Stage 3 consumes 1.904 (ton-hours)\n* For Freight Z, Stage 1 consumes 1.341 (ton-hours), Stage 2 consumes 1.318 (ton-hours), Stage 3 consumes 1.488 (ton-hours)\n\n* The cumulative allocation of ton-hours for Stage 1 cannot surpass 81.292\n* The cumulative allocation of ton-hours for Stage 2 cannot surpass 159.477\n* The cumulative allocation of ton-hours for Stage 3 cannot surpass 180.295\n\nUnder the condition that the total handling duration for each respective stage—Stage 1, Stage 2, and Stage 3—must remain within its allotted capacity, determine the optimal tonnage allocation for each freight category to maximize total revenue.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_3_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A company must allocate computational workloads across three distinct server clusters to fulfill processing requests from three client applications, aiming to minimize the total data transfer latency.\n\nThe processing capacity available at each server cluster is as follows:\n*Cluster X's capacity is 113 units.\n*Cluster Y's capacity is 193 units.\n*Cluster Z's capacity is 187 units.\n\nThe required processing load for each client application is specified below:\n*Application Alpha requires 106 units.\n*Application Beta requires 163 units.\n*Application Gamma requires 72 units.\n\nThe latency per unit of data transferred from each server cluster to each application is detailed in the following matrix:\n\n| Source / Destination | Alpha | Beta | Gamma |\n|--|-|-|\n| X | 8 | 5 | 17 |\n| Y | 16 | 3 | 2 |\n| Z | 4 | 5 | 6 |\n\nDetermine the optimal allocation of workload units to minimize the aggregate latency incurred during data transmission.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

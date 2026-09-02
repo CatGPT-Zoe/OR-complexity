@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A distribution network must allocate a certain perishable commodity from a collection of processing plants to a series of regional storage depots, with the objective of minimizing the total handling and transit expenditure.\n\nThe processing capacity at each plant (set P) is fixed as follows:\n*Plant P1 can process 64 units.\n*Plant P2 can process 166 units.\n*Plant P3 can process 83 units.\n*Plant P4 can process 181 units.\n*Plant P5 can process 156 units.\n*Plant P6 can process 166 units.\n*Plant P7 can process 194 units.\n*Plant P8 can process 64 units.\n\nThe required inventory level at each depot (set D) is contractually mandated:\n*Depot D1 must receive 291 units.\n*Depot D2 must receive 134 units.\n*Depot D3 must receive 10 units.\n*Depot D4 must receive 110 units.\n*Depot D5 must receive 1 unit.\n*Depot D6 must receive 94 units.\n*Depot D7 must receive 31 units.\n*Depot D8 must receive 183 units.\n\nThe composite cost per unit transferred from any given plant to a specific depot, accounting for tariffs and logistical fees, is detailed in the matrix:\n\n| From / To | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 |\n|-----------|----|----|----|----|----|----|----|----|\n| P1        | 3  | 18 | 2  | 3  | 16 | 2  | 10 | 14 |\n| P2        | 6  | 5  | 14 | 12 | 13 | 15 | 13 | 13 |\n| P3        | 3  | 18 | 5  | 12 | 4  | 6  | 18 | 13 |\n| P4        | 17 | 5  | 8  | 1  | 1  | 10 | 15 | 18 |\n| P5        | 14 | 18 | 13 | 8  | 8  | 15 | 12 | 5  |\n| P6        | 9  | 7  | 4  | 2  | 14 | 20 | 1  | 8  |\n| P7        | 7  | 3  | 4  | 20 | 2  | 15 | 20 | 2  |\n| P8        | 8  | 2  | 13 | 15 | 8  | 18 | 7  | 2  |\n\nDetermine the optimal allocation schedule to achieve the minimal aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

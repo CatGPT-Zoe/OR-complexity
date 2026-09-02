@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_24_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is allocating a fleet of cargo drones for a three-phase aerial delivery mission. They must select a collection of packages to maximize total priority score while staying within the total drone lift capacity.\n\nThe packages available are:\n* Package A: mass 30kg, priority 95 points\n* Package B: mass 3kg, priority 95 points\n* Package C: mass 42kg, priority 14 points\n* Package D: mass 34kg, priority 214 points\n* Package E: mass 23kg, priority 56 points\n* Package F: mass 21kg, priority 23 points\n* Package G: mass 44kg, priority 246 points\n* Package H: mass 47kg, priority 270 points\n* Package I: mass 15kg, priority 142 points\n* Package J: mass 25kg, priority 40 points\n* Package K: mass 28kg, priority 240 points\n* Package L: mass 32kg, priority 94 points\n* Package M: mass 14kg, priority 66 points\n* Package N: mass 35kg, priority 274 points\n* Package O: mass 7kg, priority 278 points\n* Package P: mass 14kg, priority 296 points\n* Package Q: mass 26kg, priority 174 points\n* Package R: mass 18kg, priority 128 points\n* Package S: mass 48kg, priority 40 points\n* Package T: mass 21kg, priority 152 points\n* Package U: mass 6kg, priority 104 points\n* Package V: mass 7kg, priority 245 points\n* Package W: mass 50kg, priority 21 points\n* Package X: mass 31kg, priority 191 points\n\nFurthermore, due to routing protocols, exactly one of Package A and Package B must be included in the shipment.\n\nIf Package C is included, it requires a special cooling unit that reduces the effective total lift capacity by 10 kg.\nThe maximum aggregate lift capacity for the drone fleet is 434 kg. The coordinator must determine the optimal set of packages to dispatch.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics center must devise a replenishment and stock management strategy for a critical fuel additive over a five-day operational window.  \nThe initial stock level at the start of the first day is 42 gallons.  \nOn each day \\( t = 1, \\dots, 5 \\), the supplier permits the center to request a shipment whose volume must be between 6 and 35 gallons.  \nShipments are delivered instantly, becoming available immediately to meet consumption requirements.  \nThe daily consumption of the additive is predetermined as:  \n* Day 1: 49 gallons  \n* Day 2: 17 gallons  \n* Day 3: 41 gallons  \n* Day 4: 47 gallons  \n* Day 5: 50 gallons  \n\nStock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be recovered later.  \nThroughout the five‑day period, additive quantities are treated as continuous values, and the total physical stock held at the end of any day must not exceed the storage‑tank capacity of 55 gallons.  \nThe aggregate cost comprises three elements: a procurement cost of 6 per gallon ordered; a storage cost of 2 per gallon kept overnight; and a shortage penalty of 7 per gallon of unmet daily consumption.  \nThe objective is to identify the optimal shipment volume each day and to monitor the consequent stock and deficit levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

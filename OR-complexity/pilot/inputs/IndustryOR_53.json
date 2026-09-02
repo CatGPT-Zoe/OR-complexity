@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_53",
+  "annotation_mode": "semantic",
+  "problem_text": "The Zhang family has 6 children: Harry, Hermione, Ron, Fred, George, and Ginny. The cost of taking Harry is $1200, Hermione is $1650, Ron is $750, Fred is $800, George is $800, and Ginny is $1500. Which children should the couple take to minimize the total cost of taking the children? They can take up to four children on the upcoming trip.\n\nGinny is the youngest, so the Zhang family will definitely take her.\n\nIf the couple takes Harry, they will not take Fred because Harry does not get along with him.\n\nIf the couple takes Harry, they will not take George because Harry does not get along with him.\n\nIf they take George, they must also take Fred.\n\nIf they take George, they must also take Hermione.\n\nEven though it will cost them a lot of money, the Zhang family has decided to take at least three children.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

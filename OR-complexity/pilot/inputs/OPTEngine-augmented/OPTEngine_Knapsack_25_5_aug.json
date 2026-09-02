@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_25_5_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is organizing a shipment for a critical three-phase delivery operation. They must select a combination of cargo units to maximize total utility points while staying within the truck’s weight allowance.\n\nThe cargo units available are:\n* Cargo A: weight 28kg, utility 270 points\n* Cargo B: weight 17kg, utility 281 points\n* Cargo C: weight 10kg, utility 66 points\n* Cargo D: weight 24kg, utility 213 points\n* Cargo E: weight 8kg, utility 105 points\n* Cargo F: weight 4kg, utility 219 points\n* Cargo G: weight 36kg, utility 25 points\n* Cargo H: weight 37kg, utility 149 points\n* Cargo I: weight 43kg, utility 171 points\n* Cargo J: weight 16kg, utility 18 points\n* Cargo K: weight 4kg, utility 26 points\n* Cargo L: weight 2kg, utility 129 points\n* Cargo M: weight 21kg, utility 67 points\n* Cargo N: weight 41kg, utility 56 points\n* Cargo O: weight 19kg, utility 141 points\n* Cargo P: weight 30kg, utility 39 points\n* Cargo Q: weight 49kg, utility 64 points\n* Cargo R: weight 28kg, utility 129 points\n* Cargo S: weight 17kg, utility 148 points\n* Cargo T: weight 50kg, utility 66 points\n* Cargo U: weight 9kg, utility 288 points\n* Cargo V: weight 8kg, utility 199 points\n* Cargo W: weight 24kg, utility 146 points\n* Cargo X: weight 24kg, utility 37 points\n* Cargo Y: weight 5kg, utility 219 points\n\nFurthermore, due to compatibility requirements, exactly one of Cargo A and Cargo B must be included in the shipment.\n\nIf Cargo C is selected, the truck’s effective load capacity is diminished by 10 kg.\nThe truck can transport a maximum of 387 kg. The manager must determine which cargo units to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

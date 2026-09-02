@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment for a critical three-stage delivery route. They must select a combination of cargo packages to maximize total profit contribution, while adhering to the vehicle's strict weight allowance.\n\nThe available cargo packages are:\n* Package A: weight 36kg, profit contribution 88 monetary units\n* Package B: weight 45kg, profit contribution 238 monetary units\n* Package C: weight 26kg, profit contribution 104 monetary units\n* Package D: weight 50kg, profit contribution 225 monetary units\n* Package E: weight 28kg, profit contribution 99 monetary units\n* Package F: weight 16kg, profit contribution 242 monetary units\n* Package G: weight 22kg, profit contribution 277 monetary units\n* Package H: weight 10kg, profit contribution 191 monetary units\n* Package I: weight 30kg, profit contribution 54 monetary units\n* Package J: weight 31kg, profit contribution 114 monetary units\n\nFurthermore, due to contractual obligations, exactly one of Package A or Package B must be included in the shipment.\n\nIf Package C is selected, it requires special handling equipment that reduces the vehicle's effective load capacity by 10 kg.\nThe vehicle's maximum gross weight capacity is 205 kg. The manager must determine the optimal set of packages to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

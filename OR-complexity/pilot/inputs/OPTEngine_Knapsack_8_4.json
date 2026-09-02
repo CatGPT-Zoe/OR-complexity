@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_8_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting cargo containers to load onto a transport vehicle. The available containers are:\n* Container A: weight 10 tons, revenue $245\n* Container B: weight 24 tons, revenue $268\n* Container C: weight 25 tons, revenue $281\n* Container D: weight 33 tons, revenue $27\n* Container E: weight 37 tons, revenue $56\n* Container F: weight 44 tons, revenue $275\n* Container G: weight 49 tons, revenue $49\n* Container H: weight 48 tons, revenue $228\n\nThe vehicle has a maximum weight capacity of 189 tons. Choose which containers to load to maximize total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

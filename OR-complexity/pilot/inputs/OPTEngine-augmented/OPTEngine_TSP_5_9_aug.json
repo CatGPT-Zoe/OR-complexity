@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a maintenance crew to inspect five remote substations situated at the following grid coordinates:\n\nSubstation P: (180, 56)  \nSubstation Q: (95, 43)  \nSubstation R: (85, 109)  \nSubstation S: (15, 25)  \nSubstation T: (200, 37)\n\nThe travel distances between substations, measured in kilometers, are precisely known:  \nP to R: 108.8 km  \nP to S: 167.9 km  \nP to T: 27.6 km  \nQ to R: 66.8 km  \nQ to S: 82.0 km  \nQ to T: 105.2 km  \nR to S: 109.3 km  \nR to T: 135.7 km  \nS to T: 185.4 km  \n\nDue to geographical obstructions, direct travel between Substation P and Substation Q is impossible. Furthermore, owing to simultaneous maintenance scheduling conflicts, exactly one of two critical transmission corridors must be traversed: either the link between Substation Q and R, or the link between Substation R and S.\n\nThe objective is to determine the most efficient inspection circuit, requiring the crew to visit each substation exactly once and return to the initial point of departure, thereby minimizing the total distance traveled.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

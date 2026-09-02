@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_8_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate 8 delivery trucks to complete 8 different routes.\n\nEach route consists of a sequence of checkpoint stops represented as pairs (Checkpoint, Service time),\nwhere each pair specifies the checkpoint where the truck must stop and the amount of time required for service.\nThe order of pairs indicates the required sequence in which the checkpoint services must be performed.\n\nRoute details:\n* R1 requires the sequence: (C3, 6) → (C6, 7) → (C1, 7) → (C8, 9) → (C4, 3) → (C2, 9) → (C5, 10) → (C7, 3)\n* R2 requires the sequence: (C1, 7) → (C3, 2) → (C5, 2) → (C4, 9) → (C6, 7) → (C8, 2) → (C2, 9) → (C7, 8)\n* R3 requires the sequence: (C3, 2) → (C1, 9) → (C2, 4) → (C6, 9) → (C5, 4) → (C7, 4) → (C4, 8) → (C8, 2)\n* R4 requires the sequence: (C4, 10) → (C7, 7) → (C1, 5) → (C5, 8) → (C2, 10) → (C3, 1) → (C6, 6) → (C8, 6)\n* R5 requires the sequence: (C4, 1) → (C6, 3) → (C7, 4) → (C1, 8) → (C2, 8) → (C8, 2) → (C5, 10) → (C3, 5)\n* R6 requires the sequence: (C5, 6) → (C4, 10) → (C3, 10) → (C6, 2) → (C1, 4) → (C8, 3) → (C7, 7) → (C2, 4)\n* R7 requires the sequence: (C1, 9) → (C4, 6) → (C3, 6) → (C2, 2) → (C6, 6) → (C7, 4) → (C8, 4) → (C5, 5)\n* R8 requires the sequence: (C7, 2) → (C6, 5) → (C8, 3) → (C4, 9) → (C5, 4) → (C1, 10) → (C3, 8) → (C2, 6)\n\nEach checkpoint service must run continuously once it begins and cannot be interrupted,\nand each checkpoint can only service one truck at a time.\nThe objective is to determine the service schedule for all trucks at the checkpoints\nso that the total completion time for all routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

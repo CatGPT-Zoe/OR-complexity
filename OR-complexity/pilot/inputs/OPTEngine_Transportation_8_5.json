@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_8_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery vehicles from distribution centers to retail outlets to minimize total fuel expenditure.\n\nThe number of vehicles stationed at each distribution center (set C) is as follows:\n*C1 has 151 vehicles.\n*C2 has 133 vehicles.\n*C3 has 57 vehicles.\n*C4 has 119 vehicles.\n*C5 has 165 vehicles.\n*C6 has 175 vehicles.\n*C7 has 108 vehicles.\n*C8 has 141 vehicles.\n\nThe required number of vehicles at each retail outlet (set D) is specified below:\n*D1 requires 108 vehicles.\n*D2 requires 54 vehicles.\n*D3 requires 168 vehicles.\n*D4 requires 108 vehicles.\n*D5 requires 220 vehicles.\n*D6 requires 84 vehicles.\n*D7 requires 70 vehicles.\n*D8 requires 20 vehicles.\n\nThe fuel cost per vehicle dispatched from each center to each outlet is provided in the matrix:\n| From / To | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 |\n|--|-|-|-|-|-|-|-|\n| C1 | 9 | 5 | 13 | 5 | 13 | 11 | 12 | 4 |\n| C2 | 3 | 1 | 10 | 15 | 12 | 9 | 4 | 5 |\n| C3 | 3 | 6 | 14 | 15 | 18 | 18 | 17 | 14 |\n| C4 | 4 | 1 | 3 | 12 | 18 | 3 | 20 | 20 |\n| C5 | 11 | 13 | 1 | 10 | 14 | 13 | 3 | 18 |\n| C6 | 8 | 19 | 17 | 6 | 13 | 6 | 5 | 9 |\n| C7 | 10 | 9 | 16 | 5 | 3 | 6 | 14 | 9 |\n| C8 | 14 | 10 | 16 | 3 | 12 | 9 | 8 | 16 |\n\nDetermine the optimal vehicle dispatch plan to achieve the lowest possible total fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

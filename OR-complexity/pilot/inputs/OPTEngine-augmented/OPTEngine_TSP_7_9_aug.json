@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_7_9_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a circuit of inspections across seven regional warehouses, each situated at specific grid coordinates on a district map.  \nWarehouse Alpha: Positioned at (29,122)  \nWarehouse Beta: Positioned at (187,61)  \nWarehouse Gamma: Positioned at (12,78)  \nWarehouse Delta: Positioned at (45,133)  \nWarehouse Epsilon: Positioned at (186,18)  \nWarehouse Zeta: Positioned at (77,103)  \nWarehouse Theta: Positioned at (84,76)  \n\nTravel distances between warehouses, measured in kilometers, are predetermined:  \nAlpha to Gamma: 47.2 km  \nAlpha to Delta: 19.4 km  \nAlpha to Epsilon: 188.3 km  \nAlpha to Zeta: 51.6 km  \nAlpha to Theta: 71.7 km  \nBeta to Gamma: 175.8 km  \nBeta to Delta: 159.2 km  \nBeta to Epsilon: 43.0 km  \nBeta to Zeta: 117.7 km  \nBeta to Theta: 104.1 km  \nGamma to Delta: 64.1 km  \nGamma to Epsilon: 184.1 km  \nGamma to Zeta: 69.6 km  \nGamma to Theta: 72.0 km  \nDelta to Epsilon: 182.0 km  \nDelta to Zeta: 43.9 km  \nDelta to Theta: 69.1 km  \nEpsilon to Zeta: 138.2 km  \nEpsilon to Theta: 117.3 km  \nZeta to Theta: 27.9 km  \n\nDue to infrastructure limitations, no direct route exists between Warehouse Alpha and Warehouse Beta.  \nMoreover, the inspection route must incorporate exactly one of two specified corridors: either the link between Beta and Gamma, or the link between Gamma and Delta.  \n\nThe objective is to determine the minimal total travel distance for a closed tour that visits every warehouse precisely once and concludes at the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

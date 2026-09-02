@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a cargo drone. The available packages are:\n* Package 1: volume 29 units, revenue 110 credits\n* Package 2: volume 45 units, revenue 239 credits\n* Package 3: volume 33 units, revenue 13 credits\n* Package 4: volume 17 units, revenue 135 credits\n* Package 5: volume 3 units, revenue 126 credits\n* Package 6: volume 49 units, revenue 171 credits\n* Package 7: volume 47 units, revenue 269 credits\n* Package 8: volume 18 units, revenue 26 credits\n* Package 9: volume 26 units, revenue 197 credits\n* Package 10: volume 45 units, revenue 116 credits\n* Package 11: volume 16 units, revenue 106 credits\n* Package 12: volume 21 units, revenue 19 credits\n* Package 13: volume 40 units, revenue 63 credits\n* Package 14: volume 4 units, revenue 55 credits\n* Package 15: volume 15 units, revenue 191 credits\n* Package 16: volume 39 units, revenue 64 credits\n* Package 17: volume 35 units, revenue 210 credits\n* Package 18: volume 18 units, revenue 112 credits\n* Package 19: volume 12 units, revenue 234 credits\n* Package 20: volume 29 units, revenue 244 credits\n* Package 21: volume 15 units, revenue 57 credits\n* Package 22: volume 50 units, revenue 266 credits\n* Package 23: volume 36 units, revenue 103 credits\n* Package 24: volume 45 units, revenue 73 credits\n* Package 25: volume 22 units, revenue 104 credits\n* Package 26: volume 5 units, revenue 142 credits\n* Package 27: volume 46 units, revenue 231 credits\nThe drone's cargo hold has a maximum capacity of 532 volume units. Determine which combination of packages will generate the maximum total revenue without exceeding this volume limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

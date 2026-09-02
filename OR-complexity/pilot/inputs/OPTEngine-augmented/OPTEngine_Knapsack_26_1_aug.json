@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_26_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is assembling a shipment of crates for a critical airlift operation. The goal is to maximize the total priority score of the selected crates without exceeding the aircraft's total payload allowance.\n\nThe crates available for consideration are:\n* Crate 1: weight 16kg, priority 279\n* Crate 2: weight 4kg, priority 65\n* Crate 3: weight 25kg, priority 60\n* Crate 4: weight 27kg, priority 75\n* Crate 5: weight 31kg, priority 300\n* Crate 6: weight 20kg, priority 207\n* Crate 7: weight 1kg, priority 282\n* Crate 8: weight 3kg, priority 121\n* Crate 9: weight 11kg, priority 100\n* Crate 10: weight 30kg, priority 101\n* Crate 11: weight 29kg, priority 107\n* Crate 12: weight 1kg, priority 268\n* Crate 13: weight 50kg, priority 33\n* Crate 14: weight 33kg, priority 250\n* Crate 15: weight 32kg, priority 208\n* Crate 16: weight 18kg, priority 242\n* Crate 17: weight 22kg, priority 288\n* Crate 18: weight 42kg, priority 60\n* Crate 19: weight 49kg, priority 97\n* Crate 20: weight 37kg, priority 30\n* Crate 21: weight 29kg, priority 258\n* Crate 22: weight 31kg, priority 146\n* Crate 23: weight 28kg, priority 125\n* Crate 24: weight 49kg, priority 33\n* Crate 25: weight 3kg, priority 177\n* Crate 26: weight 25kg, priority 258\n\nDue to compatibility requirements, the shipment must include exactly one of Crate 1 or Crate 2.\n\nFurthermore, if Crate 3 is included, it requires special handling equipment that reduces the aircraft's usable payload capacity by 10 kg.\nThe maximum allowable total payload for the aircraft is 452 kg. The manager must determine the optimal selection of crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_15_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load packages onto identical delivery trucks. Packages:\n* Package Alpha: weight 65kg\n* Package Bravo: weight 56kg\n* Package Charlie: weight 39kg\n* Package Delta: weight 67kg\n* Package Echo: weight 57kg\n* Package Foxtrot: weight 49kg\n* Package Golf: weight 70kg\n* Package Hotel: weight 52kg\n* Package India: weight 35kg\n* Package Juliet: weight 45kg\n* Package Kilo: weight 58kg\n* Package Lima: weight 70kg\n* Package Mike: weight 53kg\n* Package November: weight 70kg\n* Package Oscar: weight 63kg\n\nEach truck can carry up to 100 kg. Load all packages using the fewest trucks possible. Every package must be placed on exactly one truck, and the total weight loaded onto any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to service four critical data centers situated at distinct geographic coordinates:\nFacility Alpha: Positioned at grid reference (98,194)\nFacility Beta: Positioned at grid reference (107,10)\nFacility Gamma: Positioned at grid reference (66,130)\nFacility Delta: Positioned at grid reference (124,103)\n\nThe fiber-optic conduit lengths linking these facilities, measured in kilometers, are as follows:\nAlpha to Gamma: 71.6 km\nAlpha to Delta: 94.6 km\nBeta to Gamma: 126.8 km\nBeta to Delta: 94.5 km\nGamma to Delta: 64.0 km\n\nDirect connectivity between Facility Alpha and Facility Beta is unavailable due to a geographical barrier.\nFurthermore, network redundancy protocols mandate that the service circuit must incorporate exactly one of two specific backup links: either the conduit between Beta and Gamma, or the conduit between Gamma and Delta.\n\nThe objective is to determine the minimal total travel distance for a closed-loop inspection route that visits each facility precisely once before returning to the origin point.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

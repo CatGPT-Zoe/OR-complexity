@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_7_1_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must design a replenishment and storage strategy for a critical fuel additive across a weekly operational cycle of 7 consecutive days.  \nThe initial stock available at the start of the week is 10 barrels.  \nFor each day \\( t = 1, \\dots, 7 \\), the supplier permits the firm to request a delivery whose volume must fall between 16 and 75 barrels.  \nAll deliveries are instantaneous—they become available for use immediately upon ordering.  \nThe daily consumption of the additive is predetermined as follows:  \n* Day 1: 34 barrels  \n* Day 2: 47 barrels  \n* Day 3: 28 barrels  \n* Day 4: 55 barrels  \n* Day 5: 55 barrels  \n* Day 6: 40 barrels  \n* Day 7: 14 barrels  \n\nStock‑outs are tolerated, but any unsatisfied consumption is lost and cannot be deferred to later days.  \nThroughout the week, additive quantities are treated as continuous measures, and the total physical stock held at the end of any day must not exceed the depot’s capacity of 32 barrels.  \n\nOn the first day, the maximum allowable delivery volume is 64 barrels.  \nBy the end of the seventh day, the on‑hand stock must be no less than 28 barrels.  \n\nThe total expenditure over the week comprises three elements: the procurement cost, charged at 1 per barrel ordered; the storage cost, charged at 1 per barrel kept overnight; and a service‑level penalty, charged at 8 per barrel of unmet consumption.  \nDetermine the optimal delivery volume for each day and monitor the ensuing stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

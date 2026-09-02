@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_10_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate the dispatch of specialized personnel from regional offices to various project sites, aiming to minimize the total assignment cost.\n\nThe number of available personnel at each regional office (set R) is fixed as follows:\n*R1 has 134 personnel.\n*R2 has 134 personnel.\n*R3 has 142 personnel.\n*R4 has 125 personnel.\n*R5 has 105 personnel.\n*R6 has 185 personnel.\n*R7 has 171 personnel.\n*R8 has 193 personnel.\n*R9 has 52 personnel.\n*R10 has 79 personnel.\n\nThe staffing requirement that must be fulfilled at each project site (set P) is precisely determined:\n*P1 requires 73 personnel.\n*P2 requires 147 personnel.\n*P3 requires 100 personnel.\n*P4 requires 101 personnel.\n*P5 requires 155 personnel.\n*P6 requires 110 personnel.\n*P7 requires 52 personnel.\n*P8 requires 148 personnel.\n*P9 requires 153 personnel.\n*P10 requires 62 personnel.\n\nThe cost per person assigned from each office to each project site, accounting for relocation and operational expenses, is detailed in the table:\n\n| From / To | P1 | P2 | P3 | P4 | P5 | P6 | P7 | P8 | P9 | P10 |\n|--|-|-|-|-|-|-|-|-|-|\n| R1 | 18 | 10 | 1 | 17 | 12 | 17 | 17 | 15 | 16 | 2 |\n| R2 | 10 | 7 | 11 | 17 | 3 | 4 | 6 | 18 | 18 | 1 |\n| R3 | 3 | 7 | 7 | 14 | 4 | 7 | 18 | 14 | 3 | 5 |\n| R4 | 1 | 15 | 11 | 2 | 3 | 3 | 2 | 6 | 9 | 18 |\n| R5 | 3 | 19 | 8 | 9 | 14 | 13 | 15 | 13 | 14 | 11 |\n| R6 | 1 | 13 | 4 | 18 | 1 | 20 | 3 | 19 | 2 | 3 |\n| R7 | 12 | 17 | 4 | 10 | 10 | 20 | 3 | 10 | 15 | 13 |\n| R8 | 13 | 1 | 16 | 6 | 18 | 8 | 5 | 13 | 18 | 10 |\n| R9 | 5 | 10 | 12 | 1 | 18 | 18 | 5 | 4 | 2 | 1 |\n| R10 | 19 | 20 | 13 | 18 | 18 | 3 | 10 | 7 | 12 | 7 |\n\nDetermine the optimal personnel assignment to achieve the minimal total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

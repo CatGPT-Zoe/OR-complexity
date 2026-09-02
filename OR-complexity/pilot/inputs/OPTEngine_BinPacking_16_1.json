@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator is preparing shipments of electronic components to be loaded onto identical cargo drones. Components:\n* Component Alpha: weight 35kg\n* Component Beta: weight 32kg\n* Component Gamma: weight 34kg\n* Component Delta: weight 46kg\n* Component Epsilon: weight 49kg\n* Component Zeta: weight 64kg\n* Component Eta: weight 51kg\n* Component Theta: weight 37kg\n* Component Iota: weight 63kg\n* Component Kappa: weight 45kg\n* Component Lambda: weight 40kg\n* Component Mu: weight 34kg\n* Component Nu: weight 56kg\n* Component Xi: weight 48kg\n* Component Omicron: weight 48kg\n* Component Pi: weight 63kg\n\nEach drone can carry a maximum payload of 100 kg. Load all components using the fewest drones possible. Every component must be assigned to exactly one drone, and the total weight carried by any drone cannot exceed its payload capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

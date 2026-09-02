@@ -1,0 +1,25 @@
+{
+  "instance_id": "MIPLIB_NL_cvs16r89-60",
+  "annotation_mode": "semantic",
+  "problem_text": "A high-performance computing (HPC) cluster manager is scheduling 89 computational threads which support 60 distinct microservices. The dependency mapping is provided in `project_teams` (note that due to shared libraries, a single thread may support multiple microservices). The cluster features 16 Tensor Processing Units (TPUs). Each TPU has a hard hardware concurrency limit of 7 threads. TPUs with prime number identifiers are connected via a low-latency InfiniBand fabric, offering 15% faster interconnect speeds compared to the standard Ethernet backplane used by composite-numbered TPUs. The system's power management protocol dictates that every active thread consumes 12W of power, while idle slots consume 2W. The primary objective is to offload the maximum number of threads onto these TPUs. To maintain memory coherence and minimize cross-chip latency, the scheduler enforces a strict locality rule: for any given microservice, all of its threads that are offloaded to TPUs must be executed within the same physical TPU node. It is strictly forbidden to distribute threads from a single microservice across two or more different TPUs. Threads that cannot be accommodated on the TPUs will be executed on the legacy CPU standard pool. Determine the maximum total number of threads that can be assigned to the TPU nodes under these configuration rules.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "project_teams",
+      "indices": [
+        "team_id",
+        "researcher_id"
+      ],
+      "unit": "",
+      "values": "| team_id | researcher_id |\n|---|---|\n| 0 | 21 |\n| 0 | 65 |\n| 0 | 81 |\n| 1 | 24 |\n| 1 | 27 |\n| 1 | 62 |\n| 1 | 80 |\n| 2 | 1 |\n| 2 | 24 |\n| 2 | 48 |\n| 3 | 15 |\n| 3 | 24 |\n| 3 | 50 |\n| 3 | 76 |\n| 4 | 10 |\n| 4 | 60 |\n| 4 | 61 |\n| 4 | 76 |\n| 5 | 7 |\n| 5 | 29 |\n| 5 | 75 |\n| 6 | 34 |\n| 6 | 48 |\n| 6 | 61 |\n| 6 | 79 |\n| 7 | 2 |\n| 7 | 6 |\n| 7 | 39 |\n| 7 | 86 |\n| 8 | 8 |\n| 8 | 15 |\n| 8 | 36 |\n| 8 | 85 |\n| 9 | 37 |\n| 9 | 53 |\n| 9 | 74 |\n| 10 | 43 |\n| 10 | 84 |\n| 11 | 57 |\n| 11 | 67 |\n| 12 | 10 |\n| 12 | 22 |\n| 12 | 67 |\n| 12 | 88 |\n| 13 | 42 |\n| 13 | 64 |\n| 13 | 87 |\n| 14 | 3 |\n| 14 | 8 |\n| 14 | 11 |\n| 14 | 46 |\n| 15 | 45 |\n| 15 | 48 |\n| 16 | 9 |\n| 16 | 33 |\n| 16 | 35 |\n| 16 | 52 |\n| 17 | 3 |\n| 17 | 7 |\n| 17 | 40 |\n| 18 | 6 |\n| 18 | 9 |\n| 18 | 28 |\n| 18 | 83 |\n| 19 | 0 |\n| 19 | 38 |\n| 19 | 73 |\n| 20 | 34 |\n| 20 | 82 |\n| 21 | 4 |\n| 21 | 27 |\n| 21 | 50 |\n| 21 | 56 |\n| 22 | 1 |\n| 22 | 68 |\n| 23 | 40 |\n| 23 | 82 |\n| 24 | 2 |\n| 24 | 18 |\n| 24 | 19 |\n| 24 | 76 |\n| 25 | 3 |\n| 25 | 26 |\n| 25 | 29 |\n| 25 | 54 |\n| 26 | 41 |\n| 26 | 45 |\n| 27 | 37 |\n| 27 | 42 |\n| 27 | 43 |\n| 27 | 61 |\n| 28 | 70 |\n| 28 | 72 |\n| 28 | 81 |\n| 29 | 60 |\n| 29 | 71 |\n| 29 | 72 |\n| 29 | 85 |\n| 30 | 8 |\n| 30 | 65 |\n| 31 | 14 |\n| 31 | 65 |\n| 32 | 26 |\n| 32 | 47 |\n| 32 | 71 |\n| 33 | 4 |\n| 33 | 29 |\n| 33 | 74 |\n| 34 | 17 |\n| 34 | 28 |\n| 34 | 34 |\n| 35 | 18 |\n| 35 | 32 |\n| 35 | 35 |\n| 35 | 64 |\n| 36 | 31 |\n| 36 | 51 |\n| 36 | 56 |\n| 37 | 47 |\n| 37 | 49 |\n| 37 | 55 |\n| 37 | 57 |\n| 38 | 18 |\n| 38 | 28 |\n| 38 | 37 |\n| 38 | 77 |\n| 39 | 20 |\n| 39 | 25 |\n| 39 | 34 |\n| 40 | 13 |\n| 40 | 16 |\n| 40 | 51 |\n| 40 | 72 |\n| 41 | 13 |\n| 41 | 15 |\n| 42 | 12 |\n| 42 | 20 |\n| 42 | 38 |\n| 42 | 84 |\n| 43 | 16 |\n| 43 | 59 |\n| 44 | 31 |\n| 44 | 81 |\n| 45 | 23 |\n| 45 | 49 |\n| 46 | 7 |\n| 46 | 32 |\n| 46 | 35 |\n| 46 | 70 |\n| 47 | 24 |\n| 47 | 49 |\n| 48 | 13 |\n| 48 | 20 |\n| 48 | 46 |\n| 48 | 59 |\n| 49 | 10 |\n| 49 | 24 |\n| 49 | 71 |\n| 50 | 60 |\n| 50 | 75 |\n| 51 | 58 |\n| 51 | 66 |\n| 51 | 85 |\n| 52 | 70 |\n| 52 | 74 |\n| 53 | 78 |\n| 53 | 86 |\n| 54 | 4 |\n| 54 | 5 |\n| 54 | 30 |\n| 54 | 31 |\n| 55 | 15 |\n| 55 | 52 |\n| 55 | 63 |\n| 56 | 18 |\n| 56 | 69 |\n| 57 | 5 |\n| 57 | 10 |\n| 57 | 43 |\n| 57 | 53 |\n| 58 | 17 |\n| 58 | 30 |\n| 58 | 39 |\n| 58 | 44 |\n| 59 | 17 |\n| 59 | 34 |\n| 59 | 51 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/cvs16r89-60/data/project_teams.csv",
+      "role": "parameter_table",
+      "table": "project_teams"
+    }
+  ],
+  "notes": ""
+}

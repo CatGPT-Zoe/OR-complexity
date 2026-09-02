@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign shipments to identical cargo planes. The shipments are as follows:\n* Shipment Alpha: weight 34kg\n* Shipment Beta: weight 34kg\n* Shipment Gamma: weight 35kg\n* Shipment Delta: weight 44kg\n* Shipment Epsilon: weight 67kg\n* Shipment Zeta: weight 69kg\n* Shipment Eta: weight 32kg\n* Shipment Theta: weight 70kg\n* Shipment Iota: weight 50kg\n* Shipment Kappa: weight 51kg\n* Shipment Lambda: weight 68kg\n* Shipment Mu: weight 68kg\n* Shipment Nu: weight 59kg\n* Shipment Xi: weight 31kg\n* Shipment Omicron: weight 64kg\n* Shipment Pi: weight 68kg\n* Shipment Rho: weight 61kg\n* Shipment Sigma: weight 55kg\n* Shipment Tau: weight 48kg\n* Shipment Upsilon: weight 69kg\n* Shipment Phi: weight 31kg\n* Shipment Chi: weight 45kg\n* Shipment Psi: weight 52kg\n* Shipment Omega: weight 52kg\n* Shipment A1: weight 50kg\n* Shipment B1: weight 40kg\n* Shipment C1: weight 56kg\n* Shipment D1: weight 42kg\n* Shipment E1: weight 55kg\n* Shipment F1: weight 33kg\n* Shipment G1: weight 31kg\n* Shipment H1: weight 47kg\n* Shipment I1: weight 68kg\n* Shipment J1: weight 64kg\n* Shipment K1: weight 43kg\n* Shipment L1: weight 49kg\n* Shipment M1: weight 39kg\n* Shipment N1: weight 68kg\n\nEach cargo plane can carry a maximum of 100 kg. Assign all shipments using the fewest planes. Every shipment must be loaded onto exactly one plane, and the total weight on any plane cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

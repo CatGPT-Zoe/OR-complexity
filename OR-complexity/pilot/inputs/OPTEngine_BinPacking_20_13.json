@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_20_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of freight parcels onto identical cargo aircraft. The parcels are labeled as follows:\n\n* Parcel Alpha: mass 56 tons\n* Parcel Bravo: mass 33 tons\n* Parcel Charlie: mass 49 tons\n* Parcel Delta: mass 54 tons\n* Parcel Echo: mass 33 tons\n* Parcel Foxtrot: mass 68 tons\n* Parcel Golf: mass 40 tons\n* Parcel Hotel: mass 52 tons\n* Parcel India: mass 34 tons\n* Parcel Juliet: mass 56 tons\n* Parcel Kilo: mass 33 tons\n* Parcel Lima: mass 58 tons\n* Parcel Mike: mass 52 tons\n* Parcel November: mass 68 tons\n* Parcel Oscar: mass 69 tons\n* Parcel Papa: mass 46 tons\n* Parcel Quebec: mass 49 tons\n* Parcel Romeo: mass 66 tons\n* Parcel Sierra: mass 59 tons\n* Parcel Tango: mass 56 tons\n\nEach aircraft has a maximum payload capacity of 100 tons. The objective is to load all parcels using the minimum number of aircraft. Every parcel must be assigned to exactly one aircraft, and the combined mass on any aircraft cannot surpass its payload limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

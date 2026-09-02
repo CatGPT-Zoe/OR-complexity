@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_14",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must coordinate 7 delivery trucks to complete 7 different supply routes.\n\nEach route consists of a predetermined sequence of checkpoint stops represented as pairs (Truck Depot, Handling Time), where each pair specifies the depot where the truck must be loaded and the time required to complete the loading process. The order of pairs indicates the mandatory sequence in which the trucks must visit the depots.\n\nRoute details:\n* R1 follows the sequence: (Depot7, 7) → (Depot4, 8) → (Depot1, 9) → (Depot2, 4) → (Depot5, 6) → (Depot3, 1) → (Depot6, 1)\n* R2 follows the sequence: (Depot4, 1) → (Depot2, 3) → (Depot1, 9) → (Depot7, 8) → (Depot3, 5) → (Depot6, 7) → (Depot5, 9)\n* R3 follows the sequence: (Depot5, 10) → (Depot1, 6) → (Depot6, 5) → (Depot4, 2) → (Depot7, 1) → (Depot3, 4) → (Depot2, 10)\n* R4 follows the sequence: (Depot7, 2) → (Depot1, 10) → (Depot5, 8) → (Depot3, 5) → (Depot6, 4) → (Depot2, 7) → (Depot4, 7)\n* R5 follows the sequence: (Depot6, 1) → (Depot5, 3) → (Depot3, 6) → (Depot2, 10) → (Depot7, 10) → (Depot4, 8) → (Depot1, 2)\n* R6 follows the sequence: (Depot5, 7) → (Depot4, 10) → (Depot6, 3) → (Depot3, 3) → (Depot2, 1) → (Depot1, 2) → (Depot7, 7)\n* R7 follows the sequence: (Depot2, 5) → (Depot1, 6) → (Depot3, 10) → (Depot5, 4) → (Depot7, 9) → (Depot6, 9) → (Depot4, 1)\n\nEach loading process must be completed without interruption once it begins, and each depot can only accommodate one truck at a time for loading. The objective is to determine the optimal schedule for all truck loading operations at the depots so that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

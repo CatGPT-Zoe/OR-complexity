@@ -1,0 +1,39 @@
+{
+  "instance_id": "LEAN_PharmaSalesData1",
+  "annotation_mode": "semantic",
+  "problem_text": "A chain pharmacy needs to restock its drug inventory. For each drug type (e.g., NSAIDs, antirheumatic drugs, acetic-acid derivatives, etc.), the benefit coefficient is listed in “products.csv.” The pharmacy faces a single overall inventory-capacity constraint, provided in “capacity.csv.”\n    The goal is to decide the daily order quantity of each drug typeso as to maximize total benefit while ensuring that the sum of all ordered units does not exceed the overall capacity.The decision variables x_i  represent the number of units of type  i  drug to be ordered daily.The decision variables must be integers.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "capacity",
+      "indices": [
+        "Capacity"
+      ],
+      "unit": "",
+      "values": "| Capacity |\n|---|\n| 4120 |"
+    },
+    {
+      "name": "products",
+      "indices": [
+        "ProductName",
+        "Value",
+        "Weight"
+      ],
+      "unit": "",
+      "values": "| ProductName | Value | Weight |\n|---|---|---|\n| NSAIDs | 585 | 50 |\n| Antirheumatic Drugs | 557 | 329 |\n| Acetic Acid Derivatives | 963 | 410 |\n| Antibiotics | 301 | 452 |\n| Antiviral Drugs | 425 | 350 |\n| Antifungal Agents | 260 | 159 |\n| Antidepressants | 848 | 353 |\n| Antipsychotics | 461 | 291 |\n| Antihistamines | 840 | 302 |\n| Corticosteroids | 999 | 50 |\n| Beta Blockers | 392 | 250 |\n| Calcium Channel Blockers | 874 | 178 |\n| ACE Inhibitors | 695 | 313 |\n| Angiotensin II Receptor Blockers | 405 | 378 |\n| Diuretics | 320 | 94 |\n| Statins | 913 | 97 |\n| Insulin | 754 | 470 |\n| Anticoagulants | 428 | 341 |\n| Antiepileptic Drugs | 711 | 121 |\n| Antiemetics | 998 | 61 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA8/PharmaSalesData1/capacity.csv",
+      "role": "parameter_table",
+      "table": "capacity"
+    },
+    {
+      "path": "OR-complexity/lean-llm-opt-main/Test_Dataset/Large-scale-or/RA_testing/RA8/PharmaSalesData1/products.csv",
+      "role": "parameter_table",
+      "table": "products"
+    }
+  ],
+  "notes": ""
+}

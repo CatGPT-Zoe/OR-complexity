@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_11_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a set of archival boxes to identical shipping crates. The boxes contain historical documents with the following masses:\n\n* Box 1: 42 kilograms\n* Box 2: 68 kilograms\n* Box 3: 66 kilograms\n* Box 4: 37 kilograms\n* Box 5: 55 kilograms\n* Box 6: 35 kilograms\n* Box 7: 53 kilograms\n* Box 8: 37 kilograms\n* Box 9: 32 kilograms\n* Box 10: 68 kilograms\n* Box 11: 31 kilograms\n\nEach shipping crate has a maximum safe load capacity of 100 kilograms. The coordinator must ensure every archival box is placed into exactly one crate, and the combined mass within any single crate must not surpass its load limit. The objective is to complete this assignment utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

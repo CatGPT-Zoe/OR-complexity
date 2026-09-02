@@ -1,0 +1,18 @@
+{
+  "instance_id": "OPTEngine_BinPacking",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are as follows:\n* Package P: 67 pounds\n* Package Q: 43 pounds\n* Package R: 62 pounds\n* Package S: 38 pounds\n* Package T: 48 pounds\n* Package U: 38 pounds\n* Package V: 36 pounds\n* Package W: 69 pounds\n* Package X: 46 pounds\n* Package Y: 64 pounds\n\nEach truck can carry a maximum load of 100 pounds. Assign all packages using the fewest number of trucks. Every package must be placed on exactly one truck, and the total weight loaded onto a truck cannot exceed its capacity.",
+  "sets": [
+    {
+      "name": "packages",
+      "description": "packages to load"
+    },
+    {
+      "name": "trucks",
+      "description": "identical delivery trucks (count decided by model)"
+    }
+  ],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": "Bin packing: package-truck assignment family + coverage/capacity obligations."
+}

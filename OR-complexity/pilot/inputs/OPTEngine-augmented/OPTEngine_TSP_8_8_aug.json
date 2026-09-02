@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_8_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a surveillance drone to inspect eight critical communication hubs positioned across a region. The geographic coordinates of each hub, measured in relative grid units, are as follows:\n\nHub P: (33,10)\nHub Q: (76,3)\nHub R: (194,114)\nHub S: (84,41)\nHub T: (38,167)\nHub U: (117,95)\nHub V: (129,97)\nHub W: (135,128)\n\nThe flight path distances between hubs, in kilometers, are precomputed:\nP to R: 191.7 km\nP to S: 59.7 km\nP to T: 157.1 km\nP to U: 119.5 km\nP to V: 129.6 km\nP to W: 156.0 km\nQ to R: 162.0 km\nQ to S: 38.8 km\nQ to T: 168.3 km\nQ to U: 100.7 km\nQ to V: 107.9 km\nQ to W: 138.2 km\nR to S: 132.0 km\nR to T: 164.8 km\nR to U: 79.3 km\nR to V: 67.2 km\nR to W: 60.6 km\nS to T: 134.1 km\nS to U: 63.3 km\nS to V: 71.8 km\nS to W: 100.8 km\nT to U: 106.9 km\nT to V: 114.8 km\nT to W: 104.5 km\nU to V: 12.2 km\nU to W: 37.6 km\nV to W: 31.6 km\n\nDue to a permanent signal interference zone, a direct flight between Hub P and Hub Q is impossible. Furthermore, operational protocols mandate that exactly one of two designated secure corridors must be incorporated into the inspection circuit: either the link between Hub Q and Hub R, or the link between Hub R and Hub S.\n\nThe objective is to determine the minimal total flight distance for a closed-circuit route that inspects each hub precisely one time, commencing and concluding at the same hub.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

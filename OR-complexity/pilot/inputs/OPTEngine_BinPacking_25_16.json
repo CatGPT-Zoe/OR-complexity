@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_25_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of shipments onto identical transport vehicles. The shipments are as follows:\n\n* Shipment Alpha: volume 65 cubic meters\n* Shipment Beta: volume 38 cubic meters\n* Shipment Gamma: volume 43 cubic meters\n* Shipment Delta: volume 67 cubic meters\n* Shipment Epsilon: volume 40 cubic meters\n* Shipment Zeta: volume 35 cubic meters\n* Shipment Eta: volume 66 cubic meters\n* Shipment Theta: volume 60 cubic meters\n* Shipment Iota: volume 48 cubic meters\n* Shipment Kappa: volume 47 cubic meters\n* Shipment Lambda: volume 46 cubic meters\n* Shipment Mu: volume 43 cubic meters\n* Shipment Nu: volume 55 cubic meters\n* Shipment Xi: volume 30 cubic meters\n* Shipment Omicron: volume 70 cubic meters\n* Shipment Pi: volume 33 cubic meters\n* Shipment Rho: volume 63 cubic meters\n* Shipment Sigma: volume 34 cubic meters\n* Shipment Tau: volume 30 cubic meters\n* Shipment Upsilon: volume 70 cubic meters\n* Shipment Phi: volume 48 cubic meters\n* Shipment Chi: volume 39 cubic meters\n* Shipment Psi: volume 39 cubic meters\n* Shipment Omega: volume 62 cubic meters\n* Shipment Digamma: volume 38 cubic meters\n\nEach vehicle has a maximum cargo capacity of 100 cubic meters. The objective is to assign every shipment to a vehicle, ensuring that the total volume in any given vehicle does not surpass its limit, while utilizing the smallest possible number of vehicles. Each shipment must be placed on exactly one vehicle.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_8",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must devise a procurement and storage schedule for a critical fuel additive over a 6-day operational window.  \nThe starting stock at the outset of the planning interval is 91 liters.  \nIn each operational day \\( t = 1, \\dots, 6 \\), the supplier permits the firm to request a delivery whose volume must fall between 0 and 72 liters.  \nNevertheless, every delivery placed will require a lead time of 4 days before it becomes available to meet consumption needs or to replenish the on‑hand stock.  \nThe consumption of the additive on each day is specified as follows:  \n* Day 1: 53 liters  \n* Day 2: 36 liters  \n* Day 3: 30 liters  \n* Day 4: 10 liters  \n* Day 5: 23 liters  \n* Day 6: 10 liters  \n\nStock‑outs are tolerated, but any unsatisfied consumption is lost and will not be carried forward.  \nThroughout the planning window, additive quantities may be treated as continuous, and the total volume of fuel additive stored at any moment must not surpass the tank capacity of 91 liters.  \nThe aggregate expense over the 6‑day horizon comprises three elements: the procurement cost, amounting to 5 per liter ordered; the storage cost, amounting to 1 per liter kept in the tank from one day to the next; and the shortage penalty, amounting to 9 per liter of unfulfilled consumption. The objective is to establish the optimal delivery volume for each day and to monitor the consequent stock and shortage levels so as to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Pollution_3_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A city aims to formulate a waste‑water treatment strategy to lower total biochemical oxygen demand (BOD) discharges from several industrial outfalls. Currently, no treatment processes are in place.\n\nThe discharge characteristics for each outfall are as follows:\n* For Outfall A, the discharge coefficient is 2.654, and the flow volume is 61.456.\n* For Outfall B, the discharge coefficient is 1.943, and the flow volume is 106.975.\n* For Outfall C, the discharge coefficient is 2.261, and the flow volume is 122.347.\n\nTo curtail discharges, a set of treatment technologies can be deployed, each possessing a distinct removal rate:\n* Technology 1 achieves a 84% reduction in BOD load.\n* Technology 2 achieves a 71% reduction in BOD load.\n* Technology 3 achieves an 82% reduction in BOD load.\n\nImplementing a technology at an outfall entails an extra expense per unit of flow volume. The cost matrix for all outfall–technology pairings is given below:\n\n| Outfall \\ Technology | Technology 1 | Technology 2 | Technology 3 |\n|----------------------|--------------|--------------|--------------|\n| Outfall A            | 62.815       | 130.78       | 79.318       |\n| Outfall B            | 80.334       | 49.806       | 60.726       |\n| Outfall C            | 187.964      | 133.127      | 125.735      |\n\nDecisions must be made on which technologies to apply at each outfall (multiple technologies may be adopted concurrently at a single outfall), and an outfall may also be left partially untreated if needed.\nThe objective is to guarantee that the aggregate BOD discharge is lowered by at least a fraction P = 0.286 of the initial load, while minimizing the overall expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_7_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to allocate a fixed budget across 7 infrastructure projects to maximize the total expected community benefit.  \nThe characteristics of each project are as follows:  \n* Project A: expected benefit is 0.118, implementation complexity is 0.142, budget share bounds [0.030, 0.767]  \n* Project B: expected benefit is 0.033, implementation complexity is 0.098, budget share bounds [0.070, 0.884]  \n* Project C: expected benefit is 0.190, implementation complexity is 0.300, budget share bounds [0.002, 0.846]  \n* Project D: expected benefit is 0.198, implementation complexity is 0.257, budget share bounds [0.083, 0.747]  \n* Project E: expected benefit is 0.074, implementation complexity is 0.041, budget share bounds [0.040, 0.800]  \n* Project F: expected benefit is 0.193, implementation complexity is 0.121, budget share bounds [0.001, 0.842]  \n* Project G: expected benefit is 0.144, implementation complexity is 0.114, budget share bounds [0.087, 0.765]  \n\nEach project must receive a budget share within its specified bounds, and the sum of all budget shares must equal the total available budget. To ensure timely completion, the set of quick-delivery projects L = {A, B, C, E, F, G} must collectively receive at least 0.229 of the total budget.  \nAdditionally, the overall implementation complexity of the portfolio must not exceed 0.142, and the total expected community benefit must be at least 0.091.  \nDetermine the optimal budget allocation that maximizes total expected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

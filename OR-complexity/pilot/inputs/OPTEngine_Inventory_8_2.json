@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_8_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A retail distributor must devise a procurement and storage strategy for a perishable product across an 8-week planning cycle.  \nInitial stock at the start of the cycle is 77 kilograms.  \nIn each week \\( t = 1, \\dots, 8 \\), the supplier permits an order whose size must be between 2 and 63 kilograms.  \nEach order, however, requires a lead time of 1 week before it becomes available to meet weekly requirements or to replenish the stock.  \nWeekly customer requirements (in kilograms) are as follows:  \n* Week 1: 56  \n* Week 2: 31  \n* Week 3: 13  \n* Week 4: 12  \n* Week 5: 40  \n* Week 6: 36  \n* Week 7: 19  \n* Week 8: 41  \n\nStockouts are tolerated, but any unsatisfied requirement in a given week is lost and cannot be recovered later.  \nThroughout the planning horizon, product quantities may be treated as continuous, and the total physical stock held at any moment must not exceed the warehouse limit of 77 kilograms.  \nTotal cost comprises three elements: the procurement cost, at 3 per kilogram ordered; the storage cost, at 2 per kilogram carried over from one week to the next; and the shortage penalty, at 6 per kilogram of unmet weekly requirement.  \nDetermine the optimal order quantity each week and monitor the resulting stock and shortage levels so as to minimize total cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

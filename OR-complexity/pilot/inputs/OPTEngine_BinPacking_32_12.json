@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_32_12",
+  "annotation_mode": "semantic",
+  "problem_text": "In a specialized archival facility, a curator must allocate a collection of rare manuscripts into identical preservation cases. The manuscripts are as follows:\n\n* Manuscript Alpha: thickness 36mm\n* Manuscript Beta: thickness 38mm\n* Manuscript Gamma: thickness 59mm\n* Manuscript Delta: thickness 70mm\n* Manuscript Epsilon: thickness 52mm\n* Manuscript Zeta: thickness 62mm\n* Manuscript Eta: thickness 38mm\n* Manuscript Theta: thickness 34mm\n* Manuscript Iota: thickness 59mm\n* Manuscript Kappa: thickness 55mm\n* Manuscript Lambda: thickness 60mm\n* Manuscript Mu: thickness 50mm\n* Manuscript Nu: thickness 69mm\n* Manuscript Xi: thickness 49mm\n* Manuscript Omicron: thickness 60mm\n* Manuscript Pi: thickness 39mm\n* Manuscript Rho: thickness 48mm\n* Manuscript Sigma: thickness 32mm\n* Manuscript Tau: thickness 56mm\n* Manuscript Upsilon: thickness 34mm\n* Manuscript Phi: thickness 59mm\n* Manuscript Chi: thickness 67mm\n* Manuscript Psi: thickness 41mm\n* Manuscript Omega: thickness 34mm\n* Manuscript Digamma: thickness 37mm\n* Manuscript Stigma: thickness 55mm\n* Manuscript Heta: thickness 44mm\n* Manuscript San: thickness 48mm\n* Manuscript Koppa: thickness 70mm\n* Manuscript Sampi: thickness 36mm\n* Manuscript Sho: thickness 57mm\n* Manuscript Tsan: thickness 70mm\n\nEach preservation case can safely accommodate a maximum total thickness of 100mm. The curator must place every manuscript into exactly one case, ensuring the combined thickness in any given case does not surpass its structural limit. The objective is to utilize the smallest possible number of these cases to house the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

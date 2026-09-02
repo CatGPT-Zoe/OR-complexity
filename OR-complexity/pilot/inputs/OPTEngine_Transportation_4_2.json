@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_4_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must allocate a fleet of delivery vehicles from four distribution centers to four retail warehouses, minimizing the total fuel expenditure.\n\nThe number of vehicles available at each distribution center (set C) is as follows:\n*Center C1 has 163 vehicles ready.\n*Center C2 has 190 vehicles ready.\n*Center C3 has 75 vehicles ready.\n*Center C4 has 62 vehicles ready.\n\nThe required number of vehicles at each retail warehouse (set W) is fixed:\n*Warehouse W1 requires 157 vehicles.\n*Warehouse W2 requires 5 vehicles.\n*Warehouse W3 requires 26 vehicles.\n*Warehouse W4 requires 217 vehicles.\n\nThe fuel cost per vehicle dispatched from a given center to a specific warehouse is detailed in the table:\n| From / To | W1 | W2 | W3 | W4 |\n|---|---|---|---|---|\n| C1 | 8 | 6 | 14 | 16 |\n| C2 | 16 | 7 | 13 | 2 |\n| C3 | 6 | 13 | 1 | 13 |\n| C4 | 9 | 15 | 10 | 14 |\n\nDetermine the optimal vehicle dispatch plan to achieve the minimal total fuel cost.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

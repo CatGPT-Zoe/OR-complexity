@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_9",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate the sequential inspection of four regional warehouses by a single quality auditor.\n\nThe travel times between warehouses are recorded in minutes:\n* Warehouse 1 to Warehouse 2: 124.4 minutes\n* Warehouse 1 to Warehouse 3: 102.2 minutes\n* Warehouse 1 to Warehouse 4: 132.5 minutes\n* Warehouse 2 to Warehouse 3: 112.0 minutes\n* Warehouse 2 to Warehouse 4: 11.7 minutes\n* Warehouse 3 to Warehouse 4: 123.7 minutes\n\nThe auditor must devise an itinerary that examines each warehouse precisely once, concluding the tour back at the initial warehouse, while minimizing the total duration of the circuit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

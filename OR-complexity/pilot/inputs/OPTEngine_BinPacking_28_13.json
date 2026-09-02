@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_28_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of freight parcels onto identical cargo pallets for air transport. The parcels are labeled as follows:\n\n* Parcel Alpha: mass 61 kg\n* Parcel Bravo: mass 56 kg\n* Parcel Charlie: mass 59 kg\n* Parcel Delta: mass 58 kg\n* Parcel Echo: mass 53 kg\n* Parcel Foxtrot: mass 30 kg\n* Parcel Golf: mass 42 kg\n* Parcel Hotel: mass 66 kg\n* Parcel India: mass 43 kg\n* Parcel Juliett: mass 34 kg\n* Parcel Kilo: mass 61 kg\n* Parcel Lima: mass 38 kg\n* Parcel Mike: mass 35 kg\n* Parcel November: mass 63 kg\n* Parcel Oscar: mass 65 kg\n* Parcel Papa: mass 55 kg\n* Parcel Quebec: mass 69 kg\n* Parcel Romeo: mass 47 kg\n* Parcel Sierra: mass 43 kg\n* Parcel Tango: mass 35 kg\n* Parcel Uniform: mass 57 kg\n* Parcel Victor: mass 31 kg\n* Parcel Whiskey: mass 64 kg\n* Parcel X-ray: mass 60 kg\n* Parcel Yankee: mass 51 kg\n* Parcel Zulu: mass 30 kg\n* Parcel [Bracket]: mass 42 kg\n* Parcel [Backslash]: mass 69 kg\n\nEach pallet is certified for a maximum safe load of 100 kg. The coordinator must assign every parcel to exactly one pallet, ensuring the cumulative mass on any given pallet does not surpass its certified limit. The objective is to complete the allocation while utilizing the smallest possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

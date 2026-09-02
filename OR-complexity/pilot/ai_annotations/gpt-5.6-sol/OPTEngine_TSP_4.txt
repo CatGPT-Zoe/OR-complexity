@@ -1,0 +1,246 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "OPTEngine_TSP_4",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "STATIONS",
+      "canonical_name": "research_stations",
+      "members": [
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta"
+      ],
+      "source_grounding": "The instance identifies four distinct research stations and names them in the travel-duration list.",
+      "source_spans": [
+        "four distinct research stations",
+        "Station Alpha to Beta",
+        "Station Alpha to Gamma",
+        "Station Alpha to Delta",
+        "Station Beta to Gamma",
+        "Station Beta to Delta",
+        "Station Gamma to Delta"
+      ]
+    },
+    {
+      "id": "STATION_PAIRS",
+      "canonical_name": "available_station_pairs",
+      "members": [
+        ["Alpha", "Beta"],
+        ["Alpha", "Gamma"],
+        ["Alpha", "Delta"],
+        ["Beta", "Gamma"],
+        ["Beta", "Delta"],
+        ["Gamma", "Delta"]
+      ],
+      "interpretation": "Unordered station pairs, subject to the directionality warning.",
+      "source_grounding": "One duration is supplied for each of the six pairs of four stations.",
+      "source_spans": [
+        "The travel durations between stations are recorded in minutes",
+        "Station Alpha to Beta: 79.2 minutes",
+        "Station Alpha to Gamma: 55.5 minutes",
+        "Station Alpha to Delta: 82.5 minutes",
+        "Station Beta to Gamma: 45.0 minutes",
+        "Station Beta to Delta: 56.4 minutes",
+        "Station Gamma to Delta: 28.3 minutes"
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "travel_duration",
+      "canonical_name": "station_pair_travel_duration",
+      "index_set": "STATION_PAIRS",
+      "unit": "minute",
+      "value_map": {
+        "Alpha|Beta": 79.2,
+        "Alpha|Gamma": 55.5,
+        "Alpha|Delta": 82.5,
+        "Beta|Gamma": 45.0,
+        "Beta|Delta": 56.4,
+        "Gamma|Delta": 28.3
+      },
+      "symmetry_interpretation": "The supplied values are treated as applying between each pair in either traversal direction.",
+      "source_grounding": "The six listed travel durations between stations.",
+      "source_spans": [
+        "Station Alpha to Beta: 79.2 minutes",
+        "Station Alpha to Gamma: 55.5 minutes",
+        "Station Alpha to Delta: 82.5 minutes",
+        "Station Beta to Gamma: 45.0 minutes",
+        "Station Beta to Delta: 56.4 minutes",
+        "Station Gamma to Delta: 28.3 minutes"
+      ],
+      "confidence": 0.94
+    }
+  ],
+  "entities": [
+    {
+      "id": "E_INSPECTION_ROUTE",
+      "canonical_family": "ROUTE_TRAVERSAL_SELECTION",
+      "canonical_name": "inspection_route",
+      "entity_role": "decision",
+      "normalized_semantics": "The endogenous ordered traversal of research stations, including the travel legs between consecutive inspected stations and the closing leg back to the route's initial station.",
+      "indexing": {
+        "station_set": "STATIONS",
+        "incidence_roles": [
+          "current_station",
+          "successor_station",
+          "route_position"
+        ]
+      },
+      "domain_metadata": {
+        "route_is_ordered": true,
+        "route_is_closed": "enforced by obligation O_RETURN_TO_START"
+      },
+      "source_grounding": "The requested decision is the inspection circuit.",
+      "source_spans": [
+        "determine the inspection circuit"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "objective": {
+    "id": "OBJ_MIN_TOTAL_DURATION",
+    "canonical_name": "minimize_total_inspection_circuit_duration",
+    "direction": "MINIMIZE",
+    "normalized_semantics": "Minimize the sum of travel durations for all consecutive travel legs in the inspection route, including the closing leg to the initial station.",
+    "entity_refs": [
+      "E_INSPECTION_ROUTE"
+    ],
+    "parameter_refs": [
+      "travel_duration"
+    ],
+    "source_grounding": "The objective explicitly requests a circuit of minimal total duration.",
+    "source_spans": [
+      "The objective is to determine the inspection circuit of minimal total duration"
+    ],
+    "confidence": 0.99
+  },
+  "obligations": [
+    {
+      "id": "O_VISIT_EACH_STATION_EXACTLY_ONCE",
+      "canonical_family": "EXACT_ONCE_SERVICE",
+      "canonical_name": "visit_each_research_station_exactly_once",
+      "structural_form": "COVERAGE",
+      "business_role": "station_service_requirement",
+      "normalized_semantics": "Every research station must occur exactly once as an inspected station in the route. Returning to the initial station to close the circuit does not constitute a second inspection of that station.",
+      "support_entity_ids": [
+        "E_INSPECTION_ROUTE"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "E_INSPECTION_ROUTE",
+          "roles": [
+            "route_position",
+            "visited_station"
+          ]
+        }
+      ],
+      "quantifier": "For every station in STATIONS, exactly one inspection occurrence is included in the route.",
+      "scope_kind": "per_station",
+      "parameter_refs": [],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "The route must visit every research station precisely once.",
+      "source_spans": [
+        "visits every research station precisely once"
+      ],
+      "confidence": 0.99
+    },
+    {
+      "id": "O_SINGLE_CONTINUOUS_ROUTE",
+      "canonical_family": "SINGLE_ROUTE_CONNECTIVITY",
+      "canonical_name": "form_one_continuous_inspection_route",
+      "structural_form": "OTHER_RELATION",
+      "business_role": "route_connectivity",
+      "normalized_semantics": "The selected station visits and travel legs must form one continuous route traversed by the inspection team rather than multiple disconnected cycles or route fragments.",
+      "support_entity_ids": [
+        "E_INSPECTION_ROUTE"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "E_INSPECTION_ROUTE",
+          "roles": [
+            "current_station",
+            "successor_station",
+            "route_sequence"
+          ]
+        }
+      ],
+      "quantifier": "The complete inspection traversal forms one route over all serviced stations.",
+      "scope_kind": "global_route",
+      "parameter_refs": [],
+      "coupling_active": false,
+      "source_status": "explicit_semantic_reading",
+      "normalization_rationale": "The singular term 'inspection circuit' denotes one continuous traversal and excludes disconnected subtours.",
+      "source_grounding": "The problem asks for a single inspection circuit for one inspection team.",
+      "source_spans": [
+        "An agricultural inspection team",
+        "determine the inspection circuit"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "id": "O_RETURN_TO_START",
+      "canonical_family": "ROUTE_CLOSURE",
+      "canonical_name": "conclude_at_initial_station",
+      "structural_form": "EQUALITY",
+      "business_role": "closed_route_requirement",
+      "normalized_semantics": "After visiting the required stations, the inspection route must end at the same station from which it began.",
+      "support_entity_ids": [
+        "E_INSPECTION_ROUTE"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "E_INSPECTION_ROUTE",
+          "roles": [
+            "initial_station",
+            "terminal_station"
+          ],
+          "relation": "terminal_station equals initial_station"
+        }
+      ],
+      "quantifier": "For the selected inspection route, its terminal station equals its initial station.",
+      "scope_kind": "global_route",
+      "parameter_refs": [],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "The circuit must conclude at its initial station.",
+      "source_spans": [
+        "concludes at the initial station"
+      ],
+      "confidence": 0.99
+    }
+  ],
+  "derived_checks": [],
+  "unresolved_items": [
+    {
+      "id": "U_INITIAL_STATION_IDENTITY",
+      "issue": "The text requires return to the initial station but does not designate a particular station as the initial station.",
+      "semantic_treatment": "The initial station is treated as endogenous or rotationally arbitrary within the closed circuit; no fixed depot is asserted.",
+      "source_spans": [
+        "concludes at the initial station"
+      ]
+    },
+    {
+      "id": "U_TRAVEL_DIRECTIONALITY",
+      "issue": "Durations are phrased as 'Alpha to Beta' and similarly for other pairs, but only one value per unordered pair is supplied.",
+      "semantic_treatment": "The durations are provisionally interpreted as symmetric pairwise durations because the text introduces them as durations 'between stations' and provides exactly one value for every unordered pair.",
+      "source_spans": [
+        "The travel durations between stations are recorded in minutes",
+        "Station Alpha to Beta: 79.2 minutes"
+      ]
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "W_SYMMETRIC_DURATION_ASSUMPTION",
+      "message": "Reverse-direction durations are not separately stated. The unordered, symmetric interpretation is strongly suggested but not fully explicit."
+    },
+    {
+      "id": "W_EMPTY_COUPLING_HYPERGRAPH",
+      "message": "All feasibility obligation families support the single inspection-route entity family, so none qualifies for H_c under the requirement that coupling obligations have at least two support entity families."
+    }
+  ]
+}

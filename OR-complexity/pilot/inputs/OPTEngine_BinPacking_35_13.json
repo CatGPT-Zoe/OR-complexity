@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_35_13",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments onto identical freight pallets. The cargo units are as follows:\n\n* Shipment Alpha: mass 70kg\n* Shipment Beta: mass 37kg\n* Shipment Gamma: mass 63kg\n* Shipment Delta: mass 47kg\n* Shipment Epsilon: mass 46kg\n* Shipment Zeta: mass 30kg\n* Shipment Eta: mass 54kg\n* Shipment Theta: mass 55kg\n* Shipment Iota: mass 42kg\n* Shipment Kappa: mass 31kg\n* Shipment Lambda: mass 68kg\n* Shipment Mu: mass 40kg\n* Shipment Nu: mass 33kg\n* Shipment Xi: mass 56kg\n* Shipment Omicron: mass 57kg\n* Shipment Pi: mass 51kg\n* Shipment Rho: mass 57kg\n* Shipment Sigma: mass 54kg\n* Shipment Tau: mass 32kg\n* Shipment Upsilon: mass 47kg\n* Shipment Phi: mass 60kg\n* Shipment Chi: mass 66kg\n* Shipment Psi: mass 67kg\n* Shipment Omega: mass 30kg\n* Shipment Aleph: mass 35kg\n* Shipment Beth: mass 32kg\n* Shipment Gimel: mass 39kg\n* Shipment Daleth: mass 69kg\n* Shipment He: mass 65kg\n* Shipment Waw: mass 45kg\n* Shipment Zayin: mass 40kg\n* Shipment Heth: mass 51kg\n* Shipment Teth: mass 57kg\n* Shipment Yodh: mass 38kg\n* Shipment Kaph: mass 62kg\n\nEach pallet has a maximum load capacity of 100 kg. All cargo units must be assigned, with each unit placed on exactly one pallet, and the aggregate mass on any pallet must not surpass its limit. The objective is to utilize the minimum possible number of pallets.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

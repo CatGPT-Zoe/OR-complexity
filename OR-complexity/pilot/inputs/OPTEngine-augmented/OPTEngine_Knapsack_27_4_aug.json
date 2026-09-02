@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_27_4_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is preparing a cargo shipment for an intercontinental air freight service. The company must select a combination of crates to maximize total revenue while adhering to the aircraft's maximum payload capacity.\n\nThe available crates are:\n* Crate 1: mass 15kg, revenue 167 units\n* Crate 2: mass 22kg, revenue 278 units\n* Crate 3: mass 19kg, revenue 150 units\n* Crate 4: mass 25kg, revenue 258 units\n* Crate 5: mass 8kg, revenue 49 units\n* Crate 6: mass 27kg, revenue 110 units\n* Crate 7: mass 42kg, revenue 99 units\n* Crate 8: mass 44kg, revenue 116 units\n* Crate 9: mass 18kg, revenue 200 units\n* Crate 10: mass 42kg, revenue 278 units\n* Crate 11: mass 29kg, revenue 235 units\n* Crate 12: mass 45kg, revenue 219 units\n* Crate 13: mass 14kg, revenue 287 units\n* Crate 14: mass 29kg, revenue 185 units\n* Crate 15: mass 7kg, revenue 121 units\n* Crate 16: mass 40kg, revenue 254 units\n* Crate 17: mass 20kg, revenue 63 units\n* Crate 18: mass 2kg, revenue 26 units\n* Crate 19: mass 5kg, revenue 129 units\n* Crate 20: mass 36kg, revenue 226 units\n* Crate 21: mass 42kg, revenue 174 units\n* Crate 22: mass 33kg, revenue 58 units\n* Crate 23: mass 6kg, revenue 257 units\n* Crate 24: mass 19kg, revenue 263 units\n* Crate 25: mass 30kg, revenue 40 units\n* Crate 26: mass 20kg, revenue 287 units\n* Crate 27: mass 42kg, revenue 291 units\n\nFurthermore, due to contractual obligations, precisely one of Crate 1 and Crate 2 must be included in the shipment.\n\nShould Crate 3 be selected, the effective payload capacity of the aircraft is diminished by 10 kg.\nThe aircraft can accommodate a maximum of 476 kg. The firm must determine which crates to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_14_17",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of fragile artifacts into standardized transport crates for an international museum exhibition. The artifacts are as follows:\n* Ancient Vase: 55 kg\n* Bronze Statuette: 58 kg\n* Ceramic Urn: 53 kg\n* Stone Tablet: 42 kg\n* Gilded Mask: 59 kg\n* Marble Fragment: 52 kg\n* Sandstone Relief: 70 kg\n* Wooden Idol: 34 kg\n* Ivory Figurine: 32 kg\n* Terracotta Amulet: 32 kg\n* Obsidian Mirror: 61 kg\n* Alabaster Vessel: 46 kg\n* Porcelain Dish: 31 kg\n* Jade Ornament: 63 kg\n\nEach reinforced crate has a maximum safe load capacity of 100 kg. The coordinator must ensure every artifact is placed into exactly one crate, and the collective weight within any single crate must not surpass the load limit. The objective is to complete the allocation utilizing the smallest possible number of crates.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_39_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to assign packages to identical delivery trucks. The packages are as follows:\n\n* Package Alpha: 45 kg\n* Package Bravo: 59 kg\n* Package Charlie: 70 kg\n* Package Delta: 56 kg\n* Package Echo: 65 kg\n* Package Foxtrot: 50 kg\n* Package Golf: 65 kg\n* Package Hotel: 44 kg\n* Package India: 32 kg\n* Package Juliet: 31 kg\n* Package Kilo: 47 kg\n* Package Lima: 69 kg\n* Package Mike: 55 kg\n* Package November: 39 kg\n* Package Oscar: 44 kg\n* Package Papa: 44 kg\n* Package Quebec: 69 kg\n* Package Romeo: 56 kg\n* Package Sierra: 68 kg\n* Package Tango: 62 kg\n* Package Uniform: 41 kg\n* Package Victor: 39 kg\n* Package Whiskey: 33 kg\n* Package X-ray: 45 kg\n* Package Yankee: 36 kg\n* Package Zulu: 67 kg\n* Package Asterisk: 30 kg\n* Package Dash: 45 kg\n* Package Plus: 67 kg\n* Package Ampersand: 37 kg\n* Package Percent: 34 kg\n* Package Dollar: 32 kg\n* Package At: 42 kg\n* Package Hash: 45 kg\n* Package Exclamation: 39 kg\n* Package Question: 43 kg\n* Package Tilde: 51 kg\n* Package Slash: 56 kg\n* Package Backslash: 63 kg\n\nEach truck can carry a maximum load of 100 kg. Assign all packages to trucks using the minimum number of trucks. Every package must be loaded onto exactly one truck, and the total weight in any truck cannot exceed its capacity.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

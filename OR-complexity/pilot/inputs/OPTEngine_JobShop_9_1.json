@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_9_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to coordinate 9 delivery routes through 9 distribution hubs.\n\nEach route consists of a sequence of stops represented as (Hub, Duration) pairs, where each pair specifies the hub where the truck must stop and the time required for unloading/loading. The order of pairs indicates the mandatory sequence in which stops must be visited.\n\nRoute details:\n* R1 follows: (H9, 8) → (H6, 5) → (H2, 4) → (H7, 9) → (H1, 10) → (H3, 4) → (H4, 2) → (H8, 8) → (H5, 4)\n* R2 follows: (H6, 2) → (H7, 8) → (H3, 7) → (H8, 8) → (H1, 6) → (H2, 10) → (H4, 5) → (H9, 8) → (H5, 3)\n* R3 follows: (H5, 2) → (H1, 7) → (H4, 4) → (H6, 5) → (H8, 2) → (H7, 7) → (H3, 10) → (H9, 5) → (H2, 9)\n* R4 follows: (H1, 2) → (H9, 2) → (H4, 9) → (H6, 10) → (H7, 3) → (H3, 5) → (H8, 6) → (H5, 8) → (H2, 9)\n* R5 follows: (H4, 6) → (H7, 3) → (H8, 2) → (H2, 9) → (H5, 6) → (H6, 10) → (H9, 4) → (H1, 2) → (H3, 9)\n* R6 follows: (H2, 1) → (H8, 7) → (H5, 5) → (H7, 9) → (H4, 6) → (H3, 4) → (H9, 10) → (H1, 6) → (H6, 5)\n* R7 follows: (H2, 5) → (H8, 8) → (H7, 1) → (H9, 6) → (H1, 6) → (H5, 4) → (H6, 6) → (H3, 6) → (H4, 6)\n* R8 follows: (H7, 6) → (H4, 1) → (H1, 7) → (H8, 3) → (H5, 2) → (H3, 3) → (H2, 1) → (H9, 9) → (H6, 5)\n* R9 follows: (H4, 5) → (H6, 1) → (H2, 2) → (H5, 8) → (H1, 5) → (H7, 7) → (H3, 4) → (H9, 3) → (H8, 8)\n\nEach stop must be completed without interruption once it begins, and each hub can only accommodate one truck at a time. The objective is to determine the processing sequence of all stops at the hubs so that the total completion time for all delivery routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

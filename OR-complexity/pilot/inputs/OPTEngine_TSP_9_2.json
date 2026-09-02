@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_9_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a series of critical maintenance visits to nine distinct offshore oil platforms.\n\nThe travel times between platforms, measured in minutes, are precisely known:\n* Platform P1 to P2: 146.0 minutes\n* P1 to P3: 52.8 minutes\n* P1 to P4: 108.0 minutes\n* P1 to P5: 146.4 minutes\n* P1 to P6: 46.8 minutes\n* P1 to P7: 45.8 minutes\n* P1 to P8: 171.5 minutes\n* P1 to P9: 45.3 minutes\n* P2 to P3: 158.4 minutes\n* P2 to P4: 161.0 minutes\n* P2 to P5: 78.8 minutes\n* P2 to P6: 102.6 minutes\n* P2 to P7: 129.0 minutes\n* P2 to P8: 171.1 minutes\n* P2 to P9: 189.8 minutes\n* P3 to P4: 160.3 minutes\n* P3 to P5: 181.8 minutes\n* P3 to P6: 61.1 minutes\n* P3 to P7: 95.9 minutes\n* P3 to P8: 221.4 minutes\n* P3 to P9: 56.1 minutes\n* P4 to P5: 105.1 minutes\n* P4 to P6: 121.5 minutes\n* P4 to P7: 65.8 minutes\n* P4 to P8: 70.0 minutes\n* P4 to P9: 136.4 minutes\n* P5 to P6: 121.2 minutes\n* P5 to P7: 108.2 minutes\n* P5 to P8: 94.4 minutes\n* P5 to P9: 190.6 minutes\n* P6 to P7: 58.0 minutes\n* P6 to P8: 172.0 minutes\n* P6 to P9: 87.7 minutes\n* P7 to P8: 125.9 minutes\n* P7 to P9: 84.9 minutes\n* P8 to P9: 204.8 minutes\n\nThe objective is to determine the most time-efficient inspection circuit, whereby a single crew must perform a visit at each platform exactly once before concluding the tour back at the initial departure point, thereby minimizing total transit duration.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

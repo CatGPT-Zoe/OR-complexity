@@ -1,0 +1,9 @@
+{
+  "instance_id": "IndustryOR_96",
+  "annotation_mode": "semantic",
+  "problem_text": "A steel pipe retailer purchases raw pipes from a steel mill and cuts them according to customer requirements before resale. Each raw steel pipe supplied by the mill has a length of 1850 mm. A customer has placed the following order: 15 pieces of 290 mm, 28 pieces of 315 mm, 21 pieces of 350 mm, and 30 pieces of 455 mm. To simplify the production process, the number of cutting patterns to be used may not exceed four. Additional costs are incurred depending on the usage frequency of each cutting pattern: the most frequently used cutting pattern incurs an extra cost equal to 1/10 of the value of one raw pipe; the second most frequently used pattern incurs an extra cost equal to 2/10; the third incurs 3/10, and so forth. Moreover, under each cutting pattern, the number of cuts per raw pipe cannot be too many, with at most 5 pieces produced from a single raw pipe. To reduce material waste, the leftover length for any cutting pattern may not exceed 100 mm. The objective is to determine the cutting plan (selection of patterns and allocation of raw pipes) that minimizes the total cost. What is the optimal cutting plan and the total cost?",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

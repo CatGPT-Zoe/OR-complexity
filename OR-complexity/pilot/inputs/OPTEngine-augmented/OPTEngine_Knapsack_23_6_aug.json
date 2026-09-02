@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is planning the loading of a cargo aircraft for a critical relief mission. They must select a combination of cargo containers to maximize total utility points while adhering to the aircraft's weight restriction.\n\nThe available cargo containers are:\n* Container 1: weight 37kg, utility 94 points\n* Container 2: weight 2kg, utility 31 points\n* Container 3: weight 35kg, utility 93 points\n* Container 4: weight 38kg, utility 89 points\n* Container 5: weight 6kg, utility 81 points\n* Container 6: weight 10kg, utility 290 points\n* Container 7: weight 12kg, utility 218 points\n* Container 8: weight 25kg, utility 19 points\n* Container 9: weight 24kg, utility 157 points\n* Container 10: weight 23kg, utility 298 points\n* Container 11: weight 49kg, utility 18 points\n* Container 12: weight 16kg, utility 15 points\n* Container 13: weight 24kg, utility 198 points\n* Container 14: weight 22kg, utility 54 points\n* Container 15: weight 37kg, utility 199 points\n* Container 16: weight 24kg, utility 43 points\n* Container 17: weight 27kg, utility 106 points\n* Container 18: weight 24kg, utility 139 points\n* Container 19: weight 10kg, utility 118 points\n* Container 20: weight 34kg, utility 104 points\n* Container 21: weight 39kg, utility 79 points\n* Container 22: weight 33kg, utility 67 points\n* Container 23: weight 21kg, utility 296 points\n\nFurthermore, due to compatibility constraints, exactly one of Container 1 and Container 2 must be loaded.\n\nIf Container 3 is loaded, the aircraft's effective payload capacity is diminished by 10 kg.\nThe maximum allowable takeoff weight for the cargo is 400 kg. The manager must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

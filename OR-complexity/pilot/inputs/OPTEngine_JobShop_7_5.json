@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company needs to schedule 7 delivery routes through 7 distribution hubs.\n\nEach route consists of a sequence of handling steps represented as (Hub, Duration) pairs, where each pair specifies the hub where the handling must occur and the time required. The order of pairs indicates the mandatory sequence in which the handling steps must be performed.\n\nRoute details:\n* R1 requires the sequence: (H4, 4) → (H1, 7) → (H6, 4) → (H2, 6) → (H5, 3) → (H7, 3) → (H3, 8)\n* R2 requires the sequence: (H6, 1) → (H2, 7) → (H5, 10) → (H4, 1) → (H3, 3) → (H1, 9) → (H7, 2)\n* R3 requires the sequence: (H4, 3) → (H3, 6) → (H6, 5) → (H2, 8) → (H5, 8) → (H1, 10) → (H7, 6)\n* R4 requires the sequence: (H3, 9) → (H6, 7) → (H1, 10) → (H4, 8) → (H5, 7) → (H7, 3) → (H2, 10)\n* R5 requires the sequence: (H4, 2) → (H2, 7) → (H1, 5) → (H5, 5) → (H7, 2) → (H6, 6) → (H3, 9)\n* R6 requires the sequence: (H7, 2) → (H5, 7) → (H1, 7) → (H6, 8) → (H4, 1) → (H3, 6) → (H2, 3)\n* R7 requires the sequence: (H1, 1) → (H6, 1) → (H4, 10) → (H2, 7) → (H7, 3) → (H3, 9) → (H5, 5)\n\nEach handling step must run continuously once initiated and cannot be interrupted, and each hub can only process one handling step at a time. The objective is to determine the processing order of all handling steps at the hubs so that the total completion time for all routes is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

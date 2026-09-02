@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_JobShop_7_10",
+  "annotation_mode": "semantic",
+  "problem_text": "A construction project requires 7 specialized teams to complete 7 distinct building phases.\n\nEach phase consists of a sequence of tasks represented as pairs (Team, Duration),\nwhere each pair specifies the team responsible for the task and the number of days needed to complete it.\nThe order of pairs indicates the required sequence in which the tasks must be performed.\n\nPhase details:\n* Phase 1 requires the sequence: (Team4, 5) → (Team5, 3) → (Team1, 6) → (Team3, 2) → (Team2, 3) → (Team6, 1) → (Team7, 3)\n* Phase 2 requires the sequence: (Team5, 2) → (Team7, 8) → (Team2, 9) → (Team1, 6) → (Team4, 6) → (Team6, 2) → (Team3, 1)\n* Phase 3 requires the sequence: (Team2, 8) → (Team7, 6) → (Team4, 9) → (Team3, 6) → (Team6, 2) → (Team1, 2) → (Team5, 5)\n* Phase 4 requires the sequence: (Team5, 5) → (Team4, 4) → (Team2, 8) → (Team3, 6) → (Team7, 5) → (Team1, 7) → (Team6, 10)\n* Phase 5 requires the sequence: (Team2, 6) → (Team1, 6) → (Team4, 7) → (Team3, 5) → (Team5, 6) → (Team7, 7) → (Team6, 5)\n* Phase 6 requires the sequence: (Team7, 6) → (Team1, 4) → (Team4, 3) → (Team3, 6) → (Team6, 8) → (Team2, 4) → (Team5, 2)\n* Phase 7 requires the sequence: (Team6, 7) → (Team4, 9) → (Team7, 5) → (Team5, 8) → (Team3, 4) → (Team2, 6) → (Team1, 9)\n\nEach task must be completed without interruption once it begins,\nand each team can only work on one task at a time.\nThe objective is to determine the scheduling order of all tasks across the teams\nso that the overall project completion time is minimized.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

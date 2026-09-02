@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_33_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a series of archival boxes into identical shipping crates. The archival boxes are as follows:\n\n* Box Alpha: volume 44 cubic feet\n* Box Beta: volume 37 cubic feet\n* Box Gamma: volume 33 cubic feet\n* Box Delta: volume 54 cubic feet\n* Box Epsilon: volume 58 cubic feet\n* Box Zeta: volume 54 cubic feet\n* Box Eta: volume 68 cubic feet\n* Box Theta: volume 32 cubic feet\n* Box Iota: volume 50 cubic feet\n* Box Kappa: volume 31 cubic feet\n* Box Lambda: volume 30 cubic feet\n* Box Mu: volume 59 cubic feet\n* Box Nu: volume 46 cubic feet\n* Box Xi: volume 43 cubic feet\n* Box Omicron: volume 41 cubic feet\n* Box Pi: volume 59 cubic feet\n* Box Rho: volume 36 cubic feet\n* Box Sigma: volume 55 cubic feet\n* Box Tau: volume 65 cubic feet\n* Box Upsilon: volume 33 cubic feet\n* Box Phi: volume 46 cubic feet\n* Box Chi: volume 36 cubic feet\n* Box Psi: volume 38 cubic feet\n* Box Omega: volume 33 cubic feet\n* Box Aleph: volume 30 cubic feet\n* Box Beth: volume 46 cubic feet\n* Box Gimel: volume 57 cubic feet\n* Box Dalet: volume 63 cubic feet\n* Box He: volume 67 cubic feet\n* Box Waw: volume 48 cubic feet\n* Box Zayin: volume 34 cubic feet\n* Box Het: volume 51 cubic feet\n* Box Tet: volume 60 cubic feet\n\nEach shipping crate has a maximum volumetric capacity of 100 cubic feet. The coordinator must place every archival box into a crate, with no box split between crates, and the total volume within any crate cannot surpass its limit. The objective is to utilize the smallest possible number of crates for the entire collection.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

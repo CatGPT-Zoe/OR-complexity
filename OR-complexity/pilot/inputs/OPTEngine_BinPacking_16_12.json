@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_16_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate shipments to identical freight trucks. The cargo pieces are as follows:\n\n* Component Alpha: mass 60kg  \n* Component Beta: mass 55kg  \n* Component Gamma: mass 30kg  \n* Component Delta: mass 63kg  \n* Component Epsilon: mass 34kg  \n* Component Zeta: mass 35kg  \n* Component Eta: mass 55kg  \n* Component Theta: mass 30kg  \n* Component Iota: mass 53kg  \n* Component Kappa: mass 32kg  \n* Component Lambda: mass 37kg  \n* Component Mu: mass 69kg  \n* Component Nu: mass 30kg  \n* Component Xi: mass 47kg  \n* Component Omicron: mass 70kg  \n* Component Pi: mass 48kg  \n\nEach truck has a maximum payload capacity of 100 kg. The coordinator must assign every piece of cargo to exactly one truck, ensuring the combined mass on any truck does not exceed its payload limit. The objective is to accomplish the full allocation while employing the smallest possible number of trucks.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

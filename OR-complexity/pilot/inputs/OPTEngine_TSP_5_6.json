@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_6",
+  "annotation_mode": "semantic",
+  "problem_text": "A regional telecommunications company must dispatch a technician to inspect five critical network nodes.\n\nThe latency measurements between nodes are recorded in milliseconds:\n* Node Alpha to Node Beta: 189.7 ms\n* Node Alpha to Node Gamma: 81.6 ms\n* Node Alpha to Node Delta: 120.4 ms\n* Node Alpha to Node Epsilon: 167.6 ms\n* Node Beta to Node Gamma: 151.3 ms\n* Node Beta to Node Delta: 145.7 ms\n* Node Beta to Node Epsilon: 140.2 ms\n* Node Gamma to Node Delta: 38.8 ms\n* Node Gamma to Node Epsilon: 194.0 ms\n* Node Delta to Node Epsilon: 216.1 ms\n\nThe objective is to determine the inspection circuit with the minimal possible total latency, where the technician must visit each node precisely once before concluding the tour at the initial node.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

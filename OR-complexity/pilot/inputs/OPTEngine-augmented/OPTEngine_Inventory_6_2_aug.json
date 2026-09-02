@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Inventory_6_2_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A hospital must devise a medication procurement and storage schedule over a six-day treatment cycle.\nThe initial stock of a critical medication at the start of the cycle is 86 vials.\nFor each day t = 1, ..., 6, the pharmacy can request a shipment whose size must be between 5 and 74 vials.\nHowever, any shipment ordered will require a 1-day lead time before it becomes available for patient administration or to replenish the pharmacy stock.\nThe daily patient requirement for the medication is as follows:\n* Day 1: 54 vials\n* Day 2: 53 vials\n* Day 3: 23 vials\n* Day 4: 59 vials\n* Day 5: 13 vials\n* Day 6: 60 vials\n\nMedication shortfalls are permissible, but any unmet daily requirement is considered lost and will not be carried forward.\nThroughout the treatment cycle, dosages can be fractional, and the total volume of medication physically stored at any point must not exceed the refrigeration capacity of 86 vials.\n\nSpecifically, on the fourth day, the maximum allowable shipment size is restricted to 27 vials.\nOn the first day, the on-hand medication stock must be no less than 60 vials.\n\nThe total expenditure over the cycle comprises three elements: the procurement cost, calculated at 3 per vial ordered; the storage cost, calculated at 3 per vial kept in stock from one day to the next; and a penalty for treatment shortfall, assessed at 10 per vial of unmet patient requirement. The objective is to ascertain the optimal shipment quantity for each day and monitor the consequent stock and deficit levels in order to minimize the total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_7_2",
+  "annotation_mode": "semantic",
+  "problem_text": "In a logistics network for distributing specialized medical supplies from regional warehouses to urban health centers, the objective is to minimize the total delivery expense.\n\nThe inventory available at each regional warehouse (set R) is precisely:\n*R1 holds 137 units.\n*R2 holds 71 units.\n*R3 holds 179 units.\n*R4 holds 94 units.\n*R5 holds 60 units.\n*R6 holds 113 units.\n*R7 holds 162 units.\n\nThe required allocation for each urban health center (set H) is strictly defined as:\n*H1 requires 96 units.\n*H2 requires 111 units.\n*H3 requires 66 units.\n*H4 requires 166 units.\n*H5 requires 70 units.\n*H6 requires 140 units.\n*H7 requires 123 units.\n\nThe per-unit transportation cost from each warehouse to every health center is detailed in the following matrix:\n\n| From / To | H1 | H2 | H3 | H4 | H5 | H6 | H7 |\n|---|---|---|---|---|---|---|---|\n| R1 | 2 | 11 | 3 | 11 | 4 | 18 | 13 |\n| R2 | 10 | 9 | 20 | 5 | 11 | 3 | 19 |\n| R3 | 5 | 12 | 10 | 13 | 5 | 20 | 3 |\n| R4 | 10 | 18 | 13 | 11 | 5 | 17 | 3 |\n| R5 | 14 | 17 | 12 | 1 | 12 | 10 | 6 |\n| R6 | 7 | 11 | 16 | 7 | 8 | 5 | 5 |\n| R7 | 3 | 10 | 4 | 17 | 18 | 17 | 2 |\n\nDetermine the optimal shipment quantities to achieve the minimal aggregate expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

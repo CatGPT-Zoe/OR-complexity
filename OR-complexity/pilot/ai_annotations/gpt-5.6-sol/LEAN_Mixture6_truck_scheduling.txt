@@ -1,0 +1,699 @@
+{
+  "schema_version": "SOH-1.1",
+  "instance_id": "LEAN_Mixture6_truck_scheduling",
+  "layer": "semantic",
+  "sets": [
+    {
+      "id": "set_trucks",
+      "canonical_name": "trucks",
+      "members": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "description": "Candidate trucks available for scheduling.",
+      "source_grounding": "A logistics company has 10 candidate trucks available to transport goods",
+      "source_spans": [
+        {
+          "text": "A logistics company has 10 candidate trucks available to transport goods over four consecutive time periods."
+        }
+      ]
+    },
+    {
+      "id": "set_periods",
+      "canonical_name": "periods",
+      "members": [1, 2, 3, 4],
+      "description": "Four consecutive operational periods.",
+      "source_grounding": "over four consecutive time periods",
+      "source_spans": [
+        {
+          "text": "A logistics company has 10 candidate trucks available to transport goods over four consecutive time periods."
+        }
+      ]
+    }
+  ],
+  "parameters": [
+    {
+      "id": "param_truck_capacity",
+      "canonical_name": "maximum_truck_capacity",
+      "indices": ["truck"],
+      "unit": "kg",
+      "values": {
+        "1": 1000,
+        "2": 800,
+        "3": 1200,
+        "4": 600,
+        "5": 900,
+        "6": 700,
+        "7": 1100,
+        "8": 500,
+        "9": 1000,
+        "10": 650
+      },
+      "source_grounding": "Each truck's maximum capacity ... [is] provided in parameters.csv.",
+      "source_spans": [
+        {
+          "text": "Each truck's maximum capacity, startup cost, and unit transportation cost are provided in parameters.csv."
+        },
+        {
+          "text": "Inline parameter table column Q."
+        }
+      ]
+    },
+    {
+      "id": "param_startup_cost",
+      "canonical_name": "truck_startup_cost",
+      "indices": ["truck"],
+      "unit": "unspecified monetary unit",
+      "values": {
+        "1": 500,
+        "2": 300,
+        "3": 400,
+        "4": 250,
+        "5": 450,
+        "6": 280,
+        "7": 420,
+        "8": 200,
+        "9": 480,
+        "10": 260
+      },
+      "source_grounding": "Each truck's ... startup cost ... [is] provided in parameters.csv.",
+      "source_spans": [
+        {
+          "text": "Each truck's maximum capacity, startup cost, and unit transportation cost are provided in parameters.csv."
+        },
+        {
+          "text": "Inline parameter table column S."
+        }
+      ]
+    },
+    {
+      "id": "param_unit_transportation_cost",
+      "canonical_name": "unit_transportation_cost",
+      "indices": ["truck"],
+      "unit": "unspecified monetary unit per kg",
+      "values": {
+        "1": 2.0,
+        "2": 3.0,
+        "3": 2.5,
+        "4": 3.0,
+        "5": 2.2,
+        "6": 2.8,
+        "7": 2.4,
+        "8": 3.2,
+        "9": 2.1,
+        "10": 2.9
+      },
+      "source_grounding": "Each truck's ... unit transportation cost [is] provided in parameters.csv.",
+      "source_spans": [
+        {
+          "text": "Each truck's maximum capacity, startup cost, and unit transportation cost are provided in parameters.csv."
+        },
+        {
+          "text": "Inline parameter table column C."
+        }
+      ]
+    },
+    {
+      "id": "param_customer_demand",
+      "canonical_name": "customer_demand",
+      "indices": ["period"],
+      "unit": "kg",
+      "values": {
+        "1": 1500,
+        "2": 2000,
+        "3": 1800,
+        "4": 1000
+      },
+      "source_grounding": "The customer demands in periods 1 through 4 are 1,500 kg, 2,000 kg, 1,800 kg, and 1,000 kg.",
+      "source_spans": [
+        {
+          "text": "The customer demands in periods 1 through 4 are 1,500 kg, 2,000 kg, 1,800 kg, and 1,000 kg."
+        },
+        {
+          "text": "Inline parameter table columns d1, d2, d3, and d4 repeat these period-level values for each truck."
+        }
+      ]
+    },
+    {
+      "id": "param_initial_active_state",
+      "canonical_name": "initial_truck_active_state",
+      "indices": ["truck"],
+      "unit": "status",
+      "value": 0,
+      "applies_to": "every truck immediately before period 1",
+      "source_grounding": "All trucks are initially off immediately before period 1",
+      "source_spans": [
+        {
+          "text": "All trucks are initially off immediately before period 1"
+        }
+      ]
+    },
+    {
+      "id": "param_minimum_active_duration",
+      "canonical_name": "minimum_consecutive_active_periods_after_startup",
+      "unit": "periods",
+      "value": 2,
+      "source_grounding": "Once a truck is started, it must remain active for at least two consecutive periods",
+      "source_spans": [
+        {
+          "text": "Once a truck is started, it must remain active for at least two consecutive periods"
+        }
+      ]
+    },
+    {
+      "id": "param_restart_delay",
+      "canonical_name": "shutdown_inactive_duration",
+      "unit": "periods",
+      "value": 2,
+      "interpretation": "A truck shut down in period t is inactive in periods t and t+1 and may not restart before t+2.",
+      "source_grounding": "it must remain inactive in both period t and period t+1 and cannot be restarted before period t+2",
+      "source_spans": [
+        {
+          "text": "If a truck is shut down in period t after being active in period t-1, it must remain inactive in both period t and period t+1 and cannot be restarted before period t+2."
+        }
+      ]
+    },
+    {
+      "id": "param_load_change_limit",
+      "canonical_name": "maximum_adjacent_period_load_change",
+      "unit": "kg",
+      "value": 300,
+      "source_grounding": "the change in transported weight between two adjacent periods ... cannot exceed 300 kg",
+      "source_spans": [
+        {
+          "text": "For each truck, the change in transported weight between two adjacent periods, including transitions to or from zero load, cannot exceed 300 kg."
+        }
+      ]
+    },
+    {
+      "id": "param_capacity_utilization_fraction",
+      "canonical_name": "maximum_usable_fraction_of_active_capacity",
+      "unit": "fraction",
+      "value": 0.9,
+      "source_grounding": "the total transported weight in each period cannot exceed 90% of the combined maximum capacity of the trucks active in that period",
+      "source_spans": [
+        {
+          "text": "A 10% spare-capacity buffer must also be maintained, so the total transported weight in each period cannot exceed 90% of the combined maximum capacity of the trucks active in that period."
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "entity_truck_active_state",
+      "canonical_family": "resource_active_state",
+      "canonical_name": "truck active state",
+      "entity_role": "state",
+      "indices": ["truck", "period"],
+      "temporal_granularity": "period",
+      "semantic_domain": {
+        "type": "binary_status",
+        "states": ["inactive", "active"]
+      },
+      "normalized_semantics": "Whether a candidate truck is active during a period.",
+      "source_grounding": "active truck; inactive truck; truck activation schedule",
+      "source_spans": [
+        {
+          "text": "Once a truck is started, it must remain active for at least two consecutive periods"
+        },
+        {
+          "text": "An inactive truck must transport zero weight, while the weight transported by an active truck cannot exceed its maximum capacity."
+        },
+        {
+          "text": "Determine the truck activation, startup, and transported-weight schedule"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "entity_truck_startup",
+      "canonical_family": "resource_startup_event",
+      "canonical_name": "truck startup event",
+      "entity_role": "decision",
+      "indices": ["truck", "period"],
+      "temporal_granularity": "period",
+      "semantic_domain": {
+        "type": "binary_event"
+      },
+      "normalized_semantics": "Whether a truck is activated in a period after being inactive immediately beforehand.",
+      "source_grounding": "activating a truck in period 1 or any later period incurs its startup cost",
+      "source_spans": [
+        {
+          "text": "All trucks are initially off immediately before period 1, and activating a truck in period 1 or any later period incurs its startup cost."
+        },
+        {
+          "text": "Determine the truck activation, startup, and transported-weight schedule"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "entity_truck_transported_weight",
+      "canonical_family": "resource_service_flow",
+      "canonical_name": "truck transported weight",
+      "entity_role": "derived_flow",
+      "indices": ["truck", "period"],
+      "temporal_granularity": "period",
+      "unit": "kg",
+      "semantic_domain": {
+        "type": "continuous",
+        "lower_bound": 0,
+        "lower_bound_status": "mathematical quantity domain"
+      },
+      "normalized_semantics": "Weight transported by a truck during a period.",
+      "source_grounding": "the weight transported by an active truck; total transported weight",
+      "source_spans": [
+        {
+          "text": "An inactive truck must transport zero weight, while the weight transported by an active truck cannot exceed its maximum capacity."
+        },
+        {
+          "text": "In every period, the total transported weight must be at least the customer demand."
+        },
+        {
+          "text": "Determine the truck activation, startup, and transported-weight schedule"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "objective": {
+    "sense": "minimize",
+    "canonical_name": "total startup and transportation cost",
+    "normalized_semantics": "Minimize the sum of truck-specific startup costs for startup events and truck-specific unit transportation costs applied to transported weight across all trucks and periods.",
+    "entity_refs": [
+      "entity_truck_startup",
+      "entity_truck_transported_weight"
+    ],
+    "parameter_refs": [
+      "param_startup_cost",
+      "param_unit_transportation_cost"
+    ],
+    "source_grounding": "minimizes total startup and transportation costs",
+    "source_spans": [
+      {
+        "text": "All trucks are initially off immediately before period 1, and activating a truck in period 1 or any later period incurs its startup cost."
+      },
+      {
+        "text": "Determine the truck activation, startup, and transported-weight schedule that minimizes total startup and transportation costs."
+      }
+    ]
+  },
+  "obligations": [
+    {
+      "id": "obl_startup_transition_identification",
+      "canonical_family": "startup_transition_identification",
+      "canonical_name": "startup corresponds to inactive-to-active transition",
+      "structural_form": "ACTIVATION_LINK",
+      "business_role": "startup accounting",
+      "normalized_semantics": "For each truck and period, a startup event occurs exactly when the truck is active in that period and was inactive immediately beforehand. The pre-period state for period 1 is the stated initially-off condition.",
+      "support_entity_ids": [
+        "entity_truck_active_state",
+        "entity_truck_startup"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_startup",
+          "role": "startup_event",
+          "time_offset": 0
+        },
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "current_active_state",
+          "time_offset": 0
+        },
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "prior_active_state",
+          "time_offset": -1
+        }
+      ],
+      "quantifier": "for every truck and every period",
+      "scope_kind": "truck_period_transition",
+      "parameter_refs": [
+        "param_initial_active_state"
+      ],
+      "boundary_variants": [
+        {
+          "boundary": "period 1",
+          "semantics": "The immediately preceding active state is fixed to off for every truck."
+        }
+      ],
+      "coupling_active": true,
+      "source_status": "explicit event semantics with required transition normalization",
+      "source_grounding": "All trucks are initially off immediately before period 1, and activating a truck in period 1 or any later period incurs its startup cost.",
+      "source_spans": [
+        {
+          "text": "All trucks are initially off immediately before period 1, and activating a truck in period 1 or any later period incurs its startup cost."
+        },
+        {
+          "text": "Determine the truck activation, startup, and transported-weight schedule"
+        }
+      ],
+      "normalization_rationale": "The startup schedule and startup cost require startup events to be identified with activation transitions rather than arbitrary paid selections.",
+      "confidence": "high"
+    },
+    {
+      "id": "obl_minimum_active_duration_after_startup",
+      "canonical_family": "minimum_active_duration_after_startup",
+      "canonical_name": "two-period minimum active duration",
+      "structural_form": "IMPLICATION",
+      "business_role": "minimum up-time",
+      "normalized_semantics": "Each truck startup requires that truck to remain active for at least two consecutive periods beginning with the startup period.",
+      "support_entity_ids": [
+        "entity_truck_startup",
+        "entity_truck_active_state"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_startup",
+          "role": "triggering_startup",
+          "time_offset": 0
+        },
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "required_active_state",
+          "time_offsets": [0, 1]
+        }
+      ],
+      "quantifier": "for every truck and every feasible startup period",
+      "scope_kind": "truck_temporal_window",
+      "parameter_refs": [
+        "param_minimum_active_duration"
+      ],
+      "condition": "Triggered when a truck starts.",
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "Once a truck is started, it must remain active for at least two consecutive periods",
+      "source_spans": [
+        {
+          "text": "Once a truck is started, it must remain active for at least two consecutive periods, so a truck may not be started in period 4."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "obl_shutdown_restart_delay",
+      "canonical_family": "shutdown_restart_delay",
+      "canonical_name": "post-shutdown inactive interval",
+      "structural_form": "IMPLICATION",
+      "business_role": "minimum down-time",
+      "normalized_semantics": "If a truck changes from active in period t-1 to inactive in period t, it must be inactive in both t and t+1 and may not have another startup before period t+2.",
+      "support_entity_ids": [
+        "entity_truck_active_state",
+        "entity_truck_startup"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "pre_shutdown_active_state",
+          "time_offset": -1
+        },
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "shutdown_period_inactive_state",
+          "time_offset": 0
+        },
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "continued_inactive_state",
+          "time_offset": 1
+        },
+        {
+          "entity_id": "entity_truck_startup",
+          "role": "prohibited_restart_event",
+          "time_offsets": [0, 1]
+        }
+      ],
+      "quantifier": "for every truck and shutdown period for which the referenced periods lie within the modeled temporal scope",
+      "scope_kind": "truck_temporal_window",
+      "parameter_refs": [
+        "param_restart_delay"
+      ],
+      "condition": "The truck is active in t-1 and inactive in t.",
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "If a truck is shut down in period t after being active in period t-1, it must remain inactive in both period t and period t+1 and cannot be restarted before period t+2.",
+      "source_spans": [
+        {
+          "text": "If a truck is shut down in period t after being active in period t-1, it must remain inactive in both period t and period t+1 and cannot be restarted before period t+2."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "obl_inactive_truck_zero_load",
+      "canonical_family": "inactive_resource_zero_flow",
+      "canonical_name": "inactive truck transports zero weight",
+      "structural_form": "IMPLICATION",
+      "business_role": "activity-flow consistency",
+      "normalized_semantics": "If a truck is inactive in a period, its transported weight in that period must be zero.",
+      "support_entity_ids": [
+        "entity_truck_active_state",
+        "entity_truck_transported_weight"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "activity_condition",
+          "time_offset": 0
+        },
+        {
+          "entity_id": "entity_truck_transported_weight",
+          "role": "restricted_flow",
+          "time_offset": 0
+        }
+      ],
+      "quantifier": "for every truck and period",
+      "scope_kind": "truck_period",
+      "parameter_refs": [],
+      "condition": "The truck is inactive.",
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "An inactive truck must transport zero weight",
+      "source_spans": [
+        {
+          "text": "An inactive truck must transport zero weight, while the weight transported by an active truck cannot exceed its maximum capacity."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "obl_active_truck_capacity_limit",
+      "canonical_family": "active_resource_capacity_upper_bound",
+      "canonical_name": "active truck load capacity",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "individual truck capacity",
+      "normalized_semantics": "When a truck is active, the weight it transports in a period cannot exceed that truck's maximum capacity.",
+      "support_entity_ids": [
+        "entity_truck_active_state",
+        "entity_truck_transported_weight"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "activity_condition",
+          "time_offset": 0
+        },
+        {
+          "entity_id": "entity_truck_transported_weight",
+          "role": "capacity-limited_flow",
+          "time_offset": 0
+        }
+      ],
+      "quantifier": "for every truck and period",
+      "scope_kind": "truck_period",
+      "parameter_refs": [
+        "param_truck_capacity"
+      ],
+      "condition": "The truck is active.",
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "the weight transported by an active truck cannot exceed its maximum capacity",
+      "source_spans": [
+        {
+          "text": "An inactive truck must transport zero weight, while the weight transported by an active truck cannot exceed its maximum capacity."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "obl_adjacent_period_load_change_limit",
+      "canonical_family": "adjacent_period_flow_change_limit",
+      "canonical_name": "truck load ramp limit",
+      "structural_form": "INEQUALITY",
+      "business_role": "load-change control",
+      "normalized_semantics": "For each truck, the absolute change in transported weight across adjacent periods cannot exceed 300 kg, including a change whose load at either endpoint is zero.",
+      "support_entity_ids": [
+        "entity_truck_transported_weight"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_transported_weight",
+          "role": "prior_load",
+          "time_offset": -1
+        },
+        {
+          "entity_id": "entity_truck_transported_weight",
+          "role": "current_load",
+          "time_offset": 0
+        }
+      ],
+      "quantifier": "for every truck and each adjacent-period transition",
+      "scope_kind": "truck_temporal_transition",
+      "parameter_refs": [
+        "param_load_change_limit",
+        "param_initial_active_state"
+      ],
+      "boundary_variants": [
+        {
+          "boundary": "transition into period 1",
+          "semantics": "If the pre-horizon off state is included as an adjacent transition, the preceding load is zero by the initial-off and inactive-zero rules.",
+          "status": "ambiguous applicability"
+        }
+      ],
+      "coupling_active": false,
+      "source_status": "explicit, with ambiguous pre-horizon boundary applicability",
+      "source_grounding": "the change in transported weight between two adjacent periods, including transitions to or from zero load, cannot exceed 300 kg",
+      "source_spans": [
+        {
+          "text": "For each truck, the change in transported weight between two adjacent periods, including transitions to or from zero load, cannot exceed 300 kg."
+        },
+        {
+          "text": "All trucks are initially off immediately before period 1"
+        }
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "obl_period_demand_coverage",
+      "canonical_family": "aggregate_demand_coverage",
+      "canonical_name": "period demand coverage",
+      "structural_form": "COVERAGE",
+      "business_role": "customer demand satisfaction",
+      "normalized_semantics": "In each period, aggregate transported weight across all trucks must be at least the customer demand for that period.",
+      "support_entity_ids": [
+        "entity_truck_transported_weight"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_transported_weight",
+          "role": "aggregate_service_flow",
+          "time_offset": 0,
+          "aggregation": "sum over trucks"
+        }
+      ],
+      "quantifier": "for every period",
+      "scope_kind": "period_aggregate",
+      "parameter_refs": [
+        "param_customer_demand"
+      ],
+      "coupling_active": false,
+      "source_status": "explicit",
+      "source_grounding": "In every period, the total transported weight must be at least the customer demand.",
+      "source_spans": [
+        {
+          "text": "In every period, the total transported weight must be at least the customer demand."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "obl_spare_capacity_buffer",
+      "canonical_family": "aggregate_active_capacity_utilization_limit",
+      "canonical_name": "ten-percent spare-capacity buffer",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "spare-capacity reserve",
+      "normalized_semantics": "In each period, total transported weight across all trucks cannot exceed 90% of the sum of the maximum capacities of trucks active in that period.",
+      "support_entity_ids": [
+        "entity_truck_transported_weight",
+        "entity_truck_active_state"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "entity_truck_transported_weight",
+          "role": "aggregate_utilized_weight",
+          "time_offset": 0,
+          "aggregation": "sum over trucks"
+        },
+        {
+          "entity_id": "entity_truck_active_state",
+          "role": "active_capacity_membership",
+          "time_offset": 0,
+          "aggregation": "capacity-weighted sum over trucks"
+        }
+      ],
+      "quantifier": "for every period",
+      "scope_kind": "period_aggregate",
+      "parameter_refs": [
+        "param_capacity_utilization_fraction",
+        "param_truck_capacity"
+      ],
+      "coupling_active": true,
+      "source_status": "explicit",
+      "source_grounding": "the total transported weight in each period cannot exceed 90% of the combined maximum capacity of the trucks active in that period",
+      "source_spans": [
+        {
+          "text": "A 10% spare-capacity buffer must also be maintained, so the total transported weight in each period cannot exceed 90% of the combined maximum capacity of the trucks active in that period."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "derived_checks": [
+    {
+      "id": "check_no_period4_startup",
+      "canonical_name": "no startup in final period",
+      "normalized_semantics": "No truck may start in period 4 because the required two consecutive active periods cannot both occur within the stated four-period horizon.",
+      "support_entity_ids": [
+        "entity_truck_startup",
+        "entity_truck_active_state"
+      ],
+      "derived_from_obligation_ids": [
+        "obl_minimum_active_duration_after_startup"
+      ],
+      "parameter_refs": [
+        "param_minimum_active_duration"
+      ],
+      "source_grounding": "so a truck may not be started in period 4",
+      "source_spans": [
+        {
+          "text": "Once a truck is started, it must remain active for at least two consecutive periods, so a truck may not be started in period 4."
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "check_zero_load_at_inactive_transition_endpoint",
+      "canonical_name": "inactive transition endpoint has zero load",
+      "normalized_semantics": "Whenever an adjacent-period load transition includes an inactive endpoint, the load at that endpoint is zero by the inactive-truck rule.",
+      "support_entity_ids": [
+        "entity_truck_active_state",
+        "entity_truck_transported_weight"
+      ],
+      "derived_from_obligation_ids": [
+        "obl_inactive_truck_zero_load",
+        "obl_adjacent_period_load_change_limit"
+      ],
+      "parameter_refs": [],
+      "source_grounding": "including transitions to or from zero load; An inactive truck must transport zero weight",
+      "source_spans": [
+        {
+          "text": "An inactive truck must transport zero weight"
+        },
+        {
+          "text": "For each truck, the change in transported weight between two adjacent periods, including transitions to or from zero load, cannot exceed 300 kg."
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "unresolved_ramp_initial_boundary",
+      "issue": "It is not fully explicit whether the 300 kg adjacent-period load-change limit also applies from the pre-horizon initially-off state into period 1.",
+      "relevant_source_spans": [
+        {
+          "text": "All trucks are initially off immediately before period 1"
+        },
+        {
+          "text": "For each truck, the change in transported weight between two adjacent periods, including transitions to or from zero load, cannot exceed 300 kg."
+        }
+      ],
+      "impact": "Determines whether each truck's period-1 transported weight is also limited to 300 kg from

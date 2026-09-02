@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_36_3",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator needs to load packages onto identical delivery trucks. Packages:\n* Package Alpha: weight 32kg\n* Package Bravo: weight 31kg\n* Package Charlie: weight 44kg\n* Package Delta: weight 50kg\n* Package Echo: weight 37kg\n* Package Foxtrot: weight 70kg\n* Package Golf: weight 35kg\n* Package Hotel: weight 48kg\n* Package India: weight 46kg\n* Package Juliet: weight 59kg\n* Package Kilo: weight 33kg\n* Package Lima: weight 36kg\n* Package Mike: weight 57kg\n* Package November: weight 44kg\n* Package Oscar: weight 46kg\n* Package Papa: weight 47kg\n* Package Quebec: weight 67kg\n* Package Romeo: weight 68kg\n* Package Sierra: weight 37kg\n* Package Tango: weight 38kg\n* Package Uniform: weight 64kg\n* Package Victor: weight 37kg\n* Package Whiskey: weight 53kg\n* Package X-ray: weight 53kg\n* Package Yankee: weight 47kg\n* Package Zulu: weight 53kg\n* Package Asterisk: weight 33kg\n* Package Backslash: weight 34kg\n* Package Bracket: weight 56kg\n* Package Caret: weight 48kg\n* Package Underscore: weight 53kg\n* Package Grave: weight 47kg\n* Package Alpha2: weight 30kg\n* Package Bravo2: weight 38kg\n* Package Charlie2: weight 61kg\n* Package Delta2: weight 51kg\n\nEach truck has a maximum load capacity of 100 kg. Load all packages using the fewest trucks possible. Every package must be placed on exactly one truck, and the total weight loaded on any truck cannot exceed its capacity limit.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

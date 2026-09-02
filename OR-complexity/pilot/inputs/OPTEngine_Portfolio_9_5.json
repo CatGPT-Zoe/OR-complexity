@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_9_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner must distribute a fixed budget across 9 infrastructure projects to maximize the total expected benefit to the community.  \nThe profile for each project is as follows:  \n* Project A: expected benefit is 0.060, implementation complexity is 0.243, allocation limits [0.092, 0.708]  \n* Project B: expected benefit is 0.192, implementation complexity is 0.249, allocation limits [0.011, 0.730]  \n* Project C: expected benefit is 0.106, implementation complexity is 0.231, allocation limits [0.083, 0.593]  \n* Project D: expected benefit is 0.102, implementation complexity is 0.207, allocation limits [0.090, 0.839]  \n* Project E: expected benefit is 0.198, implementation complexity is 0.183, allocation limits [0.020, 0.567]  \n* Project F: expected benefit is 0.087, implementation complexity is 0.238, allocation limits [0.054, 0.333]  \n* Project G: expected benefit is 0.146, implementation complexity is 0.162, allocation limits [0.016, 0.379]  \n* Project H: expected benefit is 0.184, implementation complexity is 0.163, allocation limits [0.085, 0.549]  \n* Project I: expected benefit is 0.156, implementation complexity is 0.115, allocation limits [0.044, 0.638]  \n\nEach project must receive a fraction of the total budget within its specified allocation limits, and the sum of all budget fractions must equal one.  \nTo prioritize community engagement, the set of participatory projects L = {A, I} must together receive at least 0.574 of the total budget.  \nAdditionally, the overall implementation complexity index of the portfolio must not exceed 0.304, and the total expected benefit must be at least 0.065.  \nDetermine the optimal budget allocation that maximizes the total expected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

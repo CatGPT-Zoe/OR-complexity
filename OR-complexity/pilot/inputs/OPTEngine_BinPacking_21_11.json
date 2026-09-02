@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_21_11",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of shipments onto identical freight wagons. The shipments are as follows:\n\n* Shipment Alpha: mass 48 tonnes\n* Shipment Beta: mass 62 tonnes\n* Shipment Gamma: mass 37 tonnes\n* Shipment Delta: mass 53 tonnes\n* Shipment Epsilon: mass 52 tonnes\n* Shipment Zeta: mass 39 tonnes\n* Shipment Eta: mass 70 tonnes\n* Shipment Theta: mass 52 tonnes\n* Shipment Iota: mass 60 tonnes\n* Shipment Kappa: mass 70 tonnes\n* Shipment Lambda: mass 63 tonnes\n* Shipment Mu: mass 33 tonnes\n* Shipment Nu: mass 42 tonnes\n* Shipment Xi: mass 46 tonnes\n* Shipment Omicron: mass 41 tonnes\n* Shipment Pi: mass 67 tonnes\n* Shipment Rho: mass 50 tonnes\n* Shipment Sigma: mass 48 tonnes\n* Shipment Tau: mass 54 tonnes\n* Shipment Upsilon: mass 70 tonnes\n* Shipment Phi: mass 32 tonnes\n\nEach wagon has a maximum load capacity of 100 tonnes. The objective is to assign all shipments to wagons, ensuring every shipment is placed on exactly one wagon and the combined mass on any wagon does not surpass its capacity, while minimizing the total number of wagons required.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

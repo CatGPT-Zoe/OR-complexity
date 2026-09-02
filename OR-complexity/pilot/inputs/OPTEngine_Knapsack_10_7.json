@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_10_7",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics manager is selecting packages to load onto a delivery drone. The available packages are:\n* Package 1: size 29 units, revenue 163 credits\n* Package 2: size 10 units, revenue 263 credits\n* Package 3: size 4 units, revenue 120 credits\n* Package 4: size 2 units, revenue 191 credits\n* Package 5: size 31 units, revenue 210 credits\n* Package 6: size 1 unit, revenue 279 credits\n* Package 7: size 5 units, revenue 51 credits\n* Package 8: size 44 units, revenue 212 credits\n* Package 9: size 1 unit, revenue 194 credits\n* Package 10: size 3 units, revenue 69 credits\n\nThe drone's cargo hold has a maximum capacity of 91 units. Choose the package combination that yields the highest total revenue without exceeding this capacity limit. Each package must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

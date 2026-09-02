@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_22_6_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm is planning a cargo shipment for a specialized transport vessel. They must select a collection of containers to maximize total profit while adhering to the vessel's weight capacity.\n\nThe containers available are:\n* Container 1: weight 8 tonnes, profit 283 units\n* Container 2: weight 17 tonnes, profit 96 units\n* Container 3: weight 23 tonnes, profit 210 units\n* Container 4: weight 2 tonnes, profit 283 units\n* Container 5: weight 43 tonnes, profit 32 units\n* Container 6: weight 35 tonnes, profit 232 units\n* Container 7: weight 44 tonnes, profit 66 units\n* Container 8: weight 17 tonnes, profit 112 units\n* Container 9: weight 33 tonnes, profit 163 units\n* Container 10: weight 48 tonnes, profit 53 units\n* Container 11: weight 7 tonnes, profit 266 units\n* Container 12: weight 28 tonnes, profit 293 units\n* Container 13: weight 23 tonnes, profit 101 units\n* Container 14: weight 10 tonnes, profit 72 units\n* Container 15: weight 19 tonnes, profit 160 units\n* Container 16: weight 12 tonnes, profit 258 units\n* Container 17: weight 19 tonnes, profit 136 units\n* Container 18: weight 35 tonnes, profit 133 units\n* Container 19: weight 5 tonnes, profit 254 units\n* Container 20: weight 13 tonnes, profit 193 units\n* Container 21: weight 28 tonnes, profit 147 units\n* Container 22: weight 21 tonnes, profit 62 units\n\nFurthermore, due to contractual obligations, exactly one of Container 1 and Container 2 must be included in the shipment.\n\nIf Container 3 is selected, it requires special handling equipment that occupies space, effectively reducing the vessel's usable weight capacity by 10 tonnes.\nThe vessel's maximum allowable load is 343 tonnes. The firm must determine which containers to load.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

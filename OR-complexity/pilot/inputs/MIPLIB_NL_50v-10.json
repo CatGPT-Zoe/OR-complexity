@@ -1,0 +1,40 @@
+{
+  "instance_id": "MIPLIB_NL_50v-10",
+  "annotation_mode": "semantic",
+  "problem_text": "The National Energy Infrastructure Bureau is overseeing the 'Grid Modernization Phase IV' project involving 50 strategic regional zones. The net energy balance (surplus or deficit) for each zone is detailed in the `cities` registry, where the aggregate generation matches the aggregate load across the network. To facilitate energy redistribution, 183 potential high-voltage transmission corridors have been surveyed between specific zones; the topological connectivity and physical length of these corridors are provided in the `distances` file. The project procurement catalog lists 9 distinct classes of transmission cables, featuring sequential rated capacities of [6, 12, 24, 36, 48, 72, 96, 144, 216] and corresponding material acquisition costs per unit length of [0.55, 0.73, 1.03, 1.39, 1.67, 2.31, 3.03, 4.37, 6.33]. Due to electromagnetic interference constraints on standard conductors, the first 9-1 cable classes (those with lower capacities) are restricted to a single installation instance per corridor. However, the highest-capacity cable class utilizes advanced cryogenic shielding, allowing for a deployment density of up to 212 parallel lines per corridor. Operational safety protocols mandate that the active power flow through any deployed line must strictly adhere to its nameplate capacity rating. Furthermore, corridors exceeding a length of 50 units are designated as 'Long-Haul' sectors requiring red aviation warning paint, while shorter corridors are designated as 'Local' sectors requiring gray protective coating. Upon project completion, the network operator will allocate an annual maintenance budget equivalent to 8% of the total installation value to ensure grid stability. Calculate the minimum total capital expenditure required for the physical lines to balance the regional energy demands.",
+  "sets": [],
+  "parameter_tables_inline": [
+    {
+      "name": "cities",
+      "indices": [
+        "id",
+        "value"
+      ],
+      "unit": "",
+      "values": "| id | value |\n|---|---|\n| 1 | 1347 |\n| 2 | 0 |\n| 3 | 0 |\n| 4 | -14 |\n| 5 | -13 |\n| 6 | -16 |\n| 7 | -11 |\n| 8 | -96 |\n| 9 | 0 |\n| 10 | -97 |\n| 11 | 0 |\n| 12 | -17 |\n| 13 | 0 |\n| 14 | -80 |\n| 15 | 0 |\n| 16 | -96 |\n| 17 | -51 |\n| 18 | 0 |\n| 19 | -41 |\n| 20 | -59 |\n| 21 | -52 |\n| 22 | -89 |\n| 23 | -15 |\n| 24 | -51 |\n| 25 | -18 |\n| 26 | -54 |\n| 27 | 0 |\n| 28 | -13 |\n| 29 | -57 |\n| 30 | -48 |\n| 31 | 0 |\n| 32 | -96 |\n| 33 | -83 |\n| 34 | -89 |\n| 35 | -91 |\n| 36 | 0 |\n| 37 | 0 |\n| 38 | 0 |\n| 39 | 0 |\n| 40 | 0 |\n| 41 | 0 |\n| 42 | 0 |\n| 43 | 0 |\n| 44 | 0 |\n| 45 | 0 |\n| 46 | 0 |\n| 47 | 0 |\n| 48 | 0 |\n| 49 | 0 |\n| 50 | 0 |"
+    },
+    {
+      "name": "distances",
+      "indices": [
+        "id1",
+        "id2",
+        "d"
+      ],
+      "unit": "",
+      "values": "| id1 | id2 | d |\n|---|---|---|\n| 1 | 4 | 111 |\n| 1 | 5 | 25 |\n| 1 | 6 | 13 |\n| 2 | 4 | 10 |\n| 2 | 5 | 87 |\n| 2 | 6 | 100 |\n| 3 | 4 | 82 |\n| 3 | 5 | 48 |\n| 3 | 6 | 60 |\n| 7 | 10 | 28 |\n| 7 | 11 | 38 |\n| 7 | 12 | 16 |\n| 8 | 10 | 32 |\n| 8 | 11 | 73 |\n| 8 | 12 | 47 |\n| 9 | 10 | 39 |\n| 9 | 11 | 57 |\n| 9 | 12 | 72 |\n| 13 | 14 | 41 |\n| 13 | 15 | 90 |\n| 13 | 16 | 60 |\n| 13 | 17 | 79 |\n| 14 | 15 | 58 |\n| 14 | 16 | 71 |\n| 14 | 17 | 61 |\n| 15 | 16 | 77 |\n| 15 | 17 | 30 |\n| 16 | 17 | 50 |\n| 18 | 19 | 95 |\n| 18 | 20 | 12 |\n| 18 | 21 | 96 |\n| 18 | 22 | 10 |\n| 19 | 20 | 86 |\n| 19 | 21 | 24 |\n| 19 | 22 | 93 |\n| 20 | 21 | 85 |\n| 20 | 22 | 17 |\n| 21 | 22 | 96 |\n| 1 | 19 | 34 |\n| 6 | 7 | 24 |\n| 12 | 14 | 69 |\n| 13 | 20 | 92 |\n| 18 | 23 | 25 |\n| 23 | 27 | 76 |\n| 7 | 24 | 50 |\n| 24 | 41 | 90 |\n| 19 | 25 | 95 |\n| 25 | 32 | 73 |\n| 7 | 26 | 67 |\n| 26 | 48 | 24 |\n| 16 | 27 | 71 |\n| 27 | 34 | 90 |\n| 8 | 28 | 46 |\n| 28 | 32 | 60 |\n| 20 | 29 | 64 |\n| 29 | 41 | 114 |\n| 4 | 30 | 27 |\n| 30 | 43 | 49 |\n| 7 | 31 | 27 |\n| 31 | 47 | 53 |\n| 5 | 32 | 25 |\n| 32 | 42 | 15 |\n| 19 | 33 | 73 |\n| 33 | 47 | 14 |\n| 10 | 34 | 59 |\n| 34 | 49 | 47 |\n| 5 | 35 | 32 |\n| 35 | 47 | 82 |\n| 10 | 36 | 19 |\n| 36 | 43 | 41 |\n| 2 | 37 | 75 |\n| 37 | 39 | 41 |\n| 7 | 38 | 93 |\n| 38 | 46 | 101 |\n| 14 | 39 | 69 |\n| 39 | 50 | 92 |\n| 18 | 40 | 22 |\n| 40 | 50 | 85 |\n| 21 | 41 | 100 |\n| 41 | 47 | 56 |\n| 18 | 42 | 59 |\n| 42 | 47 | 49 |\n| 15 | 43 | 48 |\n| 43 | 50 | 42 |\n| 12 | 44 | 31 |\n| 44 | 49 | 75 |\n| 2 | 45 | 100 |\n| 45 | 47 | 73 |\n| 17 | 46 | 69 |\n| 46 | 49 | 79 |\n| 14 | 47 | 46 |\n| 47 | 48 | 28 |\n| 20 | 48 | 25 |\n| 48 | 50 | 71 |\n| 14 | 49 | 34 |\n| 49 | 50 | 18 |\n| 18 | 50 | 68 |\n| 22 | 50 | 76 |\n| 14 | 38 | 68 |\n| 15 | 27 | 87 |\n| 24 | 48 | 15 |\n| 1 | 33 | 84 |\n| 12 | 35 | 22 |\n| 33 | 50 | 39 |\n| 39 | 46 | 66 |\n| 1 | 34 | 84 |\n| 11 | 18 | 108 |\n| 2 | 42 | 74 |\n| 28 | 33 | 14 |\n| 29 | 43 | 59 |\n| 4 | 43 | 42 |\n| 5 | 34 | 64 |\n| 3 | 25 | 76 |\n| 24 | 37 | 24 |\n| 16 | 25 | 99 |\n| 28 | 34 | 38 |\n| 20 | 27 | 87 |\n| 13 | 39 | 79 |\n| 11 | 12 | 53 |\n| 6 | 39 | 25 |\n| 27 | 37 | 94 |\n| 38 | 47 | 22 |\n| 31 | 36 | 19 |\n| 4 | 6 | 100 |\n| 17 | 34 | 39 |\n| 26 | 31 | 58 |\n| 37 | 41 | 87 |\n| 15 | 20 | 13 |\n| 14 | 31 | 36 |\n| 3 | 10 | 59 |\n| 10 | 11 | 42 |\n| 29 | 30 | 85 |\n| 15 | 32 | 32 |\n| 35 | 44 | 47 |\n| 24 | 36 | 41 |\n| 2 | 44 | 81 |\n| 6 | 47 | 78 |\n| 7 | 9 | 65 |\n| 22 | 25 | 59 |\n| 17 | 33 | 44 |\n| 28 | 45 | 84 |\n| 1 | 32 | 43 |\n| 10 | 27 | 48 |\n| 4 | 21 | 81 |\n| 38 | 45 | 81 |\n| 20 | 42 | 51 |\n| 8 | 39 | 28 |\n| 7 | 8 | 52 |\n| 32 | 39 | 15 |\n| 2 | 12 | 94 |\n| 6 | 35 | 30 |\n| 8 | 48 | 13 |\n| 12 | 34 | 78 |\n| 1 | 17 | 45 |\n| 13 | 23 | 82 |\n| 25 | 49 | 3 |\n| 14 | 46 | 46 |\n| 5 | 24 | 28 |\n| 30 | 35 | 97 |\n| 23 | 39 | 64 |\n| 27 | 40 | 107 |\n| 31 | 39 | 39 |\n| 29 | 42 | 21 |\n| 6 | 34 | 79 |\n| 27 | 28 | 60 |\n| 8 | 38 | 42 |\n| 2 | 40 | 82 |\n| 12 | 26 | 56 |\n| 16 | 49 | 96 |\n| 8 | 37 | 23 |\n| 15 | 23 | 25 |\n| 11 | 40 | 110 |\n| 13 | 27 | 16 |\n| 6 | 14 | 75 |\n| 18 | 36 | 83 |\n| 28 | 50 | 26 |\n| 6 | 30 | 97 |\n| 40 | 43 | 67 |\n| 44 | 46 | 63 |\n| 37 | 46 | 88 |\n| 13 | 42 | 66 |\n| 18 | 47 | 23 |\n| 8 | 34 | 32 |"
+    }
+  ],
+  "external_file_manifest": [
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/50v-10/data/cities.csv",
+      "role": "parameter_table",
+      "table": "cities"
+    },
+    {
+      "path": "OR-complexity/MIPLIB-NL-main/dataset/50v-10/data/distances.csv",
+      "role": "parameter_table",
+      "table": "distances"
+    }
+  ],
+  "notes": ""
+}

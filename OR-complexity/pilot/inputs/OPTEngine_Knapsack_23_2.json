@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Knapsack_23_2",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company is selecting cargo containers to load onto a delivery truck. Available containers are:\n* Container 1: weight 30kg, revenue 144 dollars\n* Container 2: weight 23kg, revenue 152 dollars\n* Container 3: weight 40kg, revenue 123 dollars\n* Container 4: weight 46kg, revenue 103 dollars\n* Container 5: weight 36kg, revenue 242 dollars\n* Container 6: weight 30kg, revenue 142 dollars\n* Container 7: weight 31kg, revenue 58 dollars\n* Container 8: weight 6kg, revenue 98 dollars\n* Container 9: weight 36kg, revenue 36 dollars\n* Container 10: weight 50kg, revenue 138 dollars\n* Container 11: weight 24kg, revenue 180 dollars\n* Container 12: weight 24kg, revenue 39 dollars\n* Container 13: weight 25kg, revenue 184 dollars\n* Container 14: weight 12kg, revenue 155 dollars\n* Container 15: weight 31kg, revenue 32 dollars\n* Container 16: weight 35kg, revenue 268 dollars\n* Container 17: weight 20kg, revenue 173 dollars\n* Container 18: weight 18kg, revenue 173 dollars\n* Container 19: weight 5kg, revenue 188 dollars\n* Container 20: weight 2kg, revenue 239 dollars\n* Container 21: weight 40kg, revenue 98 dollars\n* Container 22: weight 23kg, revenue 160 dollars\n* Container 23: weight 45kg, revenue 145 dollars\nThe truck has a maximum payload capacity of 442 kg. Choose the combination of containers that maximizes total revenue without exceeding this weight limit. Each container must be either fully loaded or left behind.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_5_7_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must dispatch a technician to five remote field stations with the following geographic coordinates:\n\nStation Alpha: (178, 56)\nStation Beta: (11, 146)\nStation Gamma: (162, 136)\nStation Delta: (154, 174)\nStation Epsilon: (18, 6)\n\nThe travel distances between stations, measured in kilometers, are precisely known from prior surveys:\nAlpha to Gamma: 81.6 km\nAlpha to Delta: 120.4 km\nAlpha to Epsilon: 167.6 km\nBeta to Gamma: 151.3 km\nBeta to Delta: 145.7 km\nBeta to Epsilon: 140.2 km\nGamma to Delta: 38.8 km\nGamma to Epsilon: 194.0 km\nDelta to Epsilon: 216.1 km\n\nDue to terrain restrictions, direct travel between Station Alpha and Station Beta is impossible. Furthermore, a routing protocol mandates that exactly one of two specific critical links must be incorporated into the circuit: either the connection between Station Beta and Station Gamma, or the connection between Station Gamma and Station Delta.\n\nThe objective is to determine the most efficient closed-circuit inspection tour, wherein the technician visits each station exactly once before returning to the origin, thereby minimizing the total distance traveled.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

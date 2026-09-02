@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Transportation_5_5",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate the distribution of a specialized commodity from a network of regional storage depots to a series of major urban distribution centers, with the objective of minimizing overall freight expenses.\n\nThe inventory available at each regional depot (set R) is precisely quantified:\n* Depot R1 holds 156 units.\n* Depot R2 holds 65 units.\n* Depot R3 holds 102 units.\n* Depot R4 holds 157 units.\n* Depot R5 holds 149 units.\n\nThe requisite volume to be delivered to each urban center (set C) is firmly established:\n* Center C1 requires 103 units.\n* Center C2 requires 123 units.\n* Center C3 requires 150 units.\n* Center C4 requires 134 units.\n* Center C5 requires 66 units.\n\nThe per-unit freight charge for routing from each depot to every center is detailed in the following matrix:\n| Origin / Destination | C1 | C2 | C3 | C4 | C5 |\n|--|-|-|-|-|\n| R1 | 1 | 12 | 10 | 13 | 14 |\n| R2 | 18 | 18 | 20 | 8 | 16 |\n| R3 | 8 | 9 | 14 | 16 | 1 |\n| R4 | 13 | 11 | 13 | 6 | 15 |\n| R5 | 5 | 20 | 18 | 1 | 13 |\n\nDetermine the optimal allocation of shipments to achieve minimal total expenditure.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

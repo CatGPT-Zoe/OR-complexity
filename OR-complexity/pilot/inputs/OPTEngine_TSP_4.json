@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4",
+  "annotation_mode": "semantic",
+  "problem_text": "An agricultural inspection team must evaluate four distinct research stations for pest prevalence.\n\nThe travel durations between stations are recorded in minutes:\n* Station Alpha to Beta: 79.2 minutes\n* Station Alpha to Gamma: 55.5 minutes\n* Station Alpha to Delta: 82.5 minutes\n* Station Beta to Gamma: 45.0 minutes\n* Station Beta to Delta: 56.4 minutes\n* Station Gamma to Delta: 28.3 minutes\n\nThe objective is to determine the inspection circuit of minimal total duration that visits every research station precisely once and concludes at the initial station.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_8_3_aug",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics company must dispatch a specialized technician to perform maintenance at eight distinct facilities across a region.  \nThe geographical positions of these facilities are recorded as follows:  \n\nFacility Alpha: Coordinates (98,2)  \nFacility Beta: Coordinates (25,100)  \nFacility Gamma: Coordinates (142,132)  \nFacility Delta: Coordinates (74,114)  \nFacility Epsilon: Coordinates (125,149)  \nFacility Zeta: Coordinates (182,173)  \nFacility Theta: Coordinates (55,108)  \nFacility Iota: Coordinates (21,94)  \n\nTravel distances between facilities, measured in kilometers, have been precomputed:  \n\nAlpha to Gamma: 137.2 km  \nAlpha to Delta: 114.5 km  \nAlpha to Epsilon: 149.5 km  \nAlpha to Zeta: 190.5 km  \nAlpha to Theta: 114.4 km  \nAlpha to Iota: 120.0 km  \nBeta to Gamma: 121.3 km  \nBeta to Delta: 51.0 km  \nBeta to Epsilon: 111.4 km  \nBeta to Zeta: 173.1 km  \nBeta to Theta: 31.0 km  \nBeta to Iota: 7.2 km  \nGamma to Delta: 70.3 km  \nGamma to Epsilon: 24.0 km  \nGamma to Zeta: 57.3 km  \nGamma to Theta: 90.2 km  \nGamma to Iota: 126.8 km  \nDelta to Epsilon: 61.9 km  \nDelta to Zeta: 123.1 km  \nDelta to Theta: 19.9 km  \nDelta to Iota: 56.6 km  \nEpsilon to Zeta: 61.8 km  \nEpsilon to Theta: 81.1 km  \nEpsilon to Iota: 117.6 km  \nZeta to Theta: 142.7 km  \nZeta to Iota: 179.3 km  \nTheta to Iota: 36.8 km  \n\nDue to regulatory restrictions, no direct travel link exists between Facility Alpha and Facility Beta.  \nMoreover, the routing plan must incorporate exactly one of two specific mandatory connections: either the link between Beta and Gamma, or the link between Gamma and Delta.  \n\nThe objective is to determine the minimal total travel circuit that visits every facility precisely once and returns to the point of origin.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

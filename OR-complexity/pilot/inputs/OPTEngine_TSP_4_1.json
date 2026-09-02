@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_TSP_4_1",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics firm must coordinate a maintenance tour for four remote field stations.\n\nThe travel durations between stations are recorded in minutes:\n* Station Alpha to Beta: 121.5 minutes\n* Station Alpha to Gamma: 90.8 minutes\n* Station Alpha to Delta: 158.5 minutes\n* Station Beta to Gamma: 53.2 minutes\n* Station Beta to Delta: 166.1 minutes\n* Station Gamma to Delta: 118.1 minutes\n\nThe objective is to determine the most time-efficient inspection circuit that visits each station precisely once and concludes back at the initial station.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

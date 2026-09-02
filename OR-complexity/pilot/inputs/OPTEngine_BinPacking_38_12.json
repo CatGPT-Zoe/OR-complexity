@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_38_12",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must allocate a set of scientific sensor modules to identical transport pods for an interplanetary mission. The modules are as follows:\n\n* Sensor Alpha: mass 58 units\n* Sensor Beta: mass 58 units\n* Sensor Gamma: mass 59 units\n* Sensor Delta: mass 44 units\n* Sensor Epsilon: mass 67 units\n* Sensor Zeta: mass 35 units\n* Sensor Eta: mass 62 units\n* Sensor Theta: mass 65 units\n* Sensor Iota: mass 41 units\n* Sensor Kappa: mass 37 units\n* Sensor Lambda: mass 51 units\n* Sensor Mu: mass 67 units\n* Sensor Nu: mass 41 units\n* Sensor Xi: mass 34 units\n* Sensor Omicron: mass 46 units\n* Sensor Pi: mass 57 units\n* Sensor Rho: mass 49 units\n* Sensor Sigma: mass 43 units\n* Sensor Tau: mass 38 units\n* Sensor Upsilon: mass 36 units\n* Sensor Phi: mass 45 units\n* Sensor Chi: mass 70 units\n* Sensor Psi: mass 43 units\n* Sensor Omega: mass 49 units\n* Sensor Prime: mass 46 units\n* Sensor Dual: mass 33 units\n* Sensor Bracket-L: mass 36 units\n* Sensor Bracket-R: mass 39 units\n* Sensor Circum: mass 64 units\n* Sensor Caret: mass 61 units\n* Sensor Underscore: mass 46 units\n* Sensor Grave: mass 38 units\n* Sensor Aleph: mass 35 units\n* Sensor Beth: mass 37 units\n* Sensor Gimel: mass 42 units\n* Sensor Dalet: mass 69 units\n* Sensor He: mass 62 units\n* Sensor Waw: mass 45 units\n\nEach transport pod has a strict mass capacity of 100 units. The coordinator must determine an allocation that places every sensor module into exactly one pod, ensuring the collective mass within any single pod does not surpass the prescribed limit, while simultaneously minimizing the total number of pods deployed for the mission.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

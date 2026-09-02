@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_BinPacking_34_16",
+  "annotation_mode": "semantic",
+  "problem_text": "A logistics coordinator must assign a collection of distinct parcels to standardized delivery drones for aerial transport. The parcels are as follows:\n\n* Parcel Alpha: mass 42kg\n* Parcel Beta: mass 60kg\n* Parcel Gamma: mass 46kg\n* Parcel Delta: mass 60kg\n* Parcel Epsilon: mass 42kg\n* Parcel Zeta: mass 58kg\n* Parcel Eta: mass 40kg\n* Parcel Theta: mass 68kg\n* Parcel Iota: mass 43kg\n* Parcel Kappa: mass 66kg\n* Parcel Lambda: mass 55kg\n* Parcel Mu: mass 52kg\n* Parcel Nu: mass 57kg\n* Parcel Xi: mass 46kg\n* Parcel Omicron: mass 54kg\n* Parcel Pi: mass 40kg\n* Parcel Rho: mass 38kg\n* Parcel Sigma: mass 68kg\n* Parcel Tau: mass 64kg\n* Parcel Upsilon: mass 61kg\n* Parcel Phi: mass 37kg\n* Parcel Chi: mass 45kg\n* Parcel Psi: mass 68kg\n* Parcel Omega: mass 52kg\n* Parcel Ares: mass 66kg\n* Parcel Boreas: mass 47kg\n* Parcel Ceres: mass 30kg\n* Parcel Dionysus: mass 49kg\n* Parcel Eos: mass 58kg\n* Parcel Fortuna: mass 43kg\n* Parcel Gaia: mass 55kg\n* Parcel Helios: mass 44kg\n* Parcel Iris: mass 48kg\n* Parcel Janus: mass 67kg\n\nEach drone has a strict maximum payload capacity of 100 kilograms. The coordinator must ensure every parcel is loaded onto exactly one drone, and the combined mass on any given drone cannot surpass its payload limit. The objective is to complete the assignment utilizing the smallest possible fleet of drones.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}

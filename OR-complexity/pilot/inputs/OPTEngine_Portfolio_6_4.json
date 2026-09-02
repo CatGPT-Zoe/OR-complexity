@@ -1,0 +1,9 @@
+{
+  "instance_id": "OPTEngine_Portfolio_6_4",
+  "annotation_mode": "semantic",
+  "problem_text": "A city planner needs to distribute a fixed budget across 6 infrastructure projects to maximize the total projected benefit.\nThe profile for each project is as follows:\n* Project 1: projected benefit is 0.024, complexity score is 0.193, allocation bounds [0.001, 0.875]\n* Project 2: projected benefit is 0.064, complexity score is 0.066, allocation bounds [0.075, 0.611]\n* Project 3: projected benefit is 0.106, complexity score is 0.212, allocation bounds [0.077, 0.330]\n* Project 4: projected benefit is 0.173, complexity score is 0.153, allocation bounds [0.011, 0.450]\n* Project 5: projected benefit is 0.033, complexity score is 0.081, allocation bounds [0.043, 0.809]\n* Project 6: projected benefit is 0.095, complexity score is 0.200, allocation bounds [0.018, 0.574]\nEach project must receive a fraction of the total budget that falls within its specified minimum and maximum allocation limits, and the sum of all budget fractions must equal one. To ensure adequate community impact, the planner requires that the group of high-visibility projects, represented by the set H = {2, 3, 4, 5, 6}, collectively receive at least 0.559 of the total budget. Furthermore, the overall portfolio complexity, measured by a composite complexity index, must not exceed 0.185, and the total projected benefit of the portfolio must be at least 0.068. Please determine the optimal budget allocation that maximizes the total projected benefit while satisfying all constraints.",
+  "sets": [],
+  "parameter_tables_inline": [],
+  "external_file_manifest": [],
+  "notes": ""
+}
