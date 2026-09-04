@@ -1,6 +1,7 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "IndustryOR_22",
+  "dataset": "IndustryOR",
   "layer": "semantic",
   "sets": [
     {
@@ -11,404 +12,646 @@
         "A2",
         "A3"
       ],
-      "source_grounding": "A company plans to produce 3 types of products A1, A2, A3.",
+      "cardinality": 3,
       "source_spans": [
-        "3 types of products $A_{1}, A_{2}, A_{3}$"
-      ]
-    },
-    {
-      "id": "SET_DAYS",
-      "canonical_name": "production_days",
-      "members": {
-        "index_range": [
-          1,
-          22
-        ]
-      },
-      "source_grounding": "The production horizon contains 22 available days.",
-      "source_spans": [
-        "It can produce for 22 days in a month."
+        "A company plans to produce 3 types of products $A_{1}, A_{2}, A_{3}$."
       ]
     }
   ],
   "parameters": [
     {
-      "id": "P_MAX_DEMAND",
-      "canonical_name": "maximum_demand",
-      "index_set": "SET_PRODUCTS",
+      "id": "PAR_OPERATING_DAYS",
+      "canonical_name": "available production days",
+      "value": 22,
+      "unit": "day/month",
+      "source_spans": [
+        "It can produce for 22 days in a month."
+      ]
+    },
+    {
+      "id": "PAR_MAXIMUM_DEMAND",
+      "canonical_name": "maximum monthly demand",
+      "index_set_ids": [
+        "SET_PRODUCTS"
+      ],
       "values": {
         "A1": 5300,
         "A2": 4500,
         "A3": 5400
       },
-      "unit": "100 kg units per month",
-      "source_grounding": "Maximum Demand row of the product table.",
+      "unit": "100 kg unit/month",
       "source_spans": [
         "| Maximum Demand | 5300 | 4500 | 5400 |"
       ]
     },
     {
-      "id": "P_SELLING_PRICE",
-      "canonical_name": "selling_price",
-      "index_set": "SET_PRODUCTS",
+      "id": "PAR_SELLING_PRICE",
+      "canonical_name": "selling price",
+      "index_set_ids": [
+        "SET_PRODUCTS"
+      ],
       "values": {
         "A1": 124,
         "A2": 109,
         "A3": 115
       },
-      "unit": "dollars per 100 kg unit",
-      "source_grounding": "Selling Price row of the product table.",
+      "unit": "USD per 100 kg unit",
       "source_spans": [
         "| Selling Price | $124$ | $109$ | $115$ |"
       ]
     },
     {
-      "id": "P_UNIT_PRODUCTION_COST",
-      "canonical_name": "unit_production_cost",
-      "index_set": "SET_PRODUCTS",
+      "id": "PAR_VARIABLE_PRODUCTION_COST",
+      "canonical_name": "variable production cost",
+      "index_set_ids": [
+        "SET_PRODUCTS"
+      ],
       "values": {
         "A1": 73.3,
         "A2": 52.9,
         "A3": 65.4
       },
-      "unit": "dollars per 100 kg unit",
-      "source_grounding": "Production Cost row of the product table.",
+      "unit": "USD per 100 kg unit",
       "source_spans": [
         "| Production Cost | $73.30$ | $52.90$ | $65.40$ |"
       ]
     },
     {
-      "id": "P_DAILY_FULL_ALLOCATION_RATE",
-      "canonical_name": "daily_production_rate_under_full_allocation",
-      "index_set": "SET_PRODUCTS",
+      "id": "PAR_DAILY_PRODUCTION_QUOTA",
+      "canonical_name": "full-allocation daily production rate",
+      "index_set_ids": [
+        "SET_PRODUCTS"
+      ],
       "values": {
         "A1": 500,
         "A2": 450,
         "A3": 550
       },
-      "unit": "100 kg units per day",
-      "source_grounding": "The production quota is the maximum daily output when all production lines are devoted to the corresponding product.",
+      "unit": "100 kg unit/day",
       "source_spans": [
         "production quota (the maximum number of 100kg units that can be produced in one day if all production lines are devoted to this product)",
         "| Production Quota | 500 | 450 | 550 |"
       ]
     },
     {
-      "id": "P_ACTIVATION_COST",
-      "canonical_name": "fixed_production_activation_cost",
-      "index_set": "SET_PRODUCTS",
+      "id": "PAR_FIXED_ACTIVATION_COST",
+      "canonical_name": "fixed production-line activation cost",
+      "index_set_ids": [
+        "SET_PRODUCTS"
+      ],
       "values": {
         "A1": 170000,
         "A2": 150000,
         "A3": 100000
       },
-      "unit": "dollars per activated product line over the planning horizon",
-      "source_grounding": "Activation Cost row of the fixed activation cost table.",
+      "unit": "USD per activated product line",
       "source_spans": [
         "The fixed activation cost of the production line is as follows:",
         "| Activation Cost | $170000$ | $150000$ | $100000$ |"
       ]
     },
     {
-      "id": "P_MIN_BATCH",
-      "canonical_name": "minimum_production_batch",
-      "index_set": "SET_PRODUCTS",
+      "id": "PAR_MINIMUM_BATCH",
+      "canonical_name": "minimum production batch",
+      "index_set_ids": [
+        "SET_PRODUCTS"
+      ],
       "values": {
         "A1": 20,
         "A2": 20,
         "A3": 16
       },
-      "unit": "100 kg units",
-      "source_grounding": "Minimum Batch row of the minimum production batch table.",
+      "unit": "100 kg unit",
       "source_spans": [
         "Minimum production batch:",
         "Minimum Batch & 20 & 20 & 16"
-      ]
-    },
-    {
-      "id": "P_HORIZON_DAYS",
-      "canonical_name": "available_production_days",
-      "value": 22,
-      "unit": "days",
-      "source_grounding": "The company can produce for 22 days in the month.",
-      "source_spans": [
-        "It can produce for 22 days in a month."
       ]
     }
   ],
   "entities": [
     {
-      "id": "E_PRODUCTION_QUANTITY",
-      "canonical_family": "production_quantity",
-      "canonical_name": "planned product production quantity",
+      "id": "ENT_PRODUCT_PRODUCTION",
+      "canonical_name": "product production quantity",
       "entity_role": "decision",
-      "indices": [
-        "SET_PRODUCTS"
+      "index_signature": [
+        {
+          "role": "product",
+          "set_id": "SET_PRODUCTS"
+        }
       ],
-      "temporal_granularity": "monthly planning horizon",
-      "unit": "100 kg units",
-      "domain_metadata": {
-        "numeric_type": "nonnegative_quantity",
-        "integrality": "not explicitly stated"
-      },
-      "source_grounding": "The requested production plan determines quantities of the three products, with all tabulated quantities measured in 100 kg units.",
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
-        "A company plans to produce 3 types of products",
-        "determine a production plan",
-        "unit $=100 \\mathrm{~kg}$"
+        "A company plans to produce 3 types of products $A_{1}, A_{2}, A_{3}$.",
+        "determine a production plan"
       ],
-      "confidence": 0.96
+      "confidence": "high",
+      "canonical_family": "PRODUCT_PRODUCTION_QUANTITY",
+      "semantic_type": "production quantity",
+      "description": "Total quantity of each product produced during the monthly planning horizon.",
+      "value_domain": "nonnegative quantity",
+      "unit": "100 kg unit"
     },
     {
-      "id": "E_PRODUCT_ACTIVATION",
-      "canonical_family": "product_production_activation",
-      "canonical_name": "product production activation selection",
+      "id": "ENT_PRODUCT_ACTIVATION",
+      "canonical_name": "product production-line activation",
       "entity_role": "decision",
-      "indices": [
-        "SET_PRODUCTS"
+      "index_signature": [
+        {
+          "role": "product",
+          "set_id": "SET_PRODUCTS"
+        }
       ],
-      "temporal_granularity": "monthly planning horizon",
-      "unit": "activation indicator",
-      "domain_metadata": {
-        "numeric_type": "binary_selection",
-        "states": [
-          "inactive",
-          "active"
-        ]
-      },
-      "source_grounding": "Product production incurs a fixed activation cost and the requested plan must accommodate fixed activation costs.",
+      "instance_level": true,
+      "source_status": "implicit_required",
       "source_spans": [
         "The fixed activation cost of the production line is as follows:",
-        "accommodating fixed activation costs"
+        "accommodating fixed activation costs and minimum production batch constraints"
       ],
-      "confidence": 0.95
+      "confidence": "high",
+      "canonical_family": "PRODUCT_PRODUCTION_ACTIVATION",
+      "semantic_type": "activation selection",
+      "description": "Whether production capability for a product is activated for the planning horizon.",
+      "value_domain": "binary",
+      "domain_metadata": {
+        "inactive_value": 0,
+        "active_value": 1
+      }
     }
   ],
   "objective": {
-    "id": "OBJ_PRODUCTION_VALUE",
+    "canonical_name": "maximize net production return",
     "sense": "maximize",
-    "canonical_name": "maximize economic value of the production plan",
-    "normalized_semantics": "Maximize sales value from planned product quantities. The supplied unit production costs and fixed activation costs indicate a likely intended net-profit objective consisting of sales revenue minus variable production costs minus fixed activation costs, but the prompt literally requests maximization of total revenue.",
-    "entity_refs": [
-      "E_PRODUCTION_QUANTITY",
-      "E_PRODUCT_ACTIVATION"
+    "normalized_semantics": "Maximize sales revenue from produced quantities less variable production costs and fixed costs for activated product production lines.",
+    "support_entity_ids": [
+      "ENT_PRODUCT_PRODUCTION",
+      "ENT_PRODUCT_ACTIVATION"
     ],
     "parameter_refs": [
-      "P_SELLING_PRICE",
-      "P_UNIT_PRODUCTION_COST",
-      "P_ACTIVATION_COST"
+      "PAR_SELLING_PRICE",
+      "PAR_VARIABLE_PRODUCTION_COST",
+      "PAR_FIXED_ACTIVATION_COST"
     ],
-    "source_grounding": "The prompt requests a production plan that maximizes total revenue while supplying selling prices, production costs, and fixed activation costs.",
     "source_spans": [
-      "Selling Price",
-      "Production Cost",
+      "The following table gives the maximum demand (unit $=100 \\mathrm{~kg}$), price ($\\$ / 100 \\mathrm{Kg}$), production cost (per 100Kg product)",
       "The fixed activation cost of the production line is as follows:",
-      "maximizes total revenue while accommodating fixed activation costs"
+      "determine a production plan that maximizes total revenue while accommodating fixed activation costs"
     ],
-    "confidence": 0.72
+    "confidence": "medium"
   },
   "obligations": [
     {
-      "id": "O_MAXIMUM_DEMAND",
-      "canonical_family": "product_demand_upper_bound",
-      "canonical_name": "production for sale does not exceed maximum demand",
+      "id": "OBL_PRODUCT_DEMAND_CEILING",
+      "canonical_family": "PRODUCT_DEMAND_UPPER_BOUND",
+      "canonical_name": "production cannot exceed maximum demand",
       "structural_form": "UPPER_BOUND",
-      "business_role": "market_limit",
-      "normalized_semantics": "For each product, the quantity produced for sale during the month must not exceed that product's maximum demand.",
+      "business_role": "market demand limit",
+      "normalized_semantics": "For each product p, total production of p must not exceed its maximum demand.",
       "support_entity_ids": [
-        "E_PRODUCTION_QUANTITY"
+        "ENT_PRODUCT_PRODUCTION"
       ],
       "incidence_slots": [
         {
-          "slot": "product_quantity",
-          "entity_id": "E_PRODUCTION_QUANTITY",
-          "index_relation": "same product"
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "arguments": [
+            "product"
+          ]
         }
       ],
-      "quantifier": "for each product in SET_PRODUCTS",
-      "scope_kind": "per_product",
+      "quantifier": "for every product",
+      "scope_kind": "indexed_unary",
       "parameter_refs": [
-        "P_MAX_DEMAND"
+        "PAR_MAXIMUM_DEMAND"
       ],
-      "condition": null,
-      "cross_instance": false,
-      "coupling_active": false,
-      "source_status": "explicit_parameter_with_intended_operational_bound",
-      "source_grounding": "The table labels the listed values as maximum demand for each product.",
+      "source_grounding": "The table explicitly labels the listed demand values as maximum demand.",
       "source_spans": [
         "The following table gives the maximum demand",
         "| Maximum Demand | 5300 | 4500 | 5400 |"
       ],
-      "normalization_rationale": "Maximum demand is represented as a business upper bound rather than as an entity.",
-      "confidence": 0.93
-    },
-    {
-      "id": "O_SHARED_PRODUCTION_DAY_LIMIT",
-      "canonical_family": "shared_full_allocation_equivalent_time_limit",
-      "canonical_name": "total production fits within available production days",
-      "structural_form": "AGGREGATE_LIMIT",
-      "business_role": "shared_production_capacity",
-      "normalized_semantics": "Across all products, the full-allocation-equivalent production time implied by planned quantities and product-specific daily quotas must not exceed the 22 available production days.",
-      "support_entity_ids": [
-        "E_PRODUCTION_QUANTITY"
-      ],
-      "incidence_slots": [
+      "coupling_active": false,
+      "confidence": "high",
+      "instance_quantifier": "for p in SET_PRODUCTS",
+      "incidence_instances": [
         {
-          "slot": "product_quantities_across_products",
-          "entity_id": "E_PRODUCTION_QUANTITY",
-          "index_relation": "aggregate over all products"
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "binding": {
+            "product": "A1"
+          }
         }
       ],
-      "quantifier": "one aggregate rule over SET_PRODUCTS for the monthly horizon",
-      "scope_kind": "cross_product_aggregate",
-      "parameter_refs": [
-        "P_DAILY_FULL_ALLOCATION_RATE",
-        "P_HORIZON_DAYS"
-      ],
-      "condition": null,
-      "cross_instance": false,
-      "coupling_active": false,
-      "source_status": "inferred_from_explicit_shared_full-allocation_rates",
-      "source_grounding": "Only 22 production days are available, and each product quota is defined as daily output when all production lines are devoted to that product.",
-      "source_spans": [
-        "It can produce for 22 days in a month.",
-        "the maximum number of 100kg units that can be produced in one day if all production lines are devoted to this product",
-        "| Production Quota | 500 | 450 | 550 |"
-      ],
-      "normalization_rationale": "The quota is normalized as consumption of a shared production-day resource. Because only one CSDE family is in the support, this obligation is outside H_c under the stated support-family criterion despite aggregating multiple product indices.",
-      "confidence": 0.78
-    },
-    {
-      "id": "O_PRODUCTION_REQUIRES_ACTIVATION",
-      "canonical_family": "production_activation_permission",
-      "canonical_name": "production is permitted only for activated products",
-      "structural_form": "ACTIVATION_LINK",
-      "business_role": "fixed_charge_activation",
-      "normalized_semantics": "For each product, positive production is permitted only when production for that product is activated.",
-      "support_entity_ids": [
-        "E_PRODUCTION_QUANTITY",
-        "E_PRODUCT_ACTIVATION"
-      ],
-      "incidence_slots": [
+      "intra_entity_instance_coupling": false,
+      "instance_edges": [
         {
-          "slot": "production",
-          "entity_id": "E_PRODUCTION_QUANTITY",
-          "index_relation": "same product"
+          "id": "edge_demand_A1",
+          "binding": {
+            "product": "A1"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A1"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Production[A1] <= 5300"
         },
         {
-          "slot": "activation",
-          "entity_id": "E_PRODUCT_ACTIVATION",
-          "index_relation": "same product"
+          "id": "edge_demand_A2",
+          "binding": {
+            "product": "A2"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A2"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Production[A2] <= 4500"
+        },
+        {
+          "id": "edge_demand_A3",
+          "binding": {
+            "product": "A3"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A3"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Production[A3] <= 5400"
+        }
+      ]
+    },
+    {
+      "id": "OBL_SHARED_PRODUCTION_TIME_LIMIT",
+      "canonical_family": "SHARED_PRODUCTION_TIME_CAPACITY",
+      "canonical_name": "monthly shared production-time limit",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "shared production capacity",
+      "normalized_semantics": "The total production time consumed across products, computed from each product's production quantity and full-allocation daily production rate, must not exceed 22 available production days.",
+      "support_entity_ids": [
+        "ENT_PRODUCT_PRODUCTION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "arguments": [
+            "product for all products"
+          ]
         }
       ],
-      "quantifier": "for each product in SET_PRODUCTS",
-      "scope_kind": "per_product",
-      "parameter_refs": [],
-      "condition": "if product activation is inactive, product production quantity must be zero",
-      "cross_instance": false,
+      "quantifier": "one aggregate rule over all products in the monthly horizon",
+      "scope_kind": "aggregate_across_product_instances",
+      "parameter_refs": [
+        "PAR_DAILY_PRODUCTION_QUOTA",
+        "PAR_OPERATING_DAYS"
+      ],
+      "source_grounding": "The company has 22 production days, and each quota is the output attainable in one day when all production resources are devoted to that product.",
+      "source_spans": [
+        "It can produce for 22 days in a month.",
+        "production quota (the maximum number of 100kg units that can be produced in one day if all production lines are devoted to this product)",
+        "| Production Quota | 500 | 450 | 550 |"
+      ],
       "coupling_active": true,
-      "source_status": "semantic implication of explicit fixed activation cost",
-      "source_grounding": "The cost is identified as a fixed activation cost of production, and the requested plan must accommodate that activation cost.",
+      "confidence": "high",
+      "instance_quantifier": "one edge containing all p in SET_PRODUCTS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "binding": {
+            "product": "A1"
+          }
+        },
+        {
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "binding": {
+            "product": "A2"
+          }
+        },
+        {
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "binding": {
+            "product": "A3"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
+        {
+          "id": "edge_monthly_shared_capacity",
+          "binding": {
+            "horizon": "month"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A1"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A2"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A3"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Production[A1]/500 + Production[A2]/450 + Production[A3]/550 <= 22 days"
+        }
+      ]
+    },
+    {
+      "id": "OBL_PRODUCTION_REQUIRES_ACTIVATION",
+      "canonical_family": "PRODUCTION_ACTIVATION_REQUIREMENT",
+      "canonical_name": "production requires product-line activation",
+      "structural_form": "IMPLICATION",
+      "business_role": "fixed-charge activation linkage",
+      "normalized_semantics": "For each product p, positive production of p is permitted only when production for p is activated.",
+      "support_entity_ids": [
+        "ENT_PRODUCT_PRODUCTION",
+        "ENT_PRODUCT_ACTIVATION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "arguments": [
+            "product"
+          ]
+        },
+        {
+          "entity_id": "ENT_PRODUCT_ACTIVATION",
+          "arguments": [
+            "same product"
+          ]
+        }
+      ],
+      "quantifier": "for every product",
+      "scope_kind": "indexed_cross_family_pair",
+      "parameter_refs": [
+        "PAR_MAXIMUM_DEMAND"
+      ],
+      "source_grounding": "A fixed activation cost can apply to production only through a semantic activation decision linked to whether that product is produced.",
       "source_spans": [
         "The fixed activation cost of the production line is as follows:",
         "accommodating fixed activation costs"
       ],
-      "normalization_rationale": "This records the operational meaning of activation without selecting a big-M coefficient or an algebraic formulation.",
-      "confidence": 0.9
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for p in SET_PRODUCTS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "binding": {
+            "product": "A1"
+          }
+        },
+        {
+          "entity_id": "ENT_PRODUCT_ACTIVATION",
+          "binding": {
+            "product": "A1"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "instance_edges": [
+        {
+          "id": "edge_activation_required_A1",
+          "binding": {
+            "product": "A1"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A1"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_ACTIVATION",
+              "index_binding": {
+                "product": "A1"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Production[A1] > 0 implies Activation[A1] = 1"
+        },
+        {
+          "id": "edge_activation_required_A2",
+          "binding": {
+            "product": "A2"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A2"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_ACTIVATION",
+              "index_binding": {
+                "product": "A2"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Production[A2] > 0 implies Activation[A2] = 1"
+        },
+        {
+          "id": "edge_activation_required_A3",
+          "binding": {
+            "product": "A3"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A3"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_ACTIVATION",
+              "index_binding": {
+                "product": "A3"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Production[A3] > 0 implies Activation[A3] = 1"
+        }
+      ]
     },
     {
-      "id": "O_MINIMUM_BATCH_WHEN_ACTIVE",
-      "canonical_family": "conditional_minimum_production_batch",
-      "canonical_name": "activated production meets the minimum batch",
+      "id": "OBL_MINIMUM_BATCH_WHEN_ACTIVATED",
+      "canonical_family": "ACTIVATED_MINIMUM_PRODUCTION_BATCH",
+      "canonical_name": "minimum production batch upon activation",
       "structural_form": "ACTIVATION_LINK",
-      "business_role": "minimum_run_size",
-      "normalized_semantics": "For each product, when its production is activated, its production quantity must be at least the listed minimum batch.",
+      "business_role": "minimum-run requirement",
+      "normalized_semantics": "For each product p, if production for p is activated, the quantity produced must be at least the specified minimum batch.",
       "support_entity_ids": [
-        "E_PRODUCTION_QUANTITY",
-        "E_PRODUCT_ACTIVATION"
+        "ENT_PRODUCT_PRODUCTION",
+        "ENT_PRODUCT_ACTIVATION"
       ],
       "incidence_slots": [
         {
-          "slot": "production",
-          "entity_id": "E_PRODUCTION_QUANTITY",
-          "index_relation": "same product"
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "arguments": [
+            "product"
+          ]
         },
         {
-          "slot": "activation",
-          "entity_id": "E_PRODUCT_ACTIVATION",
-          "index_relation": "same product"
+          "entity_id": "ENT_PRODUCT_ACTIVATION",
+          "arguments": [
+            "same product"
+          ]
         }
       ],
-      "quantifier": "for each product in SET_PRODUCTS",
-      "scope_kind": "per_product",
+      "quantifier": "for every product",
+      "scope_kind": "indexed_cross_family_pair",
       "parameter_refs": [
-        "P_MIN_BATCH"
+        "PAR_MINIMUM_BATCH"
       ],
-      "condition": "applies when product production is activated",
-      "cross_instance": false,
-      "coupling_active": true,
-      "source_status": "explicit",
-      "source_grounding": "The problem supplies a minimum production batch for every product and explicitly asks that minimum production batch constraints be accommodated.",
+      "source_grounding": "The source explicitly supplies a minimum production batch for each product and asks that minimum production batch constraints be accommodated.",
       "source_spans": [
         "Minimum production batch:",
         "Minimum Batch & 20 & 20 & 16",
-        "minimum production batch constraints"
+        "accommodating fixed activation costs and minimum production batch constraints"
       ],
-      "normalization_rationale": "The minimum batch is conditional on choosing to produce the product; it is not an unconditional positive lower bound.",
-      "confidence": 0.97
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for p in SET_PRODUCTS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PRODUCT_PRODUCTION",
+          "binding": {
+            "product": "A1"
+          }
+        },
+        {
+          "entity_id": "ENT_PRODUCT_ACTIVATION",
+          "binding": {
+            "product": "A1"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "instance_edges": [
+        {
+          "id": "edge_minimum_batch_A1",
+          "binding": {
+            "product": "A1"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A1"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_ACTIVATION",
+              "index_binding": {
+                "product": "A1"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Activation[A1] = 1 implies Production[A1] >= 20"
+        },
+        {
+          "id": "edge_minimum_batch_A2",
+          "binding": {
+            "product": "A2"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A2"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_ACTIVATION",
+              "index_binding": {
+                "product": "A2"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Activation[A2] = 1 implies Production[A2] >= 20"
+        },
+        {
+          "id": "edge_minimum_batch_A3",
+          "binding": {
+            "product": "A3"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PRODUCT_PRODUCTION",
+              "index_binding": {
+                "product": "A3"
+              }
+            },
+            {
+              "entity_id": "ENT_PRODUCT_ACTIVATION",
+              "index_binding": {
+                "product": "A3"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Activation[A3] = 1 implies Production[A3] >= 16"
+        }
+      ]
     }
   ],
   "derived_checks": [],
   "unresolved_items": [
     {
-      "id": "U_OBJECTIVE_REVENUE_VS_PROFIT",
-      "issue": "The requested objective says 'maximizes total revenue,' but variable production costs and fixed activation costs are supplied. It is unclear whether the intended objective is gross sales revenue or net profit.",
-      "affected_items": [
-        "OBJ_PRODUCTION_VALUE"
-      ],
+      "id": "UNRES_OBJECTIVE_WORDING",
+      "issue": "The request says to maximize total revenue, but it also supplies variable production costs and fixed activation costs. The inferred economic objective is net return or profit, but the text does not explicitly state whether both cost categories must be deducted from sales revenue.",
       "source_spans": [
-        "maximizes total revenue while accommodating fixed activation costs",
-        "Production Cost",
-        "Activation Cost"
+        "production cost (per 100Kg product)",
+        "The fixed activation cost of the production line is as follows:",
+        "maximizes total revenue while accommodating fixed activation costs"
       ],
-      "resolution_needed": "Confirm whether unit production costs and fixed activation costs are subtracted in the objective."
+      "impact": "Objective coefficients and the treatment of production costs require confirmation."
     },
     {
-      "id": "U_CAPACITY_INTERPRETATION",
-      "issue": "The text gives product-specific output if all production lines are devoted to one product but does not explicitly state whether production-line capacity may be fractionally shared among products within a day or whether a discrete daily schedule is required.",
-      "affected_items": [
-        "E_PRODUCTION_QUANTITY",
-        "O_SHARED_PRODUCTION_DAY_LIMIT"
-      ],
+      "id": "UNRES_QUANTITY_INTEGRALITY",
+      "issue": "The data are expressed as numbers of 100 kg units, but the source does not explicitly state whether production quantities must be integral or may be fractional.",
       "source_spans": [
-        "the maximum number of 100kg units that can be produced in one day if all production lines are devoted to this product"
+        "unit $=100 \\mathrm{~kg}$",
+        "the maximum number of 100kg units"
       ],
-      "resolution_needed": "Confirm whether an aggregate full-allocation-equivalent day limit is intended or whether product-by-day scheduling and indivisible daily assignments are required."
-    },
-    {
-      "id": "U_PRODUCTION_VS_SALES",
-      "issue": "Maximum demand and selling price naturally apply to sales, while the requested decision is described as production. The text does not separately define sales, inventory, disposal, or a rule equating production with sales.",
-      "affected_items": [
-        "E_PRODUCTION_QUANTITY",
-        "O_MAXIMUM_DEMAND",
-        "OBJ_PRODUCTION_VALUE"
-      ],
-      "source_spans": [
-        "maximum demand",
-        "Selling Price",
-        "determine a production plan"
-      ],
-      "resolution_needed": "Confirm that all planned production is sold during the month and that production quantity may therefore be bounded by demand and credited with selling revenue."
+      "impact": "The semantic quantity domain is nonnegative, with integrality left unspecified."
     }
   ],
   "annotation_warnings": [
     {
-      "id": "W_AGGREGATED_TIME_CAPACITY",
-      "message": "The shared production-day obligation is a semantic interpretation of the full-allocation daily quotas, not an explicit statement of fractional capacity sharing."
-    },
-    {
-      "id": "W_COUPLING_FAMILY_SUPPORT",
-      "message": "The aggregate production-day rule couples product indices within one production entity family, but coupling_active is false because SOH H_c membership requires at least two distinct support entity IDs."
+      "id": "WARN_AGGREGATE_TIME_INTERPRETATION",
+      "message": "The production quotas are interpreted as full-resource daily rates sharing the same 22 production days. No day-indexed scheduling entity is introduced because the source requests a production plan but states no day-specific decisions or restrictions.",
+      "source_spans": [
+        "It can produce for 22 days in a month.",
+        "the maximum number of 100kg units that can be produced in one day if all production lines are devoted to this product"
+      ]
     }
   ]
 }

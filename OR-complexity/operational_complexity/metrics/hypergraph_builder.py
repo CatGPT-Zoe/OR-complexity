@@ -61,10 +61,10 @@ def unary_obligations(graph: dict) -> list:
 
 
 def validate_graph(graph: dict) -> None:
-    """Minimal structural validation for SOH-like inputs (SOH-1.0 / SOH-1.1)."""
+    """Minimal structural validation for SOH-like inputs (SOH-1.0 .. SOH-1.2)."""
     version = graph.get("schema_version")
-    if version not in ("SOH-1.0", "SOH-1.1"):
-        raise ValueError(f"schema_version must be SOH-1.0 or SOH-1.1, got {version!r}")
+    if version not in ("SOH-1.0", "SOH-1.1", "SOH-1.2"):
+        raise ValueError(f"schema_version must be SOH-1.0/1.1/1.2, got {version!r}")
     if graph.get("layer") != "semantic":
         raise ValueError("layer must be semantic")
     entities = graph.get("entities", [])

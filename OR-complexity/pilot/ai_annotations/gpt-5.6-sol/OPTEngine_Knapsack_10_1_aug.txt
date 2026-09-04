@@ -1,11 +1,11 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "OPTEngine_Knapsack_10_1_aug",
   "layer": "semantic",
   "sets": [
     {
       "id": "SET_CONTAINERS",
-      "canonical_name": "cargo_containers",
+      "canonical_name": "available cargo containers",
       "members": [
         "A",
         "B",
@@ -18,10 +18,18 @@
         "I",
         "J"
       ],
-      "source_grounding": "The available containers are Containers A through J.",
+      "cardinality": 10,
       "source_spans": [
         "The available containers are:",
         "Container A: weight 19kg, revenue $10",
+        "Container B: weight 45kg, revenue $239",
+        "Container C: weight 40kg, revenue $246",
+        "Container D: weight 1kg, revenue $121",
+        "Container E: weight 20kg, revenue $68",
+        "Container F: weight 50kg, revenue $164",
+        "Container G: weight 35kg, revenue $89",
+        "Container H: weight 28kg, revenue $251",
+        "Container I: weight 6kg, revenue $264",
         "Container J: weight 49kg, revenue $128"
       ]
     }
@@ -29,9 +37,12 @@
   "parameters": [
     {
       "id": "PAR_CONTAINER_WEIGHT",
-      "canonical_name": "container_weight",
-      "index_set_ids": [
-        "SET_CONTAINERS"
+      "canonical_name": "container weight",
+      "index_signature": [
+        {
+          "role": "container",
+          "set_id": "SET_CONTAINERS"
+        }
       ],
       "unit": "kg",
       "values": {
@@ -46,7 +57,6 @@
         "I": 6,
         "J": 49
       },
-      "source_grounding": "The listed weight of each available container.",
       "source_spans": [
         "Container A: weight 19kg, revenue $10",
         "Container B: weight 45kg, revenue $239",
@@ -62,9 +72,12 @@
     },
     {
       "id": "PAR_CONTAINER_REVENUE",
-      "canonical_name": "container_revenue",
-      "index_set_ids": [
-        "SET_CONTAINERS"
+      "canonical_name": "container revenue",
+      "index_signature": [
+        {
+          "role": "container",
+          "set_id": "SET_CONTAINERS"
+        }
       ],
       "unit": "USD",
       "values": {
@@ -79,7 +92,6 @@
         "I": 264,
         "J": 128
       },
-      "source_grounding": "The listed revenue associated with loading each available container.",
       "source_spans": [
         "Container A: weight 19kg, revenue $10",
         "Container B: weight 45kg, revenue $239",
@@ -95,20 +107,19 @@
     },
     {
       "id": "PAR_MAX_PAYLOAD",
-      "canonical_name": "maximum_takeoff_payload",
+      "canonical_name": "maximum aircraft payload capacity",
       "unit": "kg",
       "value": 205,
-      "source_grounding": "The aircraft's maximum takeoff payload capacity.",
       "source_spans": [
         "The aircraft's maximum takeoff payload capacity is 205 kg."
       ]
     },
     {
-      "id": "PAR_C_SAFETY_ALLOWANCE_REDUCTION",
-      "canonical_name": "container_C_safety_kit_payload_allowance_reduction",
+      "id": "PAR_SAFETY_KIT_PAYLOAD_REDUCTION",
+      "canonical_name": "payload allowance reduction triggered by loading Container C",
       "unit": "kg",
       "value": 10,
-      "source_grounding": "Loading Container C triggers a safety kit that reduces available payload allowance by 10 kg.",
+      "trigger_container": "C",
       "source_spans": [
         "If Container C is loaded, a mandatory safety kit reduces the available payload allowance by 10 kg."
       ]
@@ -117,152 +128,337 @@
   "entities": [
     {
       "id": "ENT_CONTAINER_SELECTION",
-      "canonical_family": "cargo_container_selection",
-      "canonical_name": "container_selected_for_shipment",
+      "canonical_name": "container shipment selection",
+      "canonical_family": "ITEM_SELECTION",
       "entity_role": "decision",
-      "index_set_ids": [
-        "SET_CONTAINERS"
+      "index_signature": [
+        {
+          "role": "container",
+          "set_id": "SET_CONTAINERS"
+        }
       ],
-      "semantic_domain": {
-        "type": "binary_selection",
-        "interpretation": "For each container, whether it is included or loaded in the shipment."
-      },
-      "aliases": [
-        "select",
-        "included",
-        "loaded"
-      ],
-      "source_grounding": "The manager chooses a combination, or set, of available containers to load.",
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
-        "They must select a combination of cargo containers",
-        "exactly one of Container A and Container B must be included in the shipment",
-        "If Container C is loaded",
+        "They must select a combination of cargo containers to maximize total revenue while adhering to the aircraft's maximum payload constraint.",
         "The manager must determine the optimal set of containers to load."
       ],
-      "confidence": 1.0
+      "confidence": "high",
+      "semantic_type": "discrete inclusion decision",
+      "description": "Whether each available container is included in the shipment.",
+      "value_domain": {
+        "type": "binary",
+        "zero_semantics": "container is not loaded",
+        "one_semantics": "container is loaded"
+      },
+      "unit": "container inclusion"
     }
   ],
   "objective": {
-    "id": "OBJ_MAX_TOTAL_REVENUE",
+    "id": "OBJ_MAXIMIZE_TOTAL_REVENUE",
+    "canonical_name": "maximize total revenue from loaded containers",
     "sense": "maximize",
-    "canonical_name": "total_revenue_of_selected_containers",
-    "normalized_semantics": "Maximize the sum of container revenue over all containers selected for the shipment.",
+    "normalized_semantics": "Maximize the sum of PAR_CONTAINER_REVENUE[c] over selected container instances c.",
     "support_entity_ids": [
       "ENT_CONTAINER_SELECTION"
     ],
     "parameter_refs": [
       "PAR_CONTAINER_REVENUE"
     ],
-    "source_grounding": "The shipment combination is selected to maximize total revenue.",
     "source_spans": [
-      "They must select a combination of cargo containers to maximize total revenue",
-      "The manager must determine the optimal set of containers to load."
+      "They must select a combination of cargo containers to maximize total revenue while adhering to the aircraft's maximum payload constraint."
     ],
-    "confidence": 1.0
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "OBL_EXACTLY_ONE_A_B",
-      "canonical_family": "exactly_one_selection_from_designated_subset",
-      "canonical_name": "exactly_one_of_containers_A_and_B",
+      "id": "OBL_EXACTLY_ONE_A_OR_B",
+      "canonical_family": "EXACT_CARDINALITY_ON_SUBSET",
+      "canonical_name": "exactly one of Containers A and B is selected",
       "structural_form": "CARDINALITY",
-      "business_role": "routing_regulation",
-      "normalized_semantics": "Among Container A and Container B, exactly one must be selected for the shipment.",
+      "business_role": "routing regulation",
+      "normalized_semantics": "The number of selected containers in the subset {A, B} must equal 1.",
       "support_entity_ids": [
         "ENT_CONTAINER_SELECTION"
       ],
       "incidence_slots": [
         {
           "entity_id": "ENT_CONTAINER_SELECTION",
-          "argument_role": "regulated_selection_subset",
-          "index_instances": [
-            "A",
-            "B"
+          "arguments": [
+            "container=A"
           ]
-        }
-      ],
-      "quantifier": "exactly one selection over the designated subset {A, B}",
-      "scope_kind": "intra_family_subset_cardinality",
-      "parameter_refs": [],
-      "condition": null,
-      "cross_instance": true,
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "Routing regulations require exactly one of Containers A and B to be included.",
-      "source_spans": [
-        "Due to routing regulations, exactly one of Container A and Container B must be included in the shipment."
-      ],
-      "normalization_rationale": "The statement is one primitive exactly-one cardinality rule, rather than separate inclusion and exclusion obligations.",
-      "confidence": 1.0
-    },
-    {
-      "id": "OBL_PAYLOAD_CAPACITY",
-      "canonical_family": "aggregate_payload_limit_with_triggered_allowance_adjustment",
-      "canonical_name": "aircraft_payload_capacity",
-      "structural_form": "AGGREGATE_LIMIT",
-      "business_role": "aircraft_payload_feasibility",
-      "normalized_semantics": "The aggregate weight of selected containers must not exceed 205 kg, with the available allowance reduced by 10 kg when Container C is selected. Equivalently, selected cargo weight is at most 205 kg when C is not selected and at most 195 kg when C is selected.",
-      "support_entity_ids": [
-        "ENT_CONTAINER_SELECTION"
-      ],
-      "incidence_slots": [
-        {
-          "entity_id": "ENT_CONTAINER_SELECTION",
-          "argument_role": "payload_contributing_container",
-          "index_domain": "SET_CONTAINERS"
         },
         {
           "entity_id": "ENT_CONTAINER_SELECTION",
-          "argument_role": "safety_allowance_reduction_trigger",
-          "index_instances": [
-            "C"
+          "arguments": [
+            "container=B"
           ]
         }
       ],
-      "quantifier": "one shipment-wide aggregate limit over all selected containers",
-      "scope_kind": "intra_family_aggregate",
-      "parameter_refs": [
-        "PAR_CONTAINER_WEIGHT",
-        "PAR_MAX_PAYLOAD",
-        "PAR_C_SAFETY_ALLOWANCE_REDUCTION"
-      ],
-      "condition": "The 10 kg payload-allowance reduction applies if and only if Container C is selected.",
-      "parameter_overrides": [
+      "quantifier": "one global rule over the subset {A, B}",
+      "scope_kind": "subset",
+      "parameter_refs": [],
+      "source_grounding": [
         {
-          "condition": "Container C is selected",
-          "effective_payload_allowance_kg": 195,
-          "derivation": "205 kg maximum payload minus the stated 10 kg allowance reduction"
+          "source_span": "Due to routing regulations, exactly one of Container A and Container B must be included in the shipment.",
+          "semantic_interpretation": "Selection cardinality over Containers A and B equals one."
         }
       ],
-      "cross_instance": true,
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "The aircraft has a 205 kg maximum payload, and selecting Container C reduces the available payload allowance by 10 kg because of its mandatory safety kit.",
       "source_spans": [
-        "while adhering to the aircraft's maximum payload constraint",
-        "If Container C is loaded, a mandatory safety kit reduces the available payload allowance by 10 kg.",
-        "The aircraft's maximum takeoff payload capacity is 205 kg."
+        "Due to routing regulations, exactly one of Container A and Container B must be included in the shipment."
       ],
-      "normalization_rationale": "The conditional 10 kg reduction is represented as a clause of the same shipment payload-limit family, not as a separate entity or a separate capacity family.",
-      "confidence": 1.0
-    }
-  ],
-  "derived_checks": [],
-  "unresolved_items": [],
-  "annotation_warnings": [
-    {
-      "id": "WARN_UNUSED_THREE_DAY_DESCRIPTION",
-      "message": "The operation is described as three-day, but no day-specific loading, timing, assignment, or capacity rules are stated. No temporal set, temporal entity, or temporal obligation is therefore introduced.",
-      "source_spans": [
-        "a three-day international air freight operation"
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for the single regulated subset S={A,B}",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "A"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "B"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
+        {
+          "id": "EDGE_EXACTLY_ONE_A_B",
+          "binding": {
+            "regulated_subset": [
+              "A",
+              "B"
+            ]
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "A"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "B"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "selection[A] + selection[B] = 1"
+        }
       ]
     },
     {
-      "id": "WARN_SAFETY_KIT_NOT_DECISION_ENTITY",
-      "message": "The safety kit is mandatory whenever Container C is loaded and is not presented as an independently selectable action. It is represented through the triggered payload-allowance adjustment rather than as a separate decision entity.",
+      "id": "OBL_AIRCRAFT_PAYLOAD_LIMIT",
+      "canonical_family": "CONDITIONAL_AGGREGATE_CAPACITY",
+      "canonical_name": "aircraft payload limit with Container C safety-kit adjustment",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "aircraft payload feasibility",
+      "normalized_semantics": "Total weight of selected containers must not exceed 205 kg, with the available allowance reduced by 10 kg when Container C is selected; equivalently, sum over c of weight[c] times selection[c], plus 10 times selection[C], must be at most 205 kg.",
+      "support_entity_ids": [
+        "ENT_CONTAINER_SELECTION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "arguments": [
+            "container"
+          ],
+          "role": "selected-container weight contribution"
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "arguments": [
+            "container=C"
+          ],
+          "role": "safety-kit payload-reduction trigger"
+        }
+      ],
+      "quantifier": "one global aggregate rule over all available containers",
+      "scope_kind": "global",
+      "parameter_refs": [
+        "PAR_CONTAINER_WEIGHT",
+        "PAR_MAX_PAYLOAD",
+        "PAR_SAFETY_KIT_PAYLOAD_REDUCTION"
+      ],
+      "source_grounding": [
+        {
+          "source_span": "If Container C is loaded, a mandatory safety kit reduces the available payload allowance by 10 kg.",
+          "semantic_interpretation": "Selecting Container C conditionally decreases the usable payload allowance by 10 kg."
+        },
+        {
+          "source_span": "The aircraft's maximum takeoff payload capacity is 205 kg.",
+          "semantic_interpretation": "The base aggregate payload ceiling is 205 kg."
+        }
+      ],
       "source_spans": [
-        "If Container C is loaded, a mandatory safety kit reduces the available payload allowance by 10 kg."
+        "If Container C is loaded, a mandatory safety kit reduces the available payload allowance by 10 kg.",
+        "The aircraft's maximum takeoff payload capacity is 205 kg."
+      ],
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for the single shipment, aggregate over every c in SET_CONTAINERS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "A"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "B"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "C"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "D"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "E"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "F"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "G"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "H"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "I"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "J"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "clauses": [
+        {
+          "condition": "Container C is not selected",
+          "normalized_semantics": "Total selected-container weight must be at most 205 kg."
+        },
+        {
+          "condition": "Container C is selected",
+          "normalized_semantics": "Total selected-container weight must be at most 195 kg."
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "EDGE_GLOBAL_PAYLOAD",
+          "binding": {
+            "shipment": "single shipment"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "A"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "B"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "C"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "D"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "E"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "F"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "G"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "H"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "I"
+              }
+            },
+            {
+              "entity_id": "ENT_CONTAINER_SELECTION",
+              "index_binding": {
+                "container": "J"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "19*selection[A] + 45*selection[B] + 40*selection[C] + 1*selection[D] + 20*selection[E] + 50*selection[F] + 35*selection[G] + 28*selection[H] + 6*selection[I] + 49*selection[J] + 10*selection[C] <= 205"
+        }
       ]
+    }
+  ],
+  "unresolved_items": [],
+  "annotation_warnings": [
+    {
+      "id": "WARN_THREE_DAY_CONTEXT_NOT_OPERATIONALIZED",
+      "message": "The three-day duration is contextual only: the source gives one shipment-selection decision and one payload capacity, with no day-indexed loading, scheduling, or daily capacity rules."
+    },
+    {
+      "id": "WARN_SAFETY_KIT_NOT_SEPARATE_DECISION",
+      "message": "The mandatory safety kit is represented as a conditional payload allowance adjustment rather than a separate entity because the source provides no independent kit-selection decision."
     }
   ]
 }

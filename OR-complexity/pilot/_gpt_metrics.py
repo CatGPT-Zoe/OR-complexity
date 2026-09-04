@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "OR-complexity/operational_complexity"))
 
 from metrics.hypergraph_builder import validate_graph
 from metrics.coupling_metrics import compute_metrics
+from metrics.instance_metrics import compute_instance_metrics
 
 # The new SOH-1.1 metric engine already computes H_all vs H_c internally.
 # This helper now only normalizes annotations that omit coupling_active; it does
@@ -18,6 +19,9 @@ from metrics.coupling_metrics import compute_metrics
 def ensure_flags(doc):
     for o in doc.get("obligations", []):
         o.setdefault("coupling_active", len(o.get("support_entity_ids", [])) >= 2)
+    obj = doc.get("objective")
+    if isinstance(obj, dict):
+        obj.setdefault("excluded_from_feasibility_hypergraph", True)
     return doc
 
 
@@ -67,6 +71,16 @@ for f in sorted(ANNO.glob("*.txt")):
         print(f"== {name}: GRAPH_INVALID {type(e).__name__}: {e}")
         continue
     met = compute_metrics(doc)
+    try:
+        inst = compute_instance_metrics(doc)
+    except Exception as exc:
+        print(f"== {name}: INSTANCE_METRICS_FAIL {type(exc).__name__}: {exc}")
+        inst = {"instance": {}}
+    met["instance_metrics"] = inst["instance"]
+    ds = met.get("dataset")
+    if isinstance(ds, dict):
+        ds = ds.get("name") or ds.get("id") or ds.get("key") or "custom"
+    met["dataset"] = ds if isinstance(ds, str) else ""
     flat = {}
     flatten("", met, flat)
     flat["instance_id"] = name
@@ -74,10 +88,11 @@ for f in sorted(ANNO.glob("*.txt")):
     flat["n_obligations_coupling"] = len([o for o in doc.get("obligations", []) if o.get("coupling_active", True) and len(o.get("support_entity_ids", [])) >= 2])
     rows.append(flat)
     print(f"== {name}: ok  vars={met['scale']['n_var_families']} "
-          f"constraints={met['scale']['n_constr_families']} (coupling {flat['n_obligations_coupling']}/{flat['n_obligations_total']})")
+          f"constraints={met['scale']['n_constr_families']} (coupling {flat['n_obligations_coupling']}/{flat['n_obligations_total']}) "
+          f"i-verts={flat.get('instance_metrics.n_vertices', 0)} i-edges={flat.get('instance_metrics.n_edges', 0)}")
 
 if rows:
-    keys = list(rows[0].keys())
+    keys = list(dict.fromkeys(k for r in rows for k in r))
     out_path = ROOT / "OR-complexity/pilot/gpt_metrics.csv"
     with out_path.open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=keys)

@@ -1,13 +1,15 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "OPTEngine_Inventory_5_3_aug",
+  "dataset": "OPTEngine",
   "layer": "semantic",
   "sets": [
     {
-      "id": "SET_DAY",
-      "canonical_name": "planning_days",
-      "elements": [1, 2, 3, 4, 5],
-      "source_grounding": "The planning window consists of five days, indexed t = 1, ..., 5.",
+      "id": "SET_DAYS",
+      "canonical_name": "planning days",
+      "members": [1, 2, 3, 4, 5],
+      "cardinality": 5,
+      "unit": "day",
       "source_spans": [
         "over a 5-day operational window",
         "In each day \\( t = 1, \\dots, 5 \\)"
@@ -16,19 +18,18 @@
   ],
   "parameters": [
     {
-      "id": "P_INITIAL_STOCK",
-      "canonical_name": "initial_stock",
+      "id": "PAR_INITIAL_STOCK",
+      "canonical_name": "initial physical stock",
       "value": 11,
       "unit": "liter",
-      "source_grounding": "Stock available at the start of the planning window.",
       "source_spans": [
         "The initial stock at the start of the planning window is 11 liters."
       ]
     },
     {
-      "id": "P_DAILY_CONSUMPTION",
-      "canonical_name": "daily_consumption_requirement",
-      "index_set": "SET_DAY",
+      "id": "PAR_DAILY_CONSUMPTION",
+      "canonical_name": "daily additive consumption requirement",
+      "index_set": "SET_DAYS",
       "values": {
         "1": 49,
         "2": 52,
@@ -37,7 +38,6 @@
         "5": 14
       },
       "unit": "liter",
-      "source_grounding": "Exogenous consumption requirement for each planning day.",
       "source_spans": [
         "Day 1: consumption 49 liters",
         "Day 2: consumption 52 liters",
@@ -47,93 +47,85 @@
       ]
     },
     {
-      "id": "P_PROCUREMENT_LEAD_TIME",
-      "canonical_name": "procurement_lead_time",
+      "id": "PAR_PROCUREMENT_LEAD_TIME",
+      "canonical_name": "procurement lead time",
       "value": 1,
       "unit": "day",
-      "source_grounding": "A procurement request becomes available one day after it is placed.",
       "source_spans": [
         "every procurement request requires a lead time of 1 day before it becomes available to meet consumption requirements or augment existing stock"
       ]
     },
     {
-      "id": "P_PROCUREMENT_MIN",
-      "canonical_name": "minimum_daily_procurement_volume",
+      "id": "PAR_MIN_DAILY_PROCUREMENT",
+      "canonical_name": "minimum daily procurement-request volume",
       "value": 4,
       "unit": "liter",
-      "source_grounding": "Lower volume bound for each procurement request.",
       "source_spans": [
         "the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters"
       ]
     },
     {
-      "id": "P_PROCUREMENT_MAX",
-      "canonical_name": "standard_maximum_daily_procurement_volume",
+      "id": "PAR_MAX_DAILY_PROCUREMENT",
+      "canonical_name": "default maximum daily procurement volume",
       "value": 76,
       "unit": "liter",
-      "source_grounding": "Standard upper volume bound for a procurement request.",
       "source_spans": [
         "the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters"
       ]
     },
     {
-      "id": "P_DAY5_PROCUREMENT_MAX",
-      "canonical_name": "day_specific_maximum_procurement_volume",
-      "index": 5,
+      "id": "PAR_DAY5_MAX_PROCUREMENT",
+      "canonical_name": "day-5 maximum procurement volume",
       "value": 39,
       "unit": "liter",
-      "source_grounding": "The standard procurement maximum is reduced on day 5.",
+      "override_binding": {
+        "day": 5
+      },
       "source_spans": [
         "On the final day (day 5), the maximum allowable procurement volume is reduced to 39 liters."
       ]
     },
     {
-      "id": "P_STORAGE_CAPACITY",
-      "canonical_name": "physical_storage_capacity",
+      "id": "PAR_STORAGE_CAPACITY",
+      "canonical_name": "storage-tank capacity",
       "value": 48,
       "unit": "liter",
-      "source_grounding": "Maximum volume that may be physically held.",
       "source_spans": [
         "the total volume of physically held stock at any moment must not surpass the storage-tank capacity of 48 liters"
       ]
     },
     {
-      "id": "P_FINAL_STOCK_MIN",
-      "canonical_name": "minimum_final_day_stock",
-      "index": 5,
+      "id": "PAR_TERMINAL_STOCK_MINIMUM",
+      "canonical_name": "day-5 minimum physical stock",
       "value": 15,
       "unit": "liter",
-      "source_grounding": "Required minimum physically available stock on day 5.",
       "source_spans": [
         "Also on day 5, the physically available stock must be no less than 15 liters."
       ]
     },
     {
-      "id": "P_PROCUREMENT_COST",
-      "canonical_name": "unit_procurement_cost",
+      "id": "PAR_UNIT_PROCUREMENT_COST",
+      "canonical_name": "unit procurement cost",
       "value": 1,
-      "unit": "cost_per_liter_ordered",
-      "source_grounding": "Cost per liter procured.",
+      "unit": "cost_unit_per_liter",
       "source_spans": [
         "the procurement cost, amounting to 1 per liter ordered"
       ]
     },
     {
-      "id": "P_STORAGE_COST",
-      "canonical_name": "unit_carryover_storage_cost",
+      "id": "PAR_UNIT_STORAGE_COST",
+      "canonical_name": "unit stock carryover cost",
       "value": 1,
-      "unit": "cost_per_liter_carried_to_next_day",
-      "source_grounding": "Cost per liter of stock transferred from one day to the next.",
+      "unit": "cost_unit_per_liter_carried",
       "source_spans": [
         "the storage cost, amounting to 1 per liter of stock transferred from one day to the next"
       ]
     },
     {
-      "id": "P_SHORTAGE_PENALTY",
-      "canonical_name": "unit_unmet_consumption_penalty",
+      "id": "PAR_UNIT_SHORTAGE_PENALTY",
+      "canonical_name": "unit unmet-consumption penalty",
       "value": 14,
-      "unit": "cost_per_liter_unmet",
-      "source_grounding": "Penalty per liter of unmet consumption.",
+      "unit": "cost_unit_per_liter",
       "source_spans": [
         "the shortage penalty, amounting to 14 per liter of unmet consumption"
       ]
@@ -141,432 +133,969 @@
   ],
   "entities": [
     {
-      "id": "E_PROCUREMENT",
-      "canonical_family": "PROCUREMENT_VOLUME",
-      "canonical_name": "daily_procurement_volume",
+      "id": "ENT_PROCUREMENT_REQUEST",
+      "canonical_name": "daily procurement volume",
+      "canonical_family": "PROCUREMENT_REQUEST",
       "entity_role": "decision",
-      "index_sets": ["SET_DAY"],
-      "temporal_granularity": "day",
+      "index_signature": [
+        {
+          "role": "day",
+          "set_id": "SET_DAYS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "semantic_type": "inbound_order",
+      "description": "Volume requested from the vendor on each planning day; availability occurs after the stated one-day lead time.",
+      "value_domain": "continuous_nonnegative",
       "unit": "liter",
       "domain_metadata": {
-        "numeric_type": "continuous",
-        "nonnegative": true
+        "continuity": "continuous"
       },
-      "normalized_semantics": "Volume requested from the vendor on each day; availability is delayed by the procurement lead time.",
-      "source_grounding": "The center chooses a procurement volume for each day.",
       "source_spans": [
         "In each day \\( t = 1, \\dots, 5 \\), the vendor permits the center to place a procurement request",
-        "Determine the optimal procurement volume for each day",
-        "additive volumes may be treated as continuous quantities"
+        "additive volumes may be treated as continuous quantities",
+        "Determine the optimal procurement volume for each day"
       ],
-      "confidence": 0.97
+      "confidence": "high"
     },
     {
-      "id": "E_STOCK",
-      "canonical_family": "PHYSICAL_INVENTORY_STOCK",
-      "canonical_name": "physically_held_stock",
+      "id": "ENT_PHYSICAL_STOCK",
+      "canonical_name": "daily physical stock",
+      "canonical_family": "PHYSICAL_STOCK",
       "entity_role": "state",
-      "index_sets": ["SET_DAY"],
-      "temporal_granularity": "day",
+      "index_signature": [
+        {
+          "role": "day",
+          "set_id": "SET_DAYS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "semantic_type": "inventory_state",
+      "description": "Physical stock associated with each day after accounting for available receipts and that day's satisfied consumption; the exact within-day checkpoint intended by the terminal wording is unresolved.",
+      "value_domain": "continuous_nonnegative",
       "unit": "liter",
       "domain_metadata": {
-        "numeric_type": "continuous",
-        "nonnegative": true
+        "continuity": "continuous"
       },
-      "normalized_semantics": "Physical additive stock remaining or carried across days, subject to storage and terminal-stock requirements.",
-      "source_grounding": "The text requires tracking physical stock and charges for stock transferred between days.",
       "source_spans": [
+        "augment existing stock",
         "the total volume of physically held stock at any moment",
-        "the physically available stock must be no less than 15 liters",
-        "the storage cost, amounting to 1 per liter of stock transferred from one day to the next",
-        "monitor the ensuing stock",
-        "additive volumes may be treated as continuous quantities"
+        "monitor the ensuing stock"
       ],
-      "confidence": 0.92
+      "confidence": "high"
     },
     {
-      "id": "E_UNMET_CONSUMPTION",
-      "canonical_family": "UNMET_DEMAND_VOLUME",
-      "canonical_name": "daily_unmet_consumption",
+      "id": "ENT_UNMET_CONSUMPTION",
+      "canonical_name": "daily unmet consumption",
+      "canonical_family": "UNMET_CONSUMPTION",
       "entity_role": "service_outcome",
-      "index_sets": ["SET_DAY"],
-      "temporal_granularity": "day",
+      "index_signature": [
+        {
+          "role": "day",
+          "set_id": "SET_DAYS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "semantic_type": "lost_demand",
+      "description": "The portion of a day's consumption requirement that is not satisfied and is lost at the end of that day.",
+      "value_domain": "continuous_nonnegative",
       "unit": "liter",
       "domain_metadata": {
-        "numeric_type": "continuous",
-        "nonnegative": true
+        "continuity": "continuous"
       },
-      "normalized_semantics": "The portion of a day's consumption requirement that is not satisfied on that day.",
-      "source_grounding": "Stock-outs are allowed and unmet consumption is monitored and penalized.",
       "source_spans": [
-        "Stock-outs are tolerated, but any unsatisfied consumption is lost",
-        "the shortage penalty, amounting to 14 per liter of unmet consumption",
-        "monitor the ensuing stock and shortage levels",
-        "additive volumes may be treated as continuous quantities"
+        "Stock-outs are tolerated, but any unsatisfied consumption is lost and cannot be deferred to a later day.",
+        "monitor the ensuing stock and shortage levels"
       ],
-      "confidence": 0.99
+      "confidence": "high"
     }
   ],
   "objective": {
-    "sense": "MINIMIZE",
-    "canonical_name": "total_procurement_storage_and_shortage_expenditure",
-    "normalized_semantics": "Minimize total procurement cost for liters ordered, storage cost for stock transferred from one day to the next, and shortage penalties for daily unmet consumption.",
-    "component_terms": [
+    "id": "OBJ_MIN_TOTAL_EXPENDITURE",
+    "canonical_name": "minimize total procurement, carryover-storage, and shortage expenditure",
+    "direction": "minimize",
+    "normalized_semantics": "Minimize procurement expenditure at 1 per liter ordered, storage expenditure at 1 per liter of stock transferred from one day to the next, and shortage expenditure at 14 per liter of unmet daily consumption.",
+    "component_semantics": [
       {
-        "canonical_name": "procurement_expenditure",
-        "entity_id": "E_PROCUREMENT",
-        "parameter_ref": "P_PROCUREMENT_COST",
-        "scope": "orders placed during planning days"
+        "entity_id": "ENT_PROCUREMENT_REQUEST",
+        "coefficient_parameter_id": "PAR_UNIT_PROCUREMENT_COST",
+        "aggregation": "all procurement requests in the planning window"
       },
       {
-        "canonical_name": "carryover_storage_expenditure",
-        "entity_id": "E_STOCK",
-        "parameter_ref": "P_STORAGE_COST",
-        "scope": "stock transferred from one day to the next"
+        "entity_id": "ENT_PHYSICAL_STOCK",
+        "coefficient_parameter_id": "PAR_UNIT_STORAGE_COST",
+        "aggregation": "stock transferred across applicable consecutive-day boundaries"
       },
       {
-        "canonical_name": "shortage_expenditure",
-        "entity_id": "E_UNMET_CONSUMPTION",
-        "parameter_ref": "P_SHORTAGE_PENALTY",
-        "scope": "unmet consumption during planning days"
+        "entity_id": "ENT_UNMET_CONSUMPTION",
+        "coefficient_parameter_id": "PAR_UNIT_SHORTAGE_PENALTY",
+        "aggregation": "all planning days"
       }
     ],
-    "source_grounding": "The stated optimization criterion is aggregate expenditure from procurement, interday storage, and shortages.",
     "source_spans": [
-      "The aggregate expenditure over the planning window comprises three elements",
-      "the procurement cost, amounting to 1 per liter ordered",
-      "the storage cost, amounting to 1 per liter of stock transferred from one day to the next",
-      "the shortage penalty, amounting to 14 per liter of unmet consumption",
-      "so as to minimize the total expenditure"
-    ]
+      "The aggregate expenditure over the planning window comprises three elements: the procurement cost, amounting to 1 per liter ordered; the storage cost, amounting to 1 per liter of stock transferred from one day to the next; and the shortage penalty, amounting to 14 per liter of unmet consumption.",
+      "minimize the total expenditure"
+    ],
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "O_PROCUREMENT_LOWER_BOUND",
+      "id": "OBL_PROCUREMENT_MINIMUM",
       "canonical_family": "PROCUREMENT_VOLUME_LOWER_BOUND",
-      "canonical_name": "minimum_procurement_request_volume",
+      "canonical_name": "minimum procurement-request volume",
       "structural_form": "LOWER_BOUND",
       "business_role": "vendor_order_policy",
-      "normalized_semantics": "Each daily procurement request has volume at least the stated minimum procurement volume.",
-      "support_entity_ids": ["E_PROCUREMENT"],
+      "normalized_semantics": "For each modeled daily procurement request, the requested volume is at least 4 liters.",
+      "support_entity_ids": [
+        "ENT_PROCUREMENT_REQUEST"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_PROCUREMENT",
-          "time_role": "request_day",
-          "index": "t"
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "arguments": [
+            "day"
+          ],
+          "semantic_role": "bounded_procurement"
         }
       ],
-      "quantifier": {
-        "type": "FOR_ALL",
-        "index": "t",
-        "set_ref": "SET_DAY"
+      "quantifier": "for every day in SET_DAYS",
+      "scope_kind": "all_days",
+      "parameter_refs": [
+        "PAR_MIN_DAILY_PROCUREMENT"
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "binding": {
+            "day": 1
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "edge_proc_min_d1",
+          "binding": {
+            "day": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 1
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "procurement[1] >= 4 liters"
+        },
+        {
+          "id": "edge_proc_min_d5",
+          "binding": {
+            "day": 5
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 5
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "procurement[5] >= 4 liters"
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "source_grounding": {
+        "interpretation": "The stated lower endpoint of the vendor's allowable request-volume interval is treated as a daily request bound."
       },
-      "scope_kind": "PER_PERIOD",
-      "parameter_refs": ["P_PROCUREMENT_MIN"],
-      "condition": "Applies when the modeled daily procurement request is placed.",
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "The volume of a procurement request must be no less than 4 liters.",
       "source_spans": [
         "In each day \\( t = 1, \\dots, 5 \\), the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters."
       ],
-      "confidence": 0.9
+      "coupling_active": false,
+      "confidence": "medium"
     },
     {
-      "id": "O_PROCUREMENT_UPPER_BOUND",
+      "id": "OBL_PROCUREMENT_MAXIMUM",
       "canonical_family": "PROCUREMENT_VOLUME_UPPER_BOUND",
-      "canonical_name": "maximum_procurement_request_volume",
+      "canonical_name": "maximum procurement-request volume with day-5 override",
       "structural_form": "UPPER_BOUND",
       "business_role": "vendor_order_policy",
-      "normalized_semantics": "Each procurement request is bounded by the standard maximum volume, with the maximum replaced by 39 liters for request day 5.",
-      "support_entity_ids": ["E_PROCUREMENT"],
+      "normalized_semantics": "A daily procurement request is at most 76 liters, except that the maximum on day 5 is 39 liters.",
+      "support_entity_ids": [
+        "ENT_PROCUREMENT_REQUEST"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_PROCUREMENT",
-          "time_role": "request_day",
-          "index": "t"
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "arguments": [
+            "day"
+          ],
+          "semantic_role": "bounded_procurement"
         }
       ],
-      "quantifier": {
-        "type": "FOR_ALL",
-        "index": "t",
-        "set_ref": "SET_DAY"
-      },
-      "scope_kind": "PER_PERIOD_WITH_OVERRIDE",
+      "quantifier": "for every day in SET_DAYS, with a day-5 parameter override",
+      "scope_kind": "all_days_with_terminal_override",
       "parameter_refs": [
-        "P_PROCUREMENT_MAX",
-        "P_DAY5_PROCUREMENT_MAX"
+        "PAR_MAX_DAILY_PROCUREMENT",
+        "PAR_DAY5_MAX_PROCUREMENT"
       ],
-      "parameter_overrides": [
+      "instance_quantifier": "for t in {1,2,3,4,5}; use 39 when t=5 and 76 otherwise",
+      "incidence_instances": [
         {
-          "condition": "t = 5",
-          "base_parameter_ref": "P_PROCUREMENT_MAX",
-          "override_parameter_ref": "P_DAY5_PROCUREMENT_MAX"
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "binding": {
+            "day": 1
+          }
         }
       ],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "normalization_rationale": "The day-5 value is a parameter override within the same upper-bound family, not an independent rule family.",
-      "source_grounding": "The ordinary maximum request volume is 76 liters, reduced to 39 liters on day 5.",
+      "instance_edges": [
+        {
+          "id": "edge_proc_max_d1",
+          "binding": {
+            "day": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 1
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "procurement[1] <= 76 liters"
+        },
+        {
+          "id": "edge_proc_max_d4",
+          "binding": {
+            "day": 4
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 4
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "procurement[4] <= 76 liters"
+        },
+        {
+          "id": "edge_proc_max_d5",
+          "binding": {
+            "day": 5
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 5
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "procurement[5] <= 39 liters"
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "source_grounding": {
+        "interpretation": "The day-5 value is a parameter override within the same upper-bound policy family."
+      },
       "source_spans": [
         "the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters",
         "On the final day (day 5), the maximum allowable procurement volume is reduced to 39 liters."
       ],
-      "confidence": 0.99
+      "coupling_active": false,
+      "confidence": "high"
     },
     {
-      "id": "O_STOCK_FLOW_BALANCE",
-      "canonical_family": "INVENTORY_FLOW_BALANCE_WITH_LOST_SALES",
-      "canonical_name": "daily_stock_conservation",
+      "id": "OBL_STOCK_FLOW_BALANCE",
+      "canonical_family": "LEAD_TIME_INVENTORY_BALANCE",
+      "canonical_name": "daily stock transition with one-day procurement lead time and lost consumption",
       "structural_form": "BALANCE",
-      "business_role": "physical_flow_conservation",
-      "normalized_semantics": "For each day, physical stock evolves from prior stock plus procurement becoming available after the one-day lead time, less that day's satisfied consumption. Satisfied consumption is the daily consumption requirement minus daily unmet consumption.",
+      "business_role": "material_conservation",
+      "normalized_semantics": "For each day, ending physical stock equals prior carried stock plus procurement becoming available after the one-day lead time, minus satisfied consumption. Satisfied consumption equals specified consumption minus that day's unmet consumption. On day 1, the prior stock is the initial 11 liters and no procurement placed within the planning window is yet available.",
       "support_entity_ids": [
-        "E_PROCUREMENT",
-        "E_STOCK",
-        "E_UNMET_CONSUMPTION"
+        "ENT_PROCUREMENT_REQUEST",
+        "ENT_PHYSICAL_STOCK",
+        "ENT_UNMET_CONSUMPTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_STOCK",
-          "time_role": "prior_or_starting_stock",
-          "index_relation": "start of day t or carryover from day t-1"
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "arguments": [
+            "day-1"
+          ],
+          "semantic_role": "prior_stock"
         },
         {
-          "entity_id": "E_PROCUREMENT",
-          "time_role": "available_receipt",
-          "index_relation": "request day t-1 becomes available on day t"
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "arguments": [
+            "day-1"
+          ],
+          "semantic_role": "receipt_available_after_lead_time"
         },
         {
-          "parameter_ref": "P_DAILY_CONSUMPTION",
-          "time_role": "current_day_consumption_requirement",
-          "index": "t"
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "arguments": [
+            "day"
+          ],
+          "semantic_role": "unmet_portion_of_consumption"
         },
         {
-          "entity_id": "E_UNMET_CONSUMPTION",
-          "time_role": "current_day_unsatisfied_consumption",
-          "index": "t"
-        },
-        {
-          "entity_id": "E_STOCK",
-          "time_role": "resulting_or_carryover_stock",
-          "index": "t"
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "arguments": [
+            "day"
+          ],
+          "semantic_role": "resulting_stock"
         }
       ],
-      "quantifier": {
-        "type": "FOR_ALL",
-        "index": "t",
-        "set_ref": "SET_DAY"
-      },
-      "scope_kind": "TEMPORAL_TRANSITION",
+      "quantifier": "for every day in SET_DAYS, with an initial-stock boundary variant on day 1",
+      "scope_kind": "temporal_recurrence_with_initial_boundary",
       "parameter_refs": [
-        "P_INITIAL_STOCK",
-        "P_DAILY_CONSUMPTION",
-        "P_PROCUREMENT_LEAD_TIME"
+        "PAR_INITIAL_STOCK",
+        "PAR_DAILY_CONSUMPTION",
+        "PAR_PROCUREMENT_LEAD_TIME"
       ],
-      "boundary_variants": [
+      "instance_quantifier": "for t in {2,3,4,5}: stock[t] = stock[t-1] + procurement[t-1] - consumption[t] + unmet[t]; for t=1 use initial stock 11 and no in-window receipt",
+      "incidence_instances": [
         {
-          "condition": "t = 1",
-          "normalized_semantics": "The transition begins with 11 liters of initial stock; no procurement request placed during the five-day window is available before day 2."
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "binding": {
+            "day": 1
+          }
+        },
+        {
+          "entity_id": "ENT_PROCUREMENT_REQUEST",
+          "binding": {
+            "day": 1
+          }
+        },
+        {
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "binding": {
+            "day": 2
+          }
+        },
+        {
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "binding": {
+            "day": 2
+          }
         }
       ],
-      "coupling_active": true,
-      "source_status": "explicit_composite",
-      "normalization_rationale": "Initial stock is a boundary clause and the one-day lead time changes temporal incidence within the same stock-balance family.",
-      "source_grounding": "Stock is augmented by procurement only after its one-day lead time, depleted by consumption actually satisfied, and initialized with 11 liters.",
+      "instance_edges": [
+        {
+          "id": "edge_balance_d1",
+          "binding": {
+            "day": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 1
+              }
+            }
+          ],
+          "boundary_kind": "boundary",
+          "normalized_semantics": "stock[1] = 11 - 49 + unmet[1]"
+        },
+        {
+          "id": "edge_balance_d2",
+          "binding": {
+            "day": 2
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 1
+              }
+            },
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 2
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "stock[2] = stock[1] + procurement[1] - 52 + unmet[2]"
+        },
+        {
+          "id": "edge_balance_d3",
+          "binding": {
+            "day": 3
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 2
+              }
+            },
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 3
+              }
+            },
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 3
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "stock[3] = stock[2] + procurement[2] - 26 + unmet[3]"
+        },
+        {
+          "id": "edge_balance_d4",
+          "binding": {
+            "day": 4
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 3
+              }
+            },
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 3
+              }
+            },
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 4
+              }
+            },
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 4
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "stock[4] = stock[3] + procurement[3] - 40 + unmet[4]"
+        },
+        {
+          "id": "edge_balance_d5",
+          "binding": {
+            "day": 5
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 4
+              }
+            },
+            {
+              "entity_id": "ENT_PROCUREMENT_REQUEST",
+              "index_binding": {
+                "day": 4
+              }
+            },
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 5
+              }
+            },
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 5
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "stock[5] = stock[4] + procurement[4] - 14 + unmet[5]"
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "source_grounding": {
+        "interpretation": "Material conservation combines initial or prior stock, lead-time-shifted procurement availability, consumption, unmet consumption, and resulting stock."
+      },
       "source_spans": [
         "The initial stock at the start of the planning window is 11 liters.",
         "every procurement request requires a lead time of 1 day before it becomes available to meet consumption requirements or augment existing stock",
-        "The consumption of the additive on each day is specified as follows",
-        "Stock-outs are tolerated, but any unsatisfied consumption is lost"
+        "The consumption of the additive on each day is specified as follows:",
+        "Stock-outs are tolerated, but any unsatisfied consumption is lost and cannot be deferred to a later day."
       ],
-      "confidence": 0.93
+      "coupling_active": true,
+      "confidence": "high"
     },
     {
-      "id": "O_SHORTAGE_NO_CARRYOVER",
-      "canonical_family": "UNMET_DEMAND_NO_CARRYOVER",
-      "canonical_name": "lost_unsatisfied_consumption",
-      "structural_form": "NO_CARRYOVER",
-      "business_role": "lost_sales_policy",
-      "normalized_semantics": "Consumption unmet on day t is lost and does not become a consumption obligation on any later day.",
-      "support_entity_ids": ["E_UNMET_CONSUMPTION"],
+      "id": "OBL_UNMET_CONSUMPTION_LIMIT",
+      "canonical_family": "UNMET_DEMAND_UPPER_BOUND",
+      "canonical_name": "unmet consumption cannot exceed daily consumption",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "service_outcome_validity",
+      "normalized_semantics": "On each day, unmet consumption is no greater than that day's specified consumption requirement.",
+      "support_entity_ids": [
+        "ENT_UNMET_CONSUMPTION"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_UNMET_CONSUMPTION",
-          "time_role": "loss_day",
-          "index": "t"
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "arguments": [
+            "day"
+          ],
+          "semantic_role": "bounded_unmet_consumption"
+        }
+      ],
+      "quantifier": "for every day in SET_DAYS",
+      "scope_kind": "all_days",
+      "parameter_refs": [
+        "PAR_DAILY_CONSUMPTION"
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "binding": {
+            "day": 1
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "edge_unmet_limit_d1",
+          "binding": {
+            "day": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 1
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "unmet[1] <= 49 liters"
         },
         {
-          "semantic_role": "excluded_future_backlog",
-          "index_relation": "all days later than t"
+          "id": "edge_unmet_limit_d3",
+          "binding": {
+            "day": 3
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 3
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "unmet[3] <= 26 liters"
+        },
+        {
+          "id": "edge_unmet_limit_d5",
+          "binding": {
+            "day": 5
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 5
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "unmet[5] <= 14 liters"
         }
       ],
-      "quantifier": {
-        "type": "FOR_ALL",
-        "index": "t",
-        "set_ref": "SET_DAY"
+      "intra_entity_instance_coupling": false,
+      "source_grounding": {
+        "interpretation": "An unmet amount is the unsatisfied portion of the stated consumption, so it cannot exceed the consumption to which it refers."
       },
-      "scope_kind": "INTERPERIOD_POLICY",
-      "parameter_refs": [],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "Unsatisfied consumption cannot be deferred to a later day.",
       "source_spans": [
-        "any unsatisfied consumption is lost and cannot be deferred to a later day"
+        "The consumption of the additive on each day is specified as follows:",
+        "Stock-outs are tolerated, but any unsatisfied consumption is lost"
       ],
-      "confidence": 1.0
+      "coupling_active": false,
+      "confidence": "medium"
     },
     {
-      "id": "O_STORAGE_CAPACITY",
-      "canonical_family": "PHYSICAL_STOCK_CAPACITY_UPPER_BOUND",
-      "canonical_name": "storage_tank_capacity",
-      "structural_form": "UPPER_BOUND",
-      "business_role": "physical_storage_limit",
-      "normalized_semantics": "The volume of physically held additive stock may not exceed the storage-tank capacity at any applicable stock-measurement moment.",
-      "support_entity_ids": ["E_STOCK"],
+      "id": "OBL_SHORTAGE_NO_CARRYOVER",
+      "canonical_family": "LOST_DEMAND_NO_CARRYOVER",
+      "canonical_name": "unmet consumption is lost rather than backlogged",
+      "structural_form": "NO_CARRYOVER",
+      "business_role": "lost_sales_policy",
+      "normalized_semantics": "Any unmet consumption on a day expires on that day and is not added to, or deferred as, a consumption requirement on a later day.",
+      "support_entity_ids": [
+        "ENT_UNMET_CONSUMPTION"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_STOCK",
-          "time_role": "physical_stock_measurement",
-          "index": "t or applicable within-day stock moment"
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "arguments": [
+            "day"
+          ],
+          "semantic_role": "expiring_unmet_consumption"
         }
       ],
-      "quantifier": {
-        "type": "FOR_ALL",
-        "index": "stock measurement moment",
-        "domain": "planning interval"
+      "quantifier": "for every day in SET_DAYS",
+      "scope_kind": "all_days_lost_service",
+      "parameter_refs": [],
+      "instance_quantifier": "for t in {1,2,3,4,5}, unmet[t] has no carryover incidence into any later day",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_UNMET_CONSUMPTION",
+          "binding": {
+            "day": 1
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "edge_no_carryover_d1",
+          "binding": {
+            "day": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 1
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "unmet[1] expires after day 1 and does not become day-2 demand"
+        },
+        {
+          "id": "edge_no_carryover_d4",
+          "binding": {
+            "day": 4
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_UNMET_CONSUMPTION",
+              "index_binding": {
+                "day": 4
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "unmet[4] expires after day 4 and does not become day-5 demand"
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "source_grounding": {
+        "interpretation": "The source explicitly specifies lost consumption rather than backlog."
       },
-      "scope_kind": "PER_STATE_MEASUREMENT",
-      "parameter_refs": ["P_STORAGE_CAPACITY"],
+      "source_spans": [
+        "Stock-outs are tolerated, but any unsatisfied consumption is lost and cannot be deferred to a later day."
+      ],
       "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "Physically held stock must not exceed 48 liters at any moment.",
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_STORAGE_CAPACITY",
+      "canonical_family": "PHYSICAL_STOCK_CAPACITY",
+      "canonical_name": "storage-tank capacity limit",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "physical_storage_limit",
+      "normalized_semantics": "Physically held stock must not exceed 48 liters at any applicable stock checkpoint during the planning interval.",
+      "support_entity_ids": [
+        "ENT_PHYSICAL_STOCK"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "arguments": [
+            "day"
+          ],
+          "semantic_role": "capacity_limited_stock"
+        }
+      ],
+      "quantifier": "for every day in SET_DAYS and every represented physical-stock checkpoint",
+      "scope_kind": "all_stock_checkpoints",
+      "parameter_refs": [
+        "PAR_STORAGE_CAPACITY"
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "binding": {
+            "day": 1
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "edge_capacity_d1",
+          "binding": {
+            "day": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 1
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "stock[1] <= 48 liters"
+        },
+        {
+          "id": "edge_capacity_d3",
+          "binding": {
+            "day": 3
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 3
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "stock[3] <= 48 liters"
+        },
+        {
+          "id": "edge_capacity_d5",
+          "binding": {
+            "day": 5
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 5
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "stock[5] <= 48 liters"
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "source_grounding": {
+        "interpretation": "The tank capacity is a unary physical upper bound on each stock instance, while the phrase 'at any moment' may also cover within-day pre-consumption stock."
+      },
       "source_spans": [
         "the total volume of physically held stock at any moment must not surpass the storage-tank capacity of 48 liters"
       ],
-      "confidence": 0.96
+      "coupling_active": false,
+      "confidence": "high"
     },
     {
-      "id": "O_FINAL_STOCK_LOWER_BOUND",
+      "id": "OBL_DAY5_STOCK_MINIMUM",
       "canonical_family": "TERMINAL_STOCK_LOWER_BOUND",
-      "canonical_name": "minimum_day5_physical_stock",
+      "canonical_name": "minimum physical stock on day 5",
       "structural_form": "LOWER_BOUND",
-      "business_role": "terminal_inventory_requirement",
-      "normalized_semantics": "Physically available stock at the applicable day-5 measurement point must be at least 15 liters.",
-      "support_entity_ids": ["E_STOCK"],
+      "business_role": "terminal_stock_requirement",
+      "normalized_semantics": "The physical stock at the applicable day-5 checkpoint must be at least 15 liters.",
+      "support_entity_ids": [
+        "ENT_PHYSICAL_STOCK"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_STOCK",
-          "time_role": "final_day_stock",
-          "index": 5
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "arguments": [
+            "day=5"
+          ],
+          "semantic_role": "terminal_stock"
         }
       ],
-      "quantifier": {
-        "type": "SINGLE_INDEX",
-        "index": 5,
-        "set_ref": "SET_DAY"
+      "quantifier": "at day 5",
+      "scope_kind": "terminal_day",
+      "parameter_refs": [
+        "PAR_TERMINAL_STOCK_MINIMUM"
+      ],
+      "instance_quantifier": "for t=5",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PHYSICAL_STOCK",
+          "binding": {
+            "day": 5
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "edge_terminal_stock_d5",
+          "binding": {
+            "day": 5
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PHYSICAL_STOCK",
+              "index_binding": {
+                "day": 5
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "stock[5] >= 15 liters"
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "source_grounding": {
+        "interpretation": "The requirement is a unary terminal-day stock floor; the source does not precisely identify whether the checkpoint is before or after day-5 consumption."
       },
-      "scope_kind": "TERMINAL",
-      "parameter_refs": ["P_FINAL_STOCK_MIN"],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "Day-5 physically available stock must be at least 15 liters.",
       "source_spans": [
         "Also on day 5, the physically available stock must be no less than 15 liters."
       ],
-      "confidence": 0.96
+      "coupling_active": false,
+      "confidence": "medium"
     }
   ],
   "derived_checks": [
     {
-      "id": "DC_UNMET_NOT_ABOVE_CONSUMPTION",
-      "canonical_name": "unmet_consumption_within_daily_requirement",
-      "normalized_semantics": "For each day, unmet consumption cannot exceed that day's specified consumption requirement because it denotes the unsatisfied portion of that requirement.",
-      "support_entity_ids": ["E_UNMET_CONSUMPTION"],
-      "parameter_refs": ["P_DAILY_CONSUMPTION"],
-      "quantifier": {
-        "type": "FOR_ALL",
-        "index": "t",
-        "set_ref": "SET_DAY"
-      },
-      "derivation_status": "definitional_consequence",
-      "source_grounding": "The shortage quantity is described as unsatisfied consumption rather than an independent backlog or disposal flow.",
-      "source_spans": [
-        "The consumption of the additive on each day is specified as follows",
-        "any unsatisfied consumption is lost",
-        "the shortage penalty, amounting to 14 per liter of unmet consumption"
+      "id": "CHK_DAY1_ORDER_UNAVAILABLE_DAY1",
+      "canonical_name": "day-1 procurement cannot serve day-1 consumption",
+      "normalized_semantics": "Because procurement has a one-day lead time, procurement requested on day 1 is first available on day 2 and does not enter the day-1 stock balance.",
+      "support_entity_ids": [
+        "ENT_PROCUREMENT_REQUEST",
+        "ENT_PHYSICAL_STOCK",
+        "ENT_UNMET_CONSUMPTION"
       ],
-      "confidence": 0.98
+      "source_grounding": {
+        "derived_from_obligation_ids": [
+          "OBL_STOCK_FLOW_BALANCE"
+        ]
+      },
+      "source_spans": [
+        "every procurement request requires a lead time of 1 day before it becomes available to meet consumption requirements or augment existing stock"
+      ],
+      "confidence": "high"
     },
     {
-      "id": "DC_DAY5_ORDER_IN_HORIZON_AVAILABILITY",
-      "canonical_name": "day5_request_not_available_within_five_day_window",
-      "normalized_semantics": "Under the stated one-day lead time, a request placed on day 5 becomes available on day 6 and therefore does not enter a day-1-through-day-5 stock balance.",
-      "support_entity_ids": ["E_PROCUREMENT", "E_STOCK"],
-      "parameter_refs": ["P_PROCUREMENT_LEAD_TIME"],
-      "derivation_status": "temporal_incidence_consequence",
-      "source_grounding": "The planning window ends on day 5 and every request requires one day before becoming available.",
+      "id": "CHK_DAY5_ORDER_OUTSIDE_OPERATIONAL_HORIZON",
+      "canonical_name": "day-5 procurement is unavailable within the five-day window",
+      "normalized_semantics": "With a one-day lead time, procurement requested on day 5 becomes available on day 6, outside the stated five-day operational window, and therefore cannot affect day-5 consumption or day-5 stock.",
+      "support_entity_ids": [
+        "ENT_PROCUREMENT_REQUEST",
+        "ENT_PHYSICAL_STOCK",
+        "ENT_UNMET_CONSUMPTION"
+      ],
+      "source_grounding": {
+        "derived_from_obligation_ids": [
+          "OBL_STOCK_FLOW_BALANCE"
+        ]
+      },
       "source_spans": [
         "over a 5-day operational window",
-        "In each day \\( t = 1, \\dots, 5 \\)",
-        "every procurement request requires a lead time of 1 day before it becomes available"
+        "every procurement request requires a lead time of 1 day before it becomes available to meet consumption requirements or augment existing stock",
+        "On the final day (day 5), the maximum allowable procurement volume is reduced to 39 liters."
       ],
-      "confidence": 0.95
+      "confidence": "high"
     }
   ],
   "unresolved_items": [
     {
-      "id": "U_OPTIONAL_REQUEST_ACTIVATION",
-      "issue": "The phrase 'permits the center to place a procurement request' can suggest that placing a request is optional, while the statement that its volume 'must fall between 4 and 76 liters' and the request for a procurement volume for each day can suggest a mandatory daily volume.",
-      "impact": "If requests are optional, a separate order-activation semantic entity and conditional bounds may be required. No activation rule or fixed ordering cost is stated.",
+      "id": "UNRES_OPTIONAL_PROCUREMENT_REQUEST",
+      "issue": "The phrase 'permits the center to place a procurement request whose volume must fall between 4 and 76 liters' does not unambiguously state whether a request is mandatory every day or whether no request may be placed, yielding an allowed zero volume. The lower-bound obligation records the bound on each modeled request without resolving optionality.",
+      "affected_ids": [
+        "ENT_PROCUREMENT_REQUEST",
+        "OBL_PROCUREMENT_MINIMUM"
+      ],
       "source_spans": [
-        "the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters",
-        "Determine the optimal procurement volume for each day"
+        "In each day \\( t = 1, \\dots, 5 \\), the vendor permits the center to place a procurement request whose volume must fall between 4 and 76 liters."
       ]
     },
     {
-      "id": "U_WITHIN_DAY_STOCK_TIMING",
-      "issue": "The exact within-day measurement convention for physical stock is not stated.",
-      "impact": "It is unclear whether the 48-liter capacity applies only to carryover/end-of-day stock or also to pre-consumption stock immediately after a delayed procurement becomes available.",
-      "source_spans": [
-        "the total volume of physically held stock at any moment must not surpass the storage-tank capacity of 48 liters"
-      ]
-    },
-    {
-      "id": "U_TERMINAL_STOCK_TIMING",
-      "issue": "The day-5 minimum-stock statement does not identify whether stock is measured before or after day-5 consumption.",
-      "impact": "The terminal incidence point cannot be fixed more precisely without an additional timing convention.",
+      "id": "UNRES_TERMINAL_STOCK_TIMING",
+      "issue": "The source does not specify whether 'physically available stock' on day 5 means stock before day-5 consumption, stock after day-5 consumption, or another within-day checkpoint.",
+      "affected_ids": [
+        "ENT_PHYSICAL_STOCK",
+        "OBL_DAY5_STOCK_MINIMUM",
+        "OBL_STOCK_FLOW_BALANCE"
+      ],
       "source_spans": [
         "Also on day 5, the physically available stock must be no less than 15 liters."
       ]
     },
     {
-      "id": "U_POST_HORIZON_DAY5_ORDER",
-      "issue": "A day-5 procurement request becomes available on day 6, but the text does not state whether post-horizon receipt, disposal, or storage consequences are modeled.",
-      "impact": "The request is subject to the explicit day-5 volume bounds and procurement cost, but its post-horizon physical treatment is unspecified.",
+      "id": "UNRES_CAPACITY_WITHIN_DAY_TIMING",
+      "issue": "The capacity applies 'at any moment,' but the source does not provide the within-day ordering of receipt, consumption, and stock measurement. Consequently, it is unclear whether a separate pre-consumption stock checkpoint must also be capacity-limited.",
+      "affected_ids": [
+        "ENT_PHYSICAL_STOCK",
+        "OBL_STORAGE_CAPACITY",
+        "OBL_STOCK_FLOW_BALANCE"
+      ],
       "source_spans": [
-        "every procurement request requires a lead time of 1 day",
-        "On the final day (day 5), the maximum allowable procurement volume is reduced to 39 liters.",
-        "the procurement cost, amounting to 1 per liter ordered"
+        "the total volume of physically held stock at any moment must not surpass the storage-tank capacity of 48 liters"
       ]
     },
     {
-      "id": "U_FINAL_STORAGE_COST_SCOPE",
-      "issue": "Storage cost applies to stock transferred from one day to the next, but no cost is stated for stock remaining after day 5.",
-      "impact": "The natural in-horizon interpretation charges only interday carryover, while any day-5-to-day-6 storage charge remains unspecified.",
+      "id": "UNRES_STORAGE_COST_SCOPE",
+      "issue": "The storage cost is stated for stock transferred from one day to the next, but the text does not explicitly identify every charged boundary, including whether initial stock carried into day 1 or stock remaining after day 5 is charged.",
+      "affected_ids": [
+        "OBJ_MIN_TOTAL_EXPENDITURE",
+        "ENT_PHYSICAL_STOCK"
+      ],
       "source_spans": [
         "the storage cost, amounting to 1 per liter of stock transferred from one day to the next"
+      ]
+    },
+    {
+      "id": "UNRES_PREHORIZON_PROCUREMENT",
+      "issue": "No pre-horizon procurement request or receipt is stated. The day-1 balance therefore uses the stated initial stock as the only explicitly grounded opening supply, but the absence of a separate pre-horizon receipt is not expressly declared.",
+      "affected_ids": [
+        "OBL_STOCK_FLOW_BALANCE"
+      ],
+      "source_spans": [
+        "The initial stock at the start of the planning window is 11 liters.",
+        "every procurement request requires a lead time of 1 day"
       ]
     }
   ],
   "annotation_warnings": [
     {
-      "id": "W_STATE_TIMING_ABSTRACTION",
-      "message": "The stock entity is retained as one canonical physical-inventory family. Within-day event timing is represented through incidence slots and unresolved items rather than by inventing separate pre-consumption and post-consumption stock families."
+      "id": "WARN_STOCK_CHECKPOINT_SEMANTICS",
+      "message": "Daily stock is represented as one indexed state family. The source's phrases 'at any moment' and 'physically available stock' may require additional within-day checkpoints in a formulation, but no such timing structure is explicitly supplied."
     },
     {
-      "id": "W_DOMAIN_METADATA_ONLY",
-      "message": "Continuity and nonnegativity are recorded as entity domain metadata and are not promoted to business obligation families."
+      "id": "WARN_UNMET_BOUND_SEMANTIC_INFERENCE",
+      "message": "The bound that unmet consumption cannot exceed daily consumption is grounded in the meaning of 'unsatisfied consumption' rather than an explicitly stated algebraic bound."
     }
   ]
 }

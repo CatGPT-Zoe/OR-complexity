@@ -1,19 +1,20 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "OPTEngine_TSP_4_6_aug",
   "layer": "semantic",
   "sets": [
     {
       "id": "SET_STATIONS",
-      "canonical_name": "monitoring_stations",
+      "canonical_name": "monitoring stations",
       "members": [
         "Alpha",
         "Beta",
         "Gamma",
         "Delta"
       ],
-      "source_grounding": "drone inspections at four remote monitoring stations",
+      "cardinality": 4,
       "source_spans": [
+        "four remote monitoring stations",
         "Station Alpha: (200, 77)",
         "Station Beta: (122, 91)",
         "Station Gamma: (149, 55)",
@@ -21,39 +22,87 @@
       ]
     },
     {
-      "id": "SET_DISTANCE_SPECIFIED_SEGMENTS",
-      "canonical_name": "segments_with_predetermined_distance",
+      "id": "SET_STATION_PAIRS",
+      "canonical_name": "unordered station pairs",
       "members": [
-        ["Alpha", "Gamma"],
-        ["Alpha", "Delta"],
-        ["Beta", "Gamma"],
-        ["Beta", "Delta"],
-        ["Gamma", "Delta"]
+        {
+          "id": "Alpha-Beta",
+          "endpoints": [
+            "Alpha",
+            "Beta"
+          ]
+        },
+        {
+          "id": "Alpha-Gamma",
+          "endpoints": [
+            "Alpha",
+            "Gamma"
+          ]
+        },
+        {
+          "id": "Alpha-Delta",
+          "endpoints": [
+            "Alpha",
+            "Delta"
+          ]
+        },
+        {
+          "id": "Beta-Gamma",
+          "endpoints": [
+            "Beta",
+            "Gamma"
+          ]
+        },
+        {
+          "id": "Beta-Delta",
+          "endpoints": [
+            "Beta",
+            "Delta"
+          ]
+        },
+        {
+          "id": "Gamma-Delta",
+          "endpoints": [
+            "Gamma",
+            "Delta"
+          ]
+        }
       ],
-      "source_grounding": "The flight distances between stations (in kilometers) are predetermined",
+      "cardinality": 6,
+      "index_structure": {
+        "type": "unordered_pair",
+        "base_set_id": "SET_STATIONS"
+      },
       "source_spans": [
-        "Alpha to Gamma: 55.5 km",
-        "Alpha to Delta: 82.5 km",
-        "Beta to Gamma: 45.0 km",
-        "Beta to Delta: 56.4 km",
-        "Gamma to Delta: 28.3 km"
+        "The flight distances between stations (in kilometers) are predetermined",
+        "a direct flight between Station Alpha and Station Beta is prohibited"
       ]
     }
   ],
   "parameters": [
     {
-      "id": "PARAM_STATION_COORDINATES",
-      "canonical_name": "station_coordinates",
-      "index_set": "SET_STATIONS",
-      "value_type": "coordinate_pair",
+      "id": "PAR_STATION_COORDINATE",
+      "canonical_name": "station GPS coordinate",
+      "index_set_id": "SET_STATIONS",
       "values": {
-        "Alpha": [200, 77],
-        "Beta": [122, 91],
-        "Gamma": [149, 55],
-        "Delta": [129, 35]
+        "Alpha": [
+          200,
+          77
+        ],
+        "Beta": [
+          122,
+          91
+        ],
+        "Gamma": [
+          149,
+          55
+        ],
+        "Delta": [
+          129,
+          35
+        ]
       },
-      "unit": "unspecified",
-      "source_grounding": "with the following GPS coordinates",
+      "unit": "unspecified coordinate unit",
       "source_spans": [
         "Station Alpha: (200, 77)",
         "Station Beta: (122, 91)",
@@ -62,9 +111,9 @@
       ]
     },
     {
-      "id": "PARAM_FLIGHT_DISTANCE",
-      "canonical_name": "predetermined_flight_distance",
-      "index_set": "SET_DISTANCE_SPECIFIED_SEGMENTS",
+      "id": "PAR_FLIGHT_DISTANCE",
+      "canonical_name": "predetermined inter-station flight distance",
+      "index_set_id": "SET_STATION_PAIRS",
       "values": {
         "Alpha-Gamma": 55.5,
         "Alpha-Delta": 82.5,
@@ -73,7 +122,6 @@
         "Gamma-Delta": 28.3
       },
       "unit": "kilometer",
-      "source_grounding": "The flight distances between stations (in kilometers) are predetermined",
       "source_spans": [
         "Alpha to Gamma: 55.5 km",
         "Alpha to Delta: 82.5 km",
@@ -81,274 +129,514 @@
         "Beta to Delta: 56.4 km",
         "Gamma to Delta: 28.3 km"
       ]
-    },
-    {
-      "id": "PARAM_PROHIBITED_SEGMENT",
-      "canonical_name": "prohibited_direct_flight_segment",
-      "value": ["Alpha", "Beta"],
-      "source_grounding": "a direct flight between Station Alpha and Station Beta is prohibited",
-      "source_spans": [
-        "Due to airspace restrictions, a direct flight between Station Alpha and Station Beta is prohibited."
-      ]
-    },
-    {
-      "id": "PARAM_EXCLUSIVE_MANDATORY_SEGMENTS",
-      "canonical_name": "exclusive_mandatory_segment_alternatives",
-      "value": [
-        ["Beta", "Gamma"],
-        ["Gamma", "Delta"]
-      ],
-      "required_selected_count": 1,
-      "source_grounding": "exactly one of the following two mandatory segments",
-      "source_spans": [
-        "Moreover, the flight plan must incorporate exactly one of the following two mandatory segments: either the route from Beta to Gamma, or the route from Gamma to Delta."
-      ]
     }
   ],
   "entities": [
     {
-      "id": "ENT_FLIGHT_SEGMENT_USE",
-      "canonical_family": "route_segment_selection",
-      "canonical_name": "selected_direct_flight_segments",
+      "id": "ENT_TOUR_SEGMENT_SELECTION",
+      "canonical_name": "tour segment selection",
+      "canonical_family": "TOUR_SEGMENT_SELECTION",
       "entity_role": "decision",
-      "index_roles": [
-        "endpoint_or_origin_station",
-        "endpoint_or_destination_station"
+      "index_signature": [
+        {
+          "role": "segment",
+          "set_id": "SET_STATION_PAIRS"
+        }
       ],
-      "value_semantics": "Indicates whether a direct flight segment is incorporated as a leg of the chosen tour.",
-      "domain_metadata": {
-        "selection_type": "discrete_selection",
-        "repeat_use": "not stated"
-      },
-      "source_grounding": "the flight plan must incorporate exactly one of the following two mandatory segments",
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
-        "Due to airspace restrictions, a direct flight between Station Alpha and Station Beta is prohibited.",
-        "Moreover, the flight plan must incorporate exactly one of the following two mandatory segments: either the route from Beta to Gamma, or the route from Gamma to Delta.",
-        "The objective is to determine the minimal total flight path that visits every station precisely once and returns to the origin station"
+        "the flight plan must incorporate exactly one of the following two mandatory segments",
+        "a direct flight between Station Alpha and Station Beta is prohibited",
+        "determine the minimal total flight path"
       ],
-      "confidence": 0.97
+      "confidence": "high",
+      "semantic_type": "selection",
+      "description": "Whether an inter-station segment is incorporated into the inspection tour.",
+      "value_domain": "selected_or_not_selected",
+      "unit": "segment selection"
     }
   ],
   "objective": {
+    "canonical_name": "minimize total flight-path distance",
     "sense": "minimize",
-    "canonical_name": "total_flight_distance",
-    "normalized_semantics": "Minimize the sum of predetermined distances of the direct flight legs incorporated in the tour.",
-    "entity_refs": [
-      "ENT_FLIGHT_SEGMENT_USE"
+    "normalized_semantics": "Minimize the sum of predetermined flight distances for all selected tour segments.",
+    "support_entity_ids": [
+      "ENT_TOUR_SEGMENT_SELECTION"
     ],
     "parameter_refs": [
-      "PARAM_FLIGHT_DISTANCE"
+      "PAR_FLIGHT_DISTANCE"
     ],
-    "source_grounding": "determine the minimal total flight path",
     "source_spans": [
-      "The objective is to determine the minimal total flight path that visits every station precisely once and returns to the origin station, while adhering to the stipulated routing constraints."
+      "The objective is to determine the minimal total flight path"
     ],
-    "confidence": 0.99
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "OBL_EXACT_STATION_VISIT",
-      "canonical_family": "exact_once_visit",
-      "canonical_name": "visit_each_station_exactly_once",
+      "id": "OBL_STATION_VISIT_EXACTLY_ONCE",
+      "canonical_family": "STATION_EXACT_VISIT_COVERAGE",
+      "canonical_name": "visit each station exactly once",
       "structural_form": "COVERAGE",
-      "business_role": "station_service_requirement",
-      "normalized_semantics": "Every monitoring station must occur exactly once in the cyclic visitation order; the final return to the starting station does not constitute an additional service visit.",
+      "business_role": "inspection coverage",
+      "normalized_semantics": "For every station, the selected tour must visit that station precisely once.",
       "support_entity_ids": [
-        "ENT_FLIGHT_SEGMENT_USE"
+        "ENT_TOUR_SEGMENT_SELECTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "ENT_FLIGHT_SEGMENT_USE",
-          "roles": [
-            "station_incident_tour_legs"
-          ]
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "arguments": [
+            "segment incident to station"
+          ],
+          "relation": "tour incidence at the quantified station"
         }
       ],
-      "quantifier": "for every station in SET_STATIONS",
+      "quantifier": "for every station s in SET_STATIONS",
       "scope_kind": "per_station",
       "parameter_refs": [],
-      "source_grounding": "visits every station precisely once",
+      "source_grounding": {
+        "interpretation": "The coverage requirement applies separately to each of the four stations.",
+        "quote": "visits every station precisely once"
+      },
       "source_spans": [
-        "The objective is to determine the minimal total flight path that visits every station precisely once and returns to the origin station, while adhering to the stipulated routing constraints."
+        "visits every station precisely once"
       ],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "normalization_rationale": "The requirement is represented as one universal visit family rather than separate station-specific obligations.",
-      "confidence": 0.98
-    },
-    {
-      "id": "OBL_SINGLE_CONTINUOUS_TOUR",
-      "canonical_family": "single_route_connectivity",
-      "canonical_name": "form_one_continuous_tour",
-      "structural_form": "OTHER_RELATION",
-      "business_role": "route_continuity",
-      "normalized_semantics": "The selected flight legs must form one continuous itinerary containing all station visits, rather than disconnected route components.",
-      "support_entity_ids": [
-        "ENT_FLIGHT_SEGMENT_USE"
-      ],
-      "incidence_slots": [
+      "instance_quantifier": "for s in {Alpha, Beta, Gamma, Delta}",
+      "incidence_instances": [
         {
-          "entity_id": "ENT_FLIGHT_SEGMENT_USE",
-          "roles": [
-            "consecutive_tour_legs",
-            "shared_station_endpoints"
-          ]
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Beta"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Gamma"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Delta"
+          }
         }
       ],
-      "quantifier": "globally over the selected flight plan",
-      "scope_kind": "global",
-      "parameter_refs": [],
-      "source_grounding": "the total flight path that visits every station",
-      "source_spans": [
-        "The objective is to determine the minimal total flight path that visits every station precisely once and returns to the origin station, while adhering to the stipulated routing constraints."
-      ],
-      "coupling_active": false,
-      "source_status": "explicit_in_route_description",
-      "normalization_rationale": "A single flight path is semantically distinct from exact station coverage and excludes disconnected subtours.",
-      "confidence": 0.91
-    },
-    {
-      "id": "OBL_RETURN_TO_ORIGIN",
-      "canonical_family": "closed_tour_return",
-      "canonical_name": "return_to_origin_station",
-      "structural_form": "BALANCE",
-      "business_role": "tour_closure",
-      "normalized_semantics": "After completing the station visitation itinerary, the flight path must return to the station at which that itinerary began.",
-      "support_entity_ids": [
-        "ENT_FLIGHT_SEGMENT_USE"
-      ],
-      "incidence_slots": [
+      "instance_edges": [
         {
-          "entity_id": "ENT_FLIGHT_SEGMENT_USE",
-          "roles": [
-            "first_tour_station",
-            "final_return_leg",
-            "origin_station"
-          ]
-        }
-      ],
-      "quantifier": "for the chosen tour",
-      "scope_kind": "global",
-      "parameter_refs": [],
-      "source_grounding": "returns to the origin station",
-      "source_spans": [
-        "The objective is to determine the minimal total flight path that visits every station precisely once and returns to the origin station, while adhering to the stipulated routing constraints."
-      ],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "confidence": 0.99
-    },
-    {
-      "id": "OBL_PROHIBIT_ALPHA_BETA",
-      "canonical_family": "prohibited_route_segment",
-      "canonical_name": "prohibit_direct_alpha_beta_flight",
-      "structural_form": "UPPER_BOUND",
-      "business_role": "airspace_restriction",
-      "normalized_semantics": "No direct flight leg between Alpha and Beta may be incorporated in the tour.",
-      "support_entity_ids": [
-        "ENT_FLIGHT_SEGMENT_USE"
-      ],
-      "incidence_slots": [
-        {
-          "entity_id": "ENT_FLIGHT_SEGMENT_USE",
-          "roles": [
-            "prohibited_segment"
+          "id": "edge_visit_Alpha",
+          "binding": {
+            "station": "Alpha"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Alpha-Beta"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Alpha-Gamma"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Alpha-Delta"
+              }
+            }
           ],
-          "binding": [
-            "Alpha",
-            "Beta"
-          ]
+          "boundary_kind": "generic",
+          "normalized_semantics": "The tour visits Alpha precisely once."
+        },
+        {
+          "id": "edge_visit_Beta",
+          "binding": {
+            "station": "Beta"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Alpha-Beta"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Beta-Gamma"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Beta-Delta"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "The tour visits Beta precisely once."
+        },
+        {
+          "id": "edge_visit_Gamma",
+          "binding": {
+            "station": "Gamma"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Alpha-Gamma"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Beta-Gamma"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Gamma-Delta"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "The tour visits Gamma precisely once."
+        },
+        {
+          "id": "edge_visit_Delta",
+          "binding": {
+            "station": "Delta"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Alpha-Delta"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Beta-Delta"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Gamma-Delta"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "The tour visits Delta precisely once."
         }
       ],
-      "quantifier": "for the Alpha-Beta station pair",
-      "scope_kind": "specific_segment",
-      "parameter_refs": [
-        "PARAM_PROHIBITED_SEGMENT"
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_SINGLE_TOUR_CONNECTIVITY",
+      "canonical_family": "SINGLE_TOUR_CONNECTIVITY",
+      "canonical_name": "form one connected tour",
+      "structural_form": "OTHER_RELATION",
+      "business_role": "route continuity",
+      "normalized_semantics": "The selected segments must form one connected inspection itinerary containing every station, rather than multiple disconnected subtours.",
+      "support_entity_ids": [
+        "ENT_TOUR_SEGMENT_SELECTION"
       ],
-      "condition": "segment endpoints are Alpha and Beta",
-      "coupling_active": false,
-      "source_grounding": "a direct flight between Station Alpha and Station Beta is prohibited",
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "arguments": [
+            "all station-pair segments"
+          ],
+          "relation": "global selected-segment connectivity"
+        }
+      ],
+      "quantifier": "globally over the selected tour segments",
+      "scope_kind": "global",
+      "parameter_refs": [],
+      "source_grounding": {
+        "interpretation": "The singular flight path must be a single itinerary visiting all stations.",
+        "quote": "the minimal total flight path that visits every station precisely once"
+      },
+      "source_spans": [
+        "the minimal total flight path that visits every station precisely once"
+      ],
+      "instance_quantifier": "over all segment instances in SET_STATION_PAIRS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Beta"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Gamma"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Delta"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Beta-Gamma"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Beta-Delta"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Gamma-Delta"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_TOUR_RETURN_TO_ORIGIN",
+      "canonical_family": "CLOSED_TOUR_RETURN",
+      "canonical_name": "return to the origin station",
+      "structural_form": "EQUALITY",
+      "business_role": "tour closure",
+      "normalized_semantics": "The inspection itinerary must end at the same station from which it starts.",
+      "support_entity_ids": [
+        "ENT_TOUR_SEGMENT_SELECTION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "arguments": [
+            "all selected segments"
+          ],
+          "relation": "closed-cycle incidence"
+        }
+      ],
+      "quantifier": "for the complete inspection itinerary",
+      "scope_kind": "global",
+      "parameter_refs": [],
+      "source_grounding": {
+        "interpretation": "The route is required to be closed, although the named origin is not specified.",
+        "quote": "returns to the origin station"
+      },
+      "source_spans": [
+        "returns to the origin station"
+      ],
+      "instance_quantifier": "over all selected segment instances forming the itinerary",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Beta"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Gamma"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Delta"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Beta-Gamma"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Beta-Delta"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Gamma-Delta"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_PROHIBIT_ALPHA_BETA_SEGMENT",
+      "canonical_family": "PROHIBITED_TOUR_SEGMENT",
+      "canonical_name": "prohibit direct Alpha-Beta flight",
+      "structural_form": "ASSIGNMENT",
+      "business_role": "airspace restriction",
+      "normalized_semantics": "The Alpha-Beta segment must not be selected.",
+      "support_entity_ids": [
+        "ENT_TOUR_SEGMENT_SELECTION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "arguments": [
+            "Alpha-Beta"
+          ],
+          "relation": "fixed exclusion"
+        }
+      ],
+      "quantifier": "for segment Alpha-Beta",
+      "scope_kind": "single_segment",
+      "parameter_refs": [],
+      "source_grounding": {
+        "interpretation": "The specified direct link is unavailable to the tour.",
+        "quote": "a direct flight between Station Alpha and Station Beta is prohibited"
+      },
       "source_spans": [
         "Due to airspace restrictions, a direct flight between Station Alpha and Station Beta is prohibited."
       ],
-      "source_status": "explicit",
-      "confidence": 0.99
+      "instance_quantifier": "for segment = Alpha-Beta",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Alpha-Beta"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": false,
+      "confidence": "high"
     },
     {
       "id": "OBL_EXACTLY_ONE_MANDATORY_SEGMENT",
-      "canonical_family": "exclusive_segment_selection",
-      "canonical_name": "select_exactly_one_of_beta_gamma_and_gamma_delta",
+      "canonical_family": "EXACTLY_ONE_MANDATORY_SEGMENT",
+      "canonical_name": "select exactly one of Beta-Gamma and Gamma-Delta",
       "structural_form": "CARDINALITY",
-      "business_role": "mandatory_route_choice",
-      "normalized_semantics": "Exactly one of the Beta-Gamma segment and the Gamma-Delta segment must be incorporated in the flight plan: at least one must be present, and they may not both be present.",
+      "business_role": "mandatory routing alternative",
+      "normalized_semantics": "Exactly one of the Beta-Gamma segment and the Gamma-Delta segment must be selected.",
       "support_entity_ids": [
-        "ENT_FLIGHT_SEGMENT_USE"
+        "ENT_TOUR_SEGMENT_SELECTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "ENT_FLIGHT_SEGMENT_USE",
-          "roles": [
-            "exclusive_candidate_segment"
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "arguments": [
+            "Beta-Gamma"
           ],
-          "bindings": [
-            ["Beta", "Gamma"],
-            ["Gamma", "Delta"]
-          ]
+          "relation": "first exclusive alternative"
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "arguments": [
+            "Gamma-Delta"
+          ],
+          "relation": "second exclusive alternative"
         }
       ],
-      "quantifier": "over the two stated candidate segments",
-      "scope_kind": "global_candidate_subset",
-      "parameter_refs": [
-        "PARAM_EXCLUSIVE_MANDATORY_SEGMENTS"
-      ],
-      "coupling_active": false,
-      "source_grounding": "must incorporate exactly one of the following two mandatory segments",
+      "quantifier": "over the alternative set {Beta-Gamma, Gamma-Delta}",
+      "scope_kind": "specified_segment_subset",
+      "parameter_refs": [],
+      "source_grounding": {
+        "interpretation": "The requirement is exclusive: one listed segment is included and the other is not.",
+        "quote": "exactly one of the following two mandatory segments: either the route from Beta to Gamma, or the route from Gamma to Delta"
+      },
       "source_spans": [
         "Moreover, the flight plan must incorporate exactly one of the following two mandatory segments: either the route from Beta to Gamma, or the route from Gamma to Delta."
       ],
-      "source_status": "explicit",
-      "normalization_rationale": "The two alternatives form one exact-cardinality rule rather than separate mandatory-segment obligations.",
-      "confidence": 0.99
+      "instance_quantifier": "over segment instances Beta-Gamma and Gamma-Delta",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Beta-Gamma"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+          "binding": {
+            "segment": "Gamma-Delta"
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "edge_exactly_one_BG_GD",
+          "binding": {
+            "alternative_set": [
+              "Beta-Gamma",
+              "Gamma-Delta"
+            ]
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Beta-Gamma"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_SEGMENT_SELECTION",
+              "index_binding": {
+                "segment": "Gamma-Delta"
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Exactly one of selected[Beta-Gamma] and selected[Gamma-Delta] is true."
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "high"
     }
   ],
-  "derived_checks": [],
   "unresolved_items": [
     {
-      "id": "UNRESOLVED_SEGMENT_ORIENTATION",
-      "issue": "The text does not conclusively specify whether flight segments and distances are directed or undirected.",
-      "evidence": [
-        "The phrase 'between Station Alpha and Station Beta' is symmetric.",
-        "The mandatory alternatives are phrased as 'the route from Beta to Gamma' and 'the route from Gamma to Delta'.",
-        "Only one distance is supplied for each listed station pair."
-      ],
-      "impact": "The interpretation determines whether reverse-direction traversals use the same distances and whether the exclusive mandatory-segment condition applies to an unordered pair or only to the stated direction."
-    },
-    {
       "id": "UNRESOLVED_ORIGIN_IDENTITY",
-      "issue": "No particular station is designated as the origin station.",
-      "evidence": [
-        "The objective requires a return 'to the origin station' but does not name that station."
+      "description": "The route must return to its origin, but the text does not designate which station is the origin.",
+      "source_spans": [
+        "returns to the origin station"
       ],
-      "impact": "The route must be cyclic, but the source does not establish a fixed depot or a substantive choice of origin."
+      "impact": "The closure requirement is clear, but no station-specific start/end condition can be grounded."
     },
     {
-      "id": "UNRESOLVED_ALLOWED_SEGMENT_UNIVERSE",
-      "issue": "It is not explicitly stated whether the five segments with predetermined distances are the complete set of otherwise available direct flights.",
-      "evidence": [
-        "Five pairwise distances are listed.",
-        "The omitted Alpha-Beta pair is separately prohibited."
+      "id": "UNRESOLVED_DIRECTIONALITY",
+      "description": "The text describes distances and the Alpha-Beta prohibition as being between stations, suggesting undirected segments, while the mandatory alternatives use directional phrasing such as 'from Beta to Gamma.' Explicit symmetry or directedness is not stated.",
+      "source_spans": [
+        "The flight distances between stations (in kilometers) are predetermined",
+        "a direct flight between Station Alpha and Station Beta is prohibited",
+        "either the route from Beta to Gamma, or the route from Gamma to Delta"
       ],
-      "impact": "The listed data strongly suggest a complete undirected graph minus Alpha-Beta, but availability and directionality should not be inferred beyond the explicit text."
+      "impact": "The semantic inventory uses unordered station-pair segments; direction-specific restrictions cannot be established from the text."
     }
   ],
   "annotation_warnings": [
     {
-      "id": "WARN_COORDINATE_UNIT",
-      "message": "The coordinate unit or coordinate reference system is not stated; the coordinates are therefore retained as exogenous data without conversion."
-    },
-    {
-      "id": "WARN_UNARY_FAMILY_HYPERGRAPH",
-      "message": "All feasibility obligations reference the single route-segment decision family. Consequently, none enters the coupling hypergraph H_c under the SOH requirement that coupling support contain at least two distinct entity-family IDs."
+      "id": "WARN_ALPHA_BETA_DISTANCE_UNSPECIFIED",
+      "description": "No flight distance is provided for Alpha-Beta. This does not affect admissible tours because that segment is explicitly prohibited.",
+      "source_spans": [
+        "a direct flight between Station Alpha and Station Beta is prohibited"
+      ]
     }
   ]
 }

@@ -59,8 +59,9 @@ grep -qE '^OPENROUTER_API_KEY=' "$ENV_FILE" \
 # 校验新 prompt 已生效
 PROMPT="$OR_DIR/operational_complexity/prompts/semantic_annotator_v1.txt"
 grep -q "Semantic Obligation Family" "$PROMPT" \
-  && say "     新 prompt 已生效 (semantic_annotator_v1.txt, SOH-1.1)" \
-  || die "prompt 似乎不是 SOH-1.1 版本 (缺少 'Semantic Obligation Family' 关键词)"
+  && grep -q "SOH-1.2" "$PROMPT" \
+  && say "     新 prompt 已生效 (semantic_annotator_v1.txt, SOH-1.2 + instance-level)" \
+  || die "prompt 似乎不是 SOH-1.2 版本 (缺少 'Semantic Obligation Family' 或 'SOH-1.2' 关键词)"
 
 # -----------------------------------------------------------------------------
 # 2. staging 25 个输入（幂等：已存在则跳过）

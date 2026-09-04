@@ -172,7 +172,7 @@ def call_llm(client: OpenAI, model: str, system: str, user: str, *, temperature:
             {"role": "user", "content": user},
         ],
         "temperature": temperature,
-        "max_tokens": 8000,
+        "max_tokens": 16000,
     }
     try:
         resp = client.chat.completions.create(**kwargs)

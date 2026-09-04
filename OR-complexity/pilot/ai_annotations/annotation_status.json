@@ -27,12 +27,12 @@
   {
     "anchor": "IndustryOR_Hard_036_vrp",
     "model": "gpt-5.6-sol",
-    "status": "json_extract_failed: unbalanced braces"
+    "status": "schema_invalid (1 errors)"
   },
   {
     "anchor": "LEAN_Mixture6_truck_scheduling",
     "model": "gpt-5.6-sol",
-    "status": "json_extract_failed: unbalanced braces"
+    "status": "schema_invalid (1 errors)"
   },
   {
     "anchor": "LEAN_TP8_transportation",

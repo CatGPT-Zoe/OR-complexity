@@ -1,27 +1,53 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "MIPLIB_NL_flugpl_fleet",
+  "dataset": {
+    "name": "MIPLIB-NL flugpl",
+    "external_files": [
+      {
+        "path": "OR-complexity/MIPLIB-NL-main/dataset/flugpl/data/periods.csv",
+        "role": "parameter_table",
+        "table": "periods"
+      },
+      {
+        "path": "OR-complexity/MIPLIB-NL-main/dataset/flugpl/data/parameters.csv",
+        "role": "parameter_table",
+        "table": "parameters"
+      }
+    ]
+  },
   "layer": "semantic",
   "sets": [
     {
-      "id": "SET_PERIOD",
-      "canonical_name": "planning_period",
-      "source_name": "periods",
+      "id": "SET_PERIODS",
+      "canonical_name": "monthly planning periods",
       "members": [1, 2, 3, 4, 5, 6],
-      "description": "Six monthly periods in the semi-annual planning horizon.",
-      "source_grounding": "The problem states an upcoming semi-annual cycle, and the periods table lists periods 1 through 6.",
+      "cardinality": 6,
+      "unit": "month",
       "source_spans": [
-        "upcoming semi-annual cycle",
-        "six monthly planning periods"
+        "six monthly planning periods",
+        "upcoming semi-annual cycle"
       ]
     }
   ],
   "parameters": [
     {
-      "id": "PAR_DEMAND_HOURS",
-      "canonical_name": "required_service_hours",
-      "index_sets": ["SET_PERIOD"],
-      "unit": "flight hours per period",
+      "id": "PAR_INITIAL_AIRCRAFT_BALANCE",
+      "canonical_name": "first-period aircraft balance",
+      "index_signature": [],
+      "value": 60,
+      "unit": "aircraft",
+      "source_grounding": "The periods table gives aircraft_balance = 60 for period 1."
+    },
+    {
+      "id": "PAR_MONTHLY_MIN_FLIGHT_HOURS",
+      "canonical_name": "minimum required flight hours",
+      "index_signature": [
+        {
+          "role": "period",
+          "set_id": "SET_PERIODS"
+        }
+      ],
       "values": {
         "1": 8000,
         "2": 9000,
@@ -30,30 +56,18 @@
         "5": 9000,
         "6": 12000
       },
-      "source_name": "min_flight_hours",
-      "source_grounding": "The periods table supplies the minimum flight hours for each period."
-    },
-    {
-      "id": "PAR_AIRCRAFT_BALANCE",
-      "canonical_name": "aircraft_balance_input",
-      "index_sets": ["SET_PERIOD"],
-      "unit": "aircraft",
-      "values": {
-        "1": 60,
-        "2": 0,
-        "3": 0,
-        "4": 0,
-        "5": 0,
-        "6": 0
-      },
-      "source_name": "aircraft_balance",
-      "source_grounding": "The periods table supplies aircraft_balance values of 60 in period 1 and 0 thereafter."
+      "unit": "flight-hour",
+      "source_grounding": "Values are provided in the min_flight_hours column of the periods table."
     },
     {
       "id": "PAR_MAX_OVERTIME",
-      "canonical_name": "maximum_overtime",
-      "index_sets": ["SET_PERIOD"],
-      "unit": "flight hours per period",
+      "canonical_name": "maximum overtime flight hours",
+      "index_signature": [
+        {
+          "role": "period",
+          "set_id": "SET_PERIODS"
+        }
+      ],
       "values": {
         "1": 0,
         "2": 0,
@@ -62,421 +76,654 @@
         "5": 0,
         "6": 0
       },
-      "source_name": "max_overtime",
-      "source_grounding": "The periods table supplies a maximum-overtime value for every period."
+      "unit": "flight-hour",
+      "source_grounding": "Values are provided in the max_overtime column of the periods table."
     },
     {
-      "id": "PAR_STANDARD_COST",
-      "canonical_name": "standard_aircraft_cost",
-      "index_sets": [],
-      "unit": "cost per standard aircraft-period",
+      "id": "PAR_STANDARD_AIRCRAFT_COST",
+      "canonical_name": "standard-aircraft cost",
       "value": 2700,
-      "source_name": "standard_aircraft_cost",
+      "unit": "cost per aircraft-period",
       "source_grounding": "The parameters table gives standard_aircraft_cost = 2700."
     },
     {
-      "id": "PAR_RENTAL_COST",
-      "canonical_name": "rental_aircraft_cost",
-      "index_sets": [],
-      "unit": "cost per rental aircraft-period",
+      "id": "PAR_RENTAL_AIRCRAFT_COST",
+      "canonical_name": "rental-aircraft cost",
       "value": 1500,
-      "source_name": "rental_aircraft_cost",
+      "unit": "cost per rental-aircraft-period",
       "source_grounding": "The parameters table gives rental_aircraft_cost = 1500."
     },
     {
       "id": "PAR_OVERTIME_COST",
-      "canonical_name": "overtime_cost",
-      "index_sets": [],
-      "unit": "cost per overtime flight hour",
+      "canonical_name": "overtime cost",
       "value": 30,
-      "source_name": "overtime_cost",
+      "unit": "cost per overtime flight-hour",
       "source_grounding": "The parameters table gives overtime_cost = 30."
     },
     {
-      "id": "PAR_STANDARD_PRODUCTIVITY",
-      "canonical_name": "standard_aircraft_service_hours",
-      "index_sets": [],
-      "unit": "flight hours per standard aircraft-period",
+      "id": "PAR_STANDARD_AIRCRAFT_HOURS",
+      "canonical_name": "service hours per standard aircraft",
       "value": 150,
-      "source_name": "standard_aircraft_hours",
+      "unit": "flight-hour per aircraft-period",
       "source_grounding": "The parameters table gives standard_aircraft_hours = 150."
     },
     {
-      "id": "PAR_RENTAL_PRODUCTIVITY",
-      "canonical_name": "rental_aircraft_service_hours",
-      "index_sets": [],
-      "unit": "flight hours per rental aircraft-period",
+      "id": "PAR_RENTAL_AIRCRAFT_HOURS",
+      "canonical_name": "service hours per rental aircraft",
       "value": 100,
-      "source_name": "rental_aircraft_hours",
+      "unit": "flight-hour per aircraft-period",
       "source_grounding": "The parameters table gives rental_aircraft_hours = 100."
     },
     {
-      "id": "PAR_MAX_RENTAL",
-      "canonical_name": "maximum_rental_aircraft",
-      "index_sets": [],
-      "unit": "aircraft per period",
+      "id": "PAR_MAX_RENTAL_AIRCRAFT",
+      "canonical_name": "maximum rental aircraft",
       "value": 18,
-      "source_name": "max_rental_aircraft",
+      "unit": "aircraft per period",
       "source_grounding": "The parameters table gives max_rental_aircraft = 18."
     },
     {
-      "id": "PAR_RETENTION_RATE",
-      "canonical_name": "standard_aircraft_retention_rate",
-      "index_sets": [],
-      "unit": "fraction per period",
+      "id": "PAR_AIRCRAFT_RETENTION_RATE",
+      "canonical_name": "standard-aircraft retention rate",
       "value": 0.9,
-      "source_name": "aircraft_retention_rate",
+      "unit": "fraction per period",
       "source_grounding": "The parameters table gives aircraft_retention_rate = 0.9."
     },
     {
-      "id": "PAR_MIN_STANDARD_POSTINITIAL",
-      "canonical_name": "minimum_standard_aircraft_postinitial",
-      "index_sets": [],
-      "unit": "aircraft",
+      "id": "PAR_MIN_STANDARD_AIRCRAFT_PERIOD_2_6",
+      "canonical_name": "minimum standard fleet size after the initial period",
       "value": 57,
-      "source_name": "min_standard_aircraft_period_2_6",
+      "unit": "aircraft",
       "source_grounding": "The parameters table gives min_standard_aircraft_period_2_6 = 57."
     },
     {
-      "id": "PAR_MAX_STANDARD_POSTINITIAL",
-      "canonical_name": "maximum_standard_aircraft_postinitial",
-      "index_sets": [],
-      "unit": "aircraft",
+      "id": "PAR_MAX_STANDARD_AIRCRAFT_PERIOD_2_6",
+      "canonical_name": "maximum standard fleet size after the initial period",
       "value": 75,
-      "source_name": "max_standard_aircraft_period_2_6",
+      "unit": "aircraft",
       "source_grounding": "The parameters table gives max_standard_aircraft_period_2_6 = 75."
     }
   ],
   "entities": [
     {
-      "id": "ENT_STANDARD_FLEET",
-      "canonical_family": "standard_aircraft_fleet_level",
-      "canonical_name": "standard aircraft retained or operated",
+      "id": "ENT_STANDARD_FLEET_LEVEL",
+      "canonical_name": "standard aircraft fleet level",
+      "canonical_family": "STANDARD_FLEET_LEVEL",
       "entity_role": "state",
-      "index_sets": ["SET_PERIOD"],
-      "temporal_granularity": "monthly",
-      "semantic_unit": "aircraft",
-      "domain_metadata": {
-        "nonnegative": true,
-        "integrality": "not explicitly stated"
-      },
-      "source_grounding": "The schedule determines the composition, retention, and utilization level of the existing standard fleet in each month.",
+      "index_signature": [
+        {
+          "role": "period",
+          "set_id": "SET_PERIODS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "semantic_type": "period fleet-size state",
+      "description": "Number of standard aircraft retained and available in each month.",
+      "value_domain": "aircraft count; exact integrality is not explicitly stated",
+      "unit": "aircraft",
       "source_spans": [
         "leveraging their existing, high-capacity standard fleet",
-        "dictates aircraft acquisition, retention, and utilization levels for each month",
-        "expenses of operating standard units"
+        "specific regulatory bounds on fleet size that kick in after the initial month",
+        "dictates aircraft acquisition, retention, and utilization levels for each month"
       ],
-      "confidence": 0.93
+      "confidence": "high"
     },
     {
-      "id": "ENT_RENTAL_FLEET",
-      "canonical_family": "rental_aircraft_level",
+      "id": "ENT_RENTAL_AIRCRAFT_LEVEL",
       "canonical_name": "rental aircraft commissioned",
+      "canonical_family": "RENTAL_AIRCRAFT_LEVEL",
       "entity_role": "decision",
-      "index_sets": ["SET_PERIOD"],
-      "temporal_granularity": "monthly",
-      "semantic_unit": "aircraft",
-      "domain_metadata": {
-        "nonnegative": true,
-        "integrality": "not explicitly stated"
-      },
-      "source_grounding": "Temporary rental aircraft may be integrated to bridge capacity gaps, and rental commissioning cost is included in the objective.",
+      "index_signature": [
+        {
+          "role": "period",
+          "set_id": "SET_PERIODS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "semantic_type": "temporary fleet allocation",
+      "description": "Number of temporary rental aircraft commissioned for service in each month.",
+      "value_domain": "aircraft count; exact integrality is not explicitly stated",
+      "unit": "aircraft",
       "source_spans": [
         "integrating temporary rental units",
         "rental additions are available to bridge capacity gaps",
         "commissioning rentals"
       ],
-      "confidence": 0.98
+      "confidence": "high"
     },
     {
       "id": "ENT_OVERTIME_HOURS",
-      "canonical_family": "overtime_service_hours",
       "canonical_name": "overtime flight hours",
+      "canonical_family": "OVERTIME_HOURS",
       "entity_role": "decision",
-      "index_sets": ["SET_PERIOD"],
-      "temporal_granularity": "monthly",
-      "semantic_unit": "flight hours",
-      "domain_metadata": {
-        "nonnegative": true,
-        "integrality": "not explicitly stated"
-      },
-      "source_grounding": "Overtime can be used to obtain additional flight hours and incurs an overtime labor cost.",
+      "index_signature": [
+        {
+          "role": "period",
+          "set_id": "SET_PERIODS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "semantic_type": "supplemental service capacity",
+      "description": "Additional flight hours obtained through overtime labor in each month.",
+      "value_domain": "hours",
+      "unit": "flight-hour",
       "source_spans": [
         "overtime can be utilized to squeeze more flight hours out of the existing lineup",
+        "this comes at a premium and is capped to prevent burnout",
         "paying for overtime labor"
       ],
-      "confidence": 0.98
+      "confidence": "high"
+    },
+    {
+      "id": "ENT_DELIVERED_FLIGHT_HOURS",
+      "canonical_name": "delivered flight-service hours",
+      "canonical_family": "DELIVERED_FLIGHT_HOURS",
+      "entity_role": "service_outcome",
+      "index_signature": [
+        {
+          "role": "period",
+          "set_id": "SET_PERIODS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "implicit_required",
+      "semantic_type": "aggregate monthly service outcome",
+      "description": "Flight-service capacity delivered by standard aircraft, rental aircraft, and overtime.",
+      "value_domain": "hours",
+      "unit": "flight-hour",
+      "source_spans": [
+        "ensuring every hour of projected passenger demand is met",
+        "ability to deliver this service continuity"
+      ],
+      "confidence": "medium"
     }
   ],
   "objective": {
-    "sense": "minimize",
-    "canonical_name": "total fleet operating, rental, and overtime cost",
-    "normalized_semantics": "Minimize total cost over all monthly periods from standard-aircraft operation, rental-aircraft commissioning, and overtime usage.",
-    "entity_terms": [
-      {
-        "entity_id": "ENT_STANDARD_FLEET",
-        "coefficient_parameter_ref": "PAR_STANDARD_COST"
-      },
-      {
-        "entity_id": "ENT_RENTAL_FLEET",
-        "coefficient_parameter_ref": "PAR_RENTAL_COST"
-      },
-      {
-        "entity_id": "ENT_OVERTIME_HOURS",
-        "coefficient_parameter_ref": "PAR_OVERTIME_COST"
-      }
+    "direction": "minimize",
+    "canonical_name": "minimum total fleet-operation cost",
+    "normalized_semantics": "Minimize total cost across all periods from standard-aircraft operation, rental-aircraft commissioning, and overtime labor.",
+    "support_entity_ids": [
+      "ENT_STANDARD_FLEET_LEVEL",
+      "ENT_RENTAL_AIRCRAFT_LEVEL",
+      "ENT_OVERTIME_HOURS"
     ],
-    "source_grounding": "Success is measured by the absolute lowest total cost, including standard-unit, rental, and overtime expenses.",
+    "parameter_refs": [
+      "PAR_STANDARD_AIRCRAFT_COST",
+      "PAR_RENTAL_AIRCRAFT_COST",
+      "PAR_OVERTIME_COST"
+    ],
     "source_spans": [
       "at the absolute lowest total cost",
       "factoring in the expenses of operating standard units, commissioning rentals, and paying for overtime labor"
     ],
-    "confidence": 0.99
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "OBL_SERVICE_COVERAGE",
-      "canonical_family": "period_service_requirement",
-      "canonical_name": "meet required flight hours",
+      "id": "OBL_MONTHLY_FLIGHT_HOUR_COVERAGE",
+      "canonical_family": "SERVICE_DEMAND_COVERAGE",
+      "canonical_name": "monthly flight-hour demand coverage",
       "structural_form": "COVERAGE",
       "business_role": "service continuity",
-      "normalized_semantics": "In every period, service hours supplied by standard aircraft, rental aircraft, and overtime must be at least the period's required flight hours. Standard and rental aircraft contribute their respective service-hour rates.",
+      "normalized_semantics": "For every period t, flight hours supplied by the standard fleet, rental fleet, and overtime must cover at least the required flight hours: 150*standard_fleet[t] + 100*rental_aircraft[t] + overtime_hours[t] >= minimum_required_hours[t].",
       "support_entity_ids": [
-        "ENT_STANDARD_FLEET",
-        "ENT_RENTAL_FLEET",
-        "ENT_OVERTIME_HOURS"
+        "ENT_STANDARD_FLEET_LEVEL",
+        "ENT_RENTAL_AIRCRAFT_LEVEL",
+        "ENT_OVERTIME_HOURS",
+        "ENT_DELIVERED_FLIGHT_HOURS"
       ],
       "incidence_slots": [
         {
-          "entity_id": "ENT_STANDARD_FLEET",
-          "period_relation": "same_period",
-          "role": "standard-aircraft service contribution"
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "arguments": ["period"]
         },
         {
-          "entity_id": "ENT_RENTAL_FLEET",
-          "period_relation": "same_period",
-          "role": "rental-aircraft service contribution"
+          "entity_id": "ENT_RENTAL_AIRCRAFT_LEVEL",
+          "arguments": ["period"]
         },
         {
           "entity_id": "ENT_OVERTIME_HOURS",
-          "period_relation": "same_period",
-          "role": "additional service contribution"
+          "arguments": ["period"]
+        },
+        {
+          "entity_id": "ENT_DELIVERED_FLIGHT_HOURS",
+          "arguments": ["period"]
         }
       ],
-      "quantifier": "for each period t in SET_PERIOD",
-      "scope_kind": "periodic",
+      "quantifier": "for every monthly planning period",
+      "scope_kind": "periodwise",
       "parameter_refs": [
-        "PAR_DEMAND_HOURS",
-        "PAR_STANDARD_PRODUCTIVITY",
-        "PAR_RENTAL_PRODUCTIVITY"
+        "PAR_STANDARD_AIRCRAFT_HOURS",
+        "PAR_RENTAL_AIRCRAFT_HOURS",
+        "PAR_MONTHLY_MIN_FLIGHT_HOURS"
       ],
-      "coupling_active": true,
-      "source_status": "explicit",
-      "source_grounding": "The text requires every hour of projected passenger demand to be met and identifies standard aircraft, rentals, and overtime as sources of flight hours. The tables provide period requirements and aircraft-hour coefficients.",
+      "source_grounding": "The narrative requires every hour of projected passenger demand to be met. The tables supply period-specific minimum flight hours and the service-hour contributions of standard and rental aircraft.",
       "source_spans": [
         "ensuring every hour of projected passenger demand is met",
         "the core fleet provides a reliable baseline of flight hours",
         "rental additions are available to bridge capacity gaps",
-        "overtime can be utilized to squeeze more flight hours out of the existing lineup",
-        "standard_aircraft_hours | rental_aircraft_hours",
-        "min_flight_hours"
+        "overtime can be utilized to squeeze more flight hours out of the existing lineup"
       ],
-      "confidence": 0.99
-    },
-    {
-      "id": "OBL_RENTAL_CAP",
-      "canonical_family": "rental_aircraft_upper_bound",
-      "canonical_name": "limit rental aircraft",
-      "structural_form": "UPPER_BOUND",
-      "business_role": "rental availability",
-      "normalized_semantics": "The number of rental aircraft commissioned in any period may not exceed the available rental-aircraft limit.",
-      "support_entity_ids": ["ENT_RENTAL_FLEET"],
-      "incidence_slots": [
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for t in {1,2,3,4,5,6}",
+      "incidence_instances": [
         {
-          "entity_id": "ENT_RENTAL_FLEET",
-          "period_relation": "same_period",
-          "role": "bounded rental level"
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "binding": {
+            "period": 1
+          }
+        },
+        {
+          "entity_id": "ENT_RENTAL_AIRCRAFT_LEVEL",
+          "binding": {
+            "period": 1
+          }
+        },
+        {
+          "entity_id": "ENT_OVERTIME_HOURS",
+          "binding": {
+            "period": 1
+          }
+        },
+        {
+          "entity_id": "ENT_DELIVERED_FLIGHT_HOURS",
+          "binding": {
+            "period": 1
+          }
         }
       ],
-      "quantifier": "for each period t in SET_PERIOD",
-      "scope_kind": "periodic",
-      "parameter_refs": ["PAR_MAX_RENTAL"],
-      "coupling_active": false,
-      "source_status": "explicit_parameterized",
-      "source_grounding": "The parameters table specifies max_rental_aircraft = 18.",
-      "source_spans": [
-        "rental additions are available to bridge capacity gaps",
-        "max_rental_aircraft | 18"
-      ],
-      "confidence": 0.98
+      "intra_entity_instance_coupling": false,
+      "instance_edges": [
+        {
+          "id": "edge_coverage_t1",
+          "binding": {
+            "period": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 1
+              }
+            },
+            {
+              "entity_id": "ENT_RENTAL_AIRCRAFT_LEVEL",
+              "index_binding": {
+                "period": 1
+              }
+            },
+            {
+              "entity_id": "ENT_OVERTIME_HOURS",
+              "index_binding": {
+                "period": 1
+              }
+            },
+            {
+              "entity_id": "ENT_DELIVERED_FLIGHT_HOURS",
+              "index_binding": {
+                "period": 1
+              }
+            }
+          ],
+          "boundary_kind": "boundary",
+          "normalized_semantics": "150*standard_fleet[1] + 100*rental_aircraft[1] + overtime_hours[1] >= 8000"
+        },
+        {
+          "id": "edge_coverage_t2",
+          "binding": {
+            "period": 2
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 2
+              }
+            },
+            {
+              "entity_id": "ENT_RENTAL_AIRCRAFT_LEVEL",
+              "index_binding": {
+                "period": 2
+              }
+            },
+            {
+              "entity_id": "ENT_OVERTIME_HOURS",
+              "index_binding": {
+                "period": 2
+              }
+            },
+            {
+              "entity_id": "ENT_DELIVERED_FLIGHT_HOURS",
+              "index_binding": {
+                "period": 2
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "150*standard_fleet[2] + 100*rental_aircraft[2] + overtime_hours[2] >= 9000"
+        },
+        {
+          "id": "edge_coverage_t6",
+          "binding": {
+            "period": 6
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 6
+              }
+            },
+            {
+              "entity_id": "ENT_RENTAL_AIRCRAFT_LEVEL",
+              "index_binding": {
+                "period": 6
+              }
+            },
+            {
+              "entity_id": "ENT_OVERTIME_HOURS",
+              "index_binding": {
+                "period": 6
+              }
+            },
+            {
+              "entity_id": "ENT_DELIVERED_FLIGHT_HOURS",
+              "index_binding": {
+                "period": 6
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "150*standard_fleet[6] + 100*rental_aircraft[6] + overtime_hours[6] >= 12000"
+        }
+      ]
     },
     {
-      "id": "OBL_OVERTIME_CAP",
-      "canonical_family": "overtime_upper_bound",
-      "canonical_name": "limit overtime usage",
+      "id": "OBL_STANDARD_FLEET_RETENTION",
+      "canonical_family": "FLEET_RETENTION_TRANSITION",
+      "canonical_name": "interperiod standard-fleet retention",
+      "structural_form": "OTHER_RELATION",
+      "business_role": "fleet continuity under attrition",
+      "normalized_semantics": "The standard fleet in consecutive periods is governed by the 0.9 aircraft-retention rate. The first-period boundary uses the stated aircraft balance of 60. The exact equality or inequality interpretation is not explicit in the supplied prose.",
+      "support_entity_ids": [
+        "ENT_STANDARD_FLEET_LEVEL"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "arguments": ["period-1"]
+        },
+        {
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "arguments": ["period"]
+        }
+      ],
+      "quantifier": "for consecutive periods, with a distinct first-period boundary clause",
+      "scope_kind": "interperiod",
+      "parameter_refs": [
+        "PAR_AIRCRAFT_RETENTION_RATE",
+        "PAR_INITIAL_AIRCRAFT_BALANCE"
+      ],
+      "source_grounding": "The narrative explicitly mentions natural fleet attrition. The parameter table supplies a retention rate of 0.9, and the period table supplies aircraft_balance = 60 in period 1 and 0 afterward.",
+      "source_spans": [
+        "Complicating matters is the natural attrition of the fleet",
+        "dictates aircraft acquisition, retention, and utilization levels for each month"
+      ],
+      "coupling_active": true,
+      "confidence": "medium",
+      "instance_quantifier": "boundary at t=1; for t in {2,3,4,5,6}, relate standard_fleet[t-1] and standard_fleet[t]",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "binding": {
+            "period": 1
+          }
+        },
+        {
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "binding": {
+            "period": 2
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
+        {
+          "id": "edge_retention_t1",
+          "binding": {
+            "period": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 1
+              }
+            }
+          ],
+          "boundary_kind": "boundary",
+          "normalized_semantics": "Apply the first-period aircraft-balance value 60 to standard_fleet[1]; exact relation type is unresolved."
+        },
+        {
+          "id": "edge_retention_t2",
+          "binding": {
+            "previous_period": 1,
+            "period": 2
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 1
+              }
+            },
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 2
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Relate standard_fleet[2] to 0.9*standard_fleet[1] under the fleet-retention rule; exact equality or inequality direction is unresolved."
+        },
+        {
+          "id": "edge_retention_t6",
+          "binding": {
+            "previous_period": 5,
+            "period": 6
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 5
+              }
+            },
+            {
+              "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+              "index_binding": {
+                "period": 6
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "Relate standard_fleet[6] to 0.9*standard_fleet[5] under the fleet-retention rule; exact equality or inequality direction is unresolved."
+        }
+      ]
+    },
+    {
+      "id": "OBL_STANDARD_FLEET_MINIMUM",
+      "canonical_family": "STANDARD_FLEET_MINIMUM",
+      "canonical_name": "minimum standard fleet after the initial month",
+      "structural_form": "LOWER_BOUND",
+      "business_role": "regulatory fleet-size floor",
+      "normalized_semantics": "For periods 2 through 6, the standard fleet level must be at least 57 aircraft.",
+      "support_entity_ids": [
+        "ENT_STANDARD_FLEET_LEVEL"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "arguments": ["period"]
+        }
+      ],
+      "quantifier": "for t in periods 2 through 6",
+      "scope_kind": "periodwise unary bound",
+      "parameter_refs": [
+        "PAR_MIN_STANDARD_AIRCRAFT_PERIOD_2_6"
+      ],
+      "source_grounding": "The narrative states that fleet-size bounds apply after the initial month, and the parameters table gives the minimum as 57 for periods 2 through 6.",
+      "source_spans": [
+        "specific regulatory bounds on fleet size that kick in after the initial month"
+      ],
+      "coupling_active": false,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_STANDARD_FLEET_MAXIMUM",
+      "canonical_family": "STANDARD_FLEET_MAXIMUM",
+      "canonical_name": "maximum standard fleet after the initial month",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "regulatory fleet-size ceiling",
+      "normalized_semantics": "For periods 2 through 6, the standard fleet level must be at most 75 aircraft.",
+      "support_entity_ids": [
+        "ENT_STANDARD_FLEET_LEVEL"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_STANDARD_FLEET_LEVEL",
+          "arguments": ["period"]
+        }
+      ],
+      "quantifier": "for t in periods 2 through 6",
+      "scope_kind": "periodwise unary bound",
+      "parameter_refs": [
+        "PAR_MAX_STANDARD_AIRCRAFT_PERIOD_2_6"
+      ],
+      "source_grounding": "The narrative states that fleet-size bounds apply after the initial month, and the parameters table gives the maximum as 75 for periods 2 through 6.",
+      "source_spans": [
+        "specific regulatory bounds on fleet size that kick in after the initial month"
+      ],
+      "coupling_active": false,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_RENTAL_AIRCRAFT_MAXIMUM",
+      "canonical_family": "RENTAL_FLEET_MAXIMUM",
+      "canonical_name": "monthly rental-aircraft ceiling",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "rental availability limit",
+      "normalized_semantics": "In each period, no more than 18 rental aircraft may be commissioned.",
+      "support_entity_ids": [
+        "ENT_RENTAL_AIRCRAFT_LEVEL"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_RENTAL_AIRCRAFT_LEVEL",
+          "arguments": ["period"]
+        }
+      ],
+      "quantifier": "for every monthly planning period",
+      "scope_kind": "periodwise unary bound",
+      "parameter_refs": [
+        "PAR_MAX_RENTAL_AIRCRAFT"
+      ],
+      "source_grounding": "The parameters table supplies max_rental_aircraft = 18, while the narrative describes rentals as limited additions used to bridge capacity gaps.",
+      "source_spans": [
+        "rental additions are available to bridge capacity gaps"
+      ],
+      "coupling_active": false,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_OVERTIME_MAXIMUM",
+      "canonical_family": "OVERTIME_CAP",
+      "canonical_name": "monthly overtime cap",
       "structural_form": "UPPER_BOUND",
       "business_role": "workforce protection",
-      "normalized_semantics": "Overtime usage in each period may not exceed that period's maximum-overtime value.",
-      "support_entity_ids": ["ENT_OVERTIME_HOURS"],
+      "normalized_semantics": "For each period t, overtime flight hours may not exceed max_overtime[t]. The supplied cap is zero in every period.",
+      "support_entity_ids": [
+        "ENT_OVERTIME_HOURS"
+      ],
       "incidence_slots": [
         {
           "entity_id": "ENT_OVERTIME_HOURS",
-          "period_relation": "same_period",
-          "role": "bounded overtime usage"
+          "arguments": ["period"]
         }
       ],
-      "quantifier": "for each period t in SET_PERIOD",
-      "scope_kind": "periodic",
-      "parameter_refs": ["PAR_MAX_OVERTIME"],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "The narrative says overtime is capped, and the periods table gives max_overtime = 0 in every listed period.",
-      "source_spans": [
-        "is capped to prevent burnout",
-        "max_overtime",
-        "| 1 | 60 | 8000 | 0 |",
-        "| 6 | 0 | 12000 | 0 |"
-      ],
-      "confidence": 0.99
-    },
-    {
-      "id": "OBL_STANDARD_FLEET_MIN",
-      "canonical_family": "standard_aircraft_lower_bound",
-      "canonical_name": "minimum standard fleet after initial period",
-      "structural_form": "LOWER_BOUND",
-      "business_role": "regulatory fleet-size floor",
-      "normalized_semantics": "In periods 2 through 6, the standard-aircraft fleet level must be at least 57 aircraft.",
-      "support_entity_ids": ["ENT_STANDARD_FLEET"],
-      "incidence_slots": [
-        {
-          "entity_id": "ENT_STANDARD_FLEET",
-          "period_relation": "same_period",
-          "role": "lower-bounded fleet level"
-        }
-      ],
-      "quantifier": "for each period t in {2,3,4,5,6}",
-      "scope_kind": "period_subset",
-      "condition": "t >= 2",
-      "parameter_refs": ["PAR_MIN_STANDARD_POSTINITIAL"],
-      "coupling_active": false,
-      "source_status": "explicit_parameterized",
-      "source_grounding": "The narrative identifies regulatory fleet-size bounds after the initial month, and the parameters table gives the minimum for periods 2 through 6.",
-      "source_spans": [
-        "specific regulatory bounds on fleet size that kick in after the initial month",
-        "min_standard_aircraft_period_2_6 | 57"
-      ],
-      "confidence": 0.99
-    },
-    {
-      "id": "OBL_STANDARD_FLEET_MAX",
-      "canonical_family": "standard_aircraft_upper_bound",
-      "canonical_name": "maximum standard fleet after initial period",
-      "structural_form": "UPPER_BOUND",
-      "business_role": "regulatory fleet-size ceiling",
-      "normalized_semantics": "In periods 2 through 6, the standard-aircraft fleet level may not exceed 75 aircraft.",
-      "support_entity_ids": ["ENT_STANDARD_FLEET"],
-      "incidence_slots": [
-        {
-          "entity_id": "ENT_STANDARD_FLEET",
-          "period_relation": "same_period",
-          "role": "upper-bounded fleet level"
-        }
-      ],
-      "quantifier": "for each period t in {2,3,4,5,6}",
-      "scope_kind": "period_subset",
-      "condition": "t >= 2",
-      "parameter_refs": ["PAR_MAX_STANDARD_POSTINITIAL"],
-      "coupling_active": false,
-      "source_status": "explicit_parameterized",
-      "source_grounding": "The narrative identifies regulatory fleet-size bounds after the initial month, and the parameters table gives the maximum for periods 2 through 6.",
-      "source_spans": [
-        "specific regulatory bounds on fleet size that kick in after the initial month",
-        "max_standard_aircraft_period_2_6 | 75"
-      ],
-      "confidence": 0.99
-    },
-    {
-      "id": "OBL_STANDARD_FLEET_BALANCE",
-      "canonical_family": "standard_aircraft_interperiod_balance",
-      "canonical_name": "standard fleet retention and balance",
-      "structural_form": "BALANCE",
-      "business_role": "fleet continuity and attrition",
-      "normalized_semantics": "The standard-aircraft fleet must satisfy an interperiod evolution rule governed by the 0.9 aircraft-retention rate and the period aircraft-balance inputs. Period 1 is the boundary case associated with an aircraft-balance value of 60; later periods use the same family with predecessor-period incidence.",
-      "support_entity_ids": ["ENT_STANDARD_FLEET"],
-      "incidence_slots": [
-        {
-          "entity_id": "ENT_STANDARD_FLEET",
-          "period_relation": "current_period",
-          "role": "current fleet level"
-        },
-        {
-          "entity_id": "ENT_STANDARD_FLEET",
-          "period_relation": "predecessor_period",
-          "role": "prior fleet subject to retention",
-          "condition": "t >= 2"
-        }
-      ],
-      "quantifier": "for each period t in SET_PERIOD, with a first-period boundary variant",
-      "scope_kind": "intertemporal",
+      "quantifier": "for every monthly planning period",
+      "scope_kind": "periodwise unary bound",
       "parameter_refs": [
-        "PAR_RETENTION_RATE",
-        "PAR_AIRCRAFT_BALANCE"
+        "PAR_MAX_OVERTIME"
       ],
-      "boundary_variants": [
-        {
-          "condition": "t = 1",
-          "normalized_semantics": "Apply the initial-period fleet boundary represented by aircraft_balance[1] = 60 without a predecessor-period fleet."
-        },
-        {
-          "condition": "t >= 2",
-          "normalized_semantics": "Relate the current standard fleet to the retained predecessor-period fleet using retention rate 0.9 and the applicable aircraft-balance input."
-        }
+      "source_grounding": "The narrative explicitly caps overtime to prevent burnout, and the periods table reports max_overtime = 0 for all six periods.",
+      "source_spans": [
+        "overtime can be utilized to squeeze more flight hours out of the existing lineup",
+        "this comes at a premium and is capped to prevent burnout"
       ],
       "coupling_active": false,
-      "source_status": "partially_explicit",
-      "normalization_rationale": "Initial fleet treatment and later retention are variants of one fleet-evolution family rather than independent obligations.",
-      "source_grounding": "The narrative explicitly mentions natural fleet attrition and monthly acquisition and retention decisions. The tables provide aircraft_retention_rate = 0.9 and period-specific aircraft_balance values.",
-      "source_spans": [
-        "the natural attrition of the fleet",
-        "dictates aircraft acquisition, retention, and utilization levels for each month",
-        "aircraft_retention_rate | 0.9",
-        "aircraft_balance",
-        "| 1 | 60 | 8000 | 0 |"
-      ],
-      "confidence": 0.71
+      "confidence": "high"
     }
   ],
-  "derived_checks": [],
+  "derived_checks": [
+    {
+      "id": "CHK_RENTAL_LOWER_HOURS_PER_AIRCRAFT",
+      "canonical_name": "rental units provide fewer hours than standard units",
+      "normalized_semantics": "Each rental aircraft contributes 100 flight hours per period, which is fewer than the 150 flight hours contributed by each standard aircraft.",
+      "parameter_refs": [
+        "PAR_STANDARD_AIRCRAFT_HOURS",
+        "PAR_RENTAL_AIRCRAFT_HOURS"
+      ],
+      "source_grounding": "This follows directly from the two service-hour coefficients and matches the narrative statement that rentals offer fewer service hours upon induction.",
+      "source_spans": [
+        "rental additions are available to bridge capacity gaps but require integration time, effectively offering fewer service hours upon induction"
+      ],
+      "confidence": "high"
+    }
+  ],
   "unresolved_items": [
     {
-      "id": "UNRES_BALANCE_OPERATOR",
-      "topic": "exact standard-fleet balance relation",
-      "description": "The source supplies a retention rate and aircraft_balance values but does not state whether the interperiod rule is an equality, a lower bound, an upper bound, or a balance including a separate acquisition quantity. The semantic fleet-evolution obligation is retained without guessing the missing operator."
+      "id": "UNRESOLVED_RETENTION_RELATION_TYPE",
+      "issue": "The source identifies a 0.9 retention rate and period-specific aircraft_balance data but does not explicitly state whether the interperiod fleet relation is an equality, a lower-bound retention rule, or another balance relation.",
+      "affected_obligation_ids": [
+        "OBL_STANDARD_FLEET_RETENTION"
+      ],
+      "required_clarification": "Provide the exact standard-fleet transition rule, including the direction of the relation and the role of aircraft_balance."
     },
     {
-      "id": "UNRES_STANDARD_ACQUISITION_ENTITY",
-      "topic": "separate standard-aircraft acquisition decision",
-      "description": "The narrative mentions aircraft acquisition, but no distinct acquisition parameter, cost, timing rule, or table column is provided. A separate acquisition entity family is therefore not introduced."
+      "id": "UNRESOLVED_STANDARD_ACQUISITION_REPRESENTATION",
+      "issue": "The narrative mentions aircraft acquisition, but the supplied tables do not identify a separate acquisition quantity, acquisition capacity, or acquisition cost distinct from the standard fleet level.",
+      "affected_entity_ids": [
+        "ENT_STANDARD_FLEET_LEVEL"
+      ],
+      "required_clarification": "State whether acquisitions are represented implicitly by increases in the standard fleet level or by a separate endogenous action."
     },
     {
-      "id": "UNRES_RENTAL_INDUCTION_TIMING",
-      "topic": "rental integration time",
-      "description": "The narrative says rentals require integration time and consequently offer fewer service hours upon induction. The available data provide a lower rental-aircraft hour coefficient but no explicit lead-time index relation, so no rental lead-time obligation is asserted."
+      "id": "UNRESOLVED_OVERTIME_ZERO_CAP",
+      "issue": "The narrative describes overtime as usable, but the supplied max_overtime values are zero for every period.",
+      "affected_obligation_ids": [
+        "OBL_OVERTIME_MAXIMUM"
+      ],
+      "required_clarification": "Confirm whether all-zero overtime caps are intentional or are missing/placeholder data."
     },
     {
-      "id": "UNRES_AIRCRAFT_DOMAINS",
-      "topic": "aircraft integrality",
-      "description": "Aircraft counts would commonly be integral, but the supplied text does not explicitly state integrality. It is not promoted to a feasibility obligation or definitive domain declaration."
+      "id": "UNRESOLVED_COST_TIMING",
+      "issue": "The text does not explicitly state whether the standard-aircraft and rental-aircraft costs apply per aircraft in each month, only when aircraft are acquired or commissioned, or under another timing convention.",
+      "required_clarification": "Specify the temporal incidence of each aircraft cost coefficient."
     }
   ],
   "annotation_warnings": [
     {
-      "id": "WARN_ZERO_OVERTIME",
-      "message": "Although the narrative describes overtime as an available premium option, max_overtime is zero in all six table rows. The source-grounded upper-bound family therefore permits no overtime under the supplied numeric instance."
+      "id": "WARN_SERVICE_OUTCOME_IMPLICIT",
+      "message": "ENT_DELIVERED_FLIGHT_HOURS is an implicit semantic service-outcome family used to represent demand coverage; the source does not require it to be maintained as a separate modeled variable."
     },
     {
-      "id": "WARN_RENTAL_HOURS_INTERPRETATION",
-      "message": "The rental_aircraft_hours value of 100 is treated as same-period service productivity. It may encode the stated induction disadvantage, but the text does not support a separate temporal lead-time relation."
+      "id": "WARN_DOMAINS_UNSTATED",
+      "message": "Aircraft quantities are count-valued semantically, but integrality and nonnegativity domains are not explicitly stated in the supplied text."
     }
   ]
 }

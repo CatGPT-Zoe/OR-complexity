@@ -1,74 +1,29 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "OPTEngine_Inventory_5_1",
   "layer": "semantic",
   "sets": [
     {
-      "id": "SET_WEEK",
+      "id": "SET_WEEKS",
       "canonical_name": "planning weeks",
       "members": [1, 2, 3, 4, 5],
-      "source_grounding": "The planning horizon consists of five weeks indexed by t = 1, ..., 5.",
-      "source_spans": [
-        {
-          "text": "across a 5-week schedule"
-        },
-        {
-          "text": "In each week t = 1, ..., 5"
-        }
-      ]
+      "cardinality": 5
     }
   ],
   "parameters": [
     {
-      "id": "P_INITIAL_STOCK",
-      "canonical_name": "initial stored quantity",
+      "id": "PAR_INITIAL_STOCK",
+      "canonical_name": "initial plasma stock",
       "value": 33,
       "unit": "liter",
-      "indexing": "before week 1",
       "source_spans": [
-        {
-          "text": "The initial stock available at the start of the schedule is 33 liters."
-        }
+        "The initial stock available at the start of the schedule is 33 liters."
       ]
     },
     {
-      "id": "P_REQUEST_MIN",
-      "canonical_name": "minimum weekly request quantity",
-      "value": 1,
-      "unit": "liter",
-      "indexing": "week",
-      "source_spans": [
-        {
-          "text": "the requested volume must be between 1 and 71 liters"
-        }
-      ]
-    },
-    {
-      "id": "P_REQUEST_MAX",
-      "canonical_name": "maximum weekly request quantity",
-      "value": 71,
-      "unit": "liter",
-      "indexing": "week",
-      "source_spans": [
-        {
-          "text": "the requested volume must be between 1 and 71 liters"
-        }
-      ]
-    },
-    {
-      "id": "P_DELIVERY_LEAD_TIME",
-      "canonical_name": "procurement delivery lead time",
-      "value": 4,
-      "unit": "week",
-      "source_spans": [
-        {
-          "text": "each request submitted requires a lead time of 4 week(s) for delivery before it can be utilized"
-        }
-      ]
-    },
-    {
-      "id": "P_CONSUMPTION",
-      "canonical_name": "weekly clinical consumption requirement",
+      "id": "PAR_WEEKLY_CONSUMPTION",
+      "canonical_name": "weekly clinical consumption",
+      "index_set": "SET_WEEKS",
       "values": {
         "1": 23,
         "2": 45,
@@ -76,466 +31,764 @@
         "4": 38,
         "5": 43
       },
-      "unit": "liter",
-      "indexing": "week",
-      "source_spans": [
-        {
-          "text": "Week 1: consumption 23 liters"
-        },
-        {
-          "text": "Week 2: consumption 45 liters"
-        },
-        {
-          "text": "Week 3: consumption 40 liters"
-        },
-        {
-          "text": "Week 4: consumption 38 liters"
-        },
-        {
-          "text": "Week 5: consumption 43 liters"
-        }
-      ]
+      "unit": "liter"
     },
     {
-      "id": "P_STORAGE_CAPACITY",
-      "canonical_name": "refrigerated storage capacity",
+      "id": "PAR_REQUEST_MINIMUM",
+      "canonical_name": "minimum weekly request volume",
+      "value": 1,
+      "unit": "liter"
+    },
+    {
+      "id": "PAR_REQUEST_MAXIMUM",
+      "canonical_name": "maximum weekly request volume",
+      "value": 71,
+      "unit": "liter"
+    },
+    {
+      "id": "PAR_DELIVERY_LEAD_TIME",
+      "canonical_name": "request delivery lead time",
+      "value": 4,
+      "unit": "week"
+    },
+    {
+      "id": "PAR_STORAGE_CAPACITY",
+      "canonical_name": "refrigeration capacity",
       "value": 51,
-      "unit": "liter",
-      "source_spans": [
-        {
-          "text": "the aggregate quantity of plasma held in storage at any moment must not surpass the refrigeration capacity of 51 liters"
-        }
-      ]
+      "unit": "liter"
     },
     {
-      "id": "P_PROCUREMENT_COST",
-      "canonical_name": "unit procurement cost",
+      "id": "PAR_PROCUREMENT_COST",
+      "canonical_name": "procurement cost per requested liter",
       "value": 1,
-      "unit": "cost unit per liter requested",
-      "source_spans": [
-        {
-          "text": "the procurement cost, amounting to 1 per liter requested"
-        }
-      ]
+      "unit": "cost_unit_per_liter"
     },
     {
-      "id": "P_STORAGE_COST",
-      "canonical_name": "unit carryover storage cost",
+      "id": "PAR_STORAGE_COST",
+      "canonical_name": "storage cost per liter carried to the next week",
       "value": 1,
-      "unit": "cost unit per liter carried between weeks",
-      "source_spans": [
-        {
-          "text": "the storage cost, amounting to 1 per liter of plasma kept from one week to the next"
-        }
-      ]
+      "unit": "cost_unit_per_liter_per_week"
     },
     {
-      "id": "P_DEFICIT_PENALTY",
-      "canonical_name": "unit unmet-consumption penalty",
+      "id": "PAR_DEFICIT_PENALTY",
+      "canonical_name": "unfulfilled-consumption penalty",
       "value": 12,
-      "unit": "cost unit per liter of unfulfilled consumption",
-      "source_spans": [
-        {
-          "text": "the deficit penalty, amounting to 12 per liter of unfulfilled consumption"
-        }
-      ]
+      "unit": "cost_unit_per_liter"
     }
   ],
   "entities": [
     {
-      "id": "E_REQUEST",
-      "canonical_family": "procurement_request",
-      "canonical_name": "weekly procurement request quantity",
+      "id": "ENT_REQUEST_VOLUME",
+      "canonical_name": "supplier request volume",
       "entity_role": "decision",
-      "index_sets": ["SET_WEEK"],
-      "temporal_granularity": "week",
-      "unit": "liter",
-      "domain_metadata": {
-        "numeric_type": "continuous",
-        "business_bounds_recorded_as_obligations": true
-      },
-      "source_grounding": "The hospital chooses the volume requested from the supplier in each week.",
-      "source_spans": [
+      "index_signature": [
         {
-          "text": "In each week t = 1, ..., 5, the pharmaceutical supplier permits the hospital to submit a request"
-        },
-        {
-          "text": "agent volumes are permitted to be continuous"
-        },
-        {
-          "text": "Please ascertain the optimal request volume for each week"
+          "role": "week",
+          "set_id": "SET_WEEKS"
         }
-      ]
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "In each week t = 1, ..., 5, the pharmaceutical supplier permits the hospital to submit a request",
+        "Please ascertain the optimal request volume for each week"
+      ],
+      "confidence": "high",
+      "semantic_type": "procurement_request",
+      "value_domain": "continuous_nonnegative",
+      "unit": "liter"
     },
     {
-      "id": "E_STORAGE",
-      "canonical_family": "stored_inventory",
-      "canonical_name": "plasma storage level",
+      "id": "ENT_CARRYOVER_STOCK",
+      "canonical_name": "plasma stock carried after weekly consumption",
       "entity_role": "state",
-      "index_sets": ["SET_WEEK"],
-      "temporal_granularity": "week",
-      "unit": "liter",
-      "domain_metadata": {
-        "numeric_type": "continuous",
-        "nonnegative": true
-      },
-      "source_grounding": "The hospital monitors plasma held in storage and carried between weeks.",
-      "source_spans": [
+      "index_signature": [
         {
-          "text": "blood plasma storage strategy"
-        },
-        {
-          "text": "the aggregate quantity of plasma held in storage at any moment"
-        },
-        {
-          "text": "plasma kept from one week to the next"
-        },
-        {
-          "text": "monitor the consequent storage"
+          "role": "week",
+          "set_id": "SET_WEEKS"
         }
-      ]
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "blood plasma storage strategy",
+        "augment existing reserves",
+        "the storage cost, amounting to 1 per liter of plasma kept from one week to the next",
+        "monitor the consequent storage and deficit quantities"
+      ],
+      "confidence": "high",
+      "semantic_type": "carryover_inventory",
+      "value_domain": "continuous_nonnegative",
+      "unit": "liter"
     },
     {
-      "id": "E_DEFICIT",
-      "canonical_family": "unmet_consumption",
-      "canonical_name": "weekly unfulfilled clinical consumption",
+      "id": "ENT_FULFILLED_CONSUMPTION",
+      "canonical_name": "fulfilled clinical consumption",
       "entity_role": "service_outcome",
-      "index_sets": ["SET_WEEK"],
-      "temporal_granularity": "week",
-      "unit": "liter",
-      "domain_metadata": {
-        "numeric_type": "continuous",
-        "nonnegative": true
-      },
-      "source_grounding": "Clinical consumption may remain unsatisfied, producing a period-specific deficit.",
-      "source_spans": [
+      "index_signature": [
         {
-          "text": "Supply deficits are tolerated"
-        },
-        {
-          "text": "any unsatisfied consumption"
-        },
-        {
-          "text": "unfulfilled consumption"
-        },
-        {
-          "text": "monitor the consequent storage and deficit quantities"
+          "role": "week",
+          "set_id": "SET_WEEKS"
         }
-      ]
+      ],
+      "instance_level": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "before it can be utilized to meet patient needs",
+        "Supply deficits are tolerated",
+        "unfulfilled consumption"
+      ],
+      "confidence": "high",
+      "semantic_type": "served_demand",
+      "value_domain": "continuous_nonnegative",
+      "unit": "liter"
+    },
+    {
+      "id": "ENT_UNFULFILLED_CONSUMPTION",
+      "canonical_name": "unfulfilled clinical consumption",
+      "entity_role": "service_outcome",
+      "index_signature": [
+        {
+          "role": "week",
+          "set_id": "SET_WEEKS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "Supply deficits are tolerated",
+        "any unsatisfied consumption will not be carried forward",
+        "the deficit penalty, amounting to 12 per liter of unfulfilled consumption",
+        "monitor the consequent storage and deficit quantities"
+      ],
+      "confidence": "high",
+      "semantic_type": "lost_demand",
+      "value_domain": "continuous_nonnegative",
+      "unit": "liter"
     }
   ],
   "objective": {
     "sense": "minimize",
-    "canonical_name": "total procurement, carryover storage, and deficit expenditure",
-    "terms": [
+    "canonical_name": "total procurement, carryover-storage, and deficit expenditure",
+    "normalized_semantics": "Minimize sum over weeks 1 through 5 of PAR_PROCUREMENT_COST times ENT_REQUEST_VOLUME, plus sum over weeks 1 through 4 of PAR_STORAGE_COST times ENT_CARRYOVER_STOCK, plus sum over weeks 1 through 5 of PAR_DEFICIT_PENALTY times ENT_UNFULFILLED_CONSUMPTION.",
+    "components": [
       {
-        "entity_id": "E_REQUEST",
-        "coefficient_parameter_ref": "P_PROCUREMENT_COST",
-        "aggregation": "sum over scheduled request weeks"
+        "name": "procurement expenditure",
+        "entity_id": "ENT_REQUEST_VOLUME",
+        "parameter_ref": "PAR_PROCUREMENT_COST",
+        "scope": "weeks 1 through 5"
       },
       {
-        "entity_id": "E_STORAGE",
-        "coefficient_parameter_ref": "P_STORAGE_COST",
-        "aggregation": "sum over storage quantities charged for being kept from one week to the next"
+        "name": "interweek storage expenditure",
+        "entity_id": "ENT_CARRYOVER_STOCK",
+        "parameter_ref": "PAR_STORAGE_COST",
+        "scope": "weeks 1 through 4"
       },
       {
-        "entity_id": "E_DEFICIT",
-        "coefficient_parameter_ref": "P_DEFICIT_PENALTY",
-        "aggregation": "sum over weeks"
+        "name": "deficit expenditure",
+        "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+        "parameter_ref": "PAR_DEFICIT_PENALTY",
+        "scope": "weeks 1 through 5"
       }
     ],
-    "source_grounding": "Minimize cumulative procurement, storage, and deficit expenditure.",
     "source_spans": [
-      {
-        "text": "The cumulative expenditure over the schedule comprises three elements: the procurement cost, amounting to 1 per liter requested; the storage cost, amounting to 1 per liter of plasma kept from one week to the next; and the deficit penalty, amounting to 12 per liter of unfulfilled consumption."
-      },
-      {
-        "text": "so as to minimize the total expenditure"
-      }
-    ]
+      "The cumulative expenditure over the schedule comprises three elements: the procurement cost, amounting to 1 per liter requested; the storage cost, amounting to 1 per liter of plasma kept from one week to the next; and the deficit penalty, amounting to 12 per liter of unfulfilled consumption.",
+      "so as to minimize the total expenditure"
+    ],
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "O_REQUEST_LOWER_BOUND",
-      "canonical_family": "procurement_request_lower_bound",
-      "canonical_name": "minimum weekly procurement request",
+      "id": "OBL_REQUEST_MINIMUM",
+      "canonical_family": "PROCUREMENT_REQUEST_LOWER_BOUND",
+      "canonical_name": "minimum weekly request volume",
       "structural_form": "LOWER_BOUND",
       "business_role": "supplier_request_policy",
-      "normalized_semantics": "Every scheduled weekly request must be at least the supplier's minimum request quantity.",
-      "support_entity_ids": ["E_REQUEST"],
+      "normalized_semantics": "For every week t, the requested volume is at least PAR_REQUEST_MINIMUM.",
+      "support_entity_ids": [
+        "ENT_REQUEST_VOLUME"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_REQUEST",
-          "arguments": ["week t"]
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "arguments": ["week"]
         }
       ],
-      "quantifier": "for every t in SET_WEEK",
+      "quantifier": "for every week in SET_WEEKS",
       "scope_kind": "per_period",
-      "parameter_refs": ["P_REQUEST_MIN"],
-      "source_grounding": "The requested volume must be no less than 1 liter in each week.",
+      "parameter_refs": [
+        "PAR_REQUEST_MINIMUM"
+      ],
+      "source_grounding": {
+        "type": "explicit_business_bound",
+        "text": "the requested volume must be between 1 and 71 liters"
+      },
       "source_spans": [
+        "In each week t = 1, ..., 5, the pharmaceutical supplier permits the hospital to submit a request, where the requested volume must be between 1 and 71 liters."
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}",
+      "incidence_instances": [
         {
-          "text": "In each week t = 1, ..., 5"
-        },
-        {
-          "text": "the requested volume must be between 1 and 71 liters"
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "binding": {
+            "week": 1
+          }
         }
       ],
+      "intra_entity_instance_coupling": false,
       "coupling_active": false,
-      "source_status": "explicit",
-      "confidence": 1.0
+      "confidence": "high"
     },
     {
-      "id": "O_REQUEST_UPPER_BOUND",
-      "canonical_family": "procurement_request_upper_bound",
-      "canonical_name": "maximum weekly procurement request",
+      "id": "OBL_REQUEST_MAXIMUM",
+      "canonical_family": "PROCUREMENT_REQUEST_UPPER_BOUND",
+      "canonical_name": "maximum weekly request volume",
       "structural_form": "UPPER_BOUND",
       "business_role": "supplier_request_policy",
-      "normalized_semantics": "Every scheduled weekly request must not exceed the supplier's maximum request quantity.",
-      "support_entity_ids": ["E_REQUEST"],
+      "normalized_semantics": "For every week t, the requested volume is at most PAR_REQUEST_MAXIMUM.",
+      "support_entity_ids": [
+        "ENT_REQUEST_VOLUME"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_REQUEST",
-          "arguments": ["week t"]
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "arguments": ["week"]
         }
       ],
-      "quantifier": "for every t in SET_WEEK",
+      "quantifier": "for every week in SET_WEEKS",
       "scope_kind": "per_period",
-      "parameter_refs": ["P_REQUEST_MAX"],
-      "source_grounding": "The requested volume must be no greater than 71 liters in each week.",
+      "parameter_refs": [
+        "PAR_REQUEST_MAXIMUM"
+      ],
+      "source_grounding": {
+        "type": "explicit_business_bound",
+        "text": "the requested volume must be between 1 and 71 liters"
+      },
       "source_spans": [
+        "In each week t = 1, ..., 5, the pharmaceutical supplier permits the hospital to submit a request, where the requested volume must be between 1 and 71 liters."
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}",
+      "incidence_instances": [
         {
-          "text": "In each week t = 1, ..., 5"
-        },
-        {
-          "text": "the requested volume must be between 1 and 71 liters"
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "binding": {
+            "week": 1
+          }
         }
       ],
+      "intra_entity_instance_coupling": false,
       "coupling_active": false,
-      "source_status": "explicit",
-      "confidence": 1.0
+      "confidence": "high"
     },
     {
-      "id": "O_INVENTORY_FLOW_BALANCE",
-      "canonical_family": "inventory_flow_balance_with_delayed_procurement_and_shortage",
-      "canonical_name": "weekly plasma inventory transition",
+      "id": "OBL_WEEKLY_STOCK_BALANCE",
+      "canonical_family": "LAGGED_INVENTORY_BALANCE",
+      "canonical_name": "weekly plasma stock conservation with delivery lead time",
       "structural_form": "BALANCE",
-      "business_role": "material_conservation_and_demand_accounting",
-      "normalized_semantics": "For each week, stored plasma evolves from the preceding storage level by adding deliveries generated by eligible earlier requests and subtracting fulfilled clinical consumption. Weekly deficit is the portion of that week's specified consumption not fulfilled. A request made in week s can contribute to usable supply only in week s plus the four-week lead time or later.",
-      "support_entity_ids": ["E_REQUEST", "E_STORAGE", "E_DEFICIT"],
+      "business_role": "inventory_conservation",
+      "normalized_semantics": "For week t, ending carryover stock equals stock available before consumption plus the request from week t minus PAR_DELIVERY_LEAD_TIME when that request week lies in the schedule, less fulfilled consumption in week t. The week-1 boundary uses PAR_INITIAL_STOCK instead of a preceding carryover state. Thus, over this five-week horizon, only the week-1 request becomes available in week 5.",
+      "support_entity_ids": [
+        "ENT_REQUEST_VOLUME",
+        "ENT_CARRYOVER_STOCK",
+        "ENT_FULFILLED_CONSUMPTION"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_STORAGE",
-          "arguments": ["storage before or entering week t"]
+          "entity_id": "ENT_CARRYOVER_STOCK",
+          "arguments": ["week-1"],
+          "condition": "week > 1"
         },
         {
-          "entity_id": "E_REQUEST",
-          "arguments": ["request in week t - P_DELIVERY_LEAD_TIME"],
-          "condition": "the originating request week is within the scheduled request set"
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "arguments": ["week-PAR_DELIVERY_LEAD_TIME"],
+          "condition": "week-PAR_DELIVERY_LEAD_TIME is in SET_WEEKS"
         },
         {
-          "entity_id": "E_DEFICIT",
-          "arguments": ["week t"]
+          "entity_id": "ENT_FULFILLED_CONSUMPTION",
+          "arguments": ["week"]
         },
         {
-          "entity_id": "E_STORAGE",
-          "arguments": ["storage after week t"]
+          "entity_id": "ENT_CARRYOVER_STOCK",
+          "arguments": ["week"]
         }
       ],
-      "quantifier": "for every t in SET_WEEK",
+      "quantifier": "for every week in SET_WEEKS, with an initial-stock boundary variant and lead-time-dependent request incidence",
       "scope_kind": "temporal_transition",
       "parameter_refs": [
-        "P_INITIAL_STOCK",
-        "P_DELIVERY_LEAD_TIME",
-        "P_CONSUMPTION"
+        "PAR_INITIAL_STOCK",
+        "PAR_DELIVERY_LEAD_TIME"
       ],
-      "boundary_variants": [
+      "source_grounding": {
+        "type": "explicit_stock_and_lead_time_statements",
+        "text": "Initial stock is 33 liters, requests require four weeks for delivery, and delivered plasma may meet needs or augment reserves."
+      },
+      "source_spans": [
+        "The initial stock available at the start of the schedule is 33 liters.",
+        "each request submitted requires a lead time of 4 week(s) for delivery before it can be utilized to meet patient needs or augment existing reserves.",
+        "the storage cost, amounting to 1 per liter of plasma kept from one week to the next"
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}; use initial stock at t=1 and include request instance t-4 only when t-4 is in SET_WEEKS",
+      "incidence_instances": [
         {
-          "condition": "t = 1",
-          "semantics": "The entering storage quantity is the stated initial stock of 33 liters."
+          "entity_id": "ENT_CARRYOVER_STOCK",
+          "binding": {
+            "week": 4
+          }
         },
         {
-          "condition": "t - P_DELIVERY_LEAD_TIME is not in SET_WEEK",
-          "semantics": "No delivery generated by a request made within the stated five-week schedule is incident to that week."
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "binding": {
+            "week": 1
+          }
+        },
+        {
+          "entity_id": "ENT_FULFILLED_CONSUMPTION",
+          "binding": {
+            "week": 5
+          }
+        },
+        {
+          "entity_id": "ENT_CARRYOVER_STOCK",
+          "binding": {
+            "week": 5
+          }
         }
       ],
-      "source_grounding": "Initial stock, delayed procurement, weekly consumption, storage carryover, and tolerated deficits jointly define the weekly material transition.",
-      "source_spans": [
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
         {
-          "text": "The initial stock available at the start of the schedule is 33 liters."
+          "id": "EDGE_BALANCE_WEEK_1",
+          "binding": {
+            "week": 1
+          },
+          "boundary_kind": "boundary",
+          "slots": [
+            {
+              "entity_id": "ENT_FULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 1
+              }
+            },
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 1
+              }
+            }
+          ],
+          "normalized_semantics": "CarryoverStock[1] = 33 - FulfilledConsumption[1]."
         },
         {
-          "text": "each request submitted requires a lead time of 4 week(s) for delivery before it can be utilized to meet patient needs or augment existing reserves"
+          "id": "EDGE_BALANCE_WEEK_2",
+          "binding": {
+            "week": 2
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 1
+              }
+            },
+            {
+              "entity_id": "ENT_FULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 2
+              }
+            },
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 2
+              }
+            }
+          ],
+          "normalized_semantics": "CarryoverStock[2] = CarryoverStock[1] - FulfilledConsumption[2]."
         },
         {
-          "text": "The clinical consumption of the agent for each week is specified as follows"
-        },
-        {
-          "text": "Supply deficits are tolerated"
-        },
-        {
-          "text": "plasma kept from one week to the next"
+          "id": "EDGE_BALANCE_WEEK_5",
+          "binding": {
+            "week": 5,
+            "request_week": 1
+          },
+          "boundary_kind": "conditional",
+          "slots": [
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 4
+              }
+            },
+            {
+              "entity_id": "ENT_REQUEST_VOLUME",
+              "index_binding": {
+                "week": 1
+              }
+            },
+            {
+              "entity_id": "ENT_FULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 5
+              }
+            },
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 5
+              }
+            }
+          ],
+          "normalized_semantics": "CarryoverStock[5] = CarryoverStock[4] + RequestVolume[1] - FulfilledConsumption[5]."
         }
       ],
       "coupling_active": true,
-      "source_status": "source-grounded_semantic_composition",
-      "normalization_rationale": "The initial condition and lead-time incidence are boundary and temporal variants of one inventory-transition family rather than separate obligation families.",
-      "confidence": 0.94
+      "confidence": "high"
     },
     {
-      "id": "O_DEFICIT_NO_CARRYOVER",
-      "canonical_family": "unmet_consumption_no_carryover",
+      "id": "OBL_WEEKLY_CONSUMPTION_ACCOUNTING",
+      "canonical_family": "DEMAND_SERVICE_PARTITION",
+      "canonical_name": "weekly consumption partition into fulfilled and unfulfilled volume",
+      "structural_form": "BALANCE",
+      "business_role": "service_accounting",
+      "normalized_semantics": "For every week t, fulfilled consumption plus unfulfilled consumption equals PAR_WEEKLY_CONSUMPTION[t].",
+      "support_entity_ids": [
+        "ENT_FULFILLED_CONSUMPTION",
+        "ENT_UNFULFILLED_CONSUMPTION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_FULFILLED_CONSUMPTION",
+          "arguments": ["week"]
+        },
+        {
+          "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+          "arguments": ["week"]
+        }
+      ],
+      "quantifier": "for every week in SET_WEEKS",
+      "scope_kind": "per_period",
+      "parameter_refs": [
+        "PAR_WEEKLY_CONSUMPTION"
+      ],
+      "source_grounding": {
+        "type": "explicit_consumption_and_deficit_statements",
+        "text": "Weekly consumption is specified, and any portion not satisfied is an unfulfilled-consumption deficit."
+      },
+      "source_spans": [
+        "The clinical consumption of the agent for each week is specified as follows:",
+        "Supply deficits are tolerated",
+        "the deficit penalty, amounting to 12 per liter of unfulfilled consumption"
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_FULFILLED_CONSUMPTION",
+          "binding": {
+            "week": 1
+          }
+        },
+        {
+          "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+          "binding": {
+            "week": 1
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "instance_edges": [
+        {
+          "id": "EDGE_CONSUMPTION_WEEK_1",
+          "binding": {
+            "week": 1
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_FULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 1
+              }
+            },
+            {
+              "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 1
+              }
+            }
+          ],
+          "normalized_semantics": "FulfilledConsumption[1] + UnfulfilledConsumption[1] = 23."
+        },
+        {
+          "id": "EDGE_CONSUMPTION_WEEK_3",
+          "binding": {
+            "week": 3
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_FULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 3
+              }
+            },
+            {
+              "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 3
+              }
+            }
+          ],
+          "normalized_semantics": "FulfilledConsumption[3] + UnfulfilledConsumption[3] = 40."
+        },
+        {
+          "id": "EDGE_CONSUMPTION_WEEK_5",
+          "binding": {
+            "week": 5
+          },
+          "boundary_kind": "terminal",
+          "slots": [
+            {
+              "entity_id": "ENT_FULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 5
+              }
+            },
+            {
+              "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+              "index_binding": {
+                "week": 5
+              }
+            }
+          ],
+          "normalized_semantics": "FulfilledConsumption[5] + UnfulfilledConsumption[5] = 43."
+        }
+      ],
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_DEFICIT_NO_CARRYOVER",
+      "canonical_family": "UNMET_DEMAND_NO_CARRYOVER",
       "canonical_name": "weekly deficits are lost rather than backlogged",
       "structural_form": "NO_CARRYOVER",
       "business_role": "lost_demand_policy",
-      "normalized_semantics": "Unfulfilled consumption in one week is period-local and does not become demand or a backlog in any later week.",
-      "support_entity_ids": ["E_DEFICIT"],
+      "normalized_semantics": "Unfulfilled consumption in week t expires in that week and does not become an additional consumption requirement or backlog in any later week.",
+      "support_entity_ids": [
+        "ENT_UNFULFILLED_CONSUMPTION"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_DEFICIT",
-          "arguments": ["week t"],
-          "temporal_effect": "does not propagate to week t+1 or later"
+          "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+          "arguments": ["week"]
         }
       ],
-      "quantifier": "for every t in SET_WEEK",
-      "scope_kind": "interperiod_policy",
+      "quantifier": "for every week in SET_WEEKS",
+      "scope_kind": "per_period_expiration",
       "parameter_refs": [],
-      "source_grounding": "Unsatisfied consumption is explicitly prohibited from carrying forward.",
+      "source_grounding": {
+        "type": "explicit_no_carryover_statement",
+        "text": "any unsatisfied consumption will not be carried forward"
+      },
       "source_spans": [
+        "Supply deficits are tolerated, but any unsatisfied consumption will not be carried forward."
+      ],
+      "instance_quantifier": "for t in {1,2,3,4,5}",
+      "incidence_instances": [
         {
-          "text": "any unsatisfied consumption will not be carried forward"
+          "entity_id": "ENT_UNFULFILLED_CONSUMPTION",
+          "binding": {
+            "week": 1
+          }
         }
       ],
+      "intra_entity_instance_coupling": false,
       "coupling_active": false,
-      "source_status": "explicit",
-      "confidence": 1.0
+      "confidence": "high"
     },
     {
-      "id": "O_STORAGE_CAPACITY",
-      "canonical_family": "storage_capacity_upper_bound",
-      "canonical_name": "refrigerated plasma storage capacity",
-      "structural_form": "UPPER_BOUND",
+      "id": "OBL_STORAGE_CAPACITY",
+      "canonical_family": "STORAGE_CAPACITY_LIMIT",
+      "canonical_name": "refrigeration capacity limit on available stored plasma",
+      "structural_form": "AGGREGATE_LIMIT",
       "business_role": "physical_storage_capacity",
-      "normalized_semantics": "The quantity of plasma held in refrigerated storage must never exceed 51 liters.",
-      "support_entity_ids": ["E_STORAGE"],
+      "normalized_semantics": "At each within-horizon storage checkpoint, plasma already carried into the week plus any request becoming available in that week must not exceed PAR_STORAGE_CAPACITY. The initial checkpoint uses PAR_INITIAL_STOCK. Under the four-week lead time, the week-5 checkpoint includes CarryoverStock[4] and RequestVolume[1].",
+      "support_entity_ids": [
+        "ENT_CARRYOVER_STOCK",
+        "ENT_REQUEST_VOLUME"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_STORAGE",
-          "arguments": ["each modeled storage instant within the horizon"]
-        }
-      ],
-      "quantifier": "for every modeled storage instant in the scheduling horizon",
-      "scope_kind": "state_bound",
-      "parameter_refs": ["P_STORAGE_CAPACITY"],
-      "source_grounding": "Stored plasma is bounded by the refrigeration capacity throughout the horizon.",
-      "source_spans": [
-        {
-          "text": "Throughout the scheduling horizon"
+          "entity_id": "ENT_CARRYOVER_STOCK",
+          "arguments": ["week-1"],
+          "condition": "week > 1"
         },
         {
-          "text": "the aggregate quantity of plasma held in storage at any moment must not surpass the refrigeration capacity of 51 liters"
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "arguments": ["week-PAR_DELIVERY_LEAD_TIME"],
+          "condition": "week-PAR_DELIVERY_LEAD_TIME is in SET_WEEKS"
         }
       ],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "confidence": 1.0
+      "quantifier": "for every within-horizon weekly storage checkpoint, with an initial-stock boundary variant",
+      "scope_kind": "temporal_capacity",
+      "parameter_refs": [
+        "PAR_INITIAL_STOCK",
+        "PAR_DELIVERY_LEAD_TIME",
+        "PAR_STORAGE_CAPACITY"
+      ],
+      "source_grounding": {
+        "type": "explicit_physical_capacity",
+        "text": "aggregate plasma held in storage at any moment must not exceed 51 liters"
+      },
+      "source_spans": [
+        "each request submitted requires a lead time of 4 week(s) for delivery before it can be utilized to meet patient needs or augment existing reserves.",
+        "the aggregate quantity of plasma held in storage at any moment must not surpass the refrigeration capacity of 51 liters."
+      ],
+      "instance_quantifier": "for t in {2,3,4,5}; include CarryoverStock[t-1] and include RequestVolume[t-4] when t-4 is in SET_WEEKS; initial stock is checked separately at the week-1 boundary",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CARRYOVER_STOCK",
+          "binding": {
+            "week": 4
+          }
+        },
+        {
+          "entity_id": "ENT_REQUEST_VOLUME",
+          "binding": {
+            "week": 1
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "instance_edges": [
+        {
+          "id": "EDGE_CAPACITY_WEEK_2",
+          "binding": {
+            "week": 2
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 1
+              }
+            }
+          ],
+          "normalized_semantics": "CarryoverStock[1] <= 51."
+        },
+        {
+          "id": "EDGE_CAPACITY_WEEK_4",
+          "binding": {
+            "week": 4
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 3
+              }
+            }
+          ],
+          "normalized_semantics": "CarryoverStock[3] <= 51."
+        },
+        {
+          "id": "EDGE_CAPACITY_WEEK_5",
+          "binding": {
+            "week": 5,
+            "request_week": 1
+          },
+          "boundary_kind": "conditional",
+          "slots": [
+            {
+              "entity_id": "ENT_CARRYOVER_STOCK",
+              "index_binding": {
+                "week": 4
+              }
+            },
+            {
+              "entity_id": "ENT_REQUEST_VOLUME",
+              "index_binding": {
+                "week": 1
+              }
+            }
+          ],
+          "normalized_semantics": "CarryoverStock[4] + RequestVolume[1] <= 51."
+        }
+      ],
+      "coupling_active": true,
+      "confidence": "medium"
     }
   ],
   "derived_checks": [
     {
-      "id": "D_DEFICIT_NOT_ABOVE_CONSUMPTION",
-      "canonical_name": "weekly deficit cannot exceed weekly consumption",
-      "normalized_semantics": "Because deficit denotes unfulfilled consumption, the deficit in a week cannot exceed that week's specified consumption.",
-      "support_entity_ids": ["E_DEFICIT"],
-      "parameter_refs": ["P_CONSUMPTION"],
-      "source_grounding": "This is a definitional consequence of interpreting deficit as unsatisfied or unfulfilled consumption, not an independently stated business bound.",
-      "source_spans": [
-        {
-          "text": "any unsatisfied consumption"
-        },
-        {
-          "text": "12 per liter of unfulfilled consumption"
-        }
+      "id": "CHK_INITIAL_STOCK_WITHIN_CAPACITY",
+      "canonical_name": "initial stock is capacity-feasible",
+      "normalized_semantics": "PAR_INITIAL_STOCK = 33 liters does not exceed PAR_STORAGE_CAPACITY = 51 liters.",
+      "parameter_refs": [
+        "PAR_INITIAL_STOCK",
+        "PAR_STORAGE_CAPACITY"
       ],
-      "confidence": 0.99
+      "source_grounding": {
+        "type": "comparison_of_explicit_parameters",
+        "text": "Initial stock is 33 liters and refrigeration capacity is 51 liters."
+      },
+      "source_spans": [
+        "The initial stock available at the start of the schedule is 33 liters.",
+        "the aggregate quantity of plasma held in storage at any moment must not surpass the refrigeration capacity of 51 liters."
+      ],
+      "confidence": "high"
     },
     {
-      "id": "D_INITIAL_STOCK_CAPACITY_CHECK",
-      "canonical_name": "initial stock fits refrigeration capacity",
-      "normalized_semantics": "The stated initial stock of 33 liters is below the stated storage capacity of 51 liters.",
-      "support_entity_ids": [],
-      "parameter_refs": ["P_INITIAL_STOCK", "P_STORAGE_CAPACITY"],
-      "source_grounding": "This is a parameter consistency check rather than an endogenous feasibility obligation.",
-      "source_spans": [
-        {
-          "text": "The initial stock available at the start of the schedule is 33 liters."
-        },
-        {
-          "text": "the refrigeration capacity of 51 liters"
-        }
+      "id": "CHK_WITHIN_HORIZON_REQUEST_ARRIVALS",
+      "canonical_name": "requests deliverable within the five-week horizon",
+      "normalized_semantics": "With requests in weeks 1 through 5 and a four-week lead time, only RequestVolume[1] becomes available within the horizon, in week 5; requests from weeks 2 through 5 become available after week 5.",
+      "parameter_refs": [
+        "PAR_DELIVERY_LEAD_TIME"
       ],
-      "confidence": 1.0
+      "source_grounding": {
+        "type": "derived_temporal_incidence",
+        "text": "The horizon has five weeks and every request has a four-week delivery lead time."
+      },
+      "source_spans": [
+        "across a 5-week schedule",
+        "In each week t = 1, ..., 5",
+        "each request submitted requires a lead time of 4 week(s) for delivery"
+      ],
+      "confidence": "high"
     }
   ],
   "unresolved_items": [
     {
-      "id": "U_STORAGE_COST_TIMING",
-      "issue": "The exact inventory snapshots charged storage cost are not specified.",
-      "details": "The phrase 'kept from one week to the next' suggests charging carryover inventory between adjacent weeks, but it does not explicitly state whether terminal week-5 inventory is charged.",
+      "id": "UNRESOLVED_WITHIN_WEEK_TIMING",
+      "issue": "The source does not explicitly specify the within-week ordering of delivery, consumption, and the capacity checkpoint. The capacity semantics therefore treat a delivery as entering stored availability before that week's consumption, consistent with the statement that delivery is required before utilization.",
       "source_spans": [
-        {
-          "text": "the storage cost, amounting to 1 per liter of plasma kept from one week to the next"
-        }
+        "requires a lead time of 4 week(s) for delivery before it can be utilized to meet patient needs or augment existing reserves",
+        "held in storage at any moment"
       ]
     },
     {
-      "id": "U_WITHIN_WEEK_EVENT_ORDER",
-      "issue": "The within-week ordering of delivery, consumption, and storage measurement is not fully specified.",
-      "details": "Because capacity applies 'at any moment,' it is unclear whether capacity must be checked immediately after a delivery and before that week's consumption, only on carryover inventory, or at additional within-week instants.",
+      "id": "UNRESOLVED_POST_HORIZON_ARRIVALS",
+      "issue": "Requests in weeks 2 through 5 arrive after the stated horizon. The text charges procurement cost per liter requested but does not state whether post-horizon arrivals have salvage value, cancellation rights, or post-horizon storage effects.",
       "source_spans": [
-        {
-          "text": "before it can be utilized to meet patient needs or augment existing reserves"
-        },
-        {
-          "text": "the aggregate quantity of plasma held in storage at any moment"
-        }
+        "In each week t = 1, ..., 5, the pharmaceutical supplier permits the hospital to submit a request",
+        "each request submitted requires a lead time of 4 week(s) for delivery",
+        "the procurement cost, amounting to 1 per liter requested"
       ]
     },
     {
-      "id": "U_PREHORIZON_REQUESTS",
-      "issue": "The text does not explicitly state whether outstanding requests submitted before week 1 exist.",
-      "details": "Only the initial stock and requests submitted during weeks 1 through 5 are described. No prehorizon delivery pipeline is supplied.",
+      "id": "UNRESOLVED_TERMINAL_STORAGE_CHARGE",
+      "issue": "Storage cost is described for plasma kept from one week to the next. This supports charging carryover after weeks 1 through 4, but the text does not explicitly state whether terminal stock after week 5 incurs any additional charge or salvage value.",
       "source_spans": [
-        {
-          "text": "The initial stock available at the start of the schedule is 33 liters."
-        },
-        {
-          "text": "In each week t = 1, ..., 5, the pharmaceutical supplier permits the hospital to submit a request"
-        }
-      ]
-    },
-    {
-      "id": "U_POSTHORIZON_DELIVERIES",
-      "issue": "The treatment of deliveries occurring after week 5 is not stated.",
-      "details": "With a four-week lead time, requests made in weeks 2 through 5 would not become usable during the five-week horizon under the natural week-offset interpretation. The text does not specify posthorizon inventory accounting or terminal value.",
-      "source_spans": [
-        {
-          "text": "across a 5-week schedule"
-        },
-        {
-          "text": "each request submitted requires a lead time of 4 week(s) for delivery"
-        }
+        "the storage cost, amounting to 1 per liter of plasma kept from one week to the next"
       ]
     }
   ],
   "annotation_warnings": [
     {
-      "id": "W_LEAD_TIME_INDEX_INTERPRETATION",
-      "message": "The temporal incidence uses the natural interpretation that a request in week s first becomes usable in week s+4. The source gives the lead-time duration but does not explicitly define intraweek timing."
-    },
-    {
-      "id": "W_NO_TERMINAL_RULE",
-      "message": "No terminal inventory target, salvage value, disposal requirement, or terminal backlog condition is stated; none has been added."
+      "id": "WARN_CAPACITY_TIMING_CONFIDENCE",
+      "message": "The storage-capacity family is source-grounded, but its concrete incidence with arriving requests has medium confidence because intraweek event timing is not fully specified."
     }
   ]
 }

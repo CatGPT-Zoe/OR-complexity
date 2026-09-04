@@ -1,10 +1,11 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "IndustryOR_Hard_036_vrp",
+  "dataset": "IndustryOR",
   "layer": "semantic",
   "sets": [
     {
-      "id": "S_CUSTOMERS",
+      "id": "SET_CUSTOMERS",
       "canonical_name": "customers",
       "members": [
         1,
@@ -28,25 +29,47 @@
         19,
         20
       ],
-      "source_grounding": "There are 20 customers requiring delivery service on the day."
+      "cardinality": 20
     },
     {
-      "id": "S_DEPOTS",
+      "id": "SET_DEPOTS",
       "canonical_name": "depots",
       "members": [
         0
       ],
-      "source_grounding": "Central Depot (Depot 0)."
+      "cardinality": 1
     },
     {
-      "id": "S_NODES",
-      "canonical_name": "routing_nodes",
-      "defined_as": "S_DEPOTS union S_CUSTOMERS",
-      "source_grounding": "There is a set of customer locations and a central depot."
+      "id": "SET_NODES",
+      "canonical_name": "routing nodes",
+      "members": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "cardinality": 21
     },
     {
-      "id": "S_TRUCKS",
-      "canonical_name": "available_trucks",
+      "id": "SET_AVAILABLE_TRUCKS",
+      "canonical_name": "available trucks",
       "members": [
         1,
         2,
@@ -54,44 +77,79 @@
         4,
         5
       ],
-      "source_grounding": "The company can use at most 5 trucks."
+      "cardinality": 5
     },
     {
-      "id": "S_ROUTE_ENDPOINT_ROLES",
-      "canonical_name": "route_endpoint_roles",
+      "id": "SET_DEPOT_EVENT_TYPES",
+      "canonical_name": "depot event types",
       "members": [
         "departure",
         "return"
       ],
-      "source_grounding": "Vehicles must start from the depot and return to the depot."
+      "cardinality": 2
+    },
+    {
+      "id": "SET_DIRECTED_LEGS",
+      "canonical_name": "candidate directed routing legs",
+      "cardinality": 420,
+      "definition": "Ordered node pairs (i,j) with i and j in SET_NODES and i != j."
     }
   ],
   "parameters": [
     {
-      "id": "P_DEPOT_NODE",
-      "canonical_name": "central_depot_node",
-      "value": 0,
-      "source_grounding": "Central Depot (Depot 0)."
-    },
-    {
-      "id": "P_MAX_TRUCKS",
-      "canonical_name": "maximum_number_of_trucks_used",
+      "id": "PAR_MAX_TRUCKS",
+      "canonical_name": "maximum number of trucks",
       "value": 5,
       "unit": "trucks",
-      "source_grounding": "The company can use at most 5 trucks."
+      "source_spans": [
+        "The company can use at most 5 trucks"
+      ]
     },
     {
-      "id": "P_TRUCK_CAPACITY",
-      "canonical_name": "truck_capacity",
+      "id": "PAR_TRUCK_CAPACITY",
+      "canonical_name": "truck capacity",
       "value": 200,
       "unit": "units",
-      "scope": "each truck",
-      "source_grounding": "The capacity of each truck is 200 units."
+      "source_spans": [
+        "the capacity of each truck is 200 units",
+        "The total demand of all customers on a single route must not exceed the truck's maximum capacity (200 units)."
+      ]
     },
     {
-      "id": "P_COORDINATE",
-      "canonical_name": "node_coordinates",
-      "index_set": "S_NODES",
+      "id": "PAR_CUSTOMER_DEMAND",
+      "canonical_name": "customer demand",
+      "index_set": "SET_CUSTOMERS",
+      "unit": "units",
+      "values": {
+        "1": 10,
+        "2": 30,
+        "3": 10,
+        "4": 10,
+        "5": 10,
+        "6": 20,
+        "7": 20,
+        "8": 20,
+        "9": 10,
+        "10": 10,
+        "11": 10,
+        "12": 20,
+        "13": 30,
+        "14": 10,
+        "15": 40,
+        "16": 40,
+        "17": 20,
+        "18": 20,
+        "19": 10,
+        "20": 10
+      },
+      "source_spans": [
+        "The coordinates, demand, service time window, and service duration for each customer are shown in the table below."
+      ]
+    },
+    {
+      "id": "PAR_NODE_COORDINATES",
+      "canonical_name": "node coordinates",
+      "index_set": "SET_NODES",
       "values": {
         "0": [
           40,
@@ -178,41 +236,15 @@
           50
         ]
       },
-      "source_grounding": "The coordinates ... for each customer are shown in the table; Central Depot coordinates: (40, 50)."
+      "source_spans": [
+        "Coordinates: (40, 50)",
+        "The coordinates, demand, service time window, and service duration for each customer are shown in the table below."
+      ]
     },
     {
-      "id": "P_CUSTOMER_DEMAND",
-      "canonical_name": "customer_demand",
-      "index_set": "S_CUSTOMERS",
-      "unit": "units",
-      "values": {
-        "1": 10,
-        "2": 30,
-        "3": 10,
-        "4": 10,
-        "5": 10,
-        "6": 20,
-        "7": 20,
-        "8": 20,
-        "9": 10,
-        "10": 10,
-        "11": 10,
-        "12": 20,
-        "13": 30,
-        "14": 10,
-        "15": 40,
-        "16": 40,
-        "17": 20,
-        "18": 20,
-        "19": 10,
-        "20": 10
-      },
-      "source_grounding": "The demands of all customers must be met; the customer table provides each demand."
-    },
-    {
-      "id": "P_TIME_WINDOW_OPEN",
-      "canonical_name": "customer_time_window_opening",
-      "index_set": "S_CUSTOMERS",
+      "id": "PAR_CUSTOMER_WINDOW_OPEN",
+      "canonical_name": "customer time-window opening",
+      "index_set": "SET_CUSTOMERS",
       "unit": "minutes",
       "values": {
         "1": 912,
@@ -236,12 +268,14 @@
         "19": 278,
         "20": 10
       },
-      "source_grounding": "Each customer has a strict hard time window; the table provides each opening time."
+      "source_spans": [
+        "Each customer has a strict 'hard time window.' Service must begin within this specified time window."
+      ]
     },
     {
-      "id": "P_TIME_WINDOW_CLOSE",
-      "canonical_name": "customer_time_window_closing",
-      "index_set": "S_CUSTOMERS",
+      "id": "PAR_CUSTOMER_WINDOW_CLOSE",
+      "canonical_name": "customer time-window closing",
+      "index_set": "SET_CUSTOMERS",
       "unit": "minutes",
       "values": {
         "1": 967,
@@ -265,493 +299,1109 @@
         "19": 345,
         "20": 73
       },
-      "source_grounding": "Each customer has a strict hard time window; the table provides each closing time."
+      "source_spans": [
+        "Each customer has a strict 'hard time window.' Service must begin within this specified time window."
+      ]
     },
     {
-      "id": "P_SERVICE_DURATION",
-      "canonical_name": "customer_service_duration",
-      "index_set": "S_CUSTOMERS",
+      "id": "PAR_SERVICE_DURATION",
+      "canonical_name": "customer service duration",
+      "index_set": "SET_CUSTOMERS",
       "unit": "minutes",
-      "uniform_value": 90,
-      "source_grounding": "A fixed service time of 90 minutes is required ... at each customer location."
+      "default_value": 90,
+      "source_spans": [
+        "a fixed service time of 90 minutes is required for unloading, handover, and paperwork at each customer location"
+      ]
     },
     {
-      "id": "P_DEPOT_WINDOW_OPEN",
-      "canonical_name": "depot_operating_window_opening",
+      "id": "PAR_DEPOT_WINDOW_OPEN",
+      "canonical_name": "depot operating-window opening",
       "value": 0,
       "unit": "minutes",
-      "source_grounding": "Central Depot (Depot 0): Operating Time Window: [0, 1236] (minutes)."
+      "source_spans": [
+        "Operating Time Window: [0, 1236] (minutes)"
+      ]
     },
     {
-      "id": "P_DEPOT_WINDOW_CLOSE",
-      "canonical_name": "depot_operating_window_closing",
+      "id": "PAR_DEPOT_WINDOW_CLOSE",
+      "canonical_name": "depot operating-window closing",
       "value": 1236,
       "unit": "minutes",
-      "source_grounding": "Central Depot (Depot 0): Operating Time Window: [0, 1236] (minutes)."
+      "source_spans": [
+        "Operating Time Window: [0, 1236] (minutes)"
+      ]
     },
     {
-      "id": "P_ARC_DISTANCE",
-      "canonical_name": "travel_distance_between_nodes",
-      "index_domain": [
-        "S_NODES",
-        "S_NODES"
-      ],
-      "status": "required_but_metric_unspecified",
-      "source_grounding": "The company's objective is to minimize the total distance traveled by all vehicles; node coordinates are supplied."
+      "id": "PAR_LEG_DISTANCE",
+      "canonical_name": "distance of a directed routing leg",
+      "index_set": "SET_DIRECTED_LEGS",
+      "unit": "unspecified distance units",
+      "derivation_status": "requires distance convention from coordinates",
+      "source_spans": [
+        "minimize the total distance traveled by all vehicles"
+      ]
     },
     {
-      "id": "P_TRAVEL_TIME",
-      "canonical_name": "travel_time_between_nodes",
-      "index_domain": [
-        "S_NODES",
-        "S_NODES"
-      ],
+      "id": "PAR_LEG_TRAVEL_TIME",
+      "canonical_name": "travel time of a directed routing leg",
+      "index_set": "SET_DIRECTED_LEGS",
       "unit": "minutes",
-      "status": "required_but_not_supplied",
-      "source_grounding": "Routes must respect hard service time windows and known service durations, but no inter-node travel-time data or conversion rule is stated."
+      "derivation_status": "not specified",
+      "source_spans": [
+        "Vehicles must start from the depot and return to the depot, following continuous paths.",
+        "Service must begin within this specified time window."
+      ]
     }
   ],
   "entities": [
     {
-      "id": "E_VEHICLE_USE",
-      "canonical_family": "vehicle_deployment",
-      "canonical_name": "truck_used",
+      "id": "ENT_ROUTE_LEG_TRAVERSAL",
+      "canonical_name": "truck traversal of a directed routing leg",
       "entity_role": "decision",
-      "argument_roles": [
-        "truck"
+      "index_signature": [
+        {
+          "role": "truck",
+          "set_id": "SET_AVAILABLE_TRUCKS"
+        },
+        {
+          "role": "leg",
+          "set_id": "SET_DIRECTED_LEGS"
+        }
       ],
-      "domain_metadata": {
-        "logical_nature": "selection"
-      },
-      "source_grounding": "The distribution center needs to dispatch a fleet of vehicles; the company can use at most 5 trucks.",
+      "instance_level": true,
+      "source_status": "implicit_required",
       "source_spans": [
-        "dispatch a fleet of vehicles",
-        "can use at most 5 trucks"
-      ]
+        "The distribution center needs to dispatch a fleet of vehicles and design appropriate delivery routes",
+        "Vehicles must start from the depot and return to the depot, following continuous paths."
+      ],
+      "confidence": "high",
+      "semantic_type": "route_selection",
+      "value_domain": "binary"
     },
     {
-      "id": "E_ROUTE_TRAVERSAL",
-      "canonical_family": "vehicle_route_traversal",
-      "canonical_name": "truck_traverses_directed_route_leg",
+      "id": "ENT_VEHICLE_USE",
+      "canonical_name": "truck use",
       "entity_role": "decision",
-      "argument_roles": [
-        "truck",
-        "origin_node",
-        "destination_node"
+      "index_signature": [
+        {
+          "role": "truck",
+          "set_id": "SET_AVAILABLE_TRUCKS"
+        }
       ],
-      "domain_metadata": {
-        "logical_nature": "route selection"
-      },
-      "source_grounding": "Vehicles must start from the depot and return to the depot, following continuous paths.",
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
-        "design appropriate delivery routes",
-        "following continuous paths"
-      ]
+        "The company can use at most 5 trucks"
+      ],
+      "confidence": "high",
+      "semantic_type": "resource_activation",
+      "value_domain": "binary"
     },
     {
-      "id": "E_CUSTOMER_SERVICE",
-      "canonical_family": "customer_service_assignment",
-      "canonical_name": "customer_served_by_truck",
+      "id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+      "canonical_name": "assignment of a customer to a serving truck",
       "entity_role": "service_outcome",
-      "argument_roles": [
-        "customer",
-        "truck"
+      "index_signature": [
+        {
+          "role": "truck",
+          "set_id": "SET_AVAILABLE_TRUCKS"
+        },
+        {
+          "role": "customer",
+          "set_id": "SET_CUSTOMERS"
+        }
       ],
-      "domain_metadata": {
-        "logical_nature": "assignment"
-      },
-      "source_grounding": "Each customer must be served by exactly one vehicle.",
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
         "Each customer must be served by exactly one vehicle"
-      ]
+      ],
+      "confidence": "high",
+      "semantic_type": "service_assignment",
+      "value_domain": "binary"
     },
     {
-      "id": "E_DELIVERY_QUANTITY",
-      "canonical_family": "delivered_quantity",
-      "canonical_name": "quantity_delivered_to_customer_by_truck",
-      "entity_role": "derived_flow",
-      "argument_roles": [
-        "customer",
-        "truck"
+      "id": "ENT_CUSTOMER_SERVICE_START",
+      "canonical_name": "customer service start time by truck",
+      "entity_role": "decision",
+      "index_signature": [
+        {
+          "role": "truck",
+          "set_id": "SET_AVAILABLE_TRUCKS"
+        },
+        {
+          "role": "customer",
+          "set_id": "SET_CUSTOMERS"
+        }
       ],
-      "domain_metadata": {
-        "unit": "units"
-      },
-      "source_grounding": "There are 20 customers requiring delivery service on the day, and the demands of all customers must be met.",
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
-        "demands of all customers must be met"
-      ]
-    },
-    {
-      "id": "E_NODE_EVENT_TIME",
-      "canonical_family": "vehicle_node_event_time",
-      "canonical_name": "scheduled_vehicle_event_time_at_node",
-      "entity_role": "state",
-      "argument_roles": [
-        "truck",
-        "node",
-        "event_role"
-      ],
-      "domain_metadata": {
-        "unit": "minutes",
-        "event_roles": [
-          "arrival",
-          "departure",
-          "return"
-        ]
-      },
-      "source_grounding": "A vehicle can arrive at a customer location early and wait; vehicles must start from and return to the depot.",
-      "source_spans": [
-        "A vehicle can arrive at a customer location early",
-        "Vehicles must start from the depot and return to the depot"
-      ]
-    },
-    {
-      "id": "E_SERVICE_START_TIME",
-      "canonical_family": "customer_service_start_time",
-      "canonical_name": "scheduled_service_start_time",
-      "entity_role": "state",
-      "argument_roles": [
-        "customer",
-        "truck"
-      ],
-      "domain_metadata": {
-        "unit": "minutes"
-      },
-      "source_grounding": "Service can only begin within the time window.",
-      "source_spans": [
-        "Service must begin within this specified time window",
+        "Service must begin within this specified time window.",
         "Service can only begin within the time window"
-      ]
+      ],
+      "confidence": "high",
+      "semantic_type": "scheduled_time",
+      "value_domain": "continuous",
+      "unit": "minutes"
+    },
+    {
+      "id": "ENT_DEPOT_EVENT_TIME",
+      "canonical_name": "truck depot departure or return time",
+      "entity_role": "decision",
+      "index_signature": [
+        {
+          "role": "truck",
+          "set_id": "SET_AVAILABLE_TRUCKS"
+        },
+        {
+          "role": "event_type",
+          "set_id": "SET_DEPOT_EVENT_TYPES"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "Vehicles must start from the depot and return to the depot",
+        "Operating Time Window: [0, 1236] (minutes)"
+      ],
+      "confidence": "high",
+      "semantic_type": "scheduled_time",
+      "value_domain": "continuous",
+      "unit": "minutes"
     }
   ],
   "objective": {
-    "id": "OBJ_TOTAL_DISTANCE",
-    "canonical_family": "minimize_total_route_distance",
+    "canonical_name": "minimize total distance traveled by all trucks",
     "sense": "minimize",
-    "normalized_semantics": "Minimize the aggregate distance of all route legs traversed by all deployed trucks.",
-    "support_entity_ids": [
-      "E_ROUTE_TRAVERSAL"
+    "normalized_semantics": "Minimize the sum of leg distance over all directed legs traversed by all trucks.",
+    "entity_refs": [
+      "ENT_ROUTE_LEG_TRAVERSAL"
     ],
     "parameter_refs": [
-      "P_ARC_DISTANCE"
+      "PAR_LEG_DISTANCE"
     ],
-    "source_grounding": "The company's objective is to minimize the total distance traveled by all vehicles to reduce operational costs.",
     "source_spans": [
-      "minimize the total distance traveled by all vehicles"
+      "the company's objective is to minimize the total distance traveled by all vehicles",
+      "minimize travel costs"
     ],
-    "source_status": "explicit"
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "O_CUSTOMER_EXACTLY_ONE_SERVICE",
-      "canonical_family": "exactly_one_vehicle_per_customer",
-      "canonical_name": "customer_exactly_once_service",
+      "id": "OBL_EXACTLY_ONE_TRUCK_PER_CUSTOMER",
+      "canonical_family": "CUSTOMER_EXACT_SERVICE_ASSIGNMENT",
+      "canonical_name": "each customer is served by exactly one truck",
       "structural_form": "ASSIGNMENT",
-      "business_role": "customer coverage",
-      "normalized_semantics": "Every customer is assigned to and served by exactly one truck.",
+      "business_role": "customer_service",
+      "normalized_semantics": "For every customer c, exactly one truck v is assigned to serve c.",
       "support_entity_ids": [
-        "E_CUSTOMER_SERVICE"
+        "ENT_CUSTOMER_SERVICE_ASSIGNMENT"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_CUSTOMER_SERVICE",
-          "roles": [
-            "customer",
-            "truck"
-          ]
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "arguments": [
+            "truck",
+            "customer"
+          ],
+          "aggregation": "over trucks for a fixed customer"
         }
       ],
       "quantifier": "for every customer",
       "scope_kind": "customer",
       "parameter_refs": [],
-      "source_grounding": "Each customer must be served by exactly one vehicle.",
+      "source_grounding": {
+        "rule": "Unique service assignment is explicitly required."
+      },
       "source_spans": [
-        "Each customer must be served by exactly one vehicle"
+        "Each customer must be served by exactly one vehicle",
+        "There are 20 customers requiring delivery service on the day, and the demands of all customers must be met."
       ],
-      "confidence": 1.0,
-      "coupling_active": false,
-      "source_status": "explicit"
-    },
-    {
-      "id": "O_DEMAND_FULFILLMENT",
-      "canonical_family": "customer_demand_fulfillment",
-      "canonical_name": "deliver_full_customer_demand",
-      "structural_form": "EQUALITY",
-      "business_role": "demand satisfaction",
-      "normalized_semantics": "The total quantity delivered to each customer across trucks equals that customer's stated demand.",
-      "support_entity_ids": [
-        "E_DELIVERY_QUANTITY"
-      ],
-      "incidence_slots": [
+      "instance_quantifier": "for c in SET_CUSTOMERS",
+      "incidence_instances": [
         {
-          "entity_id": "E_DELIVERY_QUANTITY",
-          "roles": [
-            "customer",
-            "truck"
-          ],
-          "aggregation": "across trucks"
-        }
-      ],
-      "quantifier": "for every customer",
-      "scope_kind": "customer",
-      "parameter_refs": [
-        "P_CUSTOMER_DEMAND"
-      ],
-      "source_grounding": "The demands of all customers must be met.",
-      "source_spans": [
-        "the demands of all customers must be met",
-        "fulfill the demands of all customers"
-      ],
-      "confidence": 1.0,
-      "coupling_active": false,
-      "source_status": "explicit"
-    },
-    {
-      "id": "O_DELIVERY_REQUIRES_SERVICE",
-      "canonical_family": "delivery_service_consistency",
-      "canonical_name": "delivery_quantity_only_for_serving_truck",
-      "structural_form": "ACTIVATION_LINK",
-      "business_role": "delivery-assignment consistency",
-      "normalized_semantics": "A truck may deliver customer demand only when that truck is the vehicle serving the customer.",
-      "support_entity_ids": [
-        "E_DELIVERY_QUANTITY",
-        "E_CUSTOMER_SERVICE"
-      ],
-      "incidence_slots": [
-        {
-          "entity_id": "E_DELIVERY_QUANTITY",
-          "roles": [
-            "customer",
-            "truck"
-          ]
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 1,
+            "customer": 1
+          }
         },
         {
-          "entity_id": "E_CUSTOMER_SERVICE",
-          "roles": [
-            "same customer",
-            "same truck"
-          ]
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 2,
+            "customer": 1
+          }
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 3,
+            "customer": 1
+          }
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 4,
+            "customer": 1
+          }
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 5,
+            "customer": 1
+          }
         }
       ],
-      "quantifier": "for every customer and truck",
-      "scope_kind": "customer_vehicle",
-      "parameter_refs": [
-        "P_CUSTOMER_DEMAND"
-      ],
-      "source_grounding": "The distribution center dispatches vehicles to provide delivery service and fulfill customer demands; each customer is served by one vehicle.",
-      "source_spans": [
-        "dispatch a fleet of vehicles and design appropriate delivery routes to fulfill the demands",
-        "Each customer must be served by exactly one vehicle"
-      ],
-      "confidence": 0.94,
+      "intra_entity_instance_coupling": true,
       "coupling_active": true,
-      "source_status": "semantically explicit"
+      "confidence": "high"
     },
     {
-      "id": "O_MAXIMUM_TRUCKS_USED",
-      "canonical_family": "fleet_usage_upper_bound",
-      "canonical_name": "use_at_most_available_trucks",
-      "structural_form": "AGGREGATE_LIMIT",
-      "business_role": "fleet availability",
-      "normalized_semantics": "The number of deployed trucks cannot exceed five.",
+      "id": "OBL_FLEET_SIZE_LIMIT",
+      "canonical_family": "MAXIMUM_ACTIVE_VEHICLES",
+      "canonical_name": "at most five trucks may be used",
+      "structural_form": "CARDINALITY",
+      "business_role": "fleet_availability",
+      "normalized_semantics": "The number of used trucks must not exceed PAR_MAX_TRUCKS.",
       "support_entity_ids": [
-        "E_VEHICLE_USE"
+        "ENT_VEHICLE_USE"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_VEHICLE_USE",
-          "roles": [
+          "entity_id": "ENT_VEHICLE_USE",
+          "arguments": [
             "truck"
           ],
-          "aggregation": "count deployed trucks"
+          "aggregation": "over available trucks"
         }
       ],
-      "quantifier": "instance-wide",
+      "quantifier": "single fleet-wide limit",
       "scope_kind": "fleet",
       "parameter_refs": [
-        "P_MAX_TRUCKS"
+        "PAR_MAX_TRUCKS"
       ],
-      "source_grounding": "The company can use at most 5 trucks.",
+      "source_grounding": {
+        "rule": "The available fleet is explicitly capped."
+      },
       "source_spans": [
-        "can use at most 5 trucks"
+        "The company can use at most 5 trucks"
       ],
-      "confidence": 1.0,
-      "coupling_active": false,
-      "source_status": "explicit"
-    },
-    {
-      "id": "O_TRAVERSAL_REQUIRES_DEPLOYMENT",
-      "canonical_family": "route_deployment_activation",
-      "canonical_name": "route_legs_only_for_deployed_trucks",
-      "structural_form": "ACTIVATION_LINK",
-      "business_role": "vehicle-route consistency",
-      "normalized_semantics": "A truck can traverse route legs only if it is deployed.",
-      "support_entity_ids": [
-        "E_ROUTE_TRAVERSAL",
-        "E_VEHICLE_USE"
-      ],
-      "incidence_slots": [
+      "instance_quantifier": "one aggregate edge over v in SET_AVAILABLE_TRUCKS",
+      "incidence_instances": [
         {
-          "entity_id": "E_ROUTE_TRAVERSAL",
-          "roles": [
-            "truck",
-            "origin_node",
-            "destination_node"
-          ]
+          "entity_id": "ENT_VEHICLE_USE",
+          "binding": {
+            "truck": 1
+          }
         },
         {
-          "entity_id": "E_VEHICLE_USE",
-          "roles": [
-            "same truck"
-          ]
+          "entity_id": "ENT_VEHICLE_USE",
+          "binding": {
+            "truck": 2
+          }
+        },
+        {
+          "entity_id": "ENT_VEHICLE_USE",
+          "binding": {
+            "truck": 3
+          }
+        },
+        {
+          "entity_id": "ENT_VEHICLE_USE",
+          "binding": {
+            "truck": 4
+          }
+        },
+        {
+          "entity_id": "ENT_VEHICLE_USE",
+          "binding": {
+            "truck": 5
+          }
         }
       ],
-      "quantifier": "for every truck and potential route leg",
-      "scope_kind": "vehicle_route",
-      "parameter_refs": [],
-      "source_grounding": "The distribution center needs to dispatch a fleet of vehicles and design appropriate delivery routes.",
-      "source_spans": [
-        "dispatch a fleet of vehicles and design appropriate delivery routes"
-      ],
-      "confidence": 0.98,
+      "intra_entity_instance_coupling": true,
       "coupling_active": true,
-      "source_status": "semantically explicit"
+      "confidence": "high"
     },
     {
-      "id": "O_ROUTE_STARTS_AT_DEPOT",
-      "canonical_family": "depot_origin_requirement",
-      "canonical_name": "deployed_route_starts_at_depot",
-      "structural_form": "IMPLICATION",
-      "business_role": "route origin",
-      "normalized_semantics": "Every deployed truck's route begins at the central depot.",
+      "id": "OBL_ROUTE_CAPACITY",
+      "canonical_family": "VEHICLE_ROUTE_DEMAND_CAPACITY",
+      "canonical_name": "total customer demand on each truck route respects capacity",
+      "structural_form": "AGGREGATE_LIMIT",
+      "business_role": "vehicle_capacity",
+      "normalized_semantics": "For each truck v, the sum of demands of customers assigned to v must not exceed 200 units.",
       "support_entity_ids": [
-        "E_VEHICLE_USE",
-        "E_ROUTE_TRAVERSAL"
+        "ENT_CUSTOMER_SERVICE_ASSIGNMENT"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_VEHICLE_USE",
-          "roles": [
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "arguments": [
+            "truck",
+            "customer"
+          ],
+          "aggregation": "demand-weighted sum over customers for a fixed truck"
+        }
+      ],
+      "quantifier": "for every truck",
+      "scope_kind": "vehicle_route",
+      "parameter_refs": [
+        "PAR_CUSTOMER_DEMAND",
+        "PAR_TRUCK_CAPACITY"
+      ],
+      "source_grounding": {
+        "rule": "Demand loaded onto any one route may not exceed truck capacity."
+      },
+      "source_spans": [
+        "The total demand of all customers on a single route must not exceed the truck's maximum capacity (200 units)."
+      ],
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 1,
+            "customer": "c in SET_CUSTOMERS"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_USED_TRUCK_DEPOT_DEPARTURE",
+      "canonical_family": "USED_VEHICLE_DEPOT_ORIGIN",
+      "canonical_name": "each used truck starts its route at the depot",
+      "structural_form": "ACTIVATION_LINK",
+      "business_role": "route_origin",
+      "normalized_semantics": "For each truck, truck use is equivalent to having one route departure from depot 0.",
+      "support_entity_ids": [
+        "ENT_VEHICLE_USE",
+        "ENT_ROUTE_LEG_TRAVERSAL"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_VEHICLE_USE",
+          "arguments": [
             "truck"
           ]
         },
         {
-          "entity_id": "E_ROUTE_TRAVERSAL",
-          "roles": [
-            "same truck",
-            "origin depot",
-            "first destination"
-          ]
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "arguments": [
+            "truck",
+            "(0,j)"
+          ],
+          "aggregation": "outgoing legs from depot 0"
         }
       ],
-      "quantifier": "for every deployed truck",
-      "scope_kind": "route",
-      "parameter_refs": [
-        "P_DEPOT_NODE"
-      ],
-      "source_grounding": "Vehicles must start from the depot.",
+      "quantifier": "for every truck",
+      "scope_kind": "vehicle_route",
+      "parameter_refs": [],
+      "source_grounding": {
+        "rule": "Every operated vehicle route must originate at the central depot."
+      },
       "source_spans": [
         "Vehicles must start from the depot"
       ],
-      "confidence": 1.0,
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_VEHICLE_USE",
+          "binding": {
+            "truck": 1
+          }
+        },
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "binding": {
+            "truck": 1,
+            "leg": "(0,j), j in SET_CUSTOMERS"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
       "coupling_active": true,
-      "source_status": "explicit"
+      "confidence": "high"
     },
     {
-      "id": "O_ROUTE_RETURNS_TO_DEPOT",
-      "canonical_family": "depot_return_requirement",
-      "canonical_name": "deployed_route_returns_to_depot",
-      "structural_form": "IMPLICATION",
-      "business_role": "route destination",
-      "normalized_semantics": "Every deployed truck's route ends by returning to the central depot.",
+      "id": "OBL_USED_TRUCK_DEPOT_RETURN",
+      "canonical_family": "USED_VEHICLE_DEPOT_RETURN",
+      "canonical_name": "each used truck returns to the depot",
+      "structural_form": "ACTIVATION_LINK",
+      "business_role": "route_return",
+      "normalized_semantics": "For each truck, truck use is equivalent to having one route return to depot 0.",
       "support_entity_ids": [
-        "E_VEHICLE_USE",
-        "E_ROUTE_TRAVERSAL"
+        "ENT_VEHICLE_USE",
+        "ENT_ROUTE_LEG_TRAVERSAL"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_VEHICLE_USE",
-          "roles": [
+          "entity_id": "ENT_VEHICLE_USE",
+          "arguments": [
             "truck"
           ]
         },
         {
-          "entity_id": "E_ROUTE_TRAVERSAL",
-          "roles": [
-            "same truck",
-            "last origin",
-            "destination depot"
-          ]
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "arguments": [
+            "truck",
+            "(i,0)"
+          ],
+          "aggregation": "incoming legs to depot 0"
         }
       ],
-      "quantifier": "for every deployed truck",
-      "scope_kind": "route",
-      "parameter_refs": [
-        "P_DEPOT_NODE"
-      ],
-      "source_grounding": "Vehicles must ... return to the depot.",
+      "quantifier": "for every truck",
+      "scope_kind": "vehicle_route",
+      "parameter_refs": [],
+      "source_grounding": {
+        "rule": "Every operated vehicle route must terminate at the central depot."
+      },
       "source_spans": [
-        "return to the depot"
+        "Vehicles must start from the depot and return to the depot"
       ],
-      "confidence": 1.0,
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_VEHICLE_USE",
+          "binding": {
+            "truck": 1
+          }
+        },
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "binding": {
+            "truck": 1,
+            "leg": "(i,0), i in SET_CUSTOMERS"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
       "coupling_active": true,
-      "source_status": "explicit"
+      "confidence": "high"
     },
     {
-      "id": "O_ROUTE_CONTINUITY",
-      "canonical_family": "vehicle_route_continuity",
-      "canonical_name": "continuous_vehicle_paths",
+      "id": "OBL_ROUTE_CONTINUITY",
+      "canonical_family": "VEHICLE_ROUTE_FLOW_CONTINUITY",
+      "canonical_name": "truck routes form continuous paths through visited customers",
       "structural_form": "BALANCE",
-      "business_role": "route connectivity",
-      "normalized_semantics": "The selected route legs for each truck form a continuous depot-anchored path rather than disconnected route fragments.",
+      "business_role": "route_continuity",
+      "normalized_semantics": "For every truck and customer, the number of selected incoming route legs equals the number of selected outgoing route legs.",
       "support_entity_ids": [
-        "E_ROUTE_TRAVERSAL"
+        "ENT_ROUTE_LEG_TRAVERSAL"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_ROUTE_TRAVERSAL",
-          "roles": [
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "arguments": [
             "truck",
-            "incoming leg at node",
-            "outgoing leg at same node"
-          ]
+            "(i,customer)"
+          ],
+          "aggregation": "incoming legs"
+        },
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "arguments": [
+            "truck",
+            "(customer,j)"
+          ],
+          "aggregation": "outgoing legs"
         }
       ],
-      "quantifier": "for every truck and intermediate visited node",
-      "scope_kind": "vehicle_node",
-      "parameter_refs": [
-        "P_DEPOT_NODE"
-      ],
-      "source_grounding": "Vehicles must start from the depot and return to the depot, following continuous paths.",
+      "quantifier": "for every truck and customer",
+      "scope_kind": "vehicle_customer",
+      "parameter_refs": [],
+      "source_grounding": {
+        "rule": "Selected movements for each truck must connect continuously."
+      },
       "source_spans": [
         "following continuous paths"
       ],
-      "confidence": 1.0,
-      "coupling_active": false,
-      "source_status": "explicit"
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS and c in SET_CUSTOMERS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "binding": {
+            "truck": 1,
+            "leg": "(i,1), i in SET_NODES excluding 1"
+          }
+        },
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "binding": {
+            "truck": 1,
+            "leg": "(1,j), j in SET_NODES excluding 1"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "high"
     },
     {
-      "id": "O_SERVICE_ROUTE_CONSISTENCY",
-      "canonical_family": "served_customer_route_incidence",
-      "canonical_name": "serving_truck_visits_customer",
+      "id": "OBL_ASSIGNMENT_ROUTE_REALIZATION",
+      "canonical_family": "CUSTOMER_ASSIGNMENT_VISIT_LINK",
+      "canonical_name": "a truck assigned to a customer must route through that customer",
       "structural_form": "ACTIVATION_LINK",
-      "business_role": "service-route consistency",
-      "normalized_semantics": "If a truck serves a customer, that customer must be included on the continuous route followed by that truck.",
+      "business_role": "service_route_consistency",
+      "normalized_semantics": "For each truck and customer, assignment of that customer to the truck is equivalent to one selected incoming leg of that truck at the customer.",
       "support_entity_ids": [
-        "E_CUSTOMER_SERVICE",
-        "E_ROUTE_TRAVERSAL"
+        "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+        "ENT_ROUTE_LEG_TRAVERSAL"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_CUSTOMER_SERVICE",
-          "roles": [
-            "customer",
-            "truck"
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "arguments": [
+            "truck",
+            "customer"
           ]
         },
         {
-          "entity_id": "E_ROUTE_TRAVERSAL",
-          "roles": [
-            "same truck",
-            "route leg incident to same customer
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "arguments": [
+            "truck",
+            "(i,customer)"
+          ],
+          "aggregation": "incoming legs to the customer"
+        }
+      ],
+      "quantifier": "for every truck and customer",
+      "scope_kind": "vehicle_customer",
+      "parameter_refs": [],
+      "source_grounding": {
+        "rule": "Customer service by a truck must be realized by that truck's delivery route."
+      },
+      "source_spans": [
+        "The distribution center needs to dispatch a fleet of vehicles and design appropriate delivery routes to fulfill the demands of all customers.",
+        "Each customer must be served by exactly one vehicle"
+      ],
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS and c in SET_CUSTOMERS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 1,
+            "customer": 1
+          }
+        },
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "binding": {
+            "truck": 1,
+            "leg": "(i,1), i in SET_NODES excluding 1"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_SERVICE_WINDOW_OPENING",
+      "canonical_family": "HARD_SERVICE_START_LOWER_BOUND",
+      "canonical_name": "service cannot begin before the customer time window opens",
+      "structural_form": "LOWER_BOUND",
+      "business_role": "hard_time_window",
+      "normalized_semantics": "If truck v serves customer c, its service start at c must be no earlier than the opening time of c.",
+      "support_entity_ids": [
+        "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+        "ENT_CUSTOMER_SERVICE_START"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "arguments": [
+            "truck",
+            "customer"
+          ],
+          "role": "condition"
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "arguments": [
+            "truck",
+            "customer"
+          ],
+          "role": "bounded event"
+        }
+      ],
+      "quantifier": "for every truck and customer",
+      "scope_kind": "vehicle_customer",
+      "parameter_refs": [
+        "PAR_CUSTOMER_WINDOW_OPEN"
+      ],
+      "source_grounding": {
+        "rule": "Hard-window service may not start before the opening time; early arrivals wait."
+      },
+      "source_spans": [
+        "Service must begin within this specified time window.",
+        "Early arrivals must wait"
+      ],
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS and c in SET_CUSTOMERS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 1,
+            "customer": 1
+          }
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "binding": {
+            "truck": 1,
+            "customer": 1
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_SERVICE_WINDOW_CLOSING",
+      "canonical_family": "HARD_SERVICE_START_UPPER_BOUND",
+      "canonical_name": "service cannot begin after the customer time window closes",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "hard_time_window",
+      "normalized_semantics": "If truck v serves customer c, its service start at c must be no later than the closing time of c.",
+      "support_entity_ids": [
+        "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+        "ENT_CUSTOMER_SERVICE_START"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "arguments": [
+            "truck",
+            "customer"
+          ],
+          "role": "condition"
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "arguments": [
+            "truck",
+            "customer"
+          ],
+          "role": "bounded event"
+        }
+      ],
+      "quantifier": "for every truck and customer",
+      "scope_kind": "vehicle_customer",
+      "parameter_refs": [
+        "PAR_CUSTOMER_WINDOW_CLOSE"
+      ],
+      "source_grounding": {
+        "rule": "The hard-window closing time is mandatory and late service starts are forbidden."
+      },
+      "source_spans": [
+        "Service must begin within this specified time window.",
+        "late arrivals are not permitted"
+      ],
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS and c in SET_CUSTOMERS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+          "binding": {
+            "truck": 1,
+            "customer": 1
+          }
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "binding": {
+            "truck": 1,
+            "customer": 1
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": true,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_ROUTE_TEMPORAL_PROPAGATION",
+      "canonical_family": "ROUTE_TIME_PROPAGATION_WITH_SERVICE",
+      "canonical_name": "route timing includes travel and customer service duration",
+      "structural_form": "IMPLICATION",
+      "business_role": "schedule_consistency",
+      "normalized_semantics": "Whenever a truck traverses a selected leg, the downstream event cannot occur before the upstream event plus any service duration at the origin and the leg travel time. Depot departure and return are boundary variants of the same temporal law.",
+      "support_entity_ids": [
+        "ENT_ROUTE_LEG_TRAVERSAL",
+        "ENT_CUSTOMER_SERVICE_START",
+        "ENT_DEPOT_EVENT_TIME"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "arguments": [
+            "truck",
+            "(origin,destination)"
+          ],
+          "role": "activating route leg"
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "arguments": [
+            "truck",
+            "origin_customer"
+          ],
+          "role": "customer-origin time when origin is a customer"
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "arguments": [
+            "truck",
+            "destination_customer"
+          ],
+          "role": "customer-destination time when destination is a customer"
+        },
+        {
+          "entity_id": "ENT_DEPOT_EVENT_TIME",
+          "arguments": [
+            "truck",
+            "departure or return"
+          ],
+          "role": "depot boundary time"
+        }
+      ],
+      "quantifier": "for every truck and selected directed leg",
+      "scope_kind": "route_leg",
+      "parameter_refs": [
+        "PAR_SERVICE_DURATION",
+        "PAR_LEG_TRAVEL_TIME"
+      ],
+      "source_grounding": {
+        "rule": "Service duration and travel must be respected along each continuous route."
+      },
+      "source_spans": [
+        "Service can only begin within the time window, and the service duration is known.",
+        "a fixed service time of 90 minutes is required for unloading, handover, and paperwork at each customer location",
+        "Vehicles must start from the depot and return to the depot, following continuous paths."
+      ],
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS and (i,j) in SET_DIRECTED_LEGS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+          "binding": {
+            "truck": 1,
+            "leg": "(1,2)"
+          }
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "binding": {
+            "truck": 1,
+            "customer": 1
+          }
+        },
+        {
+          "entity_id": "ENT_CUSTOMER_SERVICE_START",
+          "binding": {
+            "truck": 1,
+            "customer": 2
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "EDGE_TIME_CUSTOMER_1_TO_2_TRUCK_1",
+          "binding": {
+            "truck": 1,
+            "origin": 1,
+            "destination": 2
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+              "index_binding": {
+                "truck": 1,
+                "leg": "(1,2)"
+              }
+            },
+            {
+              "entity_id": "ENT_CUSTOMER_SERVICE_START",
+              "index_binding": {
+                "truck": 1,
+                "customer": 1
+              }
+            },
+            {
+              "entity_id": "ENT_CUSTOMER_SERVICE_START",
+              "index_binding": {
+                "truck": 1,
+                "customer": 2
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "If truck 1 traverses (1,2), service_start[1,2] is at least service_start[1,1] + 90 + travel_time[1,2]."
+        },
+        {
+          "id": "EDGE_TIME_DEPOT_TO_CUSTOMER_1_TRUCK_1",
+          "binding": {
+            "truck": 1,
+            "origin": 0,
+            "destination": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+              "index_binding": {
+                "truck": 1,
+                "leg": "(0,1)"
+              }
+            },
+            {
+              "entity_id": "ENT_DEPOT_EVENT_TIME",
+              "index_binding": {
+                "truck": 1,
+                "event_type": "departure"
+              }
+            },
+            {
+              "entity_id": "ENT_CUSTOMER_SERVICE_START",
+              "index_binding": {
+                "truck": 1,
+                "customer": 1
+              }
+            }
+          ],
+          "boundary_kind": "boundary",
+          "normalized_semantics": "If truck 1 traverses (0,1), service_start[1,1] is at least depot_departure[1] + travel_time[0,1]."
+        },
+        {
+          "id": "EDGE_TIME_CUSTOMER_1_TO_DEPOT_TRUCK_1",
+          "binding": {
+            "truck": 1,
+            "origin": 1,
+            "destination": 0
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_ROUTE_LEG_TRAVERSAL",
+              "index_binding": {
+                "truck": 1,
+                "leg": "(1,0)"
+              }
+            },
+            {
+              "entity_id": "ENT_CUSTOMER_SERVICE_START",
+              "index_binding": {
+                "truck": 1,
+                "customer": 1
+              }
+            },
+            {
+              "entity_id": "ENT_DEPOT_EVENT_TIME",
+              "index_binding": {
+                "truck": 1,
+                "event_type": "return"
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "If truck 1 traverses (1,0), depot_return[1] is at least service_start[1,1] + 90 + travel_time[1,0]."
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "medium"
+    },
+    {
+      "id": "OBL_DEPOT_OPERATING_WINDOW_OPENING",
+      "canonical_family": "DEPOT_EVENT_LOWER_BOUND",
+      "canonical_name": "truck depot events cannot occur before depot opening",
+      "structural_form": "LOWER_BOUND",
+      "business_role": "depot_operating_window",
+      "normalized_semantics": "Each used truck's depot departure and return events must occur no earlier than minute 0.",
+      "support_entity_ids": [
+        "ENT_DEPOT_EVENT_TIME"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_DEPOT_EVENT_TIME",
+          "arguments": [
+            "truck",
+            "event_type"
+          ]
+        }
+      ],
+      "quantifier": "for every used truck and depot event type",
+      "scope_kind": "depot_event",
+      "parameter_refs": [
+        "PAR_DEPOT_WINDOW_OPEN"
+      ],
+      "source_grounding": {
+        "rule": "The depot has a stated operating time window beginning at minute 0."
+      },
+      "source_spans": [
+        "Operating Time Window: [0, 1236] (minutes)"
+      ],
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS and e in SET_DEPOT_EVENT_TYPES when v is used",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_DEPOT_EVENT_TIME",
+          "binding": {
+            "truck": 1,
+            "event_type": "departure"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": false,
+      "confidence": "high"
+    },
+    {
+      "id": "OBL_DEPOT_OPERATING_WINDOW_CLOSING",
+      "canonical_family": "DEPOT_EVENT_UPPER_BOUND",
+      "canonical_name": "truck depot events cannot occur after depot closing",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "depot_operating_window",
+      "normalized_semantics": "Each used truck's depot departure and return events must occur no later than minute 1236.",
+      "support_entity_ids": [
+        "ENT_DEPOT_EVENT_TIME"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_DEPOT_EVENT_TIME",
+          "arguments": [
+            "truck",
+            "event_type"
+          ]
+        }
+      ],
+      "quantifier": "for every used truck and depot event type",
+      "scope_kind": "depot_event",
+      "parameter_refs": [
+        "PAR_DEPOT_WINDOW_CLOSE"
+      ],
+      "source_grounding": {
+        "rule": "The depot has a stated operating time window ending at minute 1236."
+      },
+      "source_spans": [
+        "Operating Time Window: [0, 1236] (minutes)"
+      ],
+      "instance_quantifier": "for v in SET_AVAILABLE_TRUCKS and e in SET_DEPOT_EVENT_TYPES when v is used",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_DEPOT_EVENT_TIME",
+          "binding": {
+            "truck": 1,
+            "event_type": "return"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": false,
+      "confidence": "high"
+    }
+  ],
+  "derived_checks": [
+    {
+      "id": "CHK_ASSIGNED_CUSTOMER_HAS_OUTGOING_LEG",
+      "canonical_name": "assigned customer also has one outgoing route leg",
+      "normalized_semantics": "Assignment-route realization together with route continuity implies that a customer assigned to a truck has a matching outgoing leg for that truck.",
+      "support_entity_ids": [
+        "ENT_CUSTOMER_SERVICE_ASSIGNMENT",
+        "ENT_ROUTE_LEG_TRAVERSAL"
+      ],
+      "source_grounding": {
+        "derived_from": [
+          "OBL_ASSIGNMENT_ROUTE_REALIZATION",
+          "OBL_ROUTE_CONTINUITY"
+        ]
+      },
+      "source_spans": [
+        "Each customer must be served by exactly one vehicle",
+        "following continuous paths"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "CHK_EARLY_ARRIVAL_WAITS_UNTIL_OPEN",
+      "canonical_name": "early arrival cannot induce service before window opening",
+      "normalized_semantics": "The service-window lower bound ensures that any arrival before the opening time entails waiting before service can begin.",
+      "support_entity_ids": [
+        "ENT_CUSTOMER_SERVICE_START"
+      ],
+      "source_grounding": {
+        "derived_from": [
+          "OBL_SERVICE_WINDOW_OPENING"
+        ]
+      },
+      "source_spans": [
+        "Early arrivals must wait"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "CHK_ALL_CUSTOMER_DEMAND_IS_FULFILLED",
+      "canonical_name": "all stated customer demand is assigned for delivery",
+      "normalized_semantics": "Exactly-one service assignment for every customer ensures that every customer's full indivisible demand contributes to one truck route.",
+      "support_entity_ids": [
+        "ENT_CUSTOMER_SERVICE_ASSIGNMENT"
+      ],
+      "source_grounding": {
+        "derived_from": [
+          "OBL_EXACTLY_ONE_TRUCK_PER_CUSTOMER"
+        ]
+      },
+      "source_spans": [
+        "the demands of all customers must be met",
+        "Each customer must be served by exactly one vehicle"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "UNRESOLVED_DISTANCE_CONVENTION",
+      "issue": "The coordinate-to-distance convention is not specified.",
+      "impact": "PAR_LEG_DISTANCE and therefore the numerical objective coefficients cannot be determined uniquely.",
+      "possible_interpretations": [
+        "Euclidean distance",
+        "Manhattan distance",
+        "road-network distance"
+      ],
+      "source_spans": [
+        "Coordinates: (40, 50)",
+        "minimize the total distance traveled by all vehicles"
+      ]
+    },
+    {
+      "id": "UNRESOLVED_TRAVEL_TIMES",
+      "issue": "No vehicle speed or leg travel-time matrix is provided.",
+      "impact": "Numerical route-time propagation and hard time-window feasibility cannot be evaluated from the supplied data.",
+      "source_spans": [
+        "Service must begin within this specified time window.",
+        "Vehicles must start from the depot and return to the depot, following continuous paths."
+      ]
+    },
+    {
+      "id": "UNRESOLVED_DEPOT_WINDOW_EVENT_SCOPE",
+      "issue": "The depot is given an operating time window, but the text does not explicitly state whether both departure and return must lie within it.",
+      "impact": "The annotation applies the stated depot operating window to both depot event types, with lower confidence in this interpretation than for customer windows.",
+      "source_spans": [
+        "Operating Time Window: [0, 1236] (minutes)"
+      ]
+    }
+  ],
+  "annotation_warnings": [
+    {
+      "id": "WARN_CANDIDATE_ARC_COMPLETENESS",
+      "warning": "The routing-leg set is represented as all ordered pairs of distinct nodes because no road-network restrictions are supplied; this is an instance-domain convention rather than an asserted operational requirement."
+    },
+    {
+      "id": "WARN_SERVICE_COMPLETION_OUTSIDE_WINDOW",
+      "warning": "Only service start is constrained to the customer window. No requirement that the 90-minute service finish before the window closes was added because the text explicitly states that service must begin within the window."
+    }
+  ]
+}

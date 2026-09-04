@@ -5,16 +5,22 @@ Your job is NOT to solve the problem, NOT to produce solver code, and NOT to cho
 Your job is to transform the natural-language instance into a canonical, model-independent semantic representation.
 
 OUTPUT VERSION
-- Emit schema_version = "SOH-1.1".
-- Return JSON only.
+- Emit schema_version = "SOH-1.2".
+- Return JSON only — no commentary, no code fences, no markdown.
 - Preserve stable family identity across paraphrase, unit changes, horizon changes, numeric overrides, and boundary cases.
 
 CORE ONTOLOGY
+
 1) Canonical Semantic Decision Entity Family (CSDE)
 A CSDE is an endogenous operational action, allocation, flow, state, selection, schedule, or service-outcome family.
 Its identity is invariant under variable renaming, synonyms, units, parameter values, solver choice, and algebraic reformulation.
 Do NOT create entities for exogenous data, costs, capacities, initial conditions, objective coefficients, or solver artifacts.
 Use entity_role from {decision, state, derived_flow, service_outcome, auxiliary_semantic}.
+
+IMPORTANT — CSDE vs Instance:
+- A CSDE defines ONE entity family (e.g. ENT_PROCEDURE_EXECUTION). Do NOT split it into multiple families just because the problem has many instances (e.g., do NOT split P(1,1), P(1,2), ..., P(3,3) into nine separate entities).
+- If the entity family has an index domain (e.g., [route, stage]), declare index_signature in the entity and enumerate the instance domain via the `instance_level: true` flag and the `sets` section.
+- Each obligation then operates on INSTANCES of this family via incidence_instances or instance_hyperedges (see "Instance-level extraction" below).
 
 2) Semantic Obligation Family
 A semantic obligation family is a source-grounded, independently falsifiable, parameterized operational rule schema.
@@ -36,16 +42,27 @@ Only split into different families when two rules can be independently violated.
 Do not promote definitional consequences or common domain conventions into primary obligations.
 If a statement is implied by another rule, record it in derived_checks instead of obligations.
 
-5) Coupling vs burden
+5) Coupling vs burden — two-layer
 The full semantic inventory is H_all (all obligations).
-The coupling hypergraph H_c contains only obligations with support_entity_ids length >= 2 and coupling_active = true.
-Unary bounds, terminal requirements, and other single-entity rules belong in H_all but not in H_c.
+
+Family-level coupling H_c^F:
+  Obligations whose support_entity_ids contain >=2 distinct entity families AND coupling_active = true.
+  These are the cross-family structural edges.
+
+Instance-level coupling H_c^I:
+  Obligations whose incidence_instances (or instance_hyperedges) involve >=2 distinct instances of the same or different entity families.
+  Even if support_entity_ids has only ONE family (e.g., precedence between two procedures of the same route), the obligation IS coupling-active at the instance level.
+  Set coupling_active = true for instance-level coupling edges too.
+
+Use coupling_active = false only for unary bounds, terminal inventory floors, and fixed assignment rules that involve exactly one instance of exactly one family.
+
+Unary bounds, terminal requirements, and other single-instance rules belong in H_all but not in either coupling layer.
 
 ANNOTATION RULES
-A. Work at family level.
+A. Work at family level (do not split into per-instance families).
 B. Preserve distinct families even when supports coincide.
 C. Keep objective semantics separate from feasibility obligations.
-D. Use exact source grounding for every entity, obligation, and derived check.
+D. Use exact source grounding for every obligation and derived check. The objective object and entity objects must only contain the fields documented in the OUTPUT SHAPE section below; do NOT add arbitrary extra keys to them.
 E. Do not invent unstated rules or values; place uncertainty in unresolved_items.
 F. Canonicalize textual aliases only when they denote the same endogenous relation with the same argument roles and temporal granularity.
 G. Do not split a universal law into first-period / later-period obligations merely because the algebraic realization differs.
@@ -53,19 +70,34 @@ H. Treat explicit business bounds as obligations; treat pure mathematical domain
 I. A lead time modifies temporal incidence. It does not create a new entity family unless the text introduces a genuinely new operational relation.
 J. Output only source-grounded items; if the text is ambiguous, add a warning rather than guessing.
 
-SOH-1.1 OUTPUT SHAPE
+SOH-1.2 OUTPUT SHAPE
 Top-level keys:
-- schema_version: "SOH-1.1"
+- schema_version: "SOH-1.2"
 - instance_id
+- dataset (optional)
 - layer: "semantic"
 - sets
 - parameters
 - entities
 - objective
 - obligations
-- derived_checks
+- derived_checks (optional)
+- instance_hyperedges (optional; see below)
 - unresolved_items
-- annotation_warnings (optional, but recommended when ambiguity remains)
+- annotation_warnings (optional)
+
+ENTITY OBJECT FIELDS
+Each entity must include:
+- id: unique identifier (e.g., "ENT_PROCEDURE_EXECUTION")
+- canonical_name: human-readable name
+- entity_role: one of {decision, state, derived_flow, service_outcome, auxiliary_semantic}
+- index_signature or indices: array of {role, set_id} pairs (e.g., [{"role":"route","set_id":"SET_ROUTES"}, {"role":"stage","set_id":"SET_PROCEDURES"}])
+- instance_level: true if the entity has an indexed domain with multiple instances
+- source_status: "explicit" or "implicit_required"
+- source_spans: list of quoting text spans
+- confidence: qualitative or numeric
+
+Optional: canonical_family, semantic_type, description, value_domain, unit, domain_metadata, source_grounding.
 
 OBLIGATION OBJECT MINIMUM FIELDS
 Each obligation should include:
@@ -82,54 +114,102 @@ Each obligation should include:
 - parameter_refs
 - source_grounding
 - source_spans
+- coupling_active
 - confidence
 
-Recommended fields when relevant:
-- parameter_overrides
-- boundary_variants
-- condition
-- cross_instance
-- coupling_active
-- source_status
-- normalization_rationale
+For INSTANCE-LEVEL obligations (those that operate on multiple entity instances), also add:
+- instance_quantifier: symbolic quantifier over index variables (e.g., "for r in routes, k in 1..|stages(r)|-1")
+- incidence_instances: array of {entity_id, binding:{role:value}} — the canonical instance-level incidence of one representative edge
+- intra_entity_instance_coupling: true if the obligation couples multiple instances of the same family
+- instance_edges (optional): explicit enumerated instance-level edges (each with id, binding, slots, normalized_semantics)
 
 STRUCTURAL FORM GUIDANCE
 Use the most appropriate structural_form from:
-- LOWER_BOUND
-- UPPER_BOUND
-- BALANCE
-- EQUALITY
-- INEQUALITY
-- IMPLICATION
-- NO_CARRYOVER
-- ASSIGNMENT
-- COVERAGE
-- PRECEDENCE
-- CARDINALITY
-- ACTIVATION_LINK
-- AGGREGATE_LIMIT
-- OTHER_RELATION
+- LOWER_BOUND, UPPER_BOUND, BALANCE, EQUALITY, INEQUALITY, IMPLICATION, NO_CARRYOVER,
+  ASSIGNMENT, COVERAGE, PRECEDENCE, CARDINALITY, ACTIVATION_LINK, AGGREGATE_LIMIT, OTHER_RELATION
 
-DERIVED CHECKS
-Put definitional or logically implied statements here, for example:
-- unmet_demand[t] <= demand[t]
-- a restatement that follows from the definition of shortage
-Do not count them as primary obligations.
+INSTANCE-LEVEL EXTRACTION (SOH-1.2)
+This section defines how to extract instance-level information. The instance hypergraph H_I has vertices = entity instances and hyperedges = instantiated obligation edges.
+
+Rule 1: Entity instance domain
+For every entity family with index_signature, enumerate the instance domain from the sets section:
+- Each index role references a set (by set_id).
+- Provide the set's members explicitly (values or member objects) for small domains, or cardinality for large domains.
+- The instance domain is the cross product of the set members for each role, or the explicit members of a compound-index set.
+
+Rule 2: Obligation instance expansion
+For each obligation family that operates over indexed entities:
+- Provide incidence_instances: the canonical instance-level incidence of ONE representative edge.
+  Example: precedence P(1,1)+10 <= P(1,2) → two incidence_instances:
+    {entity_id: "ENT_PROCEDURE_EXECUTION", binding: {"route": 1, "stage": 1}}
+    {entity_id: "ENT_PROCEDURE_EXECUTION", binding: {"route": 1, "stage": 2}}
+- Provide instance_quantifier: the quantifier over index variables.
+  Example: "for r in routes, k in 1..|stages(r)|-1"
+- Provide instance_edges (optional): enumerate explicit concrete edges for at least 2-3 instances.
+  Example for precedence:
+    [
+      {id: "e_prec_r1_k1", binding: {route:1, stage:1}, slots: [{entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:1,stage:1}}, {entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:1,stage:2}}], normalized_semantics:"S[1,1]+10 <= S[1,2]"},
+      {id: "e_prec_r1_k2", binding: {route:1, stage:2}, slots: [{entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:1,stage:2}}, {entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:1,stage:3}}], normalized_semantics:"S[1,2]+7 <= S[1,3]"}
+    ]
+
+Rule 3: Boundary instances
+Distinguish boundary instances (first/last period, initial condition, terminal case) from generic instances.
+Use boundary_kind in instance_edges: "generic", "boundary", "conditional", "terminal".
+
+Rule 4: Top-level instance_hyperedges (optional)
+As an alternative to instance_edges inside each obligation, you may emit a top-level array "instance_hyperedges" where each item is an edge:
+  {id, obligation_id, obligation_family, instance_vertices: [{entity_id, index_binding}], boundary_kind, normalized_semantics}
+This is particularly useful for cross-family instance edges that involve multiple obligation families.
+
+Rule 5: Coupling considered at instance level
+An obligation with intra_entity_instance_coupling = true participates in the INSTANCE coupling hypergraph H_c^I
+even though its support_entity_ids may contain only one family.
+Set coupling_active = true in these cases.
+
+WORKED EXAMPLE — JobShop precedence
+Entity:
+  ENT_PROCEDURE_EXECUTION, entity_role=decision, instance_level=true,
+  index_signature: [{"role":"route","set_id":"SET_ROUTES"}, {"role":"stage","set_id":"SET_PROCEDURES"}]
+Sets:
+  SET_ROUTES: members ["Route 1", "Route 2", "Route 3"]
+  SET_PROCEDURES: members [1, 2, 3] (or a compound set with index_structure)
+Obligation:
+  family: WITHIN_ROUTE_PRECEDENCE
+  structural_form: PRECEDENCE
+  support_entity_ids: ["ENT_PROCEDURE_EXECUTION"]
+  incidence_slots: [{entity_id:"ENT_PROCEDURE_EXECUTION", arguments:["route","stage"]}, {entity_id:"ENT_PROCEDURE_EXECUTION", arguments:["route","stage+1"]}]
+  instance_quantifier: "for r in routes, k in 1..|stages(r)|-1"
+  incidence_instances: [
+    {entity_id:"ENT_PROCEDURE_EXECUTION", binding:{route:"Route 1", stage:1}},
+    {entity_id:"ENT_PROCEDURE_EXECUTION", binding:{route:"Route 1", stage:2}}
+  ]
+  instance_edges: [
+    {id:"prec_r1_k1", binding:{route:"Route 1", stage:1}, slots:[{entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:"Route 1", stage:1}}, {entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:"Route 1", stage:2}}], normalized_semantics:"S[Route 1,1]+10 <= S[Route 1,2]"},
+    {id:"prec_r1_k2", binding:{route:"Route 1", stage:2}, slots:[{entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:"Route 1", stage:2}}, {entity_id:"ENT_PROCEDURE_EXECUTION", index_binding:{route:"Route 1", stage:3}}], normalized_semantics:"S[Route 1,2]+7 <= S[Route 1,3]"}
+  ]
+  intra_entity_instance_coupling: true
+  coupling_active: true
 
 FEW-SHOT NORMALIZATION PRINCIPLES
-- "6 <= order_t <= 35" becomes two obligation families: lower bound and upper bound.
+- "6 <= order_t <= 35" becomes two obligation families: lower bound and upper bound (rules can be independently violated).
 - "Orders may be at most 76 units per day; on day 5 the maximum is 39" is one family with a base clause plus a day-5 override.
 - "Initial inventory is 10; subsequent periods carry over" is one balance family with a boundary variant, not two families.
 - "Lead time 1" changes temporal incidence of the same balance / receipt family.
 - "Unmet demand is lost and cannot be carried forward" is a no-carryover family if it is explicit; do not add logical closures as new families.
+- A precedence constraint between consecutive stages of the same route is ONE obligation family with instance-level edges, not multiple families.
+- A hub non-overlap constraint between all procedures at the same hub is ONE obligation family; its instance edges form a clique per hub.
 
 FINAL SELF-CHECK
 Before returning JSON verify:
-- entities are endogenous families only
+- entities are endogenous families only (not per-instance splits)
 - no parameter is an entity
 - objective is excluded from the feasibility hypergraph
-- H_c excludes unary obligations
+- family-level H_c excludes unary obligations; instance-level H_c includes intra-family instance coupling
 - family identity is stable under boundary cases and parameter overrides
 - derived consequences are not promoted to primary obligations
 - every obligation and derived check has source evidence
 - unresolved ambiguity is recorded, not guessed
+- instance-level incidence (incidence_instances, instance_edges, or instance_hyperedges) is present for every indexed entity's multi-instance obligations
+- incidence_instances bindings use concrete values from the sets (or symbolic expressions like "stage+1" where appropriate)
+- balanced braces — ensure the JSON object is complete and parseable
+- no commentary, no code fences, no markdown decoration around the JSON

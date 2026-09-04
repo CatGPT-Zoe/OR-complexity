@@ -1,12 +1,12 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "IndustryOR_Hard_026_shift_scheduling",
   "layer": "semantic",
   "sets": [
     {
       "id": "SET_TIME_PERIODS",
-      "name": "time_periods",
-      "description": "Six consecutive 4-hour coverage periods forming a cyclic 24-hour day.",
+      "canonical_name": "staffing time periods",
+      "description": "Six consecutive four-hour staffing windows forming a cyclic 24-hour day.",
       "members": [
         "2:00-6:00",
         "6:00-10:00",
@@ -15,15 +15,15 @@
         "18:00-22:00",
         "22:00-2:00"
       ],
-      "source_grounding": "The stated staffing requirements are indexed by six time periods over a 24-hour convenience-store day.",
+      "cyclic": true,
       "source_spans": [
-        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people."
+        "2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people."
       ]
     },
     {
       "id": "SET_SHIFT_STARTS",
-      "name": "shift_starts",
-      "description": "Permitted start times for fixed 8-hour salesperson shifts.",
+      "canonical_name": "shift start times",
+      "description": "Permitted start times for eight-hour salesperson shifts.",
       "members": [
         "2:00",
         "6:00",
@@ -32,7 +32,7 @@
         "18:00",
         "22:00"
       ],
-      "source_grounding": "The problem explicitly lists all permissible shift start times.",
+      "cyclic": true,
       "source_spans": [
         "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours."
       ]
@@ -41,10 +41,12 @@
   "parameters": [
     {
       "id": "PARAM_STAFF_REQUIREMENT",
-      "name": "staff_requirement",
-      "description": "Minimum number of salespeople required during each time period.",
+      "canonical_name": "minimum salesperson requirement by time period",
       "indices": [
-        "time_periods"
+        {
+          "role": "time_period",
+          "set_id": "SET_TIME_PERIODS"
+        }
       ],
       "unit": "people",
       "values": {
@@ -55,104 +57,41 @@
         "18:00-22:00": 18,
         "22:00-2:00": 12
       },
-      "source_grounding": "Period-specific staffing requirements are explicitly stated.",
       "source_spans": [
-        "2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people."
+        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people."
       ]
     },
     {
       "id": "PARAM_SHIFT_DURATION",
-      "name": "shift_duration",
-      "description": "Continuous duration of every salesperson shift.",
+      "canonical_name": "shift duration",
       "unit": "hours",
       "value": 8,
-      "source_grounding": "Every shift is stated to last continuously for 8 hours.",
       "source_spans": [
-        "working continuously for 8 hours."
-      ]
-    },
-    {
-      "id": "PARAM_SHIFT_PERIOD_COVERAGE",
-      "name": "shift_period_coverage",
-      "description": "Cyclic incidence relation identifying the two consecutive 4-hour periods covered by each 8-hour shift.",
-      "indices": [
-        "shift_starts",
-        "time_periods"
-      ],
-      "value_semantics": "True exactly when a shift beginning at the indexed start time is active throughout the indexed coverage period.",
-      "active_pairs": [
-        [
-          "2:00",
-          "2:00-6:00"
-        ],
-        [
-          "2:00",
-          "6:00-10:00"
-        ],
-        [
-          "6:00",
-          "6:00-10:00"
-        ],
-        [
-          "6:00",
-          "10:00-14:00"
-        ],
-        [
-          "10:00",
-          "10:00-14:00"
-        ],
-        [
-          "10:00",
-          "14:00-18:00"
-        ],
-        [
-          "14:00",
-          "14:00-18:00"
-        ],
-        [
-          "14:00",
-          "18:00-22:00"
-        ],
-        [
-          "18:00",
-          "18:00-22:00"
-        ],
-        [
-          "18:00",
-          "22:00-2:00"
-        ],
-        [
-          "22:00",
-          "22:00-2:00"
-        ],
-        [
-          "22:00",
-          "2:00-6:00"
-        ]
-      ],
-      "source_grounding": "The incidence relation follows from the listed 4-hour periods, listed shift starts, the continuous 8-hour shift duration, and the 24-hour cyclic day.",
-      "source_spans": [
-        "The number of salespeople required at a 24-hour convenience store in different time periods is as follows",
-        "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours."
+        "working continuously for 8 hours"
       ]
     }
   ],
   "entities": [
     {
-      "id": "ENT_SHIFT_STAFF",
-      "canonical_family": "shift_start_staffing",
-      "canonical_name": "salespeople assigned to shift starts",
+      "id": "ENT_SHIFT_START_STAFFING",
+      "canonical_name": "salespeople assigned to shifts by start time",
+      "canonical_family": "SHIFT_START_STAFFING",
       "entity_role": "decision",
-      "description": "Number of salespeople whose fixed 8-hour shift begins at each permitted shift start time.",
-      "index_sets": [
-        "shift_starts"
+      "index_signature": [
+        {
+          "role": "shift_start",
+          "set_id": "SET_SHIFT_STARTS"
+        }
       ],
+      "instance_level": true,
+      "source_status": "implicit_required",
+      "semantic_type": "staffing allocation",
+      "description": "Number of salespeople beginning an eight-hour shift at each permitted shift start time.",
+      "value_domain": "nonnegative_integer",
       "unit": "people",
       "domain_metadata": {
-        "nonnegative": true,
-        "integral": true
+        "integrality_basis": "Salespeople are counted as individuals."
       },
-      "source_grounding": "The endogenous choice is how many salespeople begin work at each listed shift start.",
       "source_spans": [
         "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours.",
         "Determine the minimum number of salespeople needed to meet the requirements."
@@ -161,14 +100,16 @@
     }
   ],
   "objective": {
+    "id": "OBJ_MINIMIZE_TOTAL_SALESPEOPLE",
+    "canonical_name": "minimize total scheduled salespeople",
     "sense": "minimize",
-    "canonical_name": "minimize total shift-start staffing",
-    "normalized_semantics": "Minimize the aggregate number of salespeople assigned across all permitted shift starts.",
+    "normalized_semantics": "Minimize the sum of salespeople assigned across all shift start times.",
     "support_entity_ids": [
-      "ENT_SHIFT_STAFF"
+      "ENT_SHIFT_START_STAFFING"
     ],
-    "aggregation_scope": "all shift_starts",
-    "source_grounding": "The requested outcome is the minimum number of salespeople that satisfies all period staffing requirements.",
+    "source_grounding": {
+      "interpretation": "The total number needed is the total staffing assigned to the six shift cohorts."
+    },
     "source_spans": [
       "Determine the minimum number of salespeople needed to meet the requirements."
     ],
@@ -176,111 +117,199 @@
   },
   "obligations": [
     {
-      "id": "OBL_PERIOD_STAFF_COVERAGE",
-      "canonical_family": "period_minimum_staff_coverage",
-      "canonical_name": "minimum staffing coverage by active shifts",
+      "id": "OBL_TIME_PERIOD_STAFF_COVERAGE",
+      "canonical_family": "TIME_PERIOD_STAFF_COVERAGE",
+      "canonical_name": "minimum staffing coverage in every time period",
       "structural_form": "COVERAGE",
-      "business_role": "Ensure that every time period has at least its required number of active salespeople.",
-      "normalized_semantics": "For each time period, the sum of salespeople assigned to shift starts whose continuous 8-hour shifts cover that period must be at least the period-specific staff requirement.",
+      "business_role": "Ensure that the salespeople whose shifts are active during each four-hour period meet that period's staffing requirement.",
+      "normalized_semantics": "For every time period p, the sum of staff assigned to the two eight-hour shift cohorts active during p must be at least PARAM_STAFF_REQUIREMENT[p]. Coverage wraps cyclically across midnight.",
       "support_entity_ids": [
-        "ENT_SHIFT_STAFF"
+        "ENT_SHIFT_START_STAFFING"
       ],
       "incidence_slots": [
         {
-          "slot": "coverage_period",
-          "set_ref": "SET_TIME_PERIODS",
-          "temporal_role": "period being staffed"
+          "entity_id": "ENT_SHIFT_START_STAFFING",
+          "arguments": [
+            "shift_start immediately preceding the period start by 4 hours modulo 24 hours"
+          ],
+          "incidence_role": "continuing_shift_cohort"
         },
         {
-          "slot": "covering_shift_start",
-          "set_ref": "SET_SHIFT_STARTS",
-          "temporal_role": "shift start active during the coverage period",
-          "relation_ref": "PARAM_SHIFT_PERIOD_COVERAGE"
+          "entity_id": "ENT_SHIFT_START_STAFFING",
+          "arguments": [
+            "shift_start equal to the period start"
+          ],
+          "incidence_role": "new_shift_cohort"
         }
       ],
-      "quantifier": "for every time_period in time_periods",
-      "scope_kind": "periodwise",
+      "quantifier": "for every time period in SET_TIME_PERIODS",
+      "scope_kind": "cyclic_all_periods",
       "parameter_refs": [
         "PARAM_STAFF_REQUIREMENT",
-        "PARAM_SHIFT_DURATION",
-        "PARAM_SHIFT_PERIOD_COVERAGE"
+        "PARAM_SHIFT_DURATION"
       ],
-      "clauses": [
-        {
-          "time_period": "2:00-6:00",
-          "covering_shift_starts": [
-            "22:00",
-            "2:00"
-          ],
-          "minimum_required": 10
-        },
-        {
-          "time_period": "6:00-10:00",
-          "covering_shift_starts": [
-            "2:00",
-            "6:00"
-          ],
-          "minimum_required": 15
-        },
-        {
-          "time_period": "10:00-14:00",
-          "covering_shift_starts": [
-            "6:00",
-            "10:00"
-          ],
-          "minimum_required": 25
-        },
-        {
-          "time_period": "14:00-18:00",
-          "covering_shift_starts": [
-            "10:00",
-            "14:00"
-          ],
-          "minimum_required": 20
-        },
-        {
-          "time_period": "18:00-22:00",
-          "covering_shift_starts": [
-            "14:00",
-            "18:00"
-          ],
-          "minimum_required": 18
-        },
-        {
-          "time_period": "22:00-2:00",
-          "covering_shift_starts": [
-            "18:00",
-            "22:00"
-          ],
-          "minimum_required": 12
-        }
-      ],
-      "boundary_variants": [
-        {
-          "name": "cyclic_midnight_wraparound",
-          "description": "The shift beginning at 22:00 continues across midnight and covers the 2:00-6:00 period after covering 22:00-2:00."
-        }
-      ],
-      "condition": "A shift contributes coverage only to periods during which its fixed continuous 8-hour duration is active.",
-      "cross_instance": false,
-      "coupling_active": false,
-      "source_status": "explicit rule with temporally derived incidence",
-      "normalization_rationale": "All six period requirements are clauses of one universal minimum-coverage rule. The midnight wraparound changes temporal incidence but does not create a separate obligation family.",
-      "source_grounding": "The problem supplies minimum staffing requirements for every period, states that shifts last continuously for 8 hours from the listed starts, and requires those staffing requirements to be met.",
+      "source_grounding": {
+        "interpretation": "An eight-hour shift spans two consecutive four-hour periods, so each period is covered by the cohort starting at that period's beginning and the cohort starting four hours earlier."
+      },
       "source_spans": [
         "The number of salespeople required at a 24-hour convenience store in different time periods is as follows: 2:00-6:00 - 10 people, 6:00-10:00 - 15 people, 10:00-14:00 - 25 people, 14:00-18:00 - 20 people, 18:00-22:00 - 18 people, 22:00-2:00 - 12 people.",
         "Salespeople start their shifts at 2:00, 6:00, 10:00, 14:00, 18:00, and 22:00, working continuously for 8 hours.",
         "Determine the minimum number of salespeople needed to meet the requirements."
       ],
+      "instance_quantifier": "for p in SET_TIME_PERIODS, incident shift starts are period_start(p) and period_start(p)-4 hours modulo 24 hours",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_SHIFT_START_STAFFING",
+          "binding": {
+            "shift_start": "22:00"
+          }
+        },
+        {
+          "entity_id": "ENT_SHIFT_START_STAFFING",
+          "binding": {
+            "shift_start": "2:00"
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "EDGE_COVERAGE_2_6",
+          "binding": {
+            "time_period": "2:00-6:00"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "22:00"
+              }
+            },
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "2:00"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "staff[22:00] + staff[2:00] >= 10"
+        },
+        {
+          "id": "EDGE_COVERAGE_6_10",
+          "binding": {
+            "time_period": "6:00-10:00"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "2:00"
+              }
+            },
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "6:00"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "staff[2:00] + staff[6:00] >= 15"
+        },
+        {
+          "id": "EDGE_COVERAGE_10_14",
+          "binding": {
+            "time_period": "10:00-14:00"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "6:00"
+              }
+            },
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "10:00"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "staff[6:00] + staff[10:00] >= 25"
+        },
+        {
+          "id": "EDGE_COVERAGE_14_18",
+          "binding": {
+            "time_period": "14:00-18:00"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "10:00"
+              }
+            },
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "14:00"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "staff[10:00] + staff[14:00] >= 20"
+        },
+        {
+          "id": "EDGE_COVERAGE_18_22",
+          "binding": {
+            "time_period": "18:00-22:00"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "14:00"
+              }
+            },
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "18:00"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "staff[14:00] + staff[18:00] >= 18"
+        },
+        {
+          "id": "EDGE_COVERAGE_22_2",
+          "binding": {
+            "time_period": "22:00-2:00"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "18:00"
+              }
+            },
+            {
+              "entity_id": "ENT_SHIFT_START_STAFFING",
+              "index_binding": {
+                "shift_start": "22:00"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "staff[18:00] + staff[22:00] >= 12"
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
       "confidence": "high"
     }
   ],
   "derived_checks": [],
-  "unresolved_items": [],
-  "annotation_warnings": [
-    {
-      "id": "WARN_HEADCOUNT_INTERPRETATION",
-      "message": "The objective is interpreted as minimizing total shift assignments, consistent with the supplied note identifying staff per shift start as the single decision family. The text does not separately describe individual employees, multiple shifts per employee, or reuse of the same employee across shift starts."
-    }
-  ]
+  "unresolved_items": []
 }

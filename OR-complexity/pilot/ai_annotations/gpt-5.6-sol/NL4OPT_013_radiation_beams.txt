@@ -1,29 +1,28 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "NL4OPT_013_radiation_beams",
+  "dataset": "NL4OPT",
   "layer": "semantic",
   "sets": [
     {
-      "id": "set_beams",
+      "id": "SET_BEAMS",
       "canonical_name": "beams",
       "members": [
         "Beam 1",
         "Beam 2"
       ],
-      "source_grounding": "A patient is undergoing radiation treatment involving two beams, Beam 1 and Beam 2.",
       "source_spans": [
         "two beams, Beam 1 and Beam 2"
       ]
     },
     {
-      "id": "set_body_regions",
-      "canonical_name": "body_regions",
+      "id": "SET_BODY_REGIONS",
+      "canonical_name": "body regions",
       "members": [
         "pancreas",
         "skin",
         "tumor"
       ],
-      "source_grounding": "The text specifies dose delivery to the pancreas, skin, and tumor.",
       "source_spans": [
         "the benign area of the pancreas",
         "the benign area of the skin",
@@ -33,48 +32,71 @@
   ],
   "parameters": [
     {
-      "id": "param_dose_rate",
-      "canonical_name": "beam_region_dose_rate",
+      "id": "PAR_DOSE_RATE",
+      "canonical_name": "beam dose rate by body region",
       "indices": [
-        "beam",
-        "region"
-      ],
-      "unit": "medicine units per minute",
-      "values": {
-        "Beam 1": {
-          "pancreas": 0.3,
-          "skin": 0.2,
-          "tumor": 0.6
+        {
+          "role": "beam",
+          "set_id": "SET_BEAMS"
         },
-        "Beam 2": {
-          "pancreas": 0.2,
-          "skin": 0.1,
-          "tumor": 0.4
+        {
+          "role": "region",
+          "set_id": "SET_BODY_REGIONS"
         }
-      },
-      "source_grounding": "Per-minute dose rates are explicitly stated for each beam and body region.",
+      ],
+      "unit": "dose units per minute",
+      "values": [
+        {
+          "beam": "Beam 1",
+          "region": "pancreas",
+          "value": 0.3
+        },
+        {
+          "beam": "Beam 1",
+          "region": "skin",
+          "value": 0.2
+        },
+        {
+          "beam": "Beam 1",
+          "region": "tumor",
+          "value": 0.6
+        },
+        {
+          "beam": "Beam 2",
+          "region": "pancreas",
+          "value": 0.2
+        },
+        {
+          "beam": "Beam 2",
+          "region": "skin",
+          "value": 0.1
+        },
+        {
+          "beam": "Beam 2",
+          "region": "tumor",
+          "value": 0.4
+        }
+      ],
       "source_spans": [
         "Beam 1 delivers a dose of 0.3 units of medicine per minute to the benign area of the pancreas and 0.2 units of medicine per minute to the benign area of the skin.",
         "Beam 2 delivers 0.2 units of medicine per minute to the benign area of the pancreas and 0.1 units of medicine per minute to the benign area of the skin.",
-        "beam 1 delivers 0.6 units of medicine per minute to the tumor and beam 2 delivers 0.4 units of medicine per minute to the tumor"
+        "beam 1 delivers 0.6 units of medicine per minute to the tumor and beam 2 delivers 0.4 units of medicine per minute to the tumor."
       ]
     },
     {
-      "id": "param_skin_max_dose",
-      "canonical_name": "maximum_skin_dose",
-      "unit": "medicine units",
+      "id": "PAR_SKIN_MAX_DOSE",
+      "canonical_name": "maximum skin dose",
+      "unit": "dose units",
       "value": 4,
-      "source_grounding": "At most 4 units of medicine should be received by the skin.",
       "source_spans": [
         "At most 4 units of medicine should be received by the skin"
       ]
     },
     {
-      "id": "param_tumor_min_dose",
-      "canonical_name": "minimum_tumor_dose",
-      "unit": "medicine units",
+      "id": "PAR_TUMOR_MIN_DOSE",
+      "canonical_name": "minimum tumor dose",
+      "unit": "dose units",
       "value": 3,
-      "source_grounding": "At least 3 units of medicine should be delivered to the tumor.",
       "source_spans": [
         "at least 3 units of medicine should be delivered to the tumor"
       ]
@@ -82,190 +104,432 @@
   ],
   "entities": [
     {
-      "id": "entity_beam_1_usage_duration",
-      "canonical_family": "beam_usage_duration",
-      "canonical_name": "Beam 1 usage duration",
+      "id": "ENT_BEAM_USAGE_DURATION",
+      "canonical_name": "beam usage duration",
       "entity_role": "decision",
-      "unit": "minutes",
-      "index_binding": {
-        "beam": "Beam 1"
-      },
-      "domain_metadata": {
-        "nonnegative": true,
-        "integrality": "not_specified"
-      },
-      "source_grounding": "The treatment must determine how many minutes Beam 1 should be used.",
+      "index_signature": [
+        {
+          "role": "beam",
+          "set_id": "SET_BEAMS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
         "How many minutes of each beam should be used"
       ],
-      "confidence": "high"
+      "confidence": "high",
+      "canonical_family": "BEAM_USAGE_DURATION",
+      "semantic_type": "duration",
+      "description": "Minutes for which each radiation beam is applied.",
+      "value_domain": "nonnegative_real",
+      "unit": "minute"
     },
     {
-      "id": "entity_beam_2_usage_duration",
-      "canonical_family": "beam_usage_duration",
-      "canonical_name": "Beam 2 usage duration",
-      "entity_role": "decision",
-      "unit": "minutes",
-      "index_binding": {
-        "beam": "Beam 2"
-      },
-      "domain_metadata": {
-        "nonnegative": true,
-        "integrality": "not_specified"
-      },
-      "source_grounding": "The treatment must determine how many minutes Beam 2 should be used.",
-      "source_spans": [
-        "How many minutes of each beam should be used"
+      "id": "ENT_REGION_DOSE",
+      "canonical_name": "total dose delivered to body region",
+      "entity_role": "service_outcome",
+      "index_signature": [
+        {
+          "role": "region",
+          "set_id": "SET_BODY_REGIONS"
+        }
       ],
-      "confidence": "high"
+      "instance_level": true,
+      "source_status": "explicit",
+      "source_spans": [
+        "total radiation received by the pancreas",
+        "At most 4 units of medicine should be received by the skin",
+        "at least 3 units of medicine should be delivered to the tumor"
+      ],
+      "confidence": "high",
+      "canonical_family": "REGION_TOTAL_DOSE",
+      "semantic_type": "accumulated_service_outcome",
+      "description": "Total dose resulting from all beam applications at each body region.",
+      "value_domain": "nonnegative_real",
+      "unit": "dose units"
     }
   ],
   "objective": {
-    "id": "objective_minimize_pancreas_dose",
-    "direction": "minimize",
-    "canonical_name": "total radiation received by the pancreas",
-    "normalized_semantics": "Minimize the total pancreas dose contributed by Beam 1 and Beam 2, using each beam's pancreas dose rate multiplied by its usage duration.",
+    "id": "OBJ_MINIMIZE_PANCREAS_DOSE",
+    "canonical_name": "minimize total pancreas dose",
+    "sense": "minimize",
+    "normalized_semantics": "minimize D[pancreas]",
     "support_entity_ids": [
-      "entity_beam_1_usage_duration",
-      "entity_beam_2_usage_duration"
+      "ENT_REGION_DOSE"
     ],
-    "parameter_refs": [
-      "param_dose_rate"
-    ],
-    "incidence_slots": [
-      {
-        "entity_id": "entity_beam_1_usage_duration",
-        "role": "pancreas_dose_contributor",
-        "parameter_binding": {
-          "beam": "Beam 1",
-          "region": "pancreas"
-        }
-      },
-      {
-        "entity_id": "entity_beam_2_usage_duration",
-        "role": "pancreas_dose_contributor",
-        "parameter_binding": {
-          "beam": "Beam 2",
-          "region": "pancreas"
-        }
-      }
-    ],
-    "source_grounding": "The stated objective is to minimize total radiation received by the pancreas.",
+    "parameter_refs": [],
     "source_spans": [
-      "to minimize the total radiation received by the pancreas"
-    ]
+      "minimize the total radiation received by the pancreas"
+    ],
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "obligation_skin_dose_upper_bound",
-      "canonical_family": "regional_total_dose_upper_bound",
-      "canonical_name": "maximum total skin dose",
-      "structural_form": "UPPER_BOUND",
-      "business_role": "healthy-tissue dose safety limit",
-      "normalized_semantics": "The total skin dose contributed by all used beams must be at most the maximum permitted skin dose.",
+      "id": "OBL_REGION_DOSE_ACCUMULATION",
+      "canonical_family": "REGION_DOSE_ACCUMULATION",
+      "canonical_name": "accumulate regional dose from beam usage",
+      "structural_form": "EQUALITY",
+      "business_role": "dose accounting",
+      "normalized_semantics": "For each region r, D[r] = sum over beams b of PAR_DOSE_RATE[b,r] * T[b].",
       "support_entity_ids": [
-        "entity_beam_1_usage_duration",
-        "entity_beam_2_usage_duration"
+        "ENT_BEAM_USAGE_DURATION",
+        "ENT_REGION_DOSE"
       ],
       "incidence_slots": [
         {
-          "entity_id": "entity_beam_1_usage_duration",
-          "role": "skin_dose_contributor",
-          "parameter_binding": {
-            "beam": "Beam 1",
-            "region": "skin"
+          "entity_id": "ENT_REGION_DOSE",
+          "arguments": [
+            "region"
+          ],
+          "slot_role": "accumulated dose"
+        },
+        {
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "arguments": [
+            "beam"
+          ],
+          "slot_role": "dose-generating beam durations summed over beams"
+        }
+      ],
+      "quantifier": "for every region in SET_BODY_REGIONS",
+      "scope_kind": "indexed_family",
+      "parameter_refs": [
+        "PAR_DOSE_RATE"
+      ],
+      "source_grounding": {
+        "quotes": [
+          "Beam 1 delivers a dose of 0.3 units of medicine per minute to the benign area of the pancreas and 0.2 units of medicine per minute to the benign area of the skin.",
+          "Beam 2 delivers 0.2 units of medicine per minute to the benign area of the pancreas and 0.1 units of medicine per minute to the benign area of the skin.",
+          "beam 1 delivers 0.6 units of medicine per minute to the tumor and beam 2 delivers 0.4 units of medicine per minute to the tumor."
+        ],
+        "interpretation": "Regional total dose is generated by beam duration multiplied by the corresponding dose rate and accumulated across beams."
+      },
+      "source_spans": [
+        "Beam 1 delivers a dose of 0.3 units of medicine per minute to the benign area of the pancreas and 0.2 units of medicine per minute to the benign area of the skin.",
+        "Beam 2 delivers 0.2 units of medicine per minute to the benign area of the pancreas and 0.1 units of medicine per minute to the benign area of the skin.",
+        "beam 1 delivers 0.6 units of medicine per minute to the tumor and beam 2 delivers 0.4 units of medicine per minute to the tumor."
+      ],
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for r in {pancreas, skin, tumor}, coupling D[r] with T[Beam 1] and T[Beam 2]",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "binding": {
+            "region": "pancreas"
           }
         },
         {
-          "entity_id": "entity_beam_2_usage_duration",
-          "role": "skin_dose_contributor",
-          "parameter_binding": {
-            "beam": "Beam 2",
-            "region": "skin"
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "binding": {
+            "beam": "Beam 1"
+          }
+        },
+        {
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "binding": {
+            "beam": "Beam 2"
           }
         }
       ],
-      "quantifier": "single treatment plan",
-      "scope_kind": "aggregate_across_beams",
-      "parameter_refs": [
-        "param_dose_rate",
-        "param_skin_max_dose"
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
+        {
+          "id": "EDGE_DOSE_PANCREAS",
+          "binding": {
+            "region": "pancreas"
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_REGION_DOSE",
+              "index_binding": {
+                "region": "pancreas"
+              }
+            },
+            {
+              "entity_id": "ENT_BEAM_USAGE_DURATION",
+              "index_binding": {
+                "beam": "Beam 1"
+              }
+            },
+            {
+              "entity_id": "ENT_BEAM_USAGE_DURATION",
+              "index_binding": {
+                "beam": "Beam 2"
+              }
+            }
+          ],
+          "normalized_semantics": "D[pancreas] = 0.3*T[Beam 1] + 0.2*T[Beam 2]"
+        },
+        {
+          "id": "EDGE_DOSE_SKIN",
+          "binding": {
+            "region": "skin"
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_REGION_DOSE",
+              "index_binding": {
+                "region": "skin"
+              }
+            },
+            {
+              "entity_id": "ENT_BEAM_USAGE_DURATION",
+              "index_binding": {
+                "beam": "Beam 1"
+              }
+            },
+            {
+              "entity_id": "ENT_BEAM_USAGE_DURATION",
+              "index_binding": {
+                "beam": "Beam 2"
+              }
+            }
+          ],
+          "normalized_semantics": "D[skin] = 0.2*T[Beam 1] + 0.1*T[Beam 2]"
+        },
+        {
+          "id": "EDGE_DOSE_TUMOR",
+          "binding": {
+            "region": "tumor"
+          },
+          "boundary_kind": "generic",
+          "slots": [
+            {
+              "entity_id": "ENT_REGION_DOSE",
+              "index_binding": {
+                "region": "tumor"
+              }
+            },
+            {
+              "entity_id": "ENT_BEAM_USAGE_DURATION",
+              "index_binding": {
+                "beam": "Beam 1"
+              }
+            },
+            {
+              "entity_id": "ENT_BEAM_USAGE_DURATION",
+              "index_binding": {
+                "beam": "Beam 2"
+              }
+            }
+          ],
+          "normalized_semantics": "D[tumor] = 0.6*T[Beam 1] + 0.4*T[Beam 2]"
+        }
+      ]
+    },
+    {
+      "id": "OBL_SKIN_DOSE_UPPER_BOUND",
+      "canonical_family": "REGION_DOSE_UPPER_BOUND",
+      "canonical_name": "maximum permissible skin dose",
+      "structural_form": "UPPER_BOUND",
+      "business_role": "healthy-tissue safety limit",
+      "normalized_semantics": "D[skin] <= PAR_SKIN_MAX_DOSE.",
+      "support_entity_ids": [
+        "ENT_REGION_DOSE"
       ],
-      "condition": {
-        "region": "skin"
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "arguments": [
+            "skin"
+          ],
+          "slot_role": "bounded dose"
+        }
+      ],
+      "quantifier": "for the skin region",
+      "scope_kind": "fixed_instance",
+      "parameter_refs": [
+        "PAR_SKIN_MAX_DOSE"
+      ],
+      "source_grounding": {
+        "quotes": [
+          "At most 4 units of medicine should be received by the skin"
+        ],
+        "interpretation": "The total skin dose cannot exceed 4 dose units."
       },
-      "coupling_active": true,
-      "source_status": "explicit",
-      "source_grounding": "The skin may receive no more than 4 units of medicine in total.",
       "source_spans": [
         "At most 4 units of medicine should be received by the skin"
       ],
-      "normalization_rationale": "The per-minute skin dose from each beam accumulates over its usage duration; the stated limit applies to their aggregate.",
-      "confidence": "high"
+      "coupling_active": false,
+      "confidence": "high",
+      "instance_quantifier": "for r = skin",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "binding": {
+            "region": "skin"
+          }
+        }
+      ]
     },
     {
-      "id": "obligation_tumor_dose_lower_bound",
-      "canonical_family": "regional_total_dose_lower_bound",
-      "canonical_name": "minimum total tumor dose",
+      "id": "OBL_TUMOR_DOSE_LOWER_BOUND",
+      "canonical_family": "REGION_DOSE_LOWER_BOUND",
+      "canonical_name": "minimum required tumor dose",
       "structural_form": "LOWER_BOUND",
-      "business_role": "minimum therapeutic tumor dose",
-      "normalized_semantics": "The total tumor dose contributed by all used beams must be at least the required minimum tumor dose.",
+      "business_role": "therapeutic dose requirement",
+      "normalized_semantics": "D[tumor] >= PAR_TUMOR_MIN_DOSE.",
       "support_entity_ids": [
-        "entity_beam_1_usage_duration",
-        "entity_beam_2_usage_duration"
+        "ENT_REGION_DOSE"
       ],
       "incidence_slots": [
         {
-          "entity_id": "entity_beam_1_usage_duration",
-          "role": "tumor_dose_contributor",
-          "parameter_binding": {
-            "beam": "Beam 1",
+          "entity_id": "ENT_REGION_DOSE",
+          "arguments": [
+            "tumor"
+          ],
+          "slot_role": "bounded dose"
+        }
+      ],
+      "quantifier": "for the tumor region",
+      "scope_kind": "fixed_instance",
+      "parameter_refs": [
+        "PAR_TUMOR_MIN_DOSE"
+      ],
+      "source_grounding": {
+        "quotes": [
+          "at least 3 units of medicine should be delivered to the tumor"
+        ],
+        "interpretation": "The total tumor dose must be at least 3 dose units."
+      },
+      "source_spans": [
+        "at least 3 units of medicine should be delivered to the tumor"
+      ],
+      "coupling_active": false,
+      "confidence": "high",
+      "instance_quantifier": "for r = tumor",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "binding": {
+            "region": "tumor"
+          }
+        }
+      ]
+    }
+  ],
+  "instance_hyperedges": [
+    {
+      "id": "HEDGE_DOSE_PANCREAS",
+      "obligation_id": "OBL_REGION_DOSE_ACCUMULATION",
+      "obligation_family": "REGION_DOSE_ACCUMULATION",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "index_binding": {
+            "region": "pancreas"
+          }
+        },
+        {
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "index_binding": {
+            "beam": "Beam 1"
+          }
+        },
+        {
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "index_binding": {
+            "beam": "Beam 2"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "D[pancreas] = 0.3*T[Beam 1] + 0.2*T[Beam 2]"
+    },
+    {
+      "id": "HEDGE_DOSE_SKIN",
+      "obligation_id": "OBL_REGION_DOSE_ACCUMULATION",
+      "obligation_family": "REGION_DOSE_ACCUMULATION",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "index_binding": {
+            "region": "skin"
+          }
+        },
+        {
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "index_binding": {
+            "beam": "Beam 1"
+          }
+        },
+        {
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "index_binding": {
+            "beam": "Beam 2"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "D[skin] = 0.2*T[Beam 1] + 0.1*T[Beam 2]"
+    },
+    {
+      "id": "HEDGE_DOSE_TUMOR",
+      "obligation_id": "OBL_REGION_DOSE_ACCUMULATION",
+      "obligation_family": "REGION_DOSE_ACCUMULATION",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "index_binding": {
             "region": "tumor"
           }
         },
         {
-          "entity_id": "entity_beam_2_usage_duration",
-          "role": "tumor_dose_contributor",
-          "parameter_binding": {
-            "beam": "Beam 2",
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "index_binding": {
+            "beam": "Beam 1"
+          }
+        },
+        {
+          "entity_id": "ENT_BEAM_USAGE_DURATION",
+          "index_binding": {
+            "beam": "Beam 2"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "D[tumor] = 0.6*T[Beam 1] + 0.4*T[Beam 2]"
+    },
+    {
+      "id": "HEDGE_SKIN_MAX",
+      "obligation_id": "OBL_SKIN_DOSE_UPPER_BOUND",
+      "obligation_family": "REGION_DOSE_UPPER_BOUND",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "index_binding": {
+            "region": "skin"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "D[skin] <= 4"
+    },
+    {
+      "id": "HEDGE_TUMOR_MIN",
+      "obligation_id": "OBL_TUMOR_DOSE_LOWER_BOUND",
+      "obligation_family": "REGION_DOSE_LOWER_BOUND",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_REGION_DOSE",
+          "index_binding": {
             "region": "tumor"
           }
         }
       ],
-      "quantifier": "single treatment plan",
-      "scope_kind": "aggregate_across_beams",
-      "parameter_refs": [
-        "param_dose_rate",
-        "param_tumor_min_dose"
-      ],
-      "condition": {
-        "region": "tumor"
-      },
-      "coupling_active": true,
-      "source_status": "explicit",
-      "source_grounding": "The tumor must receive at least 3 units of medicine in total.",
-      "source_spans": [
-        "at least 3 units of medicine should be delivered to the tumor"
-      ],
-      "normalization_rationale": "The per-minute tumor dose from each beam accumulates over its usage duration; the stated requirement applies to their aggregate.",
-      "confidence": "high"
+      "boundary_kind": "generic",
+      "normalized_semantics": "D[tumor] >= 3"
     }
   ],
-  "derived_checks": [],
-  "unresolved_items": [
-    {
-      "id": "unresolved_treatment_time_granularity",
-      "issue": "The source does not state whether beam usage durations must be whole minutes or may be fractional.",
-      "source_spans": [
-        "How many minutes of each beam should be used"
-      ],
-      "impact": "Integrality or time discretization cannot be asserted from the source."
-    }
-  ],
+  "unresolved_items": [],
   "annotation_warnings": [
     {
-      "id": "warning_no_separate_dose_entity",
-      "message": "Regional cumulative doses are represented as rate-weighted semantics of the objective and obligations rather than as separate endogenous entity families because the source asks only for beam usage durations and does not independently designate cumulative dose variables."
+      "id": "WARN_BEAM_INSTANCE_CANONICALIZATION",
+      "message": "The input note describes two decision families, but Beam 1 and Beam 2 are semantically instances of one indexed beam-usage-duration family under SOH-1.2."
     }
   ]
 }

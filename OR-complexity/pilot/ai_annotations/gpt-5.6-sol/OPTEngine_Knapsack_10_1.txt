@@ -1,39 +1,62 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "OPTEngine_Knapsack_10_1",
   "layer": "semantic",
   "sets": [
     {
-      "id": "S_CONTAINER",
-      "canonical_name": "cargo_containers",
-      "members": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      "source_grounding": "Available containers are: Container 1 through Container 10.",
+      "id": "SET_CONTAINERS",
+      "canonical_name": "available containers",
+      "members": [
+        "Container 1",
+        "Container 2",
+        "Container 3",
+        "Container 4",
+        "Container 5",
+        "Container 6",
+        "Container 7",
+        "Container 8",
+        "Container 9",
+        "Container 10"
+      ],
+      "cardinality": 10,
       "source_spans": [
         "Available containers are:",
         "Container 1: volume 27 m³, revenue $33",
+        "Container 2: volume 9 m³, revenue $20",
+        "Container 3: volume 26 m³, revenue $49",
+        "Container 4: volume 45 m³, revenue $47",
+        "Container 5: volume 9 m³, revenue $225",
+        "Container 6: volume 20 m³, revenue $291",
+        "Container 7: volume 27 m³, revenue $82",
+        "Container 8: volume 38 m³, revenue $226",
+        "Container 9: volume 20 m³, revenue $191",
         "Container 10: volume 6 m³, revenue $137"
       ]
     }
   ],
   "parameters": [
     {
-      "id": "P_VOLUME",
-      "canonical_name": "container_volume",
-      "indexed_by": ["S_CONTAINER"],
+      "id": "PAR_CONTAINER_VOLUME",
+      "canonical_name": "container volume",
+      "index_signature": [
+        {
+          "role": "container",
+          "set_id": "SET_CONTAINERS"
+        }
+      ],
       "unit": "m³",
       "values": {
-        "1": 27,
-        "2": 9,
-        "3": 26,
-        "4": 45,
-        "5": 9,
-        "6": 20,
-        "7": 27,
-        "8": 38,
-        "9": 20,
-        "10": 6
+        "Container 1": 27,
+        "Container 2": 9,
+        "Container 3": 26,
+        "Container 4": 45,
+        "Container 5": 9,
+        "Container 6": 20,
+        "Container 7": 27,
+        "Container 8": 38,
+        "Container 9": 20,
+        "Container 10": 6
       },
-      "source_grounding": "The listed volume of each available container.",
       "source_spans": [
         "Container 1: volume 27 m³",
         "Container 2: volume 9 m³",
@@ -48,23 +71,27 @@
       ]
     },
     {
-      "id": "P_REVENUE",
-      "canonical_name": "container_revenue",
-      "indexed_by": ["S_CONTAINER"],
+      "id": "PAR_CONTAINER_REVENUE",
+      "canonical_name": "container revenue",
+      "index_signature": [
+        {
+          "role": "container",
+          "set_id": "SET_CONTAINERS"
+        }
+      ],
       "unit": "USD",
       "values": {
-        "1": 33,
-        "2": 20,
-        "3": 49,
-        "4": 47,
-        "5": 225,
-        "6": 291,
-        "7": 82,
-        "8": 226,
-        "9": 191,
-        "10": 137
+        "Container 1": 33,
+        "Container 2": 20,
+        "Container 3": 49,
+        "Container 4": 47,
+        "Container 5": 225,
+        "Container 6": 291,
+        "Container 7": 82,
+        "Container 8": 226,
+        "Container 9": 191,
+        "Container 10": 137
       },
-      "source_grounding": "The listed revenue of each available container.",
       "source_spans": [
         "Container 1: volume 27 m³, revenue $33",
         "Container 2: volume 9 m³, revenue $20",
@@ -79,12 +106,10 @@
       ]
     },
     {
-      "id": "P_VEHICLE_CAPACITY",
-      "canonical_name": "transport_vehicle_volume_capacity",
-      "indexed_by": [],
+      "id": "PAR_VEHICLE_VOLUME_CAPACITY",
+      "canonical_name": "vehicle volume capacity",
       "unit": "m³",
       "value": 158,
-      "source_grounding": "The transport vehicle has a maximum capacity of 158 m³.",
       "source_spans": [
         "The transport vehicle has a maximum capacity of 158 m³."
       ]
@@ -92,77 +117,223 @@
   ],
   "entities": [
     {
-      "id": "E_CONTAINER_SELECTION",
-      "canonical_family": "cargo_container_selection",
-      "canonical_name": "container_selected_for_shipment",
+      "id": "ENT_CONTAINER_SELECTION",
+      "canonical_name": "container shipment selection",
+      "canonical_family": "ITEM_SELECTION",
       "entity_role": "decision",
-      "indexed_by": ["S_CONTAINER"],
-      "semantic_domain": {
-        "type": "binary_choice",
-        "meaning": {
-          "selected": "container is fully shipped",
-          "not_selected": "container is not shipped"
+      "index_signature": [
+        {
+          "role": "container",
+          "set_id": "SET_CONTAINERS"
         }
-      },
-      "source_grounding": "The manager chooses which containers to ship, and each container is either fully shipped or not shipped.",
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
       "source_spans": [
         "A logistics manager must select cargo containers for a shipment.",
-        "Choose the container combination",
+        "Choose the container combination that maximizes total revenue without exceeding this volume limit.",
         "Each container is either fully shipped or not shipped."
       ],
-      "confidence": 1.0
+      "confidence": "high",
+      "semantic_type": "selection",
+      "value_domain": [
+        0,
+        1
+      ],
+      "domain_metadata": {
+        "interpretation": {
+          "0": "container is not shipped",
+          "1": "container is fully shipped"
+        }
+      }
     }
   ],
   "objective": {
-    "id": "OBJ_TOTAL_REVENUE",
+    "canonical_name": "maximize total shipment revenue",
     "sense": "maximize",
-    "canonical_name": "total_revenue_of_selected_containers",
-    "normalized_semantics": "Maximize the sum of the revenues associated with containers selected for shipment.",
-    "entity_refs": ["E_CONTAINER_SELECTION"],
-    "parameter_refs": ["P_REVENUE"],
-    "aggregation_scope": {
-      "over": "S_CONTAINER"
-    },
-    "source_grounding": "Choose the container combination that maximizes total revenue.",
+    "normalized_semantics": "maximize the sum of PAR_CONTAINER_REVENUE[container] over selected containers",
+    "support_entity_ids": [
+      "ENT_CONTAINER_SELECTION"
+    ],
+    "parameter_refs": [
+      "PAR_CONTAINER_REVENUE"
+    ],
     "source_spans": [
       "Choose the container combination that maximizes total revenue without exceeding this volume limit."
     ],
-    "confidence": 1.0
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "O_VEHICLE_VOLUME_CAPACITY",
-      "canonical_family": "aggregate_selected_volume_upper_bound",
-      "canonical_name": "transport_vehicle_volume_capacity_limit",
+      "id": "OBL_VEHICLE_VOLUME_CAPACITY",
+      "canonical_family": "AGGREGATE_RESOURCE_CAPACITY",
+      "canonical_name": "total selected-container volume must not exceed vehicle capacity",
       "structural_form": "AGGREGATE_LIMIT",
-      "business_role": "capacity_compliance",
-      "normalized_semantics": "The aggregate volume of all selected containers must not exceed the transport vehicle's volume capacity.",
-      "support_entity_ids": ["E_CONTAINER_SELECTION"],
+      "business_role": "vehicle volume feasibility",
+      "normalized_semantics": "The sum of the volumes of all fully shipped containers is at most 158 m³.",
+      "support_entity_ids": [
+        "ENT_CONTAINER_SELECTION"
+      ],
       "incidence_slots": [
         {
-          "entity_id": "E_CONTAINER_SELECTION",
-          "argument_roles": {
-            "container": "i"
-          },
-          "aggregation": "sum over all containers"
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "arguments": [
+            "container for every container in SET_CONTAINERS"
+          ],
+          "aggregation": "volume-weighted sum"
         }
       ],
-      "quantifier": "For the single shipment, across all containers i in S_CONTAINER.",
-      "scope_kind": "global_aggregate",
-      "parameter_refs": ["P_VOLUME", "P_VEHICLE_CAPACITY"],
-      "condition": null,
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "The selected container combination may use at most 158 m³ of vehicle volume.",
+      "quantifier": "over all containers in SET_CONTAINERS",
+      "scope_kind": "global",
+      "parameter_refs": [
+        "PAR_CONTAINER_VOLUME",
+        "PAR_VEHICLE_VOLUME_CAPACITY"
+      ],
+      "source_grounding": {
+        "rule_text": "The transport vehicle has a maximum capacity of 158 m³. Choose the container combination that maximizes total revenue without exceeding this volume limit."
+      },
       "source_spans": [
         "The transport vehicle has a maximum capacity of 158 m³.",
-        "Choose the container combination that maximizes total revenue without exceeding this volume limit."
+        "without exceeding this volume limit"
       ],
-      "normalization_rationale": "This is one aggregate upper-bound family over the container-selection decision family. It is unary at the CSDE-family level despite aggregating multiple container instances.",
-      "confidence": 1.0
+      "instance_quantifier": "one aggregate edge over all container instances in SET_CONTAINERS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 1"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 2"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 3"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 4"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 5"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 6"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 7"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 8"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 9"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "binding": {
+            "container": "Container 10"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
+      "confidence": "high"
     }
   ],
-  "derived_checks": [],
-  "unresolved_items": [],
-  "annotation_warnings": []
+  "instance_hyperedges": [
+    {
+      "id": "EDGE_VEHICLE_VOLUME_CAPACITY_ALL_CONTAINERS",
+      "obligation_id": "OBL_VEHICLE_VOLUME_CAPACITY",
+      "obligation_family": "AGGREGATE_RESOURCE_CAPACITY",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 1"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 2"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 3"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 4"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 5"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 6"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 7"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 8"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 9"
+          }
+        },
+        {
+          "entity_id": "ENT_CONTAINER_SELECTION",
+          "index_binding": {
+            "container": "Container 10"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "27*x[Container 1] + 9*x[Container 2] + 26*x[Container 3] + 45*x[Container 4] + 9*x[Container 5] + 20*x[Container 6] + 27*x[Container 7] + 38*x[Container 8] + 20*x[Container 9] + 6*x[Container 10] <= 158"
+    }
+  ],
+  "unresolved_items": []
 }

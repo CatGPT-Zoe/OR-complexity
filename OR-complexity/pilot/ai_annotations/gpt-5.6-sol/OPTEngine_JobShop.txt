@@ -1,80 +1,44 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "OPTEngine_JobShop",
+  "dataset": "OPTEngine",
   "layer": "semantic",
   "sets": [
     {
       "id": "SET_ROUTES",
-      "canonical_name": "routes",
+      "canonical_name": "delivery routes",
       "members": [
         "Route 1",
         "Route 2",
         "Route 3"
       ],
-      "source_grounding": "A logistics company needs to coordinate 3 delivery routes through 3 distribution hubs.",
+      "cardinality": 3,
       "source_spans": [
-        "3 delivery routes"
+        "A logistics company needs to coordinate 3 delivery routes through 3 distribution hubs."
       ]
     },
     {
       "id": "SET_HUBS",
-      "canonical_name": "hubs",
+      "canonical_name": "distribution hubs",
       "members": [
         "Hub A",
         "Hub B",
         "Hub C"
       ],
-      "source_grounding": "A logistics company needs to coordinate 3 delivery routes through 3 distribution hubs.",
+      "cardinality": 3,
       "source_spans": [
-        "3 distribution hubs"
+        "A logistics company needs to coordinate 3 delivery routes through 3 distribution hubs."
       ]
     },
     {
-      "id": "SET_PROCEDURES",
-      "canonical_name": "handling_procedures",
-      "index_structure": [
-        "route",
-        "stage"
-      ],
+      "id": "SET_STAGES",
+      "canonical_name": "procedure positions within a route",
       "members": [
-        {
-          "route": "Route 1",
-          "stage": 1
-        },
-        {
-          "route": "Route 1",
-          "stage": 2
-        },
-        {
-          "route": "Route 1",
-          "stage": 3
-        },
-        {
-          "route": "Route 2",
-          "stage": 1
-        },
-        {
-          "route": "Route 2",
-          "stage": 2
-        },
-        {
-          "route": "Route 2",
-          "stage": 3
-        },
-        {
-          "route": "Route 3",
-          "stage": 1
-        },
-        {
-          "route": "Route 3",
-          "stage": 2
-        },
-        {
-          "route": "Route 3",
-          "stage": 3
-        }
+        1,
+        2,
+        3
       ],
-      "source_grounding": "Each route consists of a sequence of handling procedures represented as (Hub, Duration) pairs.",
+      "cardinality": 3,
       "source_spans": [
         "Each route consists of a sequence of handling procedures represented as (Hub, Duration) pairs",
         "Route 1 requires the sequence: (Hub B, 10) → (Hub A, 7) → (Hub C, 10)",
@@ -85,24 +49,65 @@
   ],
   "parameters": [
     {
-      "id": "PAR_REQUIRED_HUB",
-      "canonical_name": "required_hub",
-      "index": [
-        "route",
-        "stage"
+      "id": "PAR_PROCEDURE_HUB",
+      "canonical_name": "assigned hub of each handling procedure",
+      "index_signature": [
+        {
+          "role": "route",
+          "set_id": "SET_ROUTES"
+        },
+        {
+          "role": "stage",
+          "set_id": "SET_STAGES"
+        }
       ],
-      "value_map": {
-        "Route 1,1": "Hub B",
-        "Route 1,2": "Hub A",
-        "Route 1,3": "Hub C",
-        "Route 2,1": "Hub B",
-        "Route 2,2": "Hub C",
-        "Route 2,3": "Hub A",
-        "Route 3,1": "Hub C",
-        "Route 3,2": "Hub A",
-        "Route 3,3": "Hub B"
-      },
-      "source_grounding": "Each (Hub, Duration) pair specifies the hub where the procedure must occur.",
+      "values": [
+        {
+          "route": "Route 1",
+          "stage": 1,
+          "value": "Hub B"
+        },
+        {
+          "route": "Route 1",
+          "stage": 2,
+          "value": "Hub A"
+        },
+        {
+          "route": "Route 1",
+          "stage": 3,
+          "value": "Hub C"
+        },
+        {
+          "route": "Route 2",
+          "stage": 1,
+          "value": "Hub B"
+        },
+        {
+          "route": "Route 2",
+          "stage": 2,
+          "value": "Hub C"
+        },
+        {
+          "route": "Route 2",
+          "stage": 3,
+          "value": "Hub A"
+        },
+        {
+          "route": "Route 3",
+          "stage": 1,
+          "value": "Hub C"
+        },
+        {
+          "route": "Route 3",
+          "stage": 2,
+          "value": "Hub A"
+        },
+        {
+          "route": "Route 3",
+          "stage": 3,
+          "value": "Hub B"
+        }
+      ],
       "source_spans": [
         "Route 1 requires the sequence: (Hub B, 10) → (Hub A, 7) → (Hub C, 10)",
         "Route 2 requires the sequence: (Hub B, 6) → (Hub C, 2) → (Hub A, 6)",
@@ -110,88 +115,118 @@
       ]
     },
     {
-      "id": "PAR_PROCESSING_DURATION",
-      "canonical_name": "processing_duration",
-      "index": [
-        "route",
-        "stage"
+      "id": "PAR_PROCEDURE_DURATION",
+      "canonical_name": "required handling duration",
+      "index_signature": [
+        {
+          "role": "route",
+          "set_id": "SET_ROUTES"
+        },
+        {
+          "role": "stage",
+          "set_id": "SET_STAGES"
+        }
       ],
-      "unit": "unspecified_time_unit",
-      "value_map": {
-        "Route 1,1": 10,
-        "Route 1,2": 7,
-        "Route 1,3": 10,
-        "Route 2,1": 6,
-        "Route 2,2": 2,
-        "Route 2,3": 6,
-        "Route 3,1": 10,
-        "Route 3,2": 6,
-        "Route 3,3": 4
-      },
-      "source_grounding": "Each (Hub, Duration) pair specifies the time required to complete the procedure.",
+      "values": [
+        {
+          "route": "Route 1",
+          "stage": 1,
+          "value": 10
+        },
+        {
+          "route": "Route 1",
+          "stage": 2,
+          "value": 7
+        },
+        {
+          "route": "Route 1",
+          "stage": 3,
+          "value": 10
+        },
+        {
+          "route": "Route 2",
+          "stage": 1,
+          "value": 6
+        },
+        {
+          "route": "Route 2",
+          "stage": 2,
+          "value": 2
+        },
+        {
+          "route": "Route 2",
+          "stage": 3,
+          "value": 6
+        },
+        {
+          "route": "Route 3",
+          "stage": 1,
+          "value": 10
+        },
+        {
+          "route": "Route 3",
+          "stage": 2,
+          "value": 6
+        },
+        {
+          "route": "Route 3",
+          "stage": 3,
+          "value": 4
+        }
+      ],
+      "unit": "unspecified time unit",
       "source_spans": [
+        "each pair specifies the hub where the procedure must occur and the time required to complete it",
         "Route 1 requires the sequence: (Hub B, 10) → (Hub A, 7) → (Hub C, 10)",
         "Route 2 requires the sequence: (Hub B, 6) → (Hub C, 2) → (Hub A, 6)",
         "Route 3 requires the sequence: (Hub C, 10) → (Hub A, 6) → (Hub B, 4)"
-      ]
-    },
-    {
-      "id": "PAR_ROUTE_STAGE_ORDER",
-      "canonical_name": "route_stage_order",
-      "index": [
-        "route"
-      ],
-      "value_semantics": "The listed pair order is the required procedure order for each route.",
-      "source_grounding": "The order of pairs indicates the required sequence in which the procedures must be performed.",
-      "source_spans": [
-        "The order of pairs indicates the required sequence in which the procedures must be performed."
-      ]
-    },
-    {
-      "id": "PAR_HUB_CONCURRENT_CAPACITY",
-      "canonical_name": "hub_concurrent_procedure_capacity",
-      "index": [
-        "hub"
-      ],
-      "value": 1,
-      "source_grounding": "Each hub can only handle one procedure at a time.",
-      "source_spans": [
-        "each hub can only handle one procedure at a time"
       ]
     }
   ],
   "entities": [
     {
-      "id": "ENT_PROCEDURE_SCHEDULE",
-      "canonical_family": "PROCEDURE_EXECUTION_SCHEDULE",
+      "id": "ENT_PROCEDURE_EXECUTION",
       "canonical_name": "handling procedure execution schedule",
+      "canonical_family": "PROCEDURE_EXECUTION",
       "entity_role": "decision",
-      "arguments": [
-        "route",
-        "stage"
+      "semantic_type": "nonpreemptive scheduled activity",
+      "description": "The scheduled execution timing of each route-stage handling procedure.",
+      "index_signature": [
+        {
+          "role": "route",
+          "set_id": "SET_ROUTES"
+        },
+        {
+          "role": "stage",
+          "set_id": "SET_STAGES"
+        }
       ],
-      "semantic_content": "The timing and occupied execution interval of each handling procedure.",
-      "domain_metadata": {
-        "temporal_unit": "unspecified",
-        "preemption_status": "governed by an explicit obligation"
-      },
-      "source_grounding": "Each handling procedure has a beginning, a required processing duration, and a position in the processing order at its hub.",
+      "instance_level": true,
+      "unit": "unspecified time unit",
+      "source_status": "explicit",
       "source_spans": [
+        "Each route consists of a sequence of handling procedures",
         "Each handling procedure must run continuously once it begins and cannot be interrupted",
-        "determine the processing order of all procedures at the hubs"
+        "The objective is to determine the processing order of all procedures at the hubs"
       ],
       "confidence": "high"
     },
     {
       "id": "ENT_ROUTE_COMPLETION",
-      "canonical_family": "ROUTE_COMPLETION_OUTCOME",
-      "canonical_name": "route completion time",
+      "canonical_name": "delivery route completion time",
+      "canonical_family": "ROUTE_COMPLETION",
       "entity_role": "service_outcome",
-      "arguments": [
-        "route"
+      "semantic_type": "completion time",
+      "description": "The time at which all handling procedures of a delivery route have completed.",
+      "index_signature": [
+        {
+          "role": "route",
+          "set_id": "SET_ROUTES"
+        }
       ],
-      "semantic_content": "The time at which a delivery route has completed all of its required handling procedures.",
-      "source_grounding": "The objective refers to completion time for all delivery routes.",
+      "instance_level": true,
+      "unit": "unspecified time unit",
+      "source_status": "explicit",
       "source_spans": [
         "the total completion time for all delivery routes"
       ],
@@ -199,243 +234,756 @@
     }
   ],
   "objective": {
-    "direction": "minimize",
-    "canonical_name": "minimize delivery-route completion measure",
-    "normalized_semantics": "Choose the procedure schedules and resulting hub processing orders to minimize the stated aggregate completion measure for the delivery routes.",
-    "entity_refs": [
-      "ENT_PROCEDURE_SCHEDULE",
+    "id": "OBJ_ROUTE_COMPLETION",
+    "canonical_name": "minimize total route completion time",
+    "sense": "minimize",
+    "normalized_semantics": "Minimize the stated total completion time for all delivery routes; whether 'total completion time' denotes a sum of route completion times or the time by which all routes are complete is unresolved.",
+    "support_entity_ids": [
       "ENT_ROUTE_COMPLETION"
     ],
-    "source_grounding": "The objective is to determine the processing order of all procedures at the hubs so that the total completion time for all delivery routes is minimized.",
     "source_spans": [
       "The objective is to determine the processing order of all procedures at the hubs so that the total completion time for all delivery routes is minimized."
-    ],
-    "aggregation_status": "ambiguous",
-    "candidate_interpretations": [
-      "Minimize the time by which all routes are complete, i.e. the maximum route completion time or makespan.",
-      "Minimize the sum of the individual route completion times."
     ],
     "confidence": "medium"
   },
   "obligations": [
     {
-      "id": "OBL_FIXED_PROCESSING_DURATION",
-      "canonical_family": "FIXED_PROCEDURE_PROCESSING_DURATION",
-      "canonical_name": "procedure execution has required duration",
+      "id": "OBL_REQUIRED_PROCESSING_DURATION",
+      "canonical_family": "REQUIRED_PROCESSING_DURATION",
+      "canonical_name": "each procedure receives its required handling duration",
       "structural_form": "EQUALITY",
-      "business_role": "processing_time_requirement",
-      "normalized_semantics": "For every handling procedure, the amount of execution time assigned to that procedure must equal its specified processing duration.",
+      "business_role": "processing requirement",
+      "normalized_semantics": "For every route r and stage k, the execution of procedure (r,k) has total processing duration equal to PAR_PROCEDURE_DURATION[r,k].",
       "support_entity_ids": [
-        "ENT_PROCEDURE_SCHEDULE"
+        "ENT_PROCEDURE_EXECUTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "ENT_PROCEDURE_SCHEDULE",
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
           "arguments": [
             "route",
             "stage"
           ],
-          "temporal_role": "procedure execution interval"
+          "role": "procedure"
         }
       ],
-      "quantifier": "For every route and every stage of that route.",
-      "scope_kind": "per_procedure",
+      "quantifier": "for every route and every stage",
+      "scope_kind": "universal_indexed",
       "parameter_refs": [
-        "PAR_PROCESSING_DURATION"
+        "PAR_PROCEDURE_DURATION"
       ],
-      "cross_instance": false,
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "Each pair specifies the time required to complete its procedure.",
+      "source_grounding": "explicit",
       "source_spans": [
         "each pair specifies the hub where the procedure must occur and the time required to complete it"
       ],
+      "instance_quantifier": "for r in SET_ROUTES and k in SET_STAGES",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "binding": {
+            "route": "Route 1",
+            "stage": 1
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": false,
       "confidence": "high"
     },
     {
-      "id": "OBL_NONPREEMPTIVE_EXECUTION",
-      "canonical_family": "NONPREEMPTIVE_PROCEDURE_EXECUTION",
-      "canonical_name": "procedure execution is uninterrupted",
+      "id": "OBL_PROCEDURE_NONPREEMPTION",
+      "canonical_family": "PROCEDURE_NONPREEMPTION",
+      "canonical_name": "handling procedures cannot be interrupted",
       "structural_form": "OTHER_RELATION",
-      "business_role": "nonpreemption",
-      "normalized_semantics": "Once a handling procedure begins, its required execution must occupy one continuous interval and may not be interrupted and resumed later.",
+      "business_role": "nonpreemptive execution",
+      "normalized_semantics": "For every route r and stage k, once procedure (r,k) starts, it executes continuously as one uninterrupted processing interval until completion.",
       "support_entity_ids": [
-        "ENT_PROCEDURE_SCHEDULE"
+        "ENT_PROCEDURE_EXECUTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "ENT_PROCEDURE_SCHEDULE",
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
           "arguments": [
             "route",
             "stage"
           ],
-          "temporal_role": "single contiguous execution interval"
+          "role": "nonpreemptive procedure"
         }
       ],
-      "quantifier": "For every handling procedure.",
-      "scope_kind": "per_procedure",
-      "parameter_refs": [],
-      "cross_instance": false,
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "Each handling procedure must run continuously once it begins and cannot be interrupted.",
+      "quantifier": "for every route and every stage",
+      "scope_kind": "universal_indexed",
+      "parameter_refs": [
+        "PAR_PROCEDURE_DURATION"
+      ],
+      "source_grounding": "explicit",
       "source_spans": [
         "Each handling procedure must run continuously once it begins and cannot be interrupted"
       ],
+      "instance_quantifier": "for r in SET_ROUTES and k in SET_STAGES",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "binding": {
+            "route": "Route 1",
+            "stage": 1
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "coupling_active": false,
       "confidence": "high"
     },
     {
-      "id": "OBL_ROUTE_PROCEDURE_PRECEDENCE",
-      "canonical_family": "WITHIN_ROUTE_PROCEDURE_PRECEDENCE",
-      "canonical_name": "route procedures follow listed sequence",
+      "id": "OBL_WITHIN_ROUTE_PRECEDENCE",
+      "canonical_family": "WITHIN_ROUTE_PRECEDENCE",
+      "canonical_name": "successive route procedures follow the specified sequence",
       "structural_form": "PRECEDENCE",
-      "business_role": "technological_sequence",
-      "normalized_semantics": "For each route, every procedure after the first may begin only after the immediately preceding listed procedure has completed.",
+      "business_role": "route technological order",
+      "normalized_semantics": "For every route r and each nonterminal stage k, procedure (r,k) must complete before procedure (r,k+1) begins.",
       "support_entity_ids": [
-        "ENT_PROCEDURE_SCHEDULE"
+        "ENT_PROCEDURE_EXECUTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "ENT_PROCEDURE_SCHEDULE",
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
           "arguments": [
             "route",
             "stage"
           ],
-          "temporal_role": "predecessor completion"
+          "role": "predecessor"
         },
         {
-          "entity_id": "ENT_PROCEDURE_SCHEDULE",
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
           "arguments": [
             "route",
             "stage+1"
           ],
-          "temporal_role": "successor start"
+          "role": "successor"
         }
       ],
-      "quantifier": "For every route and every pair of consecutive stages in its listed sequence.",
-      "scope_kind": "cross_procedure_within_route",
+      "quantifier": "for every route and every stage having a successor",
+      "scope_kind": "universal_indexed",
       "parameter_refs": [
-        "PAR_ROUTE_STAGE_ORDER"
+        "PAR_PROCEDURE_DURATION"
       ],
-      "cross_instance": true,
-      "intra_entity_instance_coupling": true,
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "The order of pairs indicates the required sequence in which the procedures must be performed.",
+      "source_grounding": "explicit",
       "source_spans": [
         "The order of pairs indicates the required sequence in which the procedures must be performed.",
         "Route 1 requires the sequence: (Hub B, 10) → (Hub A, 7) → (Hub C, 10)",
         "Route 2 requires the sequence: (Hub B, 6) → (Hub C, 2) → (Hub A, 6)",
         "Route 3 requires the sequence: (Hub C, 10) → (Hub A, 6) → (Hub B, 4)"
       ],
+      "instance_quantifier": "for r in SET_ROUTES and k in {1,2}",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "binding": {
+            "route": "Route 1",
+            "stage": 1
+          }
+        },
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "binding": {
+            "route": "Route 1",
+            "stage": 2
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
+        {
+          "id": "EDGE_PRECEDENCE_R1_S1_S2",
+          "binding": {
+            "route": "Route 1",
+            "stage": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 2
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Procedure[Route 1,1] completes after duration 10 before Procedure[Route 1,2] begins."
+        },
+        {
+          "id": "EDGE_PRECEDENCE_R1_S2_S3",
+          "binding": {
+            "route": "Route 1",
+            "stage": 2
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 3
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Procedure[Route 1,2] completes after duration 7 before Procedure[Route 1,3] begins."
+        },
+        {
+          "id": "EDGE_PRECEDENCE_R2_S1_S2",
+          "binding": {
+            "route": "Route 2",
+            "stage": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 2
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Procedure[Route 2,1] completes after duration 6 before Procedure[Route 2,2] begins."
+        },
+        {
+          "id": "EDGE_PRECEDENCE_R2_S2_S3",
+          "binding": {
+            "route": "Route 2",
+            "stage": 2
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 3
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Procedure[Route 2,2] completes after duration 2 before Procedure[Route 2,3] begins."
+        },
+        {
+          "id": "EDGE_PRECEDENCE_R3_S1_S2",
+          "binding": {
+            "route": "Route 3",
+            "stage": 1
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 2
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Procedure[Route 3,1] completes after duration 10 before Procedure[Route 3,2] begins."
+        },
+        {
+          "id": "EDGE_PRECEDENCE_R3_S2_S3",
+          "binding": {
+            "route": "Route 3",
+            "stage": 2
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 3
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Procedure[Route 3,2] completes after duration 6 before Procedure[Route 3,3] begins."
+        }
+      ],
+      "coupling_active": true,
       "confidence": "high"
     },
     {
-      "id": "OBL_HUB_CAPACITY_EXCLUSION",
-      "canonical_family": "SHARED_HUB_NONOVERLAP",
-      "canonical_name": "hub handles at most one procedure at a time",
-      "structural_form": "AGGREGATE_LIMIT",
-      "business_role": "resource_capacity",
-      "normalized_semantics": "At any time, no more than one handling procedure assigned to a given hub may be executing; consequently, execution intervals of distinct procedures requiring the same hub must not overlap.",
+      "id": "OBL_HUB_CAPACITY_NONOVERLAP",
+      "canonical_family": "UNARY_RESOURCE_NONOVERLAP",
+      "canonical_name": "procedures assigned to the same hub cannot overlap",
+      "structural_form": "OTHER_RELATION",
+      "business_role": "hub capacity exclusion",
+      "normalized_semantics": "For every pair of distinct procedures assigned to the same hub, their execution intervals must be disjoint; one procedure must complete before the other begins.",
       "support_entity_ids": [
-        "ENT_PROCEDURE_SCHEDULE"
+        "ENT_PROCEDURE_EXECUTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "ENT_PROCEDURE_SCHEDULE",
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
           "arguments": [
-            "route_1",
-            "stage_1"
+            "route_i",
+            "stage_i"
           ],
-          "temporal_role": "execution on shared hub"
+          "role": "first competing procedure"
         },
         {
-          "entity_id": "ENT_PROCEDURE_SCHEDULE",
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
           "arguments": [
-            "route_2",
-            "stage_2"
+            "route_j",
+            "stage_j"
           ],
-          "temporal_role": "execution on the same shared hub"
+          "role": "second competing procedure"
         }
       ],
-      "quantifier": "For every hub and all handling procedures whose required hub is that hub, at every execution time.",
-      "scope_kind": "cross_procedure_shared_resource",
+      "quantifier": "for every unordered pair of distinct procedures having the same assigned hub",
+      "scope_kind": "pairwise_indexed",
       "parameter_refs": [
-        "PAR_REQUIRED_HUB",
-        "PAR_HUB_CONCURRENT_CAPACITY"
+        "PAR_PROCEDURE_HUB",
+        "PAR_PROCEDURE_DURATION"
       ],
-      "cross_instance": true,
-      "intra_entity_instance_coupling": true,
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "Each hub can only handle one procedure at a time.",
+      "source_grounding": "explicit",
       "source_spans": [
         "each hub can only handle one procedure at a time"
       ],
-      "normalization_rationale": "The one-at-a-time capacity statement and pairwise non-overlap are alternative expressions of the same primitive resource-exclusion family.",
+      "instance_quantifier": "for distinct (r,k) and (r',k') with PAR_PROCEDURE_HUB[r,k] = PAR_PROCEDURE_HUB[r',k']",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "binding": {
+            "route": "Route 1",
+            "stage": 1
+          }
+        },
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "binding": {
+            "route": "Route 2",
+            "stage": 1
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
+        {
+          "id": "EDGE_HUBA_R1S2_R2S3",
+          "binding": {
+            "hub": "Hub A"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 3
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 1,2] completes before Procedure[Route 2,3] begins, or Procedure[Route 2,3] completes before Procedure[Route 1,2] begins."
+        },
+        {
+          "id": "EDGE_HUBA_R1S2_R3S2",
+          "binding": {
+            "hub": "Hub A"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 2
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 1,2] completes before Procedure[Route 3,2] begins, or Procedure[Route 3,2] completes before Procedure[Route 1,2] begins."
+        },
+        {
+          "id": "EDGE_HUBA_R2S3_R3S2",
+          "binding": {
+            "hub": "Hub A"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 3
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 2
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 2,3] completes before Procedure[Route 3,2] begins, or Procedure[Route 3,2] completes before Procedure[Route 2,3] begins."
+        },
+        {
+          "id": "EDGE_HUBB_R1S1_R2S1",
+          "binding": {
+            "hub": "Hub B"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 1
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 1,1] completes before Procedure[Route 2,1] begins, or Procedure[Route 2,1] completes before Procedure[Route 1,1] begins."
+        },
+        {
+          "id": "EDGE_HUBB_R1S1_R3S3",
+          "binding": {
+            "hub": "Hub B"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 3
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 1,1] completes before Procedure[Route 3,3] begins, or Procedure[Route 3,3] completes before Procedure[Route 1,1] begins."
+        },
+        {
+          "id": "EDGE_HUBB_R2S1_R3S3",
+          "binding": {
+            "hub": "Hub B"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 1
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 3
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 2,1] completes before Procedure[Route 3,3] begins, or Procedure[Route 3,3] completes before Procedure[Route 2,1] begins."
+        },
+        {
+          "id": "EDGE_HUBC_R1S3_R2S2",
+          "binding": {
+            "hub": "Hub C"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 3
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 2
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 1,3] completes before Procedure[Route 2,2] begins, or Procedure[Route 2,2] completes before Procedure[Route 1,3] begins."
+        },
+        {
+          "id": "EDGE_HUBC_R1S3_R3S1",
+          "binding": {
+            "hub": "Hub C"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 3
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 1
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 1,3] completes before Procedure[Route 3,1] begins, or Procedure[Route 3,1] completes before Procedure[Route 1,3] begins."
+        },
+        {
+          "id": "EDGE_HUBC_R2S2_R3S1",
+          "binding": {
+            "hub": "Hub C"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 2
+              }
+            },
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 1
+              }
+            }
+          ],
+          "boundary_kind": "conditional",
+          "normalized_semantics": "Either Procedure[Route 2,2] completes before Procedure[Route 3,1] begins, or Procedure[Route 3,1] completes before Procedure[Route 2,2] begins."
+        }
+      ],
+      "coupling_active": true,
       "confidence": "high"
-    }
-  ],
-  "derived_checks": [
+    },
     {
-      "id": "CHK_ROUTE_COMPLETION_FROM_FINAL_PROCEDURE",
-      "canonical_name": "route completion equals final-procedure completion",
-      "normalized_semantics": "For each route, its completion time is the completion time of the last procedure in its required sequence.",
+      "id": "OBL_ROUTE_COMPLETION_DEFINITION",
+      "canonical_family": "ROUTE_COMPLETION_DEFINITION",
+      "canonical_name": "route completion equals completion of its final procedure",
+      "structural_form": "EQUALITY",
+      "business_role": "service-outcome definition",
+      "normalized_semantics": "For every route r, its completion time is the completion time of its terminal handling procedure at stage 3.",
       "support_entity_ids": [
-        "ENT_PROCEDURE_SCHEDULE",
+        "ENT_PROCEDURE_EXECUTION",
         "ENT_ROUTE_COMPLETION"
       ],
-      "parameter_refs": [
-        "PAR_ROUTE_STAGE_ORDER"
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "arguments": [
+            "route",
+            "terminal_stage"
+          ],
+          "role": "terminal procedure"
+        },
+        {
+          "entity_id": "ENT_ROUTE_COMPLETION",
+          "arguments": [
+            "route"
+          ],
+          "role": "route completion outcome"
+        }
       ],
-      "source_grounding": "A route consists of a required sequence of handling procedures, and the objective refers to route completion time.",
+      "quantifier": "for every route",
+      "scope_kind": "universal_indexed_terminal",
+      "parameter_refs": [
+        "PAR_PROCEDURE_DURATION"
+      ],
+      "source_grounding": "implicit_required",
       "source_spans": [
         "Each route consists of a sequence of handling procedures",
         "The order of pairs indicates the required sequence in which the procedures must be performed.",
         "the total completion time for all delivery routes"
       ],
-      "derivation_status": "definitional",
+      "instance_quantifier": "for r in SET_ROUTES with terminal_stage = 3",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_PROCEDURE_EXECUTION",
+          "binding": {
+            "route": "Route 1",
+            "stage": 3
+          }
+        },
+        {
+          "entity_id": "ENT_ROUTE_COMPLETION",
+          "binding": {
+            "route": "Route 1"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": false,
+      "instance_edges": [
+        {
+          "id": "EDGE_COMPLETION_R1",
+          "binding": {
+            "route": "Route 1"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 1",
+                "stage": 3
+              }
+            },
+            {
+              "entity_id": "ENT_ROUTE_COMPLETION",
+              "index_binding": {
+                "route": "Route 1"
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "Completion[Route 1] equals the completion of Procedure[Route 1,3], whose duration is 10."
+        },
+        {
+          "id": "EDGE_COMPLETION_R2",
+          "binding": {
+            "route": "Route 2"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 2",
+                "stage": 3
+              }
+            },
+            {
+              "entity_id": "ENT_ROUTE_COMPLETION",
+              "index_binding": {
+                "route": "Route 2"
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "Completion[Route 2] equals the completion of Procedure[Route 2,3], whose duration is 6."
+        },
+        {
+          "id": "EDGE_COMPLETION_R3",
+          "binding": {
+            "route": "Route 3"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_PROCEDURE_EXECUTION",
+              "index_binding": {
+                "route": "Route 3",
+                "stage": 3
+              }
+            },
+            {
+              "entity_id": "ENT_ROUTE_COMPLETION",
+              "index_binding": {
+                "route": "Route 3"
+              }
+            }
+          ],
+          "boundary_kind": "terminal",
+          "normalized_semantics": "Completion[Route 3] equals the completion of Procedure[Route 3,3], whose duration is 4."
+        }
+      ],
+      "coupling_active": true,
       "confidence": "high"
     }
   ],
   "unresolved_items": [
     {
-      "id": "UNRES_OBJECTIVE_AGGREGATION",
-      "topic": "objective aggregation",
-      "description": "The phrase 'total completion time for all delivery routes' does not unambiguously distinguish makespan from the sum of route completion times.",
-      "candidate_interpretations": [
-        "Maximum route completion time",
-        "Sum of route completion times"
-      ],
+      "id": "UNRESOLVED_OBJECTIVE_AGGREGATION",
+      "issue": "The phrase 'total completion time for all delivery routes' does not unambiguously distinguish minimizing the sum of the three route completion times from minimizing the time by which all routes are complete.",
       "source_spans": [
         "the total completion time for all delivery routes is minimized"
       ],
-      "impact": "The feasibility obligations are unaffected, but the objective measure differs."
+      "impact": "Objective aggregation semantics remain unresolved; feasibility obligations are unaffected."
     },
     {
-      "id": "UNRES_TIME_UNIT",
-      "topic": "duration unit",
-      "description": "The numerical durations are given without a named time unit.",
+      "id": "UNRESOLVED_TIME_UNIT",
+      "issue": "The durations are numeric, but no time unit is stated.",
       "source_spans": [
-        "(Hub B, 10)",
-        "(Hub A, 7)",
-        "(Hub C, 2)"
+        "time required to complete it"
       ],
-      "impact": "No semantic feasibility family changes; durations retain a common unspecified time unit."
+      "impact": "All schedule and duration quantities retain an unspecified common time unit."
+    },
+    {
+      "id": "UNRESOLVED_TIME_ORIGIN",
+      "issue": "No scheduling time origin, release time, or earliest permissible start time is stated.",
+      "source_spans": [
+        "The objective is to determine the processing order of all procedures at the hubs"
+      ],
+      "impact": "No source-grounded release-time or start-time lower-bound obligation is included."
     }
   ],
   "annotation_warnings": [
     {
-      "code": "OBJECTIVE_NOT_IN_FEASIBILITY_HYPERGRAPH",
-      "message": "The completion-time objective is represented separately and is not counted as a feasibility obligation."
-    },
-    {
-      "code": "INTRA_FAMILY_INSTANCE_COUPLING",
-      "message": "Precedence and hub exclusion couple multiple instances of the procedure-schedule family. Under SOH-1.1, their support contains only one distinct entity-family ID, so coupling_active is false and they are excluded from H_c despite their cross-instance scheduling burden."
-    },
-    {
-      "code": "NO_UNSTATED_TIME_ORIGIN",
-      "message": "No nonnegative start-time or fixed time-origin obligation was added because the source does not explicitly state one."
+      "id": "WARN_COMPLETION_LINK_IMPLICIT",
+      "message": "The route-completion linkage is marked implicit_required because the text names route completion times but does not separately state their relation to terminal procedures."
     }
   ]
 }

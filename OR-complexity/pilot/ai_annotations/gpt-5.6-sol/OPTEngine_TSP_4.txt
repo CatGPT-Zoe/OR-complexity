@@ -1,18 +1,18 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "OPTEngine_TSP_4",
   "layer": "semantic",
   "sets": [
     {
-      "id": "STATIONS",
-      "canonical_name": "research_stations",
+      "id": "SET_STATIONS",
+      "canonical_name": "research stations",
       "members": [
-        "Alpha",
-        "Beta",
-        "Gamma",
-        "Delta"
+        "Station Alpha",
+        "Station Beta",
+        "Station Gamma",
+        "Station Delta"
       ],
-      "source_grounding": "The instance identifies four distinct research stations and names them in the travel-duration list.",
+      "cardinality": 4,
       "source_spans": [
         "four distinct research stations",
         "Station Alpha to Beta",
@@ -24,20 +24,53 @@
       ]
     },
     {
-      "id": "STATION_PAIRS",
-      "canonical_name": "available_station_pairs",
-      "members": [
-        ["Alpha", "Beta"],
-        ["Alpha", "Gamma"],
-        ["Alpha", "Delta"],
-        ["Beta", "Gamma"],
-        ["Beta", "Delta"],
-        ["Gamma", "Delta"]
+      "id": "SET_UNDIRECTED_STATION_LEGS",
+      "canonical_name": "unordered travel legs between distinct stations",
+      "index_structure": [
+        {
+          "role": "endpoint_1",
+          "set_id": "SET_STATIONS"
+        },
+        {
+          "role": "endpoint_2",
+          "set_id": "SET_STATIONS"
+        }
       ],
-      "interpretation": "Unordered station pairs, subject to the directionality warning.",
-      "source_grounding": "One duration is supplied for each of the six pairs of four stations.",
+      "members": [
+        {
+          "id": "LEG_ALPHA_BETA",
+          "endpoint_1": "Station Alpha",
+          "endpoint_2": "Station Beta"
+        },
+        {
+          "id": "LEG_ALPHA_GAMMA",
+          "endpoint_1": "Station Alpha",
+          "endpoint_2": "Station Gamma"
+        },
+        {
+          "id": "LEG_ALPHA_DELTA",
+          "endpoint_1": "Station Alpha",
+          "endpoint_2": "Station Delta"
+        },
+        {
+          "id": "LEG_BETA_GAMMA",
+          "endpoint_1": "Station Beta",
+          "endpoint_2": "Station Gamma"
+        },
+        {
+          "id": "LEG_BETA_DELTA",
+          "endpoint_1": "Station Beta",
+          "endpoint_2": "Station Delta"
+        },
+        {
+          "id": "LEG_GAMMA_DELTA",
+          "endpoint_1": "Station Gamma",
+          "endpoint_2": "Station Delta"
+        }
+      ],
+      "cardinality": 6,
       "source_spans": [
-        "The travel durations between stations are recorded in minutes",
+        "The travel durations between stations are recorded in minutes:",
         "Station Alpha to Beta: 79.2 minutes",
         "Station Alpha to Gamma: 55.5 minutes",
         "Station Alpha to Delta: 82.5 minutes",
@@ -49,198 +82,449 @@
   ],
   "parameters": [
     {
-      "id": "travel_duration",
-      "canonical_name": "station_pair_travel_duration",
-      "index_set": "STATION_PAIRS",
-      "unit": "minute",
-      "value_map": {
-        "Alpha|Beta": 79.2,
-        "Alpha|Gamma": 55.5,
-        "Alpha|Delta": 82.5,
-        "Beta|Gamma": 45.0,
-        "Beta|Delta": 56.4,
-        "Gamma|Delta": 28.3
+      "id": "PAR_TRAVEL_DURATION",
+      "canonical_name": "travel duration between stations",
+      "indices": [
+        {
+          "role": "leg",
+          "set_id": "SET_UNDIRECTED_STATION_LEGS"
+        }
+      ],
+      "unit": "minutes",
+      "values": {
+        "LEG_ALPHA_BETA": 79.2,
+        "LEG_ALPHA_GAMMA": 55.5,
+        "LEG_ALPHA_DELTA": 82.5,
+        "LEG_BETA_GAMMA": 45.0,
+        "LEG_BETA_DELTA": 56.4,
+        "LEG_GAMMA_DELTA": 28.3
       },
-      "symmetry_interpretation": "The supplied values are treated as applying between each pair in either traversal direction.",
-      "source_grounding": "The six listed travel durations between stations.",
       "source_spans": [
+        "The travel durations between stations are recorded in minutes:",
         "Station Alpha to Beta: 79.2 minutes",
         "Station Alpha to Gamma: 55.5 minutes",
         "Station Alpha to Delta: 82.5 minutes",
         "Station Beta to Gamma: 45.0 minutes",
         "Station Beta to Delta: 56.4 minutes",
         "Station Gamma to Delta: 28.3 minutes"
-      ],
-      "confidence": 0.94
+      ]
     }
   ],
   "entities": [
     {
-      "id": "E_INSPECTION_ROUTE",
-      "canonical_family": "ROUTE_TRAVERSAL_SELECTION",
-      "canonical_name": "inspection_route",
+      "id": "ENT_TOUR_LEG_SELECTION",
+      "canonical_name": "inspection-circuit travel-leg selection",
+      "canonical_family": "TOUR_LEG_SELECTION",
       "entity_role": "decision",
-      "normalized_semantics": "The endogenous ordered traversal of research stations, including the travel legs between consecutive inspected stations and the closing leg back to the route's initial station.",
-      "indexing": {
-        "station_set": "STATIONS",
-        "incidence_roles": [
-          "current_station",
-          "successor_station",
-          "route_position"
-        ]
-      },
-      "domain_metadata": {
-        "route_is_ordered": true,
-        "route_is_closed": "enforced by obligation O_RETURN_TO_START"
-      },
-      "source_grounding": "The requested decision is the inspection circuit.",
-      "source_spans": [
-        "determine the inspection circuit"
+      "index_signature": [
+        {
+          "role": "leg",
+          "set_id": "SET_UNDIRECTED_STATION_LEGS"
+        }
       ],
-      "confidence": 0.99
+      "instance_level": true,
+      "source_status": "implicit_required",
+      "source_spans": [
+        "determine the inspection circuit",
+        "visits every research station precisely once and concludes at the initial station"
+      ],
+      "confidence": "high",
+      "semantic_type": "selection",
+      "description": "Whether an undirected travel leg between two distinct stations belongs to the inspection circuit.",
+      "value_domain": "selected_or_not_selected",
+      "domain_metadata": {
+        "mathematical_domain": "binary",
+        "self_legs_excluded": true
+      }
     }
   ],
   "objective": {
-    "id": "OBJ_MIN_TOTAL_DURATION",
-    "canonical_name": "minimize_total_inspection_circuit_duration",
-    "direction": "MINIMIZE",
-    "normalized_semantics": "Minimize the sum of travel durations for all consecutive travel legs in the inspection route, including the closing leg to the initial station.",
-    "entity_refs": [
-      "E_INSPECTION_ROUTE"
+    "id": "OBJ_MINIMIZE_TOTAL_TRAVEL_DURATION",
+    "canonical_name": "minimize total inspection-circuit duration",
+    "sense": "minimize",
+    "normalized_semantics": "Minimize the sum of travel durations over all selected inspection-circuit legs.",
+    "support_entity_ids": [
+      "ENT_TOUR_LEG_SELECTION"
     ],
     "parameter_refs": [
-      "travel_duration"
+      "PAR_TRAVEL_DURATION"
     ],
-    "source_grounding": "The objective explicitly requests a circuit of minimal total duration.",
     "source_spans": [
       "The objective is to determine the inspection circuit of minimal total duration"
     ],
-    "confidence": 0.99
+    "confidence": "high"
   },
   "obligations": [
     {
-      "id": "O_VISIT_EACH_STATION_EXACTLY_ONCE",
-      "canonical_family": "EXACT_ONCE_SERVICE",
-      "canonical_name": "visit_each_research_station_exactly_once",
-      "structural_form": "COVERAGE",
-      "business_role": "station_service_requirement",
-      "normalized_semantics": "Every research station must occur exactly once as an inspected station in the route. Returning to the initial station to close the circuit does not constitute a second inspection of that station.",
+      "id": "OBL_STATION_CIRCUIT_DEGREE",
+      "canonical_family": "EXACT_STATION_CIRCUIT_DEGREE",
+      "canonical_name": "exactly two circuit legs incident to each station",
+      "structural_form": "CARDINALITY",
+      "business_role": "ensure each research station is visited precisely once within a closed circuit",
+      "normalized_semantics": "For every station, exactly two selected circuit legs are incident to that station.",
       "support_entity_ids": [
-        "E_INSPECTION_ROUTE"
+        "ENT_TOUR_LEG_SELECTION"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_INSPECTION_ROUTE",
-          "roles": [
-            "route_position",
-            "visited_station"
-          ]
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "arguments": [
+            "leg incident to station"
+          ],
+          "aggregation": "all incident legs"
         }
       ],
-      "quantifier": "For every station in STATIONS, exactly one inspection occurrence is included in the route.",
+      "quantifier": "for every station in SET_STATIONS",
       "scope_kind": "per_station",
       "parameter_refs": [],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "The route must visit every research station precisely once.",
+      "source_grounding": "A circuit that visits every station precisely once has exactly two selected incident travel legs at every station.",
       "source_spans": [
-        "visits every research station precisely once"
+        "visits every research station precisely once and concludes at the initial station"
       ],
-      "confidence": 0.99
-    },
-    {
-      "id": "O_SINGLE_CONTINUOUS_ROUTE",
-      "canonical_family": "SINGLE_ROUTE_CONNECTIVITY",
-      "canonical_name": "form_one_continuous_inspection_route",
-      "structural_form": "OTHER_RELATION",
-      "business_role": "route_connectivity",
-      "normalized_semantics": "The selected station visits and travel legs must form one continuous route traversed by the inspection team rather than multiple disconnected cycles or route fragments.",
-      "support_entity_ids": [
-        "E_INSPECTION_ROUTE"
-      ],
-      "incidence_slots": [
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for v in SET_STATIONS",
+      "incidence_instances": [
         {
-          "entity_id": "E_INSPECTION_ROUTE",
-          "roles": [
-            "current_station",
-            "successor_station",
-            "route_sequence"
-          ]
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "binding": {
+            "leg": "LEG_ALPHA_BETA"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "binding": {
+            "leg": "LEG_ALPHA_GAMMA"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "binding": {
+            "leg": "LEG_ALPHA_DELTA"
+          }
         }
       ],
-      "quantifier": "The complete inspection traversal forms one route over all serviced stations.",
-      "scope_kind": "global_route",
-      "parameter_refs": [],
-      "coupling_active": false,
-      "source_status": "explicit_semantic_reading",
-      "normalization_rationale": "The singular term 'inspection circuit' denotes one continuous traversal and excludes disconnected subtours.",
-      "source_grounding": "The problem asks for a single inspection circuit for one inspection team.",
-      "source_spans": [
-        "An agricultural inspection team",
-        "determine the inspection circuit"
-      ],
-      "confidence": 0.97
-    },
-    {
-      "id": "O_RETURN_TO_START",
-      "canonical_family": "ROUTE_CLOSURE",
-      "canonical_name": "conclude_at_initial_station",
-      "structural_form": "EQUALITY",
-      "business_role": "closed_route_requirement",
-      "normalized_semantics": "After visiting the required stations, the inspection route must end at the same station from which it began.",
-      "support_entity_ids": [
-        "E_INSPECTION_ROUTE"
-      ],
-      "incidence_slots": [
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
         {
-          "entity_id": "E_INSPECTION_ROUTE",
-          "roles": [
-            "initial_station",
-            "terminal_station"
+          "id": "EDGE_DEGREE_ALPHA",
+          "binding": {
+            "station": "Station Alpha"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_BETA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_DELTA"
+              }
+            }
           ],
-          "relation": "terminal_station equals initial_station"
+          "boundary_kind": "generic",
+          "normalized_semantics": "Exactly two of LEG_ALPHA_BETA, LEG_ALPHA_GAMMA, and LEG_ALPHA_DELTA are selected."
+        },
+        {
+          "id": "EDGE_DEGREE_BETA",
+          "binding": {
+            "station": "Station Beta"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_BETA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_DELTA"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Exactly two of LEG_ALPHA_BETA, LEG_BETA_GAMMA, and LEG_BETA_DELTA are selected."
+        },
+        {
+          "id": "EDGE_DEGREE_GAMMA",
+          "binding": {
+            "station": "Station Gamma"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_GAMMA_DELTA"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Exactly two of LEG_ALPHA_GAMMA, LEG_BETA_GAMMA, and LEG_GAMMA_DELTA are selected."
+        },
+        {
+          "id": "EDGE_DEGREE_DELTA",
+          "binding": {
+            "station": "Station Delta"
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_DELTA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_DELTA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_GAMMA_DELTA"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "Exactly two of LEG_ALPHA_DELTA, LEG_BETA_DELTA, and LEG_GAMMA_DELTA are selected."
+        }
+      ]
+    },
+    {
+      "id": "OBL_SINGLE_CONNECTED_INSPECTION_CIRCUIT",
+      "canonical_family": "SINGLE_TOUR_CONNECTIVITY",
+      "canonical_name": "all stations belong to one inspection circuit",
+      "structural_form": "COVERAGE",
+      "business_role": "exclude disconnected cycles and ensure one circuit covers all research stations",
+      "normalized_semantics": "For every nonempty proper subset of stations, at least one selected circuit leg connects that subset to its complement.",
+      "support_entity_ids": [
+        "ENT_TOUR_LEG_SELECTION"
+      ],
+      "incidence_slots": [
+        {
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "arguments": [
+            "leg crossing from station subset S to its complement"
+          ],
+          "aggregation": "all cut-crossing legs"
         }
       ],
-      "quantifier": "For the selected inspection route, its terminal station equals its initial station.",
-      "scope_kind": "global_route",
+      "quantifier": "for every nonempty proper subset S of SET_STATIONS",
+      "scope_kind": "global_connectivity",
       "parameter_refs": [],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "The circuit must conclude at its initial station.",
+      "source_grounding": "The singular term 'inspection circuit' that visits every research station requires all visited stations to belong to one connected circuit rather than multiple disjoint circuits.",
       "source_spans": [
-        "concludes at the initial station"
+        "determine the inspection circuit",
+        "visits every research station precisely once and concludes at the initial station"
       ],
-      "confidence": 0.99
+      "coupling_active": true,
+      "confidence": "high",
+      "instance_quantifier": "for every S such that S is a nonempty proper subset of SET_STATIONS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "binding": {
+            "leg": "LEG_ALPHA_GAMMA"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "binding": {
+            "leg": "LEG_ALPHA_DELTA"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "binding": {
+            "leg": "LEG_BETA_GAMMA"
+          }
+        },
+        {
+          "entity_id": "ENT_TOUR_LEG_SELECTION",
+          "binding": {
+            "leg": "LEG_BETA_DELTA"
+          }
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "instance_edges": [
+        {
+          "id": "EDGE_CONNECTIVITY_ALPHA_BETA_CUT",
+          "binding": {
+            "station_subset": [
+              "Station Alpha",
+              "Station Beta"
+            ]
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_DELTA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_DELTA"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "At least one of LEG_ALPHA_GAMMA, LEG_ALPHA_DELTA, LEG_BETA_GAMMA, and LEG_BETA_DELTA is selected."
+        },
+        {
+          "id": "EDGE_CONNECTIVITY_ALPHA_GAMMA_CUT",
+          "binding": {
+            "station_subset": [
+              "Station Alpha",
+              "Station Gamma"
+            ]
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_BETA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_DELTA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_GAMMA_DELTA"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "At least one of LEG_ALPHA_BETA, LEG_ALPHA_DELTA, LEG_BETA_GAMMA, and LEG_GAMMA_DELTA is selected."
+        },
+        {
+          "id": "EDGE_CONNECTIVITY_ALPHA_DELTA_CUT",
+          "binding": {
+            "station_subset": [
+              "Station Alpha",
+              "Station Delta"
+            ]
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_BETA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_ALPHA_GAMMA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_BETA_DELTA"
+              }
+            },
+            {
+              "entity_id": "ENT_TOUR_LEG_SELECTION",
+              "index_binding": {
+                "leg": "LEG_GAMMA_DELTA"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "At least one of LEG_ALPHA_BETA, LEG_ALPHA_GAMMA, LEG_BETA_DELTA, and LEG_GAMMA_DELTA is selected."
+        }
+      ]
     }
   ],
-  "derived_checks": [],
-  "unresolved_items": [
+  "derived_checks": [
     {
-      "id": "U_INITIAL_STATION_IDENTITY",
-      "issue": "The text requires return to the initial station but does not designate a particular station as the initial station.",
-      "semantic_treatment": "The initial station is treated as endogenous or rotationally arbitrary within the closed circuit; no fixed depot is asserted.",
+      "id": "CHK_CIRCUIT_RETURNS_TO_START",
+      "canonical_name": "selected tour returns to whichever station is treated as its start",
+      "normalized_semantics": "A finite connected circuit in which every station has exactly two incident selected legs is closed, so traversal concludes at its initial station without requiring a separately designated start station.",
+      "derived_from_obligation_ids": [
+        "OBL_STATION_CIRCUIT_DEGREE",
+        "OBL_SINGLE_CONNECTED_INSPECTION_CIRCUIT"
+      ],
+      "source_grounding": "The return condition follows from the explicitly requested closed inspection circuit.",
       "source_spans": [
         "concludes at the initial station"
-      ]
-    },
+      ],
+      "confidence": "high"
+    }
+  ],
+  "unresolved_items": [
     {
-      "id": "U_TRAVEL_DIRECTIONALITY",
-      "issue": "Durations are phrased as 'Alpha to Beta' and similarly for other pairs, but only one value per unordered pair is supplied.",
-      "semantic_treatment": "The durations are provisionally interpreted as symmetric pairwise durations because the text introduces them as durations 'between stations' and provides exactly one value for every unordered pair.",
+      "id": "UNRESOLVED_INITIAL_STATION",
+      "description": "No particular research station is designated as the initial station. The circuit is therefore semantically cyclic and may be represented from any station.",
       "source_spans": [
-        "The travel durations between stations are recorded in minutes",
-        "Station Alpha to Beta: 79.2 minutes"
-      ]
+        "concludes at the initial station"
+      ],
+      "impact": "No fixed-start obligation can be extracted."
     }
   ],
   "annotation_warnings": [
     {
-      "id": "W_SYMMETRIC_DURATION_ASSUMPTION",
-      "message": "Reverse-direction durations are not separately stated. The unordered, symmetric interpretation is strongly suggested but not fully explicit."
-    },
-    {
-      "id": "W_EMPTY_COUPLING_HYPERGRAPH",
-      "message": "All feasibility obligation families support the single inspection-route entity family, so none qualifies for H_c under the requirement that coupling obligations have at least two support entity families."
+      "id": "WARN_SYMMETRIC_TRAVEL_DURATIONS",
+      "description": "Travel durations are interpreted as symmetric because the text describes durations 'between stations' and supplies exactly one value for each unordered station pair.",
+      "source_spans": [
+        "The travel durations between stations are recorded in minutes:"
+      ]
     }
   ]
 }

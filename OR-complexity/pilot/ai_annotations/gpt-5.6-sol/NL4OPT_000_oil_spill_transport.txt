@@ -1,16 +1,18 @@
 {
-  "schema_version": "SOH-1.1",
+  "schema_version": "SOH-1.2",
   "instance_id": "NL4OPT_000_oil_spill_transport",
+  "dataset": "NL4OPT",
   "layer": "semantic",
   "sets": [
     {
       "id": "SET_TRANSPORT_METHODS",
-      "canonical_name": "transport_methods",
+      "canonical_name": "transport methods",
+      "description": "Methods available for transporting ducks to shore.",
       "members": [
         "boat",
         "canoe"
       ],
-      "source_grounding": "ducks need to be taken to shore to be cleaned either by boat or by canoe",
+      "cardinality": 2,
       "source_spans": [
         "ducks need to be taken to shore to be cleaned either by boat or by canoe"
       ]
@@ -18,110 +20,95 @@
   ],
   "parameters": [
     {
-      "id": "P_BOAT_CAPACITY",
-      "canonical_name": "ducks_per_boat_trip",
-      "value": 10,
+      "id": "PAR_DUCKS_PER_TRIP",
+      "canonical_name": "transport capacity per trip",
+      "indices": [
+        {
+          "role": "method",
+          "set_id": "SET_TRANSPORT_METHODS"
+        }
+      ],
+      "values": {
+        "boat": 10,
+        "canoe": 8
+      },
       "unit": "ducks/trip",
-      "source_grounding": "A boat can take 10 ducks per trip",
       "source_spans": [
-        "A boat can take 10 ducks per trip"
+        "A boat can take 10 ducks per trip while a canoe can take 8 ducks per trip."
       ]
     },
     {
-      "id": "P_CANOE_CAPACITY",
-      "canonical_name": "ducks_per_canoe_trip",
-      "value": 8,
-      "unit": "ducks/trip",
-      "source_grounding": "a canoe can take 8 ducks per trip",
+      "id": "PAR_MIN_DUCKS_TRANSPORTED",
+      "canonical_name": "minimum ducks to transport",
+      "indices": [],
+      "value": 300,
+      "unit": "ducks",
       "source_spans": [
-        "a canoe can take 8 ducks per trip"
+        "If at least 300 ducks need to be taken to shore"
       ]
     },
     {
-      "id": "P_BOAT_TRIP_TIME",
-      "canonical_name": "minutes_per_boat_trip",
-      "value": 20,
+      "id": "PAR_MINUTES_PER_TRIP",
+      "canonical_name": "trip duration by transport method",
+      "indices": [
+        {
+          "role": "method",
+          "set_id": "SET_TRANSPORT_METHODS"
+        }
+      ],
+      "values": {
+        "boat": 20,
+        "canoe": 40
+      },
       "unit": "minutes/trip",
-      "source_grounding": "the boats are motor powered, they take 20 minutes per trip",
       "source_spans": [
-        "Since the boats are motor powered, they take 20 minutes per trip"
+        "they take 20 minutes per trip while the canoes take 40 minutes per trip"
       ]
     },
     {
-      "id": "P_CANOE_TRIP_TIME",
-      "canonical_name": "minutes_per_canoe_trip",
-      "value": 40,
-      "unit": "minutes/trip",
-      "source_grounding": "the canoes take 40 minutes per trip",
-      "source_spans": [
-        "the canoes take 40 minutes per trip"
-      ]
-    },
-    {
-      "id": "P_MAX_BOAT_TRIPS",
-      "canonical_name": "maximum_boat_trips",
+      "id": "PAR_MAX_BOAT_TRIPS",
+      "canonical_name": "maximum boat trips",
+      "indices": [],
       "value": 12,
       "unit": "trips",
-      "source_grounding": "there can be at most 12 boat trips",
       "source_spans": [
         "there can be at most 12 boat trips"
       ]
     },
     {
-      "id": "P_MIN_CANOE_TRIP_FRACTION",
-      "canonical_name": "minimum_canoe_fraction_of_trips",
+      "id": "PAR_MIN_CANOE_TRIP_FRACTION",
+      "canonical_name": "minimum canoe fraction of trips",
+      "indices": [],
       "value": 0.6,
       "unit": "fraction",
-      "source_grounding": "at least 60% of the trips should be by canoe",
       "source_spans": [
         "at least 60% of the trips should be by canoe"
-      ]
-    },
-    {
-      "id": "P_MIN_DUCKS_TRANSPORTED",
-      "canonical_name": "minimum_ducks_to_shore",
-      "value": 300,
-      "unit": "ducks",
-      "source_grounding": "at least 300 ducks need to be taken to shore",
-      "source_spans": [
-        "If at least 300 ducks need to be taken to shore"
       ]
     }
   ],
   "entities": [
     {
-      "id": "E_BOAT_TRIPS",
-      "canonical_family": "transport_trip_count",
-      "canonical_name": "boat_trip_count",
+      "id": "ENT_TRANSPORT_TRIPS",
+      "canonical_name": "transport trips by method",
+      "canonical_family": "TRANSPORT_TRIP_COUNT",
       "entity_role": "decision",
-      "semantic_description": "Number of boat trips used to transport ducks to shore.",
-      "indices": [],
+      "index_signature": [
+        {
+          "role": "method",
+          "set_id": "SET_TRANSPORT_METHODS"
+        }
+      ],
+      "instance_level": true,
+      "source_status": "explicit",
+      "semantic_type": "activity_count",
+      "description": "Number of trips made using each transportation method.",
+      "value_domain": "nonnegative_integer",
       "unit": "trips",
       "domain_metadata": {
-        "numeric_type": "integer",
-        "nonnegative": true
+        "integrality_basis": "Trips are countable operational activities."
       },
-      "source_grounding": "how many of each transportation method should be used",
       "source_spans": [
         "there can be at most 12 boat trips",
-        "how many of each transportation method should be used"
-      ],
-      "confidence": "high"
-    },
-    {
-      "id": "E_CANOE_TRIPS",
-      "canonical_family": "transport_trip_count",
-      "canonical_name": "canoe_trip_count",
-      "entity_role": "decision",
-      "semantic_description": "Number of canoe trips used to transport ducks to shore.",
-      "indices": [],
-      "unit": "trips",
-      "domain_metadata": {
-        "numeric_type": "integer",
-        "nonnegative": true
-      },
-      "source_grounding": "how many of each transportation method should be used",
-      "source_spans": [
         "at least 60% of the trips should be by canoe",
         "how many of each transportation method should be used"
       ],
@@ -129,137 +116,289 @@
     }
   ],
   "objective": {
+    "id": "OBJ_MIN_TOTAL_TRANSPORT_TIME",
+    "canonical_name": "minimize total duck transport time",
     "sense": "minimize",
-    "canonical_name": "total_transport_trip_time",
-    "normalized_semantics": "Minimize the sum of trip durations across all selected boat and canoe trips.",
+    "normalized_semantics": "Minimize the sum over transport methods of minutes_per_trip[method] multiplied by transport_trips[method].",
     "support_entity_ids": [
-      "E_BOAT_TRIPS",
-      "E_CANOE_TRIPS"
+      "ENT_TRANSPORT_TRIPS"
     ],
     "parameter_refs": [
-      "P_BOAT_TRIP_TIME",
-      "P_CANOE_TRIP_TIME"
+      "PAR_MINUTES_PER_TRIP"
     ],
-    "unit": "minutes",
-    "source_grounding": "minimize the total amount of time needed to transport the ducks",
+    "source_grounding": {
+      "interpretation": "Total stated trip time is accumulated across all boat and canoe trips."
+    },
     "source_spans": [
-      "Since the boats are motor powered, they take 20 minutes per trip while the canoes take 40 minutes per trip.",
-      "to minimize the total amount of time needed to transport the ducks"
+      "minimize the total amount of time needed to transport the ducks"
     ],
     "confidence": "high"
   },
   "obligations": [
     {
-      "id": "O_MINIMUM_DUCK_TRANSPORT_CAPACITY",
-      "canonical_family": "aggregate_transport_capacity_coverage",
-      "canonical_name": "minimum_duck_transport_coverage",
+      "id": "OBL_MIN_DUCK_TRANSPORT_COVERAGE",
+      "canonical_family": "MINIMUM_SERVICE_COVERAGE",
+      "canonical_name": "transport at least the required number of ducks",
       "structural_form": "COVERAGE",
-      "business_role": "demand_satisfaction",
-      "normalized_semantics": "The aggregate duck-carrying capacity supplied by the selected boat and canoe trips must cover at least the required number of ducks.",
+      "business_role": "minimum_transport_service",
+      "normalized_semantics": "The sum over methods of ducks_per_trip[method] multiplied by transport_trips[method] must be at least min_ducks_transported; here, 10*transport_trips[boat] + 8*transport_trips[canoe] >= 300.",
       "support_entity_ids": [
-        "E_BOAT_TRIPS",
-        "E_CANOE_TRIPS"
+        "ENT_TRANSPORT_TRIPS"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_BOAT_TRIPS",
-          "role": "capacity_contributor",
-          "coefficient_parameter_ref": "P_BOAT_CAPACITY"
-        },
-        {
-          "entity_id": "E_CANOE_TRIPS",
-          "role": "capacity_contributor",
-          "coefficient_parameter_ref": "P_CANOE_CAPACITY"
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "arguments": [
+            "method"
+          ]
         }
       ],
-      "quantifier": "instance-wide",
-      "scope_kind": "aggregate",
+      "quantifier": "Aggregate over all transport methods.",
+      "scope_kind": "global_aggregate",
       "parameter_refs": [
-        "P_BOAT_CAPACITY",
-        "P_CANOE_CAPACITY",
-        "P_MIN_DUCKS_TRANSPORTED"
+        "PAR_DUCKS_PER_TRIP",
+        "PAR_MIN_DUCKS_TRANSPORTED"
       ],
-      "coupling_active": true,
-      "source_status": "explicit_composite",
-      "source_grounding": "Boat and canoe trips provide capacity of 10 and 8 ducks per trip, respectively, and at least 300 ducks must be taken to shore.",
+      "source_grounding": {
+        "interpretation": "Trip capacities must collectively suffice to take at least 300 ducks to shore."
+      },
       "source_spans": [
         "A boat can take 10 ducks per trip while a canoe can take 8 ducks per trip.",
         "If at least 300 ducks need to be taken to shore"
       ],
-      "normalization_rationale": "The per-trip capacities and the minimum number of ducks jointly define one aggregate coverage rule over the two trip-count decisions.",
+      "instance_quantifier": "over method in SET_TRANSPORT_METHODS",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "binding": {
+            "method": "boat"
+          }
+        },
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "binding": {
+            "method": "canoe"
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "EDGE_DUCK_COVERAGE_ALL_METHODS",
+          "binding": {
+            "methods": [
+              "boat",
+              "canoe"
+            ]
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TRANSPORT_TRIPS",
+              "index_binding": {
+                "method": "boat"
+              }
+            },
+            {
+              "entity_id": "ENT_TRANSPORT_TRIPS",
+              "index_binding": {
+                "method": "canoe"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "10*transport_trips[boat] + 8*transport_trips[canoe] >= 300"
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
       "confidence": "high"
     },
     {
-      "id": "O_MAXIMUM_BOAT_TRIPS",
-      "canonical_family": "method_trip_upper_bound",
-      "canonical_name": "maximum_boat_trip_bound",
+      "id": "OBL_BOAT_TRIP_UPPER_BOUND",
+      "canonical_family": "METHOD_TRIP_UPPER_BOUND",
+      "canonical_name": "limit boat trips",
       "structural_form": "UPPER_BOUND",
       "business_role": "environmental_damage_limit",
-      "normalized_semantics": "The number of boat trips must not exceed the stated maximum.",
+      "normalized_semantics": "The number of boat trips must not exceed max_boat_trips; here, transport_trips[boat] <= 12.",
       "support_entity_ids": [
-        "E_BOAT_TRIPS"
+        "ENT_TRANSPORT_TRIPS"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_BOAT_TRIPS",
-          "role": "bounded_trip_count"
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "arguments": [
+            "method=boat"
+          ]
         }
       ],
-      "quantifier": "instance-wide",
-      "scope_kind": "unary",
+      "quantifier": "For the boat method instance.",
+      "scope_kind": "fixed_instance",
       "parameter_refs": [
-        "P_MAX_BOAT_TRIPS"
+        "PAR_MAX_BOAT_TRIPS"
       ],
-      "coupling_active": false,
-      "source_status": "explicit",
-      "source_grounding": "there can be at most 12 boat trips",
+      "source_grounding": {
+        "interpretation": "Boat use is capped because motor-powered boats risk further environmental damage."
+      },
       "source_spans": [
         "In order to avoid further environmental damage, there can be at most 12 boat trips"
       ],
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "binding": {
+            "method": "boat"
+          }
+        }
+      ],
+      "coupling_active": false,
       "confidence": "high"
     },
     {
-      "id": "O_MINIMUM_CANOE_TRIP_SHARE",
-      "canonical_family": "minimum_method_share",
-      "canonical_name": "minimum_canoe_share_of_total_trips",
+      "id": "OBL_MIN_CANOE_TRIP_SHARE",
+      "canonical_family": "MINIMUM_CATEGORY_SHARE",
+      "canonical_name": "require a minimum canoe share of trips",
       "structural_form": "INEQUALITY",
       "business_role": "transport_mode_mix_policy",
-      "normalized_semantics": "Canoe trips must constitute at least 60% of all boat and canoe trips.",
+      "normalized_semantics": "Canoe trips must constitute at least min_canoe_trip_fraction of all trips; here, transport_trips[canoe] >= 0.60*(transport_trips[boat] + transport_trips[canoe]).",
       "support_entity_ids": [
-        "E_BOAT_TRIPS",
-        "E_CANOE_TRIPS"
+        "ENT_TRANSPORT_TRIPS"
       ],
       "incidence_slots": [
         {
-          "entity_id": "E_CANOE_TRIPS",
-          "role": "share_numerator_and_total_component"
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "arguments": [
+            "method=canoe"
+          ]
         },
         {
-          "entity_id": "E_BOAT_TRIPS",
-          "role": "total_trip_component"
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "arguments": [
+            "method"
+          ]
         }
       ],
-      "quantifier": "instance-wide",
-      "scope_kind": "aggregate_ratio",
+      "quantifier": "Compare the canoe instance with the aggregate over all transport methods.",
+      "scope_kind": "global_proportional_mix",
       "parameter_refs": [
-        "P_MIN_CANOE_TRIP_FRACTION"
+        "PAR_MIN_CANOE_TRIP_FRACTION"
       ],
-      "coupling_active": true,
-      "source_status": "explicit",
-      "source_grounding": "at least 60% of the trips should be by canoe",
+      "source_grounding": {
+        "interpretation": "At least 60 percent of the combined boat and canoe trip count must be canoe trips."
+      },
       "source_spans": [
         "at least 60% of the trips should be by canoe"
       ],
-      "normalization_rationale": "The statement is a minimum share policy whose denominator comprises trips by both transportation methods.",
+      "instance_quantifier": "over method in SET_TRANSPORT_METHODS, with canoe as the designated numerator method",
+      "incidence_instances": [
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "binding": {
+            "method": "canoe"
+          }
+        },
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "binding": {
+            "method": "boat"
+          }
+        }
+      ],
+      "instance_edges": [
+        {
+          "id": "EDGE_MIN_CANOE_SHARE_ALL_METHODS",
+          "binding": {
+            "designated_method": "canoe",
+            "methods": [
+              "boat",
+              "canoe"
+            ]
+          },
+          "slots": [
+            {
+              "entity_id": "ENT_TRANSPORT_TRIPS",
+              "index_binding": {
+                "method": "canoe"
+              }
+            },
+            {
+              "entity_id": "ENT_TRANSPORT_TRIPS",
+              "index_binding": {
+                "method": "boat"
+              }
+            }
+          ],
+          "boundary_kind": "generic",
+          "normalized_semantics": "transport_trips[canoe] >= 0.60*(transport_trips[boat] + transport_trips[canoe])"
+        }
+      ],
+      "intra_entity_instance_coupling": true,
+      "coupling_active": true,
       "confidence": "high"
     }
   ],
-  "derived_checks": [],
+  "instance_hyperedges": [
+    {
+      "id": "IHE_DUCK_COVERAGE",
+      "obligation_id": "OBL_MIN_DUCK_TRANSPORT_COVERAGE",
+      "obligation_family": "MINIMUM_SERVICE_COVERAGE",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "index_binding": {
+            "method": "boat"
+          }
+        },
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "index_binding": {
+            "method": "canoe"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "10*transport_trips[boat] + 8*transport_trips[canoe] >= 300"
+    },
+    {
+      "id": "IHE_BOAT_TRIP_LIMIT",
+      "obligation_id": "OBL_BOAT_TRIP_UPPER_BOUND",
+      "obligation_family": "METHOD_TRIP_UPPER_BOUND",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "index_binding": {
+            "method": "boat"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "transport_trips[boat] <= 12"
+    },
+    {
+      "id": "IHE_MIN_CANOE_SHARE",
+      "obligation_id": "OBL_MIN_CANOE_TRIP_SHARE",
+      "obligation_family": "MINIMUM_CATEGORY_SHARE",
+      "instance_vertices": [
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "index_binding": {
+            "method": "canoe"
+          }
+        },
+        {
+          "entity_id": "ENT_TRANSPORT_TRIPS",
+          "index_binding": {
+            "method": "boat"
+          }
+        }
+      ],
+      "boundary_kind": "generic",
+      "normalized_semantics": "transport_trips[canoe] >= 0.60*(transport_trips[boat] + transport_trips[canoe])"
+    }
+  ],
   "unresolved_items": [],
   "annotation_warnings": [
     {
-      "id": "W_TOTAL_TIME_INTERPRETATION",
-      "message": "The objective is interpreted as the sum of per-trip times. The text does not describe concurrency, sequencing, or shared vehicle availability, so an elapsed-time or makespan interpretation is not source-supported."
+      "id": "WARN_INDEXED_FAMILY_CANONICALIZATION",
+      "message": "Boat-trip and canoe-trip counts are represented as instances of one indexed transport-trip entity family rather than as separate decision families."
     }
   ]
 }
